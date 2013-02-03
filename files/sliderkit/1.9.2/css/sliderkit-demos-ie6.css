@@ -1,0 +1,90 @@
+/**
+ *  sliderkit-demos-ie6.css
+ *	> CSS hacks for Internet Explorer 6 compatibility
+ *  
+ *  This file is part of Slider Kit jQuery plugin.
+ *  http://www.kyrielles.net/sliderkit/
+ *  
+ *  Copyright (c) 2010-2012 Alan Frog
+ *  Licensed under the GNU General Public License
+ *  See <license.txt> or <http://www.gnu.org/licenses/>
+ *
+ */
+
+/*---------------------------------
+ *  Photos slider > Minimal
+ *---------------------------------*/
+.photoslider-mini .sliderkit-go-btn a{filter:alpha(opacity=60);}
+.photoslider-mini .sliderkit-btn-disable a{filter:alpha(opacity=0);}
+
+/*---------------------------------
+ *  Photos slider > With nav bullets
+ *---------------------------------*/
+.photoslider-bullets .sliderkit-nav{width:70px;}
+.photoslider-bullets .sliderkit-nav-clip ul li a{background:none;background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.kyrielles.net/sliderkit/lib/images/bullet-off.png',sizingMethod='scale');}
+.photoslider-bullets .sliderkit-nav-clip ul li.sliderkit-selected a{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.kyrielles.net/sliderkit/lib/images/bullet-on.png', sizingMethod='scale');}
+
+/*---------------------------------
+ *  Photos slider > 1 click
+ *---------------------------------*/
+.photoslider-1click .sliderkit-nav{width:160px;}
+ 
+/*---------------------------------
+ *  Photos gallery > Standard
+ *---------------------------------*/
+.photosgallery-std .sliderkit-go-btn a{filter:alpha(opacity=60);}
+.photosgallery-std .sliderkit-btn-disable a{filter:alpha(opacity=30);}
+.photosgallery-std .sliderkit-nav .sliderkit-btn a{background-image:url("../images/arrows-h-black.gif");}
+
+/*---------------------------------
+ *  Photos gallery > With captions
+ *---------------------------------*/
+.photosgallery-captions .sliderkit-btn-disable a{filter:alpha(opacity=30);}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-overlay{filter:alpha(opacity=40);}
+.photosgallery-captions .sliderkit-nav .sliderkit-btn a{background-image:url("../images/arrows-h-black.gif");}
+
+/*---------------------------------
+ *  Photos gallery > Vertical
+ *---------------------------------*/
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-btn a{background-image:url("../images/arrows-v-black.gif");}
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-overlay{filter:alpha(opacity=40);}
+
+/* Known bug : 'navcenterclip' option doesn't work well with vertical clip on IE6 : so for now we must define the clip position here */
+.photosgallery-vertical .sliderkit-nav-clip{top:55px !important;left:0;}
+
+/*---------------------------------
+ *  Photos gallery > Minimalistic
+ *---------------------------------*/
+.photosgallery-minimalistic .sliderkit-nav-clip ul li a{filter:alpha(opacity=40);}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li.sliderkit-selected a{filter:alpha(opacity=100);}
+
+/*---------------------------------
+ *  Carousel > Demo #1
+ *---------------------------------*/
+.carousel-demo1 .sliderkit-nav-clip ul li a{filter:alpha(opacity=80);}
+.carousel-demo1 .sliderkit-nav-clip ul li a:hover{filter:alpha(opacity=100);}
+.carousel-demo1 .sliderkit-btn-disable{filter:alpha(opacity=30);}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-btn a{background-image:url("../images/arrows-h-gray.gif");}
+
+/*---------------------------------
+ *  Carousel > Demo #2
+ *---------------------------------*/
+.carousel-demo2 .sliderkit-nav-clip ul li a{opacity:filter:alpha(opacity=80);}
+.carousel-demo2 .sliderkit-nav-clip ul li a:hover{opacity:filter:alpha(opacity=100);}
+.carousel-demo2 .sliderkit-nav .sliderkit-btn-disable{filter:alpha(opacity=30);}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn a{background-image:url("../images/arrows-h-gray.gif");}
+
+/*---------------------------------
+ *  Slideshow > Basic
+ *---------------------------------*/
+.slideshow-standard .sliderkit-controls{width:300px;padding-left:200px;}
+
+/*---------------------------------
+ *  Slideshow > Carousel
+ *---------------------------------*/
+.slideshow-carousel .sliderkit-controls{width:300px;padding-left:200px;}
+
+/*---------------------------------
+ *  Add-on > Timer
+ *---------------------------------*/
+.timer-demo01 .sliderkit-timer-wrapper{filter:alpha(opacity=80);}

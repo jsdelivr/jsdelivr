@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* SpryMenuBasic.css - version 0.5 - Spry Pre-Release 1.7 */
+
+/* Copyright (c) 2010. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the css for a basic Spry 2 MenuBar.
+ * The first section is basic layout, and should in general not need to be  modified.
+ * The final section of this file specifies images to use for arrows for the menu. These
+ * are either down or right-pointing as required by horizonatal or vertical layouts. You
+ * can either replace the referenced images with your own, or you can modify these rules to 
+ * point to your won images.
+ *
+ * These rules are supplemented by those specified in the OAM file for inclusion in the html document,
+ * or alternatively, the file SpryMenuBarBasicSkin.css which is included with this widget. */
+ 
+/* Resets for ul and li in menus */
+.MenuBar  .MenuBarView, .MenuBar  .SubMenuView {
+	display:block;
+	list-style:none;
+	margin:0;
+	padding:0;	
+}
+
+/*** Layout Rules for Basic Menu ***/
+
+/* Top Level MenuBar
+ * Because we float the MenuItemContainers in the MenuBar, we have to make sure the menubar wrapper expands to hold them all.
+ * The simplest way is to float the widget wrapper 
+ */
+.MenuBar { /* overridden by .MenuBarVertical version of this rule */
+	float:left;
+	width:100%;
+}
+.MenuBarVertical {
+	float:left;	/* Used to make menubar shirink to fit contents */
+	width:auto;
+}
+
+/* SubMenus */
+.MenuBar .SubMenu {
+	display:block;
+	position:absolute;
+	top:0;
+	left:-10000px; /* By default, all non-visible submenus are hidden by moving way to the west */
+	padding:0;
+}
+/* First level of submenus - pulls down from horizontal menubar, right from vertical */
+.MenuBar .SubMenuVisible{ /* overridden by .MenuBarVertical version of this rule */
+	top:100%;
+	left:0px;
+}
+.MenuBarVertical .SubMenuVisible {
+	top:0px;
+	left:100%;
+}
+/* All submenus below level 1. All pullout to the right */
+.MenuBar .SubMenu .SubMenuVisible {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:100%;
+}
+
+/* MenuItems, MenuItemLabels, and MenuItemContainers */
+.MenuBar .MenuItem {
+	display:block;
+	text-decoration:none;
+}
+.MenuBar .MenuItemLabel {
+	display:block;
+}
+.MenuBar .MenuItemContainer {
+	position:relative;
+	white-space:nowrap; 
+	float:left; /* overridden by .MenuBarVertical version of this rule */
+	display:block;
+	margin:0;
+	padding:0;	
+}
+.MenuBarVertical .MenuItemContainer {
+	float:none;
+}
+.MenuBar .SubMenu .MenuItemContainer {
+	float:none;
+}
+
+/* Layout Rules needed by IE6 - excluded from other browsers */
+.SpryIsIE6 .SubMenu .SubMenu {
+	width:100px;
+	height:1%;
+}
+.SpryIsIE6 .MenuBar .SubMenuVisible .SubMenuVisible {
+	width:auto;
+}
+/* End Layout section */
+
+/* 
+* Arrows - This section specifies arrow images for a submenu dropdowns in Basic SpryMenu. 
+*/
+.MenuBar .MenuItemLabel{
+	background-image:none; 
+}
+
+/* For all arrows used here, we depend upon the image to push itself away from right edge, or the user can add right padding to the MenuItem */
+.MenuBar .MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuDown.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.MenuBar .MenuItemHover.MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuDown.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.MenuBarVertical .MenuItemHover.MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.MenuBarVertical .MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.MenuBar .SubMenu .MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif");
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.MenuBar .SubMenu .MenuItemHover.MenuItemWithSubMenu .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif");
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+
+/* IE6 rules for Arrows */
+.SpryIsIE6 .MenuBar .MenuItemWithSubMenuHover .MenuItemLabel{
+	background-image:url("images/ArrowMenuDown.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.SpryIsIE6 .MenuBarVertical .MenuItemWithSubMenuHover .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif"); 
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+.SpryIsIE6 .MenuBar .SubMenu .MenuItemWithSubMenuHover .MenuItemLabel{
+	background-image:url("images/ArrowMenuRight.gif");
+	background-position:right center;
+	background-repeat:no-repeat;
+}

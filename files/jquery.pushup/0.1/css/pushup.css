@@ -1,0 +1,65 @@
+#pushup {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 4px;
+  background: #ffffc6;
+  border: 1px solid #b0dfc8;
+  z-index: 9999;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* html #pushup {
+  position: absolute;
+  top: expression(_pushupIETop = 10 + (document.documentElement.scrollTop || 0) + 'px');
+}
+#pushup * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.withReminder { padding-bottom: 6px; }
+#pushup a { 
+  outline-style: none;
+  text-decoration: none;
+}
+
+#pushup .pushup_messageLink {
+  float: left;
+  position: relative;
+  color: #4293cd;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#pushup .pushup_icon {
+  position: relative;
+  float: left;
+  height: 22px;
+  width: 22px;
+  margin-right: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#pushup .pushup_message {
+  position: relative;
+  float: left;
+  marginRight: 3px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+
+#pushup .pushup_reminder {
+  float: left;
+  clear: both;
+  font-size: 10px;
+  color: #84a2ac;
+  margin-left: 27px;
+  cursor: pointer;
+}
+
+#pushup .pushup_messageLink:hover,
+#pushup .pushup_reminder:hover { text-decoration: underline; }

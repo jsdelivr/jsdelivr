@@ -1,0 +1,51 @@
+.aloha-block table.debug-block {
+	background: #EEEEEE;
+	border: 1px dashed #999999;
+	border-radius: 7px;
+	margin: 5px 0;
+	padding: 4px;
+	width: 100%;
+}
+.aloha-block:hover > .aloha-block-inner {
+	background: #FFFCE2;
+	cursor: pointer;
+	outline: 1px solid #FFE98A;
+}
+.aloha-block .aloha-editable {
+	cursor: auto;
+}
+.aloha-block-active > .aloha-block-inner,
+.aloha-block-active:hover > .aloha-block-inner {
+	outline: 1px solid #2F7ECC;
+	background: #B4D7F8;
+}
+
+.aloha-block {
+	position:relative;
+}
+.aloha-block:hover .aloha-block-draghandle,
+.aloha-block-active .aloha-block-draghandle {
+	display:block;
+}
+.aloha-block-draghandle {
+	position:absolute;
+	left:0;
+	top:-13px;
+	width:24px;
+	height:12px;
+	overflow:hidden;
+	display:none;
+	background:url(../img/toolbar-draghandle.gif);
+	border-top:1px solid #CCC;
+	border-left:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+.aloha-block-editor label {
+	display:block;
+}
+
+.aloha-block ::selection { background: transparent; }
+.aloha-block ::-moz-selection { background: transparent; }

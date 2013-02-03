@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/* SpryMenuBarVertical.css - version 0.6 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/*******************************************************************************
+
+ LAYOUT INFORMATION: describes box model, positioning, z-order
+
+ *******************************************************************************/
+
+/* The outermost container of the Menu Bar, a fixed width box with no margin or padding */
+ul.MenuBarVertical
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	cursor: default;
+	width: 8em;
+}
+/* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
+ul.MenuBarActive
+{
+	z-index: 1000;
+}
+/* Menu item containers, position children relative to this container and are same fixed width as parent */
+ul.MenuBarVertical li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	width: 8em;
+}
+/* Submenus should appear slightly overlapping to the right (95%) and up (-5%) with a higher z-index, but they are initially off the left side of the screen (-1000em) */
+ul.MenuBarVertical ul
+{
+	margin: -5% 0 0 95%;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	position: absolute;
+	z-index: 1020;
+	cursor: default;
+	width: 8.2em;
+	left: -1000em;
+	top: 0;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
+ul.MenuBarVertical ul.MenuBarSubmenuVisible
+{
+	left: 0;
+}
+/* Menu item containers are same fixed width as parent */
+ul.MenuBarVertical ul li
+{
+	width: 8.2em;
+}
+
+/*******************************************************************************
+
+ DESIGN INFORMATION: describes color scheme, borders, fonts
+
+ *******************************************************************************/
+
+/* Outermost menu container has borders on all sides */
+ul.MenuBarVertical
+{
+	border: 1px solid #CCC;
+}
+/* Submenu containers have borders on all sides */
+ul.MenuBarVertical ul
+{
+	border: 1px solid #CCC;
+}
+/* Menu items are a light gray block with padding and no text decoration */
+ul.MenuBarVertical a
+{
+	display: block;
+	cursor: pointer;
+	background-color: #EEE;
+	padding: 0.5em 0.75em;
+	color: #333;
+	text-decoration: none;
+}
+/* Menu items that have mouse over or focus have a blue background and white text */
+ul.MenuBarVertical a:hover, ul.MenuBarVertical a:focus
+{
+	background-color: #33C;
+	color: #FFF;
+}
+/* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
+ul.MenuBarVertical a.MenuBarItemHover, ul.MenuBarVertical a.MenuBarItemSubmenuHover, ul.MenuBarVertical a.MenuBarSubmenuVisible
+{
+	background-color: #33C;
+	color: #FFF;
+}
+
+/*******************************************************************************
+
+ SUBMENU INDICATION: styles if there is a submenu under a given menu item
+
+ *******************************************************************************/
+
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarVertical a.MenuBarItemSubmenu
+{
+	background-image: url(SpryMenuBarRight.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarVertical a.MenuBarItemSubmenuHover
+{
+	background-image: url(SpryMenuBarRightHover.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+
+/*******************************************************************************
+
+ BROWSER HACKS: the hacks below should not be changed unless you are an expert
+
+ *******************************************************************************/
+
+/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
+ul.MenuBarVertical iframe
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
+@media screen, projection
+{
+	ul.MenuBarVertical li.MenuBarItemIE
+	{
+		display: inline;
+		f\loat: left;
+		background: #FFF;
+	}
+}

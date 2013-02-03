@@ -1,0 +1,158 @@
+﻿body { font-family: Segoe UI; font-size: 12pt; background: #000; color: White; margin:0; overflow-y:scroll;}
+div.page {max-width:1000px; margin:auto; overflow:hidden;}
+
+.rightside {float:right;}
+h1 {font-size:40pt; font-weight:normal; margin:0; margin-bottom:-30px;}
+h2 {font-size:30pt; font-weight:normal; margin:0;}
+h3 {font-size:25pt; font-weight:normal; margin:0;}
+h4 {font-size:20pt; font-weight:normal; margin:0;}
+
+body[theme=light] { background: white; color: #000; }
+
+.theme-bg {background:#000;}
+body[theme=light] .theme-bg {background:#fff;}
+
+.metro-pivot .headers { white-space: nowrap; height: 60px; display: block; clear: both; }
+.metro-pivot .pivot-item h3, .metro-pivot .headers .header { font-size: 250%; font-weight: normal; display: inline-block; vertical-align: top; padding: 0; cursor: pointer; margin: 0 5px; }
+.metro-pivot .headers .header.current { }
+.metro-pivot .items { position: relative; }
+.metro-pivot .items .pivotItem { display: block; white-space: normal; text-align: justify; width: 100%; }
+.metro-pivot .items .pivotItem .pivot-item { padding: 10px; }
+
+ul.metro-list { padding: 0; }
+ul.metro-list li { display: block; margin: 10px 0; height: 20px; padding: 5px; overflow: hidden; border-left: solid 30px; list-style: none; }
+
+a.metro-button { display: inline-block; padding: 2px 10px; border: solid 2px white; color: white; text-decoration: none; margin: 10px 0; }
+.start-menu-item { float: left; height: 120px; width: 120px; position: relative; color: White; margin: 5px; overflow: hidden; }
+.start-menu-item label { position: absolute; margin: 5px; bottom: 0; left: 0; white-space: nowrap; }
+.side-menu-item { height: 20px; padding: 5px 15px; border-left: solid 30px; margin: 10px 0; }
+
+
+ul.metro-conversation { padding: 0 30px; }
+ul.metro-conversation li { margin: 10px 0; display: block; padding: 10px; line-height: 110%; margin-right: 20%; position: relative; }
+ul.metro-conversation li.alt { margin-right: 0; margin-left: 20%; }
+ul.metro-conversation li .list-diam { position: absolute; top: -15px; left: 20px; font-size: 40pt; font-family: Arial; }
+ul.metro-conversation li.alt .list-diam { left: auto; right: 20px; top: auto; bottom: -10px; }
+
+div.html { background: white; padding: 10px; margin-left: 30px; border: dotted 2px #aaa; }
+
+ul.metro-conversation li .question { color: #444; border-bottom: dashed 1px #444; margin-bottom: 5px; padding-bottom: 10px; }
+
+body[accent=orange] .accent-color,
+body[accent=orange] ul.metro-conversation li .list-diam,
+body[accent=orange] a {color:#F09720;}
+body[accent=orange] .side-menu-item,
+body[accent=orange] ul.metro-list li {border-color:#F09720;}
+body[accent=orange] .accent-bg,
+.top-banner .accent-box[accent=orange],
+body[accent=orange] ul.metro-conversation li,
+body[accent=orange] .start-menu-item {background:#F09720;}
+
+body[accent=red] .accent-color,
+body[accent=red] ul.metro-conversation li .list-diam,
+body[accent=red] a {color:#E61E26;}
+body[accent=red] .side-menu-item,
+body[accent=red] ul.metro-list li {border-color:#E61E26;}
+body[accent=red] .accent-bg,
+.top-banner .accent-box[accent=red],
+body[accent=red] ul.metro-conversation li,
+body[accent=red] .start-menu-item {background:#E61E26;}
+
+body[accent=green] .accent-color,
+body[accent=green] ul.metro-conversation li .list-diam,
+body[accent=green] a {color:#309B46;}
+body[accent=green] .side-menu-item,
+body[accent=green] ul.metro-list li {border-color:#309B46;}
+body[accent=green] .accent-bg,
+.top-banner .accent-box[accent=green],
+body[accent=green] ul.metro-conversation li,
+body[accent=green] .start-menu-item {background:#309B46;}
+
+body[accent=blue] .accent-color,
+body[accent=blue] ul.metro-conversation li .list-diam,
+body[accent=blue] a {color:#24A0DA;}
+body[accent=blue] .side-menu-item,
+body[accent=blue] ul.metro-list li {border-color:#24A0DA;}
+body[accent=blue] .accent-bg,
+.top-banner .accent-box[accent=blue],
+body[accent=blue] ul.metro-conversation li,
+body[accent=blue] .start-menu-item {background:#24A0DA;}
+
+body[accent=brown] .accent-color,
+body[accent=brown] ul.metro-conversation li .list-diam,
+body[accent=brown] a {color:#986829;}
+body[accent=brown] .side-menu-item,
+body[accent=brown] ul.metro-list li {border-color:#986829;}
+body[accent=brown] .accent-bg,
+.top-banner .accent-box[accent=brown],
+body[accent=brown] ul.metro-conversation li,
+body[accent=brown] .start-menu-item {background:#986829;}
+
+body[accent=magenta] .accent-color,
+body[accent=magenta] ul.metro-conversation li .list-diam,
+body[accent=magenta] a {color:#EB1691;}
+body[accent=magenta] .side-menu-item,
+body[accent=magenta] ul.metro-list li {border-color:#EB1691;}
+body[accent=magenta] .accent-bg,
+.top-banner .accent-box[accent=magenta],
+body[accent=magenta] ul.metro-conversation li,
+body[accent=magenta] .start-menu-item {background:#EB1691;}
+
+body[accent=purple] .accent-color,
+body[accent=purple] ul.metro-conversation li .list-diam,
+body[accent=purple] a {color:#7D50A0;}
+body[accent=purple] .side-menu-item,
+body[accent=purple] ul.metro-list li {border-color:#7D50A0;}
+body[accent=purple] .accent-bg,
+.top-banner .accent-box[accent=purple],
+body[accent=purple] ul.metro-conversation li,
+body[accent=purple] .start-menu-item {background:#7D50A0;}
+
+body[accent=teal] .accent-color,
+body[accent=teal] ul.metro-conversation li .list-diam,
+body[accent=teal] a {color:#16ABA9;}
+body[accent=teal] .side-menu-item,
+body[accent=teal] ul.metro-list li {border-color:#16ABA9;}
+body[accent=teal] .accent-bg,
+.top-banner .accent-box[accent=teal],
+body[accent=teal] ul.metro-conversation li,
+body[accent=teal] .start-menu-item {background:#16ABA9;}
+
+body[accent=lime] .accent-color,
+body[accent=lime] ul.metro-conversation li .list-diam,
+body[accent=lime] a {color:#8BC140;}
+body[accent=lime] .side-menu-item,
+body[accent=lime] ul.metro-list li {border-color:#8BC140;}
+body[accent=lime] .accent-bg,
+.top-banner .accent-box[accent=lime],
+body[accent=lime] ul.metro-conversation li,
+body[accent=lime] .start-menu-item {background:#8BC140;}
+
+body[accent=pink] .accent-color,
+body[accent=pink] ul.metro-conversation li .list-diam,
+body[accent=pink] a {color:#DD72AC;}
+body[accent=pink] .side-menu-item,
+body[accent=pink] ul.metro-list li {border-color:#DD72AC;}
+body[accent=pink] .accent-bg,
+.top-banner .accent-box[accent=pink],
+body[accent=pink] ul.metro-conversation li,
+body[accent=pink] .start-menu-item {background:#DD72AC;}
+
+
+.wp-popup {display:none; margin:20px;}
+.wp-popup-container {position:absolute; top:0; left:0; width:100%; display:none;}
+
+a.wp-colored-button {display:inline-block; padding:0 15px; border:solid 4px; color:inherit !important;}
+
+
+.top-banner {text-align:right; border-bottom:dotted 1px #777; margin-bottom:10px; font-size:10pt;}
+.top-banner .theme-box,
+.top-banner .accent-box {display:inline-block; width:15px; height:15px; margin:3px; border:solid 1px #777; cursor:pointer; vertical-align:middle; }
+.top-banner .accent-box {background:#F09720;}
+
+.top-banner .theme-box[theme=dark] {background:black;}
+.top-banner .theme-box[theme=light] {background:white;}
+
+pre.jush {font-size:9pt; background:#F0F0FF; border:dashed 1px #aaa; padding:10px;}
+pre.jush a {text-decoration:none; }
+pre.jush a:hover {text-decoration:underline; }
