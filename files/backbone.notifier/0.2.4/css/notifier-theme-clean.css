@@ -1,0 +1,248 @@
+/*!
+ * Backbone.Notifier v0.2.4 - 'Clean' Theme
+ * Copyright 2012, Eyal Weiss
+ */
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/*!
+ * Backbone.Notifier v0.2.4 - Variables Config
+ * Copyright 2012, Eyal Weiss
+ */
+.notifier-screen.notifier-theme-clean {
+  background-color: #fff;
+}
+.notifier.notifier-theme-clean {
+  font-size: 13px;
+  text-align: center;
+}
+.notifier.notifier-theme-clean .notifier-loader {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background: url('../imgs/notifier-loader-clean.gif') center center no-repeat;
+}
+.notifier.notifier-theme-clean .notifier-close {
+  top: 5px;
+  right: 5px;
+}
+.notifier.notifier-theme-clean .notifier-message {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.notifier.notifier-theme-clean .notifier-btns {
+  margin: 30px 0 0;
+  text-align: center;
+}
+.notifier.notifier-theme-clean .notifier-btns button {
+  border: solid 1px #D1D1D1;
+  background-color: white;
+  padding: 5px 30px;
+  margin: 0 40px;
+  text-shadow: 0 1px 0 #E9E9E9;
+  -webkit-transition: all 100ms ease-out;
+  -moz-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 1px 1px rgba(111, 111, 111, 0.18), inset 0 0 8px rgba(150, 150, 150, 0.21);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 1px 1px rgba(111, 111, 111, 0.18), inset 0 0 8px rgba(150, 150, 150, 0.21);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 1px 1px rgba(111, 111, 111, 0.18), inset 0 0 8px rgba(150, 150, 150, 0.21);
+}
+.notifier.notifier-theme-clean .notifier-btns button:hover,
+.notifier.notifier-theme-clean .notifier-btns button.hover {
+  border: solid 1px silver;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 2px 2px rgba(48, 48, 48, 0.21), inset 0 0 8px rgba(117, 117, 117, 0.21);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 2px 2px rgba(48, 48, 48, 0.21), inset 0 0 8px rgba(117, 117, 117, 0.21);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 2px 2px rgba(48, 48, 48, 0.21), inset 0 0 8px rgba(117, 117, 117, 0.21);
+}
+.notifier.notifier-theme-clean .notifier-btns button:active,
+.notifier.notifier-theme-clean .notifier-btns button.active {
+  border: solid 1px silver;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(48, 48, 48, 0.4), inset 0 0 20px rgba(117, 117, 117, 0.3);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(48, 48, 48, 0.4), inset 0 0 20px rgba(117, 117, 117, 0.3);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(48, 48, 48, 0.4), inset 0 0 20px rgba(117, 117, 117, 0.3);
+}
+.notifier.notifier-theme-clean .notifier-btns button.link {
+  text-shadow: 0 1px 0 #E9E9E9;
+  color: #444;
+  border-bottom: dotted 1px #444;
+  padding: 9px 0 1px;
+}
+.notifier.notifier-theme-clean .notifier-btns button.link:hover,
+.notifier.notifier-theme-clean .notifier-btns button.link.hover {
+  color: #000;
+  border-bottom: solid 1px #000;
+  text-shadow: 0 1px 0 #DBDBDB;
+}
+.notifier.notifier-theme-clean > div {
+  background-color: #fff;
+  border: solid 1px #fff;
+  border-top: solid 1px #646464;
+  -webkit-box-shadow: 0 -1px 2px rgba( 100 , 100 , 100 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba( 100 , 100 , 100 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 2px rgba( 100 , 100 , 100 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(top, rgba(100, 100, 100, 0.29) 0%, rgba(100, 100, 100, 0.08) 27%, rgba(100, 100, 100, 0.01) 100%);
+  /* FF3.6+ */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(100, 100, 100, 0.29)), color-stop(27%, rgba(100, 100, 100, 0.08)), color-stop(100%, rgba(100, 100, 100, 0.01)));
+  /* Chrome,Safari4+ */
+
+  background-image: -webkit-linear-gradient(top, rgba(100, 100, 100, 0.29) 0%, rgba(100, 100, 100, 0.08) 27%, rgba(100, 100, 100, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background-image: -o-linear-gradient(top, rgba(100, 100, 100, 0.29) 0%, rgba(100, 100, 100, 0.08) 27%, rgba(100, 100, 100, 0.01) 100%);
+  /* Opera 11.10+ */
+
+  background-image: -ms-linear-gradient(top, rgba(100, 100, 100, 0.29) 0%, rgba(100, 100, 100, 0.08) 27%, rgba(100, 100, 100, 0.01) 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.29) 0%, rgba(100, 100, 100, 0.08) 27%, rgba(100, 100, 100, 0.01) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #b8b8b8 , EndColorStr= #ffffff );
+  padding: 30px 30px 30px;
+  max-width: 460px;
+}
+.notifier.notifier-theme-clean.notifier-warning > div {
+  border: solid 1px #fff;
+  border-top: solid 1px #ffa21d;
+  -webkit-box-shadow: 0 -1px 2px rgba( 255 , 162 , 29 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba( 255 , 162 , 29 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 2px rgba( 255 , 162 , 29 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(top, rgba(255, 162, 29, 0.29) 0%, rgba(255, 162, 29, 0.08) 27%, rgba(255, 162, 29, 0.01) 100%);
+  /* FF3.6+ */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 162, 29, 0.29)), color-stop(27%, rgba(255, 162, 29, 0.08)), color-stop(100%, rgba(255, 162, 29, 0.01)));
+  /* Chrome,Safari4+ */
+
+  background-image: -webkit-linear-gradient(top, rgba(255, 162, 29, 0.29) 0%, rgba(255, 162, 29, 0.08) 27%, rgba(255, 162, 29, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background-image: -o-linear-gradient(top, rgba(255, 162, 29, 0.29) 0%, rgba(255, 162, 29, 0.08) 27%, rgba(255, 162, 29, 0.01) 100%);
+  /* Opera 11.10+ */
+
+  background-image: -ms-linear-gradient(top, rgba(255, 162, 29, 0.29) 0%, rgba(255, 162, 29, 0.08) 27%, rgba(255, 162, 29, 0.01) 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(to bottom, rgba(255, 162, 29, 0.29) 0%, rgba(255, 162, 29, 0.08) 27%, rgba(255, 162, 29, 0.01) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #ffe7c5 , EndColorStr= #ffffff );
+}
+.notifier.notifier-theme-clean.notifier-error > div {
+  border: solid 1px #fff;
+  border-top: solid 1px #da4f49;
+  -webkit-box-shadow: 0 -1px 2px rgba( 218 , 79 , 73 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba( 218 , 79 , 73 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 2px rgba( 218 , 79 , 73 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(top, rgba(218, 79, 73, 0.29) 0%, rgba(218, 79, 73, 0.08) 27%, rgba(218, 79, 73, 0.01) 100%);
+  /* FF3.6+ */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(218, 79, 73, 0.29)), color-stop(27%, rgba(218, 79, 73, 0.08)), color-stop(100%, rgba(218, 79, 73, 0.01)));
+  /* Chrome,Safari4+ */
+
+  background-image: -webkit-linear-gradient(top, rgba(218, 79, 73, 0.29) 0%, rgba(218, 79, 73, 0.08) 27%, rgba(218, 79, 73, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background-image: -o-linear-gradient(top, rgba(218, 79, 73, 0.29) 0%, rgba(218, 79, 73, 0.08) 27%, rgba(218, 79, 73, 0.01) 100%);
+  /* Opera 11.10+ */
+
+  background-image: -ms-linear-gradient(top, rgba(218, 79, 73, 0.29) 0%, rgba(218, 79, 73, 0.08) 27%, rgba(218, 79, 73, 0.01) 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(to bottom, rgba(218, 79, 73, 0.29) 0%, rgba(218, 79, 73, 0.08) 27%, rgba(218, 79, 73, 0.01) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #f6d6d5 , EndColorStr= #ffffff );
+}
+.notifier.notifier-theme-clean.notifier-info > div {
+  border: solid 1px #fff;
+  border-top: solid 1px #49afcd;
+  -webkit-box-shadow: 0 -1px 2px rgba( 73 , 175 , 205 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba( 73 , 175 , 205 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 2px rgba( 73 , 175 , 205 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(top, rgba(73, 175, 205, 0.29) 0%, rgba(73, 175, 205, 0.08) 27%, rgba(73, 175, 205, 0.01) 100%);
+  /* FF3.6+ */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(73, 175, 205, 0.29)), color-stop(27%, rgba(73, 175, 205, 0.08)), color-stop(100%, rgba(73, 175, 205, 0.01)));
+  /* Chrome,Safari4+ */
+
+  background-image: -webkit-linear-gradient(top, rgba(73, 175, 205, 0.29) 0%, rgba(73, 175, 205, 0.08) 27%, rgba(73, 175, 205, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background-image: -o-linear-gradient(top, rgba(73, 175, 205, 0.29) 0%, rgba(73, 175, 205, 0.08) 27%, rgba(73, 175, 205, 0.01) 100%);
+  /* Opera 11.10+ */
+
+  background-image: -ms-linear-gradient(top, rgba(73, 175, 205, 0.29) 0%, rgba(73, 175, 205, 0.08) 27%, rgba(73, 175, 205, 0.01) 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(to bottom, rgba(73, 175, 205, 0.29) 0%, rgba(73, 175, 205, 0.08) 27%, rgba(73, 175, 205, 0.01) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #cde9f1 , EndColorStr= #ffffff );
+}
+.notifier.notifier-theme-clean.notifier-success > div {
+  border: solid 1px #fff;
+  border-top: solid 1px #4cff4c;
+  -webkit-box-shadow: 0 -1px 2px rgba( 76 , 255 , 76 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba( 76 , 255 , 76 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 2px rgba( 76 , 255 , 76 ,.4), 0 2px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: -moz-linear-gradient(top, rgba(76, 255, 76, 0.29) 0%, rgba(76, 255, 76, 0.08) 27%, rgba(76, 255, 76, 0.01) 100%);
+  /* FF3.6+ */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(76, 255, 76, 0.29)), color-stop(27%, rgba(76, 255, 76, 0.08)), color-stop(100%, rgba(76, 255, 76, 0.01)));
+  /* Chrome,Safari4+ */
+
+  background-image: -webkit-linear-gradient(top, rgba(76, 255, 76, 0.29) 0%, rgba(76, 255, 76, 0.08) 27%, rgba(76, 255, 76, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background-image: -o-linear-gradient(top, rgba(76, 255, 76, 0.29) 0%, rgba(76, 255, 76, 0.08) 27%, rgba(76, 255, 76, 0.01) 100%);
+  /* Opera 11.10+ */
+
+  background-image: -ms-linear-gradient(top, rgba(76, 255, 76, 0.29) 0%, rgba(76, 255, 76, 0.08) 27%, rgba(76, 255, 76, 0.01) 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(to bottom, rgba(76, 255, 76, 0.29) 0%, rgba(76, 255, 76, 0.08) 27%, rgba(76, 255, 76, 0.01) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= #f4fff4 , EndColorStr= #ffffff );
+}
+.notifier.notifier-theme-clean.notifier-dialog > div {
+  padding-top: 12px;
+}
+.notifier.notifier-theme-clean.notifier-dialog .notifier-message {
+  text-align: left;
+}
+.notifier.notifier-theme-clean.notifier-dialog .notifier-close {
+  top: 13px;
+  right: 13px;
+}
+.notifier.notifier-theme-clean.notifier-dialog .notifier-btns {
+  background: rgba(255, 255, 255, 0.47);
+  padding: 13px 10px 14px 10px;
+  -webkit-box-shadow: 0 -1px 0 white, inset 0 2px 3px rgba(185, 185, 185, 0.27);
+  -moz-box-shadow: 0 -1px 0 white, inset 0 2px 3px rgba(185, 185, 185, 0.27);
+  box-shadow: 0 -1px 0 white, inset 0 2px 3px rgba(185, 185, 185, 0.27);
+  border-top: solid 1px rgba(0, 0, 0, 0.14);
+  margin: 25px -30px -30px;
+}
+.notifier.notifier-theme-clean.notifier-dialog .notifier-title {
+  font-weight: bold;
+  text-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0px #fff;
+  -moz-box-shadow: 0 1px 0px #fff;
+  box-shadow: 0 1px 0px #fff;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.06);
+  margin: 0 -30px 20px;
+  padding: 0 30px 10px;
+}
+.notifier.notifier-theme-clean.notifier-with-close-btn .notifier-title {
+  padding-right: 60px;
+}
