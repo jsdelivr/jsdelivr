@@ -1,0 +1,91 @@
+html.lt-ie9 {
+  min-width: 1200px !important;
+}
+html.lt-ie9 body {
+  width: auto !important;
+}
+html.lt-ie9 .container {
+  width: auto !important;
+}
+html.lt-ie9 input:focus, html.lt-ie9 select:focus, html.lt-ie9 textarea:focus {
+  border-color: #198d98;
+}
+html.lt-ie9 input[type=checkbox], html.lt-ie9 input[type=radio], html.lt-ie9 select[type=checkbox], html.lt-ie9 select[type=radio], html.lt-ie9 textarea[type=checkbox], html.lt-ie9 textarea[type=radio] {
+  padding: 0;
+  background: none;
+  border: none;
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+html.lt-ie9 span.select:after {
+  display: none;
+}
+html.lt-ie9 span.select select {
+  padding: 0;
+  height: 2.1em;
+  vertical-align: top;
+}
+html.lt-ie9 span.select select:focus {
+  border: 1px solid #198d98;
+  -ms-box-shadow: 0 0 0 white;
+  filter: Glow(color=#FFFFFFFF, strength=0);
+  -ms-filter: glow(color=#FFFFFFFF, strength=0);
+  -o-box-shadow: 0 0 0 white;
+  -moz-box-shadow: 0 0 0 white;
+  -webkit-box-shadow: 0 0 0 white;
+  box-shadow: 0 0 0 white;
+}
+html.lt-ie9 .social-icon {
+  filter: none;
+}
+html.lt-ie9 div.modal .close, html.lt-ie9 div.modal .fullscreen {
+  padding: 6px 7px;
+  top: 2px;
+  right: 2px;
+}
+html.lt-ie9 div.modal .fullscreen {
+  right: auto;
+  left: 2px;
+}
+html.lt-ie8 nav.inline > ul li {
+  display: block;
+  float: left;
+  white-space-collapse: preserve;
+}
+html.lt-ie8 nav.inline > ul li ul {
+  width: 100%;
+}
+html.lt-ie8 nav.inline > ul li ul li {
+  float: none;
+  width: 100%;
+}
+html.lt-ie8 h1, html.lt-ie8 h2, html.lt-ie8 h3, html.lt-ie8 h4, html.lt-ie8 h5, html.lt-ie8 h6 {
+  line-height: 1.5;
+}
+html.lt-ie8 ul, html.lt-ie8 ul.list,
+html.lt-ie8 ol, html.lt-ie8 ol.list {
+  margin-left: 0;
+  padding-left: 25px;
+}
+html.lt-ie8 ul.list {
+  list-style: disc;
+}
+html.lt-ie8 ol.list {
+  list-style: decimal;
+}
+html.lt-ie8 ol.list li {
+  padding: 0;
+}
+html.lt-ie8 ul.button-list, html.lt-ie8 ol.button-list {
+  margin: 0;
+  padding: 0;
+}
+html.lt-ie8 button.dropdown ul, html.lt-ie8 .button.dropdown ul, html.lt-ie8 a.button.dropdown ul, html.lt-ie8 a.button:visited.dropdown ul {
+  top: 2em;
+}
