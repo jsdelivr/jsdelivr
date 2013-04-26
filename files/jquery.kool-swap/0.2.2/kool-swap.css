@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+/* This stylesheet only contains the loading box styles */
+#ks-loading-box {
+	background: rgba(255, 255, 255, .5);
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+	bottom: 50%;
+	display: none;
+	left: 40%;
+	position: fixed;
+	right: 40%;
+	top: 30%;
+	z-index: 9999999;
+}
+
+/* Loader animations */
+@keyframes spinPulse {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes spinPulse {
+    0% {
+        -moz-transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        -moz-transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes spinPulse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes spinPulse {
+    0% {
+        -ms-transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        -ms-transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        -ms-transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes spinPulse {
+    0% {
+        -o-transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        -o-transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        -o-transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+.ks-loading {
+	border: 5px solid #000;
+	border-radius: 50px;
+	border-left: 5px solid rgba(255, 255, 255, 0);
+	border-right: 5px solid rgba(255, 255, 255, 0); 
+	height: 26px;
+	left: 50%;
+	margin: -13px 0 0 -13px;
+	position: absolute;
+	top: 50%;
+	width: 26px;
+    animation: spinPulse 1.3s infinite linear;
+    -moz-animation: spinPulse 1.3s infinite linear;
+    -webkit-animation: spinPulse 1.3s infinite linear;
+    -ms-animation: spinPulse 1.3s infinite linear;
+    -o-animation: spinPulse 1.3s infinite linear;
+}
