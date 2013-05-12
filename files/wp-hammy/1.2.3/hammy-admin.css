@@ -1,0 +1,103 @@
+/*
+* Hammy - Default Stylesheet
+*/
+
+.hammy-page th {
+    display:none;
+}
+
+.hammy-page input[type=submit] {
+    padding:8px 16px;
+    font-size:16px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.hammy-page td {
+    padding-left:0;
+}
+
+.hammy-page select {
+    display:block!important;
+    height:auto!important;
+    padding:6px 8px;
+}
+
+input[type=text].hammy-content,
+.hammy-bp-wrap,
+.hammy-ignore-wrap {
+    display:block;
+    border:none;
+    min-height:38px;
+    padding:5px;
+    margin:5px 0;
+    background:#E4E4E4;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text].hammy-content {
+    height:43px;
+    line-height:43px;
+    font-size:18px;
+    padding:5px 10px;
+    color:rgba(0,0,0,0.6);
+    text-shadow:0 1px 0 rgba(255,255,255,1);
+    width:60%;
+}
+
+.hammy-bp-wrap > div,
+.hammy-ignore-wrap > div {
+    position:relative;
+    display:inline-block;
+    margin: 5px; 5px 5px 0;
+    padding:5px 10px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+    color:#fff;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.hammy-bp-wrap > div > span,
+.hammy-ignore-wrap > div > span {
+    position:relative;
+    display:inline-block;
+    padding-left:5px;
+    top:-1px;
+    font-weight:bold;
+    opacity:0.3;
+    cursor:pointer;
+    cursor:hand;
+}
+
+.hammy-bp-wrap > .hammy-data {
+    border: 1px solid #ca481d;
+    background: #e64915;
+    background: -moz-linear-gradient(top,  #e64915 0%, #ca481d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e64915), color-stop(100%,#ca481d));
+    background: -webkit-linear-gradient(top,  #e64915 0%,#ca481d 100%);
+    background: -o-linear-gradient(top,  #e64915 0%,#ca481d 100%);
+    background: -ms-linear-gradient(top,  #e64915 0%,#ca481d 100%);
+    background: linear-gradient(top,  #e64915 0%,#ca481d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e64915', endColorstr='#ca481d',GradientType=0 );
+}
+
+.hammy-ignore-wrap > .hammy-data {
+    border: 1px solid #25607b;
+    background: #2085b3;
+    background: -moz-linear-gradient(top,  #2085b3 0%, #25607b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2085b3), color-stop(100%,#25607b));
+    background: -webkit-linear-gradient(top,  #2085b3 0%,#25607b 100%);
+    background: -o-linear-gradient(top,  #2085b3 0%,#25607b 100%);
+    background: -ms-linear-gradient(top,  #2085b3 0%,#25607b 100%);
+    background: linear-gradient(top,  #2085b3 0%,#25607b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2085b3', endColorstr='#25607b',GradientType=0 );
+}
+
+input[type=text].hammy-input {
+    width:200px;
+}
