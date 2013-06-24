@@ -51,8 +51,20 @@ A version directory should contain the following:
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
+URL Structure
+-------------
+
+`//cdn.jsdelivr.com/{projectName}/{version}/{file}`
+
+`//cdn.jsdelivr.com/{projectName}/{version}/{projectName}.zip`
 
 
+API 
+---
+
+JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
+
+XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml`
 
 
 
