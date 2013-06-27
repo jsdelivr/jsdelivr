@@ -1,9 +1,0 @@
-{
-	"css":[
-		"src/hints.css"
-	],
-	"js":[
-		"dep/jquery.poshytip.js",
-		"src/hints.js"
-	]
-}
