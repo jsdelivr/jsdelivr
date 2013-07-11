@@ -1,0 +1,55 @@
+.taskbar {
+    width:30%;
+}
+
+.label,.additional,.lists {
+    width:200px;
+}
+
+.masthead {
+    background:#f7f7f9;
+    color:#333;
+}
+
+.site-header {
+    background:#3981a7;
+}
+
+.masthead h3 {
+    font-weight: 500;
+}
+
+.site-body {
+    padding-top: 40px;
+}
+
+.total {
+    background: #f89406;
+    font-weight: 700;
+}
+
+.size {
+    text-align: right;
+}
+
+.docs p {
+    font-size: 110%;
+}
+
+
+.docs {
+    width:48%;
+}
+
+@media (min-width: 1200px){
+    .docs {
+        width:30%;
+    }
+}
+
+@media (max-width: 979px) {
+    .docs {
+        width: 100%;
+        max-width:500px;
+    }
+}
