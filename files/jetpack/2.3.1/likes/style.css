@@ -1,0 +1,206 @@
+#wpadminbar li#wp-admin-bar-admin-bar-likes-widget {
+	width: 61px;
+}
+
+#wpadminbar iframe.admin-bar-likes-widget {
+	width: 61px;
+	height: 28px;
+	min-height: 28px;
+	border-width: 0px;
+	position: absolute;
+	top: 0;
+}
+
+div.jetpack-likes-widget-wrapper {
+	width: 100%;
+}
+
+div.jetpack-likes-widget-wrapper .sd-link-color {
+	font-size: 12px;
+}
+
+div.jetpack-likes-widget-wrapper.slim-likes-widget {
+	width: 1px; /* initial default */
+}
+
+#likes-other-gravatars {
+	display: none;
+	position: absolute;
+	padding: 10px;
+	background-color: #000;
+	border-width: 0;
+	opacity: 0.88;
+	filter: alpha(opacity=88);
+	box-shadow: 0 0 10px black;
+	min-width: 130px;
+	z-index: 1000;
+}
+
+#likes-other-gravatars * {
+	line-height: normal;
+}
+
+#likes-other-gravatars .likes-text {
+	color: white;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+#likes-other-gravatars ul,
+#likes-other-gravatars li {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	list-style-type: none;
+}
+
+#likes-other-gravatars li::before {
+	content: "";
+}
+
+#likes-other-gravatars ul.wpl-avatars {
+	overflow: auto;
+	display: block;
+	position: absolute;
+	max-height: 190px;
+}
+
+#likes-other-gravatars ul.wpl-avatars li {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+#likes-other-gravatars ul.wpl-avatars li a {
+	margin: 0 2px 0 0;
+	border-bottom: none !important;
+	display: block;
+}
+
+#likes-other-gravatars ul.wpl-avatars li a img {
+	background: none;
+	border: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: static;
+}
+
+
+div.sd-box {
+	border-top: 1px solid #ddd;
+	border-top: 1px solid rgba(0,0,0,.13);
+}
+
+h3.sd-title {
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 3px 0;
+	padding: 0;
+	text-transform: none;
+	letter-spacing: 0;
+	line-height: 1;
+	font-weight: bold;
+	width: 15.625%; /* 100px / 640px */ float: left;
+	position: static;
+	background: none;
+	border: none;
+}
+
+.rtl .sd-title {
+	float: right;
+	text-align: right;
+}
+
+.entry-content .post-likes-widget, .post-likes-widget,
+.comment-likes-widget {
+	margin: 0;
+	border-width: 0;
+}
+
+.post-likes-widget-placeholder {
+	margin: 0;
+	border-width: 0;
+}
+
+.post-likes-widget-placeholder .button {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background: #efefef;
+	background: -moz-linear-gradient(top, #f7f7f7 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#efefef));
+	background: -webkit-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: -o-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: -ms-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	border-radius: 3px;
+	border: 1px solid #ddd !important;
+	box-shadow: inset 0 1px 0 #fff;
+	color: #999;
+	text-decoration: none;
+	line-height: 1;
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+.post-likes-widget-placeholder .button span {
+	padding: 1px 5px 1px 2px;
+	display: block;
+	opacity: .8;
+	line-height: 1.5em;
+	text-shadow: none;
+}
+
+.post-likes-widget-placeholder .button span:before {
+	color: #97A8CC;
+	font-family: "Noticons";
+	content: '\f408';
+	font-size: 16px;
+	line-height: 0;
+	text-shadow: 0 1px 0 #fff;
+	position: relative;
+	top: 3px;
+}
+
+.post-likes-widget-placeholder .loading {
+	color: #999;
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.post-likes-widget {
+	width: 82.125%;
+	display: none;
+	float: right;
+}
+
+.slim-likes-widget .post-likes-widget {
+	width: auto;
+	float: none;
+}
+
+/* Like Special cases (display on it's own) */
+
+div.sharedaddy.sd-like-enabled .sd-like h3 {
+	display: none;
+}
+
+div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget {
+	width: 100%;
+	float: none;
+}
+
+div.sharedaddy.sd-rating-enabled .sd-like .post-likes-widget, div.sharedaddy.sd-sharing-enabled .sd-like .post-likes-widget {
+	width: 82.125%;
+	float: right;
+}
+
+div.sharedaddy.sd-rating-enabled .sd-like h3, div.sharedaddy.sd-sharing-enabled .sd-like h3 {
+	display: block;
+}
+
+.comment-likes-widget {
+	width: 100%;
+}
