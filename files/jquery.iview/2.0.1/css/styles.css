@@ -1,0 +1,158 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic&subset=cyrillic,greek,latin');
+
+@import url('reset.css');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Ubuntu', Tahoma;
+	line-height: 100%;
+	outline: none;
+}
+
+html {
+	border: 0px;
+}
+
+body {
+	color: #FFF;
+	font-size: 9pt;
+	cursor: default;
+}
+
+.clear {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #d0d9de;
+}
+
+a:hover {
+	color: #FFF;
+}
+
+#cont {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 70;
+	overflow: auto;
+}
+
+.copy {
+	text-shadow: #111 1px 1px 0px;
+	text-align: center;
+	padding: 10px 0px;
+	line-height: 150%;
+}
+
+/* ========================================================
+   Top bar
+   ===================================================== */
+#header {
+	z-index: 10000;
+	height: 37px;
+	line-height: 37px;
+	padding-bottom: 2px;
+	color: #ddd;
+	text-shadow: 0 -1px black;
+	background: url(../img/topbar.png) repeat-x;
+	margin-bottom: 20px;
+}
+#header .container {
+	width: 1004px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header a {
+	line-height: 36px;
+}
+#header ul {
+	list-style: none;
+}
+#header h1 {
+	float: left;
+	font-size: 16px;
+}
+#header h1, #header h1 a {
+	color: #eee;
+}
+#header h1 a {
+	display: block;
+	text-decoration: none;
+}
+#header h1 a:hover {
+	color: #fff;
+}
+#header #nav {
+	float: right;
+	border-left: 1px solid #2f4b56;
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	border-right: 1px solid #111;
+}
+#header #nav li {
+	float: left;
+}
+#header #nav a {
+	height: 36px;
+	display: block;
+	padding: 0 15px;
+	color: #d0d9de;
+	border-left: 1px solid #191919;
+	border-right: 1px solid #2f4b56;
+	border-right: 1px solid rgba(255, 255, 255, 0.05);
+	text-decoration: none;
+	cursor: pointer;
+}
+#header #nav a:hover {
+	background: url(../img/topbar-hover.png);
+}
+#header #nav a img {
+	float: left;
+	margin-right: 12px;
+	margin-top: 11px;
+}
+
+#header #nav li.active a, #header #nav a:active {
+	background: url(../img/topbar-active.png);
+	border-right: 0;
+	padding-right: 16px;
+}
+#header #nav span {
+	display: inline-block;
+	vertical-align: text-top;
+	line-height: 16px;
+	font-size: 11px;
+	padding: 0 5px;
+	color: #fff;
+	text-shadow: 0 1px #902a27;
+	border-radius: 2px;
+	margin-left: 10px;
+	background-color: #e93631;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f65d5f), color-stop(100%, #e93631));
+	background-image: -webkit-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -moz-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -ms-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -o-linear-gradient(top, #f65d5f, #e93631);
+	background-image: linear-gradient(top, #f65d5f, #e93631);
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+}
+
+div.header div img#logo {
+	float: left;
+}
+
+sup {
+	font-size: 13px;
+}

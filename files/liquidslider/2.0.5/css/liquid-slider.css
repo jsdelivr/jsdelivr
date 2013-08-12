@@ -1,0 +1,419 @@
+/***********************************************************************
+*
+*  Liquid Slider
+*  Kevin Batdorf
+*
+*  http://liquidslider.com
+*
+*  GPL license 
+*
+************************************************************************/
+
+/******************************************************
+* No JavaScript
+* Use this to apply styles when Javascript is disabled,
+* and be sure to include the ".no-js" class in your html 
+* markup.
+*******************************************************/
+.no-js .liquid-slider {
+  height:350px;
+  overflow:scroll;
+}
+
+/******************************************************
+* Preloader
+* Use this to apply styles when Javascript is disabled,
+* and be sure to include the ".no-js" class in your html 
+* markup.
+*******************************************************/
+.ls-preloader {  
+  background: url(../img/loading.gif) #f2f2f2 no-repeat center 75px;
+  opacity:1;
+  /* Do not edit below this line */
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+}
+
+/******************************************************************
+* Base Styles 
+* The styles here will apply to everything. I recommend you keep
+* the styles in here specific to mobile defices, then use
+* the media queries at the bottom to define further styles for larger
+* screen-sizes. Think Mobile First. But be cautious of how
+* your site will look in older IE browsers.
+*
+* Additional media queries are at the bottom of this document
+******************************************************************/
+.ls-wrapper {
+  margin:0 auto;
+  /* Do not edit below this line */
+  clear: both;
+  overflow: auto;
+  position: relative;
+}
+
+/******************************************************
+* Main Container
+* This is the main container (minus the navigation).
+* Be sure to match the width with the .panel class, 
+* or it won't work properly. Also, width only applies
+* if you are not using the responsive setting.
+*
+* The responsive slider will interpret the width as the
+* max width instead
+*******************************************************/
+.ls-wrapper .liquid-slider {
+  background: #f2f2f2;
+  width: 1030px;
+  /* Do not edit below this line */
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.ls-wrapper .panel-container {
+  /* Do not edit below this line */
+  position: relative;
+
+}
+.ls-wrapper .liquid-slider .panel-container .fade {
+  /* Do not edit below this line */
+  position: absolute;
+  top: 0; 
+  left: 0;
+  display: block;
+}
+
+/******************************************************
+* Panels
+* This is for the panels. If you are using the 
+* responsive setting, this will act as the max-width
+* for the entire slider.
+*******************************************************/
+.ls-wrapper .liquid-slider .panel {  
+  width: 1030px;
+  /* Do not edit below this line */
+  display: block;
+  float: left;
+}
+
+/******************************************************
+* These provide a base starting point for images and
+* video. However, you will have to add more rules
+* based on the content you use. Use the @media queries 
+* at the bottom of this file.
+*******************************************************/
+.ls-wrapper .liquid-slider .panel img{
+  /*
+  width:100%;
+  height:auto;  
+  margin:0 5px;
+  */
+}
+
+.ls-wrapper .liquid-slider .panel video {
+  /*
+  width:100%;  
+  height:auto;
+  */
+}
+
+/******************************************************
+* This is mainly used to adjust the padding inside each 
+* panel. If you are using the responsive setting, you
+* need to use the settings below as this will not apply.
+*******************************************************/
+.ls-wrapper .liquid-slider .panel-wrapper {  
+  padding: 20px;
+  /* Do not edit below this line */
+  position:relative;
+}
+
+/*****************************************************
+* This will adjust styles for all navigation tabs
+* less of course the select box used for mobile 
+* navigation. The .current styles will apply only to 
+* the current tab.
+*
+* You may use this section to create navigation for
+* mobile devices if you set mobileNavigation: false
+* Be sure to edit media queries for larger devices below
+* I have included an example below in comments.
+*
+* .currentCrossLink refers to external crosslinking.
+*******************************************************/
+.ls-wrapper .ls-nav a {
+  background: #d8d8d8;
+  color: #333333;
+  margin-right: 1px;
+  padding: 10px 15px;  
+  outline:0;
+}
+.ls-wrapper .ls-nav a:hover {
+  background: #f2f2f2;
+  color: #333333;
+  text-shadow: none;
+}
+.ls-wrapper .ls-nav .current {
+  background: #f2f2f2;
+}
+.currentCrossLink {
+  font-weight: bold;
+}
+.ls-wrapper .ls-nav ul {  
+  padding:0;
+  /* Do not edit below this line */
+  clear: both;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+.ls-wrapper .ls-nav ul li {
+  /* Do not edit below this line */
+  display: inline;
+}
+.ls-wrapper .ls-nav ul li a {
+ 
+  /* Do not edit below this line */
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+/*****************************************************
+* Mobile Menu
+* This will adjust styles for selectbox styles. I have
+* included a simple example to create a custom select
+* box.
+*******************************************************/
+.ls-wrapper .ls-nav {
+  overflow:hidden;
+  clear:both;
+}
+.ls-wrapper .ls-select-box {  
+  /* Delete these if you want the standard select box.
+     Also delete the rules below */
+
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+  background: url(../img/menu.png) no-repeat right #ddd;
+  
+}
+.ls-wrapper .ls-select-box select {  
+  /* If you want the standard select box, use 
+  width:100%
+  And delete the rest of the styling here */
+
+  width: 150%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:none;
+  background: transparent;
+  padding: 5px;
+  font-size: 110%;
+  border: none;
+  height: 35px;
+  cursor:pointer;
+  outline: 0;
+}
+
+/******************************************************
+* Arrows
+* This section refers to both the non-graphical and 
+* graphical navigation arrows. 
+*
+* Some settings will be overwritten when using the 
+* responsive setting.
+*******************************************************/
+.ls-wrapper .ls-nav-left, .ls-wrapper .ls-nav-right {
+  /* Do not edit below this line */
+  float: left;
+}
+.ls-wrapper .ls-nav-left a, .ls-wrapper .ls-nav-right a {
+  /* non-graphical arrows */
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  width: 100px;
+  /* Do not edit below this line */
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.ls-wrapper .ls-nav-left-arrow, .ls-wrapper .ls-nav-right-arrow {
+  cursor: pointer;
+  /* Do not edit below this line */
+  float: left;
+}
+.ls-wrapper .ls-nav-left-arrow a, .ls-wrapper .ls-nav-right-arrow a {
+  /* Do not edit below this line */
+  display: block;
+}
+.ls-wrapper .ls-nav-left, .ls-wrapper .ls-nav-left-arrow {
+  /* Do not edit below this line */
+  clear: both;
+}
+.ls-wrapper .ls-nav-right-arrow {
+  width: 25px;
+  height: 25px;
+  background: url(../img/arrow.png) no-repeat top right;
+  margin-top: 50px;
+  margin-right: 5px;
+  /* Do not edit below this line */
+  position:relative;
+}
+.ls-wrapper .ls-nav-left-arrow {
+  width: 25px;
+  height: 25px;
+  background: url(../img/arrow.png) no-repeat top left;
+  margin-top: 50px;
+  margin-left: 5px;
+  /* Do not edit below this line */
+  position:relative;
+}
+.ls-wrapper .ls-nav-left-arrow:hover {
+  /* Left graphical arrows hover */
+  background: url(../img/arrow.png) no-repeat bottom left;
+}
+.ls-wrapper .ls-nav-left-arrow:active {
+  /* Left graphical arrows click */
+}
+.ls-wrapper .ls-nav-right-arrow:hover {
+  /* Right graphical arrows hover */
+  background: url(../img/arrow.png) no-repeat bottom right;
+}
+.ls-wrapper .ls-nav-right-arrow:active {
+  /* Right graphical arrows click */
+}
+.arrows .liquid-slider {
+  /* Margin between slider and arrows */
+  margin: 0 10px;
+}
+
+/******************************************************
+* Responsive Styles
+* Here are the main responsive styles. This mostly 
+* covers the arrows, and most of the settings can be
+* applied above.
+*******************************************************/
+.ls-responsive .liquid-slider {
+  /* Do not edit below this line */
+  width: 100%;
+  margin: 0;
+}
+.ls-responsive .liquid-slider .panel .panel-wrapper {
+  padding: 10px;
+}
+.ls-responsive .ls-nav-left {
+  /* Left non-graphical arrows */
+  /* Do not edit below this line */
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+.ls-responsive .ls-nav-left a {
+  /* Left non-graphical arrows */
+  background: #9A9A9A;
+  width: 80px;
+}
+.ls-responsive .ls-nav-left a:hover {
+  /* Left non-graphical hover */
+  background: #747474;
+}
+.ls-responsive .ls-nav-right {
+  /* Right non-graphical arrows */
+  /* Do not edit below this line */
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+.ls-responsive .ls-nav-right a {
+  /* Right non-graphical arrows */
+  background: #9A9A9A;
+  width: 80px;
+}
+.ls-responsive .ls-nav-right a:hover {
+  /* Right non-graphical arrows hover */
+  background: #747474;
+}
+.ls-responsive .ls-nav-left-arrow {
+  /* Do not edit below this line */
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+.ls-responsive .ls-nav-right-arrow {
+  /* Do not edit below this line */
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+/******************************************************************
+* Larger Mobile Devices
+* This is for devices like the Galaxy Note or something that's 
+* larger than an iPhone but smaller than a tablet. 
+******************************************************************/
+@media only screen and (min-width: 481px) {
+  .ls-wrapper .liquid-slider .panel img{
+    /* Example */
+    /*
+    width:24%;
+    margin:2px;
+    */
+  }
+
+}
+
+/******************************************************************
+* Tablet & Smaller Laptops
+* This will include tablets and some netbooks.
+******************************************************************/
+@media only screen and (min-width: 768px) {
+  .ls-wrapper .liquid-slider .panel img{
+    /* Example */
+    /*
+    width:24%;
+    */
+  }
+  .ls-responsive .liquid-slider .panel .panel-wrapper {
+    padding: 20px 35px;
+  }
+}
+
+/******************************************************************
+* DESKTOP 
+* This is the average viewing window. So Desktops, Laptops, and 
+* in general anyone not viewing on a mobile device. Here's where
+* you can add resource intensive styles.
+******************************************************************/
+@media only screen and (min-width: 1030px) {
+  
+
+}
+
+/******************************************************************
+* LARGE VIEWING SIZE 
+* This is for the larger monitors and possibly full screen viewers.
+******************************************************************/
+@media only screen and (min-width: 1240px) {
+  
+
+}
+
+/******************************************************************
+* RETINA (2x RESOLUTION DEVICES)
+* This applies to the retina iPhone (4s) and iPad (2,3) along with 
+* other displays with a 2x resolution. You can also create a media
+* query for retina AND a certain size if you want. Go Nuts.
+******************************************************************/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  
+
+}

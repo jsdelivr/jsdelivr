@@ -1,8 +1,0 @@
-{
-  "js": [
-  "src/paste.js",
-  "src/wordpastehandler.js",
-  "src/oembedpastehandler.js",
-  "src/genericpastehandler.js" 	
-  ]	 	
-}

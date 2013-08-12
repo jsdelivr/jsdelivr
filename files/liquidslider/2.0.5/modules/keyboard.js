@@ -1,0 +1,1 @@
+registerKeyboard:function(){var f=this;d(a).keydown(function(h){var g=h.keyCode||h.which;if(h.target.type!=="textarea"&&h.target.type!=="textbox"){if(!f.options.forceAutoSlide){d(this).trigger("click")}if(g===f.options.leftKey){f.setNextPanel("right")}if(g===f.options.rightKey){f.setNextPanel("left")}d.each(f.options.panelKeys,function(i,j){if(g===j){f.setNextPanel(i-1)}})}})},

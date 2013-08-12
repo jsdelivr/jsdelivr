@@ -1,9 +1,0 @@
-{
-	"css":[
-		"css/hints.css"
-	],
-	"js":[
-		"vendor/tipsy.js",
-		"lib/hints-plugin.js"
-	]
-}
