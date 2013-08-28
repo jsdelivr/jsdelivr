@@ -8,16 +8,16 @@ var angularFileUpload = angular.module('angularFileUpload', []);
 (function loadFileAPI() {
 	if (typeof jQuery === 'undefined') {
 		var script = document.createElement('script');
-		script.setAttribute('src',
-				'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
+		script.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
 		document.getElementsByTagName('head')[0].appendChild(script);
 	}
+	
+	var base = '';
 
 	if (typeof FormData === 'undefined') {
 		var script = document.createElement('script');
 		var allScripts = document.getElementsByTagName('script');
 
-		var bse
 		for ( var i = 0; i < allScripts.length; i++) {
 			var index = allScripts[i].src.indexOf('angular-file-upload.js')
 			if (index == -1) {
@@ -29,8 +29,7 @@ var angularFileUpload = angular.module('angularFileUpload', []);
 			}
 		}
 
-		if ((typeof FileAPI === "undefined" || FileAPI.staticPath == null)
-				&& base != null) {
+		if (typeof FileAPI === "undefined" || FileAPI.staticPath == null) {
 			FileAPI = {
 				staticPath : base
 			}
