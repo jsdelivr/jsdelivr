@@ -1,0 +1,114 @@
+/* =============================================================
+
+    Tabby 3.2
+    Simple, mobile-first toggle tabs by Chris Ferdinandi.
+    http://gomakethings.com
+
+    Free to use under the MIT License.
+    http://gomakethings.com/mit/
+    
+ * ============================================================= */
+
+/*  Hide tab navigation by default */
+.tabs {
+    display: none;
+    visibility: hidden;
+}
+
+/*  Display tab navigation if javascript enabled.
+ *  This requires on the included js-accessibility.js script. */
+.js .tabs {
+    display: block;
+    visibility: visible;
+}
+
+/*  Force browser to show a pointer on tab navigation. */
+.tabs a, .tabs button {
+    cursor: pointer;
+}
+
+/*  Hide tab content if javascript is enabled. */
+.js .tabs-pane {
+    display: none;
+    visibility: hidden;
+}
+
+/*  Show tab content when active class is added.
+ *  This class is added via javascript. */
+.tabs-pane.active {
+    display: block;
+    visibility: visible;
+}
+
+/*  Fancy list styling for tab navigation.
+ *  Adjust to fit your design. */
+.tabs-horizontal,
+.tabs-stacked {
+    list-style: none;
+    margin-left: 0;
+    border-top: .071428571em solid #808080;
+    background-color: #f4f4f4;
+}
+
+/*  Display tab navigation as inline list. */
+.tabs-horizontal > li,
+.tabs-stacked > li {
+    display: inline-block;
+    float: none;
+    padding: .5em 1em;
+}
+
+/*  Set tab navigation link color.
+ *  Adjust to fit your design. */
+.tabs-horizontal a,
+.tabs-stacked a {
+    color: #808080;
+    text-decoration: none;
+}
+
+/*  When active, change tab navigation background color. */
+.tabs-horizontal > .active,
+.tabs-stacked > .active {
+    background-color: #ffffff;
+}
+
+/*  On hover and when active, change tab navigation color */
+.tabs-horizontal a:hover,
+.tabs-stacked a:hover,
+.tabs-horizontal > .active > a,
+.tabs-stacked > .active > a {
+    color: #272727;
+    text-decoration: none;
+}
+
+/*  For bigger screens.
+ *  (Tabby is mobile-first.) */
+@media (min-width: 40em) {
+
+    /*  Turn stacked nav into vertical list. */
+    .tabs-stacked {
+        border: none;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .tabs-stacked > li,
+    .tabs-stacked > li > a {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* Clearfix */
+.tabs:before, .tabs:after { 
+    display: table; 
+    content: ""; 
+    zoom: 1; 
+}
+
+.tabs:after { 
+    clear: both; 
+}

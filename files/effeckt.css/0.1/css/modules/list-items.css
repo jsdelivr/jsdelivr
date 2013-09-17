@@ -1,0 +1,249 @@
+.effeckt-list[data-effeckt-type='pop-in'] {
+  overflow: hidden; }
+
+.effeckt-list[data-effeckt-type='pop-in'] .new-item {
+  max-height: 0;
+  opacity: 0;
+  transform: translateX(-300px);
+  animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards; }
+
+.effeckt-list[data-effeckt-type='pop-in'] .remove-item {
+  max-height: 50px;
+  opacity: 1;
+  animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms; }
+
+@keyframes openSpace {
+  to {
+    max-height: 50px; } }
+
+@keyframes moveIn {
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveOut {
+  to {
+    opacity: 0;
+    transform: translateX(-300px); } }
+
+@keyframes closeSpace {
+  to {
+    max-height: 0px; }
+
+  from {
+    max-height: 50px; } }
+
+.effeckt-list[data-effeckt-type='expand-in'] .new-item {
+  max-height: 0;
+  opacity: 0;
+  transform: scale(0);
+  animation: growHeight 500ms ease forwards; }
+
+.effeckt-list[data-effeckt-type='expand-in'] .remove-item {
+  animation: shrinkHeight 500ms ease forwards; }
+
+@keyframes growHeight {
+  to {
+    max-height: 50px;
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes shrinkHeight {
+  to {
+    max-height: 0;
+    opacity: 1;
+    transform: scale(0); }
+
+  from {
+    max-height: 50px;
+    opacity: 1;
+    transform: scale(1); } }
+
+.effeckt-list[data-effeckt-type='wobble-in'] .new-item {
+  backface-visibility: visible;
+  animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards; }
+
+.effeckt-list[data-effeckt-type='wobble-in'] .remove-item {
+  backface-visibility: visible;
+  animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms; }
+
+@keyframes WobbleInX {
+  0% {
+    transform: perspective(250px) rotateX(90deg);
+    opacity: 0; }
+
+  40% {
+    transform: perspective(250px) rotateX(-10deg); }
+
+  70% {
+    transform: perspective(250px) rotateX(10deg); }
+
+  100% {
+    transform: perspective(250px) rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes WobbleOutX {
+  0% {
+    transform: perspective(250px) rotateX(0deg);
+    opacity: 1; }
+
+  100% {
+    transform: perspective(250px) rotateX(90deg);
+    opacity: 0; } }
+
+.effeckt-list[data-effeckt-type='flip-in'] .new-item {
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards; }
+
+.effeckt-list[data-effeckt-type='flip-in'] .remove-item {
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms; }
+
+@keyframes FlipIn {
+  0% {
+    transform: perspective(300px) rotateX(90deg);
+    opacity: 0; }
+
+  100% {
+    transform: perspective(300px) rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes FlipOut {
+  0% {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1; }
+
+  100% {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0; } }
+
+.effeckt-list[data-effeckt-type='fall-in'] .new-item {
+  backface-visibility: visible;
+  animation: openSpace 1000ms ease forwards, fallInX 1000ms both; }
+
+.effeckt-list[data-effeckt-type='fall-in'] .remove-item {
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation: fallOffX 1000ms both, closeSpace 750ms ease forwards 500ms; }
+
+@keyframes fallInX {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fallOffX {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0); }
+
+  100% {
+    opacity: 0;
+    transform: translateY(200px) rotateZ(90deg); } }
+
+.effeckt-list[data-effeckt-type='from-above'] .new-item {
+  backface-visibility: visible;
+  animation: openSpace 1000ms ease forwards, fromAbove 1000ms both 500ms; }
+
+.effeckt-list[data-effeckt-type='from-above'] .remove-item {
+  backface-visibility: visible;
+  animation: toAbove 1000ms both, closeSpace 500ms ease forwards 650ms; }
+
+@keyframes fromAbove {
+  0% {
+    opacity: 0;
+    transform: scale(3); }
+
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes toAbove {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+
+  100% {
+    opacity: 0;
+    transform: scale(3); } }
+
+.effeckt-list[data-effeckt-type='wobble-out'] .new-item {
+  backface-visibility: visible;
+  animation: openSpace 1000ms ease forwards, fallInX 1000ms both; }
+
+.effeckt-list[data-effeckt-type='wobble-out'] .remove-item {
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation: wobbleOutY 1500ms both 500ms, closeSpace 500ms ease forwards 1500ms; }
+
+@keyframes wobbleOutY {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0); }
+
+  20% {
+    opacity: 1;
+    transform: rotateZ(140deg); }
+
+  40% {
+    opacity: 1;
+    transform: rotateZ(60deg); }
+
+  60% {
+    opacity: 1;
+    transform: rotateZ(110deg); }
+
+  70% {
+    opacity: 1;
+    transform: rotateZ(90deg) translateX(0); }
+
+  90% {
+    opacity: 1;
+    transform: rotateZ(90deg) translateX(400px); }
+
+  100% {
+    opacity: 0;
+    transform: rotateZ(90deg) translateX(400px); } }
+
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .new-item {
+  backface-visibility: visible;
+  animation: bouncySlideIn 1000ms both, openSpace 500ms ease forwards; }
+
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .remove-item {
+  backface-visibility: visible;
+  animation: fallOffY 1500ms both 500ms, closeSpace 500ms ease forwards 1625ms; }
+
+@keyframes bouncySlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(300px); }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-50px); }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fallOffY {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotateZ(0deg); }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotateZ(0deg); }
+
+  75% {
+    opacity: 0.75;
+    transform: translateX(-50%) translateY(0) rotateZ(-30deg); }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(300px) rotateZ(-60deg); } }
