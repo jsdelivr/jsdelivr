@@ -1,0 +1,172 @@
+@tableBackgroundAccentDark: darken(@tableBackgroundAccent, 8%);
+
+.datagrid {
+
+	thead {
+
+		background-color: @tableBackgroundAccent;
+
+		.datagrid-header-title {
+			float: left;
+			line-height: 28px;
+			font-weight: normal;
+			font-size: 14px;
+			margin-right: 10px;
+		}
+
+		.datagrid-header-left {
+			float: left;
+		}
+
+		.datagrid-header-right {
+			float: right;
+		}
+
+		.datagrid-header-right, .datagrid-header-left {
+			.search, .filter {
+				margin-left: 8px;
+				margin-bottom: 0;
+
+				.dropdown-menu {
+					top: auto;
+					left: auto;
+				}
+			}
+		}
+
+		// When changing this section verify stretchHeight column sizes when sorting
+		// and update SORTED_HEADER_OFFSET in datagrid.js as needed
+		.sorted {
+			.gradientBar(@tableBackgroundAccent, @tableBackgroundAccentDark, @textColor, 'none');
+
+			padding-right: 30px;
+
+			i {
+				float: right;
+				margin-top: 2px;
+				margin-right: -22px;
+			}
+		}
+
+		.sortable {
+			cursor: pointer;
+
+			&:hover {
+				.gradientBar(@tableBackgroundAccent, @tableBackgroundAccentDark, @textColor, 'none');
+			}
+		}
+
+	}
+
+	tfoot {
+
+		background-color: @tableBackgroundAccent;
+
+		.datagrid-footer-left {
+
+			float: left;
+
+			.grid-controls {
+				margin-top: 7px;
+
+				select {
+					margin: 0 5px 1px;
+					width: 60px;
+				}
+
+				.grid-pagesize {
+					display: inline-block;
+					margin-bottom: 5px;
+					vertical-align: middle;
+
+					.dropdown-menu {
+						top: auto;
+						left: auto;
+					}
+				}
+
+				span {
+					font-weight: normal;
+				}
+			}
+
+		}
+
+		.datagrid-footer-right {
+
+			float: right;
+
+			.grid-pager {
+				> span {
+					font-weight: normal;
+					position: relative;
+					top: 8px;
+				}
+
+				.dropdown-menu {
+					min-width: 50px;
+				}
+
+				.combobox {
+					display: inline-block;
+					position: relative;
+					top: -2px;
+					vertical-align: baseline;
+					margin-bottom: 4px;
+				}
+
+				> button {
+					position: relative;
+					top: 7px;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.datagrid-stretch-header {
+	border-bottom: 0;
+	.border-bottom-radius(0);
+
+	margin-bottom: 0;
+
+	thead:last-child tr:last-child > th:first-child,
+	thead:last-child tr:last-child > th:last-child {
+		.border-bottom-radius(0);
+	}
+}
+
+.datagrid-stretch-wrapper {
+	border: 1px solid @tableBorder;
+	overflow: auto;
+
+	.datagrid {
+		border: none;
+		border-collapse: collapse;
+		.border-radius(0);
+
+		margin-bottom: 0;
+
+		td, th {
+			border-bottom: 1px solid @tableBorder;
+
+			&:first-child {
+				border-left: none;
+				.border-radius(0);
+			}
+		}
+	}
+}
+
+.datagrid-stretch-footer {
+	border-top: 0;
+	.border-top-radius(0);
+
+	th {
+		border-top: 0;
+	}
+}
+
