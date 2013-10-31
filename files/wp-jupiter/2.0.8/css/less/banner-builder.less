@@ -1,0 +1,48 @@
+#mk_banner_builder {
+
+	.flex-viewport {
+
+			margin: 0 auto !important;
+	}
+	> .flex-direction-nav {
+		 	a {
+				width: 42px;
+				height: 42px;
+				top:50%;
+				margin-top: -20px;
+				background-color: rgba(0,0,0,0.4);
+				.border-radius(4px);
+
+				&:hover {
+					background-color: rgba(0,0,0,0.6);
+				}
+
+				i {
+					position: absolute;
+					left:6px;
+					top:11px;
+					font-size: 22px;
+					color: #fff;
+				}
+			}
+
+			.flex-next {
+				right:10px;
+
+			}
+			.flex-prev {
+				left:10px;
+				
+			} 
+		}
+
+
+	&:hover {
+		.flex-direction-nav .flex-next {
+			right: 20px;
+		}
+		.flex-direction-nav .flex-prev {
+			left: 20px;
+		}
+	}	
+}
