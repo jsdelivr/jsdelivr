@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <title>$.fn.caret() Examples</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>$.fn.caret() Examples</h1>
+        
+        <h2>&lt;input /&gt; Example</h2>
+        <p>
+            <input id="input-ex" value="A test string..." />
+        </p>
+        <div id="input-buttons">
+            <button id="input-start">Jump to start</button>
+            <button id="input-end">Jump to end</button>
+            <br />
+            Index: <input id="input-index" value="5" />
+            <button id="input-ex-index">Jump to index</button>
+            <br />
+            toString: <input id="input-string" value="string" />
+            after: <input type="checkbox" id="input-string-after" />
+            <button id="input-ex-string">Jump to string</button>
+        </div>
+        
+        <h2>&lt;textarea&gt; Example</h2>
+        <p>
+            <textarea id="textarea-ex">A test string...</textarea>
+        </p>
+        <div id="textarea-buttons">
+            <button id="textarea-start">Jump to start</button>
+            <button id="textarea-end">Jump to end</button>
+            <br />
+            Index: <input id="textarea-index" value="5" />
+            <button id="textarea-ex-index">Jump to index</button>
+            <br />
+            toString: <input id="textarea-string" value="string" />
+            after: <input type="checkbox" id="textarea-string-after" />
+            <button id="textarea-ex-string">Jump to string</button>
+        </div>
+		
+		<h2>onFocus Example</h2>
+		<p>
+			<input type="text" id="onfocus-ex" value="Hello world!" />
+		</p>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+        <script src="jquery.caret.js"></script>
+        <script>
+            jQuery(function ($) {
+                var $inputExample = $('#input-ex'),
+                    $textareaExample = $('#textarea-ex'),
+					$onFocusExample = $('#onfocus-ex');
+                
+                $('#input-start').click(function () {
+                    $inputExample.caretToStart();
+                });
+                
+                $('#input-end').click(function () {
+                    $inputExample.caretToEnd();
+                });
+                
+                $('#input-ex-index').click(function () {
+                    // Turn to number by multiplication
+                    $inputExample.caret($('#input-index').val() * 1);
+                });
+                
+                $('#input-ex-string').click(function () {
+                    $inputExample.caret(
+                        $('#input-string').val(),
+                        $('#input-string-after').is(':checked')
+                    );
+                });
+                
+                $('#input-buttons').click(function () {
+                    if (console.log) console.log($inputExample.caret());
+                });
+                
+                $('#textarea-start').click(function () {
+                    $textareaExample.caretToStart();
+                });
+                
+                $('#textarea-end').click(function () {
+                    $textareaExample.caretToEnd();
+                });
+                
+                $('#textarea-ex-index').click(function () {
+                    // Turn to number by multiplication
+                    $textareaExample.caret($('#textarea-index').val() * 1);
+                });
+                
+                $('#textarea-ex-string').click(function () {
+                    $textareaExample.caret(
+                        $('#textarea-string').val(),
+                        $('#textarea-string-after').is(':checked')
+                    );
+                });
+                
+                $('#textarea-buttons').click(function () {
+                    if (console.log) console.log($textareaExample.caret());
+                });
+				
+				$onFocusExample.focus(function () {
+					// Delay needed to escape focus since
+					// native focus cannot be suppressed
+					$(this).delay(13).caretToEnd();
+				});
+            });
+        </script>
+    </body>
+</html>
