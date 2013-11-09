@@ -10,7 +10,7 @@ Feel free to open issues and pull requests if you think something should be adde
 All changes made to this repo are synced to the CDN.
 It can take more than 48 hours for the changes to appear on the website.
 
-
+[How jsDelivr works - What makes it special][4]
 
 
 How to submit or update projects:
@@ -73,6 +73,7 @@ XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml
   [1]: http://www.jsdelivr.com
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
   [3]: http://refresh-sf.com/yui/
+  [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jimaek/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
