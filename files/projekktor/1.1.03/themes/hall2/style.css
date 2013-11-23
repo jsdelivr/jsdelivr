@@ -1,0 +1,377 @@
+/*
+Theme Name: HALL2
+Theme URI: http://www.projekktor.com/downloads
+Description: button candy eyye catcher
+Author: Michel Maillard
+Author URI:http://www.porkhead.org
+License: http://www.projekktor.com/license/
+Variation: HALL PLASTIC // class="projekktor plastic"
+*/
+
+.projekktor {
+	background-color:#000;
+	overflow:hidden;
+	font-family: 'Century Gothic', 'Apple Gothic', Arial, Sans-Serif;
+	font-weight:bold;
+	position:relative;
+	padding:0;
+	margin:0;
+	display:block;
+}
+
+.pplogo.inactive,
+.ppstart.inactive,
+.ppbuffering.inactive,
+.ppcontrols.inactive,
+.ppplay.inactive,
+.pppause.inactive,
+.ppfsenter.inactive,
+.ppfsexit.inactive,
+.ppprev.inactive,
+.ppnext.inactive {
+	display: none;
+}
+
+.pplogo.active,
+.ppstart.active,
+.ppbuffering.active,
+.ppcontrols.active,
+.ppplay.active,
+.pppause.active,
+.ppfsenter.active,
+.ppfsexit.active,
+.ppprev.active,
+.ppnext.active {
+	display: block;
+}
+
+.ppcontrols {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	margin-left:-208px;
+	display: block;
+	width: 416px;
+	height: 96px;
+	padding: 0px;
+}
+.plastic .ppcontrols {
+	padding: 0px;
+}
+.ppplay,
+.pppause  {
+	display:block;
+	position: absolute;
+	top: 12px;
+	left: 202px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+}
+.pppause {
+	display:none;
+}
+.ppfsenter,
+.ppfsexit  {
+	display:block;
+	position: absolute;
+	top: 21px;
+	right: 19px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.ppscrubber,
+.plastic .ppscrubber  {
+	position: absolute;
+	bottom: 14px;
+	display: block;
+	height: 4px;
+	left: 20px;
+	margin: auto;
+	padding: 0;
+	width: 374px;
+	background: url("hall2-load.gif") repeat-x left top transparent;
+	-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;
+	border-radius: 400px;
+}
+.plastic .ppscrubber { background: url("plastic-load.gif") repeat-x left top transparent;}
+.ppplayhead, .pploaded {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	height: 4px;
+	width: 1px;
+	cursor: pointer;
+	z-index: 301;
+	-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;
+	border-radius: 400px;
+}
+.pploaded {
+	z-index: 10;
+	background:#fff ;
+	opacity: 0.6;
+	/* ie7 */
+	filter: alpha(opacity = 60);
+	/* ie8 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+.pptitle {
+	position: absolute;
+	left: 165px;
+	top:40px;
+	width: 230px;
+	overflow: hidden;
+	text-align: left;
+	line-height: 30px;
+	height:30px;
+	font-size:13px;
+	color:#000;
+	text-shadow: rgba(255,255,255,0.5) 0 1px 0;
+}
+.ppvmax,
+.ppmute  {
+	position: absolute;
+	top: 0;
+	right: 153px;
+	height: 15px;
+	color: #fff;
+	width: 100px;
+	line-height: 30px;
+	height: 30px;
+	overflow: hidden;
+	cursor:pointer;
+}
+.pptimeleft {
+	font-size:10px;
+	color:#fff;
+	position: absolute;
+	top:10px;
+	left:26px;
+	overflow: hidden;
+	width: 70px;
+	line-height: 30px;
+	height: 30px;
+}
+.ppvmax  {
+	position: absolute;
+	top: 45px;
+	left: 118px;
+	width: 20px;
+	height:20px;
+}
+.ppmute  {
+	position: absolute;
+	top: 45px;
+	left: 18px;
+	width: 20px;
+	height:20px;
+}
+.ppvslider {
+	height: 4px;
+	left: 43px;
+	position: absolute;
+	top: 54px;
+	width: 66px;
+}
+.ppvmarker {
+	position: absolute;
+	right:0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+}
+.ppvknob,
+.plastic .ppvknob  {
+	cursor: pointer;
+	z-index: 201;
+	position: absolute;
+	top:-4px;
+	left:0px;
+	width: 12px;
+	height: 11px;
+}
+.ppnext,
+.ppprev {
+	display:block;
+	position: absolute;
+	top: 15px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.ppnext {
+	left:244px;
+}
+.ppprev {
+	left: 166px;
+}
+.pptestcard {
+	background: url("noise.gif") center center repeat;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 16px;
+	overflow: hidden;
+}
+.pptestcard p {
+	background-color: #000;
+	width: auto;
+	margin: auto;
+	line-height: 25px;
+	position: relative;
+	top: 25%;
+	padding: 10px;
+	border-top:10px solid #ff0080;
+	border-bottom:10px solid #ff0080;
+	text-align: center;
+}
+.ppbuffering {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	z-index:9010;
+	padding: 0px;
+	background: url("buffering.gif") no-repeat center center #000;
+	height: 48px;
+	width: 48px;
+	margin:-24px 0 0 -24px;
+	-moz-border-radius: 400px;
+	-webkit-border-radius: 400px;
+	border-radius:400px;
+	display: none;
+}
+.plastic .ppbuffering { 
+	background: url("plasticbuffering.gif") no-repeat center center #000;
+} 
+.ppstart {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	cursor: pointer;
+	height: 80px;
+	width: 80px;
+	margin:-40px 0 0 -40px;	
+	display: block;
+	z-index:8000;
+	padding: 0px;
+}
+.ppfsenter,
+.ppfsexit,
+.ppcontrols,
+.plastic .ppcontrols,
+.ppvknob,
+.plastic .ppvknob,
+.ppvmarker,
+.ppvmax,
+.ppmute,
+.ppnext,
+.pppause,
+.ppplay,
+.ppprev,
+.ppplayhead,
+.ppstart,
+.plastic .ppstart {
+	background-image: url("hall2.png");
+	background-repeat:no-repeat;
+}
+.ppfsenter { background-position:  0 0;}
+.ppfsenter:hover { background-position:  0 -20px;}
+.ppfsexit { background-position:  0 -40px;}
+.ppfsexit:hover { background-position:  0 -60px;}
+.ppcontrols { background-position:  -20px 0;}
+.plastic .ppcontrols { background-position:  -20px -96px;}
+.ppvknob { background-position:  0 -80px;}
+.plastic .ppvknob { background-position:  0 -91px; height: 12px;}
+.ppvmarker { background-position:  -20px -192px;}
+.ppvmax { background-position:  0 -103px;}
+.ppvmax:hover { background-position:  0 -123px;}
+.ppmute { background-position:  0 -143px;}
+.ppmute:hover { background-position:  0 -163px;}
+.ppnext { background-position:  0 -183px;}
+.ppnext:hover { background-position:  0 -203px;}
+.pppause { background-position:  -20px -196px;}
+.pppause:hover { background-position:  -46px -196px;}
+.ppplay { background-position:  -20px -222px;}
+.ppplay:hover { background-position:  -46px -222px;}
+.ppprev { background-position:  0 -223px;}
+.ppprev:hover { background-position:  0 -243px;}
+.ppplayhead { background-position:  -436px 0;}
+.ppstart { background-position:  -87px -192px;}
+.plastic .ppstart  { background-position:  -87px -352px;}
+.plastic .ppstart:hover, .ppstart:hover { background-position:  -87px -272px;}
+
+/* SOCIAL */
+.ppsocialbar {
+	position: absolute;
+	right: 0;
+	top: 2%;
+	width: 90px;
+	height: 50%;
+	padding: 0;
+}
+.ppsocialbutton, .ppsocialbutton:hover {
+	cursor: pointer;
+	overflow: hidden;
+	height: 16px; 
+	width: 80px;
+	padding: 5px;    
+	margin: 15px 0;
+	text-align: center;
+	font-size: 12px;    
+	background-color: #fff;
+	color: #000;
+	line-height: 14px;
+	opacity: .8;
+	filter: alpha(opacity=80);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+.ppsocialbutton:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.ppsocialpopup {
+	position: absolute;
+	margin-right: -122px;
+	margin-top: -140px;	
+	right: 50%;
+	top: 50%;
+	width: 185px;
+	height: 225px;
+	text-align: center;
+	padding: 10px 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: rgb(34, 34, 34);
+	background: rgba(34, 34, 34, 0.8);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99222222, endColorstr=#99222222);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99222222, endColorstr=#99222222)";
+	color: #fefefe;
+}
+.ppsocialpopup textarea {
+	width: 185px;
+	height: 65px;
+	border: 1px solid #ccc;
+	outline: 0 none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	display: block;    
+}
+.ppsocialpopup a {
+	display: block;
+	width: 100%;
+	text-decoration: underline;
+	margin: 5px auto;
+	text-align: center;
+	color: #ddd;
+	cursor: pointer;
+}
+.ppsocialpopup a:hover {
+	text-decoration: none;
+}

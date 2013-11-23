@@ -1,0 +1,106 @@
+/* MILKBOX CSS */
+
+#mbox-overlay{
+	background-color: #000; /* set the Milkbox overlay color // opacity: see the js options */
+	z-index:50000;
+	cursor: pointer;
+}
+
+/* Main box */
+#mbox-mainbox{
+	/* For default width and height, see the js options */
+	top:10%;/* overwritten in the js options to properly position the main box when activated in a scrolled window */
+	background-color: #fff;/* set the main box background color */
+	border: 5px solid #fff;/* set the main box border */ 
+	padding:5px;/* set the main box padding */
+}
+
+/* Where the files actually are injected */
+#mbox-filebox{ margin:0; padding:0; border:none; overflow:hidden; }
+
+#mbox-filebox img,
+#mbox-filebox iframe,
+#mbox-filebox swf{
+	border:none;	
+}
+
+/*this class is for styling the inner file box*/
+/*these styles will be visible after the first is loaded */
+.mbox-filebox-decorations{
+	border:none;
+	padding:0;
+}
+
+/* *** BOTTOM *** */
+
+/* container for controls and caption */
+#mbox-bottom { 
+	/* set text options */
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #656565;
+	line-height: 1.4em;
+	text-align: left;
+	padding-top:8px;
+	margin:0;
+}
+
+/* controls/navigation */
+/* be careful if you change buttons dimensions */
+
+#mbox-controls{
+	/*background-color:#0f0;*/
+	float:right;
+	width:27px;
+	padding-top:3px;
+	border-left:1px solid #9c9c9c;/* set nav border */
+}
+
+#mbox-count{ 
+	overflow:hidden;
+	padding-top:1px;
+	float:right;
+	text-align:right;
+	font-size:9px; /* count font size */
+}
+
+#mbox-close,
+#mbox-prev,
+#mbox-next,
+#mbox-playpause{
+	float:right;
+	height:19px;
+}
+
+#mbox-prev,#mbox-next{ width:15px; }
+#mbox-prev{ background: url(prev.gif) no-repeat; }/* IMAGE: prev */
+#mbox-next{ background: url(next.gif) no-repeat; }/* IMAGE: next */
+
+#mbox-playpause{ width:13px; }
+#mbox-playpause{ background: url(play-pause.gif) no-repeat; }/* IMAGE: prev */
+
+#mbox-close{
+	width:17px;
+	background:url(close.gif) no-repeat;/* IMAGE: close */
+}
+
+#mbox-prev:hover,
+#mbox-next:hover,
+#mbox-close:hover,
+#mbox-playpause:hover{
+	background-position:0 -22px;
+}
+
+/* description */
+#mbox-caption{
+	/*background-color:#f00;*/
+	margin-right:27px;
+	padding:0px 10px 0 0;
+	font-weight: normal;
+	text-align:justify;
+	overflow-x: hidden;  /* make sure the controls at the right remain accessible, even for small images with very large filenames: those would otherwise overlap those controls at right */
+}
+
+.mbox-loading{ background:url(loading.gif) no-repeat center; }/* IMAGE: loading gif */
+.mbox-reset{ clear:both; height:0; margin:0; padding:0; font-size:0; overflow:hidden; }
+

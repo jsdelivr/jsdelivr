@@ -1,0 +1,2590 @@
+/*
+Skin Name: Tool Kit Lens
+Skin URI: http://www.slidedeck.com/
+SlideDeck Type: social
+Description: A collection of elements to build your own simple lens
+Version: 1.0
+Author: digital-telepathy
+Author URI: http://www.dtelepathy.com/
+Contributors: dtelepathy, dtrenkner, burkett
+Tags: images, posts, feeds, pages, slidedeck
+*/
+
+.lens-tool-kit {
+    position: relative;
+    overflow: hidden;
+    font-size: 10px;
+    margin: 0 auto;
+}
+.lens-tool-kit ul.verticalSlideNav {
+    display:none;
+}
+.lens-tool-kit .slidesVertical dd {
+    margin: 0;
+    padding: 0;
+}
+.lens-tool-kit.sd2-frame {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    -webkit-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+}
+.lens-tool-kit.sd2-hairline .slidedeck {
+    border-width: 1px;
+    border-style: solid;
+}
+.lens-tool-kit .slidedeck dd {
+    width: 100%;
+    background-position: center center;
+    background-color: #000000;
+}
+.lens-tool-kit.sd2-dark .slidedeck dd { background-color: #000000; }
+.lens-tool-kit.sd2-light .slidedeck dd { background-color: #FFFFFF; }
+.lens-tool-kit .slide-title {
+    display: none;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+.lens-tool-kit .slide-title a,
+.lens-tool-kit .slide-title a:link,
+.lens-tool-kit .slide-title a:visited{
+    text-decoration: none;
+}
+.lens-tool-kit .slide-title a:hover{
+    text-decoration: underline;
+}
+.lens-tool-kit .slide-meta {
+    position: relative;
+    display: block;
+    font-size: 1.4em;
+    margin: 0;
+    color: #ddd;
+}
+.lens-tool-kit.sd2-title-light .slide-meta { color: #555; }
+.lens-tool-kit .slide-meta img.slide-author-avatar {
+    position: relative;
+    display: none;
+    top: 5px;
+    width: 20px;
+    margin-right: 0.4em;
+    padding: 1px;
+    border: 1px solid #666;
+}
+.lens-tool-kit.sd2-title-light .slide-meta img.slide-author-avatar { border-color: #ccc; }
+.lens-tool-kit.sd2-show-author-avatar .slide-meta img.slide-author-avatar { display: inline; }
+.lens-tool-kit .slide-meta .slide-author {
+    display: none;
+    font-weight: bold;
+    font-size: 0.85em;
+    margin-right: 0.4em;
+}
+.lens-tool-kit.sd2-show-author .slide-meta .slide-author { display: inline; }
+.lens-tool-kit .slide-meta .slide-author a {
+    color: #ddd;
+    text-decoration: none;
+}
+.lens-tool-kit.sd2-title-light .slide-meta .slide-author a {
+    color: #777;
+}
+.lens-tool-kit .slide-meta .slide-author a:hover,
+.lens-tool-kit .slide-meta .slide-author a:active { color: #fff; }
+.lens-tool-kit.sd2-title-light .slide-meta .slide-author a:hover,
+.lens-tool-kit.sd2-title-light .slide-meta .slide-author a:active { color: #444; }
+.lens-tool-kit .slide-date {
+    font-size: 0.85em;
+    font-style: italic;
+}
+/* Start video stuff */
+.lens-tool-kit dl.slidedeck dd.slide-type-video {
+    overflow: hidden;
+}
+.lens-tool-kit dl.slidedeck .slide-type-video .slide-content,
+.lens-tool-kit dl.slidedeck .slide-type-video .video-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.lens-tool-kit dl.slidedeck .slide-type-video .video-container{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.lens-tool-kit dl.slidedeck .slide-type-video .video-wrapper .cover {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.lens-tool-kit.sd2-dark dl.slidedeck .slide-type-video .video-wrapper .cover { background-color: #000; }
+.lens-tool-kit.sd2-light dl.slidedeck .slide-type-video .video-wrapper .cover { background-color: #fff; }
+.lens-tool-kit dl.slidedeck .slide-type-video.sd2-image-scaling-cover .video-wrapper .cover { background-size: cover; }
+.lens-tool-kit dl.slidedeck .slide-type-video.sd2-image-scaling-contain .video-wrapper .cover { background-size: contain; }
+/* Necessary because IE ignores click events on children of elements that have filter: CSS proprties. #hate_ie */
+.lens-tool-kit dl.slidedeck .slide-type-video .video-wrapper .cover .ie-background-image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video .video-wrapper .cover .play,
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video.custom-layout-body-text.custom-caption-position-left .video-wrapper .cover .play {
+    left: 75%;
+}
+.lens-tool-kit.sd2-title-pos-right dl.slidedeck .slide-type-video .video-wrapper .cover .play,
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video.custom-layout-body-text.custom-caption-position-right .video-wrapper .cover .play {
+    left: 25%;
+}
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video.custom-layout-caption .video-wrapper .cover .play,
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video.custom-layout-caption .video-wrapper .cover .play,
+.lens-tool-kit.sd2-title-pos-left dl.slidedeck .slide-type-video.custom-layout-none .video-wrapper .cover .play { left: 50%; }
+.lens-tool-kit dl.slidedeck dt { display: none; }
+
+/* End video stuff */
+.lens-tool-kit.sd2-hairline.sd2-light .slidedeck { border-color: #FFF; }
+.lens-tool-kit.sd2-hairline.sd2-dark .slidedeck { border-color: #000; }
+.lens-tool-kit.sd2-frame.sd2-nav-bar .sd-wrapper,
+.lens-tool-kit.sd2-frame.sd2-nav-pos-top.sd2-nav-bar .sd-wrapper,
+.lens-tool-kit.sd2-frame.sd2-nav-hanging.sd2-nav-pos-top .sd-wrapper { padding-bottom: 10px; }
+.lens-tool-kit.sd2-frame.sd2-nav-pos-bottom.sd2-nav-bar .sd-wrapper { padding-bottom: 0px; }
+.lens-tool-kit.sd2-frame.sd2-nav-pos-top.sd2-nav-dots .sd-wrapper { padding-top: 30px;}
+.lens-tool-kit.sd2-frame.sd2-nav-pos-top.sd2-nav-dots.sd2-nav-hanging .sd-wrapper,
+.lens-tool-kit.sd2-frame.sd2-nav-pos-top.sd2-nav-dots.sd2-nav-default .sd-wrapper { padding-top: 10px; }
+.lens-tool-kit .sd-lens-shadow {
+    -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    overflow: hidden;
+    z-index: 100;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    pointer-events: none;
+}
+.lens-tool-kit .slidedeck {
+    margin: 0px;
+    padding: 0px;
+}
+.lens-tool-kit.sd2-frame .slidedeck {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+}
+/**
+ * This handles a Flash bug in Firefox 11 for the Mac (64 bit) where
+ * the rouded corners on the <dl> element cause the video player to not 
+ * initialize correctly... beats me.
+ * - jamie3d
+ */
+.lens-tool-kit.sd2-frame.source-type-videos .slidedeck {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.lens-tool-kit .sd-nav-wrapper {
+    position: absolute;
+    bottom: 25px;
+    z-index: 10;
+    left: 50%;
+}
+.lens-tool-kit.sd2-medium .sd-nav-wrapper { bottom: 25px; }
+.lens-tool-kit.sd2-frame.sd2-light .slidedeck { border: 1px solid rgba(255,255,255,.60); }
+.lens-tool-kit.sd2-frame.sd2-dark .slidedeck { border: 1px solid #000; }
+.lens-tool-kit.sd2-nav-bar .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-hanging .sd-nav-wrapper {
+    padding: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    left: auto;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-large .sd-nav-wrapper { bottom: 30px; }
+.lens-tool-kit.sd2-large.sd2-nav-bar.sd2-nav-pos-bottom .sd-nav-wrapper { bottom: 0; }
+.lens-tool-kit.sd2-nav-bar.sd2-medium .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-bar.sd2-small .sd-nav-wrapper { padding: 10px 0; }
+.lens-tool-kit.sd2-nav-bar.sd2-small.sd2-nav-thumb .sd-nav-wrapper {
+    padding-bottom: 0px;
+    height: 48px;
+}
+.lens-tool-kit.sd2-small.sd2-no-nav .sd-nav-wrapper,
+.lens-tool-kit.sd2-medium.sd2-no-nav .sd-nav-wrapper,
+.lens-tool-kit.sd2-large.sd2-no-nav .sd-nav-wrapper,
+.lens-tool-kit.sd2-custom.sd2-no-nav .sd-nav-wrapper { padding-bottom: 0px; }
+.lens-tool-kit.sd2-nav-bar.sd2-small.sd2-nav-thumb.sd2-frame.sd2-nav-bar .sd-nav-wrapper {
+    height: 41px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+.lens-tool-kit.sd2-frame.sd2-nav-hanging .sd-nav-wrapper,
+.lens-tool-kit.sd2-hairline.sd2-nav-hanging .sd-nav-wrapper,
+.lens-tool-kit.sd2-none.sd2-nav-hanging .sd-nav-wrapper {
+    padding: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    left: auto;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-frame.sd2-nav-hanging.sd2-small .sd-nav-wrapper {
+    padding: 10px 0 0;
+}
+.lens-tool-kit.sd2-frame.sd2-nav-hanging.sd2-small.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-frame.sd2-nav-hanging.sd2-small.sd2-nav-pos-right .sd-nav-wrapper {
+    padding: 0;
+}
+
+.lens-tool-kit.sd2-frame.sd2-nav-hanging.sd2-small.sd2-nav-pos-top .sd-nav-wrapper {
+    padding-top: 0px;
+    padding-bottom: 4px;
+}
+.lens-tool-kit .sd-nav-deck {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+}
+.lens-tool-kit .sd-nav-deck .sd-nav-dot {
+    float: left;
+    width: 11px;
+    height: 11px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    background: #bcbcbc;
+    -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+    -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+    -o-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+    box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px; 
+}
+.lens-tool-kit .sd-nav-deck .sd-nav-dot:first-child { margin-left: 0px; }
+.lens-tool-kit.sd2-nav-default .sd-nav-deck .sd-nav-dot,
+.lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot {
+    background: #000;
+    -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+    -o-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+    box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+}
+.lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot:hover { background: #353535; }
+.lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot.active { background: #FFF; }
+.lens-tool-kit.sd2-nav-bar .sd-nav-wrapper {
+    -webkit-box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+    -moz-box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+    -o-box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+    box-shadow: 2px 1px 3px rgba(0,0,0,.5);
+}
+.lens-tool-kit .sd-nav-deck .sd-nav-dot:hover { background: #686868; }
+.lens-tool-kit .sd-nav-deck .sd-nav-dot.active { background: #f3f3f3; }
+
+/* Start Fancy gradient background and extra wrapper element */
+/**
+ * The following gradients are for the wrapper element that gives this lens
+ * its gray/black gradient background. Below it's tuned to get a background gradient
+ * when the nav is on the left or right and the frame is none or hairline.
+ * For the top/bottom nav, it only kicks in for the frame option.
+ * - Jamie
+ */
+.lens-tool-kit.sd2-nav-bar.sd2-light .sd-nav-wrapper {
+    background: rgb(233,233,233); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(233,233,233,1) 0%, rgba(194,194,194,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,233,233,1)), color-stop(100%,rgba(194,194,194,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* W3C */
+    border: 1px solid #7e7e7e;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+}
+.lens-tool-kit.sd2-nav-bar.sd2-dark .sd-nav-wrapper {
+    background: rgb(44,44,44); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(44,44,44,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(44,44,44,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    border: 1px solid #000;
+}
+.lens-tool-kit.sd2-nav-bar.sd2-frame .sd-nav-wrapper {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+.lens-tool-kit.sd2-frame.sd2-nav-hanging {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+    padding: 0 0 0 0;
+}
+.lens-tool-kit.sd2-dark.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-dark.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-dark.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-dark.sd2-hairline.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-dark.sd2-frame.sd2-nav-hanging .sd-wrapper,
+.lens-tool-kit.sd2-dark.sd2-frame .sd-wrapper {
+    background: rgb(44,44,44); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(44,44,44,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(44,44,44,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), 2px 1px 3px rgba(0,0,0,.28);
+    border: 1px solid #000;
+}
+.lens-tool-kit.sd2-light.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-light.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-light.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-light.sd2-hairline.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-light.sd2-frame.sd2-nav-hanging .sd-wrapper,
+.lens-tool-kit.sd2-light.sd2-frame .sd-wrapper {
+    background: rgb(233,233,233); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(233,233,233,1) 0%, rgba(194,194,194,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,233,233,1)), color-stop(100%,rgba(194,194,194,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* W3C */
+    border: 1px solid #7e7e7e;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.60), 2px 1px 3px rgba(0,0,0,.28);
+}
+/* End Fancy gradient background and extra wrapper element */
+
+.lens-tool-kit.sd2-frame.sd2-nav-hanging .sd-wrapper,
+.lens-tool-kit.sd2-frame .sd-wrapper {
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    -moz-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    -o-box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+    box-shadow: 2px 1px 3px rgba(0,0,0,.28);
+}
+.lens-tool-kit.sd2-hairline.sd2-nav-bar .sd-nav-wrapper { border: none !important; }
+.lens-tool-kit .sd-nav-deck .sd-thumb {
+    width: 48px;
+    height: 48px;
+    float: left;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 13px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    -o-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+}
+.lens-tool-kit.sd2-nav-pos-left .sd-nav-deck .sd-thumb,
+.lens-tool-kit.sd2-nav-pos-right .sd-nav-deck .sd-thumb {
+    margin-left: 0;
+    margin-bottom: 13px;
+}
+.lens-tool-kit .sd-nav-deck .sd-thumb .number{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: #000;
+    color: #fff;
+}
+.lens-tool-kit.sd2-light .sd-nav-deck .sd-thumb .number{
+    display: block;
+    color: #333;
+    background: #fff;
+}
+.lens-tool-kit.sd2-dark .sd-nav-deck .sd-thumb { background-color: #FFFFFF; }
+.lens-tool-kit .sd-nav-deck .sd-thumb .inner-image {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+.lens-tool-kit.sd2-nav-hanging .sd-nav-deck .sd-thumb {
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    -o-box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+}
+
+/* Small Variation of thumb accent color */ 
+.lens-tool-kit.sd2-small .sd-nav-deck .sd-thumb {
+    width: 34px;
+    height: 34px;
+}
+.lens-tool-kit.sd2-small .sd-nav-deck .sd-thumb .number{
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+}
+.lens-tool-kit.sd2-small .sd-nav-deck .sd-thumb .inner-image {
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+}
+.lens-tool-kit.sd2-no-thumb-border .sd-nav-deck .sd-thumb {
+    width: 48px;
+    height: 48px;
+    border: none;
+}
+.lens-tool-kit.sd2-no-thumb-border.sd2-small .sd-nav-deck .sd-thumb {
+    width: 34px;
+    height: 34px;
+    border: none;
+}
+.lens-tool-kit .sd-nav-deck .sd-thumb:first-child { margin-left: 0px; }
+.lens-tool-kit .sd-nav-deck .nav-centered {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.lens-tool-kit.sd2-nav-thumb .sd-nav-deck .nav-centered { padding-right: 3px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar .sd-nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-top .sd-nav-wrapper {
+    top: 0;
+    position: absolute;
+}
+
+/*
+.lens-tool-kit.sd2-nav-thumb .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2.sd2-nav-bar.sd2-frame.sd2-small.sd2-nav-arrow-style-2 .sd-nav-wrapper {
+    padding-left: 73px !important;
+    padding-right: 73px !important;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2 .sd-nav-wrapper {
+    padding-left: 85px !important;
+    padding-right: 85px !important;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2.sd2-nav-default .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2.sd2-nav-hanging .sd-nav-wrapper {
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2.sd2-nav-hanging.sd2-small .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-2.sd2-nav-default.sd2-small .sd-nav-wrapper {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+}
+.lens-tool-kit.sd2-nav-thumb .sd-nav-wrapper {
+    left: 0 !important;
+    right: 0 !important;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default .sd-nav-wrapper {
+    left: 15px !important;
+    right: 15px !important;
+}
+*/
+
+.lens-tool-kit.sd2-nav-thumb .sd-nav-deck {
+    height: 51px;
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-large .sd-nav-deck { height: 50px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-small .sd-nav-deck { height: 35px; }
+.lens-tool-kit .sd-node-title-box {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    left: 0;
+    right: 0;
+    padding: 10px 30px 10px;
+}
+.lens-tool-kit .sd-node-title-box .slide-text {
+    display: none;
+    font-size: 1.4em;
+    margin: 20px 0 15px;
+}
+.lens-tool-kit.sd2-hyphenate .sd-node-title-box,
+.lens-tool-kit.sd2-hyphenate .sd-node-title-box .slide-text {
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+/* Turn off excerpt if the excerpt is the only thing visible and we are on an excerpt-less slide */
+.lens-tool-kit.sd2-show-excerpt dd.no-excerpt .sd-node-title-box { display: none; }
+
+/* Turn on the excerpt if  */
+.lens-tool-kit.sd2-show-title .sd-node-title-box,
+.lens-tool-kit.sd2-show-title .sd-node-title-box .slide-title,
+.lens-tool-kit.sd2-show-author .sd-node-title-box,
+.lens-tool-kit.sd2-show-author-avatar .sd-node-title-box,
+.lens-tool-kit.date-format-timeago .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-abbreviated .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-raw .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-raw-eu .sd-node-title-box,
+
+.lens-tool-kit.sd2-show-title dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.sd2-show-title dd.no-excerpt .sd-node-title-box .slide-title,
+.lens-tool-kit.sd2-show-author dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.sd2-show-author-avatar dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.date-format-timeago dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-abbreviated dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-raw dd.no-excerpt .sd-node-title-box,
+.lens-tool-kit.date-format-human-readable-raw-eu dd.no-excerpt .sd-node-title-box,
+
+.lens-tool-kit.sd2-show-excerpt .sd-node-title-box,
+.lens-tool-kit.sd2-show-excerpt .sd-node-title-box .slide-text { display: block; }
+
+.lens-tool-kit.sd2-small .sd-node-title-box,
+.lens-tool-kit dl.slidedeck dd.no-excerpt.no-title .sd-node-title-box { display: none; }
+.lens-tool-kit.sd2-small.sd2-show-title .sd-node-title-box { display: block; }
+
+.lens-tool-kit.sd2-show-readmore .sd-node-title-box .readmore { display: inline; }
+.lens-tool-kit.sd2-small .sd-node-title-box .slide-text { display: none; }
+.lens-tool-kit.sd2-title-light .sd-node-title-box {
+    background: #fff;
+    background: rgba(255,255,255,.8);
+    color: #000;
+}
+.lens-tool-kit.sd2-medium .slide-source-twitter .sd-node-title-box {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.lens-tool-kit.sd2-small .slide-source-twitter .sd-node-title-box { font-size: 0.8em; }
+.lens-tool-kit.sd2-medium .slide-source-twitter .sd-node-title-box { font-size: 1.3em; }
+.lens-tool-kit.sd2-large .slide-source-twitter .sd-node-title-box { font-size: 1.4em; }
+.lens-tool-kit .slide-source-twitter .sd-node-title-box h2 { margin: 0; }
+.lens-tool-kit.sd2-title-dark .sd-node-title-box {
+    background: #000;
+    background: rgba(0,0,0,.8);
+    color: #FFF;
+}
+.lens-tool-kit.sd2-title-pos-top .sd-none-title-box { top: 0; }
+.lens-tool-kit.sd2-title-pos-bottom .sd-node-title-box {
+    top: auto;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-title-pos-left .sd-node-title-box {
+    right: 50%;
+    bottom: 0;
+    top: 0;
+}
+.lens-tool-kit.sd2-title-pos-right .sd-node-title-box {
+    left: 50%;
+    bottom: 0;
+    top: 0;
+}
+.lens-tool-kit.sd2-small .sd-node-title-box,
+.lens-tool-kit.sd2-title-pos-fill .sd-node-title-box{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+.lens-tool-kit.sd2-small .sd-node-title-box {
+    padding: 0 15px;
+}
+.lens-tool-kit.sd2-small .slide-source-twitter .sd-node-title-box { display: block; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots.sd2-frame .sd-nav-wrapper { top: 25px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots.sd2-hairline .sd-nav-wrapper { top: 15px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-dots .sd-nav-wrapper { top: 0px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-thumb .sd-nav-wrapper { top: 0px; }
+.lens-tool-kit.sd2-nav-dots .sd-nav-wrapper {
+    height: 12px;
+}
+.lens-tool-kit.sd2-nav-thumb .sd-nav-wrapper {
+    height: 53px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-small .sd-nav-wrapper {
+    height: 34px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-small.sd2-nav-hanging .sd-nav-wrapper {
+    height: 49px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging .sd-nav-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-thumb .sd-nav-wrapper { padding-bottom: 17px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-dots.sd2-frame { padding-top: 0; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-dots.sd2-hairline { padding-top: 0; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-dots .sd-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb .sd-nav-wrapper {
+    left: 0;
+    top: 15px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-nav-default .sd-nav-wrapper { left: 15px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-frame .sd-nav-wrapper { top: 25px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-frame.sd2-nav-bar .sd-nav-wrapper { top: 0px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-nav-hanging .sd-nav-wrapper { top: 0px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-nav-hanging { padding-top: 0; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar .sd-nav-wrapper { top: 0px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-dots .sd-nav-wrapper {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-thumb .sd-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-thumb .sd-wrapper { padding-top: 72px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-thumb.sd2-large .sd-wrapper { padding-top: 69px; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-dots.sd2-large .sd-wrapper { padding-top: 30px !important; }
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-thumb.sd2-small .sd-wrapper { padding-top: 58px !important; }
+
+.lens-tool-kit .no-image .sd-node-title-box {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+/** Arrow Syles **/
+.lens-tool-kit .deck-navigation {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+}
+.lens-tool-kit .deck-navigation.next {
+    left: auto;
+    right: 0px;
+}
+
+/** NAV ARROW STYLES **/
+.lens-tool-kit.sd2-nav-thumb .deck-navigation-arrows {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small .deck-navigation-arrows { margin-top: -3px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1 .deck-navigation-arrows {
+    margin-top: 0px;
+    top: 3px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1 .deck-navigation-arrows:active { margin-top: 1px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-small.sd2-nav-arrow-style-1 .deck-navigation-arrows { top: 12px; }
+.lens-tool-kit.sd2-nav-thumb .deck-navigation-arrows.next {
+    left: auto;
+    right: 0;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1 .deck-navigation-arrows {
+    width: 39px;
+    height: 39px;
+    margin-top: -21px;
+    left: 15px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-top.sd2-nav-hanging .deck-navigation-arrows { margin-top: -30px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-top.sd2-nav-hanging .deck-navigation-arrows:active { margin-top: -29px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-small .deck-navigation-arrows {
+    width: 29px;
+    height: 29px;
+    margin-top: -17px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-small .deck-navigation-arrows:active {
+    height: 28px;
+    margin-top: -15px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-top.sd2-nav-hanging.sd2-small .deck-navigation-arrows { margin-top: 0; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-top.sd2-nav-hanging.sd2-small .deck-navigation-arrows:active { margin-top: 1px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1 .deck-navigation-arrows.next {
+    left: auto;
+    right: 15px;
+}
+.lens-tool-kit.sd2-nav-thumb .deck-navigation-arrows span {
+    width: 11px;
+    height: 0px;
+    padding-top: 18px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -7px;
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .deck-navigation-arrows span {
+    width: 18px;
+    height: 0px;
+    padding-top: 11px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    margin-left: -9px;
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-right.sd2-medium .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-left.sd2-medium .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-right.sd2-large .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-nav-pos-left.sd2-large .deck-navigation-arrows.next span {
+    margin-top: -4px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-top.sd2-nav-arrow-style-2 .deck-navigation-arrows span { margin-top: -18px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-top.sd2-nav-bar.sd2-nav-arrow-style-2 .deck-navigation-arrows span { margin-top: -8px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-top.sd2-nav-default.sd2-nav-arrow-style-2 .deck-navigation-arrows span { margin-top: -10px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium .deck-navigation-arrows span {
+    right: auto;
+    left: 30px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small .deck-navigation-arrows span { margin-left: -17px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small .deck-navigation-arrows.next span { margin-left: 5px; }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large .deck-navigation-arrows.next span {
+    left: auto;
+    right: 20px;
+}
+/* Variation of the above styles for left/right navigation */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium.sd2-nav-pos-left .deck-navigation-arrows.prev span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large.sd2-nav-pos-left .deck-navigation-arrows.prev span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium.sd2-nav-pos-right .deck-navigation-arrows.prev span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large.sd2-nav-pos-right .deck-navigation-arrows.prev span {
+    right: auto;
+    left: 32px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium.sd2-nav-pos-left .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large.sd2-nav-pos-left .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-medium.sd2-nav-pos-right .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-large.sd2-nav-pos-right .deck-navigation-arrows.next span {
+    left: auto;
+    right: 28px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small.sd2-nav-pos-left .deck-navigation-arrows.prev span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small.sd2-nav-pos-right .deck-navigation-arrows.prev span {
+    margin-left: 0;
+    margin-top: 0;
+    right: auto;
+    top: 10px;
+    bottom: auto;
+    left: 22px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small.sd2-nav-pos-left .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-arrow-style-2.sd2-small.sd2-nav-pos-right .deck-navigation-arrows.next span {
+    margin-left: 0;
+    margin-top: 0;
+    left: auto;
+    bottom: 10px;
+    top: auto;
+    right: 22px;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-light .deck-navigation-arrows span { background: url('images/nav-arrow-dark.png') no-repeat; }
+.lens-tool-kit.sd2-nav-thumb.sd2-dark .deck-navigation-arrows span { background: url('images/nav-arrow-light.png') no-repeat; }
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-pos-left .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-pos-right .deck-navigation-arrows span { background: url('images/nav-arrow-vert-dark.png') no-repeat; }
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-pos-left .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-pos-right .deck-navigation-arrows span { background: url('images/nav-arrow-vert-light.png') no-repeat; }
+.lens-tool-kit.sd2-nav-thumb .deck-navigation-arrows.next span {
+    background-position: 0 -18px;
+    margin-left: -5px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .deck-navigation-arrows.next span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .deck-navigation-arrows.next span {
+    background-position: 0 0;
+    margin-left: -9px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .deck-navigation-arrows.prev span,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .deck-navigation-arrows.prev span {
+    background-position: -18px 0;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1 .deck-navigation-arrows:active {
+    height: 38px;
+    margin-top: -20px;
+    border: 1px solid #8c8c8c;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-light .deck-navigation-arrows {
+    border: 1px solid #8c8c8c;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    -webkit-box-shadow: inset 0px 0px 0px 1px #FFF;
+    -moz-box-shadow: inset 0px 0px 0px 1px #FFF;
+    -o-box-shadow: inset 0px 0px 0px 1px #FFF;
+    box-shadow: inset 0px 0px 0px 1px #FFF;
+    background: rgb(233,233,233); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(233,233,233,1) 0%, rgba(194,194,194,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,233,233,1)), color-stop(100%,rgba(233,233,233,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(233,233,233,1) 0%,rgba(194,194,194,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-light .deck-navigation-arrows:hover {
+    background: rgb(249,248,248); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(249,248,248,1) 0%, rgba(180,180,180,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(180,180,180,1)), color-stop(100%,rgba(180,180,180,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(249,248,248,1) 0%,rgba(180,180,180,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(249,248,248,1) 0%,rgba(180,180,180,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(249,248,248,1) 0%,rgba(180,180,180,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(249,248,248,1) 0%,rgba(180,180,180,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-light .deck-navigation-arrows:active {
+    -webkit-box-shadow: inset 0px 0px 3px rgba(255,255,255,.2), inset 0px 1px 1px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 0px 0px 3px rgba(255,255,255,.2), inset 0px 1px 1px rgba(0,0,0,.5);
+    -o-box-shadow: inset 0px 0px 3px rgba(255,255,255,.2), inset 0px 1px 1px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 3px rgba(255,255,255,.2), inset 0px 1px 1px rgba(0,0,0,.5);
+    background: rgb(239,239,239); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(239,239,239,1) 0%, rgba(166,165,165,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(166,165,165,1)), color-stop(100%,rgba(166,165,165,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(239,239,239,1) 0%,rgba(166,165,165,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(239,239,239,1) 0%,rgba(166,165,165,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(239,239,239,1) 0%,rgba(166,165,165,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(239,239,239,1) 0%,rgba(166,165,165,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-dark .deck-navigation-arrows {
+    border: 1px solid #000000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.13);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.13);
+    -o-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.13);
+    box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.13);
+    background: rgb(44,44,44); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(44,44,44,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(44,44,44,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-dark .deck-navigation-arrows:hover {
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06);
+    -o-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06);
+    box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06);
+    background: rgb(64,64,64); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(64,64,64,1) 0%, rgba(26,26,26,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,26,26,1)), color-stop(100%,rgba(26,26,26,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-arrow-style-1.sd2-dark .deck-navigation-arrows:active {
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06), inset 0px 1px 1px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06), inset 0px 1px 1px rgba(0,0,0,.5);
+    -o-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06), inset 0px 1px 1px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.06), inset 0px 1px 1px rgba(0,0,0,.5);
+    background: rgb(64,64,64); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(64,64,64,1) 0%, rgba(26,26,26,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,26,26,1)), color-stop(100%,rgba(26,26,26,1))); /* tool-kit,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* Chrome+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(64,64,64,1) 0%,rgba(26,26,26,1) 100%); /* W3C */
+}
+
+/* Deck navigation arrows style 2 */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2 .deck-navigation-arrows {
+    height: auto;
+    top: -1px;
+    left: 0;
+    bottom: -1px;
+    display: block;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2 .deck-navigation-arrows.next {
+    left: auto;
+    right: 0;
+}
+
+/* Adjust the nav arrows for the vertical variations */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-nav-pos-left .deck-navigation-arrows,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-nav-pos-right .deck-navigation-arrows {
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows {
+    -webkit-box-shadow: inset -1px 0px 1px #FFF;
+    -moz-box-shadow: inset -1px 0px 1px #FFF;
+    -o-box-shadow: inset -1px 0px 1px #FFF;
+    box-shadow: inset -1px 0px 1px #FFF;
+    border-right: 1px solid #a8a8a8;
+}
+/* Variation of the above for vertical */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light.sd2-nav-pos-left .deck-navigation-arrows,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light.sd2-nav-pos-right .deck-navigation-arrows {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows:hover {
+    -webkit-box-shadow: inset -1px 0px 1px rgba(255,255,255,.4);
+    -moz-box-shadow: inset -1px 0px 1px rgba(255,255,255,.4);
+    -o-box-shadow: inset -1px 0px 1px rgba(255,255,255,.4);
+    box-shadow: inset -1px 0px 1px rgba(255,255,255,.4);
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows.next {
+    -webkit-box-shadow: inset 1px 0px 1px #FFF;
+    -moz-box-shadow: inset 1px 0px 1px #FFF;
+    -o-box-shadow: inset 1px 0px 1px #FFF;
+    box-shadow: inset 1px 0px 1px #FFF;
+    border-left: 1px solid #a8a8a8;
+    border-right: none;
+}
+/* Variation of the above for vertical */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light.sd2-nav-pos-left .deck-navigation-arrows.next,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light.sd2-nav-pos-right .deck-navigation-arrows.next {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid #a8a8a8;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows.next:hover {
+    -webkit-box-shadow: inset 1px 0px 1px rgba(255,255,255,.4);
+    -moz-box-shadow: inset 1px 0px 1px rgba(255,255,255,.4);
+    -o-box-shadow: inset 1px 0px 1px rgba(255,255,255,.4);
+    box-shadow: inset 1px 0px 1px rgba(255,255,255,.4);
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows:hover { background: rgba(0,0,0,.1); }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows:active {
+    background: rgba(0,0,0,.2);
+    -webkit-box-shadow: inset -1px 0px 1px rgba(255,255,255,.3);
+    -moz-box-shadow: inset -1px 0px 1px rgba(255,255,255,.3);
+    -o-box-shadow: inset -1px 0px 1px rgba(255,255,255,.3);
+    box-shadow: inset -1px 0px 1px rgba(255,255,255,.3);
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-light .deck-navigation-arrows.next:active {
+    -webkit-box-shadow: inset 1px 0px 1px rgba(255,255,255,.3);
+    -moz-box-shadow: inset 1px 0px 1px rgba(255,255,255,.3);
+    -o-box-shadow: inset 1px 0px 1px rgba(255,255,255,.3);
+    box-shadow: inset 1px 0px 1px rgba(255,255,255,.3);
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark .deck-navigation-arrows {
+    -webkit-box-shadow: inset -1px 0px 1px rgba(255,255,255,.12);
+    -moz-box-shadow: inset -1px 0px 1px rgba(255,255,255,.12);
+    -o-box-shadow: inset -1px 0px 1px rgba(255,255,255,.12);
+    box-shadow: inset -1px 0px 1px rgba(255,255,255,.12);
+    border-right: 1px solid #000;
+}
+/* Variation of the above for vertical */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark.sd2-nav-pos-left .deck-navigation-arrows,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark.sd2-nav-pos-right .deck-navigation-arrows {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #444;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark .deck-navigation-arrows.next {
+    -webkit-box-shadow: inset 1px 0px 1px rgba(255,255,255,.12);
+    -moz-box-shadow: inset 1px 0px 1px rgba(255,255,255,.12);
+    -o-box-shadow: inset 1px 0px 1px rgba(255,255,255,.12);
+    box-shadow: inset 1px 0px 1px rgba(255,255,255,.12);
+    border-left: 1px solid #000;
+    border-right: none;
+}
+/* Variation of the above for vertical */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark.sd2-nav-pos-left .deck-navigation-arrows.next,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark.sd2-nav-pos-right .deck-navigation-arrows.next {
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-top: 1px solid #333;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark .deck-navigation-arrows:hover { background: rgba(255,255,255,.1); }
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-arrow-style-2.sd2-dark .deck-navigation-arrows:active { background: rgba(255,255,255,.2); }
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-default.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-hanging.sd2-nav-arrow-style-2 .deck-navigation-arrows span {
+    background-image: url('images/nav-arrow-dark.png');
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-default.sd2-nav-pos-left.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-hanging.sd2-nav-pos-left.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-default.sd2-nav-pos-right.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-dark.sd2-nav-hanging.sd2-nav-pos-right.sd2-nav-arrow-style-2 .deck-navigation-arrows span {
+    background-image: url('images/nav-arrow-vert-dark.png');
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-default.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-hanging.sd2-nav-arrow-style-2 .deck-navigation-arrows span {
+    background-image: url('images/nav-arrow-light.png');
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-default.sd2-nav-pos-left.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-hanging.sd2-nav-pos-left.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-default.sd2-nav-pos-right.sd2-nav-arrow-style-2 .deck-navigation-arrows span,
+.lens-tool-kit.sd2-nav-thumb.sd2-light.sd2-nav-hanging.sd2-nav-pos-right.sd2-nav-arrow-style-2 .deck-navigation-arrows span {
+    background-image: url('images/nav-arrow-vert-light.png');
+}
+
+/** Shadow styles for frame **/
+.lens-tool-kit .sd-lens-shadow-corner,
+.lens-tool-kit .sd-lens-shadow-top,
+.lens-tool-kit .sd-lens-shadow-left {
+    position: absolute;
+    z-index: 100;
+}
+.lens-tool-kit .sd-lens-shadow-corner {
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    -o-box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+}
+.lens-tool-kit .sd-lens-shadow-left {
+    top: 15px;
+    left: 0;
+    width: 15px;
+    bottom: -10px;
+    -webkit-box-shadow: inset 2px -2px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 2px -2px 2px rgba(0,0,0,.2);
+    -o-box-shadow: inset 2px -2px 2px rgba(0,0,0,.2);
+    box-shadow: inset 2px -2px 2px rgba(0,0,0,.2);
+}
+.lens-tool-kit .sd-lens-shadow-top {
+    top: 0;
+    left: 15px;
+    height: 15px;
+    right: -10px;
+    -webkit-box-shadow: inset -2px 2px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset -2px 2px 2px rgba(0,0,0,.2);
+    -o-box-shadow: inset -2px 2px 2px rgba(0,0,0,.2);
+    box-shadow: inset -2px 2px 2px rgba(0,0,0,.2);
+}
+
+/** ARROW STYLES **/
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation.horizontal span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1 !important;
+}
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation.vertical span {
+    opacity: 1 !important;
+}
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation.horizontal:hover span {
+    opacity: 0.75 !important;
+}
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation.vertical:hover span {
+    opacity: 0.75 !important;
+}
+.lens-tool-kit.sd2-title-pos-bottom.sd2-nav-default.sd2-nav-pos-bottom.sd2-nav-thumb .sd-node-title-box { padding-bottom: 68px; }
+.lens-tool-kit.sd2-title-pos-top.sd2-nav-default.sd2-nav-pos-top.sd2-nav-thumb .sd-node-title-box { padding-top: 60px; }
+.lens-tool-kit.sd2-title-pos-left.sd2-nav-default.sd2-nav-thumb .sd-nav-wrapper { left: 40%; }
+.lens-tool-kit.sd2-title-pos-right.sd2-nav-default.sd2-nav-thumb .sd-nav-wrapper { right: 40%; }
+
+/**
+ * Arrow style 2
+ */
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical {
+    width: 60px;
+    height: 60px;
+    line-height: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: -30px;
+}
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.vertical.prev,
+.lens-tool-kit.sd2-arrowstyle-2 a.deck-navigation.vertical.next {
+    left: 50%;
+    margin-left: -30px;
+    margin-top: 0;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical.prev,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical.next {
+    margin-left: -15px;
+    margin-top: 0;
+}
+.lens-tool-kit.sd2-arrowstyle-2 .deck-navigation.next { right: 10px; }
+.lens-tool-kit.sd2-arrowstyle-2 .deck-navigation.prev { left: 10px; }
+
+.lens-tool-kit.sd2-arrowstyle-2.sd2-frame .deck-navigation.prev { left: 30px; }
+.lens-tool-kit.sd2-arrowstyle-2.sd2-frame .deck-navigation.next { right: 30px; }
+
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -18px 0;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 -18px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_2.png');
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 34px;
+    padding-top: 32px;
+    margin-top: -16px;
+    margin-left: -17px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_2-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 32px;
+    padding-top: 34px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.horizontal.next span {
+    background-position: -34px 0;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical.next span {
+    background-position: 0 -34px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-large a.deck-navigation.vertical span {
+    margin-top: 13px;
+    margin-left: 13px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_2-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 18px;
+    padding-top: 17px;
+    margin-top: -8px;
+    margin-left: -9px;
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_2-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-2.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 17px;
+    padding-top: 18px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+/**
+ * Arrow style 3
+ */
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_3.png') !important;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 21px;
+    padding-top: 39px;
+    margin-top: -20px;
+    margin-left: -11px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_3-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 39px;
+    padding-top: 21px;
+    margin-top: 17px;
+    margin-left: 8px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical {
+    height: 55px;
+    width: 55px;
+    margin-top: -27px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical {
+    margin-left: -27px;
+    margin-top: 0;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.horizontal.next span {
+    background-position: -21px 0;
+    margin-left: -10px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-large a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-medium a.deck-navigation.vertical.next span {
+    background-position: 0 21px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_3-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 11px;
+    padding-top: 20px;
+    margin-top: -10px;
+    margin-left: -6px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -11px 0;
+    margin-left: -4px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_3-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 20px;
+    padding-top: 11px;
+    margin-top: 9px;
+    margin-left: 5px;
+}
+.lens-tool-kit.sd2-arrowstyle-3.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 11px;
+}
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.vertical {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+/**
+ * Arrow style 4
+ */
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-4 a.deck-navigation.vertical {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal {
+    width: 17px;
+    height: 41px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical {
+    width: 41px;
+    height: 17px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal {
+    width: 34px;
+    height: 81px;
+    margin-top: -40px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical {
+    width: 81px;
+    height: 34px;
+    margin-left: -40px;
+    -webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+    -o-box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_4.png');
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 15px;
+    padding-top: 27px;
+    margin-top: -13px;
+    margin-left: -8px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_4-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 27px;
+    padding-top: 15px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.horizontal.next span {
+    background-position: -15px 0;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-large a.deck-navigation.vertical.next span {
+    background-position: 0 -15px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_4-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 8px;
+    padding-top: 14px;
+    margin-top: -7px;
+    margin-left: -4px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_4-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 14px;
+    padding-top: 8px;
+    margin-top: 5px;
+    margin-left: 13px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -8px 0;
+    margin-left: -4px;
+}
+.lens-tool-kit.sd2-arrowstyle-4.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 -8px;
+}
+
+/**
+ * Arrow styles 5 thru 9
+ */
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical {
+    width: 43px;
+    height: 43px;
+    background-position: 0 0;
+    -webkit-border-radius: 43px;
+    -moz-border-radius: 43px;
+    border-radius: 43px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal {
+    margin-top: -21px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical {
+    margin-left: -21px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical {
+    width: 31px;
+    height: 31px;
+    background-position: 0 0;
+    -webkit-border-radius: 31px;
+    -moz-border-radius: 31px;
+    border-radius: 31px; 
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal {
+    margin-top: -15px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical {
+    margin-left: -15px;
+}
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation.vertical {
+    margin-left: -19px !important;
+}
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical {
+    margin-left: -14px !important;
+}
+
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation {
+    -webkit-box-shadow: 1px 0px 2px rgba(0,0,0,.59);
+    -moz-box-shadow: 1px 0px 2px rgba(0,0,0,.59);
+    -o-box-shadow: 1px 0px 2px rgba(0,0,0,.59);
+    box-shadow: 1px 0px 2px rgba(0,0,0,.59);
+    border: 2px solid rgba(255,255,255,1);
+    background: rgb(61,61,61); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(61,61,61,1) 0%, rgba(22,22,22,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(61,61,61,1)), color-stop(100%,rgba(22,22,22,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(61,61,61,1) 0%,rgba(22,22,22,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(61,61,61,1) 0%,rgba(22,22,22,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(61,61,61,1) 0%,rgba(22,22,22,1) 100%); /* IE10+ */
+    background: linear-gradient(top,  rgba(61,61,61,1) 0%,rgba(22,22,22,1) 100%); /* W3C */
+}
+.lens-tool-kit.sd2-arrowstyle-5 a.deck-navigation:hover,
+.lens-tool-kit.sd2-arrowstyle-6 a.deck-navigation:hover,
+.lens-tool-kit.sd2-arrowstyle-7 a.deck-navigation:hover { border: 2px solid rgba(255,255,255,0.75); }
+.lens-tool-kit.sd2-arrowstyle-8 a.deck-navigation,
+.lens-tool-kit.sd2-arrowstyle-9 a.deck-navigation {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+/**
+ * Arrow style 5
+ */
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_5.png');
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 16px;
+    padding-top: 24px;
+    margin-top: -12px;
+    margin-left: -10px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_5-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 24px;
+    padding-top: 15px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical.next span {
+    margin-top: 15px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.horizontal.next span {
+    background-position: -16px 0;
+    margin-left: -6px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-large a.deck-navigation.vertical.next span {
+    background-position: 0 -16px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_5-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 11px;
+    padding-top: 17px;
+    margin-top: -8px;
+    margin-left: -6px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_5-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 17px;
+    padding-top: 11px;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -11px 0;
+    margin-left: -4px;
+}
+.lens-tool-kit.sd2-arrowstyle-5.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 -11px;
+}
+
+/**
+ * Arrow style 6 and 8
+ */
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_6.png');
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 18px;
+    padding-top: 22px;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_6-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 22px;
+    padding-top: 18px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.horizontal.next span {
+    background-position: -17px 0;
+    margin-left: -7px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-large a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-large a.deck-navigation.vertical.next span {
+    background-position: 0 -17px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_6-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 12px;
+    padding-top: 16px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_6-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 16px;
+    padding-top: 12px;
+    margin-top: 9px;
+    margin-left: 7px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -12px 0;
+    margin-left: -5px;
+}
+.lens-tool-kit.sd2-arrowstyle-6.sd2-small a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-8.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 -12px;
+}
+
+/**
+ * Arrow style 7 and 9
+ */
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_7.png');
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 23px;
+    padding-top: 22px;
+    margin-top: -11px;
+    margin-left: -13px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_7-vert.png');
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 22px;
+    padding-top: 23px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.horizontal.next span {
+    background-position: -23px 0;
+    margin-left: -11px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-medium a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-large a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-large a.deck-navigation.vertical.next span {
+    background-position: 0 -23px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal:active span {
+    background-image: url('images/arrowstyle_7-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal span {
+    background-position: 0 0;
+    width: 15px;
+    padding-top: 14px;
+    margin-top: -7px;
+    margin-left: -8px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical:active span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical:hover span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical:active span {
+    background-image: url('images/arrowstyle_7-vert-sml.png');
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical span {
+    background-position: 0 0;
+    width: 14px;
+    padding-top: 15px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.horizontal.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.horizontal.next span {
+    background-position: -15px 0;
+    margin-left:-7px;
+}
+.lens-tool-kit.sd2-arrowstyle-7.sd2-small a.deck-navigation.vertical.next span,
+.lens-tool-kit.sd2-arrowstyle-9.sd2-small a.deck-navigation.vertical.next span {
+    background-position: 0 -15px;
+}
+
+/* Global active style for the arrow sprite */
+.lens-tool-kit a.deck-navigation.horizontal:active span{
+    opacity: 0.5;
+}
+
+
+/* Read more display */
+.lens-tool-kit a.readmore {
+    display: none;
+    white-space: nowrap;
+}
+
+/*Bug Placement*/
+/*Default*/
+.lens-tool-kit a.slidedeck-2-bug {
+    top: 15px;
+    bottom: auto;
+}
+.lens-tool-kit.sd2-small a.slidedeck-2-bug {
+    top: 15px;
+    bottom: auto;
+}
+.lens-tool-kit.sd2-no-nav.sd2-hairline a.slidedeck-2-bug {
+    top: auto !important;
+    bottom: 15px !important;
+}
+.lens-tool-kit.sd2-no-nav.sd2-hairline.sd2-small a.slidedeck-2-bug {
+    top: auto !important;
+    bottom: 10px !important;
+}
+.lens-tool-kit.sd2-no-nav.sd2-frame a.slidedeck-2-bug {
+    top: auto !important;
+    bottom: 20px !important;
+}
+.lens-tool-kit.sd2-no-nav.sd2-frame.sd2-small a.slidedeck-2-bug {
+    top: auto !important;
+    bottom: 20px !important;
+}
+/*Nav Position Top - Thumb*/
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb a.slidedeck-2-bug {
+    top: auto;
+    bottom: 15px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-thumb.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 15px;
+}
+/*Nav Position Bottom with Nav Bar - Thumb*/
+.lens-tool-kit.sd2-nav-pos-bottom.sd2-nav-bar.sd2-nav-thumb a.slidedeck-2-bug {
+    top: auto;
+    bottom: 80px;
+}
+.lens-tool-kit.sd2-nav-pos-bottom.sd2-nav-bar.sd2-nav-thumb.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 65px;
+}
+/*Nav Hanging Bottom - Thumb*/
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-thumb a.slidedeck-2-bug {
+    top: auto;
+    bottom: 80px;
+}
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-thumb.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 75px;
+}
+/*Nav Hanging Bottom w/Frame - Thumb*/
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-thumb.sd2-frame a.slidedeck-2-bug {
+    top: auto;
+    bottom: 90px;
+}
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-thumb.sd2-frame.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 70px;
+}
+/*Nav Position Top - Dots*/
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots a.slidedeck-2-bug {
+    top: auto;
+    bottom: 15px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 10px;
+}
+/*Nav Position Top/w Frame - Dots*/
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots.sd2-frame a.slidedeck-2-bug {
+    top: auto;
+    bottom: 22px;
+}
+.lens-tool-kit.sd2-nav-pos-top.sd2-nav-dots.sd2-frame.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 18px;
+}
+/*Nav Position Bottom with Nav Bar - Dots*/
+.lens-tool-kit.sd2-nav-pos-bottom.sd2-nav-bar.sd2-nav-dots a.slidedeck-2-bug {
+    top: auto;
+    bottom: 65px;
+}
+.lens-tool-kit.sd2-nav-pos-bottom.sd2-nav-bar.sd2-nav-dots.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 45px;
+}
+/*Nav Position Bottom with Dots*/
+.lens-tool-kit.sd2-frame.sd2-nav-pos-bottom.sd2-nav-dots a.slidedeck-2-bug {
+    top: auto;
+    bottom: 20px;
+}
+.lens-tool-kit.sd2-hairline.sd2-nav-pos-bottom.sd2-nav-dots a.slidedeck-2-bug {
+    top: auto;
+    bottom: 20px;
+}
+/*Nav Hanging Bottom - Dots*/
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-dots a.slidedeck-2-bug {
+    top: auto;
+    bottom: 45px;
+}
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom.sd2-nav-dots.sd2-small a.slidedeck-2-bug {
+    top: auto;
+    bottom: 40px;
+}
+/*With Frame*/
+.lens-tool-kit.sd2-frame a.slidedeck-2-bug {
+    top: 25px;
+    bottom: auto;
+    left: 25px;
+}
+.lens-tool-kit.sd2-frame.sd2-small a.slidedeck-2-bug {
+    top: 20px;
+    bottom: auto;
+    left: 20px;
+}
+/*Video Deck Bug Positioning*/
+.lens-tool-kit.source-type-videos a.slidedeck-2-bug {
+    bottom: auto !important;
+    top: 20px !important;
+}
+.lens-tool-kit.source-type-videos.sd2-no-nav a.slidedeck-2-bug { top: 20px !important; }
+.lens-tool-kit.source-type-videos.sd2-nav-pos-top.sd2-nav-thumb a.slidedeck-2-bug { top: 80px !important; }
+.lens-tool-kit.source-type-videos.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-thumb a.slidedeck-2-bug { top: 90px !important; }
+.lens-tool-kit.source-type-videos.sd2-nav-pos-top.sd2-nav-dots a.slidedeck-2-bug { top: 40px !important; }
+.lens-tool-kit.source-type-videos.sd2-nav-pos-top.sd2-nav-hanging.sd2-nav-dots a.slidedeck-2-bug { top: 50px !important; }
+
+/*Nav position left/right dots*/
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-right .sd-nav-wrapper{
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 50%;
+}
+/* Position the navigation dots for bar, inside, hanging, etc. */
+/* Inside */
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left .sd-nav-wrapper{
+    left: 15px;
+    right: auto;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-right .sd-nav-wrapper{
+    right: 15px;
+    left: auto;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left.sd2-frame .sd-nav-wrapper{ left: 20px; }
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-right.sd2-frame .sd-nav-wrapper{ right: 20px; }
+
+/* in its own bar */
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-nav-pos-left .sd-nav-wrapper{
+    left: 11px;
+    right: auto;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-nav-pos-right .sd-nav-wrapper{
+    right: 11px;
+    left: auto;
+}
+
+/* hanging outside */
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-nav-pos-left .sd-nav-wrapper{
+    left: 10px;
+    right: auto;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-nav-pos-right .sd-nav-wrapper{
+    right: 10px;
+    left: auto;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-nav-pos-right .sd-wrapper{
+    float: left;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-nav-pos-left .sd-wrapper{
+    float: right;
+}
+
+
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-hairline.sd2-nav-pos-left .sd-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-hanging.sd2-hairline.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-none.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-none.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-hairline.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-bar.sd2-hairline.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-hairline.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-none.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-none.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-hairline.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-hairline.sd2-nav-pos-left .sd-nav-wrapper {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left .sd-nav-wrapper dd,
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-right .sd-nav-wrapper dd{
+    float: none;
+    margin: 10px 0 0 0;
+}
+/* Shove the deck to the right if the nav is to be on the left */
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left dl,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left dl{
+    float: right;
+}
+
+
+/* Nav position left/right with Thumbnails (in bar) */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-left .sd-wrapper {
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-left .sd-nav-wrapper {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-bar.sd2-nav-pos-right .sd-nav-wrapper {
+    left: auto;
+    right: 0;
+}
+
+/* Nav position left/right with Thumbnails (hanging) */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-right .sd-nav-wrapper {
+    position: absolute;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-nav-pos-right .sd-nav-wrapper {
+    right: 0;
+    left: auto;
+}
+
+/* Nav position left/right with Thumbnails (inside slide area) */
+/* right position */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-left .sd-nav-wrapper {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+}
+.lens-tool-kit.sd2-nav-default.sd2-hairline.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-default.sd2-hairline.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-left .sd-wrapper {
+    overflow: hidden;
+}
+/* Kill the border on the no frame version and on the slidedeck of the hairline version */
+.lens-tool-kit.sd2-nav-default.sd2-hairline.sd2-nav-pos-right .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-default.sd2-hairline.sd2-nav-pos-left .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-right .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-left .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-default.sd2-none.sd2-nav-pos-left .sd-wrapper,
+.lens-tool-kit.sd2-nav-bar.sd2-hairline.sd2-nav-pos-right .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-bar.sd2-hairline.sd2-nav-pos-left .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-bar.sd2-none.sd2-nav-pos-right .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-bar.sd2-none.sd2-nav-pos-left .sd-wrapper dl.slidedeck,
+.lens-tool-kit.sd2-nav-bar.sd2-none.sd2-nav-pos-right .sd-wrapper,
+.lens-tool-kit.sd2-nav-bar.sd2-none.sd2-nav-pos-left .sd-wrapper {
+    border-width: 0;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-right .sd-nav-wrapper {
+    left: auto;
+    right: 0;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-right.sd2-frame .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-left.sd2-frame .sd-nav-wrapper {
+    right: 10px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-right.sd2-frame .sd-nav-wrapper {
+    right: 10px;
+}
+
+/* left position */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-left .sd-nav-wrapper {
+    left: 0;
+    right: auto;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-default.sd2-nav-pos-left.sd2-frame .sd-nav-wrapper {
+    left: 10px;
+    right: auto;
+}
+
+
+/* Set the width of the vertical navigation deck */
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-deck,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-deck {
+    width: 71px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right.sd2-small .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left.sd2-small .sd-nav-wrapper,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right.sd2-small .sd-nav-deck,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left.sd2-small .sd-nav-deck {
+    width: 58px;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper dl,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper dl dd,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper .slidesVertical,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper dl,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper dl dd,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper .slidesVertical{
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper dd.slide_1.last,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper dd.slide_1.last{
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper dl dd div.nav-centered,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper dl dd div.nav-centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-deck .sd-thumb,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-deck .sd-thumb {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper .prev,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper .prev{
+    top: 0;
+    bottom: auto;
+    margin-top: 10px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right .sd-nav-wrapper .next,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left .sd-nav-wrapper .next{
+    bottom: 0;
+    top: auto;
+    margin-bottom: 10px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right.sd2-nav-default.sd2-nav-arrow-style-2 .sd-nav-wrapper .prev,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left.sd2-nav-default.sd2-nav-arrow-style-2 .sd-nav-wrapper .prev,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-right.sd2-nav-default.sd2-nav-arrow-style-2 .sd-nav-wrapper .next,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-pos-left.sd2-nav-default.sd2-nav-arrow-style-2 .sd-nav-wrapper .next{
+    width: 100%
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1.sd2-nav-pos-right .deck-navigation-arrows.next,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1.sd2-nav-pos-left .deck-navigation-arrows.next{
+    left: 50%;
+    margin-left: -16px;
+    right: auto;
+    top: auto;
+    bottom: 5px;
+}
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1.sd2-nav-pos-right .deck-navigation-arrows.prev,
+.lens-tool-kit.sd2-nav-thumb.sd2-nav-hanging.sd2-small.sd2-nav-arrow-style-1.sd2-nav-pos-left .deck-navigation-arrows.prev {
+    left: 50%;
+    margin-left: -16px;
+    right: auto;
+    bottom: auto;
+    top: 5px;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-right .slidedeck-overlays{
+    right: 42px;
+}
+.lens-tool-kit.sd2-nav-dots.sd2-nav-pos-left .slidedeck-overlays{
+    left: 42px;
+}
+.lens-tool-kit .slidesVertical .thumb-slide {
+    overflow: hidden;
+}
+.lens-tool-kit.sd2-no-nav .sd-nav-wrapper{
+    display: none;
+}
+
+/**
+ * SlideDeck Overlays Placement
+ */
+/* Nav inside or No nav or hanging */
+/* Top */
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-top .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-top .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-title-pos-top .slidedeck-overlays,
+.lens-tool-kit.sd2-no-nav.sd2-title-pos-top .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-default.sd2-nav-pos-top .slidedeck-overlays {
+    bottom: 15px; 
+    right: 15px; 
+    top: auto;
+    left: auto; 
+}
+/* Bottom */
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-bottom .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-title-pos-bottom .slidedeck-overlays,
+.lens-tool-kit.sd2-no-nav.sd2-title-pos-bottom .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-default.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: auto; 
+    right: 15px; 
+    top: 15px;
+    left: auto; 
+}
+/* Left */
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-left .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-left .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-title-pos-left .slidedeck-overlays,
+.lens-tool-kit.sd2-no-nav.sd2-title-pos-left .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-default.sd2-nav-pos-left .slidedeck-overlays {
+    bottom: auto; 
+    right: 15px; 
+    top: 15px;
+    left: auto; 
+}
+/* Right */
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-right .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-nav-pos-right .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-hanging.sd2-title-pos-right .slidedeck-overlays,
+.lens-tool-kit.sd2-no-nav.sd2-title-pos-right .slidedeck-overlays,
+.lens-tool-kit.sd2-nav-default.sd2-nav-pos-right .slidedeck-overlays {
+    bottom: auto;
+    right: auto;
+    top: 15px;
+    left: 15px;
+}
+
+/* Nav in its own bar - Thumbnails */
+/* Top - Right */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-top.sd2-nav-pos-right .slidedeck-overlays {
+    bottom: 15px;
+    right: auto;
+    top: auto;
+    left: 15px;
+}
+/* Top - Left */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-top.sd2-nav-pos-left .slidedeck-overlays {
+    bottom: 15px;
+    right: 15px;
+    top: auto;
+    left: auto;
+}
+/* Top - Top */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-top.sd2-nav-pos-top .slidedeck-overlays {
+    bottom: 15px;
+    right: 15px;
+    top: auto;
+    left: auto;
+}
+/* Top - Bottom */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-top.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: 80px;
+    right: 15px;
+    top: auto;
+    left: auto;
+}
+/* Top - Bottom - Dots */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-dots.sd2-title-pos-top.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: 40px;
+}
+
+/* Bottom - Right */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-bottom.sd2-nav-pos-right .slidedeck-overlays {
+    bottom: auto;
+    right: auto;
+    top: 15px;
+    left: 15px;
+}
+/* Bottom - Left */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-bottom.sd2-nav-pos-left .slidedeck-overlays {
+    bottom: auto;
+    right: 15px;
+    top: 15px;
+    left: auto;
+}
+/* Bottom - Bottom */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-bottom.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: auto;
+    right: 15px;
+    top: 15px;
+    left: auto;
+}
+/* Bottom - Top */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-bottom.sd2-nav-pos-top .slidedeck-overlays {
+    bottom: auto;
+    right: 15px;
+    top: 80px;
+    left: auto;
+}
+/* Bottom - Top - Dots */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-dots.sd2-title-pos-bottom.sd2-nav-pos-top .slidedeck-overlays {
+    top: 40px;
+}
+
+/* Left - Top */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-left.sd2-nav-pos-top .slidedeck-overlays {
+    bottom: 15px;
+    right: 15px;
+    top: auto;
+    left: auto;
+}
+/* Left - Left */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-left.sd2-nav-pos-left .slidedeck-overlays {
+    bottom: auto;
+    right: 15px;
+    top: 15px;
+    left: auto;
+}
+/* Left - Bottom */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-left.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: auto;
+    right: 15px;
+    top: 15px;
+    left: auto;
+}
+/* Left - Right */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-left.sd2-nav-pos-right .slidedeck-overlays {
+    bottom: auto;
+    right: 80px;
+    top: 15px;
+    left: auto;
+}
+/* Left - Right - Dots */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-dots.sd2-title-pos-left.sd2-nav-pos-right .slidedeck-overlays {
+    right: 40px;
+}
+
+/* Right - Right */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-right.sd2-nav-pos-right .slidedeck-overlays {
+    bottom: auto;
+    right: auto;
+    top: 15px;
+    left: 15px;
+}
+/* Right - Top */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-right.sd2-nav-pos-top .slidedeck-overlays {
+    bottom: 15px;
+    right: auto;
+    top: auto;
+    left: 15px;
+}
+/* Right - Bottom */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-right.sd2-nav-pos-bottom .slidedeck-overlays {
+    bottom: auto;
+    right: auto;
+    top: 15px;
+    left: 15px;
+}
+/* Right - Left */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-thumb.sd2-title-pos-right.sd2-nav-pos-left .slidedeck-overlays {
+    bottom: auto;
+    right: auto;
+    top: 15px;
+    left: 80px;
+}
+/* Right - Left - Dots */
+.lens-tool-kit.sd2-nav-bar.sd2-nav-dots.sd2-title-pos-right.sd2-nav-pos-left .slidedeck-overlays {
+    left: 40px;
+}
+
+/**
+ * Setting overflow to hidden and box-shadow to none when covers are on
+ * - John
+ */
+.lens-tool-kit.sd2-frame.sd2-show-front-cover,
+.lens-tool-kit.sd2-frame.sd2-show-back-cover,
+.lens-tool-kit.sd2-frame.sd2-show-front-cover .sd-wrapper,
+.lens-tool-kit.sd2-frame.sd2-show-back-cover .sd-wrapper {
+    overflow: hidden !important;
+    box-shadow: none !important;
+}
+
+/* Custom SlideDeck Overlay */
+.lens-tool-kit.content-source-custom .slidedeck-overlays {
+    top: 15px !important;
+    right: 15px !important;
+    bottom: auto !important;
+    left: auto !important;
+}
+.lens-tool-kit.content-source-custom.sd2-nav-pos-right .slidedeck-overlays {
+    top: 15px !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 15px !important;
+}
+
+/* Text-Only */
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-textonly .sd2-node-caption {
+    background: #fff;
+    background: rgba(255,255,255,0.75);
+}
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-textonly .sd2-node-caption .sd2-slide-text {
+    color: #000000;
+} 
+.lens-tool-kit.sd2-large .slide-source-custom.slide-type-textonly .sd2-slide-title {
+    margin-bottom: 15px;
+}
+.lens-tool-kit.sd2-medium .slide-source-custom.slide-type-textonly .sd2-slide-title {
+    margin-bottom: 10px;
+}
+
+/* Text-Only */
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-image .sd2-node-caption {
+    background: #fff;
+    background: rgba(255,255,255,0.75);
+}
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-image .sd2-node-caption .sd2-slide-text {
+    color: #000000;
+} 
+.lens-tool-kit.sd2-large .slide-source-custom.slide-type-image .sd2-slide-title {
+    margin-bottom: 15px;
+}
+.lens-tool-kit.sd2-medium .slide-source-custom.slide-type-image .sd2-slide-title {
+    margin-bottom: 10px;
+}
+
+/* Video Play Button */
+.lens-tool-kit.sd2-medium dl.slidedeck .slide-source-custom.custom-layout-body-text .video-wrapper .cover .play,
+.lens-tool-kit.sd2-small dl.slidedeck .slide-source-custom.custom-layout-body-text .video-wrapper .cover .play {
+    display: none;
+}
+.lens-tool-kit .slide-source-custom.slide-type-video .sd2-node-caption .play-video-alternative {
+    display: none;
+    position: absolute;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    color: #fff;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 0 0 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background: url('images/play-button-alt.png') 0 0 no-repeat;
+}
+.lens-tool-kit.sd2-small .slide-source-custom.slide-type-video .sd2-node-caption .play-video-alternative {
+    font-size: 1.1em;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 0 0 27px;
+    background: url('images/play-button-alt-small.png') 0 0 no-repeat;
+}
+.lens-tool-kit.sd2-medium .slide-source-custom.slide-type-video.custom-layout-body-text .sd2-node-caption .play-video-alternative,
+.lens-tool-kit.sd2-small .slide-source-custom.slide-type-video.custom-layout-body-text .sd2-node-caption .play-video-alternative {
+    display: inline-block;
+    bottom: 15px;
+    left: 15px;
+}
+.lens-tool-kit .slide-source-custom.slide-type-video .sd2-node-caption .play-video-alternative:hover {
+    text-decoration: underline;
+}
+
+/*
+ * Video custom content sources
+ */
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-video .sd2-node-caption {
+    background: #fff;
+    background: rgba(255,255,255,0.75);
+}
+.lens-tool-kit.sd2-light .slide-source-custom.slide-type-video .sd2-node-caption .sd2-slide-text {
+    color: #000000;
+} 

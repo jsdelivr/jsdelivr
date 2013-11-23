@@ -1,0 +1,104 @@
+*.youtube-videogallery-container {
+    display: block;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+*.youtube-videogallery-item {
+	border-radius: 5px;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    display: inline-block;
+    line-height: 0;
+    list-style: none;
+	margin-bottom: 10px;
+	margin-right: 14px;
+	overflow: hidden;
+}
+*.youtube-videogallery-compact {
+    font-size: 0;
+}
+*.youtube-videogallery-compact *.youtube-videogallery-item,
+*.youtube-videogallery-compact *.youtube-videogallery-img{
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    margin: 0 0 0 0;
+}
+*.youtube-videogallery-compact *.youtube-videogallery-title {
+    font-size: 11px;
+}
+a.youtube-videogallery-link {
+    display: inline-block;
+	position: relative;
+}
+a.youtube-videogallery-link:hover img.youtube-videogallery-play, 
+a.youtube-videogallery-link:focus img.youtube-videogallery-play {
+	opacity: 1;
+}
+*.youtube-videogallery-play {
+	left:50%;
+	opacity: 0.7;
+	position: absolute;
+	top:50%;
+	z-index: 1;
+}
+*.youtube-videogallery-title {
+    background: #000;
+    background-color: rgba(0,0,0,0.7);
+    bottom: 0;
+    color:#fff;
+    display: block;
+    max-height: 1.5em;
+    left:0;
+    line-height: 150%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+*.youtube-videogallery-allowtitle *.youtube-videogallery-title {
+    height: auto;
+}
+*.youtube-videogallery-img {
+	border-radius: 5px;
+}
+*.youtube-videogallery-screen-reader-only {
+    position: absolute;
+    left:-9999px;
+}
+div.youtube-videogallery-bodycover {
+    background-color: #000;
+    height: 100%;
+    left:0;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width:100%;
+    z-index: 100;
+}
+div.youtube-videogallery-display {
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px #000;
+    left:50%;
+    opacity: 0;
+    padding: 3px;
+    position: fixed;
+    top:50%;
+    z-index: 101;
+}
+div.youtube-videogallery-bodycover,
+div.youtube-videogallery-display {
+    transition: all 300ms;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+body.youtube-videogallery-active div.youtube-videogallery-bodycover,
+body.youtube-videogallery-active div.youtube-videogallery-display {
+    display: block;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+body.youtube-videogallery-active div.youtube-videogallery-bodycover {opacity: 0.5}
+body.youtube-videogallery-active div.youtube-videogallery-display { opacity: 1}

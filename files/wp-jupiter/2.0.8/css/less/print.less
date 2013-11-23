@@ -1,0 +1,38 @@
+/* Makes the site print friendly... */
+@media print {
+    * {
+        background: none !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+ 
+        /* Images, vectors and such */
+        filter: Gray();                          /* IE4-8: depreciated */
+        filter: url('filters.svg#grayscale'); /* SVG version for IE10, Firefox, Safari 5 and Opera */
+        -webkit-filter: grayscale(100%);         /* Chrome + Safari 6 */
+        -moz-filter: grayscale(100%);            /* Future proof */
+        -ms-filter: grayscale(100%);             /* Future proof */
+        -o-filter: grayscale(100%);              /* Future proof */
+        filter: grayscale(100%);                 /* Future proof or polyfilled */
+    }
+ 
+    a {
+        text-decoration: underline;
+    }
+ 
+    a[href]:after {
+        content: " (" attr(href) ")"; 
+    }
+ 
+    a[href="#"],
+    a[href="javascript:"] {
+        content: "";
+    }
+
+    #mk-header, #mk-sidebar, #mk-footer, .news-post-heading, #mk-quick-contact, .mk-go-top {
+        display: none !important;
+    }
+    .theme-page-wrapper {
+    width: 100% !important;
+    }
+}

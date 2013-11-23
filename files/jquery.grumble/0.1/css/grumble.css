@@ -1,0 +1,80 @@
+/**   (c) 2011 James Cryer, Huddle (www.huddle.com) 	*/
+/**   http://jamescryer.github.com/grumble.js/ 		*/
+
+.grumble{
+    position:absolute;
+    background-image: url(../images/bubble-sprite.png);
+    background-repeat: no-repeat;
+    z-index: 99999;
+    }
+
+    .grumble-text {
+        position:absolute;
+        text-align:center;
+        z-index: 99999;
+        display: table;
+        overflow:hidden;
+        text-transform:uppercase;
+        font-size: 14px;
+        line-height: 14px;
+        }
+        .ie7 .grumble-text,
+        .ie6 .grumble-text {
+            display:block;
+            }
+        .grumble-text .outer {
+            display: table-cell;
+            vertical-align: middle;
+            color:white;
+            }
+            .ie7 .grumble-text .outer, 
+            .ie6 .grumble-text .outer {
+                display: block;
+                width: 85%;
+                position: absolute;
+                top: 48%;
+                left: 0;
+                }
+        .ie7 .inner,
+        .ie6 .inner {
+            position: relative;
+            top: -50%
+            }
+
+    .grumble-text50 .outer{padding:6px;}
+    .grumble-text100 .outer{padding:8px;}
+    .grumble-text150 .outer{padding:10px;}
+    .grumble-text200 .outer{padding:12px;}
+
+    .grumble50 {background-position: 0 0;}
+    .grumble100 {background-position: 0 -50px; }
+    .grumble150 {background-position: 0 -150px;}
+    .grumble200 {background-position: 0 -300px; }
+
+    .alt-grumble50 {background-position: -200px 0;}
+    .alt-grumble100 { background-position: -200px -50px; }
+    .alt-grumble150 {background-position: -200px -150px;}
+    .alt-grumble200 {background-position: -200px -300px; }
+
+    .grumble-button {
+        position: absolute;
+        width: 20px;
+        height: 12px;
+
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+
+        background: #FF5C00;
+        color: #fff;
+        text-align:center;
+        font-size: .8em;
+        line-height: .9em;
+
+        -moz-box-shadow: 1px 1px 1px #ccc;
+        -webkit-box-shadow: 1px 1px 1px #ccc;
+        box-shadow: 1px 1px 1px #ccc;
+
+        cursor: pointer;
+
+        z-index: 99999;
+        }

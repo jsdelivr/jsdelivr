@@ -1,0 +1,60 @@
+/**
+ *  sliderkit-demos-ie8.css
+ *	> CSS hacks for Internet Explorer 8 compatibility
+ *  
+ *  This file is part of Slider Kit jQuery plugin.
+ *  http://www.kyrielles.net/sliderkit/
+ *  
+ *  Copyright (c) 2010-2012 Alan Frog
+ *  Licensed under the GNU General Public License
+ *  See <license.txt> or <http://www.gnu.org/licenses/>
+ *
+ */
+
+/*---------------------------------
+ *  Photos sliders >  Minimal
+ *---------------------------------*/
+.photoslider-mini .sliderkit-go-btn a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";}
+.photoslider-mini .sliderkit-btn-disable a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+
+/*---------------------------------
+ *  Photos gallery > Standard
+ *---------------------------------*/
+.photosgallery-std .sliderkit-go-btn a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";}
+.photosgallery-std .sliderkit-btn-disable a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";}
+
+/*---------------------------------
+ *  Photos gallery > With captions
+ *---------------------------------*/
+.photosgallery-captions .sliderkit-btn-disable a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-overlay{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";}
+
+/*---------------------------------
+ *  Photos gallery > Vertical
+ *---------------------------------*/
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-overlay{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";}
+ 
+/*---------------------------------
+ *  Photos gallery > Minimalistic
+ *---------------------------------*/
+.photosgallery-minimalistic .sliderkit-nav-clip ul li a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li.sliderkit-selected a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+
+/*---------------------------------
+ *  Carousel > Demo #1
+ *---------------------------------*/
+.carousel-demo1 .sliderkit-nav-clip ul li a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";}
+.carousel-demo1 .sliderkit-nav-clip ul li a:hover{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+.carousel-demo1 .sliderkit-btn-disable{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";}
+
+/*---------------------------------
+ *  Carousel > Demo #2
+ *---------------------------------*/
+.carousel-demo2 .sliderkit-nav-clip ul li a{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";}
+.carousel-demo2 .sliderkit-nav-clip ul li a:hover{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+.carousel-demo2 .sliderkit-nav .sliderkit-btn-disable{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";}
+
+/*---------------------------------
+ *  Add-on > Timer
+ *---------------------------------*/
+.timer-demo01 .sliderkit-timer-wrapper{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";}

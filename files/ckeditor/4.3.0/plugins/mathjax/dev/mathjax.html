@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<title>Widgets: MathJax &mdash; CKEditor Sample</title>
+	<meta charset="utf-8">
+	<script src="../../../ckeditor.js"></script>
+	<link href="../../../samples/sample.css" rel="stylesheet">
+	<meta name="ckeditor-sample-name" content="Mathematics">
+	<meta name="ckeditor-sample-group" content="Plugins">
+	<meta name="ckeditor-sample-description" content="Create mathematical equations in TeX and display them in visual form.">
+	<meta name="ckeditor-sample-isnew" content="1">
+	<script>
+		CKEDITOR.disableAutoInline = true;
+		document.domain = 'ckeditor.dev';
+	</script>
+</head>
+<body>
+	<h1 class="samples">
+		<a href="../../../samples/index.html">CKEditor Samples</a> &raquo; Widgets: MathJax
+	</h1>
+
+	<textarea id="editor1" cols="10" rows="10">
+		<h1>Apollo 11</h1>
+
+		<div style="background:red;color:blue">
+			<p><strong>Apollo 11</strong>&nbsp;was the&nbsp;spaceflight&nbsp;that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a>&nbsp;and&nbsp;<a href="http://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a> <span class="math-tex">\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</span>. Armstrong became the first to step onto the lunar surface 6 hours later. Armstrong spent about two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&nbsp;kg) of lunar material for return to Earth. A third member of the mission,&nbsp;Michael Collins, piloted the&nbsp;command spacecraft&nbsp;alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.</p>
+		</div>
+
+		<p>Foo foo <span class="userclass mjx">\(J_\alpha(x) = \sum\limits_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + \alpha + 1)}{\left({\frac{x}{2}}\right)}^{2 m + \alpha}\)</span> bar bar.</p>
+
+		<p>Launched by a&nbsp;Saturn V&nbsp;rocket from&nbsp;Kennedy Space Center&nbsp;in&nbsp;Merritt Island, Florida&nbsp;on July 16, Apollo 11 was the fifth manned mission of <a href="http://en.wikipedia.org/wiki/NASA">NASA</a>&#39;s&nbsp;Apollo program. The Apollo&nbsp;spacecraft&nbsp;had three parts: aCommand Module&nbsp;with a cabin for the three astronauts which was the only part which landed back on Earth; a&nbsp;Service Module&nbsp;which supported the Command Module with propulsion, electrical power, oxygen and water; and a&nbsp;Lunar Module&nbsp;for landing on the Moon. After being sent to the Moon by the Saturn V&#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the&nbsp;Sea of Tranquility. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the&nbsp;Pacific Ocean&nbsp;.</p>
+	</textarea>
+
+	<div id="editor2" contenteditable="true" cols="10" rows="10">
+		<h1>Apollo 11</h1>
+
+		<div style="background:red;color:blue">
+			<p><strong>Apollo 11</strong>&nbsp;was the&nbsp;spaceflight&nbsp;that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a>&nbsp;and&nbsp;<a href="http://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a> <span class="math-tex">\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</span>. Armstrong became the first to step onto the lunar surface 6 hours later. Armstrong spent about two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&nbsp;kg) of lunar material for return to Earth. A third member of the mission,&nbsp;Michael Collins, piloted the&nbsp;command spacecraft&nbsp;alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.</p>
+		</div>
+
+		<p>Foo foo <span class="userclass mjx">\(J_\alpha(x) = \sum\limits_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + \alpha + 1)}{\left({\frac{x}{2}}\right)}^{2 m + \alpha}\)</span> bar bar.</p>
+
+		<p>Launched by a&nbsp;Saturn V&nbsp;rocket from&nbsp;Kennedy Space Center&nbsp;in&nbsp;Merritt Island, Florida&nbsp;on July 16, Apollo 11 was the fifth manned mission of <a href="http://en.wikipedia.org/wiki/NASA">NASA</a>&#39;s&nbsp;Apollo program. The Apollo&nbsp;spacecraft&nbsp;had three parts: aCommand Module&nbsp;with a cabin for the three astronauts which was the only part which landed back on Earth; a&nbsp;Service Module&nbsp;which supported the Command Module with propulsion, electrical power, oxygen and water; and a&nbsp;Lunar Module&nbsp;for landing on the Moon. After being sent to the Moon by the Saturn V&#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the&nbsp;Sea of Tranquility. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the&nbsp;Pacific Ocean&nbsp;.</p>
+	</div>
+
+	<script>
+
+		CKEDITOR.stylesSet.add('my_custom_style', [
+			{ name: 'My Custom Block', element: 'h1', styles: { color: 'blue'} }
+		]);
+
+		CKEDITOR.replace( 'editor1', {
+			extraPlugins: 'mathjax',
+			height: 350,
+			allowedContent: true,
+			// mathJaxLib: './truncated-mathjax/MathJax.js?config=TeX-AMS_HTML',
+			mathJaxClass: 'mjx'
+		} );
+
+		CKEDITOR.inline( 'editor2', {
+			extraPlugins: 'mathjax',
+			height: 350,
+			allowedContent: true,
+			// mathJaxLib: './truncated-mathjax/MathJax.js?config=TeX-AMS_HTML',
+			mathJaxClass: 'mjx'
+		} );
+
+	</script>
+
+	<div id="footer">
+		<hr>
+		<p>
+			CKEditor - The text editor for the Internet - <a class="samples" href="http://ckeditor.com/">http://ckeditor.com</a>
+		</p>
+		<p id="copy">
+			Copyright &copy; 2003-2013, <a class="samples" href="http://cksource.com/">CKSource</a> - Frederico
+			Knabben. All rights reserved.
+		</p>
+	</div>
+</body>
+</html>

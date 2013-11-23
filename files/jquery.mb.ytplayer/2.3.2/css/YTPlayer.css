@@ -1,0 +1,189 @@
+/*
+ * ******************************************************************************
+ *  jquery.mb.components
+ *  file: YTPlayer.css
+ *
+ *  Copyright (c) 2001-2013. Matteo Bicocchi (Pupunzi);
+ *  Open lab srl, Firenze - Italy
+ *  email: matteo@open-lab.com
+ *  site: 	http://pupunzi.com
+ *  blog:	http://pupunzi.open-lab.com
+ * 	http://open-lab.com
+ *
+ *  Licences: MIT, GPL
+ *  http://www.opensource.org/licenses/mit-license.php
+ *  http://www.gnu.org/licenses/gpl.html
+ *
+ *  last modified: 18/03/13 20.19
+ *  *****************************************************************************
+ */
+
+/*
+* jQuery.mb.components: mb.YTVPlayer
+* © 2001 - 2012 Matteo Bicocchi (pupunzi), Open Lab
+*
+*/
+
+@charset"UTF-8";
+
+.mb_YTVPlayer :focus {
+  outline: 0;
+}
+
+.mb_YTVPlayer{
+  display:block;
+}
+
+.mbYTP_wrapper iframe{
+  max-width: 4000px !important;
+}
+
+.inline_YTPlayer{
+  margin-bottom: 20px;
+  vertical-align:top;
+  position:relative;
+  left:0;
+  overflow: hidden;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.7);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.7);
+  box-shadow: 0 0 5px rgba(0,0,0,.7);
+  background: rgba(0,0,0,.5);
+}
+
+.inline_YTPlayer img{
+  border: none!important;
+  -moz-transform: none!important;
+  -webkit-transform: none!important;
+  -o-transform: none!important;
+  transform: none!important;
+  margin:0!important;
+  padding:0!important
+}
+
+/*CONTROL BAR*/
+.mb_YTVPBar{
+
+  transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+
+  display:block;
+  width:100%;
+  height:10px;
+  padding:5px;
+  background:#333;
+  position:fixed;
+  bottom:0;
+  left:0;
+  -moz-box-sizing:padding-box;
+  -webkit-box-sizing:border-box;
+  text-align:left;
+  z-index: 1000;
+  font: 14px/16px sans-serif;
+  color:white;
+  opacity:.1;
+}
+
+.mb_YTVPBar.visible, .mb_YTVPBar:hover{
+  opacity:1;
+}
+
+
+.mb_YTVPBar .buttonBar{
+
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+
+  background:transparent;
+  font:12px/14px Calibri;
+  position:absolute;
+  top:-30px;
+  left:0;
+  padding: 5px;
+  width:100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mb_YTVPBar:hover .buttonBar{
+  background: rgba(0,0,0,0.4);
+}
+
+.mb_YTVPBar span{
+  display:inline-block;
+  font:16px/20px Calibri, sans-serif;
+  position:relative;
+  width: 30px;
+  height: 25px;
+  vertical-align: middle;
+}
+.mb_YTVPBar span.mb_YTVPTime{
+  width: 130px;
+}
+
+.mb_YTVPBar span.mb_YTVPUrl,.mb_YTVPBar span.mb_OnlyYT {
+  position: absolute;
+  width: auto;
+  display:block;
+  top:6px;
+  right:20px;
+  cursor: pointer;
+}
+.mb_YTVPBar span.mb_YTVPUrl img{
+  width: 60px;
+}
+
+.mb_YTVPBar span.mb_OnlyYT {
+  left:185px;
+  right: auto;
+}
+.mb_YTVPBar span.mb_OnlyYT img{
+  width: 25px;
+}
+
+.mb_YTVPBar span.mb_YTVPUrl a{
+  color:white;
+}
+
+.mb_YTVPPlaypause,.mb_YTVPlayer .mb_YTVPPlaypause img{
+  cursor:pointer;
+}
+
+.mb_YTVPMuteUnmute{
+  cursor:pointer;
+}
+
+/*PROGRESS BAR*/
+.mb_YTVPProgress{
+  height:10px;
+  width:100%;
+  background:#222;
+  bottom:0;
+  left:0;
+}
+
+.mb_YTVPLoaded{
+  height:10px;
+  width:0;
+  background:#444;
+  left:0;
+}
+
+.mb_YTVTime{
+  height:5px;
+  width:0;
+  background:#fff;
+  bottom:0;
+  left:0;
+  -moz-box-shadow:#666666 1px 1px 3px;
+  -webkit-box-shadow:#666666 1px 1px 3px;
+}
+
+.YTPOverlay{
+  /*box-shadow: inset 0 0 5px rgba(0,0,0,.5);*/
+}

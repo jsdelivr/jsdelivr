@@ -1,0 +1,249 @@
+/*! 
+ *  Focal Point: Pure HTML/CSS Adaptive Images Framework
+ *  Author: Adam Bradley, 2012
+ *  License: MIT/GPLv2
+ *  https://github.com/adamdbradley/focal-point
+ *  http://www.cdnconnect.com/
+*/
+
+.focal-point {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.focal-point img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+.focal-point div {
+    position: relative; 
+    max-width: none; 
+    height: auto;
+}
+
+@media all and (max-width: 767px) {
+
+    /* 4x3 Landscape Shape (Default) */
+    .focal-point div {
+        margin: -3em -4em;
+    }
+
+    /* Landscape down (Total 6em) */
+    .down-1 div {
+        margin-top:    -3.5em;
+        margin-bottom: -2.5em;
+    }
+    .down-2 div {
+        margin-top:    -4em;
+        margin-bottom: -2em;
+    }
+    .down-3 div {
+        margin-top:    -4.5em;
+        margin-bottom: -1.5em;
+    }
+    .down-4 div {
+        margin-top:    -5em;
+        margin-bottom: -1em;
+    }
+    .down-5 div {
+        margin-top:    -5.5em;
+        margin-bottom: -0.5em;
+    }
+    .down-6 div {
+        margin-top:    -6em;
+        margin-bottom: 0;
+    }
+
+    /* Landscape up (Total 6em) */
+    .up-1 div {
+        margin-top:    -2.5em;
+        margin-bottom: -3.5em;
+    }
+    .up-2 div {
+        margin-top:    -2em;
+        margin-bottom: -4em;
+    }
+    .up-3 div {
+        margin-top:    -1.5em;
+        margin-bottom: -4.5em;
+    }
+    .up-4 div {
+        margin-top:    -1em;
+        margin-bottom: -5em;
+    }
+    .up-5 div {
+        margin-top:    -0.5em;
+        margin-bottom: -5.5em;
+    }
+    .up-6 div {
+        margin-top:    0;
+        margin-bottom: -6em;
+    }
+
+    /* Landscape right (Total 8em) */
+    .right-1 div {
+        margin-left:  -4.66em;
+        margin-right: -3.34em;
+    }
+    .right-2 div {
+        margin-left:  -5.33em;
+        margin-right: -2.67em;
+    }
+    .right-3 div {
+        margin-left:  -6em;
+        margin-right: -2em;
+    }
+    .right-4 div {
+        margin-left:  -6.66em;
+        margin-right: -1.34em;
+    }
+    .right-5 div {
+        margin-left:  -7.33em;
+        margin-right: -0.67em;
+    }
+    .right-6 div {
+        margin-left:  -8em;
+        margin-right: 0;
+    }
+
+    /* Landscape left (Total 8em) */
+    .left-1 div {
+        margin-left:  -3.34em;
+        margin-right: -4.66em;
+    }
+    .left-2 div {
+        margin-left:  -2.67em;
+        margin-right: -5.33em;
+    }
+    .left-3 div {
+        margin-left:  -2em;
+        margin-right: -6em;
+    }
+    .left-4 div {
+        margin-left:  -1.34em;
+        margin-right: -6.66em;
+    }
+    .left-5 div {
+        margin-left:  -0.67em;
+        margin-right: -7.33em;
+    }
+    .left-6 div {
+        margin-left:  0;
+        margin-right: -8em;
+    }
+
+
+    /* 3x4 Portrait Shape */
+    .focal-point.portrait div {
+        margin: -4em -3em;
+    }
+
+    /* Portrait down (Total 8em) */
+    .portrait.down-1 div {
+        margin-top:    -4.66em;
+        margin-bottom: -3.34em;
+    }
+    .portrait.down-2 div {
+        margin-top:    -5.33em;
+        margin-bottom: -2.67em;
+    }
+    .portrait.down-3 div {
+        margin-top:    -6em;
+        margin-bottom: -2em;
+    }
+    .portrait.down-4 div {
+        margin-top:    -6.66em;
+        margin-bottom: -1.34em;
+    }
+    .portrait.down-5 div {
+        margin-top:    -7.33em;
+        margin-bottom: -0.67em;
+    }
+    .portrait.down-6 div {
+        margin-top:    -8em;
+        margin-bottom: 0;
+    }
+
+    /* Portrait right (Total 6em) */
+    .portrait.right-1 div {
+        margin-left:  -3.5em;
+        margin-right: -2.5em;
+    }
+    .portrait.right-2 div {
+        margin-left:  -4em;
+        margin-right: -2em;
+    }
+    .portrait.right-3 div {
+        margin-left:  -4.5em;
+        margin-right: -1.5em;
+    }
+    .portrait.right-4 div {
+        margin-left:  -5em;
+        margin-right: -1em;
+    }
+    .portrait.right-5 div {
+        margin-left:  -5.5em;
+        margin-right: -0.5em;
+    }
+    .portrait.right-6 div {
+        margin-left:  -6em;
+        margin-right: 0;
+    }
+
+    /* Portrait up (Total 8em) */
+    .portrait.up-1 div {
+        margin-top:    -3.34em;
+        margin-bottom: -4.66em;
+    }
+    .portrait.up-2 div {
+        margin-top:    -2.67em;
+        margin-bottom: -5.33em;
+    }
+    .portrait.up-3 div {
+        margin-top:    -2em;
+        margin-bottom: -6em;
+    }
+    .portrait.up-4 div {
+        margin-top:    -1.34em;
+        margin-bottom: -6.66em;
+    }
+    .portrait.up-5 div {
+        margin-top:    -0.67em;
+        margin-bottom: -7.33em;
+    }
+    .portrait.up-6 div {
+        margin-top:    0;
+        margin-bottom: -8em;
+    }
+
+    /* Portrait left (Total 6em) */
+    .portrait.left-1 div {
+        margin-left:  -2.5em;
+        margin-right: -3.5em;
+    }
+    .portrait.left-2 div {
+        margin-left:  -2em;
+        margin-right: -4em;
+    }
+    .portrait.left-3 div {
+        margin-left:  -1.5em;
+        margin-right: -4.5em;
+    }
+    .portrait.left-4 div {
+        margin-left:  -1em;
+        margin-right: -5em;
+    }
+    .portrait.left-5 div {
+        margin-left:  -0.5em;
+        margin-right: -5.5em;
+    }
+    .portrait.left-6 div {
+        margin-left:  0;
+        margin-right: -6em;
+    }
+
+}

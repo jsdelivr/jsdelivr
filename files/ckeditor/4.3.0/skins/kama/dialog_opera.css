@@ -1,0 +1,27 @@
+/*
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+
+/*
+dialog_opera.css
+===============
+
+This file contains styles to used by Opera only.
+*/
+
+/* Base it on dialog.css, overriding it with styles defined in this file. */
+@import url("dialog.css");
+
+/* Opera doesn't leave enough padding in text input for cursor to blink in RTL. (#6087) */
+.cke_rtl input.cke_dialog_ui_input_text,
+.cke_rtl input.cke_dialog_ui_input_password
+{
+	padding-right: 2px;
+}
+/* Compensate the padding added above on container. */
+.cke_rtl div.cke_dialog_ui_input_text,
+.cke_rtl div.cke_dialog_ui_input_password
+{
+	padding-left: 2px;
+}

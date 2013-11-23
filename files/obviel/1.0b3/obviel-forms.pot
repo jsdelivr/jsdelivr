@@ -1,0 +1,86 @@
+# Translations template for PROJECT.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-06-20 20:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: src/obviel/obviel-forms-autocomplete.js:152
+msgid "unknown value"
+msgstr ""
+
+#: src/obviel/obviel-forms-datepicker.js:56
+msgid "invalid date"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:128
+msgid "{count} field did not validate"
+msgid_plural "{count} fields did not validate"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/obviel/obviel-forms.js:1105
+msgid "this field is required"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1138
+msgid "value too short"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1141
+msgid "value too long"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1205
+msgid "not a number"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1208
+msgid "not an integer number"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1232 src/obviel/obviel-forms.js:1317
+#: src/obviel/obviel-forms.js:1389
+msgid "negative numbers are not allowed"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1240
+msgid "value must be %1 digits long"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1278 src/obviel/obviel-forms.js:1285
+msgid "not a float"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1347 src/obviel/obviel-forms.js:1357
+msgid "not a decimal"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1410
+msgid "decimal must contain at least %1 digits before the decimal mark"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1417
+msgid "decimal may not contain more than %1 digits before the decimal mark"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1425
+msgid "decimal must contain at least %1 digits after the decimal mark"
+msgstr ""
+
+#: src/obviel/obviel-forms.js:1433
+msgid "decimal may not contain more than %1 digits after the decimal mark"
+msgstr ""
+

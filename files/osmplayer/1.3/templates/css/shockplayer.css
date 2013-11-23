@@ -1,0 +1,470 @@
+#mediaplayer {
+  position:relative;
+  background:#000;
+  border:1px solid #333;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+  -moz-box-shadow:0px 10px 20px #666;/*no-important moz*/
+  -webkit-box-shadow:0px 10px 20px #666;/*no-important chrome*/
+}
+
+#mediaplayer img {
+  border:0;
+}
+
+#mediaplayer_display {
+  background-color:#000;
+  width:100%;
+  height:100%;
+  z-index:400;
+  position:absolute;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_display, #mediaplayer_minplayer.fullscreen #mediaplayer_preview {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index:1000;
+  width: 100%;
+  height: 100%;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_preview {
+  z-index:1001;
+}
+
+#mediaplayer_minplayer.nomedia #mediaplayer_display {
+  display:none;
+}
+
+/*--------------------------- Media Fields ---------------------------*/
+.mediafield {
+  margin:5px;
+  color:#ddd;
+}
+
+
+/*--------------------------- Big play button and preview ---------------------------*/
+#mediaplayer_preview {
+  background-color:#000;
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index:401;
+}
+
+#mediaplayer_bigPlay {
+  background:url(../images/mediafront_black40.png);
+  display: table-cell;
+  vertical-align:middle;
+  position:absolute;
+  height:60px;
+  left:0px;
+  right:0px;
+  padding-left:30px;
+  padding-right:30px;
+  bottom:45px;
+  z-index:402;
+  cursor:pointer;
+}
+
+#mediaplayer_minplayer.nomedia #mediaplayer_bigPlay {
+  bottom:5px;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_bigPlay {
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#mediaplayer_bigPlay img {
+  width:174px;
+  height:174px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -87px 0 0 -87px;
+  text-align:center;
+  vertical-align:center;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_bigPlay img {
+  position:fixed;
+}
+
+#mediaplayer_busy {
+  position: absolute;
+  width:100%;
+  height:100%;
+  z-index:403;
+}
+
+#mediaplayer_busy img {
+  width:32px;
+  height:32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  text-align:center;
+  vertical-align:center;
+}
+
+/*--------------------------- control bar ---------------------------*/
+#mediaplayer_control {
+  z-index:403;
+  position:absolute;
+  bottom:10px;
+  background:url(../images/mediafront_controlerbarBg.png) center repeat-x;
+  height:36px;
+  width:100%;
+}
+
+#mediaplayer_minplayer.nomedia #mediaplayer_control {
+  display:none;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_control {
+  position: fixed;
+  left:0;
+  z-index:1010;
+}
+
+#mediaplayer_control span {
+  display:none;
+}
+
+#mediaplayer_controlLeft {
+  float:left;
+  width:70px;
+  height:36px;
+}
+
+#mediaplayer_controlRight {
+  float:right;
+  width:130px;
+  height:36px;
+}
+
+.mediaplayer_controlspace {
+  margin:9px 3px 0;
+}
+
+/*---------------------------progress bar---------------------------*/
+#mediaplayer_seekBar {
+  background: url(../images/mediafront_black40.png);
+  height:27px;
+  margin:5px 130px 0 70px;
+}
+#mediaplayer_seekProgress {
+  background: url(../images/mediafront_black40.png);
+  position:absolute;
+  z-index:404;
+  height:27px;
+}
+#mediaplayer_seekUpdate {
+  background: url(../images/mediafront_blue20.png);
+  position:absolute;
+  z-index:405;
+  height:27px;
+}
+#mediaplayer_seekHandle {
+  background:url(../images/mediafront_buttoncontroler.png) no-repeat 0 0;
+  position:absolute;
+  z-index:409;
+  width:8px;
+  height:27px;
+}
+
+/*--------------------------- playing time ---------------------------*/
+#mediafront_playtime, #mediafront_totaltime {
+  color:#FFF;
+  float:left;
+  position:relative;
+  font-size:12px;
+}
+
+/*--------------------------- play | pause ---------------------------*/
+#mediaplayer_playPause {
+  float:left;
+  position:relative;
+  height:20px;
+  width:19px;
+}
+#mediaplayer_play, #mediaplayer_pause {
+  position:absolute;
+  z-index:404;
+  height:20px;
+  width:19px;
+}
+#mediaplayer_play {
+  background:url(../images/mediafront_buttonplay.png) no-repeat 0 0;
+}
+#mediaplayer_play:hover {
+  background:url(../images/mediafront_buttonplay.png) no-repeat 0 -20px;
+}
+#mediaplayer_pause {
+  background:url(../images/mediafront_buttonpause.png) no-repeat 0 0;
+}
+#mediaplayer_pause:hover {
+  background:url(../images/mediafront_buttonpause.png) no-repeat 0 -20px;
+}
+
+/*-------------------------info buttons---------------------------*/
+#mediafront_information {
+  float:left;
+  position:relative;
+  width:22px;
+  height:23px;
+  margin-top:7px;
+}
+#mediafront_menuButton {
+  position:absolute;
+  z-index:404;
+  width:22px;
+  height:23px;
+  background:url(../images/mediafront_buttoninfo.png) no-repeat 0 0;
+}
+#mediafront_menuButton:hover {
+  background:url(../images/mediafront_buttoninfo.png) no-repeat center -22px;
+}
+
+/*--------------------------- fullscreen button ---------------------------*/
+#mediafront_resizeScreen {
+  position:absolute;
+  z-index:404;
+  position:absolute;
+  bottom:16px;
+  right:0px;
+  width:33px;
+  height:24px;
+}
+
+#mediaplayer_minplayer.nomedia #mediafront_resizeScreen {
+  bottom:23px;
+  right:30px;
+}
+
+#mediaplayer_minplayer.fullscreen #mediafront_resizeScreen {
+  position: fixed;
+  right:0px;
+  bottom:16px;
+  z-index:1012;
+}
+
+#mediaplayer_minplayer.fullscreen.nomedia #mediafront_resizeScreen {
+  position: fixed;
+  right:0px;
+  bottom:5px;
+  z-index:1012;
+}
+
+#mediafront_resizeScreen span {
+  display:none;
+}
+
+#mediafront_resize_to_fullScreen, #mediafront_resize_to_normalScreen {
+  position:absolute;
+  z-index:404;
+  width:33px;
+  height:24px;
+}
+#mediafront_resize_to_fullScreen {
+  background: url(../images/mediafront_buttonresizescreen.png) no-repeat 0 0;
+}
+#mediafront_resize_to_fullScreen:hover {
+  background:url(../images/mediafront_buttonresizescreen.png) no-repeat 0 -24px;
+}
+#mediafront_resize_to_normalScreen {
+  background:url(../images/mediafront_buttonresizescreen.png) no-repeat 0 -24px;
+}
+#mediafront_resize_to_normalScreen:hover {
+  background:url(../images/mediafront_buttonresizescreen.png) no-repeat 0 0;
+}
+
+/*--------------------------- volume ---------------------------*/
+#mediafront_audio {
+  float:left;
+  position:relative;
+  width:18px;
+  height:21px;
+  margin-top:7px;
+}
+#mediaplayer_audioButton {
+  position:absolute;
+  z-index:404;
+  width:18px;
+  height:21px;
+  background: url(../images/mediafront_buttonsound.png) center 0 no-repeat;
+}
+#mediaplayer_audioButton:hover {
+  background: url(../images/mediafront_buttonsound.png) center -21px no-repeat;
+}
+#mediaplayer_audioBar {
+  background:url(../images/mediafront_audioslidebarbg.png) no-repeat 0 0;
+  position:absolute;
+  z-index:404;
+  height:72px;
+  width:39px;
+  margin-top:-76px;
+  margin-left:-10px;
+}
+#mediaplayer_audioBarInner {
+  width:27px;
+  height:60px;
+  left:6px;
+  bottom:0px;
+  position:absolute;
+  z-index:404;
+}
+#mediavolumeupdate {
+  background: url(../images/mediafront_black40.png);
+  position:absolute;
+  font-size:0px;
+  z-index:405;
+  bottom:0px;
+  width:26px;
+}
+#mediafront_audioControler {
+  background:url(../images/mediafront_buttonaudioslidebar.png) no-repeat 0 0;
+  width:27px;
+  height:8px;
+  position:absolute;
+  z-index:406;
+}
+
+/*--------------------------- menu ---------------------------*/
+#mediaplayer_menu {
+  position:absolute;
+  display:none;
+  width:300px;
+  height:150px;
+  z-index:420;
+  top: 50%;
+  left: 50%;
+  margin: -75px 0 0 -150px;
+  text-align:center;
+  vertical-align:center;
+  background:url(../images/mediafront_infobox.png) repeat-x;
+  -moz-box-shadow:0px 5px 15px #000;/*no-important moz*/
+  -webkit-box-shadow:0px 5px 15px #000;/*no-important chrome*/
+}
+#mediaplayer_menu.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+#mediaplayer_menuHeader {
+  text-align:left;
+  padding:9px 8px 8px 11px;
+  border-bottom:1px solid #000;
+  height:20px;
+}
+#mediaplayer_menuHeader div {
+  float:left;
+  border:1px solid #dbdbdb;
+  margin:0 1px;
+}
+#mediaplayer_menuHeader div a {
+  color:#dbdbdb;
+  text-decoration:none;
+  padding:0px 12px;
+}
+#mediaplayer_menuHeader div a:hover, #mediaplayer_menuHeader div.active a {
+  color:#000;
+  background:#dbdbdb;
+}
+#mediaplayer_menuHeader div#mediaplayer_menuClose {
+  background:url(../images/mediafront_close.png) no-repeat;
+  height:19px;
+  width:19px;
+  float:right;
+  border:0;
+}
+.mediaplayer_info {
+  text-align:left;
+  padding:6px 8px 8px 11px;
+  color:#dbdbdb;
+  border-top:1px solid #666;
+}
+
+/*---------------------------logo---------------------------*/
+.medialogo {
+  position:absolute;
+  display:none;
+  width:49px;
+  height:15px;
+  bottom:45px;
+  left:5px;
+  z-index:500;
+}
+
+#mediaplayer_minplayer.fullscreen .medialogo {
+  position:fixed;
+  z-index:1500;
+  left:5px;
+  bottom:45px;
+}
+
+/*----------------------- pagination -------------------------*/
+#mediaplayer_prev {
+  background:url(../images/arrow_back_hover.png);
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: table-cell;
+  position:absolute;
+  height:40px;
+  bottom:55px;
+  z-index:403;
+  width:24px;
+  cursor:pointer;
+}
+
+#mediaplayer_minplayer.nomedia #mediaplayer_prev {
+  bottom:15px;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_prev {
+  position:fixed;
+  z-index:1400;
+  left:0px;
+  bottom:55px;
+}
+
+#mediaplayer_next {
+  background:url(../images/arrow_forward_hover.png);
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  display: table-cell;
+  position:absolute;
+  height:40px;
+  bottom:55px;
+  z-index:403;
+  right:0px;
+  width:24px;
+  cursor:pointer;
+}
+
+#mediaplayer_minplayer.nomedia #mediaplayer_next {
+  bottom:15px;
+}
+
+#mediaplayer_minplayer.fullscreen #mediaplayer_next {
+  position:fixed;
+  z-index:1400;
+  right:0px;
+  bottom:55px;
+}
+

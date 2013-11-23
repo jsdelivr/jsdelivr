@@ -1,0 +1,262 @@
+#content {
+    font-family:arial;
+}
+.socialist {
+    box-shadow:#999 1px 1px 1px 0px;
+    *border:1px solid #333;
+    background-color: #fefefe;
+    color:#666;
+    font-size: 12px;
+    margin: 10px;
+    width: 200px;
+    overflow:hidden;
+}
+
+.socialist .head {
+    padding:5px;
+}
+
+.socialist .content {
+    min-height: 140px;
+    border:7px solid #fffff8;    
+}
+
+.socialist .content div {
+    padding:3px;
+    padding-top:0px;
+    color:#999;
+}
+
+.socialist .content img {
+    width: 174px;
+    margin:4px;
+    border:1px solid #ddd;
+}
+
+.socialist .foot {
+    color:#fff;
+    padding:5px;
+    background-color:#888;
+    height:34px;
+}
+
+.socialist .foot a {
+    color:#fff;
+}  
+
+.socialist .foot div {
+    
+}  
+
+.socialist .source {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');
+}
+
+.socialist .api {
+    float:right;
+    background-repeat:no-repeat;
+} 
+
+.socialist .api a {
+    height:32px;
+    width:32px;
+    display:block;
+}  
+
+.socialist .date {
+    margin-left:0px;
+    font-size:80%;
+}
+
+.socialist-pinterest .foot {
+    background-color:#cc0000;
+}  
+.socialist-pinterest .content img {
+    width:150px;
+} 
+.socialist-pinterest .api {
+    background-image:url('images/32/pinterest-32x32.png');
+}  
+
+.socialist-linkedin .content img {
+    width:70px !important;
+    max-width:70px !important;
+    min-width:70px !important;
+    float:left;
+}
+.socialist-linkedin .foot {
+    background-color:#4875B4;
+}
+.socialist-linkedin .api {
+    background-image:url('images/32/linkedin-32x32.png');
+}  
+
+.socialist-rss .foot {
+    background-color:#FF7400;
+}
+.socialist-rss .api {
+    background-image:url('images/32/rss-32x32.png');
+}
+
+.socialist-facebook .foot {
+    background-color:#3B5998;
+}
+.socialist-facebook .api {
+    background-image:url('images/32/facebook-32x32.png');
+}
+
+.socialist-flickr .foot {
+    background-color:#dfdfdf;
+}  
+.socialist-flickr .api {
+    background-image:url('images/32/flickr-32x32.png');
+}  
+
+.socialist-twitter .content  img {
+    width:60px !important;
+    max-width:60px !important;
+    min-width:60px !important;
+    float:left;
+}
+.socialist-twitter .foot {
+   background-color:#4099ff;
+}
+.socialist-twitter .api {
+    background-image:url('images/32/twitter-32x32.png');
+}  
+
+.socialist-tumblr .foot {
+   background-color:#00225F;
+}
+.socialist-tumblr .api {
+    background-image:url('images/32/tumblr-32x32.png');
+}  
+
+.socialist-craigslist .foot {
+   background-color:#700070;
+}
+.socialist-craigslist .api {
+    background-image:url('images/32/craigslist-32x32.png');
+}  
+
+
+.socialist-google .foot {
+   background-color:#d61e1e;
+}
+.socialist-google .content img {
+    width:auto !important;
+    min-width:100px !important;
+}
+.socialist-google .api {
+    background-image:url('images/32/google-32x32.png');
+}  
+
+.socialist-youtube .api {
+    background-image:url('images/32/youtube-32x32.png');
+}  
+
+/* simple list */
+.socialist-simple {
+    box-shadow:#999 0px 0px 0px 0px;
+    margin: 0;
+    width: auto;
+}
+.socialist-simple .content {
+    min-height:1px;
+    border:0;
+}
+
+/* large */
+.socialist-large {
+    width: 300px;
+}
+.socialist-large .content img {
+    width: 200px;
+    margin:7px;
+}
+.socialist-large .socialist-fixed {
+    height:300px;
+}
+.socialist-large .socialist-fixed .content img {
+    max-width:300px !important;
+}
+.socialist-large .socialist-clean .content img {
+    min-width:300px;
+}
+
+/* small */
+.socialist-small {
+    width: 110px;
+    font-size:70%;
+    overflow:hidden;
+    margin:5px;
+    
+}
+.socialist-small .content {
+    min-height:100px;
+    border:0;
+    overflow:hidden
+}
+.socialist-small .content div {
+    padding:1px;
+}
+.socialist-small .content img {
+    margin:0px;
+}
+.socialist-small .foot {
+    height:25px;
+}
+.socialist-small {
+    max-height:135px !important;
+}
+
+/* fixed */
+.socialist-fixed {
+    height:240px;
+    overflow:hidden;
+}
+.socialist-fixed .foot {
+    position:absolute;
+    bottom:0;
+    width:97%;
+}
+.socialist-fixed .content img {
+    max-width:120px;
+   *max-height:100px;
+}
+
+/* clean */
+.socialist-clean {
+    box-shadow:#aaa 2px 2px 0px 0px;
+}
+
+.socialist-clean .content {
+    border-width:0px;
+}
+.socialist-clean .content img {
+    min-width:200px;
+    margin:0px;
+    border:0px;
+}
+.socialist-clean .content div {
+    padding:6px;
+}
+.socialist-clean .foot {
+    background-color:#fff !important;
+    color:#ccc;
+    padding:6px;
+}
+.socialist-clean .foot a {
+    color:#333;
+}  
+
+.socialist-loader {
+    min-width:120px;
+    min-height:120px;
+    background-image:url('images/ajax-loader.gif');
+    background-repeat:no-repeat;
+}

@@ -1,0 +1,156 @@
+/*
+	dom_tooltip.factory.css
+	
+	DOM Tooltip by Chris Roberts
+	columcille@gmail.com
+	http://croberts.me/
+	
+	This file configures the look for the Tippy tooltip. Rename this file to
+	dom_tooltip.css and flavor to taste.
+*/
+
+a.tippy_link {
+ font-weight: normal;
+ border-bottom: 1px dotted blue;
+ color: black;
+ cursor: pointer;
+}
+
+a.tippy_link:hover {
+ border-bottom: 1px solid blue;
+}
+
+div.domTip_Tip {
+ width: 450px;
+ height: 300px;
+
+ border-radius: 5px;
+ box-shadow: 0px 0px 3px #888, 4px 4px 6px #888;
+ 
+ z-index: 10000;
+}
+
+div.domTip_tipHeader a {
+ color: blue;
+ text-decoration: none;
+ border-bottom: 1px solid blue;
+}
+
+div.domTip_tipHeader a:hover {
+ border-bottom: none;
+}
+
+div.domTip_tipHeader {
+ /*
+   The width has to be specified in TipHeader and TipBody in order for
+   transparency to work with Internet Explorer. Width here is a little tricky.
+   It needs to be the width set in domTip_Tip with a few things subtracted.
+
+   If in this section you set either a padding or a margin you need to subtract
+   those from the width. If they affect both left and right side, then you need
+   to subtract it times two.
+
+   Example:
+
+   domTip_Tip width: 350px;
+   dopTip_TipHeader padding: 2px;
+
+   then domTip_TipHeader width should be 346px
+ */
+ background-color: #ccc;
+ width: 440px;
+ padding: 5px;
+ border-radius: 5px 5px 0 0;
+ 
+ font-family: Georgia, "Times New Roman", serif;
+ font-size: 15px;
+ font-weight: bold;
+ color: black;
+ text-align: left;
+
+ /*
+  The next three alter transparency. The number given in each line
+  should be the same, but for opacity and mozOpacity it should be
+  a decimal. The higher the value, the less it will be transparent.
+
+  Note that most browsers don't support all three properties, but all three
+  should remain in place for cross-browser support.
+
+  Example:
+   filter: alpha(opacity=60);
+   opacity: .60;
+   mozOpacity: .60;
+  */
+
+ filter: alpha(opacity=95);
+ -moz-opacity: 0.95;
+ opacity: 0.95;
+}
+
+div.domTip_tipCloseLink {
+ float: right; 
+ cursor: pointer;
+ 
+ font-size: .85em;
+ color: #444;
+}
+
+div.domTip_tipBody div.domTip_tipCloseLink {
+ margin-top: -5px;
+ margin-right: -10px;
+ margin-left: 5px;
+}
+
+div.domTip_tipBody {
+ /*
+   The width has to be specified in TipHeader and TipBody in order for
+   transparency to work with Internet Explorer. Width here is a little tricky.
+   It needs to be the width set in domTip_Tip with a few things subtracted.
+
+   If in this section you set either a padding or a margin you need to subtract
+   those from the width. If they affect both left and right side, then you need
+   to subtract it times two.
+
+   Example:
+
+   domTip_Tip width: 350px;
+   domTip_TipBody padding: 2px;
+
+   then domTip_TipBody width should be 346px
+ */
+ background-color: white;
+ padding: 5px 15px 5px 15px;
+ 
+ width: 420px;
+ max-height: 275px;
+ overflow: auto;
+ 
+ border-radius: 0 0 5px 5px;
+
+ font-family: Helvetica, Arial, sans-serif;
+ font-size: 15px;
+ color: black;
+ text-align: justify;
+
+ /*
+  The next three alter transparency. The number given in each line
+  should be the same, but for opacity and -moz-opacity it should be
+  a decimal. The higher the value, the less it will be transparent.
+
+  Note that most browsers don't support all three properties, but all three
+  should remain in place for cross-browser support.
+
+  Example:
+   filter: alpha(opacity=60);
+   opacity: .60;
+   mozOpacity: .60;
+  */
+
+ filter: alpha(opacity=98);
+ -moz-opacity: 0.98;
+ opacity: 0.98;
+}
+
+div.domTip_tipBody.domTip_noHeader {
+	border-radius: 5px;
+}

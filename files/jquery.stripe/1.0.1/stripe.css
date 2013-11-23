@@ -1,0 +1,85 @@
+/**
+
+	jQuery Plugin .stripe( [options] )
+	@author   : Bruce Thomas
+	@github   : https://github.com/fliptopbox/jquery.stripe/
+
+*/
+.stripe {
+  background: transparent;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.stripe ul {
+  padding: 0;
+  margin: 0;
+  width: 2000px;
+  list-style: none;
+}
+.stripe ul li {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+.stripe ul li img {
+  height: 740px;
+  background: #000;
+}
+.stripe ul li .stripe-description {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-style: normal;
+}
+.stripe ul li .stripe-description em {
+  margin: 5px;
+  padding: 3px 10px;
+  background: #FFF;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.stripe ul li .stripe-description em + em {
+  background: #000;
+  color: #fff;
+  text-transform: none;
+}
+.stripe-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.stripe-control .button {
+  position: absolute;
+  top: 240px;
+  width: 46px;
+  height: 46px;
+  background: black;
+  border-radius: 50px;
+  display: block;
+  margin: 0 -55px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.stripe-control .button.next {
+  right: 0;
+}
+.stripe-control .button.previous {
+  left: 0;
+}
+.stripe-control .button span {
+  padding: 12px 0 0 0;
+  display: block;
+}
