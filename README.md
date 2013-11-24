@@ -1,4 +1,4 @@
-Free CDN jsDelivr
+Open Source CDN jsDelivr
 ========
 
 [www.jsdelivr.com][1]
@@ -8,7 +8,7 @@ This repo was created to allow the community to make modifications and improve t
 Feel free to open issues and pull requests if you think something should be added/removed/modified.
 
 All changes made to this repo are synced to the CDN.
-It can take more than 48 hours for the changes to appear on the website.
+It can take a few minutes for the changes to appear on the website.
 
 [How jsDelivr works - What makes it special][4]
 
