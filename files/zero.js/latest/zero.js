@@ -1,4 +1,4 @@
-/* Zero 1.1.0 - zero detect event ajax form fx callbacks deferred */
+/* Zero 1.1.11 - zero detect event ajax form fx callbacks deferred */
 
 
 
@@ -30,7 +30,21 @@ var Zero = (function() {
         class2type = {},
         toString = class2type.toString,
         uniq,
-        tempParent = document.createElement('div')
+        tempParent = document.createElement('div'),
+        propMap = {
+            'tabindex': 'tabIndex',
+            'readonly': 'readOnly',
+            'for': 'htmlFor',
+            'class': 'className',
+            'maxlength': 'maxLength',
+            'cellspacing': 'cellSpacing',
+            'cellpadding': 'cellPadding',
+            'rowspan': 'rowSpan',
+            'colspan': 'colSpan',
+            'usemap': 'useMap',
+            'frameborder': 'frameBorder',
+            'contenteditable': 'contentEditable'
+        }
 
     // getComputedStyle shouldn't freak out when called
     // without a valid element as argument
@@ -272,6 +286,7 @@ var Zero = (function() {
     // "null"    => null
     // "42"        => 42
     // "42.5"    => 42.5
+    // "08"    => "08"
     // JSON        => parse if valid
     // String    => self
     function deserializeValue(value) {
@@ -281,7 +296,7 @@ var Zero = (function() {
                 value == "true" ||
                 ( value == "false" ? false :
                     value == "null" ? null :
-                    !isNaN(num = Number(value)) ? num :
+                    !isNaN(num = Number(value)) && (num+'') === value ? num :
                     /^[\[\{]/.test(value) ? $.parseJSON(value) :
                     value )
                 : value
@@ -609,6 +624,7 @@ var Zero = (function() {
             return this.each(function(){ this.nodeType === 1 && setAttribute(this, name) })
         },
         prop: function(name, value){
+            name = propMap[name] || name
             return (value === undefined) ?
                 (this[0] && this[0][name]) :
                 this.each(function(idx){
@@ -686,11 +702,13 @@ var Zero = (function() {
             return element ? this.indexOf($(element).get(0)) : this.parent().children().indexOf(this[0])
         },
         hasClass: function(name){
+            if (!name) return false
             return arr.some.call(this, function(el){
                 return this.test(className(el))
             }, classRE(name))
         },
         addClass: function(name){
+            if (!name) return this
             return this.each(function(idx){
                 classList = []
                 var cls = className(this), newName = funcArg(this, name, idx, cls)
@@ -711,6 +729,7 @@ var Zero = (function() {
             })
         },
         toggleClass: function(name, when){
+            if (!name) return this
             return this.each(function(idx){
                 var $this = $(this), names = funcArg(this, name, idx, className(this))
                 names.split(/\s+/g).forEach(function(klass){
@@ -726,6 +745,15 @@ var Zero = (function() {
             return this.each(hasScrollTop ?
                 function(){ this.scrollTop = value } :
                 function(){ this.scrollTo(this.scrollX, value) })
+        },
+        scrollLeft: function(value){
+            if (!this.length) return
+            var hasScrollLeft = 'scrollLeft' in this[0]
+            if (value === undefined) return hasScrollLeft ? this[0].scrollLeft : this[0].pageXOffset
+            return this.each(hasScrollLeft ?
+                function(){ this.scrollLeft = value } :
+                function(){ this.scrollTo(value, this.scrollY) }
+                )
         },
         position: function() {
             if (!this.length) return
@@ -1571,6 +1599,10 @@ window.$ === undefined && (window.$ = Zero)
     }
 
     $.fn.animate = function(properties, duration, ease, callback, delay){
+        if ($.isFunction(duration))
+            callback = duration, ease = undefined, duration = undefined
+        if ($.isFunction(ease))
+            callback = ease, ease = undefined
         if ($.isPlainObject(duration))
             ease = duration.easing, callback = duration.complete, delay = duration.delay, duration = duration.duration
         if (duration)
@@ -1582,10 +1614,10 @@ window.$ === undefined && (window.$ = Zero)
 
     $.fn.anim = function(properties, duration, ease, callback, delay){
         var key, cssValues = {}, cssProperties, transforms = '',
-                that = this, wrappedCallback, endEvent = $.fx.transitionEnd
+            that = this, wrappedCallback, endEvent = $.fx.transitionEnd, fired = false
 
         if (duration === undefined) duration = 0.4
-        if (delay === undefined) delay = 0
+        if (delay === undefined) delay = $.fx.speeds._default / 1000
         if ($.fx.off) duration = 0
 
         if (typeof properties == 'string') {
@@ -1615,11 +1647,22 @@ window.$ === undefined && (window.$ = Zero)
             if (typeof event !== 'undefined') {
                 if (event.target !== event.currentTarget) return // makes sure the event didn't bubble from "below"
                 $(event.target).off(endEvent, wrappedCallback)
-            }
+            } 
+            else $(this).off(endEvent, wrappedCallback)//triggered by setTimeout
+
+            fired = true
             $(this).css(cssReset)
             callback && callback.call(this)
         }
-        if (duration > 0) this.on(endEvent, wrappedCallback)
+        if (duration > 0){
+            this.on(endEvent, wrappedCallback)
+            // transitionEnd is not always firing on older Android phones
+            // so make sure it gets fired
+            setTimeout(function(){
+            if (fired) return
+                wrappedCallback.call(that)
+            }, (duration * 1000) + 25)
+        }
 
         // trigger page reflow so new elements can animate
         this.size() && this.get(0).clientLeft
@@ -1627,8 +1670,8 @@ window.$ === undefined && (window.$ = Zero)
         this.css(cssValues)
 
         if (duration <= 0) setTimeout(function() {
-            that.each(function(){ wrappedCallback.call(this) })
-        }, 0)
+            wrappedCallback.call(that)
+        }, duration * 1000)
 
         return this
     }
