@@ -46,9 +46,8 @@ A project's directory should contain the following:
 A version directory should contain the following:
 
 1. Static files needed for the project to work. 
-2. A .zip file named after the project containing all of the current version directory files.
-3. If there is no minified version of the main js/css file please create your own. [Tool][3] (Minify only, no symbol obfuscation. )
-4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
+2. If there is no minified version of the main js/css file please create your own. [Tool][3] (Minify only, no symbol obfuscation. )
+3. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
 URL Structure
