@@ -55,9 +55,6 @@ URL Structure
 
 `//cdn.jsdelivr.com/{projectName}/{version}/{file}`
 
-`//cdn.jsdelivr.com/{projectName}/{version}/{projectName}.zip`
-
-
 API 
 ---
 
