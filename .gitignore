@@ -213,3 +213,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#No more ZIPs. Generation handled by origin
+*.zip
