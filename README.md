@@ -53,9 +53,9 @@ A version directory should contain the following:
 URL Structure
 -------------
 
-`//cdn.jsdelivr.com/{projectName}/{version}/{file}`
+`//cdn.jsdelivr.net/{projectName}/{version}/{file}`
 
-`//cdn.jsdelivr.com/{projectName}/{version}/{projectName}.zip`
+`//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
 
 
 API 
