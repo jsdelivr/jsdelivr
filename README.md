@@ -85,5 +85,5 @@ XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jimaek/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jsdelivr/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
