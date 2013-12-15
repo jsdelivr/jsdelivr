@@ -3,8 +3,15 @@ Open Source CDN jsDelivr
 
 [www.jsdelivr.com][1]
 
-This repo was created to allow the community to make modifications and improve the contents of jsDelivr's CDN.
+Similar to Google Hosted Libraries jsDelivr is an Open Source CDN that allows developers to host their own projects 
+and anyone to link to our hosted files in their websites. 
 
+We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
+There are no bandwidth limits or premium features and its completely free to use by anybody.
+
+All kinds of files are allowed, including javascript libraries, jQuery plugins, CSS frameworks, fonts and more.
+
+You can use this repo to make your own modifications and improve the contents of jsDelivr's CDN.
 Feel free to open issues and pull requests if you think something should be added/removed/modified.
 
 All changes made to this repo are synced to the CDN.
@@ -41,7 +48,7 @@ A project's directory should contain the following:
 1. `info.ini` containing all needed information. [Example][2]
 2. Directories named after the version of each project. 
 * The version directories can contain in their names numbers, letters and -,_ symbols.
-3. Do not create a `latest` version directory unless you are the author and plan to maintain it as new versions come out.
+3. Do not create `latest` version directories. They are automatically created on our side.
 
 A version directory should contain the following:
 
@@ -60,6 +67,9 @@ URL Structure
 
 API 
 ---
+
+
+(Legacy)
 
 JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
 
