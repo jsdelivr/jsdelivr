@@ -30,13 +30,6 @@
  */
 
 /*
- * CDN
- * ---
- * - //cdn.jsdelivr.net/jquery.reel/1.3/jquery.reel-bundle.js (recommended)
- * - //cdn.jsdelivr.net/jquery.reel/1.3/jquery.reel.js
- * - //cdn.jsdelivr.net/jquery.reel/1.3/jquery.reel-debug.js
- * - or http://code.vostrel.net/jquery.reel-edge.js if you feel like it ;)
- *
  * Optional Plugins
  * ----------------
  * - jQuery.mouseWheel [B] (Brandon Aaron, http://plugins.jquery.com/project/mousewheel)
