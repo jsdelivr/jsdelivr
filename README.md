@@ -80,6 +80,36 @@ JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
 XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml`
 
 
+Performance data contribution
+---
+
+**jsDelivr** uses real user performance data also known as RUM to make its routing desicions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
+
+This is why we offer the ability to all users to help us out. This data is very important and we encourage all users to participate.
+
+All you have to do is include the following javascript code in your website before `</body>`.
+This code is then executed each time a user visits your website. It uses his browser to test the latency to our CDN providers and gather performance and availability metrics on each one of them.
+
+These benchmarks are completely transparent to the user and do not impact on his browsing in any way. The information we store is the following:
+
+* Performance metrics to each of our providers.
+* Availability metrics to each of our providers.
+* Browser’s User-Agent
+* First three octets of the user’s IP address 
+
+Our js code is executed with a 2 seconds delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
+[Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
+
+```html
+<script type="text/javascript">
+(function(w, d) { var a = function() { var a = d.createElement('script'); a.type = 'text/javascript';
+a.async = 'async'; a.src = '//' + ((w.location.protocol === 'https:') ? 's3.amazonaws.com/cdx-radar/' :
+'radar.cedexis.com/') + '01-11475-radar10.min.js'; d.body.appendChild(a); };
+if (w.addEventListener) { w.addEventListener('load', a, false); }
+else if (w.attachEvent) { w.attachEvent('onload', a); }
+}(window, document));
+</script>
+```
 
 
 
