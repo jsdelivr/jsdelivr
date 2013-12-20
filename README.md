@@ -98,7 +98,6 @@ These benchmarks are completely transparent to the user and do not impact on his
 * First three octets of the user’s IP address 
 
 Our js code is executed with a 2 seconds delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
-[Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
 
 ```html
 <script type="text/javascript">
@@ -110,7 +109,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
 }(window, document));
 </script>
 ```
-
+[Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
 
 
   [1]: http://www.jsdelivr.com
