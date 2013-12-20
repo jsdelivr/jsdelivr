@@ -64,6 +64,10 @@ URL Structure
 
 `//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
 
+For latest version use:
+
+`//cdn.jsdelivr.net/{projectName}/latest/{file}`
+
 
 API 
 ---
