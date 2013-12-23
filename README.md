@@ -80,6 +80,27 @@ JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
 XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml`
 
 
+
+Custom CDN Hosting
+---
+
+If your project does not qualify to be hosted in Github or for any reasons you need direct access to your files then its not a problem.
+We can offer SFTP access to origin restricted to a single directory managed by the author.
+This way you will have full control over your files without any of the restrictions of Github and still be able to utilize the full power of jsDelivr.
+
+This kind of custom hosting can be suitable for:
+
+* Binary hosting. Windows executable files and zips.
+* Frequently updated files.
+* Projects that can't follow jsDelivr file structure.
+* Other...
+
+Simply send an email to [jimaek](https://github.com/jimaek) with more information.
+
+jsDelivr is here to help and not to limit. Even if what you need is not listed above feel free to contact us.
+
+
+
 Contribute Performance Data
 ---
 
