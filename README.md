@@ -80,10 +80,10 @@ JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
 XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml`
 
 
-Performance data contribution
+Contribute Performance Data
 ---
 
-**jsDelivr** uses real user performance data also known as RUM to make its routing desicions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
+**jsDelivr** uses real user performance data also known as RUM to make its routing decisions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
 
 This is why we offer the ability to all users to help us out. This data is very important and we encourage all users to participate.
 
