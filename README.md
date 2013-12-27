@@ -74,11 +74,11 @@ You can also load latest versions per branch:
 
 `//cdn.jsdelivr.net/{projectName}/3/{file}` Latest in 3 branch
 
-To automatically low the mainfile of a project use:
+To automatically load the main file of a project use:
 
 `//cdn.jsdelivr.net/{projectName}/{version}/mainfile`
 
-Depending on project it will automatically load the mainfile as configured in `info.ini` with correct MIME type HTTP headers. If no `mainfile` parameter was specified the url will result in 404 error.
+Depending on project it will automatically load the main file as configured in `info.ini` with correct MIME HTTP headers. If no `mainfile` parameter was specified the url will result in 404 error.
 
 
 
