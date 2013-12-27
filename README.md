@@ -68,6 +68,12 @@ For latest version use:
 
 `//cdn.jsdelivr.net/{projectName}/latest/{file}`
 
+You can also load latest versions per branch:
+
+`//cdn.jsdelivr.net/{projectName}/3.8/{file}` Latest in 3.8 branch
+
+`//cdn.jsdelivr.net/{projectName}/3/{file}` Latest in 3 branch
+
 
 API 
 ---
