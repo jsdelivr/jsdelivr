@@ -15,7 +15,7 @@ angular.module('ui.bootstrap.progresscircle', [])
   outerCircleForegroundColor: '#428bca',
   innerCircleColor: '#d9d9d9',
   labelColor: '#428bca',
-  percentFormat: false,
+  percentFormat: true,
   displayPercentSign: true,
   max: 60,
   displayMax: true
@@ -27,27 +27,27 @@ angular.module('ui.bootstrap.progresscircle', [])
 
 .directive('progressCircle', ['$parse', 'progressConfig', function(parse, progressConfig) {
   return {
-    restrict: 'EA',
+    restrict: 'E',
     replace: true,
     transclude: true,
     controller: 'ProgressCircleController',
     link: function(s, e, a, progressCtrl) {
       
-      var width = parse(a.elementWidth)(s) || progressConfig.elementWidth,
-          height = parse(a.elementHeight)(s) || progressConfig.elementHeight,
-          outerCircleWidth = parse(a.outerCircleWidth)(s) || progressConfig.outerCircleWidth,
-          innerCircleWidth = parse(a.innerCircleWidth)(s) || progressConfig.innerCircleWidth,
-          outerCircleBackgroundColor = parse(a.outerCircleBackgroundColor)(s) || progressConfig.outerCircleBackgroundColor,
-          outerCircleForegroundColor = parse(a.outerCircleForegroundColor)(s) || progressConfig.outerCircleForegroundColor,
-          innerCircleColor = parse(a.innerCircleColor)(s) || progressConfig.innerCircleColor,
-          labelColor = parse(a.labelColor)(s) || progressConfig.labelColor,
-          outerCircleRadius = parse(a.outerCircleRadius)(s) || progressConfig.outerCircleRadius,
-          innerCircleRadius = parse(a.innerCircleRadius)(s) || progressConfig.innerCircleRadius,
-          labelFont = parse(a.labelFont)(s) || progressConfig.labelFont,
-          percentFormat = parse(a.percentFormat)(s) || progressConfig.percentFormat,
-          displayPercentSign = parse(a.displayPercentSign)(s) || progressConfig.displayPercentSign,
-          max = parse(a.max)(s) || progressConfig.max,
-          displayMax = parse(a.displayMax)(s) || progressConfig.displayMax;
+      var width = a.elementWidth || progressConfig.elementWidth,
+          height = a.elementHeight || progressConfig.elementHeight,
+          outerCircleWidth = a.outerCircleWidth || progressConfig.outerCircleWidth,
+          innerCircleWidth = a.innerCircleWidth || progressConfig.innerCircleWidth,
+          outerCircleBackgroundColor = a.outerCircleBackgroundColor || progressConfig.outerCircleBackgroundColor,
+          outerCircleForegroundColor = a.outerCircleForegroundColor || progressConfig.outerCircleForegroundColor,
+          innerCircleColor = a.innerCircleColor || progressConfig.innerCircleColor,
+          labelColor = a.labelColor || progressConfig.labelColor,
+          outerCircleRadius = a.outerCircleRadius || progressConfig.outerCircleRadius,
+          innerCircleRadius = a.innerCircleRadius || progressConfig.innerCircleRadius,
+          labelFont = a.labelFont || progressConfig.labelFont,
+          percentFormat = a.percentFormat || progressConfig.percentFormat,
+          displayPercentSign = a.displayPercentSign || progressConfig.displayPercentSign,
+          max = a.max || progressConfig.max,
+          displayMax = a.displayMax || progressConfig.displayMax;
           
       var canvas = angular.element('<canvas>').attr({'width': width, 'height': height});
       
@@ -79,14 +79,14 @@ angular.module('ui.bootstrap.progresscircle', [])
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = labelColor;
-        if (percentFormat) {
-          if (displayPercentSign) {
+        if (percentFormat === true) {
+          if (displayPercentSign === true) {
             ctx.fillText(newValue.value + ' %', x, y);
           } else {
             ctx.fillText(newValue.value, x, y);
           }
         } else {
-          if (displayMax) {
+          if (displayMax === true) {
             ctx.fillText(newValue.value + '/' + max, x, y);
           } else {
             ctx.fillText(newValue.value, x, y);
@@ -95,7 +95,7 @@ angular.module('ui.bootstrap.progresscircle', [])
 
         // The "foreground" circle
         var startAngle = - (Math.PI / 2);
-        var endAngle = percentFormat ? ((Math.PI * 2 ) * (newValue.value/100)) - (Math.PI / 2):
+        var endAngle = (percentFormat===true) ? ((Math.PI * 2 ) * (newValue.value/100)) - (Math.PI / 2):
           ((Math.PI * 2 ) * (newValue.value/max)) - (Math.PI / 2);
         var anticlockwise = false;
         ctx.beginPath();
@@ -104,8 +104,3 @@ angular.module('ui.bootstrap.progresscircle', [])
         ctx.strokeStyle = outerCircleForegroundColor;
         ctx.stroke();
       }, true);
-    }
-  };  
-}]);
-
-  
