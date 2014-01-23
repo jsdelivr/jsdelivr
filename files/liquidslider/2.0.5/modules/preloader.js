@@ -1,1 +1,0 @@
-addPreloader:function(){var f=this;d(f.sliderId+"-wrapper").append('<div class="ls-preloader"></div>')},removePreloader:function(){var f=this;d(f.sliderId+"-wrapper .ls-preloader").fadeTo("slow",0,function(){d(this).remove()})},

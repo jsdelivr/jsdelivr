@@ -1,1 +1,0 @@
-registerTouch:function(){var f=this;d(f.sliderId+" .panel").swipe({fallbackToMouseEvents:false,allowPageScroll:"vertical",swipe:function(h,g){f.swipeDir=(g==="left")?"right":"left";f.setNextPanel(f.swipeDir)}})},
