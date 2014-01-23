@@ -1,0 +1,19 @@
+<html>
+<body>
+	angleX: <span id="angleX"></span><br/>
+	angleY: <span id="angleY"></span><br/>
+	angleZ: <span id="angleZ"></span><br/>
+	<script src="../THREEx.DeviceOrientationState.js"></script>
+	<script>
+		var deviceOrientation	= new THREEx.DeviceOrientationState();
+		var elementX	= document.getElementById('angleX');
+		var elementY	= document.getElementById('angleY');
+		var elementZ	= document.getElementById('angleZ');
+		setInterval(function(){
+			elementX.innerHTML	= deviceOrientation.angleX();
+			elementY.innerHTML	= deviceOrientation.angleY();
+			elementZ.innerHTML	= deviceOrientation.angleZ();
+		}, 100);
+	</script>
+</body>
+</html>

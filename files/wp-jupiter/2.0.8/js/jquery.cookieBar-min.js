@@ -1,7 +1,0 @@
-/*!
- * jQuery Cookiebar Plugin
- * https://github.com/carlwoodhouse/jquery.cookieBar
- *
- * Copyright 2012, Carl Woodhouse
- * Disclaimer: if you still get fined for not complying with the eu cookielaw, it's not our fault.
- */(function(e){e.fn.cookieBar=function(t){var n=e.extend({closeButton:"none",secure:!1,cookieName:"jupiter_notification_bar",path:"/",domain:""},t);return this.each(function(){var r=e(this);r.hide();if(n.closeButton=="none"){r.append('<a class="cookiebar-close">Continue</a>');n=e.extend({closeButton:".cookiebar-close"},t)}e.cookie(n.cookieName)!="hide"&&r.show();r.find(n.closeButton).click(function(){r.hide();e.cookie(n.cookieName,"hide",{path:n.path,secure:n.secure,domain:n.domain,expires:30});return!1})})};e.cookieBar=function(t){e(".cookie-message").cookieBar(t)}})(jQuery);(function(e){e.cookie=function(t,n,r){if(arguments.length>1&&(!/Object/.test(Object.prototype.toString.call(n))||n===null||n===undefined)){r=e.extend({},r);if(n===null||n===undefined)r.expires=-1;if(typeof r.expires=="number"){var i=r.expires,s=r.expires=new Date;s.setDate(s.getDate()+i)}n=String(n);return document.cookie=[encodeURIComponent(t),"=",r.raw?n:encodeURIComponent(n),r.expires?"; expires="+r.expires.toUTCString():"",r.path?"; path="+r.path:"",r.domain?"; domain="+r.domain:"",r.secure?"; secure":""].join("")}r=n||{};var o=r.raw?function(e){return e}:decodeURIComponent,u=document.cookie.split("; ");for(var a=0,f;f=u[a]&&u[a].split("=");a++)if(o(f[0])===t)return o(f[1]||"");return null}})(jQuery);
