@@ -1,0 +1,99 @@
+<!DOCTYPE html>  <html> <head>   <title>THREEx.KeyboardState.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="THREEx.CelShader.html">                 THREEx.CelShader.js               </a>                                           <a class="source" href="THREEx.DeviceOrientationState.html">                 THREEx.DeviceOrientationState.js               </a>                                           <a class="source" href="THREEx.FullScreen.html">                 THREEx.FullScreen.js               </a>                                           <a class="source" href="THREEx.GeometryUtils.html">                 THREEx.GeometryUtils.js               </a>                                           <a class="source" href="THREEx.GeometryWobble.html">                 THREEx.GeometryWobble.js               </a>                                           <a class="source" href="THREEx.KeyboardState.html">                 THREEx.KeyboardState.js               </a>                                           <a class="source" href="THREEx.LogoTurtle.html">                 THREEx.LogoTurtle.js               </a>                                           <a class="source" href="THREEx.PlasmaShader.html">                 THREEx.PlasmaShader.js               </a>                                           <a class="source" href="THREEx.SkyMap.html">                 THREEx.SkyMap.js               </a>                                           <a class="source" href="THREEx.WindowResize.html">                 THREEx.WindowResize.js               </a>                                           <a class="source" href="THREEx.glCapability.html">                 THREEx.glCapability.js               </a>                                           <a class="source" href="THREEx.requestAnimationFrame.html">                 THREEx.requestAnimationFrame.js               </a>                                           <a class="source" href="THREEx.screenshot.html">                 THREEx.screenshot.js               </a>                                           <a class="source" href="threex.embedded.html">                 threex.embedded.js               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               THREEx.KeyboardState.js             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>THREEx.KeyboardState.js keep the current state of the keyboard.
+It is possible to query it at any time. No need of an event.
+This is particularly convenient in loop driven case, like in
+3D demos or games.</p>
+
+<h1>Usage</h1>
+
+<p><strong>Step 1</strong>: Create the object</p>
+
+<p><code>var keyboard    = new THREEx.KeyboardState();</code></p>
+
+<p><strong>Step 2</strong>: Query the keyboard state</p>
+
+<p>This will return true if shift and A are pressed, false otherwise</p>
+
+<p><code>keyboard.pressed("shift+A")</code></p>
+
+<p><strong>Step 3</strong>: Stop listening to the keyboard</p>
+
+<p><code>keyboard.destroy()</code></p>
+
+<p>NOTE: this library may be nice as standaline. independant from three.js
+- rename it keyboardForGame</p>
+
+<h1>Code</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="cm">/** @namespace */</span>
+<span class="kd">var</span> <span class="nx">THREEx</span>	<span class="o">=</span> <span class="nx">THREEx</span> 		<span class="o">||</span> <span class="p">{};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * - NOTE: it would be quite easy to push event-driven too</span>
+<span class="cm"> *   - microevent.js for events handling</span>
+<span class="cm"> *   - in this._onkeyChange, generate a string from the DOM event</span>
+<span class="cm"> *   - use this as event name</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p>to store the current state</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="k">this</span><span class="p">.</span><span class="nx">keyCodes</span>	<span class="o">=</span> <span class="p">{};</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span>	<span class="o">=</span> <span class="p">{};</span>
+	</pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p>create callback to bind/unbind keyboard events</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="kd">var</span> <span class="nx">self</span>	<span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">_onKeyDown</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span> <span class="nx">self</span><span class="p">.</span><span class="nx">_onKeyChange</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="p">};</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">_onKeyUp</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span> <span class="nx">self</span><span class="p">.</span><span class="nx">_onKeyChange</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="kc">false</span><span class="p">);};</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>bind keyEvents</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keyup&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onKeyUp</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * To stop listening of the keyboard events</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">destroy</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>unbind keyEvents</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&quot;keyup&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onKeyUp</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">MODIFIERS</span>	<span class="o">=</span> <span class="p">[</span><span class="s1">&#39;shift&#39;</span><span class="p">,</span> <span class="s1">&#39;ctrl&#39;</span><span class="p">,</span> <span class="s1">&#39;alt&#39;</span><span class="p">,</span> <span class="s1">&#39;meta&#39;</span><span class="p">];</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">ALIAS</span>	<span class="o">=</span> <span class="p">{</span>
+	<span class="s1">&#39;left&#39;</span>		<span class="o">:</span> <span class="mi">37</span><span class="p">,</span>
+	<span class="s1">&#39;up&#39;</span>		<span class="o">:</span> <span class="mi">38</span><span class="p">,</span>
+	<span class="s1">&#39;right&#39;</span>		<span class="o">:</span> <span class="mi">39</span><span class="p">,</span>
+	<span class="s1">&#39;down&#39;</span>		<span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+	<span class="s1">&#39;space&#39;</span>		<span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+	<span class="s1">&#39;pageup&#39;</span>	<span class="o">:</span> <span class="mi">33</span><span class="p">,</span>
+	<span class="s1">&#39;pagedown&#39;</span>	<span class="o">:</span> <span class="mi">34</span><span class="p">,</span>
+	<span class="s1">&#39;tab&#39;</span>		<span class="o">:</span> <span class="mi">9</span>
+<span class="p">};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * to process the keyboard dom event</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_onKeyChange</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">pressed</span><span class="p">)</span>
+<span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>log to debug
+console.log("onKeyChange", event, pressed, event.keyCode, event.shiftKey, event.ctrlKey, event.altKey, event.metaKey)</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <p>update this.keyCodes</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="kd">var</span> <span class="nx">keyCode</span>		<span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">keyCodes</span><span class="p">[</span><span class="nx">keyCode</span><span class="p">]</span>	<span class="o">=</span> <span class="nx">pressed</span><span class="p">;</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>update this.modifiers</p>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">[</span><span class="s1">&#39;shift&#39;</span><span class="p">]</span><span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">shiftKey</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">[</span><span class="s1">&#39;ctrl&#39;</span><span class="p">]</span>	<span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">ctrlKey</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">[</span><span class="s1">&#39;alt&#39;</span><span class="p">]</span>	<span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">altKey</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">[</span><span class="s1">&#39;meta&#39;</span><span class="p">]</span>	<span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * query keyboard state to know if a key is pressed of not</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param {String} keyDesc the description of the key. format : modifiers+key e.g shift+A</span>
+<span class="cm"> * @returns {Boolean} true if the key is pressed, false otherwise</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">pressed</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">keyDesc</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">keys</span>	<span class="o">=</span> <span class="nx">keyDesc</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">key</span>		<span class="o">=</span> <span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+		<span class="kd">var</span> <span class="nx">pressed</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span> <span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">MODIFIERS</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">){</span>
+			<span class="nx">pressed</span>	<span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+		<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">ALIAS</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">){</span>
+			<span class="nx">pressed</span>	<span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">keyCodes</span><span class="p">[</span> <span class="nx">THREEx</span><span class="p">.</span><span class="nx">KeyboardState</span><span class="p">.</span><span class="nx">ALIAS</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">];</span>
+		<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+			<span class="nx">pressed</span>	<span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">keyCodes</span><span class="p">[</span><span class="nx">key</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">().</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
+		<span class="p">}</span>
+		<span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="nx">pressed</span><span class="p">)</span>	<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="p">};</span>
+	<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

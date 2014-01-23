@@ -1,0 +1,40 @@
+<!DOCTYPE html>  <html> <head>   <title>THREEx.requestAnimationFrame.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="THREEx.CelShader.html">                 THREEx.CelShader.js               </a>                                           <a class="source" href="THREEx.DeviceOrientationState.html">                 THREEx.DeviceOrientationState.js               </a>                                           <a class="source" href="THREEx.FullScreen.html">                 THREEx.FullScreen.js               </a>                                           <a class="source" href="THREEx.GeometryUtils.html">                 THREEx.GeometryUtils.js               </a>                                           <a class="source" href="THREEx.GeometryWobble.html">                 THREEx.GeometryWobble.js               </a>                                           <a class="source" href="THREEx.KeyboardState.html">                 THREEx.KeyboardState.js               </a>                                           <a class="source" href="THREEx.LogoTurtle.html">                 THREEx.LogoTurtle.js               </a>                                           <a class="source" href="THREEx.PlasmaShader.html">                 THREEx.PlasmaShader.js               </a>                                           <a class="source" href="THREEx.SkyMap.html">                 THREEx.SkyMap.js               </a>                                           <a class="source" href="THREEx.WindowResize.html">                 THREEx.WindowResize.js               </a>                                           <a class="source" href="THREEx.glCapability.html">                 THREEx.glCapability.js               </a>                                           <a class="source" href="THREEx.requestAnimationFrame.html">                 THREEx.requestAnimationFrame.js               </a>                                           <a class="source" href="THREEx.screenshot.html">                 THREEx.screenshot.js               </a>                                           <a class="source" href="threex.embedded.html">                 threex.embedded.js               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               THREEx.requestAnimationFrame.js             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>                            </td>             <td class="code">               <div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * Provides requestAnimationFrame/cancelRequestAnimation in a cross browser way.</span>
+<span class="cm"> * from paul irish + jerome etienne</span>
+<span class="cm"> * - http://paulirish.com/2011/requestanimationframe-for-smart-animating/</span>
+<span class="cm"> * - http://notes.jetienne.com/2011/05/18/cancelRequestAnimFrame-for-paul-irish-requestAnimFrame.html</span>
+<span class="cm"> */</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="p">)</span> <span class="p">{</span>
+
+	<span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="o">=</span> <span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+		<span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">mozRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">oRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">msRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="kd">function</span><span class="p">(</span> <span class="cm">/* function FrameRequestCallback */</span> <span class="nx">callback</span><span class="p">,</span> <span class="cm">/* DOMElement Element */</span> <span class="nx">element</span> <span class="p">)</span> <span class="p">{</span>
+
+			<span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">callback</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">60</span> <span class="p">);</span>
+
+		<span class="p">};</span>
+
+	<span class="p">}</span> <span class="p">)();</span>
+
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">cancelRequestAnimationFrame</span> <span class="p">)</span> <span class="p">{</span>
+
+	<span class="nb">window</span><span class="p">.</span><span class="nx">cancelRequestAnimationFrame</span> <span class="o">=</span> <span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+		<span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitCancelRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">mozCancelRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">oCancelRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">msCancelRequestAnimationFrame</span> <span class="o">||</span>
+		<span class="nx">clearTimeout</span>
+
+	<span class="p">}</span> <span class="p">)();</span>
+
+<span class="p">}</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

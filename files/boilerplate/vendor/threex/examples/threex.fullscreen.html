@@ -1,0 +1,36 @@
+<html>
+<body>
+	<h1>threex.fullscreen.js demo</h1>
+	<a href="https://github.com/jeromeetienne/threex">threex.js</a> - helpers for three.js
+	<hr/>
+	<!-- DOM declaration -->
+	<span class="available">fullscreen available ? <span class="value"></span></span>
+	<br/>
+	<span class="activated">fullscreen activated ? <span class="value"></span></span>
+	<br/>
+	<button class="button request">request fullscreen</button>
+	<br/>
+	<button class="button cancel">cancel fullscreen</button>
+
+	<script src="../threex.fullscreen.js"></script>
+
+	<script>
+		document.querySelector(".available .value").innerHTML	= THREEx.FullScreen.available() ? "yes" : "no";
+		document.querySelector(".activated .value").innerHTML	= THREEx.FullScreen.activated() ? "yes" : "no";
+
+		THREEx.FullScreen.bindKey({
+			dblclick	: true
+		});
+		
+		document.querySelector(".button.request").addEventListener('click', function(){
+			THREEx.FullScreen.request();
+			document.querySelector(".activated .value").innerHTML	= THREEx.FullScreen.activated() ? "yes" : "no";
+		}, false);
+
+		document.querySelector(".button.cancel").addEventListener('click', function(){
+			THREEx.FullScreen.cancel();
+			document.querySelector(".activated .value").innerHTML	= THREEx.FullScreen.activated() ? "yes" : "no";
+		}, false);
+	</script>
+</body>
+</html>

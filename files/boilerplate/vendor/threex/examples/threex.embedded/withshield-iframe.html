@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+			body .noFocusMessage		{ display	: block;	}
+			body .withFocusMessage 		{ display	: none;		}
+			body:focus .noFocusMessage 	{ display	: none;		}
+			body:focus .withFocusMessage 	{ display	: block;	}
+			body 				{ background-color: #DC143C;	}
+			body:focus 			{ background-color: lightgreen;	}
+			body .title			{ font-size	: 120%;		}
+		</style>
+		<script src="../../threex.embedded.js"></script>
+	</head>
+	<body tabindex=1>
+		<span class='title'>WITH shielding events<br></span>
+		
+		<span class="noFocusMessage"><b>Click</b> to get focus</span> 
+		<span class="withFocusMessage">
+			Got Focus!<br>
+			now <b>use arrow UP/DOWN</b> and the host page won't scroll as events are shielded.
+		</span> 
+		<script>
+			if( THREEx.Embedded.inIFrame() ){
+				THREEx.Embedded.shieldArrowKeys();
+			}
+		</script>
+	</body>
+</html>

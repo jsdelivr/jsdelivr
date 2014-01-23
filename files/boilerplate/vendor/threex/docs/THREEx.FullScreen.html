@@ -1,0 +1,68 @@
+<!DOCTYPE html>  <html> <head>   <title>THREEx.FullScreen.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="THREEx.CelShader.html">                 THREEx.CelShader.js               </a>                                           <a class="source" href="THREEx.DeviceOrientationState.html">                 THREEx.DeviceOrientationState.js               </a>                                           <a class="source" href="THREEx.FullScreen.html">                 THREEx.FullScreen.js               </a>                                           <a class="source" href="THREEx.GeometryUtils.html">                 THREEx.GeometryUtils.js               </a>                                           <a class="source" href="THREEx.GeometryWobble.html">                 THREEx.GeometryWobble.js               </a>                                           <a class="source" href="THREEx.KeyboardState.html">                 THREEx.KeyboardState.js               </a>                                           <a class="source" href="THREEx.LogoTurtle.html">                 THREEx.LogoTurtle.js               </a>                                           <a class="source" href="THREEx.PlasmaShader.html">                 THREEx.PlasmaShader.js               </a>                                           <a class="source" href="THREEx.SkyMap.html">                 THREEx.SkyMap.js               </a>                                           <a class="source" href="THREEx.WindowResize.html">                 THREEx.WindowResize.js               </a>                                           <a class="source" href="THREEx.glCapability.html">                 THREEx.glCapability.js               </a>                                           <a class="source" href="THREEx.requestAnimationFrame.html">                 THREEx.requestAnimationFrame.js               </a>                                           <a class="source" href="THREEx.screenshot.html">                 THREEx.screenshot.js               </a>                                           <a class="source" href="threex.embedded.html">                 threex.embedded.js               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               THREEx.FullScreen.js             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>This THREEx helper makes it easy to handle the fullscreen API
+* it hides the prefix for each browser
+* it hides the little discrepencies of the various vendor API
+* at the time of this writing (nov 2011) it is available in 
+  <a href="http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html">firefox nightly</a>,
+  <a href="http://peter.sh/2011/01/javascript-full-screen-api-navigation-timing-and-repeating-css-gradients/">webkit nightly</a> and
+  <a href="http://updates.html5rocks.com/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API">chrome stable</a>.</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h1>Code</h1>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>                            </td>             <td class="code">               <div class="highlight"><pre><span class="cm">/** @namespace */</span>
+<span class="kd">var</span> <span class="nx">THREEx</span>		<span class="o">=</span> <span class="nx">THREEx</span> 		<span class="o">||</span> <span class="p">{};</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span>	<span class="o">=</span> <span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span>	<span class="o">||</span> <span class="p">{};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * test if it is possible to have fullscreen</span>
+<span class="cm"> * </span>
+<span class="cm"> * @returns {Boolean} true if fullscreen API is available, false otherwise</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">available</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasWebkitFullScreen</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasMozFullScreen</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * test if fullscreen is currently activated</span>
+<span class="cm"> * </span>
+<span class="cm"> * @returns {Boolean} true if fullscreen is currently activated, false otherwise</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">activated</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasWebkitFullScreen</span> <span class="p">){</span>
+		<span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">webkitIsFullScreen</span><span class="p">;</span>
+	<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasMozFullScreen</span> <span class="p">){</span>
+		<span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">mozFullScreen</span><span class="p">;</span>
+	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Request fullscreen on a given element</span>
+<span class="cm"> * @param {DomElement} element to make fullscreen. optional. default to document.body</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">request</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">element</span>	<span class="o">=</span> <span class="nx">element</span>	<span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasWebkitFullScreen</span> <span class="p">){</span>
+		<span class="nx">element</span><span class="p">.</span><span class="nx">webkitRequestFullScreen</span><span class="p">();</span>
+	<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasMozFullScreen</span> <span class="p">){</span>
+		<span class="nx">element</span><span class="p">.</span><span class="nx">mozRequestFullScreen</span><span class="p">();</span>
+	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Cancel fullscreen</span>
+<span class="cm">*/</span>
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">cancel</span>	<span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasWebkitFullScreen</span> <span class="p">){</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nx">webkitCancelFullScreen</span><span class="p">();</span>
+	<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">_hasMozFullScreen</span> <span class="p">){</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nx">mozCancelFullScreen</span><span class="p">();</span>
+	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>internal functions to know which fullscreen API implementation is available</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">_hasWebkitFullScreen</span>	<span class="o">=</span> <span class="s1">&#39;webkitCancelFullScreen&#39;</span> <span class="k">in</span> <span class="nb">document</span>	<span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>	
+<span class="nx">THREEx</span><span class="p">.</span><span class="nx">FullScreen</span><span class="p">.</span><span class="nx">_hasMozFullScreen</span>	<span class="o">=</span> <span class="s1">&#39;mozCancelFullScreen&#39;</span> <span class="k">in</span> <span class="nb">document</span>	<span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>	
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

@@ -1,0 +1,14 @@
+<html>
+<body>
+	<script src="../THREEx.KeyboardState.js"></script>
+	<script>
+	var keyboard	= new THREEx.KeyboardState();
+
+	setInterval(function(){
+		var key		= "alt+left";
+		var pressed	= keyboard.pressed(key);
+		console.log("key", key, "pressed", pressed);
+	}, 100);
+	</script>
+</body>
+</html>
