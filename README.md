@@ -29,7 +29,12 @@ How to submit or update projects:
  4. Wait for the approval.
  5. Thats it
 
-   
+
+Auto-Updating
+-------------
+
+Coming soon
+
     
 File Structure
 --------------
@@ -81,16 +86,31 @@ To automatically load the main file of a project use:
 Depending on project it will automatically load the main file as configured in `info.ini` with correct MIME HTTP headers. If no `mainfile` parameter was specified the url will result in 404 error.
 
 
+Load multiple files with single HTTP request
+--------------------------------------------
+
+Loads mainfile latest version. Only for Javascript!
+
+`//cdn.jsdelivr.net/g/abaaso,ace,alloyui`
+
+Loads mainfile latest version for all files and for abaaso loads version 3.8.15
+
+`//cdn.jsdelivr.net/g/abaaso@3.8.15,ace,alloyui`
+
+Loads mainfile latest version for all files and for abaaso loads version branch 3.8. In this case = 3.8.16
+
+`//cdn.jsdelivr.net/g/abaaso@3.8,ace,alloyui`
+
+
+First 3-4 requests will be slow because they are not cached. After the first 4 requests these dynamic files get cached and become static files same as all others.
+
 
 API 
 ---
 
 
-(Legacy)
-
-JSON of hosted files and projects - `http://api.jsdelivr.com/packages.php`
-
-XML of all hosted files including md5 hashes - `http://www.jsdelivr.com/hash.xml`
+(Beta)
+https://github.com/jsdelivr/api
 
 
 
