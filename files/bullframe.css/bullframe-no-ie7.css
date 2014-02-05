@@ -1,0 +1,1663 @@
+/*! $
+ * BULLFRAME.CSS v1.6.3 no-ie7
+ *
+ * Browser support: IE8+
+ * GitHub: https://github.com/marco135/bullframe.css
+ * MIT License
+ *
+ * Carefully built by @m135_
+ */
+
+*, 
+*:before, 
+*:after { 
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary { 
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+html,
+button, 
+input, 
+select, 
+textarea {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+html,
+dt,
+dd,
+address,
+pre {
+  line-height: 1.5;
+}
+
+html,
+button,
+.btn,
+.btn:hover,
+.btn:focus,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  word-wrap: break-word;
+
+  background-color: #fff;
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  background-color: transparent;
+}
+
+a {
+  color: #428bca; /* bootstrap blue */
+  text-decoration: none;
+
+  /* IE10: Remove grey background on active links */
+  background-color: transparent; 
+}
+
+a:hover, 
+a:focus { 
+  text-decoration: underline;
+  outline: 0;
+  color: #2a6496;
+}
+
+a:focus { 
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color; /* webkit */
+  outline-offset: -2px;
+} 
+
+.tera,
+.giga,
+.gamma,
+h1,
+.h1, 
+h2, 
+.h2,
+h3, 
+.h3,
+h4,
+.h4,
+h5,
+.h5, 
+h6,
+.h6 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5, 
+h6 {
+  font-family: inherit; 
+  color: inherit;
+}
+
+.tera,
+.giga,
+.mega {
+  display: block;
+  line-height: 1;
+}
+
+.tera {
+  font-size: 4em;
+  margin: 0.35em 0;
+}
+
+.giga {
+  font-size: 3.5em;
+  margin: 0.5em 0;
+}
+
+.mega {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+h1,
+.h1 {
+  font-size: 2.5em;
+  margin: 0.75em 0;
+}
+
+h2,
+.h2 {
+  font-size: 1.4em;
+  margin: 0.75em 0;
+}
+
+h3,
+.h3 {
+  font-size: 1.3125em;
+  margin: 1em 0;
+}
+
+h4,
+.h4 {
+  font-size: 1.125em;
+  margin: 1.5em 0;
+}
+
+h5,
+.h5 {
+  font-size: 1.125em;
+  margin: 1.5em 0;
+}
+
+h6,
+.h6 {
+  font-size: 0.875em;
+  margin: 1.5em 0;
+}
+
+abbr[title] { 
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+blockquote { 
+  margin: 0 0 1.5em 0;
+  padding-left: 1.5em;
+  border-left: 5px solid #ccc;
+}
+
+blockquote p { 
+  margin-bottom: 0;
+}
+
+blockquote small { 
+  color: #999;
+  display: block;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+  *content: '';
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before,
+q:after {
+  *content: '';
+  *content: none;
+}
+
+mark { 
+  background: #ff0; /* yellow */
+  color: #000;
+  font-weight: bold;
+}
+
+ins { 
+  background: #ff9; /* light yellow */
+  color: #000; 
+  text-decoration: none;
+}
+
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+p + p {
+  margin-top: 0;
+}
+
+p.lead {
+  font-size: 125%;
+}
+
+pre {
+  overflow: auto;
+  word-break: break-all; /* webkit */
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: -moz-pre-wrap; /* fennec */
+  white-space: pre-wrap;
+  white-space: pre \9; /* IE7+ */
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+pre,  
+code, 
+kbd, 
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1em;
+}
+
+strong, 
+b { 
+  font-weight: bold;
+}
+ 
+dfn { 
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+small {
+  font-size: 80%;
+}
+
+address {
+  font-style: normal;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #b3d4fc; /* azure */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection { 
+  background: #b3d4fc; 
+  color: #000; 
+  text-shadow: none;
+}
+
+img::-moz-selection { 
+  background-color: transparent; 
+}
+
+img::selection { 
+  background-color: transparent;      
+}
+
+
+
+/* $ Lists
+============================================================================ */
+
+menu,
+ol,
+ul,
+dl {
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+menu ul,
+menu ol,
+ul ul,
+ul ol,
+ol ol,
+ol ul,
+dd {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-left: 1.5em;
+}
+
+nav ol,
+nav ul {
+  list-style: none;
+  list-style-image: none;
+  margin-left: 0;
+} 
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* navigation */
+.list-inline {
+  margin-left: 0;
+  list-style: none;
+  list-style-image: none; /* IE8 */
+}
+
+.list-inline > li {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+.list-inline > li:last-child {
+  margin-right: 0;
+}
+
+/* hard reset */
+ul.list-unstyled,
+ol.list-unstyled,
+ul.list-unstyled ul,
+ol.list-unstyled ol,
+ul.list-unstyled ol,
+ol.list-unstyled ul { 
+  margin: 0;
+  list-style: none;
+  list-style-image: none; /* IE7-8 */
+} 
+
+
+
+
+
+/* $ Embedded contents
+============================================================================ */
+
+img,
+canvas,
+audio,
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+audio,
+video,
+canvas,
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+  width: auto;
+  height: auto;
+}
+
+video {
+  height: auto;
+}
+
+audio:not([controls]) { 
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) { 
+  overflow: hidden;
+}
+
+
+
+
+/* $ Figures
+============================================================================ */
+
+figure {
+  margin: 0;
+}
+
+
+
+
+
+/* $ Forms (enter the madness)
+============================================================================ */
+
+/* normalize --------------------------------------------------------------- */
+
+label,
+html input, 
+select, 
+textarea,
+button,
+.btn,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+}
+
+input[type="file"],
+output {
+  display: block;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+html input, 
+select, 
+textarea {
+  margin: 0;
+  background-image: none; /* reset Fennec */
+}
+
+input, 
+select, 
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+label,
+button,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+form {
+  margin: 0;
+}
+
+/* 1. Remove intrinsic min-width of fieldset
+ * https://github.com/necolas/normalize.css/pull/269 */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* 1 */
+}
+
+legend { 
+  display: block;
+  display: table \9; /* enable line-wrapping in IE8+ */
+  width: 100%;
+  white-space: normal; /* enable line-wrapping in FF4/5 */
+  border: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+label {
+  font-weight: 700;
+}
+
+label input {
+  font-weight: normal;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+
+output {
+  vertical-align: middle;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: 700;
+}
+
+button,
+
+/* avoid destroying native android audio/video players */
+html input[type="button"],
+
+input[type="reset"],
+input[type="submit"],
+input[type="email"], 
+input[type="text"],
+input[type="tel"], 
+input[type^="date"],
+input[type="month"],
+input[type="week"],
+input[type="url"],
+input[type="image"],
+input[type="password"], 
+input[type="search"],
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button, 
+select,   
+textarea { 
+  -webkit-appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+input[type="radio"] {
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+}
+
+input[type="color"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type^="date"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #b2b2b2;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+  padding: 0;
+}
+
+select[size], 
+select[multiple] { 
+  height: auto;
+}
+
+select[multiple] {
+  background-image: none; /* Fennec */
+}
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  height: auto;
+  min-height: 3em;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input[type="color"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus, 
+input[type="tel"]:focus, 
+input[type="search"]:focus,
+input[type="text"]:focus, 
+input[type^="date"]:focus,
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+#input-focused {
+  border-color: #2a6496;
+  outline: 0 none;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 1px solid #2a6496;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+/* add responsiveness ------------------------------------------------------ */
+
+html input,
+select,
+textarea {
+  width: 100%;
+}
+
+button,
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+html input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="search"],
+input[type="text"], 
+input[type^="date"],
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="time"], 
+input[type="url"],
+select,
+textarea {
+  padding: 0.5em;
+}
+  
+
+/* customize radios and checkboxes ---------------------------------------- */
+
+label input[type="radio"], 
+label input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+label + input[type="radio"], 
+label + input[type="checkbox"] {
+  margin-left: 0.5em;
+}
+
+
+/* customize buttons ------------------------------------------------------- */
+button,
+.btn,
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+  padding: 0.5em 1em;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  background-clip: padding-box;
+  vertical-align: baseline;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-drag: none;
+  -webkit-user-select: none; 
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; 
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  text-shadow: 1px 1px rgba(255,255,255,0.5);
+  border: 1px solid #b2b2b2;
+  background-image: none; /* normalize fennec */
+  background: #f4f4f4;
+}
+
+/* Firefox: Get rid of the inner focus border */
+button::-moz-focus-inner, 
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+.btn:focus,
+input[type="button"]:focus, 
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  outline: 0 none;
+  text-decoration: none;
+  border-color: #999;
+  background: #e5e5e5;
+}
+
+button.btn-primary,
+.btn-primary,
+input.btn-primary[type="button"], 
+input.btn-primary[type="reset"],
+input.btn-primary[type="submit"] {
+  color: #fff;
+  text-shadow: none;
+  border-color: #357ebd;
+  background-color: #428bca;
+}
+
+button.btn-success,
+.btn-success,
+input.btn-success[type="button"], 
+input.btn-success[type="reset"],
+input.btn-success[type="submit"] {
+  color: #fff;
+  text-shadow: none;
+  border-color: #4cae4c;
+  background-color: #5cb85c;
+}
+
+button.btn-primary:hover,
+.btn-primary:hover,
+input.btn-primary[type="button"]:hover, 
+input.btn-primary[type="reset"]:hover,
+input.btn-primary[type="submit"]:hover,
+button.btn-primary:focus,
+.btn-primary:focus,
+input.btn-primary[type="button"]:focus, 
+input.btn-primary[type="reset"]:focus,
+input.btn-primary[type="submit"]:focus {
+  color: #fff;
+  border-color: #285e8e;
+  background-color: #3276b1;
+}
+
+button.btn-success:hover,
+.btn-success:hover,
+input.btn-success[type="button"]:hover, 
+input.btn-success[type="reset"]:hover,
+input.btn-success[type="submit"]:hover,
+button.btn-success:focus,
+.btn-success:focus,
+input.btn-success[type="button"]:focus, 
+input.btn-success[type="reset"]:focus,
+input.btn-success[type="submit"]:focus {
+  color: #fff;
+  border-color: #398439;
+  background-color: #47a447;
+}
+
+button:active,
+.btn:active,
+input[type="button"]:active, 
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-xsmall {
+  font-size: 70%;
+}
+
+.btn-small {
+  font-size: 85%;
+}
+
+.btn-large {
+  font-size: 125%;
+}
+
+.btn-xlarge {
+  font-size: 150%;
+} 
+
+
+
+/* hack ugly selects ------------------------------------------------------- */
+
+/* use a custom dropdown arrow in Webkit browsers (Safari, Android, Chrome, ecc...) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  select,
+  select[size="0"],
+  select[size="1"] { 
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAARCAYAAABASYU2AAAAbElEQVR42u2SQQrAMAgE9y1u/P8TWyyFXgpe1uwlA8GLEdkRa60rM2Wv5kFNDSYpWTAinooJlEliEpJzmv3av3/YwZBmf5rVj9289+XW3CPQ7NLea3Zp7zT7EWg2aG9SdGvvFvQj1jyfJg7/3HajEiSxv0LJAAAAAElFTkSuQmCC);
+    /* @2x image
+    -webkit-background-size: 41px 17px;
+    background-size: 41px 17px; */
+    -webkit-background-size: 1.28125em 0.53125em;
+            background-size: 1.28125em 0.53125em;
+
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    padding-right: 2em;
+  } 
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    -webkit-background-size: auto auto;
+            background-size: auto auto;
+    background-position: left top;
+
+    padding-right: 0.5em;
+
+  }
+
+} 
+
+
+/* invalid, placeholder, disabled adn readonly ----------------------------- */
+
+input:focus:invalid, 
+select:focus:invalid,
+textarea:focus:invalid { 
+  color: #b94a48; /* dark red */
+  border-color: #b94a48; /* red */
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #c72a28; /* red */
+  outline: 0 none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888; /* gray */
+}
+
+/* FF placeholder bug
+ * Issue: If one change the text color of input fields, FF will change 
+ * the default color of placeholders too!
+ * Fix: Use '!important' https://github.com/necolas/normalize.css/issues/150 
+ */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #888;
+}
+
+input:placeholder,
+textarea:placeholder {
+  color: #888;
+}
+
+input.placeholder,
+textarea.placeholder {
+  color: #888;
+}
+
+/* disable groups */
+fieldset[disabled] .btn,
+fieldset[disabled] button,
+fieldset[disabled] input,
+fieldset[disabled] select,
+fieldset[disabled] textarea,
+
+/* disable singles */
+.btn[disabled],
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
+
+/* disable active singles */
+.btn:active[disabled],
+button:active[disabled],
+input:active[disabled],
+select:active[disabled],
+textarea:active[disabled] {
+  cursor: default !important;
+  cursor: not-allowed !important;
+  background: #f9f9f9 none !important; /* very light grey */
+  border-color: #dbdbdb !important;
+  color: #b2b2b2 !important;
+  text-shadow: none !important;
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+fieldset[disabled] .btn-primary,
+[disabled].btn-primary,
+[disabled].btn-primary:active {
+  background: #bed4f7 none !important; /* very light blue */
+  border-color: #bed4f7 !important;
+  color: #fff !important;
+}
+
+fieldset[disabled] .btn-success,
+[disabled].btn-success,
+[disabled].btn-success:active {
+  background: #a2d6a2 none !important; /* very light green */
+  border-color: #a2d6a2 !important;
+  color: #fff !important;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  background-color: transparent;
+}
+
+
+
+
+
+/* $ Tables
+============================================================================ */
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+} 
+
+thead th {
+  vertical-align: bottom;
+}
+
+th,
+td { 
+  vertical-align: top;
+}
+
+.table th,
+.table td {
+  padding: 0.5em;
+  border-bottom: 1px solid #999;
+}
+
+th,
+caption { 
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+
+
+
+
+/* $ Misc
+============================================================================ */
+
+[hidden],
+template { 
+  display: none;
+}
+
+
+
+
+
+/* $ Basic 12 columns fluid grid system
+ * 
+ * Heads up!!
+ * You can't do column ordering (for SEO) 
+ * and mobile/tablet/desktop mixing 
+============================================================================ */
+
+/* Sub-Pixel Problems in CSS
+ * http://ejohn.org/blog/sub-pixel-problems-in-css/
+ *
+ * 1. FF4+: ok
+ *
+ * 2. WebKit is ok since 3 May, 2013 
+ * http://css-tricks.com/percentage-bugs-in-webkit/
+ * http://trac.webkit.org/changeset/116009
+ *
+ * 3. IE8+: ok
+ *
+ * 4. Opera and Safari round the numbers down. 
+ * No fix :(
+ * A discussion about Opera on GitHub https://github.com/jokjus/centage/issues/1
+ * A discussion about Bootstrap 2 fluid grid system on StackOverflow
+ * http://stackoverflow.com/questions/10683539/bootstrap-fluid-grid-system-issue-opera-11-64
+ *
+ *
+ */
+
+.bf-container {
+  /* avoid IE8 issue with 'box-sizing: border-box' in combination 
+   * with max/min-width and max/min-height 
+   * https://github.com/twbs/bootstrap/issues/10014
+   */
+  -webkit-box-sizing: content-box; 
+     -moz-box-sizing: content-box; 
+          box-sizing: content-box; 
+          
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bf-container:before,
+.bf-container:after {
+  display: table;
+  content: " ";
+}
+
+.bf-container:after {
+  clear: both;
+}
+
+.bf-row {
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.bf-row:before,
+.bf-row:after {
+  content: " ";
+  display: table;
+}
+
+.bf-row:after {
+  clear: both;
+} 
+
+[class*="bf-col-"] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;  
+}
+
+.bf-col-12-12 {
+  width: 100%;
+}
+
+.bf-col-11-12 {
+  width: 91.66666666666666%;
+}
+
+.bf-col-10-12 {
+  width: 83.33333333333334%;
+}
+
+.bf-col-9-12 {
+  width: 75%;
+}
+
+.bf-col-8-12 {
+  width: 66.66666666666666%;
+}
+
+.bf-col-7-12 {
+  width: 58.333333333333336%;
+}
+
+.bf-col-6-12 {
+  width: 50%;
+}
+
+.bf-col-5-12 {
+  width: 41.66666666666667%;
+}
+
+.bf-col-4-12 {
+  width: 33.33333333333333%;
+}
+
+.bf-col-3-12 {
+  width: 25%;
+}
+
+.bf-col-2-12 {
+  width: 16.666666666666664%;
+}
+
+.bf-col-1-12 {
+  width: 8.3333%;
+}
+
+.bf-col-offset-12-12 {
+  margin-left: 100%;
+}
+
+.bf-col-offset-11-12 {
+  margin-left: 91.66666666666666%;
+}
+
+.bf-col-offset-10-12 {
+  margin-left: 83.33333333333334%;
+}
+
+.bf-col-offset-9-12 {
+  margin-left: 75%;
+}
+
+.bf-col-offset-8-12 {
+  margin-left: 66.66666666666666%;
+}
+
+.bf-col-offset-7-12 {
+  margin-left: 58.333333333333336%;
+}
+
+.bf-col-offset-6-12 {
+  margin-left: 50%;
+}
+
+.bf-col-offset-5-12 {
+  margin-left: 41.66666666666667%;
+}
+
+.bf-col-offset-4-12 {
+  margin-left: 33.33333333333333%;
+}
+
+.bf-col-offset-3-12 {
+  margin-left: 25%;
+}
+
+.bf-col-offset-2-12 {
+  margin-left: 16.666666666666664%;
+}
+
+.bf-col-offset-1-12 {
+  margin-left: 8.3333%;
+}
+
+.bf-col-offset-0-12 {
+  margin-left: 0;
+}
+
+/* responsive grid */
+@media (max-width: 640px) {
+
+  .responsive-grid .bf-row {
+    margin-left: 0;
+    margin-right: 0;
+  } 
+
+  .responsive-grid [class*="bf-col-"] {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  } 
+
+}
+
+/* fix missing table cell borders when using 'col-' classes 
+ * for column sizing 
+ * https://github.com/twbs/bootstrap/issues/11623 
+ */
+table col[class*="bf-col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
+
+
+
+
+/* $ Just in case, add custom styles here
+============================================================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $ Helper classes
+============================================================================ */
+
+
+/* clearfix --------------------------------------------------------------- */ 
+/* micro-clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+/* image positioning ------------------------------------------------------- */
+.img-left {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.img-right {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+
+/* layout display ---------------------------------------------------------- */
+.block {
+  display: block !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
+/* Using Grids with Your Font-Family
+ * http://purecss.io/grids/#using-grids-with-custom-fonts
+ */
+.inline-block-container {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+  /* The following font stack makes Pure Grids work on all known environments.
+  * FreeSans: Ships with many Linux distros, including Ubuntu
+  * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+  Arial to get picked up by the browser, even though neither is available
+  in Chrome OS.
+  * Droid Sans: Ships with all versions of Android.
+  * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+  */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+ * The ".opera-only" selector is used to prevent actual prefocus styling
+ * and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.inline-block-container {
+  word-spacing: -0.43em;
+}
+
+.inline-block {
+  display: inline-block !important;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* how to use:
+ *
+   <nav id="nav" class="nav" role="navigation">
+     <ul class="inline-block-container list-unstyled">
+       <li class="inline"><a href="#" class="inline-block">Home</a></li>
+       <li class="inline"><a href="#" class="inline-block">Works</a></li>
+       <li class="inline"><a href="#" class="inline-block">About</a></li>
+       <li class="inline"><a href="#" class="inline-block">Contact</a></li>
+     </ul>
+   </nav>
+ *
+ */
+
+.hide, /* old naming */
+.hidden {
+  display: none !important; 
+  visibility: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.show {
+  display: block !important;
+  visibility: visible;
+}
+
+
+/* layout positioning ------------------------------------------------------ */
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.affix {
+  position: fixed;
+}
+
+
+/* text utilities ---------------------------------------------------------- */
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;                
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.text-break {
+  word-break: break-all; /* webkit */
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: -moz-pre-wrap; /* fennec */
+  white-space: pre-wrap;
+  white-space: pre \9; /* IE7+ */
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+.no-select {
+  -webkit-user-drag: none;
+  -webkit-user-select: none; 
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;          
+}
+
+.hide-text, /* old naming */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-hide-indent {
+  text-indent: -9999px;
+}
+
+/* assistive text for screen reader only (e.g. form labels) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+/* responsive tables --------------------------------------------------------
+ * Note: issues on Opera 10-11, Opera Mobile Presto and Opera Mini 
+ */
+.responsive-table-container { 
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.responsive-table-container table {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+/* force and customize webkit scrollbars appearance */
+.responsive-table-container.scrollbar {
+  -webkit-overflow-scrolling: auto; 
+}
+
+.responsive-table-container.scrollbar::-webkit-scrollbar {
+  width: 0.625em;
+  height: 0.625em;
+}
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-track {
+  padding: 0.25em;
+  background-color: transparent; 
+}
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #999; 
+  -webkit-border-radius: 0.625em;
+          border-radius: 0.625em;
+}
+
+.responsive-table-container.scrollbar::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #ccc; 
+}
+
+/* 
+ * how to wraps table via jQuery:
+ * 
+   <script>
+     jQuery(function() {
+       jQuery('.article-content table').wrap('<div class="responsive-table-container"></div>');
+     });
+   </script>
+ * 
+*/
+
+
+/* responsive videos ------------------------------------------------------- */
+.responsive-video-container {
+  position: relative;
+  padding-bottom: 67.5%; /* 4:3 standard */
+  padding-top: 1.5625em;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video-container iframe,  
+.responsive-video-container object,  
+.responsive-video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-video-container.widescreen {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.responsive-video-container.vimeo {
+  padding-top: 0; /* no extra-padding for controls */
+}
+
+/* 
+ * how to wraps videos via jQuery:
+ * 
+   <script>
+     jQuery(function() {
+        jQuery('.article-content iframe, .content object, .article-content embed').wrap('<div class="responsive-video-container"></div>');
+     });
+   </script>
+ * 
+*/
+
+
+/* miscellaneous ----------------------------------------------------------- */
+.print-only { 
+  display: none !important; 
+  visibility: hidden;
+}
+
+
+
+
+
+/* $ Print
+============================================================================ */
+
+@media print {
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; 
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .print-only { 
+    display: block !important; 
+    visibility: visible;
+  }
+
+  .hide-on-print { 
+    display: none !important; 
+  }
+
+}
