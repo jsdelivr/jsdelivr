@@ -1,0 +1,6 @@
+.CodeMirror, #safecss {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	line-height: 16px;
+	min-height: 300px;
+}

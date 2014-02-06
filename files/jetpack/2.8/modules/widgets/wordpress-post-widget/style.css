@@ -1,0 +1,20 @@
+.jetpack-display-remote-posts {
+	margin: 5px 0 20px 0;
+}
+
+.jetpack-display-remote-posts h4 {
+	font-size: 90%;
+	margin: 5px 0;
+	padding: 0;
+}
+
+.jetpack-display-remote-posts h4 a {
+	text-decoration: none;
+}
+
+.jetpack-display-remote-posts p {
+	margin: 0 !important;
+	padding: 0;
+	line-height: 1.4em !important;
+	font-size: 90%;
+}

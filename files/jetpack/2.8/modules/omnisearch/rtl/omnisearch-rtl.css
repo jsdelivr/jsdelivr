@@ -1,0 +1,141 @@
+/* This file was automatically generated on Dec 05 2013 18:26:45 */
+
+
+h2.page-title small {
+	font-size: 0.6em;
+	font-weight: 300;
+	font-style: italic;
+	opacity: 0.6;
+	margin-right: 0.5em;
+}
+
+form.omnisearch-form {
+	position: relative;
+}
+
+input.omnisearch {
+	border-radius: 0.25em;
+	font-size: 2.2em;
+	line-height: 1.35;
+	padding: 0.25em 0.5em 0.25em 2em;
+	width: 100%;
+}
+
+.pre-mp6 input.omnisearch {
+	line-height: 1.25;
+}
+
+input.omnisearch::-webkit-search-cancel-button {
+	display: none;
+}
+
+button.omnisearch-submit {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	display: block;
+	font-size: 2.45em;
+	padding: 0.3em 0.5em 0.1em;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.pre-mp6 button.omnisearch-submit {
+	padding: 0.25em 0.5em 0;
+}
+
+button.omnisearch-submit::before {
+	font-family: 'Genericons', Noticons;
+	content: '\f400';
+}
+
+button.omnisearch-submit span {
+	display: none;
+}
+
+#results-title,
+.jump-to {
+	font-size: 1.2em;
+	line-height: 1.5;
+	float: right;
+	margin-top: 0;
+	padding-top: 2em;
+}
+
+#results-title,
+.jump-to strong {
+	font-weight: 600;
+}
+
+.jump-to {
+	float: left;
+	text-align: left;
+}
+
+.jump-to strong,
+.jump-to a {
+	color: inherit;
+	margin-right: 0.5em;
+	text-decoration: none;
+}
+
+.jump-to a:hover {
+	text-decoration: underline;
+}
+
+.back-to-top {
+	display: block;
+	float: left;
+	margin-top: 2.5em;
+}
+
+.omnisearch-results {
+	
+}
+
+.omnisearch-results > li {
+	padding-top: 2.5em;
+}
+
+.omnisearch-results > li:first-child {
+	padding-top: 0;
+}
+
+.omnisearch-results .add-new-h2 {
+	display: inline;
+}
+
+.wp-list-table .column-snippet {
+	width: 65%;
+}
+
+.wp-list-table .column-date {
+	width: 15%;
+}
+
+.wp-list-table.comments .column-author {
+	width: 20%;
+}
+
+.wp-list-table.media th {
+	white-space: nowrap;
+}
+
+.wp-list-table.media .column-parent {
+	width: 15%;
+}
+
+.wp-list-table.media .column-comments span.vers {
+	display: block;
+}
+
+.tablenav {
+	height: 0;
+}
+
+.omnisearch-results .tablenav.top {
+	margin: 5px 0;
+}
+

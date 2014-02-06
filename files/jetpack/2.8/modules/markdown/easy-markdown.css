@@ -1,0 +1,16 @@
+.entry-content > .footnotes,
+.entrytext > .footnotes,
+.hentry .footnotes > ol {
+	margin-top: 4em;
+}
+
+.entry-content > .footnotes > hr,
+.entrytext > .footnotes > hr,
+.hentry .footnotes > hr {
+	margin-right: 50%;
+}
+
+.entry-content > .footnotes > ol,
+.hentry .footnotes > ol {
+	font-size: 87.5%;
+}

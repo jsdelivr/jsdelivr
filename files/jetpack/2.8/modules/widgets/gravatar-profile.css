@@ -1,0 +1,45 @@
+.widget-grofile {
+}
+	.widget-grofile h4 {
+		margin: 1em 0 .5em;
+	}
+	.widget-grofile ul.grofile-urls {
+		margin-left: 0;
+		overflow: hidden;
+	}
+		.widget-grofile ul.grofile-accounts li {
+			list-style: none;
+			display: inline;
+		}
+
+		.widget-grofile ul.grofile-accounts li::before {
+			content: "" !important; /* Kubrick :( */
+		}
+		.widget-grofile .grofile-accounts-logo {
+			background-image: url('//0.gravatar.com/images/grav-share-sprite.png');
+			background-repeat: no-repeat;
+			/*background-position: -16px -16px;*/
+			width: 16px; /* So we don't show the topmost logo */
+			height: 16px; /* So we don't show the topmost logo */
+			float: left;
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+		.rtl .widget-grofile .grofile-accounts-logo {
+			margin-left: 8px;
+			margin-right: 0;
+		}
+
+		.grofile-thumbnail {
+			width: 100%;
+		}
+		@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+		.widget-grofile .grofile-accounts-logo {
+			background-image: url('//0.gravatar.com/images/grav-share-sprite-2x.png');
+			background-size: 16px 784px;
+			}
+}
