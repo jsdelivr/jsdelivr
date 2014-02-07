@@ -33,7 +33,7 @@ How to submit or update projects:
 Auto-Updating
 -------------
 
-Coming soon
+[Coming soon](https://github.com/jsdelivr/libgrabber)
 
     
 File Structure
