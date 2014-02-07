@@ -1,0 +1,24 @@
+.widefat .menu-label-row td {
+	border-bottom-width: 1px;
+}
+.widefat .menu-label-row td h3 {
+	padding-left: 30px;
+}
+.widefat .menu-order-value {
+	width: 2.5em;
+	text-align: center;
+}
+.widefat .menu-label-row, .widefat .menu-label-row td {
+	background-color: #d6d6d6;
+	color: #111;
+	border: 0 none;
+}
+.ui-sortable .type-nova_menu_item {
+	cursor: move;
+}
+.tablenav .button-reorder {
+	margin-top: 4px;
+}
+.tablenav .view-switch a, .tablenav div.tablenav-pages {
+	display: none;
+}

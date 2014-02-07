@@ -1,0 +1,32 @@
+/* This file was automatically generated on Jul 09 2013 05:18:56 */
+
+#jetpack-comic-drop-zone .dragging, #jetpack-comic-drop-zone .uploading {
+	margin-top: 200px;
+	display: none;
+}
+
+/* Display the appropriate loading message for each upload state. */
+body.dragging #jetpack-comic-drop-zone .dragging, body.uploading #jetpack-comic-drop-zone .uploading {
+	display: block;
+}
+
+body.uploading #jetpack-comic-drop-zone .uploading .spinner {
+	display: inline-block;
+	width: 60px;
+}
+
+/* Add the drop zone overlay. */
+body.dragging #jetpack-comic-drop-zone, body.uploading #jetpack-comic-drop-zone {
+	background: rgba( 0, 86, 132, 0.9 );
+	border: 1px dashed #fff;
+	color: #fff;
+	display: block;
+	font-size: 30px;
+	position: fixed;
+		top: 10px;
+		right: 10px;
+		left: 10px;
+		bottom: 10px;
+	text-align: center;
+	z-index: 99999;
+}

@@ -1,0 +1,12 @@
+/* This file was automatically generated on Feb 27 2013 21:33:34 */
+
+.contact-form .clear-form { clear: both; }
+.contact-form input[type='text'], .contact-form input[type='email'] { width: 300px; max-width: 98%; margin-bottom: 13px; }
+.contact-form select { margin-bottom: 13px; }
+.contact-form textarea { height: 200px; width: 80%; float: none; margin-bottom: 13px; }
+.contact-form input[type='radio'], .contact-form input[type='checkbox'] { float: none; margin-bottom: 13px; }
+.contact-form label { margin-bottom: 3px; float: none; font-weight: bold; display: block; }
+.contact-form label.checkbox, .contact-form label.radio { margin-bottom: 3px; float: none; font-weight: bold; display: inline-block; }
+.contact-form label span { color: #AAA; margin-right: 4px; font-weight: normal; }
+.form-errors .form-error-message { color: red; }
+.textwidget input[type='text'], .textwidget input[type='email'], .textwidget textarea { width: 250px; max-width: 98%; }

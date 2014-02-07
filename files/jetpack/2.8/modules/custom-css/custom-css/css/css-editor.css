@@ -1,0 +1,27 @@
+#revision-field-post_title, #revision-field-post_excerpt {
+	display: none;
+}
+
+#safecssform {
+	position: relative;
+}
+
+#poststuff {
+	padding-top: 0;
+}
+
+#safecss {
+	min-height: 250px;
+	width: 100%;
+}
+
+.misc-pub-section > span {
+	font-weight: bold;
+}
+
+.misc-pub-section > div {
+	margin-top: 3px;
+}
+#safecss-ace .ace_gutter {
+	z-index: 1;
+}
