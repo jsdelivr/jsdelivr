@@ -69,6 +69,14 @@ URL Structure
 
 `//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
 
+`//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
+
+`//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@versionAlias,{projectName}`
+
+
+Version aliasing
+-------------
+
 For latest version use:
 
 `//cdn.jsdelivr.net/{projectName}/latest/{file}`
