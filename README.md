@@ -33,7 +33,7 @@ How to submit or update projects:
 Auto-Updating
 -------------
 
-Coming soon
+[Coming soon](https://github.com/jsdelivr/libgrabber)
 
     
 File Structure
@@ -68,6 +68,14 @@ URL Structure
 `//cdn.jsdelivr.net/{projectName}/{version}/{file}`
 
 `//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
+
+`//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
+
+`//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@versionAlias,{projectName}`
+
+
+Version aliasing
+-------------
 
 For latest version use:
 
