@@ -116,10 +116,21 @@ First 3-4 requests will be slow because they are not cached. After the first 4 r
 API 
 ---
 
+jsDelivr has a fully featured API that also supports Google Hosted Libraries and cdnjs
 
-(Beta)
 https://github.com/jsdelivr/api
 
+
+Plugins
+---
+
+### npm jsdelivr
+
+npm module that can be used in your node.js applications
+
+* https://github.com/jsdelivr/npm-jsdelivr
+
+More coming soon
 
 
 Custom CDN Hosting
