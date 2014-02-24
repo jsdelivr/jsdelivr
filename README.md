@@ -19,6 +19,41 @@ It can take a few minutes for the changes to appear on the website.
 
 [How jsDelivr works - What makes it special][4]
 
+[Compare public CDNs][5]
+
+
+# Why jsDelivr?
+
+
+Performance and Uptime oriented
+--------------------
+
+Our public CDN was built with performance and reliability in mind. Everything is optimized and constantly improved to offer all users maximum speed and uptime. Performance is monitored at all times and we are always looking into new technologies and providers that could improve our CDN even further.
+
+Downtime, timeouts or slow responses are simply not acceptable. The idea is not to simply offer an other public CDN but to do everything possible to offer the best possible experience and a rock-solid product.
+
+
+
+Multi-CDN
+---------
+
+Unlike all competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. 
+
+On top of CDN providers jsDelivr also utilizes custom servers in locations where CDNs dont have points of presence to further optimize the speed of file downloads for users on those locations.
+
+If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers. 
+
+
+Smart Load Balancing
+--------------------
+
+jsDelivr uses real user performance data also known as RUM to make its routing decisions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
+
+All providers (CDNs+custom servers) are tested millions times per day by real users from all over the world. Based on this information jsDelivr knows what provider is the fastest for each user. Each user gets a unique response that is based on his location, ISP and uptime of all providers in real time. 
+
+This system also responds immediately to performance degradation and downtime of providers. If a CDN is under DDOS and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all users affected.
+
+
 
 How to submit or update projects:
 ---------------------------------
@@ -189,6 +224,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
   [3]: http://refresh-sf.com/yui/
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
+  [5]: http://www.cdnperf.com/
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jsdelivr/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
