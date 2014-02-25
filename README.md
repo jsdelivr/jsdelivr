@@ -59,7 +59,10 @@ A version directory should contain the following:
 
 1. Static files needed for the project to work. 
 2. If there is no minified version of the main js/css file please create your own. [Tool][3] (Minify only, no symbol obfuscation. )
-3. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
+3. If there are official or expected source maps for the minified js, please include those in the folder.  Currently, the following projects officially support the `.map` files:
+  * angularjs
+  * jQuery
+4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
 URL Structure
