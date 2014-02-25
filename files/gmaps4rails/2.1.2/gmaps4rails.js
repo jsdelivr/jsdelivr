@@ -978,4 +978,4 @@
     return factory;
   };
 
-})
+}).call(this);
