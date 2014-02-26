@@ -1,4 +1,4 @@
-/* Zero 1.2.5 - zero event ajax callbacks data deferred detect form fx fx_methods selector stack touch */
+/* Zero 1.3.0 - zero event ajax assets callbacks data deferred detect form fx fx_methods selector stack touch */
 
 
 
@@ -1494,6 +1494,28 @@ window.$ === undefined && (window.$ = Zero)
         $.fn[eventName] = function(callback){ return this.on(eventName, callback) }
     })
 })(Zero)
+
+
+
+
+;(function($){
+    var cache = [], timeout
+
+    $.fn.remove = function(){
+        return this.each(function(){
+            if(this.parentNode){
+                if(this.tagName === 'IMG'){
+                    cache.push(this)
+                    this.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+                    if (timeout) clearTimeout(timeout)
+                    timeout = setTimeout(function(){ cache = [] }, 60000)
+                }
+                this.parentNode.removeChild(this)
+            }
+        })
+    }
+})(Zero)
+
 
 
 
