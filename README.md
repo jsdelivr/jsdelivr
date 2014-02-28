@@ -3,8 +3,7 @@ Open Source CDN jsDelivr
 
 [www.jsdelivr.com][1]
 
-Similar to Google Hosted Libraries jsDelivr is an Open Source CDN that allows developers to host their own projects 
-and anyone to link to our hosted files in their websites. 
+Similar to Google Hosted Libraries jsDelivr is an Open Source Content Delivery Network (CDN) that allows developers to host their own projects and anyone to link to our hosted files in their websites. 
 
 We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
@@ -37,9 +36,9 @@ Downtime, timeouts or slow responses are simply not acceptable. The idea is not 
 Multi-CDN
 ---------
 
-Unlike all competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. 
+Unlike all other CDNs, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. 
 
-On top of CDN providers jsDelivr also utilizes custom servers in locations where CDNs dont have points of presence to further optimize the speed of file downloads for users on those locations.
+On top of CDN providers jsDelivr also utilizes custom servers in locations where CDNs do not have points of presence further optimizing the speed of file downloads for users in those locations.
 
 If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers. 
 
@@ -47,9 +46,9 @@ If a CDN goes down, websites that use jsDelivr won't have any issues because all
 Smart Load Balancing
 --------------------
 
-jsDelivr uses real user performance data also known as RUM to make its routing decisions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
+jsDelivr uses real user performance data also known as RUM to make its routing decisions. This data is gathered from hundreds of websites and is used in the load balancing algorithm to make accurate decisions based on real time performance metrics.
 
-All providers (CDNs+custom servers) are tested millions times per day by real users from all over the world. Based on this information jsDelivr knows what provider is the fastest for each user. Each user gets a unique response that is based on his location, ISP and uptime of all providers in real time. 
+All providers (CDNs+custom servers) are tested millions times per day by real users from all over the world. Based on this information jsDelivr knows which providers are fastest for individual users. Each user gets a unique response that is based on his location, ISP and uptime of all providers for each request. 
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under DDOS and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all users affected.
 
@@ -88,7 +87,7 @@ A project's directory should contain the following:
 1. `info.ini` containing all needed information. [Example][2]
 2. Directories named after the version of each project. 
 * The version directories can contain in their names numbers, letters and -,_ symbols.
-3. Do not create `latest` version directories. They are automatically created on our side.
+3. Do not create `latest` version directories. They are automatically created by jsDelivr.
 
 A version directory should contain the following:
 
@@ -174,7 +173,7 @@ More coming soon
 Custom CDN Hosting
 ---
 
-If your project does not qualify to be hosted in Github or for any reasons you need direct access to your files then its not a problem.
+If your project does not qualify to be hosted on Github or for any other reason you need direct access to your files, jsDelivr can still support your project.
 We can offer SFTP access to origin restricted to a single directory managed by the author.
 This way you will have full control over your files without any of the restrictions of Github and still be able to utilize the full power of jsDelivr.
 
