@@ -91,7 +91,7 @@ A project's directory should contain the following:
 A version directory should contain the following:
 
 1. Static files needed for the project to work. 
-2. If there is no minified version of the main JS/CSS file, please create your own using this ([minification tool][3]). (Make sure "Minify only, no symbol obfuscation" is checked)
+2. If there is no minified version of the main JS/CSS file, please create your own using this ([minification tool][3]).
 3. If there are official or expected source maps for the minified js, please include those in the folder.  Currently, the following projects officially support the `.map` files:
   * angularjs
   * jQuery
@@ -221,7 +221,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
 
   [1]: http://www.jsdelivr.com
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://refresh-sf.com/yui/
+  [3]: http://marijnhaverbeke.nl/uglifyjs
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
   [5]: http://www.cdnperf.com/
   [6]: http://en.wikipedia.org/wiki/Content_delivery_network
