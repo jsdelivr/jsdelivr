@@ -76,7 +76,7 @@ File Structure
 Under `files/` a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
 
 1. Names should be lowercase
-2. No special characters or spaces, except for periods, dashes, and underscores.
+2. No special characters or spaces, except for `. - _`.
 3. Names should only be the name of the project
 4. If the project is a plugin of a library, append the name of the library, like `jquery.blurjs` or `bootstrap.select`.
 
@@ -85,7 +85,7 @@ A project's directory should contain the following:
 
 1. An `info.ini` containing all needed information. [Example][2]
 2. Directories named after the version of each project. 
-3. The version directories can contain in their names numbers, letters and dash, period, and underscore symbols.
+3. The version directories can contain in their names numbers, letters and `. - _`.
 4. Do not create `latest` directories; they are automatically created on our side.
 
 A version directory should contain the following:
