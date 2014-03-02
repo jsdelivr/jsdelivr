@@ -60,7 +60,7 @@ How to submit or update projects:
 
  1. [Fork][9] the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
- 3. Send the pull request with a description of the changes you made following the same structure as the rest of the projects in the repo.
+ 3. Send a pull request with a description of the changes you made. Please follow the same file structure as other projects in the repo.
  4. Wait for our approval.
  5. That's it!
 
@@ -73,7 +73,7 @@ Coming soon - we are [working on it](https://github.com/jsdelivr/libgrabber)!
     
 File Structure
 --------------
-Under `files/`, a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
+Under `files/` a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
 
 1. Names should be lowercase
 2. No special characters or spaces, except for periods, dashes, and underscores.
@@ -127,21 +127,21 @@ To automatically load the main file of a project use:
 
 `//cdn.jsdelivr.net/{projectName}/{version}/mainfile`
 
-Depending on the project, it will automatically load the main file as configured in `info.ini` with correct MIME HTTP headers. If no `mainfile` parameter was specified, the request will result in 404 error.
+Depending on the project, jsDelivr will automatically load the main file as configured in `info.ini` with correct MIME HTTP headers. If no `mainfile` parameter was specified, the request will result in 404 error.
 
 
 Load multiple files with single HTTP request
 --------------------------------------------
 
-Loads the lastest version of the `mainfile`. Only for JavaScript!
+Loads the lastest version of the main file. Only for JavaScript!
 
 `//cdn.jsdelivr.net/g/abaaso,ace,alloyui`
 
-Loads version 3.8.15 of the `mainfile` for abaaso and the latest version of the `mainfile` for the other projects.
+Loads version 3.8.15 of the main file for abaaso and the latest version of the main file for the other projects.
 
 `//cdn.jsdelivr.net/g/abaaso@3.8.15,ace,alloyui`
 
-Loads `mainfile` latest version for all files and for abaaso loads version branch 3.8 (e.g. version 3.8.16).
+Loads the latest version of the main file for all files and for abaaso loads version branch 3.8 (e.g. version 3.8.16).
 
 `//cdn.jsdelivr.net/g/abaaso@3.8,ace,alloyui`
 
