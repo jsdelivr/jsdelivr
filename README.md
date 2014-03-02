@@ -1,8 +1,6 @@
 [jsDelivr][1] - Open Source CDN
 ========
 
-[www.jsdelivr.com][1]
-
 Similar to Google Hosted Libraries, jsDelivr is an open source [CDN][6] that allows developers to host their own projects 
 and anyone to link to our hosted files in their websites. 
 
@@ -228,6 +226,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [7]: http://tracking.maxcdn.com/c/47243/36539/378
   [8]: http://www.cloudflare.com/
   [9]: https://github.com/jsdelivr/jsdelivr/fork
+  [10]: http://www.cedexis.com/
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jsdelivr/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
