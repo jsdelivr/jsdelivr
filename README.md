@@ -37,17 +37,17 @@ Downtime, timeouts or slow responses are simply unacceptable. The idea is not to
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. We currently use [MaxCDN][7] and [CloudFlare][8], with [Cedexis][9] as a load balancer.
+Unlike the competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. We currently use [MaxCDN][7] and [CloudFlare][8].
 
-On top of CDN providers, jsDelivr also uses custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users on those locations.
+On top of CDN providers, jsDelivr also utilizes custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users on those locations.
 
-If a CDN or custom server goes down, websites that use jsDelivr won't have any issues, because all traffic will be instantly redirected to remaining working providers. 
+If a CDN or custom server goes down, websites that use jsDelivr won't have any issues, because all traffic will be instantly redirected to remaining operational providers. 
 
 
 Smart Load Balancing
 --------------------
 
-jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
+jsDelivr uses [Cedexis][9] with real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
 
 All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time. 
 
