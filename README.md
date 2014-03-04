@@ -179,7 +179,7 @@ This kind of custom hosting can be suitable for:
 * Projects that can't follow jsDelivr file structure.
 * Some other use that will blow all of our minds.
 
-Simply send an email to [jimaek](https://github.com/jimaek) for more information.
+Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
 
 jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
 
