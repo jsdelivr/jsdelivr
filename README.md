@@ -168,9 +168,9 @@ More coming soon...
 Custom CDN Hosting
 ---
 
-If your project does not qualify to be hosted in GitHub or for any reasons you need direct access to your files, it's not a problem!
-We can offer SFTP origin access restricted to a single directory, managed by the author.
-This way, you can have full control over your files without the restrictions of GitHub, but still utilize the full power of jsDelivr.
+If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
+We can provide SFTP origin restricted access to a directory (in which, the author will have maintenance privileges).
+This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
 
 This kind of custom hosting can be suitable for:
 
@@ -179,7 +179,7 @@ This kind of custom hosting can be suitable for:
 * Projects that can't follow jsDelivr file structure.
 * Some other use that will blow all of our minds.
 
-Simply send an email to [jimaek](https://github.com/jimaek) with more information.
+Simply send an email to [jimaek](https://github.com/jimaek) for more information.
 
 jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
 
