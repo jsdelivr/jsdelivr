@@ -131,17 +131,35 @@ Depending on the project, jsDelivr will automatically load the main file as conf
 Load multiple files with single HTTP request
 --------------------------------------------
 
-Loads the lastest version of the main file. Only for JavaScript!
+Load multiple project using the lastest version of the main file:
 
 `//cdn.jsdelivr.net/g/abaaso,ace,alloyui`
 
-Loads version 3.8.15 of the main file for abaaso and the latest version of the main file for the other projects.
+Load version 3.8.15 of the main file for abaaso and the latest version of the main file for the other projects:
 
 `//cdn.jsdelivr.net/g/abaaso@3.8.15,ace,alloyui`
 
-Loads the latest version of the main file for all files and for abaaso loads version branch 3.8 (e.g. version 3.8.16).
+Load the latest version of the main file for all files and for abaaso loads version branch 3.8 (e.g. version 3.8.16):
 
 `//cdn.jsdelivr.net/g/abaaso@3.8,ace,alloyui`
+
+
+To combine multiple files enter the relative paths to all files you want to load inside brackets () separated by a plus + symbol. Brackets can be encoded as %28 and %29 without issues.
+
+Load multiple files from multiple projects:
+
+`//cdn.jsdelivr.net/g/jquery@2.1.0,angularjs@1.2.14(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
+
+As always it supports version aliasing and latest versions:
+
+`//cdn.jsdelivr.net/g/jquery,angularjs@1.2(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
+
+`//cdn.jsdelivr.net/g/jquery,angularjs(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
+
+Now if the server receives an `Accept` request header that equals to `text/css` then it sets the response header to `Content-Type: text/css`. This way you can use this functionality to combine and load CSS files.
+Your browser will automatically send the `Accept: text/css` header if the link was included in a `<link rel="stylesheet"` tag.
+
+`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),fontawesome@4.0.3(css/font-awesome.min.css)`
 
 
 The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
@@ -226,7 +244,3 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [8]: http://www.cloudflare.com/
   [9]: https://github.com/jsdelivr/jsdelivr/fork
   [10]: http://www.cedexis.com/
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jsdelivr/jsdelivr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
