@@ -105,7 +105,9 @@ URL Structure
 
 `//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
 
-`//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@versionAlias,{projectName}`
+`//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@{versionAlias},{projectName}`
+
+`//cdn.jsdelivr.net/g/{projectName}@{version}({filepath1}+{filepath2}),{projectName}@{versionAlias},{projectName}`
 
 
 Version aliasing
@@ -131,7 +133,7 @@ Depending on the project, jsDelivr will automatically load the main file as conf
 Load multiple files with single HTTP request
 --------------------------------------------
 
-Load multiple project using the lastest version of the main file:
+Load multiple projects using the lastest version of the main file:
 
 `//cdn.jsdelivr.net/g/abaaso,ace,alloyui`
 
