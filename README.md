@@ -158,8 +158,7 @@ As always it supports version aliasing and latest versions:
 
 `//cdn.jsdelivr.net/g/jquery,angularjs(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
 
-Now if the server receives an `Accept` request header that equals to `text/css` then it sets the response header to `Content-Type: text/css`. This way you can use this functionality to combine and load CSS files.
-Your browser will automatically send the `Accept: text/css` header if the link was included in a `<link rel="stylesheet"` tag.
+Now if all files in the combination have a `.css` extension then the server will automatically respond with `Content-Type: text/css` header. In all other cases the server responds with `Content-Type: application/javascript` header.
 
 `//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),fontawesome@4.0.3(css/font-awesome.min.css)`
 
