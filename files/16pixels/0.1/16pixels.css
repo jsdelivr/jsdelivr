@@ -265,7 +265,7 @@
 	color: inherit;
 }
 .col img {
-	background: inherit none;
+	background-color: inherit;
 	border: 0px solid #FFF;
 	vertical-align: bottom;
 	padding: 0;
