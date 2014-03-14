@@ -1,0 +1,94 @@
+.topnav {
+	background-image: url(imgs/drkbg.png);
+	color: #C0BBBB;
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.navbar-brand-class {
+	z-index: 1;
+	padding-top: 4px;
+	padding-bottom: 0px;
+	position: absolute;
+	border-right:1px solid #4D4949;
+	height:29px;
+
+}
+
+.navbar-link {
+	color: white;
+	text-align: left;
+	padding-left: 30px;
+	font-size: 12px;
+	
+	
+}
+
+.navbar-link a {
+	color: white;
+	height: 30px;
+	margin-top: -10px;
+}
+
+.search-box {
+
+	height: 22px;
+	border-radius: 10px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+
+.search-box-button {
+	width: 35px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-radius: 10px;
+	height: 22px;
+}
+
+.navbar-collapse {
+	border-top: none;
+}
+
+.telephone-list-group li{
+	background-color: #f0f0f0;
+}
+.telephone-list-group li:hover{
+	background-color: #7F7F7F;
+	color: white;
+}
+.telephone-list-group a{
+	text-decoration: none;
+	color: #2E2E2E;
+}
+
+.logo-jumbo {
+	max-height: 180px;
+	border-top: 1px solid #990000;
+	border-bottom: 5px solid #6E0B0A;
+	background: #6e0b0a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6e0b0a 0%, #8b0003 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e0b0a), color-stop(100%,#8b0003)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6e0b0a 0%,#8b0003 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6e0b0a 0%,#8b0003 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6e0b0a 0%,#8b0003 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #6e0b0a 0%,#8b0003 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e0b0a', endColorstr='#8b0003',GradientType=0 ); /* IE6-9 */
+}
+
+.logo {
+	max-width: 1000px;
+	margin: auto;
+	padding: 10px 0px 5px;
+}
+
+.logo-img {
+
+}
+.no-padding {
+	padding: 0px;
+}
+
+.no-margine {
+	margin: 0px;
+}
