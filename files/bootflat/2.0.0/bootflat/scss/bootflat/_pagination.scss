@@ -1,0 +1,59 @@
+// Variables
+//------------------------------------------------------
+$pagination-background-color:                  $white !default;
+$pagination-background-color-hover:            $mediumgray-light !default;
+$pagination-background-color-active:           $grass-dark !default;
+
+$pagination-font-color:                        $darkgray-dark !default;
+$pagination-font-color-hover:                  $white !default;
+$pagination-font-color-disabled:               $lightgray-dark !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("pagination") {
+
+  /**
+   * pagination
+   * --------------------------------------------------
+   */
+  .pagination {
+
+    & > li > a,
+    & > li > span {
+      color: $pagination-font-color;
+      background-color: $pagination-background-color;
+      border-color: $pagination-background-color-hover;
+    }
+    & > li > a:hover,
+    & > li > span:hover,
+    & > li > a:focus,
+    & > li > span:focus {
+      color: $pagination-font-color-hover;
+      background-color: $pagination-background-color-hover;
+      border-color: $pagination-background-color-hover;
+    }
+    & > .active > a,
+    & > .active > span,
+    & > .active > a:hover,
+    & > .active > span:hover,
+    & > .active > a:focus,
+    & > .active > span:focus {
+      color: $pagination-font-color-hover;
+      background-color: $pagination-background-color-active;
+      border-color: $pagination-background-color-active;
+    }
+    & > .disabled > span,
+    & > .disabled > span:hover,
+    & > .disabled > span:focus,
+    & > .disabled > a,
+    & > .disabled > a:hover,
+    & > .disabled > a:focus {
+      color: $pagination-font-color-disabled;
+      background-color: $pagination-background-color;
+      border-color: $pagination-background-color-hover;
+    }
+  }
+}
+
+
