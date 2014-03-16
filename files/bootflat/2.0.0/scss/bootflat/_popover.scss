@@ -1,0 +1,50 @@
+// Variables
+//------------------------------------------------------
+$popover-background-color:               $darkgray-dark !default;
+$popover-font-color:                     $white !default;
+$popover-title-font-color:               $mediumgray-dark !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("popover") {
+
+  /**
+   * popover
+   * --------------------------------------------------
+   */
+
+  .popover {
+      background-color: $popover-background-color;
+      color: $popover-font-color;
+      border-color: $popover-background-color;
+
+      @at-root #{&}-title {
+          padding-bottom: 0;
+          font-weight: bold;
+          color: $popover-title-font-color;
+          background-color: transparent;
+          border-bottom: none;
+      }
+      &.top .arrow,
+      &.top .arrow:after {
+          border-top-color: $popover-background-color;
+      }
+      &.right .arrow,
+      &.right .arrow:after {
+          border-right-color: $popover-background-color;
+      }
+      &.bottom .arrow,
+      &.bottom .arrow:after {
+          border-bottom-color: $popover-background-color;
+      }
+      &.left .arrow,
+      &.left .arrow:after {
+          border-left-color: $popover-background-color;
+      }
+  }
+
+}
+
+
