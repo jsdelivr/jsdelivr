@@ -412,6 +412,8 @@
 }
 .col select {
 	font-family: sans-serif;
+	color: #FFF;
+	background-color: #506F7C;
 }
 .col button,
 .col input[type="button"],
@@ -846,9 +848,6 @@
 }
 .col .holder {
 	margin: 0 auto;
-}
-.col .holder select {
-	width: 100%;
 }
 .col .textcenter {
 	text-align: center;
