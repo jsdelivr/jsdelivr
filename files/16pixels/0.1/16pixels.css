@@ -123,7 +123,6 @@
 .col p.address {
 	font-size: 13px;
 	line-height: 19px;
-	font-weight: 400;
 	font-style: italic;
 	margin-right: 0;
 }
@@ -137,7 +136,6 @@
 	line-height: 18px;
 }
 .col p.blockquote {
-	font-weight: 400;
 	font-style: italic;
 	margin-right: 0;
 }
@@ -356,11 +354,9 @@
 	text-decoration: underline;
 }
 .col table td {
-	font-weight: 400;
 	color: inherit;
 }
 .col caption {
-	font-weight: 400;
 	font-style: italic;
 	color: inherit;
 }
@@ -384,7 +380,6 @@
 .col textarea {
 	font-size: 14px;
 	line-height: 24px;
-	font-weight: 400;
 	color: inherit;
 	background: #F4F4F4;
 	background-size: 24px 12px;
@@ -464,7 +459,6 @@
 }
 .col label {
 	display: block;
-	font-weight: 400;
 	font-style: italic;
 	margin-bottom: 2px;
 }
