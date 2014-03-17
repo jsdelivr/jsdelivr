@@ -5,7 +5,115 @@
  * pastebin.com/xAzjZ6aR
  * codepen.io/englishextra/pen/avIzi
  */
-.col div,.col span,.col applet,.col object,.col iframe,.col h1,.col h2,.col h3,.col h4,.col h5,.col h6,.col p,.col blockquote,.col pre,.col a,.col abbr,.col acronym,.col address,.col big,.col cite,.col code,.col del,.col dfn,.col em,.col img,.col ins,.col kbd,.col q,.col s,.col samp,.col small,.col strike,.col strong,.col sub,.col sup,.col tt,.col var,.col b,.col u,.col i,.col center,.col dl,.col dt,.col dd,.col ol,.col ul,.col li,.col fieldset,.col form,.col label,.col legend,.col table,.col caption,.col tbody,.col tfoot,.col thead,.col tr,.col th,.col td,.col article,.col aside,.col canvas,.col details,.col embed,.col figure,.col figcaption,.col footer,.col header,.col hgroup,.col menu,.col nav,.col output,.col ruby,.col section,.col summary,.col time,.col mark,.col audio,.col video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}.col ol,.col ul{list-style: none;}.col blockquote,.col q{quotes: none;}.col blockquote:before,.col blockquote:after,.col q:before,.col q:after{content: '';content: none;}.col table{border-collapse: collapse;border-spacing: 0;}
+.col div,
+.col span,
+.col applet,
+.col object,
+.col iframe,
+.col h1,
+.col h2,
+.col h3,
+.col h4,
+.col h5,
+.col h6,
+.col p,
+.col blockquote,
+.col pre,
+.col a,
+.col abbr,
+.col acronym,
+.col address,
+.col big,
+.col cite,
+.col code,
+.col del,
+.col dfn,
+.col em,
+.col img,
+.col ins,
+.col kbd,
+.col q,
+.col s,
+.col samp,
+.col small,
+.col strike,
+.col strong,
+.col sub,
+.col sup,
+.col tt,
+.col var,
+.col b,
+.col u,
+.col i,
+.col center,
+.col dl,
+.col dt,
+.col dd,
+.col ol,
+.col ul,
+.col li,
+.col fieldset,
+.col form,
+.col label,
+.col legend,
+.col table,
+.col caption,
+.col tbody,
+.col tfoot,
+.col thead,
+.col tr,
+.col th,
+.col td,
+.col article,
+.col aside,
+.col canvas,
+.col details,
+.col embed,
+.col figure,
+.col figcaption,
+.col footer,
+.col header,
+.col hgroup,
+.col menu,
+.col nav,
+.col output,
+.col ruby,
+.col section,
+.col summary,
+.col time,
+.col mark,
+.col audio,
+.col video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.col sub,
+.col sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+.col sup {
+	top: -0.5em;
+}
+.col sub {
+	bottom: -0.25em;
+}
+.col blockquote,
+.col q {
+	quotes: none;
+}
+.col blockquote:before,
+.col blockquote:after,
+.col q:before,
+.col q:after {
+	content: '';
+	content: none;
+}
 .col a {
 	color: #2483AA;
 	text-decoration: none;
@@ -717,62 +825,65 @@
 .col ul + p {
 	margin-bottom: 16px;
 }
-.span_440 {
+.col .span_440 {
 	max-width: 440px;
 	margin: 0 auto;
 }
-.span_720 {
+.col .span_720 {
 	max-width: 720px;
 	margin: 0 auto;
 }
-.span_940 {
+.col .span_940 {
 	max-width: 940px;
 	margin: 0 auto;
 }
-.span_1140 {
+.col .span_1140 {
 	max-width: 1140px;
 	margin: 0 auto;
 }
-.indent {
+.col .indent {
 	display: inline-block;
 }
-.holder {
+.col .holder {
 	margin: 0 auto;
 }
-.holder select {
+.col .holder select {
 	width: 100%;
 }
-.textcenter {
+.col .textcenter {
 	text-align: center;
 }
-.phonetic {
-	font-family: Voces, Judson, ConstructiumRegular !important;
+.col .phonetic {
+	font-family: Voces, Calibri, Judson, ConstructiumRegular;
 	font-style: normal;
-	font-weight: 400 !important;
+	font-weight: 400;
 }
-.larger {
-	font-size: larger !important;
+.col .bolder {
+	font-weight: 600;
 }
-.smaller {
-	font-size: smaller !important;
+.col .larger {
+	font-size: larger;
 }
-.italic {
+.col .smaller {
+	font-size: smaller;
+}
+.col .italic {
 	font-style: italic;
 }
-.highlight {
-	font-weight: 600 !important;
+.col .highlight {
+	font-weight: 600;
 	color: #C71939;
 }
-.fade {
+.col .fade {
 	opacity: 1;
 	transition: opacity .25s ease-in-out;
 	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
 }
-.fade:hover {
+.col .fade:hover {
 	opacity: 0.5;
 }
-.hr {
+.col .hr {
 	height: 1px;
 	background: #F4F4F4;
 	padding: 0;
