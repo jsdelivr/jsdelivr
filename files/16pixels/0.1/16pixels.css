@@ -5,7 +5,103 @@
  * pastebin.com/xAzjZ6aR
  * codepen.io/englishextra/pen/avIzi
  */
-.col div,.col span,.col applet,.col object,.col iframe,.col h1,.col h2,.col h3,.col h4,.col h5,.col h6,.col p,.col blockquote,.col pre,.col a,.col abbr,.col acronym,.col address,.col big,.col cite,.col code,.col del,.col dfn,.col em,.col img,.col ins,.col kbd,.col q,.col s,.col samp,.col small,.col strike,.col strong,.col sub,.col sup,.col tt,.col var,.col b,.col u,.col i,.col center,.col dl,.col dt,.col dd,.col ol,.col ul,.col li,.col fieldset,.col form,.col label,.col legend,.col table,.col caption,.col tbody,.col tfoot,.col thead,.col tr,.col th,.col td,.col article,.col aside,.col canvas,.col details,.col embed,.col figure,.col figcaption,.col footer,.col header,.col hgroup,.col menu,.col nav,.col output,.col ruby,.col section,.col summary,.col time,.col mark,.col audio,.col video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}.col ol,.col ul{list-style: none;}.col blockquote,.col q{quotes: none;}.col blockquote:before,.col blockquote:after,.col q:before,.col q:after{content: '';content: none;}.col table{border-collapse: collapse;border-spacing: 0;}
+.col div,
+.col span,
+.col applet,
+.col object,
+.col iframe,
+.col h1,
+.col h2,
+.col h3,
+.col h4,
+.col h5,
+.col h6,
+.col p,
+.col blockquote,
+.col pre,
+.col a,
+.col abbr,
+.col acronym,
+.col address,
+.col big,
+.col cite,
+.col code,
+.col del,
+.col dfn,
+.col em,
+.col img,
+.col ins,
+.col kbd,
+.col q,
+.col s,
+.col samp,
+.col small,
+.col strike,
+.col strong,
+.col sub,
+.col sup,
+.col tt,
+.col var,
+.col b,
+.col u,
+.col i,
+.col center,
+.col dl,
+.col dt,
+.col dd,
+.col ol,
+.col ul,
+.col li,
+.col fieldset,
+.col form,
+.col label,
+.col legend,
+.col table,
+.col caption,
+.col tbody,
+.col tfoot,
+.col thead,
+.col tr,
+.col th,
+.col td,
+.col article,
+.col aside,
+.col canvas,
+.col details,
+.col embed,
+.col figure,
+.col figcaption,
+.col footer,
+.col header,
+.col hgroup,
+.col menu,
+.col nav,
+.col output,
+.col ruby,
+.col section,
+.col summary,
+.col time,
+.col mark,
+.col audio,
+.col video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.col blockquote,
+.col q {
+	quotes: none;
+}
+.col blockquote:before,
+.col blockquote:after,
+.col q:before,
+.col q:after {
+	content: '';
+	content: none;
+}
 .col a {
 	color: #2483AA;
 	text-decoration: none;
@@ -55,30 +151,25 @@
 .col h2 {
 	font-size: 20px;
 	line-height: 21px;
-	font-weight: 600;
 	color: inherit;
 	padding: 0;
 }
 .col h3 {
-	font-weight: 600;
 	font-style: italic;
 	color: inherit;
 	padding: 0;
 }
 .col h4 {
-	font-weight: 600;
 	color: inherit;
 	padding: 0;
 }
 .col h5 {
-	font-weight: 600;
 	font-variant: small-caps;
 	text-decoration: underline;
 	color: inherit;
 	padding: 0;
 }
 .col h6 {
-	font-weight: 400;
 	font-variant: small-caps;
 	text-decoration: underline;
 	color: inherit;
@@ -92,9 +183,6 @@
 .col.span_4 h3 {
 	font-size: 16px;
 	line-height: 18px;
-}
-.col p {
-	font-weight: 400;
 }
 .col caption,
 .col label,
@@ -128,10 +216,6 @@
 	font-size: 18px;
 	line-height: 27px;
 }
-.col dl dt {
-	font-weight: 600;
-	font-style: italic;
-}
 .col h3,
 .col.span_2 h2,
 .col.span_3 h2,
@@ -139,12 +223,9 @@
 	font-size: 18px;
 	line-height: 19px;
 }
-.col dl dt {
-	font-size: 16px;
-	line-height: 24px;
-}
 .col p,
 .col p.blockquote,
+.col dl dt,
 .col dl dd,
 .col ul li,
 .col ol li,
@@ -160,21 +241,41 @@
 	font-size: 14px;
 	line-height: 21px;
 }
-.col dl dd {
+.col h6,
+.col address,
+.col p,
+.col p.address,
+.col p.blockquote,
+.col dl dd,
+.col ul li,
+.col ol li,
+.col table td,
+.col caption,
+.col input[type^="text"],
+.col select,
+.col textarea,
+.col label {
 	font-weight: 400;
+}
+.col h2,
+.col h3,
+.col h4,
+.col h5,
+.col dl dt,
+.col table th,
+.col button,
+.col input[type="button"],
+.col input[type="reset"],
+.col input[type="submit"] {
+	font-weight: 600;
 }
 .col ul {
 	list-style: disc outside;
 }
-.col ul li {
-	font-weight: 400;
-}
 .col ol {
 	list-style: decimal inside;
 }
-.col ol li {
-	font-weight: 400;
-}
+.col dl dt,
 .col blockquote {
 	font-style: italic;
 }
@@ -243,7 +344,6 @@
 	line-height: 19px;
 }
 .col table th {
-	font-weight: 600;
 	color: #FFF;
 	background: #5D5D5D;
 }
@@ -331,7 +431,6 @@
 .col input[type="submit"] {
 	width: 9em;
 	font-size: 14px;
-	font-weight: 600;
 	font-family: inherit;
 	line-height: 24px;
 	color: #FFF;
