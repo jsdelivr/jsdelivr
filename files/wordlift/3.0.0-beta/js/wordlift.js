@@ -18,16 +18,7 @@
     }
   });
 
-  angular.module('wordlift.tinymce.plugin.directives', ['wordlift.tinymce.plugin.controllers']).directive('wlMetaBoxSelectedEntity', function() {
-    return {
-      restrict: 'AE',
-      scope: {
-        index: '=',
-        entity: '='
-      },
-      template: "<span>{{entity.label}} (<small>{{entity.type}}</span>)\n\n<br /><small>{{entity.thumbnail}}</small>\n<input type=\"hidden\" name=\"entities[{{index}}]['id']\" value=\"{{entity.id}}\" />\n\n<input type=\"hidden\" name=\"entities[{{index}}]['label']\" value=\"{{entity.label}}\" />\n\n<input type=\"hidden\" name=\"entities[{{index}}]['description']\" value=\"{{entity.description}}\" />\n\n<input type=\"hidden\" name=\"entities[{{index}}]['type']\" value=\"{{entity.type}}\" />\n\n<input type=\"hidden\" name=\"entities[{{index}}]['thumbnail']\" value=\"{{entity.thumbnail}}\" />\n"
-    };
-  }).directive('wlEntities', function() {
+  angular.module('wordlift.tinymce.plugin.directives', ['wordlift.tinymce.plugin.controllers']).directive('wlEntities', function() {
     return {
       restrict: 'E',
       scope: {
@@ -65,7 +56,7 @@
       scope: {
         textAnnotations: '='
       },
-      template: "<div class=\"wl-entity-input-boxes\" ng-repeat=\"textAnnotation in textAnnotations\">\n  <div ng-repeat=\"entityAnnotation in textAnnotation.entityAnnotations | filterObjectBy:'selected':true\">\n\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][uri]' value='{{entityAnnotation.entity.id}}'>\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][label]' value='{{entityAnnotation.entity.label}}'>\n    <textarea name='wl_entities[{{entityAnnotation.entity.id}}][description]'>{{entityAnnotation.entity.description}}</textarea>\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][type]' value='{{entityAnnotation.entity.type}}'>\n\n    <input ng-repeat=\"image in entityAnnotation.entity.thumbnails\" type='text'\n      name='wl_entities[{{entityAnnotation.entity.id}}][image][]' value='{{image}}'>\n    <input ng-repeat=\"sameAs in entityAnnotation.entity.sameAs\" type='text'\n      name='wl_entities[{{entityAnnotation.entity.id}}][sameas][]' value='{{sameAs}}'>\n\n  </div>\n</div>"
+      template: "<div class=\"wl-entity-input-boxes\" ng-repeat=\"textAnnotation in textAnnotations\">\n  <div ng-repeat=\"entityAnnotation in textAnnotation.entityAnnotations | filterObjectBy:'selected':true\">\n\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][uri]' value='{{entityAnnotation.entity.id}}'>\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][label]' value='{{entityAnnotation.entity.label}}'>\n    <textarea name='wl_entities[{{entityAnnotation.entity.id}}][description]'>{{entityAnnotation.entity.description}}</textarea>\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][type]' value='{{entityAnnotation.entity.type}}'>\n\n    <input ng-repeat=\"image in entityAnnotation.entity.thumbnails\" type='text'\n      name='wl_entities[{{entityAnnotation.entity.id}}][image][]' value='{{image}}'>\n    <input ng-repeat=\"sameAs in entityAnnotation.entity.sameAs\" type='text'\n      name='wl_entities[{{entityAnnotation.entity.id}}][sameas][]' value='{{sameAs}}'>\n\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][latitude]' value='{{entityAnnotation.entity.latitude}}'>\n    <input type='text' name='wl_entities[{{entityAnnotation.entity.id}}][longitude]' value='{{entityAnnotation.entity.longitude}}'>\n\n  </div>\n</div>"
     };
   });
 
@@ -237,6 +228,8 @@
             if (entity.description == null) {
               entity.description = '';
             }
+            entity.latitude = get('http://www.w3.org/2003/01/geo/wgs84_pos#lat', item);
+            entity.longitude = get('http://www.w3.org/2003/01/geo/wgs84_pos#long', item);
             return entity;
           };
           createEntityAnnotation = function(item) {
@@ -378,6 +371,12 @@
                 entity.source += ", " + existing.source;
                 if ('dbpedia' === existing.source) {
                   entity.description = existing.description;
+                }
+                if ('dbpedia' === existing.source && (existing.longitude != null)) {
+                  entity.longitude = existing.longitude;
+                }
+                if ('dbpedia' === existing.source && (existing.latitude != null)) {
+                  entity.latitude = existing.latitude;
                 }
                 entities[sameAs] = entity;
                 mergeEntities(entity, entities);
