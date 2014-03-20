@@ -15,7 +15,8 @@ Feel free to open issues and pull requests if you think something should be chan
 All changes made to this repo are synced to the CDN.
 It can take a few minutes for the changes to appear on the website.
 
-[How jsDelivr works - What makes it special][4]
+[jsDelivr – The advanced open source public CDN][11] - 
+[How jsDelivr works (outdated)][4]
 
 [Compare public CDNs][5]
 
@@ -246,3 +247,4 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [8]: http://www.cloudflare.com/
   [9]: https://github.com/jsdelivr/jsdelivr/fork
   [10]: http://www.cedexis.com/
+  [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
