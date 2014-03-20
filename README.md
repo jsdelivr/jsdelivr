@@ -93,6 +93,7 @@ A version directory should contain the following:
 3. If there are official or expected source maps for the minified js, please include those in the folder.  Currently, the following projects officially support the `.map` files:
   * angularjs
   * jQuery
+  * mithril
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
