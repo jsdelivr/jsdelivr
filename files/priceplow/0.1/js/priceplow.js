@@ -13,7 +13,7 @@ jQuery( document ).ready(function($) {
 	    link.id   = cssId;
 	    link.rel  = 'stylesheet';
 	    link.type = 'text/css';
-	    link.href = 'https://www.priceplow.com/wp-plugin/css/priceplow.css';
+	    link.href = 'https://www.priceplow.com/wp-plugin/css/priceplow.min.css';
 	    link.media = 'all';
 	    head.appendChild(link);
 	}
