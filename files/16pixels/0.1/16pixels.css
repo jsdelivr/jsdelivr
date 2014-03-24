@@ -849,6 +849,12 @@
 .col .holder {
 	margin: 0 auto;
 }
+.col .textleft {
+	text-align: left;
+}
+.col .textright {
+	text-align: right;
+}
 .col .textcenter {
 	text-align: center;
 }
