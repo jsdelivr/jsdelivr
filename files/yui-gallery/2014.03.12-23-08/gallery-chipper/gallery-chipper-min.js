@@ -1,0 +1,1 @@
+YUI.add("gallery-chipper",function(c){var b=[],d=null;function a(){if(!d){d=c.later(100,null,function(){if(b.length>0){var e=b.pop();if(c.Lang.isFunction(e.destroy)){e.destroy();}}else{d.cancel();d=null;}},null,true);}}c.Chipper={destroy:function(e){b=b.concat(e);a();}};},"gallery-2012.05.16-20-37",{requires:["yui-later"]});

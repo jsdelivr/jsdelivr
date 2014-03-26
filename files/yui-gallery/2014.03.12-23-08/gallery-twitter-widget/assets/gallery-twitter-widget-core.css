@@ -1,0 +1,15 @@
+.yui3-twitter{font-size:10pt;font-family:Arial,Verdana,Helvetica;position:relative;}
+.yui3-twitter.noskin{background-color:transparent;}
+.noskin .yui3-twitter-ftr{display:none;}
+.noskin .yui3-twitter-hdr,.yui3-twitter-hdr a{color:inherit !important;}
+.yui3-twitter img{border:0;margin-left:2px;}
+.yui3-twitter ul{list-style-type:none;list-style-position:inside;margin:0;padding:2px;}
+.yui3-twitter li{margin-bottom:1px;padding-bottom:2px;}
+.yui3-twitter .twitter-title{padding:2px;margin:0;}
+.yui3-twitter .writer{font-weight:bold;}
+.yui3-twitter a,.yui3-twitter a:hover{text-decoration:none;}
+.yui3-twitter .twitter-timestamp{display:block;font-style:italic;}
+.yui3-twitter .twitter-photo{clear:left;float:left;padding-top:2px;}
+.yui3-twitter ul.photo .twitter-entry{margin-left:54px;}
+.yui3-twitter .twitter-entry{margin-left:2px;min-height:50px;}
+.yui3-twitter .yui3-twitter-hdr{padding:2px;}

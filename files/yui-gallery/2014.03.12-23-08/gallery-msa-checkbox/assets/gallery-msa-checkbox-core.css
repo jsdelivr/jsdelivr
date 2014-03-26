@@ -1,0 +1,49 @@
+.toggle-hidden{
+	position:absolute;
+	opacity:0;
+}
+.toggle,
+.toggle-handle{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.toggle {
+  font:300 14px/1.5 "Open Sans",sans-serif;
+  display: block;
+  position: relative;
+  width: 58px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  -webkit-transition-property: background-color, border;
+  -moz-transition-property: background-color, border;
+  transition-property: background-color, border;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.toggle .toggle-handle {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  -webkit-transition-property: -webkit-transform, border, width;
+  -moz-transition-property: -moz-transform, border, width;
+  transition-property: transform, border, width;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.toggle.active .toggle-handle {
+  -webkit-transform: translate3d(28px, 0, 0);
+  -ms-transform: translate3d(28px, 0, 0);
+  transform: translate3d(28px, 0, 0);
+}
+

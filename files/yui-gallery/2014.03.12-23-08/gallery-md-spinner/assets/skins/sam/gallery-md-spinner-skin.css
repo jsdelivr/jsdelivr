@@ -1,0 +1,12 @@
+.yui3-spinner input.yui3-spinner-inputError  {
+    background-color:red;
+}
+
+.yui3-spinner .yui3-spinner-up {
+    background:transparent url(http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-spinner/assets/skins/sam/arrows.png) no-repeat 50% -3px;
+}
+
+.yui3-spinner .yui3-spinner-down {
+    background:transparent url(http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-spinner/assets/skins/sam/arrows.png) no-repeat 50% -54px;
+ }
+

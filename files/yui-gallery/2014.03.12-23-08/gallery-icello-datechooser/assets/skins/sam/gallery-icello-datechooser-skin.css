@@ -1,0 +1,57 @@
+.yui3-skin-sam .yui3-icello-datechooser {position:absolute;}
+.yui3-skin-sam .yui3-icello-datechooser-hidden {visibility:hidden;}
+.yui3-skin-sam .yui3-icello-datechooser-hidden table {display:none;}
+.yui3-skin-sam .yui3-icello-datechooser-content {background: #F2F2F2;border: 1px solid gray;color: #000;overflow:hidden !important;padding: 10px;}
+
+        
+
+/*  viewdecade styles*/
+.yui3-icello-datechooser-viewdecade-header div {float:left;}     
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-header-label {text-align:center;width: 170px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-decade {font-size: 12px;font-weight: bold;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-nextdecade, .yui3-skin-sam .yui3-icello-datechooser-viewdecade-prevdecade {cursor: pointer;width:15px;font-family:"Times New Roman",Serif;font-size:14px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-nextdecade:hover, .yui3-skin-sam .yui3-icello-datechooser-viewdecade-prevdecade:hover {color:Blue;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-nextdecade:active, .yui3-skin-sam .yui3-icello-datechooser-viewdecade-prevdecade:active {color:Brown;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-body {padding-top: 5px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-grid {border-collapse: collapse;padding:5px;width: 100%;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-year {background-color:#fff;border: 1px solid #CCC;cursor: pointer;font-size: 11px;font-weight:bold;height:32px;padding:1px;text-align:center;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-year-outsidedecade {color:#ccc;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-year:hover {background-color:blue;color:white;}
+.yui3-skin-sam .yui3-icello-datechooser-viewdecade-year-selected {background-color: #B3D4FF;}
+
+/* viewyear styles */
+.yui3-icello-datechooser-viewyear-header div {float:left;}     
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-header-label {text-align:center;width: 170px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-year {cursor:pointer;font-size: 12px;font-weight: bold;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-year:hover {color:Blue;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-grid {border-collapse: collapse;padding:5px;width: 100%;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-month {background-color:#fff;border: 1px solid #CCC;cursor: pointer;font-size: 11px;font-weight:bold;height:32px;padding:1px;text-align:center;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-month:hover {background-color:blue;color:white;}
+
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-nextyear, .yui3-skin-sam .yui3-icello-datechooser-viewyear-prevyear {cursor:pointer;font-family:"Times New Roman",Serif;font-size:14px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-nextyear:hover, .yui3-skin-sam .yui3-icello-datechooser-viewyear-prevyear:hover {color:Blue;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-nextyear:active, .yui3-skin-sam .yui3-icello-datechooser-viewyear-prevyear:active {color:Brown;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-body {padding-top: 5px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewyear-month-selected {background-color: #B3D4FF;}
+
+/* viewmonth styles */  
+.yui3-icello-datechooser-viewmonth-header div {float:left;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-header-label {text-align:center;width: 170px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-monthyear {cursor:pointer;font-size: 12px;font-weight: bold;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-monthyear:hover {color:Blue;}
+
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-nextmonth, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-prevmonth {cursor: pointer;width:15px;font-family:"Times New Roman",Serif;font-size:14px;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-nextmonth:hover, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-prevmonth:hover {color:Blue;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-nextmonth:active, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-prevmonth:active {color:Brown;}
+
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-grid {border-collapse: collapse;padding:5px;width: 100%;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-weekday {border: 0px;font-size: 11px;padding:0px;}
+
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-day, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-prevmonth-day, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-nextmonth-day {background-color:#fff;border: 1px solid #CCC;font-size: 11px;padding:1px;text-align:center;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-day {cursor: pointer;font-weight:bold;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-day:hover {background-color:blue;color:white;}
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-prevmonth-day, .yui3-skin-sam .yui3-icello-datechooser-viewmonth-nextmonth-day {color:#ccc;}  
+
+.yui3-skin-sam .yui3-icello-datechooser-viewmonth-day-selected {background-color: #B3D4FF;}
+.yui3-icello-datechooser-viewmonth-body { padding-top: 5px; }
+

@@ -1,0 +1,14 @@
+.yui3-skin-sam .yui3-datetime-ping
+{
+	background-color: #FFCCCC;
+}
+
+.yui3-skin-sam .yui3-calendar .yui3-datetime-partial
+{
+	background-image: url("http://yui.yahooapis.com/gallery-2014.02.13-03-13/gallery-datetime/assets/skins/sam/partial_day.gif");
+}
+
+.yui3-skin-sam .yui3-calendar .yui3-datetime-partial:hover
+{
+	background-image: url("http://yui.yahooapis.com/gallery-2014.02.13-03-13/gallery-datetime/assets/skins/sam/partial_day.gif");
+}

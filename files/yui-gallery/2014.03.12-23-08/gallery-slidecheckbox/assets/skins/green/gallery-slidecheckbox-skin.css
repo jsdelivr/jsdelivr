@@ -1,0 +1,12 @@
+.yui3-slidecheckbox .edge,.yui3-slidecheckbox-handle,.yui3-slidecheckbox-handle > span,.yui3-slidecheckbox-labelOn,.yui3-slidecheckbox-labelOff{background-image:url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slidecheckbox/assets/skins/green/slider.png);height:27px;display:block;-moz-user-select:none;-khtml-user-select:none;}
+.yui3-slidecheckbox-handle,.yui3-slidecheckbox-handle > span,.yui3-slidecheckbox-labelOn,.yui3-slidecheckbox-labelOff{background-color:transparent;}
+.yui3-slidecheckbox-handle span{height:27px;width:3px;}
+.yui3-slidecheckbox-handle .lt{background-position:0 -81px;}
+.yui3-slidecheckbox-handle .rt{background-position:-5px -81px;}
+.yui3-slidecheckbox-handle{background-position:right -108px;height:27px;}
+.yui3-slidecheckbox-labelOff{background-position:right -54px;color:#8B8B8B;}
+.yui3-slidecheckbox-labelOn{background-position:right -27px;color:white;}
+.yui3-slidecheckbox-labelOff,.yui3-slidecheckbox-labelOn{background-repeat:repeat-x;text-shadow: 0px 0px 2px white rgba(0, 0, 0, 0.6);padding:0 20px;}
+.yui3-slidecheckbox-labelOn label,.yui3-slidecheckbox-labelOff label{font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+.yui3-slidecheckbox-wrapper > .edge.lt{background-position:0 0;}
+.yui3-slidecheckbox-wrapper > .edge.rt{background-position:-4px 0;}

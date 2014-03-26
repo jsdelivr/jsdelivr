@@ -1,0 +1,193 @@
+/* ver. 0.6.0 */
+.eaSliderWindow p h1 h2 h3 h4 h5{
+	font-size:0.8em;
+}
+
+/*
+this should be the boundingBox
+eaSliderWindow -> yui3-sliderwindow
+*/
+.yui3-sliderwindow {
+ 	position:absolute;
+ 	left:0px;
+ 	padding:0px;
+ 	margin:0px;
+ 	overflow-y:hidden;
+	overflow-x:hidden;	
+}
+
+/*
+this is needed to keeep the handle-target div inside the yui3-overlay-content
+and not jumping at the far right of the screen
+*/
+.yui3-sliderwindow  .yui3-sliderwindow-content {
+	position: absolute;
+	/* override default */
+	padding: 0px;
+	margin-right: 0px;
+	position: relative;
+}
+
+.yui3-sliderwindow .yui3-sliderwindow-content .yui3-widget-bd{
+	border:0px;
+	height:254px;
+	left:0px;
+/*	width:inherit; do not 'inherit' otherwise Safari won't resize */
+	background:#fff;	
+	background-image:url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_handle_bg.gif);
+	background-repeat:  no-repeat;
+	background-position: right center;
+/*
+add negative margin-right to make the handle target bg overlap the handle target div
+The same to header and footer to make images align.
+*/
+	margin-right: 0px;/* check this after adding handle-target */
+	padding-right: 0px;
+}
+ 
+.container-close, .yui3-sliderwindow .container-close{
+	background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_sprite.gif) no-repeat scroll 0px 0px;
+	cursor:pointer;
+	height:12px;
+	position:absolute;
+	right:7px;
+	top:5px;
+	visibility:inherit;
+	width:12px;
+	z-index:1;
+}
+
+.yui3-sliderwindow .handle-target{
+	background:transparent;
+	cursor:pointer;
+	width:5px;
+	position:absolute;
+	right:0px;
+	top:21px;
+	visibility:inherit;
+	z-index:1;
+	/* move to right so the click target overlaps the bg image for the body */
+	right:0px;/* check this again, cause hd bd and ft have margin-right changed from -5px to +5px */
+}
+
+ /* margin-right to hide the text against right backg image, rest normal padding,  height:254px; */
+.yui3-overlay .yui3-sliderwindow-content .yui3-widget-bd .yui3-sliderwindow-bdc{
+	height:100%;
+	overflow-x:hidden;
+	overflow-y: auto;
+	left:0px;
+	text-align: left;
+	margin-right: 5px;/* equals the width of the handle */
+	margin-left: 5px;/* equals the width of the handle and pushes the text outside of the visble area in IE7 */
+}
+
+.yui3-sliderwindow .yui3-sliderwindow-content .yui3-widget-hd{
+ 	height:21px;
+ 	background-image:url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_header_bg.gif);  
+	background-repeat:  no-repeat;
+	background-position: top right;
+	font-size:0.7em;
+	line-height:21px;
+	vertical-align: text-bottom;
+	text-align:center;
+	border:none;
+/*
+make images align with  bg for handle-targe
+*/
+	margin-right: 0px;/* check this after adding handle-target */
+	padding-right: 0px;
+}
+
+.yui3-sliderwindow .yui3-sliderwindow-hdc{
+ 	height: 21px;
+	font-size: 1.0em;
+	line-height: 21px;
+	vertical-align: text-bottom;
+	text-align: center;
+	border: none;
+	left:0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.yui3-sliderwindow .hd p{
+	vertical-align:bottom;
+}
+ 
+.yui3-sliderwindow  .yui3-sliderwindow-content .yui3-widget-ft{ 
+
+	height:12px;
+ 	background-image:url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_footer_bg.gif); 
+	background-repeat:  no-repeat;
+	background-position: top right;
+/*
+make images align with  bg for handle-targe
+*/
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+a#sliderwindow_lnk:link{
+	color:  #676767;
+	text-decoration: none;
+}
+
+a#sliderwindow_lnk:visited{
+	color:  #676767;
+	text-decoration: none;
+}
+
+a#sliderwindow_lnk:active{
+	color:  #676767;
+	text-decoration: none;
+}
+
+a#sliderwindow_lnk:hovered{
+	color:  #676767;
+	text-decoration: none;
+}
+
+/* 
+Show the active handle when hovered 
+Overriding YUI styles
+
+.yui-resize-hover .yui-resize-handle-active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.yui-resize .yui-resize-handle-inner-t{
+	background: transparent no-repeat url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_t-handle_bg.gif) 50% 0;
+	position:absolute;
+    left: 0px;
+    height: 5px;
+    width: 100%;
+}
+
+.yui-resize .yui-resize-handle-inner-tr{
+	position:absolute;
+    left: -5px;
+    height: 10px;
+    width: 10px;
+    background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-slider-window/assets/sw_sprite.gif);
+    background-repeat: no-repeat;
+    background-position: -2px -12px;
+}
+*/
+/*
+  here using the original yui3 sprites, just repositioning to:
+  avoid tr handle to interfere with close icon
+  align rasterized are to the corner
+*/
+.yui3-resize-handle-tr {
+	right: -6px !important;
+	top: -6px !important;
+	width: 10px !important;
+	height: 10px !important;
+}
+
+.yui3-resize-handle-inner-tr {
+	right: 3px !important;
+	top: 3px !important;
+
+}

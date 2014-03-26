@@ -1,0 +1,26 @@
+.yui3-toggle .yui3-label {
+  margin-right: 0.55em;
+}
+.yui3-toggle a {
+  padding: 2px 8px;
+  background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-toggle/assets/toggle_sprite.png) bottom left repeat-x #f7f7f7;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #bbb;
+}
+.yui3-toggle a.yui3-first {
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  border-right-width: 0px;
+}
+.yui3-toggle a.yui3-last {
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  border-left-width: 0px;
+}
+.yui3-toggle a.yui3-selected {
+  background-position: top left;
+  color: #fff;
+}

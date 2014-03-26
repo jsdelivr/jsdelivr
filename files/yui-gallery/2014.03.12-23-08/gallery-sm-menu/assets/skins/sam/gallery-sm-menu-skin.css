@@ -1,0 +1,50 @@
+.yui3-skin-sam .yui3-menu-children {
+    background: #fff;
+    border: 1px solid #b7b7b7;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px #afafaf;
+    padding: 5px 0;
+}
+
+.yui3-skin-sam .yui3-menu-label {
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+}
+
+.yui3-skin-sam .yui3-menu-label,
+.yui3-skin-sam .yui3-menu-can-have-children > .yui3-menu-label:after {
+    color: #333;
+}
+
+.yui3-skin-sam .yui3-menu-can-have-children > .yui3-menu-label:hover:after {
+    color: #fff;
+}
+
+.yui3-skin-sam a.yui3-menu-label:hover {
+    background: rgb(81, 113, 235);
+    background: -moz-linear-gradient(rgba(81, 113, 235, 1), rgba(26, 67, 244, 1));
+    background: -ms-linear-gradient(rgba(81, 113, 235, 1), rgba(26, 67, 244, 1));
+    background: -o-linear-gradient(rgba(81, 113, 235, 1), rgba(26, 67, 244, 1));
+    background: -webkit-linear-gradient(rgba(81, 113, 235, 1), rgba(26, 67, 244, 1));
+    background: linear-gradient(rgba(81, 113, 235, 1), rgba(26, 67, 244, 1));
+    border-bottom-color: #0d36e7;
+    border-top-color: #4767ea;
+    color: #fff;
+}
+
+.yui3-skin-sam .yui3-menu-disabled > a.yui3-menu-label {
+    background-image: none;
+    border-color: transparent;
+    cursor: default;
+}
+
+.yui3-skin-sam .yui3-menu-disabled > a.yui3-menu-label,
+.yui3-skin-sam .yui3-menu-can-have-children.yui3-menu-disabled > .yui3-menu-label:after {
+    color: #bfbfbf;
+}
+
+.yui3-skin-sam .yui3-menu-heading .yui3-menu-label {
+    color: #888;
+    text-transform: uppercase;
+}

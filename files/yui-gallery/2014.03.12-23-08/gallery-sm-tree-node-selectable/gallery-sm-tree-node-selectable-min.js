@@ -1,0 +1,1 @@
+YUI.add("gallery-sm-tree-node-selectable",function(e,t){function n(){}n.prototype={isSelected:function(){return!!this.state.selected},select:function(e){return this.tree.selectNode(this,e),this},unselect:function(e){return this.tree.unselectNode(this,e),this}},e.Tree.Node.Selectable=n},"gallery-2013.02.07-15-27",{requires:["gallery-sm-tree-node","oop"]});

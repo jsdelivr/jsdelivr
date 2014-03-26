@@ -1,0 +1,1 @@
+YUI.add("gallery-yql-execute",function(a){(function(b){b.YQL.execute=function(e,c,f,d){b.YQL("SELECT * FROM execute WHERE code = '"+e.replace(/'/g,"\\'")+"'",c,f,d);};b.YQL.execute.getResult=function(c){c=c&&c.query;c=c&&c.results;return c&&c.result;};}(a));},"gallery-2012.06.20-20-07",{requires:["yql"],skinnable:false});

@@ -1,0 +1,221 @@
+.yui3-form {
+}
+
+.yui3-fieldset-legend {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.yui3-field-labels-top {
+	
+}
+
+.yui3-field-labels-left {
+	
+}
+
+.yui3-field-labels-right {
+	
+}
+
+.yui3-field-labels-inline .yui3-field-label,
+.yui3-field-labels-inline .yui3-field-input,
+.yui3-field-labels-inline .yui3-field-hint {
+	float: left;
+}
+
+.yui3-field-labels-inline .yui3-field-label,
+.yui3-field-labels-inline .yui3-field-input-text {
+	width: 45%;
+}
+
+.yui3-field-labels-inline .yui3-field-label {
+	margin: 0.3em 2% 0 0;
+}
+
+.yui3-field-labels-right .yui3-field-label {
+	text-align: right;
+}
+
+.yui3-field-labels-inline .yui3-field-hint {
+	display: block;
+	float: none;
+	clear: both;
+	margin-left: 47%;
+}
+
+.yui3-field-label,
+.yui3-field-labels-top .yui3-field-label {
+	display: block;
+	float: none;
+	text-align: left;
+	margin: 0;
+	width: auto;
+}
+
+.yui3-field-input,
+.yui3-field-labels-top .yui3-field-input {
+	float: none;
+	width: auto;
+}
+
+.yui3-field-hint,
+.yui3-field-labels-top .yui3-field-hint {
+	line-height: 1;
+	clear: none;
+	float: right;
+	width: 45%;
+	margin: 0;
+}
+
+.yui3-field-hint-icon {
+	float: left;
+}
+
+.yui3-field-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.yui3-field-label-inline {
+	display: inline-block;
+	margin: 0.4em 0.4em 0 0
+}
+
+.yui3-field-inline .yui3-field-content,
+.yui3-field-inline .yui3-field-label {
+	display: inline-block;
+}
+
+.yui3-field-inline .yui3-field-label {
+	vertical-align: middle;
+}
+
+.yui3-field-group {
+	float: left;
+	width: 53%;
+}
+
+.yui3-choice-label {
+	line-height: 1;
+	width: 89%;
+}
+
+.yui3-field-input-choice {
+	display: inline-block;
+	margin: 0 0.4em 0 0;
+	vertical-align: middle;
+}
+
+.yui3-choice-label,
+.yui3-field-input-choice {
+	float: left;
+}
+
+.yui3-field-row {
+	display: block;
+	clear: both;
+}
+
+.yui3-field-row:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+
+.yui3-field-row {
+	/* IE7/IE6 */
+	zoom: 1;
+}
+
+.yui3-button-holder {
+	overflow: hidden;
+	display: block;
+	clear: both;
+}
+
+.yui3-button-input {
+	margin: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 10px 6px 7px;
+}
+
+/* IE7 and below */
+.yui3-button-input {
+	*padding: 4px 10px 3px 7px;
+}
+
+.yui3-field-content:after,
+.yui3-button-holder:after, {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.yui3-field-content,
+.yui3-button-holder {
+	display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .yui3-field-content,
+* html .yui3-button-holder {
+	height: 1%;
+}
+
+.yui3-field-content,
+.yui3-button-holder {
+	display: block;
+}
+/* close commented backslash hack */
+
+.yui3-field-label {
+	font-weight: bold;
+}
+
+.yui3-choice-label {
+	font-weight: normal;
+}
+
+.yui3-field-hint {
+	color: #777;
+	font-size: 0.9em;
+}
+
+.yui3-choice-label,
+.yui3-field-hint {
+	line-height: 1.2;
+}
+
+.yui3-field-element-left {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Fields used for form validation */
+
+.yui3-field.yui3-has-error .yui3-field-content {
+	border-bottom: 1px solid #EF4A4A;
+	background-color: #FF9F9F;
+}
+
+.yui3-field.yui3-has-warn .yui3-field-content {
+	border-bottom: 1px solid #FFC45F;
+	background-color: #FFFABF;
+}
+
+.yui3-field .yui3-message-holder {
+	color: #FF0000;
+	display: block;
+	font-weight: bold;
+}
+
+.yui3-status-failure {
+	border:  1px solid #EF4A4A;
+}

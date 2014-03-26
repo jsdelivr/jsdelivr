@@ -1,0 +1,38 @@
+.yui3-gallery-datetime-overlay{
+	border: 1px solid #eee;
+	padding:10px;
+	text-align: left;
+	background:#fff;
+	box-shadow: 3px 3px 20px #555;
+	border-radius: 3px;
+}
+.yui3-gallery-datetime-overlay .yui3-widget-hd{
+	margin:5px 0 10px 0;
+}
+.yui3-gallery-datetime-overlay .yui3-widget-ft{
+	margin:10px 0 5px 0;
+}
+
+.yui3-gallery-datetime-slider-ctrl-wrap,.yui3-gallery-datetime-left-lbl,.yui3-gallery-datetime-right-slider{
+	margin:0;
+	padding:0;
+	border: 0;
+}
+.yui3-gallery-datetime-left-lbl{
+	width:30%;
+	float: left;
+}
+.yui3-gallery-datetime-right-lbl{
+	width:70%;
+	float: right;
+}
+.yui3-gallery-datetime-slider-ctrl-wrap{
+	margin-top:10px;
+}
+.yui3-gallery-datetime-selected-value{
+	font-weight: bold;
+}
+.yui3-gallery-datetime-overlay .notice{
+    background-color:#1B7AE0;
+    color:white;
+}

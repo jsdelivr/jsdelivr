@@ -1,0 +1,48 @@
+
+.yui3-circular-carousel{
+    -webkit-perspective: 500px;
+}
+
+.yui3-circular-carousel-item {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      -webkit-border-radius: 12px;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 124pt;
+      color: black;
+      background-color: rgba(148,116,172, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: hidden;
+      position: absolute;		   
+      -webkit-transition: 0.3s ease;
+      -webkit-transform: rotate(0) scale(0.9) translateX(100%);
+      z-index: 0;
+      width: 200px;
+      overflow: visible;
+      opacity: 0;
+}
+
+.yui3-circular-carousel  .yui3-circular-carousel-selected{
+    opacity: 1;
+   -webkit-transform: rotate(0) scale(1) translateX(54%);
+    z-index: 99;
+}
+
+.yui3-circular-carousel .yui3-circular-carousel-left,
+.yui3-circular-carousel .yui3-circular-carousel-right {
+    opacity: 0.4;
+    z-index: 88;
+}
+
+.yui3-circular-carousel .yui3-circular-carousel-left {
+    -webkit-transform: rotate(0) scale(0.9) translateX(0%);
+}
+
+.yui3-circular-carousel .yui3-circular-carousel-right {
+    -webkit-transform: rotate(0) scale(0.9) translateX(134%);
+}
+

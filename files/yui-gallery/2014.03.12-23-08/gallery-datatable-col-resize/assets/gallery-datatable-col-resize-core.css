@@ -1,0 +1,22 @@
+.yui3-datatable-resize th{
+	position: relative;
+}
+.yui3-datatable-ellipsis td.yui3-datatable-cell{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.yui3-datatable-resize td.yui3-datatable-cell{
+	overflow: hidden;
+	max-width: 200px;
+}
+.yui3-datatable-resize .grip{
+	width: 10px;
+	right: -5px;
+	top: 0px;
+	bottom: 0px;
+	position: absolute;
+	z-index: 100;
+}
+.yui3-datatable-resize .grip:hover{
+	cursor: col-resize;
+}

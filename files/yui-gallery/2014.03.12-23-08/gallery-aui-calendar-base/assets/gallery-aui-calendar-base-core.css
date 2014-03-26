@@ -1,0 +1,68 @@
+.yui3-calendar {
+	width: 200px;
+}
+
+.yui3-calendar-content {
+	border: 1px solid #ddd;
+	padding: 3px;
+}
+
+.yui3-calendar-hd {
+	padding: 5px;
+	position: relative;
+}
+
+.yui3-calendar-hd .yui3-icon {
+	position: absolute;
+	top: 5px;
+}
+
+.yui3-calendar-hd .yui3-icon-circle-triangle-l {
+	left: 2px;
+}
+
+.yui3-calendar-hd .yui3-icon-circle-triangle-r {
+	right: 2px;
+}
+
+.yui3-calendar-title {
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 15px;
+	text-align: center;
+}
+
+.yui3-calendar-week {
+	float: left;
+	text-align: center;
+	width: 27px;
+}
+
+.yui3-calendar-day {
+	color: #000;
+	float: left;
+	margin: 0 0 3px 3px;
+	text-align: center;
+	text-decoration: none;
+	width: 22px;
+}
+
+.yui3-calendar-day-blank {
+	float: left;
+	height: 16px;
+	margin: 0 0 3px 3px;
+	text-align: center;
+	width: 24px;
+
+	_width: 23px;
+}
+
+.yui3-calendar-day-hidden {
+	display: none;
+}
+
+.yui3-calendar-disabled {
+	opacity: 0.4;
+	-ms-filter: alpha(opacity=40);
+	filter: alpha(opacity=40);
+}

@@ -1,0 +1,9 @@
+.yui3-tooltip {
+	max-width: 600px;
+}
+
+.yui3-tooltip-content {
+	border-width: 2px;
+	padding: 8px;
+	position: relative;
+}

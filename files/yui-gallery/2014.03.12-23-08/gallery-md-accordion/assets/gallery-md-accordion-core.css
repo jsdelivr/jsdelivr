@@ -1,0 +1,30 @@
+.yui3-accordion {
+	width:100%;
+}
+.yui3-accordion .yui3-accordionpanel .yui3-widget-hd {
+
+	cursor: default;
+    height: 25px;
+}
+
+.yui3-accordionpanel-icon,
+.yui3-accordionpanel-status,
+.yui3-accordionpanel-close {
+	height:22px;
+	width:22px;
+}
+
+.yui3-accordionpanel-icon {
+	float:left;
+}
+.yui3-accordionpanel-status,
+.yui3-accordionpanel-close {
+	float:right;
+}
+.yui3-accordionpanel-label {
+    overflow: hidden;
+}
+.yui3-accordion .yui3-accordionpanel .yui3-widget-bd {
+	overflow: hidden;
+	position:relative;
+}

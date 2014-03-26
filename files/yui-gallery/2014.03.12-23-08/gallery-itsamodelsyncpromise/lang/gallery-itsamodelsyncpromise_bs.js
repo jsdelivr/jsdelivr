@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-itsamodelsyncpromise_bs",function(e){e.Intl.add("gallery-itsamodelsyncpromise","bs",{load:"U\u010ditavam podatke ...",reload:"U\u010ditavam podatke ...",update:"A\u017euriranje podataka ...",submit:"Dostavljanje podataka ...",save:"A\u017euriranje podataka ...",destroy:"A\u017euriranje podataka ..."})},"gallery-2014.01.28-00-45");

@@ -1,0 +1,124 @@
+.yui3-skin-sam .yui3-carousel {
+    border: 1px solid #808080;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.yui3-skin-sam .yui3-carousel-content li {
+    border: 1px solid #ccc;
+}
+
+.yui3-skin-sam .yui3-carousel-content li.yui3-carousel-selected {
+    border: 1px dotted #000;
+}
+
+.yui3-skin-sam .yui3-carousel-nav {
+    background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel/assets/skins/sam/sprite.png") repeat-x scroll 0 0 transparent;
+    margin: 0;
+    padding: 3px;
+    text-align: right;
+}
+
+.yui3-skin-sam .yui3-carousel-nav:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.yui3-skin-sam .yui3-carousel-button {
+    background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel/assets/skins/sam/sprite.png") repeat-x scroll 0 -600px transparent;
+    float: right;
+    height: 19px;
+    margin: 5px;
+    overflow: hidden;
+    width: 40px;
+}
+
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-button {
+    background-position: 0 -800px;
+}
+
+.yui3-skin-sam .yui3-carousel-button-disabled {
+    background-position: 0 -2000px;
+}
+
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-button-disabled {
+    background-position: 0 -2100px;
+}
+
+.yui3-skin-sam .yui3-carousel-button button {
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    margin: -2px 0 0 -2px;
+    padding: 0 0 0 50px;
+}
+
+.yui3-skin-sam .yui3-carousel-first-button {
+    background-position: 0 -550px;
+    margin-left: -100px;
+    margin-right: 50px;
+}
+
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-first-button {
+    background-position: 0 -750px;
+}
+
+.yui3-skin-sam .yui3-carousel-first-button-disabled {
+    background-position: 0 -1950px;
+}
+
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-first-button-disabled {
+    background-position: 0 -2050px;
+}
+
+.yui3-skin-sam .yui3-carousel-nav ul {
+    float: right;
+    height: 19px;
+    margin: 0 100px 0 -220px;
+    padding: 0;
+}
+
+
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-nav ul {
+    float: none;
+    margin: 0;
+}
+
+.yui3-skin-sam .yui3-carousel-nav ul li {
+    background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel/assets/skins/sam/sprite.png") no-repeat scroll 0 -650px transparent;
+    cursor: pointer;
+    float: left;
+    height: 9px;
+    list-style: none outside none;
+    margin: 10px 0 0 5px;
+    overflow: hidden;
+    padding: 0;
+    width: 9px;
+}
+
+.yui3-skin-sam .yui3-carousel-nav ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.yui3-skin-sam .yui3-carousel-nav ul li a {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -10000px;
+    width: 100%;
+}
+
+.yui3-skin-sam .yui3-carousel-nav ul li.yui3-carousel-nav-item-selected {
+    background-position: 0 -700px;
+}

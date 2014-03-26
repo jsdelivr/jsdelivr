@@ -1,0 +1,135 @@
+/* first we set some custom extentions to pure-css styles */
+
+.itsabutton-bordered,
+.pure-button.itsabutton-bordered,
+.itsabutton-bordered[disabled],
+.pure-button.itsabutton-bordered[disabled] {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset;
+}
+
+/* restore pure-button:active */
+.itsabutton-bordered.pure-button:active,
+.itsabutton-bordered.pure-button.pure-button-active,
+.pure-button.itsabutton-bordered.pure-button:active,
+.pure-button.itsabutton-bordered.pure-button.pure-button-active,
+.pure-button.pure-button-active:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+.itsabutton-rounded,
+.pure-button.itsabutton-rounded {
+    border-radius: 0.2em;
+}
+
+.itsabutton-heavyrounded,
+.pure-button.itsabutton-heavyrounded {
+    border-radius: 0.5em;
+}
+
+.itsabutton-oval,
+.pure-button.itsabutton-oval {
+    border-radius: 50%;
+}
+
+.itsabutton-halfoval,
+.pure-button.itsabutton-halfoval {
+    border-radius: 25%;
+}
+
+/* next: iconfonts base css */
+
+i[class^="itsaicon-"]:before, i[class*=" itsaicon-"]:before {
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  vertical-align: baseline;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes */
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+
+  /* margin-left: .2em; */
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect. */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+button i[class^="itsaicon-"]:before,
+button i[class*=" itsaicon-"]:before,
+button i[class^="itsaicon-"]:before,
+button i[class*=" itsaicon-"]:before {
+  vertical-align: middle;
+}
+
+button.itsabutton-iconleft i[class^="itsaicon-"]:before,
+button.itsabutton-iconleft i[class*=" itsaicon-"]:before,
+button.itsabutton-iconright i[class^="itsaicon-"]:before,
+button.itsabutton-iconright i[class*=" itsaicon-"]:before {
+  vertical-align: baseline;
+}
+
+button.itsabutton-onlyicon,
+.pure-button.itsabutton-onlyicon {
+    padding: 0.5em 0.47em 0.5em 0.53em;
+}
+
+button.itsabutton-iconleft,
+.pure-button.itsabutton-iconleft) {
+    padding: 0.5em 1.5em 0.5em 1.2em;
+}
+
+button.itsabutton-iconright,
+.pure-button.itsabutton-iconright {
+    padding: 0.5em 1.2em 0.5em 1.5em;
+}
+
+button.itsabutton-iconleft i[class^="itsaicon-"],
+button.itsabutton-iconleft i[class*=" itsaicon-"],
+.pure-button.itsabutton-iconleft i[class^="itsaicon-"],
+.pure-button.itsabutton-iconleft i[class*=" itsaicon-"] {
+  /* set margin-right for more space, NOT on :before; --> that would disturb animation */
+  margin-right: .55em;
+}
+
+button.itsabutton-iconright i[class^="itsaicon-"],
+button.itsabutton-iconright i[class*=" itsaicon-"],
+.pure-button.itsabutton-iconright [class^="itsaicon-"],
+.pure-button.itsabutton-iconright [class*=" itsaicon-"] {
+  /* set margin-right for more space, NOT on :before; --> that would disturb animation */
+  margin-left: .55em;
+}
+
+button.itsabutton-iconleft i.itsa-busy,
+button.itsabutton-iconleft i.animate-spin,
+.pure-button.itsabutton-iconleft i.itsa-busy,
+.pure-button.itsabutton-iconleft i.animate-spin {
+  /* set margin-right for more space, NOT on :before; --> that would disturb animation */
+  margin-right: .25em;
+  margin-left: -0.3em;
+}
+
+button.itsabutton-iconright i.itsa-busy,
+button.itsabutton-iconright i.animate-spin,
+.pure-button.itsabutton-iconright i.itsa-busy,
+.pure-button.itsabutton-iconright i.animate-spin {
+  /* set margin-right for more space, NOT on :before; --> that would disturb animation */
+  margin-left: .25em;
+  margin-right: -0.3em;
+}
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.gallerycss-itsa-base { display: none; }

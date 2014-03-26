@@ -1,0 +1,281 @@
+/*csslint adjoining-classes: false, star-property-hack: false, important: false, unqualified-attributes: false, display-property-grouping: false, box-model: false */
+
+.itsa-widget-parent {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.itsa-invisible {
+    visibility: hidden !important;
+}
+
+.itsa-hotkey {
+    text-decoration: underline;
+}
+
+form [data-focusable="true"] {
+    outline: none;
+}
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Modern browser will hide even without this css
+ * Known issue: no IE 6 support.
+ */
+[hidden],
+label[hidden],
+.pure-form [hidden] {
+    display: none !important;
+}
+
+form [data-changed] {
+    background-color: #FF0;
+}
+
+label[data-labeldatetime][data-changed] {
+    background-color: transparent;
+}
+
+/* adjusting colors for tipsy */
+.yui3-tipsy.tipsy-formelement {
+    background-color: #30418C;
+    color: #F0F1F8;
+}
+.yui3-tipsy.tipsy-formelement .yui3-widget-pointer-left {
+    border-right-color: #30418C;
+}
+.yui3-tipsy.tipsy-formelement-invalid {
+    background-color: #F00;
+    color: #F0F1F8;
+}
+.yui3-tipsy.tipsy-formelement-invalid .yui3-widget-pointer-left {
+    border-right-color: #F00;
+}
+/* end adjusting colors for tipsy */
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ * 4. Addresses box sizing set to content-box in IE 8/9.
+ * 5. Removes excess padding in IE 8/9.
+ * 6. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+ span.formatvalue {
+    font-family: sans-serif;
+    color: #777; /* menu text color */
+    background-color: #EEE;
+    line-height: normal;
+    font-size: 100%; /* 1 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+    *height: 13px; /* 6 */
+    *width: 13px; /* 6 */
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 0.5em 0.75em;
+    margin: 0; /* 2 */
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    cursor: default;
+    -webkit-transition: 0.3s linear border;
+    -moz-transition: 0.3s linear border;
+    -ms-transition: 0.3s linear border;
+    -o-transition: 0.3s linear border;
+    transition: 0.3s linear border;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /* 4 */
+    -webkit-font-smoothing: antialiased;
+}
+
+.pure-form input[type="text"][disabled]:focus,
+.pure-form input[type="password"][disabled]:focus,
+.pure-form input[type="email"][disabled]:focus,
+.pure-form input[type="url"][disabled]:focus,
+.pure-form input[type="date"][disabled]:focus,
+.pure-form input[type="month"][disabled]:focus,
+.pure-form input[type="time"][disabled]:focus,
+.pure-form input[type="datetime"][disabled]:focus,
+.pure-form input[type="datetime-local"][disabled]:focus,
+.pure-form input[type="week"][disabled]:focus,
+.pure-form input[type="number"][disabled]:focus,
+.pure-form input[type="search"][disabled]:focus,
+.pure-form input[type="tel"][disabled]:focus,
+.pure-form input[type="color"][disabled]:focus,
+.pure-form select[disabled]:focus,
+.pure-form textarea[disabled]:focus {
+    border-color: #CCC;
+}
+
+span.formatvalue[disabled] {
+    color: #CAD2D3;
+    background-color: #EAEDED;
+}
+
+.pure-form span.formatvalue {
+    font-size: 0.8em;
+    text-align: center;
+    min-width: 5em;
+}
+
+.pure-form span[data-formelement="true"] {
+    font-size: 90%;
+    vertical-align: top;
+    margin: 0.15em 0;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+div.itsa-widget-parent + label[data-widgetlabel="true"],
+label[data-widgetlabel="true"] + div.itsa-widget-parent,
+div.itsa-widget-parent + span.formatvalue,
+span.formatvalue + div.itsa-widget-parent,
+button[data-datetimepicker="true"] + span.formatvalue,
+span.formatvalue + button[data-datetimepicker="true"],
+input[type="radio"][data-formelement="true"] + span.formatlabel,
+span.formatlabel + input[type="radio"][data-formelement="true"],
+input[type="checkbox"][data-formelement="true"] + span.formatlabel,
+span.formatlabel + input[type="checkbox"][data-formelement="true"] {
+    margin-left: 0.5em;
+}
+
+.pure-form label.switchedlabel,
+.pure-form .pure-controls label.switchedlabel,
+.pure-form .pure-control-group label.switchedlabel,
+.pure-form-stacked .pure-controls label.switchedlabel,
+.pure-form-stacked .pure-control-group label.switchedlabel,
+.pure-form-aligned .pure-controls label.switchedlabel,
+.pure-form-aligned .pure-control-group label.switchedlabel {
+    text-align: left;
+}
+
+.pure-form-aligned .pure-control-group label[data-widgetlabel="true"] + div.itsa-widget-parent {
+    margin-left: 0;
+}
+
+.pure-form-aligned .pure-control-group label[data-labeldatetime="true"] {
+    text-align: left;
+}
+
+.pure-form input:focus[data-valid="false"],
+.pure-form textarea:focus[data-valid="false"] {
+    color: #b94a48;
+    border: 1px solid #ee5f5b;
+}
+
+.pure-form input:focus[data-valid="false"]:focus,
+.pure-form textarea:focus[data-valid="false"]:focus {
+    border-color: #e9322d;
+}
+
+.pure-form.pure-form-showinvalid input[data-valid="false"],
+.pure-form.pure-form-showinvalid textarea[data-valid="false"] {
+    /* with markup false */
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUpJREFUeNpivBIUxEAJYMIhngnEB4D4PxLeBcQJhAxQhGqcBsT2aHKuQDwfiLcDsTQ2A3SB+CqyRmY+PgYmDg4wjQQ8gPgSEKsgG8AGxOuAmBNZJYugIAOPlRUDm7g4usuFgHg1yA6YAckwE5EBt64ug2x2NgOPtTW2cDIA4kCYAVF4g5qREZdMAhOS/zHA70+fGP7+B0bA16+4DNCFGcCPTfbv+/cMf37+ZPj98SMuA/hhBrzGJvsHaMCHrVsZfj16hMuA1zADLmNNZcAo/PvlC8N/3GFwGWbAAmyyXJqaDJLx8Qx85ua4DJgLM2AZEJ/FCMQXLxi+XL7M8OvhQ2yaDwLxVkakzARKxseAWAIl+kCxAKMRABQoJshhAAL3gRjk1uNwEZgmVM37oOrAAc+C5iyQyVZA7A3NeYrQNAIK5JvQsNqNrAEgwAAO6VaUCoOyHgAAAABJRU5ErkJggg==);
+    *background-image: url(invalid.png);
+}
+
+.pure-form.pure-form-showinvalid input[data-valid="false"]:focus,
+.pure-form.pure-form-showinvalid textarea[data-valid="false"]:focus {
+    /* no markup */
+    background-image: none;
+}
+
+.pure-form.pure-form-showvalid input[data-valid="true"],
+.pure-form.pure-form-showvalid textarea[data-valid="true"] {
+    /* with markup true */
+    background-repeat: no-repeat;
+    background-position: 98% center; /* tried to use 'right 3px center', but safari doesn't take that */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASdJREFUeNpiibkQzEAJYMIhngnEB4D4PxI+ABXHa4AiVOE0ILZHk7OHih+AqgMDFiQFckB8Hoj5CbjaHqpOD4gfIbtgPhGaYYAfqh7uhVggdiIx/EDqY2EGJBBS3SFXxNAqm4sunAAzwBif5na5AgYJbisGZkZ2dCljkAHM6H5frL+GYbb6QjC7VTabQZrPhuH518MMFY96MMICZMBfIH6NLBp7MQQo+J1hoc4aBhl+R4YnHw8xVD6aiM1xr2FeuIkuk3Ezg+Hnnw8Mzz4eZah6PAmX727C0sFcILZBl027kUIobOfCXLAYiC+QGI0g9YthBoDCIRQ9LPCA11D1f5FT4h0gtiLCJReg6u5gy0wgQUMgjgbiTUD8FCr+FMqPhsrfgWkACDAAdeFJlrFXYEcAAAAASUVORK5CYII=);
+    *background-image: url(valid.png);
+}
+
+.pure-form.pure-form-showvalid input[type="text"],
+.pure-form.pure-form-showvalid input[type="password"],
+.pure-form.pure-form-showvalid input[type="email"],
+.pure-form.pure-form-showvalid input[type="url"],
+.pure-form.pure-form-showvalid textarea {
+    padding-right: 22px;
+}
+
+.pure-form-stacked div.itsa-widget-parent + label[data-widgetlabel="true"],
+.pure-form-stacked label[data-widgetlabel="true"] + div.itsa-widget-parent,
+.pure-form-stacked div.itsa-widget-parent + span.formatvalue,
+.pure-form-stacked span.formatvalue + div.itsa-widget-parent,
+.pure-form-stacked button[data-datetimepicker="true"] + span.formatvalue,
+.pure-form-stacked span.formatvalue + button[data-datetimepicker="true"],
+.pure-form-stacked .itsa-widget-parent {
+    display: block;
+    clear: both;
+    margin: 0.25em 0;
+}
+
+/* overrule pure-css its valid marking, because pattern validation sucks: better be done by [data-valid]; */
+.pure-form-aligned textarea[data-formelement="true"],
+.itsa-widget-parent[data-type="editorBase"] {
+    vertical-align: top;
+}
+
+/* overrule pure-css its valid marking, because pattern validation sucks: better be done by [data-valid]; */
+.pure-form.pure-form-showinvalid input:focus:invalid[data-valid="true"],
+.pure-form.pure-form-showinvalid textarea:focus:invalid[data-valid="true"],
+.pure-form.pure-form-showinvalid input:focus:invalid:focus[data-valid="true"],
+.pure-form.pure-form-showinvalid textarea:focus:invalid:focus[data-valid="true"] {
+    color: #000;
+    border-color: #129FEA;
+}
+
+/* overrule pure-css its valid marking, because pattern validation sucks: better be done by [data-valid]; */
+.pure-form input:focus[data-valid="false"],
+.pure-form textarea:focus[data-valid="false"] {
+    color: #b94a48;
+    border: 1px solid #ee5f5b;
+}
+.pure-form input:focus[data-valid="false"]:focus,
+.pure-form textarea:focus[data-valid="false"]:focus {
+    border-color: #e9322d;
+}
+
+/* overrule pure-css its button:focus weight and set it darkener*/
+.pure-form .pure-button-hover,
+.pure-form .pure-button:hover,
+.pure-form .pure-button:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.20)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.20));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.20));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.20));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.20));
+}
+
+.itsabutton-bordered.pure-button:active,
+.itsabutton-bordered.pure-button.pure-button-active,
+.pure-button.itsabutton-bordered.pure-button:active,
+.pure-button.itsabutton-bordered.pure-button.pure-button-active,
+.pure-button.pure-button-active:focus,
+.pure-button-hover:focus,
+.pure-button:hover:focus,
+.pure-button-active:focus,
+.pure-button:active:focus,
+.pure-button-active:hover:focus,
+.pure-button-hover:active:focus,
+.pure-button:active:hover:focus,
+.pure-button-hover.pure-button-active:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#4d000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.30)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.30));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.30));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.30));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.30));
+}

@@ -1,0 +1,34 @@
+.yui3-tipsy.yui3-popover {
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.yui3-popover .yui3-popover-content .yui3-widget-hd {
+    width: 100%;
+    font-size: 130%;
+    font-weight: bold;
+    background: black;
+    padding: 0.3em 0.5em;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.yui3-popover .yui3-popover-content {
+    width: 100%;
+    color: #333;
+    background: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.yui3-popover .yui3-popover-content .yui3-widget-bd {
+    padding: 1em;
+}
+
+.yui3-popover .yui3-widget-ft {
+    background: #eee;
+    text-align: center;
+    padding: 1em;
+    color: #666;
+}

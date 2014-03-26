@@ -1,0 +1,64 @@
+.yui3-skin-sam .yui3-inspector {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.yui3-skin-sam .yui3-inspector-hidden { display: none; }
+
+.yui3-skin-sam .yui3-inspector-hd {
+    padding: 6px 10px;
+    position: relative;
+    text-align: right;
+}
+
+.yui3-skin-sam .yui3-inspector-title {
+    margin: 0;
+    float: left;
+    line-height: 1.7;
+}
+
+.yui3-skin-sam .yui3-inspector-bd {
+    position: relative;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.yui3-skin-sam .yui3-inspector-ft {
+    font-size: 12px;
+    padding: 4px 6px 3px;
+    position: relative;
+}
+
+.yui3-skin-sam .yui3-inspector-filter {
+    float: right;
+    height: 1.1em;
+    margin: -1px 5px 0 0;
+    width: 50%;
+}
+
+.yui3-skin-sam .yui3-inspector table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    padding: 0;
+}
+
+.yui3-skin-sam .yui3-inspector-value-cell {
+    font: normal 12px/1.3 Monaco, Consolas, monospace;
+}
+
+.yui3-skin-sam .yui3-inspector th,
+.yui3-skin-sam .yui3-inspector td {
+    padding: 4px 6px;
+    word-wrap: break-word;
+    text-align: left;
+    vertical-align: top;
+}
+
+.yui3-skin-sam .yui3-dd-draggable .yui3-inspector-hd { cursor: move; }
+.yui3-skin-sam .yui3-dd-locked    .yui3-inspector-hd { cursor: default; }
+
+.yui3-skin-sam .yui3-inspector-collapsed .yui3-inspector-bd,
+.yui3-skin-sam .yui3-inspector-collapsed .yui3-inspector-ft { display: none; }

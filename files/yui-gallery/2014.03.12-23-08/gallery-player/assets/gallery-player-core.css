@@ -1,0 +1,23 @@
+.yui-player {position: relative;}
+.yui-player-focused {outline: none;}
+.yui-player-controls {position: absolute; top: 0; left: 0;width: 438px; height: 59px; overflow: hidden; background: url('http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-player/assets/images/bg.png') transparent no-repeat;}
+.yui-player-controls img {cursor: pointer;}
+.yui-player-controls span {position: absolute; cursor: default; color: #fff; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold;}
+.yui-player-fullscreen {position: absolute; top: 13px; right: 13px;}
+.yui-player-play {position: absolute; top: 8px; left: 208px;}
+.yui-player-pause {position: absolute; top: 8px; left: 208px;}
+.yui-player-rewind {position: absolute; top: 12px; left: 159px;}
+.yui-player-forward {position: absolute; top: 12px; left: 245px;}
+.yui-player-progress {top: -2px; left: -50px;}
+.yui-player-length {top: -2px; right: -50px;}
+.yui-player-volume {width: 50px; height: 10px; position: absolute; top: 16px; left: 28px;z-index: 2;}
+.yui-player-scrubber_bar {width: 316px; height: 8px; position: absolute; top: 40px; left: 60px;}
+.yui-player img.volume_icons {position: absolute; top: 14px; left: 11px; z-index: 1;}
+.yui-slider-focused {outline: 0;}
+
+/* Styles for example page: */
+body {background-color: #333;}
+div {margin: 0 auto;}
+div.disclaimer {text-align: center; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 9px; color: #FFF;}
+h1 {letter-spacing: -2px; text-align: center; font-family: Helvetica, 'Lucida Grande', Arial, sans-serif; font-size: 48px; color: #FFF;}
+a {color: #FFF;}

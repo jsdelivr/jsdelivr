@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-list-format_zh",function(e){e.Intl.add("gallery-list-format","zh",{listPatternEnd:"{0}\u548c{1}",listPatternMiddle:"{0}\u3001{1}",listPatternStart:"{0}\u3001{1}",listPatternTwo:"{0}\u548c{1}"})},"gallery-2013.04.17-18-52");

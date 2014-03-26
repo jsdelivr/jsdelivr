@@ -1,0 +1,35 @@
+.yui3-loadingmask-masked {
+	overflow: hidden !important;
+}
+
+.yui3-loadingmask-masked-relative {
+	position: relative !important;
+}
+
+.yui3-loadingmask {
+    height: 100%;
+	width: 100%;
+    zoom: 1;
+}
+
+.yui3-loadingmask-content {
+	background: #ccc;
+}
+
+.yui3-loadingmask-message {
+	background: #eee;
+	border: 1px solid;
+	border-color: #bbb #999 #999 #bbb;
+	left: 50%;
+	padding: 2px;
+	position: absolute;
+	top: 50%;
+}
+
+.yui3-loadingmask-message-content {
+	background: #fff url(http://yui.yahooapis.com/build/gallery-aui-skin-base/images/loading_indicator.gif) no-repeat 5px 50%;
+	border: 1px solid #ccc;
+	color: #111;
+	line-height: 1;
+	padding: 5px 10px 5px 25px;
+}

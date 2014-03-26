@@ -1,0 +1,126 @@
+/* ---------- Interaction styles ---------- */
+
+.yui3-state-default,
+.yui3-state-active,
+.yui3-state-hover {
+	background: #eee;
+	border: 1px solid #ccc;
+	border-color: #bbb #999 #999 #bbb;
+}
+
+.yui3-state-active {
+	background: #efefef;
+	border-color: #333;
+}
+
+.yui3-state-hover {
+	background: #ddd;
+	border-color: #999 #bbb #bbb #999;
+	cursor: pointer;
+}
+
+.yui3-state-disabled {
+	cursor: default !important;
+}
+
+.yui3-state-highlight {
+
+}
+
+.yui3-state-error {
+
+}
+
+.yui3-state-error-text {
+
+}
+
+.yui3-priority-primary {
+
+}
+
+.yui3-priority-secondary {
+
+}
+
+.yui3-html-template {
+	display: none;
+}
+
+.yui3-helper-hidden {
+	display: none !important;
+}
+
+.yui3-helper-hidden-accessible,
+.yui3-overlay-hidden,
+.yui3-overlaycontext-hidden,
+.yui3-overlaymask-hidden,
+.yui3-calendar-hidden,
+.yui3-datepicker-hidden,
+.yui3-colorpicker-hidden,
+.yui3-tooltip-hidden,
+.yui3-image-viewer-hidden,
+.yui3-image-gallery-hidden {
+	clip: rect(0 0 0 0);
+	position: absolute;
+}
+
+.yui3-helper-reset {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+	border: 0;
+}
+
+.yui3-helper-clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+
+.yui3-helper-clearfix {
+	/* IE7/IE6 */
+	zoom: 1;
+}
+
+.yui3-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+
+	/* IE8 */
+	-ms-filter: alpha(opacity=0);
+	/* IE7/IE8(quirks) */
+	filter: alpha(opacity=0);
+}
+
+/* unselectable */
+
+.yui3-helper-unselectable, .yui3-helper-unselectable * {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+}
+
+/* scroll lock */
+.yui3-helper-scroll-lock {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+/*
+The rules below set the base font size and background color. These are best overwritten inside of custom.css.
+*/
+
+body {
+	background-color: #FFF;
+	font: 62.5%/1.6em Arial,Helvetica,Verdana,sans-serif;
+}

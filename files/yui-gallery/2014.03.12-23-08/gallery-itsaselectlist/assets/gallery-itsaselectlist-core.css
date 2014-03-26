@@ -1,0 +1,172 @@
+/*csslint adjoining-classes: false, star-property-hack: false */
+.yui3-js-enabled .yui3-itsaselectlist-loading {
+    display: none;
+}
+
+.yui3-itsaselectlist-content {
+    display: none;
+}
+
+.yui3-itsaselectlist-disabled .itsa-selectlist-basediv {
+    display: none;
+}
+
+.itsa-selectlist-selectedmain {
+    float: left;
+    padding-left:6px;
+    padding-top: 1px;
+    line-height: 100%;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-small .yui3-button {
+    height:25px;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-medium .yui3-button {
+    height:29px;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-small .itsa-selectlist-selectedmain {
+    padding-left: 4px;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-medium .itsa-selectlist-selectedmain {
+    padding-left: 5px;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-small .itsa-icon-selectdown {
+    background-position: 4px -1140px;
+}
+
+.yui3-itsaselectlist.itsa-buttonsize-medium .itsa-icon-selectdown {
+    background-position: 4px -1140px;
+}
+
+.yui3-itsaselectlist .yui3-button {
+    padding: 4px 3px 0;
+    cursor: pointer;
+    height: 32px;
+}
+
+.itsa-shim {
+    border: 0 none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.yui3-itsaselectlist {
+    display: inline;
+    position: relative;
+    float:left;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 13px;
+    font-family: verdana;
+    vertical-align: middle;
+}
+
+.yui3-itsaselectlist.itsa-rightalign .itsa-selectlist-basediv {
+    right: 0;
+    text-align: right;
+}
+
+.yui3-itsaselectlist.itsa-leftalign .itsa-selectlist-basediv {
+    left: 0;
+    text-align: left;
+}
+
+.itsa-selectlist-basediv {
+    position: absolute;
+    z-index: 1001;
+    cursor:pointer;
+    overflow: hidden;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: #FDFDFD;
+    border: 1px solid #999;border:none rgba(0,0,0,0);
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.4), 3px 3px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 1px 1px rgba(0,0,0,0.4), 3px 3px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.4), 3px 3px 3px rgba(0,0,0,0.15);
+}
+
+.itsa-selectlist-scrolldiv {
+    position: relative;
+}
+
+.yui3-itsaselectlist li:hover {
+    background-color: #B3D4FF;
+}
+
+.itsa-selectlist-basediv ul li:before,
+.itsa-selectlist-basediv ul li:after {
+    content: '';
+    padding: 0;
+    margin: 0;
+}
+
+.itsa-selectlist-basediv li {
+    white-space:nowrap;
+    list-style: none;
+}
+
+.yui3-itsaselectlist.itsa-rightalign li {
+    padding-left: 8px;
+    padding-right: 22px;
+    background-position: right -4591px;
+}
+
+.yui3-itsaselectlist.itsa-leftalign li {
+    padding-left: 21px;
+    padding-right: 8px;
+    background-position: left -4591px;
+}
+
+.yui3-itsaselectlist.itsa-rightalign .itsa-selectlist-selectedmain {
+    float: right;
+}
+
+.itsa-selectlist-ullist {
+    padding: 2px 2px 4px 2px;
+}
+
+.itsa-selectlist-selected {
+    background-repeat: no-repeat;
+}
+
+.itsa-hidden {
+    display: none;
+}
+
+.itsa-button-icon {
+    /* cross browser inline block */
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+    background-repeat: no-repeat;
+}
+
+.itsa-icon-selectdown {
+    float:right;
+    background-position: 4px -1139px;
+    height:18px;
+    width: 15px;
+}

@@ -1,0 +1,25 @@
+.yui3-sortable {
+}
+
+.yui3-sortable-item {
+}
+
+.yui3-sortable-proxy {
+	background: #ccc;
+}
+
+.yui3-sortable-placeholder {
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ccc;
+	background: #eee;
+}
+
+.yui3-sortable-dragging {
+	visibility: hidden;
+}
+
+.yui3-sortable-handle,
+.yui3-sortable-no-handles {
+	cursor: move;
+}

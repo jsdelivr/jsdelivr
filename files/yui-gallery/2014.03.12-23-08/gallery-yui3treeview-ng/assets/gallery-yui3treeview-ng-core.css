@@ -1,0 +1,18 @@
+
+.yui3-js-enabled .yui3-treeview-hidden,
+.yui3-js-enabled .yui3-treeview-loading {
+    display: none;
+}
+
+.yui3-js-enabled .yui3-treenode {
+    list-style: none;
+}
+
+.yui3-js-enabled .yui3-treenode-label {
+	text-decoration: none;
+}
+
+.yui3-js-enabled .yui3-treenode-collapsed .yui3-treenode-content {
+    display: none;
+}
+

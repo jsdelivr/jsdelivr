@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-list-format_ta",function(e){e.Intl.add("gallery-list-format","ta",{listPatternEnd:"{0} \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd {1}",listPatternTwo:"{0} \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd {1}"})},"gallery-2013.04.17-18-52");

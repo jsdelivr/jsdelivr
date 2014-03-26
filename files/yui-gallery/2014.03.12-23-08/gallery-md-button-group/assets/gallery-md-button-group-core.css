@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+/*
+ Skin derived from Anthony Pipkin's gallery-button component
+*/
+.yui3-buttongroup {
+	display: inline-block;
+}
+.yui3-buttonseparator {
+	border: 1px outset gray;
+	display: inline-block;
+	margin: 0 3px;
+	padding: 2px 0;
+	vertical-align: top;
+}
+.yui3-buttonseparator-content {
+	 height: 20px;
+}

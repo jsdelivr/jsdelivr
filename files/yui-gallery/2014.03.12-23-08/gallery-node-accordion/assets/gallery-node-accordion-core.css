@@ -1,0 +1,32 @@
+.yui3-accordion {
+    position: relative;
+    zoom: 1;
+}
+.yui3-accordion .yui3-accordion-item {
+    display: block;
+}
+.yui3-accordion .yui3-accordion-item .yui3-accordion-item-hd {
+}
+.yui3-accordion .yui3-accordion-item .yui3-accordion-item-bd {
+    height: 0;
+    _height: 1px;
+    *height: 1px;
+    overflow: hidden;
+    zoom: 1;
+}
+.yui3-accordion .yui3-accordion-item-active .yui3-accordion-item-bd {
+    height: auto;
+}
+.yui3-accordion-hidden {
+    /* absolute position off-screen and box collapsing used to
+       avoid display:none, which causes issues for some content (firefox
+       restarts flash movies) */
+    border:0;
+    height:0;
+    width:0;
+    padding:0;
+    position:absolute;
+    left:-999999px;
+    overflow:hidden;
+    visibility:hidden;
+}

@@ -1,0 +1,707 @@
+.yui3-icon {
+	background-repeat: no-repeat;
+	background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-skin-classic/images/icon_sprite.png) no-repeat 0 0;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99999em;
+	width: 16px;
+}
+
+.yui3-icon-carat-1-t {
+	background-position: 0 0; 
+}
+
+.yui3-icon-carat-1-tr {
+	background-position: -16px 0; 
+}
+
+.yui3-icon-carat-1-r {
+	background-position: -32px 0; 
+}
+
+.yui3-icon-carat-1-br {
+	background-position: -48px 0; 
+}
+
+.yui3-icon-carat-1-b {
+	background-position: -64px 0; 
+}
+
+.yui3-icon-carat-1-bl {
+	background-position: -80px 0; 
+}
+
+.yui3-icon-carat-1-l {
+	background-position: -96px 0; 
+}
+
+.yui3-icon-carat-1-tl {
+	background-position: -112px 0; 
+}
+
+.yui3-icon-carat-2-t-b {
+	background-position: -128px 0; 
+}
+
+.yui3-icon-carat-2-r-l {
+	background-position: -144px 0; 
+}
+
+.yui3-icon-triangle-1-t {
+	background-position: 0 -16px; 
+}
+
+.yui3-icon-triangle-1-tr {
+	background-position: -16px -16px; 
+}
+
+.yui3-icon-triangle-1-r {
+	background-position: -32px -16px; 
+}
+
+.yui3-icon-triangle-1-br {
+	background-position: -48px -16px; 
+}
+
+.yui3-icon-triangle-1-b {
+	background-position: -64px -16px; 
+}
+
+.yui3-icon-triangle-1-bl {
+	background-position: -80px -16px; 
+}
+
+.yui3-icon-triangle-1-l {
+	background-position: -96px -16px; 
+}
+
+.yui3-icon-triangle-1-tl {
+	background-position: -112px -16px; 
+}
+
+.yui3-icon-triangle-2-t-b {
+	background-position: -128px -16px; 
+}
+
+.yui3-icon-triangle-2-r-l {
+	background-position: -144px -16px; 
+}
+
+.yui3-icon-arrow-1-t {
+	background-position: 0 -32px; 
+}
+
+.yui3-icon-arrow-1-tr {
+	background-position: -16px -32px; 
+}
+
+.yui3-icon-arrow-1-r {
+	background-position: -32px -32px; 
+}
+
+.yui3-icon-arrow-1-br {
+	background-position: -48px -32px; 
+}
+
+.yui3-icon-arrow-1-b {
+	background-position: -64px -32px; 
+}
+
+.yui3-icon-arrow-1-bl {
+	background-position: -80px -32px; 
+}
+
+.yui3-icon-arrow-1-l {
+	background-position: -96px -32px; 
+}
+
+.yui3-icon-arrow-1-tl {
+	background-position: -112px -32px; 
+}
+
+.yui3-icon-arrow-2-t-b {
+	background-position: -128px -32px; 
+}
+
+.yui3-icon-arrow-2-tr-bl {
+	background-position: -144px -32px; 
+}
+
+.yui3-icon-arrow-2-r-l {
+	background-position: -160px -32px; 
+}
+
+.yui3-icon-arrow-2-br-tl {
+	background-position: -176px -32px; 
+}
+
+.yui3-icon-arrowstop-1-t {
+	background-position: -192px -32px; 
+}
+
+.yui3-icon-arrowstop-1-r {
+	background-position: -208px -32px; 
+}
+
+.yui3-icon-arrowstop-1-b {
+	background-position: -224px -32px; 
+}
+
+.yui3-icon-arrowstop-1-l {
+	background-position: -240px -32px; 
+}
+
+.yui3-icon-arrowthick-1-t {
+	background-position: 0 -48px; 
+}
+
+.yui3-icon-arrowthick-1-tr {
+	background-position: -16px -48px; 
+}
+
+.yui3-icon-arrowthick-1-r {
+	background-position: -32px -48px; 
+}
+
+.yui3-icon-arrowthick-1-br {
+	background-position: -48px -48px; 
+}
+
+.yui3-icon-arrowthick-1-b {
+	background-position: -64px -48px; 
+}
+
+.yui3-icon-arrowthick-1-bl {
+	background-position: -80px -48px; 
+}
+
+.yui3-icon-arrowthick-1-l {
+	background-position: -96px -48px; 
+}
+
+.yui3-icon-arrowthick-1-tl {
+	background-position: -112px -48px; 
+}
+
+.yui3-icon-arrowthick-2-t-b {
+	background-position: -128px -48px; 
+}
+
+.yui3-icon-arrowthick-2-tr-bl {
+	background-position: -144px -48px; 
+}
+
+.yui3-icon-arrowthick-2-r-l {
+	background-position: -160px -48px; 
+}
+
+.yui3-icon-arrowthick-2-br-tl {
+	background-position: -176px -48px; 
+}
+
+.yui3-icon-arrowthickstop-1-t {
+	background-position: -192px -48px; 
+}
+
+.yui3-icon-arrowthickstop-1-r {
+	background-position: -208px -48px; 
+}
+
+.yui3-icon-arrowthickstop-1-b {
+	background-position: -224px -48px; 
+}
+
+.yui3-icon-arrowthickstop-1-l {
+	background-position: -240px -48px; 
+}
+
+.yui3-icon-arrowreturnthick-1-l {
+	background-position: 0 -64px; 
+}
+
+.yui3-icon-arrowreturnthick-1-t {
+	background-position: -16px -64px; 
+}
+
+.yui3-icon-arrowreturnthick-1-r {
+	background-position: -32px -64px; 
+}
+
+.yui3-icon-arrowreturnthick-1-b {
+	background-position: -48px -64px; 
+}
+
+.yui3-icon-arrowreturn-1-l {
+	background-position: -64px -64px; 
+}
+
+.yui3-icon-arrowreturn-1-t {
+	background-position: -80px -64px; 
+}
+
+.yui3-icon-arrowreturn-1-r {
+	background-position: -96px -64px; 
+}
+
+.yui3-icon-arrowreturn-1-b {
+	background-position: -112px -64px; 
+}
+
+.yui3-icon-arrowrefresh-1-l {
+	background-position: -128px -64px; 
+}
+
+.yui3-icon-arrowrefresh-1-t {
+	background-position: -144px -64px; 
+}
+
+.yui3-icon-arrowrefresh-1-r {
+	background-position: -160px -64px; 
+}
+
+.yui3-icon-arrowrefresh-1-b {
+	background-position: -176px -64px; 
+}
+
+.yui3-icon-arrow-4 {
+	background-position: 0 -80px; 
+}
+
+.yui3-icon-arrow-4-diag {
+	background-position: -16px -80px; 
+}
+
+.yui3-icon-extlink {
+	background-position: -32px -80px; 
+}
+
+.yui3-icon-newwin {
+	background-position: -48px -80px; 
+}
+
+.yui3-icon-refresh {
+	background-position: -64px -80px; 
+}
+
+.yui3-icon-shuffle {
+	background-position: -80px -80px; 
+}
+
+.yui3-icon-transfer-r-l {
+	background-position: -96px -80px; 
+}
+
+.yui3-icon-transferthick-r-l {
+	background-position: -112px -80px; 
+}
+
+.yui3-icon-folder-collapsed {
+	background-position: 0 -96px; 
+}
+
+.yui3-icon-folder-open {
+	background-position: -16px -96px; 
+}
+
+.yui3-icon-document {
+	background-position: -32px -96px; 
+}
+
+.yui3-icon-document-b {
+	background-position: -48px -96px; 
+}
+
+.yui3-icon-note {
+	background-position: -64px -96px; 
+}
+
+.yui3-icon-mail-closed {
+	background-position: -80px -96px; 
+}
+
+.yui3-icon-mail-open {
+	background-position: -96px -96px; 
+}
+
+.yui3-icon-suitcase {
+	background-position: -112px -96px; 
+}
+
+.yui3-icon-comment {
+	background-position: -128px -96px; 
+}
+
+.yui3-icon-person {
+	background-position: -144px -96px; 
+}
+
+.yui3-icon-print {
+	background-position: -160px -96px; 
+}
+
+.yui3-icon-trash {
+	background-position: -176px -96px; 
+}
+
+.yui3-icon-locked {
+	background-position: -192px -96px; 
+}
+
+.yui3-icon-unlocked {
+	background-position: -208px -96px; 
+}
+
+.yui3-icon-bookmark {
+	background-position: -224px -96px; 
+}
+
+.yui3-icon-tag {
+	background-position: -240px -96px; 
+}
+
+.yui3-icon-home {
+	background-position: 0 -112px; 
+}
+
+.yui3-icon-flag {
+	background-position: -16px -112px; 
+}
+
+.yui3-icon-calendar {
+	background-position: -32px -112px; 
+}
+
+.yui3-icon-cart {
+	background-position: -48px -112px; 
+}
+
+.yui3-icon-pencil {
+	background-position: -64px -112px; 
+}
+
+.yui3-icon-clock {
+	background-position: -80px -112px; 
+}
+
+.yui3-icon-disk {
+	background-position: -96px -112px; 
+}
+
+.yui3-icon-calculator {
+	background-position: -112px -112px; 
+}
+
+.yui3-icon-zoomin {
+	background-position: -128px -112px; 
+}
+
+.yui3-icon-zoomout {
+	background-position: -144px -112px; 
+}
+
+.yui3-icon-search {
+	background-position: -160px -112px; 
+}
+
+.yui3-icon-wrench {
+	background-position: -176px -112px; 
+}
+
+.yui3-icon-gear {
+	background-position: -192px -112px; 
+}
+
+.yui3-icon-heart {
+	background-position: -208px -112px; 
+}
+
+.yui3-icon-star {
+	background-position: -224px -112px; 
+}
+
+.yui3-icon-link {
+	background-position: -240px -112px; 
+}
+
+.yui3-icon-cancel {
+	background-position: 0 -128px; 
+}
+
+.yui3-icon-plus {
+	background-position: -16px -128px; 
+}
+
+.yui3-icon-plusthick {
+	background-position: -32px -128px; 
+}
+
+.yui3-icon-minus {
+	background-position: -48px -128px; 
+}
+
+.yui3-icon-minusthick {
+	background-position: -64px -128px; 
+}
+
+.yui3-icon-close {
+	background-position: -80px -128px; 
+}
+
+.yui3-icon-closethick {
+	background-position: -96px -128px; 
+}
+
+.yui3-icon-key {
+	background-position: -112px -128px; 
+}
+
+.yui3-icon-lightbulb {
+	background-position: -128px -128px; 
+}
+
+.yui3-icon-scissors {
+	background-position: -144px -128px; 
+}
+
+.yui3-icon-clipboard {
+	background-position: -160px -128px; 
+}
+
+.yui3-icon-copy {
+	background-position: -176px -128px; 
+}
+
+.yui3-icon-contact {
+	background-position: -192px -128px; 
+}
+
+.yui3-icon-image {
+	background-position: -208px -128px; 
+}
+
+.yui3-icon-video {
+	background-position: -224px -128px; 
+}
+
+.yui3-icon-script {
+	background-position: -240px -128px; 
+}
+
+.yui3-icon-alert {
+	background-position: 0 -144px; 
+}
+
+.yui3-icon-info {
+	background-position: -16px -144px; 
+}
+
+.yui3-icon-notice {
+	background-position: -32px -144px; 
+}
+
+.yui3-icon-help {
+	background-position: -48px -144px; 
+}
+
+.yui3-icon-check {
+	background-position: -64px -144px; 
+}
+
+.yui3-icon-bullet {
+	background-position: -80px -144px; 
+}
+
+.yui3-icon-radio-off {
+	background-position: -96px -144px; 
+}
+
+.yui3-icon-radio-on {
+	background-position: -112px -144px; 
+}
+
+.yui3-icon-pin-l {
+	background-position: -128px -144px; 
+}
+
+.yui3-icon-pin-b {
+	background-position: -144px -144px; 
+}
+
+.yui3-icon-play {
+	background-position: 0 -160px; 
+}
+
+.yui3-icon-pause {
+	background-position: -16px -160px; 
+}
+
+.yui3-icon-seek-next {
+	background-position: -32px -160px; 
+}
+
+.yui3-icon-seek-prev {
+	background-position: -48px -160px; 
+}
+
+.yui3-icon-seek-end {
+	background-position: -64px -160px; 
+}
+
+.yui3-icon-seek-first {
+	background-position: -80px -160px; 
+}
+
+.yui3-icon-stop {
+	background-position: -96px -160px; 
+}
+
+.yui3-icon-eject {
+	background-position: -112px -160px; 
+}
+
+.yui3-icon-volume-off {
+	background-position: -128px -160px; 
+}
+
+.yui3-icon-volume-on {
+	background-position: -144px -160px; 
+}
+
+.yui3-icon-power {
+	background-position: 0 -176px; 
+}
+
+.yui3-icon-signal-diag {
+	background-position: -16px -176px; 
+}
+
+.yui3-icon-signal {
+	background-position: -32px -176px; 
+}
+
+.yui3-icon-battery-0 {
+	background-position: -48px -176px; 
+}
+
+.yui3-icon-battery-1 {
+	background-position: -64px -176px; 
+}
+
+.yui3-icon-battery-2 {
+	background-position: -80px -176px; 
+}
+
+.yui3-icon-battery-3 {
+	background-position: -96px -176px; 
+}
+
+.yui3-icon-circle-plus {
+	background-position: 0 -192px; 
+}
+
+.yui3-icon-circle-minus {
+	background-position: -16px -192px; 
+}
+
+.yui3-icon-circle-close {
+	background-position: -32px -192px; 
+}
+
+.yui3-icon-circle-triangle-r {
+	background-position: -48px -192px; 
+}
+
+.yui3-icon-circle-triangle-b {
+	background-position: -64px -192px; 
+}
+
+.yui3-icon-circle-triangle-l {
+	background-position: -80px -192px; 
+}
+
+.yui3-icon-circle-triangle-t {
+	background-position: -96px -192px; 
+}
+
+.yui3-icon-circle-arrow-r {
+	background-position: -112px -192px; 
+}
+
+.yui3-icon-circle-arrow-b {
+	background-position: -128px -192px; 
+}
+
+.yui3-icon-circle-arrow-l {
+	background-position: -144px -192px; 
+}
+
+.yui3-icon-circle-arrow-t {
+	background-position: -160px -192px; 
+}
+
+.yui3-icon-circle-zoomin {
+	background-position: -176px -192px; 
+}
+
+.yui3-icon-circle-zoomout {
+	background-position: -192px -192px; 
+}
+
+.yui3-icon-circle-check {
+	background-position: -208px -192px; 
+}
+
+.yui3-icon-circlesmall-plus {
+	background-position: 0 -208px; 
+}
+
+.yui3-icon-circlesmall-minus {
+	background-position: -16px -208px; 
+}
+
+.yui3-icon-circlesmall-close {
+	background-position: -32px -208px; 
+}
+
+.yui3-icon-squaresmall-plus {
+	background-position: -48px -208px; 
+}
+
+.yui3-icon-squaresmall-minus {
+	background-position: -64px -208px; 
+}
+
+.yui3-icon-squaresmall-close {
+	background-position: -80px -208px; 
+}
+
+.yui3-icon-grip-dotted-vertical {
+	background-position: 0 -224px; 
+}
+
+.yui3-icon-grip-dotted-horizontal {
+	background-position: -16px -224px; 
+}
+
+.yui3-icon-grip-solid-vertical {
+	background-position: -32px -224px; 
+}
+
+.yui3-icon-grip-solid-horizontal {
+	background-position: -48px -224px; 
+}
+
+.yui3-icon-gripsmall-diagonal-br {
+	background-position: -64px -224px; 
+}
+
+.yui3-icon-grip-diagonal-br {
+	background-position: -80px -224px; 
+}
+
+.yui3-icon-loading {
+	background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-skin-classic/images/loading_indicator.gif) no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+}

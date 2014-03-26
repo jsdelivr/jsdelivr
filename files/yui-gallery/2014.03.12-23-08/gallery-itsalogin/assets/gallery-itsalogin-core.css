@@ -1,0 +1,34 @@
+/*csslint adjoining-classes: false, star-property-hack: false */
+
+.itsa-dialog .itsa-login {
+    text-align: right;
+    padding-right: 0.1em;
+    width: 100%;
+}
+
+.itsa-dialog input.itsa-login {
+    text-align: left;
+    width: 15em;
+}
+
+.itsa-dialog .itsa-login-checkbox {
+    text-align: left;
+    display: block;
+    float: right;
+    width: 12em;
+}
+
+.itsa-dialog .itsa-dialog-forgotbutton {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    clear: both;
+}
+
+.itsa-dialog .itsa-dialog-forgotbutton.itsadialog-firstbutton {
+    margin-top: 2em;
+}
+
+.itsa-dialog .itsa-dialog-forgotbutton button {
+    min-width: 220px;
+}

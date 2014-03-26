@@ -1,0 +1,104 @@
+.yui3-skin-sam .yui3-accordion {
+    border: 1px solid #93B2CC;
+}
+
+.yui3-skin-sam .yui3-accordion-item .yui3-widget-hd {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px 0px;
+    border: 1px solid #93B2CC;
+    height: 25px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-icon,
+.yui3-skin-sam .yui3-accordion-item-iconexpanded,
+.yui3-skin-sam .yui3-accordion-item-iconalwaysvisible,
+.yui3-skin-sam .yui3-accordion-item-iconclose {
+    background-repeat: no-repeat;
+}
+    
+.yui3-skin-sam .yui3-accordion-item-icon {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: center -25px;
+    _background-position: center -27px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-label{
+    color: #444444;
+}
+
+.yui3-skin-sam .yui3-accordion-item-label {
+    text-decoration: none;
+    background: transparent;
+    overflow: hidden;
+    color: #444444;
+    font-weight: bold;
+}
+
+.yui3-skin-sam .yui3-accordion-item-label:hover{
+    text-decoration: underline;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconalwaysvisible,
+.yui3-skin-sam .yui3-accordion-item-iconalwaysvisible-off {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -85px;
+    _background-position: 0px -87px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconalwaysvisible-on {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -55px;
+    _background-position: 0px -57px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded,
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-off {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -175px;
+    _background-position: 0px -177px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-off:hover{
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -205px;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-on {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -115px;
+    _background-position: 0px -117px;
+}
+
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-on:hover {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -145px;
+}
+
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-expanding {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/wait_expand.gif );
+    background-position: 0px center;
+}
+
+
+.yui3-skin-sam .yui3-accordion-item-iconexpanded-collapsing {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/wait_collapse.gif );
+    background-position: 0px center;
+}
+
+.yui3-skin-sam .yui3-accordion-item-iconclose {
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-accordion/assets/skins/sam/accordion_sprite.png );
+    background-position: 0px -235px;
+    _background-position: 0px -237px;
+}
+
+
+.yui3-skin-sam .yui3-accordion-proxyel-visible {
+    border-color : blue;
+    color : white;
+    font-weight : bold;
+    background-color : red;
+    opacity : 0.7;
+    filter: alpha(opacity = 70);
+} 

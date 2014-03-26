@@ -1,0 +1,1 @@
+YUI.add("gallery-log-filter",function(a){a.LogFilter={addLevelFilter:function(c){var b=a.config.logFn;a.config.logFn=function(f,d,e){if(a.Array.indexOf(c,d)>=0){b.apply(this,arguments);}};},addFilter:function(c){var b=a.config.logFn;a.config.logFn=function(f,d,e){if(c.call(this,f,d,e)){b.apply(this,arguments);}};}};},"gallery-2012.08.15-20-00");

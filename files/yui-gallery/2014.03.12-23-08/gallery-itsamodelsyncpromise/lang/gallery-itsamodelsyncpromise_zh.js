@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-itsamodelsyncpromise_zh",function(e){e.Intl.add("gallery-itsamodelsyncpromise","zh",{load:"\u6578\u64da\u8f09\u5165\u4e2d...",reload:"\u6578\u64da\u8f09\u5165\u4e2d...",update:"\u66f4\u65b0\u6578\u64da...",submit:"\u63d0\u4ea4\u6578\u64da...",save:"\u66f4\u65b0\u6578\u64da...",destroy:"\u66f4\u65b0\u6578\u64da..."})},"gallery-2014.01.28-00-45");

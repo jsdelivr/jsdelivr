@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2012 by original authors @ fontello.com</metadata>
+<defs>
+<font id="datetime" horiz-adv-x="1000" >
+<font-face font-family="datetime" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="time" unicode="&#xe801;" d="M0 350q0 207 146 353t353 146 353-146 146-353-146-353-353-146-353 146-146 353z m268 90l236-236 338 338-90 90-248-248-146 146-10-10-70-70z" horiz-adv-x="1000" />
+<glyph glyph-name="date" unicode="&#xe800;" d="M0-150l0 648 893 0 0-648-893 0z m0 705l0 221 109 0 0-141 199 0 0 141 275 0 0-141 199 0 0 141 109 0 0-221-893 0z m168 139l0 156 82 0 0-156-82 0z m59-619q0-111 123-111 47 0 84 31 39 31 39 80 0 68-78 90 49 16 64 49 12 27-2 72-27 62-107 62-51 0-86-26t-37-77l72 0q0 45 49 47 43 0 45-53 0-49-84-47l0-57q49 0 68-8 23-12 23-47 0-57-55-61-43 0-47 55l-72 0z m281 146q49 14 88 47l0-297 70 0 0 371-64 0q-37-37-94-59l0-62z m135 473l0 156 82 0 0-156-82 0z" horiz-adv-x="893" />
+</font>
+</defs>
+</svg>

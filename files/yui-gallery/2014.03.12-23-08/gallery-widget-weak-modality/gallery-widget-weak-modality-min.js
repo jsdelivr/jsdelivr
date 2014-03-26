@@ -1,0 +1,1 @@
+YUI.add("gallery-widget-weak-modality",function(a){(function(e){var d=e.Array.some,b=e.WidgetModality,c=b.STACK;b.ATTRS.weak={value:false};e.delegate("click",function(){d(c,function(f){if(f){if(f.get("weak")){f.hide();}return true;}return false;});},"body",".yui3-widget-mask");}(a));},"gallery-2011.11.30-20-58",{requires:["widget-modality"],skinnable:false});

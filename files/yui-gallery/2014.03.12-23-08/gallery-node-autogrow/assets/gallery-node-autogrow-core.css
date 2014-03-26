@@ -1,0 +1,40 @@
+.yui3-autogrow {
+    background: #fff;
+    border: 1px solid #abadb3;
+    position: relative;
+    min-height: 50px;
+    width: 150px; /* The default width. */
+}
+.yui3-autogrow pre,
+.yui3-autogrow textarea {
+    background: transparent;
+    border: 0;
+    font: 400 13px/16px helvetica, arial, sans-serif;
+    margin: 0;
+    outline: 0;
+    padding: 5px;
+    /* Make the text soft-wrap */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.yui3-autogrow textarea {
+    /**
+     * The border-box box model is used to allow
+     * padding whilst still keeping the overall width
+     * at exactly that of the containing element.
+     */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    overflow: hidden; /* Hide any scrollbars */
+    position: absolute;
+    resize: none; /* Remove WebKit user-resize widget */
+    top: 0;
+    width: 100%;
+}
+.yui3-autogrow pre {
+    visibility: hidden; /* Hide the text; just using it for sizing */
+}
