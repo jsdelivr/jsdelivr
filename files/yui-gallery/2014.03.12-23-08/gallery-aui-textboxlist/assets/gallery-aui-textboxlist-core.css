@@ -1,0 +1,51 @@
+.yui3-textboxlist-content {
+	border: 1px solid #999;
+	overflow: hidden;
+	padding: 4px 5px 0;
+}
+
+.yui3-textboxlist-content .yui3-field-input-text {
+	border-width: 0;
+	outline-width: 0;
+	padding: 3px 0 2px;
+}
+
+.yui3-textboxlistentry-holder {
+	list-style: none;
+	margin: 0;
+}
+
+.yui3-textboxlistentry-holder li {
+	float: left;
+	line-height: 1;
+	margin: 0 5px 4px 0;
+}
+
+.yui3-textboxlistentry {
+	background-color: #dee7f8;
+	border: 1px solid #cad8f3;
+	padding: 5px 25px 5px 11px;
+	position: relative;
+}
+
+.yui3-textboxlistentry-focused {
+	background-color: #598bec;
+	border-color: #224fa8;
+	color: #fff;
+	outline-width: 0;
+}
+
+.yui3-textboxlistentry-close {
+	cursor: pointer;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+.yui3-textboxlistentry-close-hover {
+	background-color: #cad8f3;
+}
+
+.yui3-textboxlistentry-focused .yui3-textboxlistentry-close {
+	background-color: #fff;
+}

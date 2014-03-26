@@ -1,0 +1,21 @@
+.yui3-skin-sam .yui3-contextmenu-overlay,
+.yui3-skin-sam .yui3-contextmenu-overlay:focus {
+    border:1px solid #aaa;
+    border-radius: 4px;
+    padding: 4px;
+    opacity: 1;
+    background-color: white;
+    -moz-box-shadow: 3px 3px 2px rgba(128,128,128, 0.3);
+    -webkit-box-shadow: 3px 3px 2px rgba(128,128,128, 0.3);
+    box-shadow: 3px 3px 2px rgba(128,128,128, 0.3);
+}
+
+.yui3-skin-sam .yui3-contextmenu-menuitem {
+    padding-left:6px;
+    font-size: 12px;
+    margin-top:2px;
+}
+
+.yui3-skin-sam .yui3-contextmenu-menuitem:hover {
+   background-color: #d3d3d3;
+}

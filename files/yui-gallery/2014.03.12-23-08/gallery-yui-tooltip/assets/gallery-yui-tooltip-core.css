@@ -1,0 +1,74 @@
+/* YUI Tooltip Core CSS by Josh Lizarraga */
+
+/* ! General */
+
+.yui3-tooltip-hidden {
+	display: none;
+}
+
+/* ! contentBox */
+
+.yui3-tooltip-content {
+	position: relative;
+}
+
+/* ! Widget Footer */
+
+.yui3-tooltip .yui3-widget-ft,
+.yui3-tooltip .yui3-widget-ft div {
+	*display: none; /* IE6, IE7 */
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	line-height: 0;
+	font-size: 0;
+}
+
+.yui3-tooltip .yui3-tooltip-align-top .yui3-widget-ft,
+.yui3-tooltip .yui3-tooltip-align-top .yui3-widget-ft div {
+	bottom: -10px;
+	left: 50%;
+	margin: 0 0 0 -10px;
+	border-width: 10px 10px 0 10px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-top .yui3-widget-ft div {
+	bottom: 1px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-bottom .yui3-widget-ft,
+.yui3-tooltip .yui3-tooltip-align-bottom .yui3-widget-ft div {
+	top: -10px;
+	left: 50%;
+	margin: 0 0 0 -10px;
+	border-width: 0 10px 10px 10px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-bottom .yui3-widget-ft div {
+	top: 1px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-right .yui3-widget-ft,
+.yui3-tooltip .yui3-tooltip-align-right .yui3-widget-ft div {
+	left: -10px;
+	top: 50%;
+	margin: -10px 0 0 0;
+	border-width: 10px 10px 10px 0;
+}
+
+.yui3-tooltip .yui3-tooltip-align-right .yui3-widget-ft div {
+	left: 1px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-left .yui3-widget-ft,
+.yui3-tooltip .yui3-tooltip-align-left .yui3-widget-ft div {
+	right: -10px;
+	top: 50%;
+	margin: -10px 0 0 0;
+	border-width: 10px 0 10px 10px;
+}
+
+.yui3-tooltip .yui3-tooltip-align-left .yui3-widget-ft div {
+	right: 1px;
+}

@@ -1,0 +1,49 @@
+.yui3-pagview-link-page {
+    border: 1px solid #B0C4DE;
+    color: blue;
+    padding: 5px;
+    text-decoration: none;
+}
+.yui3-pagview-link-page a {
+    border: 1px solid #324759;
+    color: #324759;
+    height: 35px;
+    margin: 5px 3px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 35px;
+}
+.yui3-pagview-bar {
+    background-image: -webkit-linear-gradient(transparent 40%,rgba(0, 0, 0, 0.21));
+    background-image: -moz-linear-gradient(top,transparent 40%,rgba(0, 0, 0, 0.21));
+    background-image: -ms-linear-gradient(transparent 40%,rgba(0, 0, 0, 0.21));
+    background-image: -o-linear-gradient(transparent 40%,rgba(0, 0, 0, 0.21));
+    background-image: linear-gradient(transparent 40%,rgba(0, 0, 0, 0.21));
+
+    border: 1px solid #CBCBCB;
+    vertical-align: middle;
+}
+.yui3-pagview-link-page-list {
+    margin: 0 2px;
+    width: 10px;
+}
+.yui3-pagview-container {
+    outline: 0 none;
+}
+.yui3-pagview-link-page-active {
+    background-color: #90EE90;
+    color: black;
+}
+.yui3-pagview-disabled {
+    cursor: default;
+    opacity: 0.2;
+}
+.yui3-pagview-hide {
+    display: none;
+}
+.yui3-pagview-input-page {
+    height: 13px;
+    text-align: center;
+    width: 15px;
+}

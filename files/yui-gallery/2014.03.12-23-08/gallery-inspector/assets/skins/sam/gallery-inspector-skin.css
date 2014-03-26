@@ -1,0 +1,85 @@
+.yui3-skin-sam .yui3-inspectorplugin-content,
+.yui3-skin-sam .yui3-inspector-content {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-box-shadow: 0 0 3px #888;
+    -webkit-box-shadow: 0 0 3px #888;
+    background: #ddd;
+    border: 1px solid #888;
+    border-radius: 7px;
+    box-shadow: 0 0 3px #888;
+    font: normal 13px/1.3 Arial, sans-serif;
+}
+
+.yui3-skin-sam .yui3-inspector-hd {
+    -moz-border-radius-topright: 7px;
+    -moz-border-radius-topleft: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -webkit-border-top-left-radius: 7px;
+    border-bottom: 1px solid #888;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.yui3-skin-sam .yui3-inspector-destroyed {
+    color: #800;
+    text-decoration: line-through;
+}
+
+.yui3-skin-sam .yui3-inspector-bd { background: #f3f3f3; }
+
+.yui3-skin-sam .yui3-inspector-ft { border-top: 1px solid #888; }
+
+.yui3-skin-sam .yui3-inspector-hd,
+.yui3-skin-sam .yui3-inspector-ft {
+    background: #e3e3e3;
+    background: -moz-linear-gradient(top, #fff, #bbb);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+}
+
+.yui3-skin-sam .yui3-inspector-collapsed .yui3-inspector-hd,
+.yui3-skin-sam .yui3-inspector-ft {
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-bottomleft: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -webkit-border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.yui3-skin-sam .yui3-inspector table { border-bottom: 1px solid #ccc; }
+
+.yui3-skin-sam .yui3-inspector th { border-right: 1px solid #ccc; }
+
+.yui3-skin-sam .yui3-inspector thead th {
+    background: #e6e6e6;
+    background: -moz-linear-gradient(top, #fff, #ccc);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+    border-bottom: 1px solid #bbb;
+}
+
+.yui3-skin-sam .yui3-inspector thead th:first-child {
+    border-right: 1px solid #bbb;
+}
+
+.yui3-skin-sam .yui3-inspector-even { background: #efeff6 }
+.yui3-skin-sam .yui3-inspector-odd  { background: #fff }
+
+.yui3-skin-sam .yui3-inspector-type-array,
+.yui3-skin-sam .yui3-inspector-type-object { color: #333; }
+
+.yui3-skin-sam .yui3-inspector-type-error { color: #f00; }
+
+.yui3-skin-sam .yui3-inspector-type-boolean,
+.yui3-skin-sam .yui3-inspector-type-number { color: #008; }
+
+.yui3-skin-sam .yui3-inspector-type-regexp,
+.yui3-skin-sam .yui3-inspector-type-string { color: #800; }
+
+.yui3-skin-sam .yui3-inspector-type-node  { color: #060; }
+
+.yui3-skin-sam .yui3-inspector-type-null,
+.yui3-skin-sam .yui3-inspector-type-undefined {
+    color: #555;
+    font-style: italic;
+}

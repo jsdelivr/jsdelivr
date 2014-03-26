@@ -1,0 +1,21 @@
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-itsa-markeddate {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBJREFUeNpiZmBgkADiKCB+CsQMt4H4P4hmAhLMDBAApkHKMqE0AjD+//8fzgEIMAArDQevqaJFagAAAABJRU5ErkJggg==');
+    *background-image: url('calendar-dotmark.png'); /* IE7 and below */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-calendar-prevmonth-day.yui3-itsa-markeddate,
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-calendar-nextmonth-day.yui3-itsa-markeddate,
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-calendar-prevmonth-day.yui3-itsa-markeddate:hover,
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-calendar-nextmonth-day.yui3-itsa-markeddate:hover {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeNpiXLZsmQQDA4MfEG9iARKHgVgFiEuZgAQzAwQwg2SsgDgQiNeDOC+AeDpIivH///8MMAAQYACUgwozUdZrpQAAAABJRU5ErkJggg==');
+    *background-image: url('calendar-dotmark-nextmonth.png'); /* IE7 and below */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.yui3-skin-sam .yui3-calendar-itsa-markeddates .yui3-itsa-markeddate:hover {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC5JREFUeNpi+P//vwQQp4FoBiBx+z8E3AZx7kE59xigyjJBNCOQYIABFA5AgAEAEi0weBXY0OcAAAAASUVORK5CYII=');
+    *background-image: url('calendar-dotmark-hover.png'); /* IE7 and below */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}

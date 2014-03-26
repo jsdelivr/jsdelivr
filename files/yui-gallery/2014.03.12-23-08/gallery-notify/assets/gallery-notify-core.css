@@ -1,0 +1,23 @@
+.yui3-notify {
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10000;
+    font-family: sans-serif;
+}
+
+.yui3-notify-hidden {
+    display: none;
+}
+
+.yui3-notify-content {
+    margin: 0;
+    padding: 0;
+}
+
+.yui3-notify .yui3-notify-message {
+    position: relative;
+    list-style: none;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+}

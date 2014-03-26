@@ -1,0 +1,82 @@
+.yui3-widget {
+}
+
+/*.yui3-widget-hidden {
+	display: none;
+}*/
+
+.yui3-widget-content {
+	overflow: hidden;
+}
+
+.yui3-widget-hd {
+}
+
+.yui3-widget-bd {
+}
+
+.yui3-widget-ft {
+}
+
+.yui3-widget-close {
+	float: right;
+}
+
+.yui3-widget-stacked .yui3-widget-shim {
+	border: 0;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+
+	/* IE8 */
+	-ms-filter: alpha(opacity=0);
+	/* IE7/IE8(quirks) and below */
+	filter: alpha(opacity=0);
+	/* IE6 */
+	_width:0;
+	_height:0;
+}
+
+.yui3-widget-content-expanded {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	height: 100%;
+}
+
+.yui3-overlay {
+	position: absolute;
+}
+
+.yui3-widget-tmp-forcesize {
+	overflow: hidden !important;
+}
+
+.yui3-widget-stacked .yui3-widget-shim {
+	border-width: 0;
+	height: 100%;
+	left: 0px;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+
+	/* IE */
+	-ms-filter: alpha(opacity=0);
+	filter: alpha(opacity=0);
+
+	/* IE6 */
+	_width:0;
+	_height:0;
+}

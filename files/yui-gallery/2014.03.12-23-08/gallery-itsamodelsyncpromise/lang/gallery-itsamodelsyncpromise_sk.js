@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-itsamodelsyncpromise_sk",function(e){e.Intl.add("gallery-itsamodelsyncpromise","sk",{load:"Na\u010d\u00edtanie d\u00e1t ...",reload:"Na\u010d\u00edtanie d\u00e1t ...",update:"Aktualiz\u00e1cia d\u00e1t ...",submit:"Odoslanie d\u00e1t ...",save:"Aktualiz\u00e1cia d\u00e1t ...",destroy:"Aktualiz\u00e1cia d\u00e1t ..."})},"gallery-2014.01.28-00-45");

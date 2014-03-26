@@ -1,0 +1,65 @@
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+.clearfix { *display: inline-block }
+
+.yui3-taglistentry-holder {
+    padding: 5px;
+    padding-bottom: 1px;
+    width: 564px;
+    line-height: 1;
+    display: block;
+    border: 1px solid #999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    list-style: none;
+}
+.yui3-taglistentry-holder li {
+    float: left;
+    margin: 0 4px 4px 0;
+}
+.yui3-taglistentry-holder li input {
+    height: 15px;
+    border: none;
+    width: auto;
+    outline: none;
+    font-size: 100%;
+    line-height: 1;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 10px;
+    background: transparent;
+}
+.yui3-taglistentry-item {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #f2f2f2;
+    padding: 4px;
+}
+.yui3-taglistentry-holder li.yui3-taglistentry-item span {
+    margin: 0 2px;
+    vertical-align: middle;
+}
+.yui3-taglistentry-text { padding-right: 5px }
+.yui3-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -1000px;
+    cursor: pointer;
+}
+.yui3-icon-close { background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-taglist/assets/minus-circle.png) no-repeat 50% 50%; }
+.yui3-icon-edit { background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-taglist/assets/edit.png) no-repeat 50% 50%; }

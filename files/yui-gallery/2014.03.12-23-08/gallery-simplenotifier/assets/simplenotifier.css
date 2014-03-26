@@ -1,0 +1,131 @@
+
+ .yui3-simplenotifier {
+	
+	font-size: 12px;
+	position: absolute;
+	z-index: 9999;
+}
+
+ .yui3-simplenotifier.top-left {
+	left: 0px;
+	top: 0px;
+}
+
+ .yui3-simplenotifier.top-right {
+	right: 0px;
+	top: 0px;
+}
+
+ .yui3-simplenotifier.bottom-left {
+	left: 0px;
+	bottom: 0px;
+}
+
+ .yui3-simplenotifier.bottom-right {
+	right: 0px;
+	bottom: 0px;
+}
+
+ .yui3-simplenotifier.center {
+	top: 0px;
+	width: 50%;
+	left: 25%;
+}
+
+
+ .yui3-simplenotifier-content .yui3-simplenotifier-header {
+	font-weight: bold;
+	padding: 12px;
+	width: 92%;
+	
+}
+.simplenotifier-header-show {
+	display: block;
+}
+
+.simplenotifier-header-noshow {
+	display: none;
+}
+
+
+.yui3-simplenotifier .yui3-simplenotifier-message {
+	font-size: .95em;
+}
+
+
+/** Hide notifier when printing **/
+@media print {
+	.yui3-simplenotifier {
+		display: none;
+	}
+}
+
+.yui3-simplenotifier-content { 
+	overflow: hidden;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	opacity: .65;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65 );
+	zoom: 1;
+	width: 300px;
+	margin: 10px;
+	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-align: left;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 7px;
+	
+}
+
+.yui3-simplenotifier .yui3-simplenotifier-message {
+	position: static;
+	color: #fffff;
+	padding: 12px;
+	width: 92%;
+	position:static;
+	float:left;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+
+
+.yui3-simplenotifier:hover {
+	
+}
+	
+.yui3-simplenotifier-content:hover  > .yui3-notify-close {
+	display:block;
+}
+
+
+
+.yui3-simplenotifier a {
+	text-decoration: none;
+}
+
+
+
+.yui3-simplenotifier .yui3-notify-close {
+	position:absolute;
+	border: 2px solid;
+	cursor: pointer;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	font-weight: bold;
+	top:0;
+	right:0;
+	 -moz-border-radius: 0.5px;
+	-webkit-border-radius: 0.5px;
+	border-radius: 10px;
+	display:none;
+	margin: 5px;
+	background-color:gray ;
+	
+	
+}
+

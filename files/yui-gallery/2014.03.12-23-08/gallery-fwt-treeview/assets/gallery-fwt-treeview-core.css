@@ -1,0 +1,18 @@
+.yui3-gallery-fwt-treeview ul {
+	list-style: none;
+    cursor:pointer ;
+}
+.yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-content {
+	clear: both;
+	overflow: hidden;
+    display: inline-block;
+}
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-label,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-toggle,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-selection,
+.yui3-gallery-fwt-treeview li .yui3-fw-treeview-icon {
+	float: left;
+}
+.yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed .yui3-flyweight-tree-node-children {
+	display: none;
+}

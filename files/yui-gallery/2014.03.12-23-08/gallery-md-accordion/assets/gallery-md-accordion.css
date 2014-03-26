@@ -1,0 +1,90 @@
+@charset 'utf-8';
+/*
+ Since images take no comments, let me credit Iliyan Peychev here
+ for the images used in this widget and some of the styles in this stylesheet,
+ taken from his gallery-accordion module
+*/
+
+
+.yui3-skin-sam .yui3-accordion {
+	width:100%;
+}
+
+.yui3-skin-sam .yui3-accordion .yui3-accordionpanel .yui3-widget-hd {
+
+	background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-accordion/assets/sprite.png") repeat-x scroll left top;
+	color:white;
+	font-weight:bold;
+	cursor: default;
+	border: 1px solid #93B2CC;
+    height: 25px;
+}
+.yui3-skin-sam .yui3-accordionpanel-icon,
+.yui3-skin-sam .yui3-accordionpanel-status,
+.yui3-skin-sam .yui3-accordionpanel-close {
+    background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-accordion/assets/sprite.png ) transparent no-repeat center top;
+	height:22px;
+	width:22px;
+}
+.yui3-skin-sam .yui3-accordionpanel-icon {
+    background-position: center -25px;
+    _background-position: center -27px;
+	float:left;
+}
+.yui3-skin-sam .yui3-accordionpanel-status {
+    background-position: center top;
+	float:right;
+}
+
+.yui3-skin-sam .yui3-accordionpanel-collapsed .yui3-accordionpanel-status {
+    background-position: center -175px;
+    _background-position: center -177px;
+}
+.yui3-skin-sam .yui3-accordionpanel-expanded .yui3-accordionpanel-status {
+    background-position: center -115px;
+    _background-position: center -117px;
+}
+
+.yui3-skin-sam .yui3-accordionpanel-expanding .yui3-accordionpanel-status{
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-accordion/assets/wait_expand.gif );
+    background-position: 0px center;
+}
+
+
+.yui3-skin-sam .yui3-accordionpanel-collapsing .yui3-accordionpanel-status{
+    background-image: url( http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-accordion/assets/wait_collapse.gif );
+    background-position: 0px center;
+}
+
+.yui3-skin-sam .yui3-accordionpanel-close {
+    background-position:center -235px;
+    _background-position: center -237px;
+	float:right;
+}
+
+.yui3-skin-sam .yui3-accordionpanel-close:hover {
+    background-position:center -261px;
+    _background-position: center -263px;
+}
+.yui3-skin-sam .yui3-accordionpanel-label {
+    text-decoration: none;
+    background: transparent;
+    overflow: hidden;
+    color: #444444;
+    font-weight: bold;
+}
+
+.yui3-skin-sam .yui3-accordionpanel-label:hover{
+    text-decoration: underline;
+}
+
+.yui3-skin-sam .yui3-accordion .yui3-accordionpanel .yui3-widget-bd {
+	overflow: hidden;
+	position:relative;
+}
+
+.yui3-skin-sam .yui3-accordion .yui3-accordionpanel .yui3-widget-bd{
+	border:thin solid silver;
+	padding:2px 5px;
+	background-color:#f8f8f8;
+}

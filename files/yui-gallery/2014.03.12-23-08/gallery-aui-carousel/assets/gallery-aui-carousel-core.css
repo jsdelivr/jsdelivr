@@ -1,0 +1,75 @@
+.yui3-carousel {
+	position: relative;
+}
+
+.yui3-carousel-item {
+	position: absolute;
+	z-index: 1;
+}
+
+.yui3-carousel-item-transition {
+	z-index: 2;
+}
+
+.yui3-carousel-item-active {
+	z-index: 3;
+}
+
+.yui3-carousel menu {
+	background: #000;
+	bottom: 6px;
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: 3px;
+	right: 6px;
+	z-index: 4;
+}
+
+.yui3-carousel menu li,
+.yui3-carousel menu a {
+	float: left;
+}
+
+.yui3-carousel-menu-item {
+	background: #474A4B;
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	text-indent: -999999px;
+}
+
+.yui3-carousel-menu-next,
+.yui3-carousel-menu-play,
+.yui3-carousel-menu-pause,
+.yui3-carousel-menu-prev {
+	height: 18px;
+	width: 18px;
+	margin: 0 3px;
+}
+
+.yui3-carousel-menu-next {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-carousel/assets/next.png);
+}
+
+.yui3-carousel-menu-play {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-carousel/assets/play.png);
+}
+
+.yui3-carousel-menu-pause {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-carousel/assets/pause.png);
+}
+
+.yui3-carousel-menu-prev {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-carousel/assets/prev.png);
+}
+
+.yui3-carousel-menu-index {
+	height: 9px;
+	margin: 4px 3px;
+	width: 9px;
+}
+
+.yui3-carousel-menu-active {
+	background: #FFF;
+}

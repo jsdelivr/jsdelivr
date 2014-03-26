@@ -1,0 +1,50 @@
+.yui3-tabview-list {
+	border-bottom: 1px solid #000;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.yui3-tabview-list:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+
+.yui3-tabview-list {
+	/* IE7/IE6 */
+	zoom: 1;
+}
+
+.yui3-tabview-list {
+	margin-bottom: 1em;
+}
+
+.yui3-tab {
+	border-bottom-width: 0;
+	float: left;
+	margin: 0 0.2em -1px 0;
+	position: relative;
+}
+
+.yui3-tab-content {
+	float: left;
+	padding: 0.5em 1em;
+}
+
+.yui3-tab-active {
+	padding-bottom: 1px;
+}
+
+.yui3-tab-disabled {
+	cursor: text;
+	opacity: 0.6;
+
+	/* IE7 & below */
+	filter: alpha(opacity=60);
+}
+
+.yui3-tab-disabled a {
+	cursor: text;
+}

@@ -1,0 +1,27 @@
+.yui3-skin-sam .yui3-querybuilder td.yui3-querybuilder-controls
+{
+	width: 4.5em;
+}
+
+.yui3-skin-sam .yui3-querybuilder .yui3-querybuilder-controls .yui3-querybuilder-insert,
+.yui3-skin-sam .yui3-querybuilder .yui3-querybuilder-controls .yui3-querybuilder-remove
+{
+	float: left;
+	margin-left: 5px;
+}
+
+.yui3-skin-sam .yui3-querybuilder .formmgr-message-text
+{
+	text-align:right;
+}
+
+.yui3-skin-sam .yui3-querybuilder .formmgr-haserror .formmgr-message-text
+{
+	color: #BE1E2D;
+	margin-top: 5px;
+}
+
+.yui3-skin-sam .yui3-querybuilder .yui3-querybuilder-criterion .yui3-querybuilder-value .yui3-querybuilder-field.formmgr-haserror
+{
+	background-color: #FFCCCC;
+}

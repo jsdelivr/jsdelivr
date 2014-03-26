@@ -1,0 +1,1 @@
+YUI.add("gallery-aui-overlay-base",function(B){B.OverlayBase=B.Base.build("overlay",B.Component,[B.WidgetPosition,B.WidgetStack,B.WidgetPositionAlign,B.WidgetPositionConstrain,B.WidgetStdMod]);},"gallery-2010.08.18-17-12",{requires:["gallery-aui-component","widget-position","widget-stack","widget-position-align","widget-position-constrain","widget-stdmod"]});

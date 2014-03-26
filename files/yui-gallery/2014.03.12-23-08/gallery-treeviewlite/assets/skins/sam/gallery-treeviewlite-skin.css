@@ -1,0 +1,25 @@
+ol.yui3-treeviewlite li,
+ul.yui3-treeviewlite li{
+	background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 -5600px;
+}	
+ol.yui3-treeviewlite li.yui3-treeviewlite-haschild,
+ul.yui3-treeviewlite li.yui3-treeviewlite-haschild{
+  background: transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 -4000px;
+}
+ol.yui3-treeviewlite li.yui3-treeviewlite-collapsed,
+ul.yui3-treeviewlite li.yui3-treeviewlite-collapsed {
+  background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 -6400px;
+}
+ol.yui3-treeviewlite li.yui3-treeviewlite-lastchild,
+ul.yui3-treeviewlite li.yui3-treeviewlite-lastchild{
+  background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 -1600px;
+}
+ol.yui3-treeviewlite li.yui3-treeviewlite-lastchild.yui3-treeviewlite-haschild,
+ul.yui3-treeviewlite li.yui3-treeviewlite-lastchild.yui3-treeviewlite-haschild {
+  background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 0;
+}
+ol.yui3-treeviewlite li.yui3-treeviewlite-lastchild.yui3-treeviewlite-haschild.yui3-treeviewlite-collapsed,
+ul.yui3-treeviewlite li.yui3-treeviewlite-lastchild.yui3-treeviewlite-haschild.yui3-treeviewlite-collapsed {
+  background:transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-treeviewlite/assets/skins/sam/treeview-sprite.gif) no-repeat scroll 0 -2400px;
+}
+

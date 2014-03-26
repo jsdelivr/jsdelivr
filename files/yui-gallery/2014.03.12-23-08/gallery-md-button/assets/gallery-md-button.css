@@ -1,0 +1,267 @@
+@charset 'UTF-8';
+/*
+ Skin derived from Anthony Pipkin's gallery-button component
+*/
+.yui3-skin-sam .yui3-button {
+	background: #d9d9d9 url('http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-button/assets/background.png') left top repeat-x;
+	border: 1px solid #959595;
+	color: #3a3a3a;
+	padding: 2px 4px;
+	margin: 3px;
+	cursor: pointer;
+	border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-decoration: none;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.yui3-skin-sam .yui3-button-focused,
+.yui3-skin-sam .yui3-button-toggle-focused  {
+	border-color: #009ee7;
+	box-shadow: 0 0 2px #009ee7;
+	-moz-box-shadow: 0 0 2px #009ee7;
+	-webkit-box-shadow: 0 0 2px #009ee7;
+}
+.yui3-skin-sam .yui3-button .yui3-button-icon,
+.yui3-skin-sam .yui3-button-toggle .yui3-button-toggle-icon  {
+	background-image: url('http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-button/assets/icon-sprite.gif');
+	padding-left: 22px;
+	line-height: 16px;
+	text-shadow: 1px 1px #efefef;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	height: 16px;
+	cursor: pointer;
+	display: block;
+}
+
+.yui3-skin-sam .yui3-button-icon-none .yui3-button-icon,
+.yui3-skin-sam .yui3-button-icon-none  .yui3-button-icon,
+.yui3-skin-sam .yui3-button-toggle-icon-none .yui3-button-icon,
+.yui3-skin-sam .yui3-button-toggle-icon-none  .yui3-button-icon   {
+	display: none;
+}
+.yui3-skin-sam .yui3-button-iconright  .yui3-button-icon{
+	float: right;
+}
+.yui3-skin-sam .yui3-button-iconleft  .yui3-button-icon {
+	float: left;
+}
+
+
+.yui3-skin-sam .yui3-button-no-label .yui3-button-label,
+.yui3-skin-sam .yui3-button-toggle-no-label .yui3-button-toggle-label  {
+	padding-left: 18px;
+}
+.yui3-skin-sam .yui3-button:hover,
+.yui3-skin-sam .yui3-button-hover,
+.yui3-skin-sam .yui3-button-toggle-hover  {
+	background-position: left -30px;
+}
+
+.yui3-skin-sam .yui3-button-pressed,
+.yui3-skin-sam .yui3-button-pressed:hover,
+.yui3-skin-sam .yui3-button-toggle-pressed,
+.yui3-skin-sam .yui3-button-toggle-pressed:hover  {
+	background-position: left -60px;
+}
+
+.yui3-skin-sam .yui3-button-disabled:hover,
+.yui3-skin-sam .yui3-button-disabled,
+.yui3-skin-sam .yui3-button-toggle-disabled:hover,
+.yui3-skin-sam .yui3-button-toggle-disabled {
+	background-position: left 0px;
+	cursor: default;
+}
+.yui3-skin-sam .yui3-button-disabled,
+.yui3-skin-sam .yui3-button-toggle-disabled {
+	color: gray;
+	cursor: default;
+}
+
+.yui3-skin-sam .yui3-button-toggle-selected {
+	border-color: CornflowerBlue;
+	background-image:url('http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-button/assets/background-active.png');
+}
+
+.yui3-skin-sam .yui3-button-disabled .yui3-button-icon,
+.yui3-skin-sam .yui3-button-toggle-disabled .yui3-button-toggle-icon {
+	background-image: url('http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-md-button/assets/icon-sprite.gif');
+	text-shadow: none;
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+
+
+.yui3-skin-sam .yui3-button-icon { background: transparent 100px 100px no-repeat; }
+.yui3-skin-sam .yui3-button-icon-arrow-e .yui3-button-icon  { background-position: 0px -2px; }
+.yui3-skin-sam .yui3-button-icon-arrow-ne .yui3-button-icon  { background-position: 0px -32px; }
+.yui3-skin-sam .yui3-button-icon-arrow-n .yui3-button-icon  { background-position: 0px -62px; }
+.yui3-skin-sam .yui3-button-icon-arrow-nw .yui3-button-icon  { background-position: 0px -92px; }
+.yui3-skin-sam .yui3-button-icon-arrow-w .yui3-button-icon  { background-position: 0px -122px; }
+.yui3-skin-sam .yui3-button-icon-arrow-sw .yui3-button-icon  { background-position: 0px -152px; }
+.yui3-skin-sam .yui3-button-icon-arrow-s .yui3-button-icon  { background-position: 0px -182px; }
+.yui3-skin-sam .yui3-button-icon-arrow-se .yui3-button-icon  { background-position: 0px -212px; }
+.yui3-skin-sam .yui3-button-icon-arrow-circle .yui3-button-icon  { background-position: 0px -242px; }
+.yui3-skin-sam .yui3-button-icon-arrow-circle-dbl .yui3-button-icon  { background-position: 0px -272px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-e .yui3-button-icon  { background-position: 0px -302px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-s .yui3-button-icon  { background-position: 0px -332px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-w .yui3-button-icon  { background-position: 0px -362px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-n .yui3-button-icon  { background-position: 0px -392px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-e .yui3-button-icon  { background-position: 0px -422px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-s .yui3-button-icon  { background-position: 0px -452px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-w .yui3-button-icon  { background-position: 0px -482px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-n .yui3-button-icon  { background-position: 0px -512px; }
+.yui3-skin-sam .yui3-button-icon-arrow-move .yui3-button-icon  { background-position: 0px -542px; }
+.yui3-skin-sam .yui3-button-icon-arrow-expand .yui3-button-icon  { background-position: 0px -572px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-e .yui3-button-icon  { background-position: 0px -602px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-ne .yui3-button-icon  { background-position: 0px -632px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-n .yui3-button-icon  { background-position: 0px -662px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-nw .yui3-button-icon  { background-position: 0px -692px; }
+.yui3-skin-sam .yui3-button-icon-arrow-square-dbl .yui3-button-icon  { background-position: 0px -722px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-e .yui3-button-icon  { background-position: 0px -752px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-n .yui3-button-icon  { background-position: 0px -782px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-w .yui3-button-icon  { background-position: 0px -812px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-s .yui3-button-icon  { background-position: 0px -842px; }
+.yui3-skin-sam .yui3-button-icon-arrow-square .yui3-button-icon  { background-position: 0px -872px; }
+.yui3-skin-sam .yui3-button-icon-arrow-switch .yui3-button-icon  { background-position: 0px -902px; }
+.yui3-skin-sam .yui3-button-icon-dialog-expand .yui3-button-icon  { background-position: 0px -932px; }
+.yui3-skin-sam .yui3-button-icon-dialog-stack .yui3-button-icon  { background-position: 0px -962px; }
+.yui3-skin-sam .yui3-button-icon-bin-empty .yui3-button-icon  { background-position: 0px -992px; }
+.yui3-skin-sam .yui3-button-icon-bin-full .yui3-button-icon  { background-position: 0px -1022px; }
+.yui3-skin-sam .yui3-button-icon-binoculars .yui3-button-icon  { background-position: 0px -1052px; }
+.yui3-skin-sam .yui3-button-icon-broom .yui3-button-icon  { background-position: 0px -1082px; }
+.yui3-skin-sam .yui3-button-icon-radioactive .yui3-button-icon  { background-position: 0px -1112px; }
+.yui3-skin-sam .yui3-button-icon-calendar .yui3-button-icon  { background-position: 0px -1142px; }
+.yui3-skin-sam .yui3-button-icon-bio-card .yui3-button-icon  { background-position: 0px -1172px; }
+.yui3-skin-sam .yui3-button-icon-chain .yui3-button-icon  { background-position: 0px -1202px; }
+.yui3-skin-sam .yui3-button-icon-chain-borken .yui3-button-icon  { background-position: 0px -1232px; }
+.yui3-skin-sam .yui3-button-icon-chart-bar .yui3-button-icon  { background-position: 0px -1262px; }
+.yui3-skin-sam .yui3-button-icon-chart-growth .yui3-button-icon  { background-position: 0px -1292px; }
+.yui3-skin-sam .yui3-button-icon-chevron-n .yui3-button-icon  { background-position: 0px -1322px; }
+.yui3-skin-sam .yui3-button-icon-chevron-s .yui3-button-icon  { background-position: 0px -1352px; }
+.yui3-skin-sam .yui3-button-icon-clipboard-empty .yui3-button-icon  { background-position: 0px -1382px; }
+.yui3-skin-sam .yui3-button-icon-clipboard-full .yui3-button-icon  { background-position: 0px -1412px; }
+.yui3-skin-sam .yui3-button-icon-color .yui3-button-icon  { background-position: 0px -1442px; }
+.yui3-skin-sam .yui3-button-icon-control-e .yui3-button-icon  { background-position: 0px -1472px; }
+.yui3-skin-sam .yui3-button-icon-control-n .yui3-button-icon  { background-position: 0px -1502px; }
+.yui3-skin-sam .yui3-button-icon-control-w .yui3-button-icon  { background-position: 0px -1532px; }
+.yui3-skin-sam .yui3-button-icon-control-s .yui3-button-icon  { background-position: 0px -1562px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-e .yui3-button-icon  { background-position: 0px -1592px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-n .yui3-button-icon  { background-position: 0px -1622px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-w .yui3-button-icon  { background-position: 0px -1652px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-s .yui3-button-icon  { background-position: 0px -1682px; }
+.yui3-skin-sam .yui3-button-icon-control-eject .yui3-button-icon  { background-position: 0px -1712px; }
+.yui3-skin-sam .yui3-button-icon-control-pause .yui3-button-icon  { background-position: 0px -1742px; }
+.yui3-skin-sam .yui3-button-icon-control-power .yui3-button-icon  { background-position: 0px -1772px; }
+.yui3-skin-sam .yui3-button-icon-control-record .yui3-button-icon  { background-position: 0px -1802px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-e .yui3-button-icon  { background-position: 0px -1832px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-n .yui3-button-icon  { background-position: 0px -1862px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-w .yui3-button-icon  { background-position: 0px -1892px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-s .yui3-button-icon  { background-position: 0px -1922px; }
+.yui3-skin-sam .yui3-button-icon-control-stop .yui3-button-icon  { background-position: 0px -1952px; }
+.yui3-skin-sam .yui3-button-icon-eks .yui3-button-icon  { background-position: 0px -1982px; }
+.yui3-skin-sam .yui3-button-icon-eks-square .yui3-button-icon  { background-position: 0px -2012px; }
+.yui3-skin-sam .yui3-button-icon-eks-circle .yui3-button-icon  { background-position: 0px -2042px; }
+.yui3-skin-sam .yui3-button-icon-eks-octagon .yui3-button-icon  { background-position: 0px -2072px; }
+.yui3-skin-sam .yui3-button-icon-eks-script .yui3-button-icon  { background-position: 0px -2102px; }
+.yui3-skin-sam .yui3-button-icon-cursor .yui3-button-icon  { background-position: 0px -2132px; }
+.yui3-skin-sam .yui3-button-icon-database .yui3-button-icon  { background-position: 0px -2162px; }
+.yui3-skin-sam .yui3-button-icon-disc .yui3-button-icon  { background-position: 0px -2192px; }
+.yui3-skin-sam .yui3-button-icon-diskette .yui3-button-icon  { background-position: 0px -2222px; }
+.yui3-skin-sam .yui3-button-icon-diskette-plus .yui3-button-icon  { background-position: 0px -2252px; }
+.yui3-skin-sam .yui3-button-icon-diskette-copy .yui3-button-icon  { background-position: 0px -2282px; }
+.yui3-skin-sam .yui3-button-icon-document .yui3-button-icon  { background-position: 0px -2312px; }
+.yui3-skin-sam .yui3-button-icon-document-copy .yui3-button-icon  { background-position: 0px -2342px; }
+.yui3-skin-sam .yui3-button-icon-document-search .yui3-button-icon  { background-position: 0px -2372px; }
+.yui3-skin-sam .yui3-button-icon-text .yui3-button-icon  { background-position: 0px -2402px; }
+.yui3-skin-sam .yui3-button-icon-align-left .yui3-button-icon  { background-position: 0px -2432px; }
+.yui3-skin-sam .yui3-button-icon-align-center .yui3-button-icon  { background-position: 0px -2462px; }
+.yui3-skin-sam .yui3-button-icon-align-right .yui3-button-icon  { background-position: 0px -2492px; }
+.yui3-skin-sam .yui3-button-icon-edit-bold .yui3-button-icon  { background-position: 0px -2522px; }
+.yui3-skin-sam .yui3-button-icon-edit-italic .yui3-button-icon  { background-position: 0px -2552px; }
+.yui3-skin-sam .yui3-button-icon-list-unordered .yui3-button-icon  { background-position: 0px -2582px; }
+.yui3-skin-sam .yui3-button-icon-list-ordered .yui3-button-icon  { background-position: 0px -2612px; }
+.yui3-skin-sam .yui3-button-icon-paragraph .yui3-button-icon  { background-position: 0px -2642px; }
+.yui3-skin-sam .yui3-button-icon-edit-underline .yui3-button-icon  { background-position: 0px -2672px; }
+.yui3-skin-sam .yui3-button-icon-feed .yui3-button-icon  { background-position: 0px -2702px; }
+.yui3-skin-sam .yui3-button-icon-film .yui3-button-icon  { background-position: 0px -2732px; }
+.yui3-skin-sam .yui3-button-icon-flag .yui3-button-icon  { background-position: 0px -2762px; }
+.yui3-skin-sam .yui3-button-icon-folder-closed .yui3-button-icon  { background-position: 0px -2792px; }
+.yui3-skin-sam .yui3-button-icon-folder-open .yui3-button-icon  { background-position: 0px -2822px; }
+.yui3-skin-sam .yui3-button-icon-funciton .yui3-button-icon  { background-position: 0px -2852px; }
+.yui3-skin-sam .yui3-button-icon-filter .yui3-button-icon  { background-position: 0px -2882px; }
+.yui3-skin-sam .yui3-button-icon-gear .yui3-button-icon  { background-position: 0px -2912px; }
+.yui3-skin-sam .yui3-button-icon-geopin .yui3-button-icon  { background-position: 0px -2942px; }
+.yui3-skin-sam .yui3-button-icon-globe .yui3-button-icon  { background-position: 0px -2972px; }
+.yui3-skin-sam .yui3-button-icon-hand .yui3-button-icon  { background-position: 0px -3002px; }
+.yui3-skin-sam .yui3-button-icon-image .yui3-button-icon  { background-position: 0px -3032px; }
+.yui3-skin-sam .yui3-button-icon-info-circle .yui3-button-icon  { background-position: 0px -3062px; }
+.yui3-skin-sam .yui3-button-icon-info-square .yui3-button-icon  { background-position: 0px -3092px; }
+.yui3-skin-sam .yui3-button-icon-info-circle-white .yui3-button-icon  { background-position: 0px -3122px; }
+.yui3-skin-sam .yui3-button-icon-lightbulb-on .yui3-button-icon  { background-position: 0px -3152px; }
+.yui3-skin-sam .yui3-button-icon-lightbulb-off .yui3-button-icon  { background-position: 0px -3182px; }
+.yui3-skin-sam .yui3-button-icon-magnify .yui3-button-icon  { background-position: 0px -3212px; }
+.yui3-skin-sam .yui3-button-icon-magnify-plus .yui3-button-icon  { background-position: 0px -3242px; }
+.yui3-skin-sam .yui3-button-icon-magnify-minus .yui3-button-icon  { background-position: 0px -3272px; }
+.yui3-skin-sam .yui3-button-icon-mail-closed .yui3-button-icon  { background-position: 0px -3302px; }
+.yui3-skin-sam .yui3-button-icon-mail-open .yui3-button-icon  { background-position: 0px -3332px; }
+.yui3-skin-sam .yui3-button-icon-marker .yui3-button-icon  { background-position: 0px -3362px; }
+.yui3-skin-sam .yui3-button-icon-minus .yui3-button-icon  { background-position: 0px -3392px; }
+.yui3-skin-sam .yui3-button-icon-minus-square .yui3-button-icon  { background-position: 0px -3422px; }
+.yui3-skin-sam .yui3-button-icon-minus-circle .yui3-button-icon  { background-position: 0px -3452px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-e .yui3-button-icon  { background-position: 0px -3482px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-e .yui3-button-icon  { background-position: 0px -3512px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-e .yui3-button-icon  { background-position: 0px -3542px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-n .yui3-button-icon  { background-position: 0px -3572px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-n .yui3-button-icon  { background-position: 0px -3602px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-n .yui3-button-icon  { background-position: 0px -3632px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-w .yui3-button-icon  { background-position: 0px -3662px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-w .yui3-button-icon  { background-position: 0px -3692px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-w .yui3-button-icon  { background-position: 0px -3722px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-s .yui3-button-icon  { background-position: 0px -3752px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-s .yui3-button-icon  { background-position: 0px -3782px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-s .yui3-button-icon  { background-position: 0px -3812px; }
+.yui3-skin-sam .yui3-button-icon-node .yui3-button-icon  { background-position: 0px -3842px; }
+.yui3-skin-sam .yui3-button-icon-notepad .yui3-button-icon  { background-position: 0px -3872px; }
+.yui3-skin-sam .yui3-button-icon-open-id .yui3-button-icon  { background-position: 0px -3902px; }
+.yui3-skin-sam .yui3-button-icon-push-pin .yui3-button-icon  { background-position: 0px -3932px; }
+.yui3-skin-sam .yui3-button-icon-plus .yui3-button-icon  { background-position: 0px -3962px; }
+.yui3-skin-sam .yui3-button-icon-plus-square .yui3-button-icon  { background-position: 0px -3992px; }
+.yui3-skin-sam .yui3-button-icon-plus-circle .yui3-button-icon  { background-position: 0px -4022px; }
+.yui3-skin-sam .yui3-button-icon-print .yui3-button-icon  { background-position: 0px -4052px; }
+.yui3-skin-sam .yui3-button-icon-properties .yui3-button-icon  { background-position: 0px -4082px; }
+.yui3-skin-sam .yui3-button-icon-question-octagon .yui3-button-icon  { background-position: 0px -4112px; }
+.yui3-skin-sam .yui3-button-icon-question-square .yui3-button-icon  { background-position: 0px -4142px; }
+.yui3-skin-sam .yui3-button-icon-question-circle-white .yui3-button-icon  { background-position: 0px -4172px; }
+.yui3-skin-sam .yui3-button-icon-notebook .yui3-button-icon  { background-position: 0px -4202px; }
+.yui3-skin-sam .yui3-button-icon-scissors .yui3-button-icon  { background-position: 0px -4232px; }
+.yui3-skin-sam .yui3-button-icon-share .yui3-button-icon  { background-position: 0px -4262px; }
+.yui3-skin-sam .yui3-button-icon-shortcut .yui3-button-icon  { background-position: 0px -4292px; }
+.yui3-skin-sam .yui3-button-icon-hierarchy .yui3-button-icon  { background-position: 0px -4322px; }
+.yui3-skin-sam .yui3-button-icon-no .yui3-button-icon  { background-position: 0px -4352px; }
+.yui3-skin-sam .yui3-button-icon-smilie .yui3-button-icon  { background-position: 0px -4382px; }
+.yui3-skin-sam .yui3-button-icon-speaker-on .yui3-button-icon  { background-position: 0px -4412px; }
+.yui3-skin-sam .yui3-button-icon-speaker-off .yui3-button-icon  { background-position: 0px -4442px; }
+.yui3-skin-sam .yui3-button-icon-spell-check .yui3-button-icon  { background-position: 0px -4472px; }
+.yui3-skin-sam .yui3-button-icon-star .yui3-button-icon  { background-position: 0px -4502px; }
+.yui3-skin-sam .yui3-button-icon-note-pinned .yui3-button-icon  { background-position: 0px -4532px; }
+.yui3-skin-sam .yui3-button-icon-sum .yui3-button-icon  { background-position: 0px -4562px; }
+.yui3-skin-sam .yui3-button-icon-tick .yui3-button-icon  { background-position: 0px -4592px; }
+.yui3-skin-sam .yui3-button-icon-tick-square .yui3-button-icon  { background-position: 0px -4622px; }
+.yui3-skin-sam .yui3-button-icon-tick-circle .yui3-button-icon  { background-position: 0px -4652px; }
+.yui3-skin-sam .yui3-button-icon-tick-circle-white .yui3-button-icon  { background-position: 0px -4682px; }
+.yui3-skin-sam .yui3-button-icon-expand-minus .yui3-button-icon  { background-position: 0px -4712px; }
+.yui3-skin-sam .yui3-button-icon-expand-plus .yui3-button-icon  { background-position: 0px -4742px; }
+.yui3-skin-sam .yui3-button-icon-toolbox .yui3-button-icon  { background-position: 0px -4772px; }
+.yui3-skin-sam .yui3-button-icon-checkbox-on .yui3-button-icon  { background-position: 0px -4802px; }
+.yui3-skin-sam .yui3-button-icon-checkbox-off .yui3-button-icon  { background-position: 0px -4832px; }
+.yui3-skin-sam .yui3-button-icon-tab-plus .yui3-button-icon  { background-position: 0px -4862px; }
+.yui3-skin-sam .yui3-button-icon-profile .yui3-button-icon  { background-position: 0px -4892px; }
+.yui3-skin-sam .yui3-button-icon-webcam .yui3-button-icon  { background-position: 0px -4922px; }
+.yui3-skin-sam .yui3-button-icon-quote .yui3-button-icon  { background-position: 0px -4952px; }
+.yui3-skin-sam .yui3-button-icon-vgrip .yui3-button-icon  { background-position: 0px -4982px; }
+.yui3-skin-sam .yui3-button-icon-hgrip .yui3-button-icon  { background-position: 0px -5012px; }
+

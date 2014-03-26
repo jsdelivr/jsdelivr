@@ -1,0 +1,236 @@
+/*
+ Skin derived from Anthony Pipkin's gallery-button component
+*/
+.yui3-skin-sam .yui3-button {
+    background: #d9d9d9 url('http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-button/assets/skins/sam/background.png') left top repeat-x;
+    border: 1px solid #959595;
+    color: #3a3a3a;
+    padding: 2px 4px;
+    margin: 3px;
+    border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+}
+.yui3-skin-sam .yui3-button-focused {
+    border-color: #009ee7;
+    box-shadow: 0 0 2px #009ee7;
+    -moz-box-shadow: 0 0 2px #009ee7;
+    -webkit-box-shadow: 0 0 2px #009ee7;
+}
+.yui3-skin-sam .yui3-button .yui3-button-icon {
+    background-image: url('http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-button/assets/skins/sam/icon-sprite.gif');
+    padding-left: 22px;
+    line-height: 16px;
+    text-shadow: 1px 1px #efefef;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    height: 16px;
+}
+
+
+
+.yui3-skin-sam .yui3-button-no-label .yui3-button-label{
+    padding-left: 18px;
+}
+.yui3-skin-sam .yui3-button:hover,
+.yui3-skin-sam .yui3-button-hover {
+    background-position: left -30px;
+}
+
+.yui3-skin-sam .yui3-button-pressed,
+.yui3-skin-sam .yui3-button-pressed:hover  {
+    background-position: left -60px;
+}
+
+.yui3-skin-sam .yui3-button-disabled:hover,
+.yui3-skin-sam .yui3-button-disabled{
+    background-position: left 0;
+}
+.yui3-skin-sam .yui3-button-disabled{
+    color: gray;
+}
+
+.yui3-skin-sam .yui3-buttontoggle-selected {
+    border-color: CornflowerBlue;
+    background-image:url('http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-button/assets/skins/sam/background-active.png');
+}
+
+.yui3-skin-sam .yui3-button-disabled .yui3-button-icon{
+    background-image: url('http://yui.yahooapis.com/gallery-2013.01.23-21-59/gallery-md-button/assets/skins/sam/icon-sprite.gif');
+    text-shadow: none;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+
+.yui3-skin-sam .yui3-button-icon { background: transparent 100px 100px no-repeat; }
+.yui3-skin-sam .yui3-button-icon-arrow-e .yui3-button-icon  { background-position: 0 -2px; }
+.yui3-skin-sam .yui3-button-icon-arrow-ne .yui3-button-icon  { background-position: 0 -32px; }
+.yui3-skin-sam .yui3-button-icon-arrow-n .yui3-button-icon  { background-position: 0 -62px; }
+.yui3-skin-sam .yui3-button-icon-arrow-nw .yui3-button-icon  { background-position: 0 -92px; }
+.yui3-skin-sam .yui3-button-icon-arrow-w .yui3-button-icon  { background-position: 0 -122px; }
+.yui3-skin-sam .yui3-button-icon-arrow-sw .yui3-button-icon  { background-position: 0 -152px; }
+.yui3-skin-sam .yui3-button-icon-arrow-s .yui3-button-icon  { background-position: 0 -182px; }
+.yui3-skin-sam .yui3-button-icon-arrow-se .yui3-button-icon  { background-position: 0 -212px; }
+.yui3-skin-sam .yui3-button-icon-arrow-circle .yui3-button-icon  { background-position: 0 -242px; }
+.yui3-skin-sam .yui3-button-icon-arrow-circle-dbl .yui3-button-icon  { background-position: 0 -272px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-e .yui3-button-icon  { background-position: 0 -302px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-s .yui3-button-icon  { background-position: 0 -332px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-w .yui3-button-icon  { background-position: 0 -362px; }
+.yui3-skin-sam .yui3-button-icon-arrow-top-curve-n .yui3-button-icon  { background-position: 0 -392px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-e .yui3-button-icon  { background-position: 0 -422px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-s .yui3-button-icon  { background-position: 0 -452px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-w .yui3-button-icon  { background-position: 0 -482px; }
+.yui3-skin-sam .yui3-button-icon-arrow-bottom-curve-n .yui3-button-icon  { background-position: 0 -512px; }
+.yui3-skin-sam .yui3-button-icon-arrow-move .yui3-button-icon  { background-position: 0 -542px; }
+.yui3-skin-sam .yui3-button-icon-arrow-expand .yui3-button-icon  { background-position: 0 -572px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-e .yui3-button-icon  { background-position: 0 -602px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-ne .yui3-button-icon  { background-position: 0 -632px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-n .yui3-button-icon  { background-position: 0 -662px; }
+.yui3-skin-sam .yui3-button-icon-arrow-resize-nw .yui3-button-icon  { background-position: 0 -692px; }
+.yui3-skin-sam .yui3-button-icon-arrow-square-dbl .yui3-button-icon  { background-position: 0 -722px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-e .yui3-button-icon  { background-position: 0 -752px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-n .yui3-button-icon  { background-position: 0 -782px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-w .yui3-button-icon  { background-position: 0 -812px; }
+.yui3-skin-sam .yui3-button-icon-arrow-stop-s .yui3-button-icon  { background-position: 0 -842px; }
+.yui3-skin-sam .yui3-button-icon-arrow-square .yui3-button-icon  { background-position: 0 -872px; }
+.yui3-skin-sam .yui3-button-icon-arrow-switch .yui3-button-icon  { background-position: 0 -902px; }
+.yui3-skin-sam .yui3-button-icon-dialog-expand .yui3-button-icon  { background-position: 0 -932px; }
+.yui3-skin-sam .yui3-button-icon-dialog-stack .yui3-button-icon  { background-position: 0 -962px; }
+.yui3-skin-sam .yui3-button-icon-bin-empty .yui3-button-icon  { background-position: 0 -992px; }
+.yui3-skin-sam .yui3-button-icon-bin-full .yui3-button-icon  { background-position: 0 -1022px; }
+.yui3-skin-sam .yui3-button-icon-binoculars .yui3-button-icon  { background-position: 0 -1052px; }
+.yui3-skin-sam .yui3-button-icon-broom .yui3-button-icon  { background-position: 0 -1082px; }
+.yui3-skin-sam .yui3-button-icon-radioactive .yui3-button-icon  { background-position: 0 -1112px; }
+.yui3-skin-sam .yui3-button-icon-calendar .yui3-button-icon  { background-position: 0 -1142px; }
+.yui3-skin-sam .yui3-button-icon-bio-card .yui3-button-icon  { background-position: 0 -1172px; }
+.yui3-skin-sam .yui3-button-icon-chain .yui3-button-icon  { background-position: 0 -1202px; }
+.yui3-skin-sam .yui3-button-icon-chain-borken .yui3-button-icon  { background-position: 0 -1232px; }
+.yui3-skin-sam .yui3-button-icon-chart-bar .yui3-button-icon  { background-position: 0 -1262px; }
+.yui3-skin-sam .yui3-button-icon-chart-growth .yui3-button-icon  { background-position: 0 -1292px; }
+.yui3-skin-sam .yui3-button-icon-chevron-n .yui3-button-icon  { background-position: 0 -1322px; }
+.yui3-skin-sam .yui3-button-icon-chevron-s .yui3-button-icon  { background-position: 0 -1352px; }
+.yui3-skin-sam .yui3-button-icon-clipboard-empty .yui3-button-icon  { background-position: 0 -1382px; }
+.yui3-skin-sam .yui3-button-icon-clipboard-full .yui3-button-icon  { background-position: 0 -1412px; }
+.yui3-skin-sam .yui3-button-icon-color .yui3-button-icon  { background-position: 0 -1442px; }
+.yui3-skin-sam .yui3-button-icon-control-e .yui3-button-icon  { background-position: 0 -1472px; }
+.yui3-skin-sam .yui3-button-icon-control-n .yui3-button-icon  { background-position: 0 -1502px; }
+.yui3-skin-sam .yui3-button-icon-control-w .yui3-button-icon  { background-position: 0 -1532px; }
+.yui3-skin-sam .yui3-button-icon-control-s .yui3-button-icon  { background-position: 0 -1562px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-e .yui3-button-icon  { background-position: 0 -1592px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-n .yui3-button-icon  { background-position: 0 -1622px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-w .yui3-button-icon  { background-position: 0 -1652px; }
+.yui3-skin-sam .yui3-button-icon-control-dbl-s .yui3-button-icon  { background-position: 0 -1682px; }
+.yui3-skin-sam .yui3-button-icon-control-eject .yui3-button-icon  { background-position: 0 -1712px; }
+.yui3-skin-sam .yui3-button-icon-control-pause .yui3-button-icon  { background-position: 0 -1742px; }
+.yui3-skin-sam .yui3-button-icon-control-power .yui3-button-icon  { background-position: 0 -1772px; }
+.yui3-skin-sam .yui3-button-icon-control-record .yui3-button-icon  { background-position: 0 -1802px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-e .yui3-button-icon  { background-position: 0 -1832px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-n .yui3-button-icon  { background-position: 0 -1862px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-w .yui3-button-icon  { background-position: 0 -1892px; }
+.yui3-skin-sam .yui3-button-icon-control-stop-s .yui3-button-icon  { background-position: 0 -1922px; }
+.yui3-skin-sam .yui3-button-icon-control-stop .yui3-button-icon  { background-position: 0 -1952px; }
+.yui3-skin-sam .yui3-button-icon-eks .yui3-button-icon  { background-position: 0 -1982px; }
+.yui3-skin-sam .yui3-button-icon-eks-square .yui3-button-icon  { background-position: 0 -2012px; }
+.yui3-skin-sam .yui3-button-icon-eks-circle .yui3-button-icon  { background-position: 0 -2042px; }
+.yui3-skin-sam .yui3-button-icon-eks-octagon .yui3-button-icon  { background-position: 0 -2072px; }
+.yui3-skin-sam .yui3-button-icon-eks-script .yui3-button-icon  { background-position: 0 -2102px; }
+.yui3-skin-sam .yui3-button-icon-cursor .yui3-button-icon  { background-position: 0 -2132px; }
+.yui3-skin-sam .yui3-button-icon-database .yui3-button-icon  { background-position: 0 -2162px; }
+.yui3-skin-sam .yui3-button-icon-disc .yui3-button-icon  { background-position: 0 -2192px; }
+.yui3-skin-sam .yui3-button-icon-diskette .yui3-button-icon  { background-position: 0 -2222px; }
+.yui3-skin-sam .yui3-button-icon-diskette-plus .yui3-button-icon  { background-position: 0 -2252px; }
+.yui3-skin-sam .yui3-button-icon-diskette-copy .yui3-button-icon  { background-position: 0 -2282px; }
+.yui3-skin-sam .yui3-button-icon-document .yui3-button-icon  { background-position: 0 -2312px; }
+.yui3-skin-sam .yui3-button-icon-document-copy .yui3-button-icon  { background-position: 0 -2342px; }
+.yui3-skin-sam .yui3-button-icon-document-search .yui3-button-icon  { background-position: 0 -2372px; }
+.yui3-skin-sam .yui3-button-icon-text .yui3-button-icon  { background-position: 0 -2402px; }
+.yui3-skin-sam .yui3-button-icon-align-left .yui3-button-icon  { background-position: 0 -2432px; }
+.yui3-skin-sam .yui3-button-icon-align-center .yui3-button-icon  { background-position: 0 -2462px; }
+.yui3-skin-sam .yui3-button-icon-align-right .yui3-button-icon  { background-position: 0 -2492px; }
+.yui3-skin-sam .yui3-button-icon-edit-bold .yui3-button-icon  { background-position: 0 -2522px; }
+.yui3-skin-sam .yui3-button-icon-edit-italic .yui3-button-icon  { background-position: 0 -2552px; }
+.yui3-skin-sam .yui3-button-icon-list-unordered .yui3-button-icon  { background-position: 0 -2582px; }
+.yui3-skin-sam .yui3-button-icon-list-ordered .yui3-button-icon  { background-position: 0 -2612px; }
+.yui3-skin-sam .yui3-button-icon-paragraph .yui3-button-icon  { background-position: 0 -2642px; }
+.yui3-skin-sam .yui3-button-icon-edit-underline .yui3-button-icon  { background-position: 0 -2672px; }
+.yui3-skin-sam .yui3-button-icon-feed .yui3-button-icon  { background-position: 0 -2702px; }
+.yui3-skin-sam .yui3-button-icon-film .yui3-button-icon  { background-position: 0 -2732px; }
+.yui3-skin-sam .yui3-button-icon-flag .yui3-button-icon  { background-position: 0 -2762px; }
+.yui3-skin-sam .yui3-button-icon-folder-closed .yui3-button-icon  { background-position: 0 -2792px; }
+.yui3-skin-sam .yui3-button-icon-folder-open .yui3-button-icon  { background-position: 0 -2822px; }
+.yui3-skin-sam .yui3-button-icon-funciton .yui3-button-icon  { background-position: 0 -2852px; }
+.yui3-skin-sam .yui3-button-icon-filter .yui3-button-icon  { background-position: 0 -2882px; }
+.yui3-skin-sam .yui3-button-icon-gear .yui3-button-icon  { background-position: 0 -2912px; }
+.yui3-skin-sam .yui3-button-icon-geopin .yui3-button-icon  { background-position: 0 -2942px; }
+.yui3-skin-sam .yui3-button-icon-globe .yui3-button-icon  { background-position: 0 -2972px; }
+.yui3-skin-sam .yui3-button-icon-hand .yui3-button-icon  { background-position: 0 -3002px; }
+.yui3-skin-sam .yui3-button-icon-image .yui3-button-icon  { background-position: 0 -3032px; }
+.yui3-skin-sam .yui3-button-icon-info-circle .yui3-button-icon  { background-position: 0 -3062px; }
+.yui3-skin-sam .yui3-button-icon-info-square .yui3-button-icon  { background-position: 0 -3092px; }
+.yui3-skin-sam .yui3-button-icon-info-circle-white .yui3-button-icon  { background-position: 0 -3122px; }
+.yui3-skin-sam .yui3-button-icon-lightbulb-on .yui3-button-icon  { background-position: 0 -3152px; }
+.yui3-skin-sam .yui3-button-icon-lightbulb-off .yui3-button-icon  { background-position: 0 -3182px; }
+.yui3-skin-sam .yui3-button-icon-magnify .yui3-button-icon  { background-position: 0 -3212px; }
+.yui3-skin-sam .yui3-button-icon-magnify-plus .yui3-button-icon  { background-position: 0 -3242px; }
+.yui3-skin-sam .yui3-button-icon-magnify-minus .yui3-button-icon  { background-position: 0 -3272px; }
+.yui3-skin-sam .yui3-button-icon-mail-closed .yui3-button-icon  { background-position: 0 -3302px; }
+.yui3-skin-sam .yui3-button-icon-mail-open .yui3-button-icon  { background-position: 0 -3332px; }
+.yui3-skin-sam .yui3-button-icon-marker .yui3-button-icon  { background-position: 0 -3362px; }
+.yui3-skin-sam .yui3-button-icon-minus .yui3-button-icon  { background-position: 0 -3392px; }
+.yui3-skin-sam .yui3-button-icon-minus-square .yui3-button-icon  { background-position: 0 -3422px; }
+.yui3-skin-sam .yui3-button-icon-minus-circle .yui3-button-icon  { background-position: 0 -3452px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-e .yui3-button-icon  { background-position: 0 -3482px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-e .yui3-button-icon  { background-position: 0 -3512px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-e .yui3-button-icon  { background-position: 0 -3542px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-n .yui3-button-icon  { background-position: 0 -3572px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-n .yui3-button-icon  { background-position: 0 -3602px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-n .yui3-button-icon  { background-position: 0 -3632px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-w .yui3-button-icon  { background-position: 0 -3662px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-w .yui3-button-icon  { background-position: 0 -3692px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-w .yui3-button-icon  { background-position: 0 -3722px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-s .yui3-button-icon  { background-position: 0 -3752px; }
+.yui3-skin-sam .yui3-button-icon-direction-square-s .yui3-button-icon  { background-position: 0 -3782px; }
+.yui3-skin-sam .yui3-button-icon-direction-circle-white-s .yui3-button-icon  { background-position: 0 -3812px; }
+.yui3-skin-sam .yui3-button-icon-node .yui3-button-icon  { background-position: 0 -3842px; }
+.yui3-skin-sam .yui3-button-icon-notepad .yui3-button-icon  { background-position: 0 -3872px; }
+.yui3-skin-sam .yui3-button-icon-open-id .yui3-button-icon  { background-position: 0 -3902px; }
+.yui3-skin-sam .yui3-button-icon-push-pin .yui3-button-icon  { background-position: 0 -3932px; }
+.yui3-skin-sam .yui3-button-icon-plus .yui3-button-icon  { background-position: 0 -3962px; }
+.yui3-skin-sam .yui3-button-icon-plus-square .yui3-button-icon  { background-position: 0 -3992px; }
+.yui3-skin-sam .yui3-button-icon-plus-circle .yui3-button-icon  { background-position: 0 -4022px; }
+.yui3-skin-sam .yui3-button-icon-print .yui3-button-icon  { background-position: 0 -4052px; }
+.yui3-skin-sam .yui3-button-icon-properties .yui3-button-icon  { background-position: 0 -4082px; }
+.yui3-skin-sam .yui3-button-icon-question-octagon .yui3-button-icon  { background-position: 0 -4112px; }
+.yui3-skin-sam .yui3-button-icon-question-square .yui3-button-icon  { background-position: 0 -4142px; }
+.yui3-skin-sam .yui3-button-icon-question-circle-white .yui3-button-icon  { background-position: 0 -4172px; }
+.yui3-skin-sam .yui3-button-icon-notebook .yui3-button-icon  { background-position: 0 -4202px; }
+.yui3-skin-sam .yui3-button-icon-scissors .yui3-button-icon  { background-position: 0 -4232px; }
+.yui3-skin-sam .yui3-button-icon-share .yui3-button-icon  { background-position: 0 -4262px; }
+.yui3-skin-sam .yui3-button-icon-shortcut .yui3-button-icon  { background-position: 0 -4292px; }
+.yui3-skin-sam .yui3-button-icon-hierarchy .yui3-button-icon  { background-position: 0 -4322px; }
+.yui3-skin-sam .yui3-button-icon-no .yui3-button-icon  { background-position: 0 -4352px; }
+.yui3-skin-sam .yui3-button-icon-smilie .yui3-button-icon  { background-position: 0 -4382px; }
+.yui3-skin-sam .yui3-button-icon-speaker-on .yui3-button-icon  { background-position: 0 -4412px; }
+.yui3-skin-sam .yui3-button-icon-speaker-off .yui3-button-icon  { background-position: 0 -4442px; }
+.yui3-skin-sam .yui3-button-icon-spell-check .yui3-button-icon  { background-position: 0 -4472px; }
+.yui3-skin-sam .yui3-button-icon-star .yui3-button-icon  { background-position: 0 -4502px; }
+.yui3-skin-sam .yui3-button-icon-note-pinned .yui3-button-icon  { background-position: 0 -4532px; }
+.yui3-skin-sam .yui3-button-icon-sum .yui3-button-icon  { background-position: 0 -4562px; }
+.yui3-skin-sam .yui3-button-icon-tick .yui3-button-icon  { background-position: 0 -4592px; }
+.yui3-skin-sam .yui3-button-icon-tick-square .yui3-button-icon  { background-position: 0 -4622px; }
+.yui3-skin-sam .yui3-button-icon-tick-circle .yui3-button-icon  { background-position: 0 -4652px; }
+.yui3-skin-sam .yui3-button-icon-tick-circle-white .yui3-button-icon  { background-position: 0 -4682px; }
+.yui3-skin-sam .yui3-button-icon-expand-minus .yui3-button-icon  { background-position: 0 -4712px; }
+.yui3-skin-sam .yui3-button-icon-expand-plus .yui3-button-icon  { background-position: 0 -4742px; }
+.yui3-skin-sam .yui3-button-icon-toolbox .yui3-button-icon  { background-position: 0 -4772px; }
+.yui3-skin-sam .yui3-button-icon-checkbox-on .yui3-button-icon  { background-position: 0 -4802px; }
+.yui3-skin-sam .yui3-button-icon-checkbox-off .yui3-button-icon  { background-position: 0 -4832px; }
+.yui3-skin-sam .yui3-button-icon-tab-plus .yui3-button-icon  { background-position: 0 -4862px; }
+.yui3-skin-sam .yui3-button-icon-profile .yui3-button-icon  { background-position: 0 -4892px; }
+.yui3-skin-sam .yui3-button-icon-webcam .yui3-button-icon  { background-position: 0 -4922px; }
+.yui3-skin-sam .yui3-button-icon-quote .yui3-button-icon  { background-position: 0 -4952px; }
+.yui3-skin-sam .yui3-button-icon-vgrip .yui3-button-icon  { background-position: 0 -4982px; }
+.yui3-skin-sam .yui3-button-icon-hgrip .yui3-button-icon  { background-position: 0 -5012px; }
+

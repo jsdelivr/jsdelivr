@@ -1,0 +1,105 @@
+HTML {
+ 	overflow-y: auto;/* optional hidden XX */
+ 	display: none;/* set to visible with JS */
+}
+
+/* keeps the whole thing centered */
+#ea_page_wrapper{
+	border: 1px solid #99cccc;
+    width: 960px; 
+    top: 0px;
+ 	padding: 5px;
+ 	overflow: hidden; /* cover scrollbar on ea_sw-se */
+ 	position:relative;
+ 	margin-left: auto !important;
+ 	margin-right: auto !important;
+ 	
+}
+
+#ea_crown {
+	background-color:#fff;
+	width:100%;	
+	border: none;
+	overflow:hidden;/* this is required for float pushing*/
+	position:relative;/* this is required for float pushing*/
+	float:left;/* not needed but possible */
+}
+
+#ea_nw{
+	width:100%;
+	height: 100%;
+	position:absolute;
+	top: 0px;
+	background: transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-split-desktop/assets/pix-blue.gif) repeat-x bottom;
+
+}
+
+#ea_body_nw{
+	padding-top: 6px;
+	padding-left: 6px;
+	padding-right: 0px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+#ea_ne{
+	border: none;
+	border-left:none;
+	width:810px;
+	height: 30px;
+	float:right;
+	position:relative;
+	overflow:hidden;
+	background-color: white;
+	/* shift border */
+	padding-left: 12px; /* room for handle */
+	padding-bottom: 10px;
+	padding-top: 0px;
+}
+
+#ea_borders{
+	border-left: 4px solid #99cccc;
+	border-bottom: 4px solid #99cccc;
+	width: 100%;
+	height: 100%;
+	padding-top: 6px;/* padding for text */
+	padding-left: 17px;/* padding for text */
+	padding-right: 7px;/* padding for text */
+	
+}
+
+#ea_body_ne{
+	padding-top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow-x:hidden;
+	margin-left: -5px; /* hide the scroll bar */
+}
+
+#ea_main{
+	height: 700px; 
+    border: none;
+    clear: both;
+    background-repeat: no-repeat;
+    background: transparent url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-split-desktop/assets/drag-here.png) no-repeat 162px 7px; /* xx */
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 981px;/* hide scrollbar behind page_wrapper 960 + 21 */    
+}
+
+#ea_body_main{
+	padding: 6px;
+}
+
+#ea_handle {
+	cursor: move;
+	position:absolute;
+	bottom:0px; 
+	left:0px;
+}
+
+/*
+pushing float layout as in  http://www.sitepoint.com/examples/clearing_floats/example2.php 
+*/
+
+

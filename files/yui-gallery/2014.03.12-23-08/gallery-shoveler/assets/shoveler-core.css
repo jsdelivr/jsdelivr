@@ -1,0 +1,64 @@
+.yui-shoveler-button-left {
+	left: 6px;
+}
+.yui-shoveler-button-right {
+	right: 6px;
+}
+
+.yui-shoveler-button-left,
+.yui-shoveler-button-right {
+	position: absolute;
+	top: 35%;
+	cursor: pointer;
+}
+
+.yui-shoveler-header,
+.yui-shoveler-body{
+	padding: 6px;
+	border: 1px solid #9dc4d8;
+	clear: both;
+}
+
+.yui-shoveler-header {
+	background-color: #C9E1F5;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+.yui-shoveler-header  h2{
+	display: block;
+}
+.yui-shoveler-body {
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	border-top: none;
+	height: 180px;
+	position: relative;
+}
+
+.yui-shoveler-cells {
+	margin: 0 50px;
+	height: 100%;
+}
+
+.yui-shoveler-cell {
+	float: left;
+	margin: 0 5px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.yui-shoveler-start {
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+}
+.yui-shoveler-page-text {
+	float: right;
+}
+.yui-shoveler-loading {
+	margin: auto;
+	position: relative;
+	top: 45%;
+}

@@ -1,0 +1,1 @@
+YUI.add("gallery-debounce",function(e,t){e.debounce=function(e,t){var n;return function(){var r=this,i=arguments;if(e===-1){t.apply(r,i);return}n&&clearTimeout(n),n=setTimeout(function(){t.apply(r,i)},e)}}},"gallery-2013.05.15-21-12",{requires:["yui-base"]});

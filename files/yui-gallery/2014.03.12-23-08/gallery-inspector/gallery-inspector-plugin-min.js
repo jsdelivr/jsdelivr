@@ -1,0 +1,1 @@
+YUI.add("gallery-inspector-plugin",function(c){var b=c.Plugin;function a(d){if(!d.render&&d.render!==false){d.render=true;}a.superclass.constructor.apply(this,arguments);}c.extend(a,c.Inspector,{},{CSS_PREFIX:c.ClassNameManager.getClassName("inspector"),NAME:"inspectorPlugin",NS:"inspector"});b.Inspector=a;},"gallery-2011.05.12-13-26",{requires:["gallery-inspector"]});

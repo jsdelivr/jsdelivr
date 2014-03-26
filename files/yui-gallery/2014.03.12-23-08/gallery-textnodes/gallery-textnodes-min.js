@@ -1,0 +1,1 @@
+YUI.add("gallery-textnodes",function(a){a.Node.ATTRS.textNodes={getter:function(){var b=[];this.get("childNodes").each(function(c){if(c.get("nodeType")===3){b.push(c._node);}});return b;}};},"gallery-2011.07.20-20-59",{requires:["node-base"]});

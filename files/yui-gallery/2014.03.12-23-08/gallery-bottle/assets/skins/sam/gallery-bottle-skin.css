@@ -1,0 +1,53 @@
+.bt-shortcut-mask,
+.bt-overlay-mask{opacity:0.5;filter:alpha(opacity=50);background-color:#000}
+
+.yui3-btslidetab .bst_index {border:2px solid #444;background:#eee}
+
+.bcr_indexitem {border:1px solid #888;border-radius:8px}
+.bcr_indexitem.bcr_on {background-color:#afc}
+.bcr_btnl, .bcr_btnr {width:60px;height:30px;background:transparent url(http://yui.yahooapis.com/3.6.0/build/assets/skins/sam/sprite.png) no-repeat 10px -545px}
+.bcr_btnr {background-position:10px -595px}
+.bcr_off {opacity:0.5;filter:alpha(opacity=50)}
+
+.yui3-btviewer .bvi_button {position:absolute;display:block;width:25px;height:25px;background:transparent url(http://yui.yahooapis.com/3.6.0/build/assets/skins/sam/sprite.png) no-repeat 5px -345px;z-index:2;cursor:pointer}
+.yui3-btviewer .bvi_button.bvi_expand {background-position:5px -395px}
+.yui3-btviewer .bvi_image.bvi_expand {max-width:none}
+
+.yui3-btloader-content .blo_loading{background:#fff url(http://yuilibrary.com/yui/docs/assets/widget/img/ajax-loader.gif) no-repeat 50% 50%;min-height:40px}
+.yui3-btloader-content .blo_loaded{background:#ccc}
+.yui3-btloader-content .blo_error{color:#f00;background:#fcc}
+
+/* Skins for switcher*/
+.btSwitcher{display:inline-block;zoom:1;*display:inline;font-size:0}
+.btSwitcher>*{display:none;background:0;border:0;margin:0}
+.btSwitcher>button:first-child,.btSwitcher>button:last-child{display:inline-block;zoom:1;*display:inline;background-color:#ccc}
+.btSwitcher>button:first-child{-webkit-border-top-left-radius:10px;-webkit-border-bottom-left-radius:10px;-moz-border-radius-topleft:10px;-moz-border-radius-bottomleft:10px;border-top-left-radius:10px;border-bottom-left-radius:10px}
+.btSwitcher>button:last-child{background-color:#99f;-webkit-border-top-right-radius:10px;-webkit-border-bottom-right-radius:10px;-moz-border-radius-topright:10px;-moz-border-radius-bottomright:10px;border-top-right-radius:10px;border-bottom-right-radius:10px}
+.btActive>button:last-child,.btSwitcher>button:only-child{background-color:#ccc}
+.btActive>button:first-child{background-color:#99f}
+
+/* Skins for init / progress enhancement */
+.btHideAll:not(.btReady),
+.btInPlace:not(.btReady) [data-role=carousel],
+.btInPlace:not(.btReady) [data-role=viewer],
+.btInPlace:not(.btReady) [data-role=shortcut],
+.btInPlace:not(.btReady) [data-role=overlay],
+.btInPlace:not(.btReady) [data-role=photogrid],
+.btInPlace:not(.btReady) [data-role=slidetab]
+ {background:#fff url(http://yuilibrary.com/yui/docs/assets/widget/img/ajax-loader.gif) no-repeat 50% 50%;min-height:50px}
+.btHideAll:not(.btReady) {width:100%;height:100%}
+
+.btHideAll:not(.btReady) > *,
+.btInPlace:not(.btReady) [data-role=carousel] > *,
+.btInPlace:not(.btReady) [data-role=viewer] > *,
+.btInPlace:not(.btReady) [data-role=shortcut] > *,
+.btInPlace:not(.btReady) [data-role=overlay] > *,
+.btInPlace:not(.btReady) [data-role=photogrid] > *,
+.btInPlace:not(.btReady) [data-role=slidetab] > *,
+.btHideSCO:not(.btReady) [data-role=shortcut],
+.btHideSCO:not(.btReady) [data-role=overlay]
+ {visibility:hidden}
+
+.btHideSCO:not(.btReady) [data-role=shortcut],
+.btHideSCO:not(.btReady) [data-role=overlay]
+ {position:absolute;left:-99999px;top:-99999px}

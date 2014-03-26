@@ -1,0 +1,1 @@
+YUI.add("gallery-rocket-model",function(e,t){"use strict";var n;n=e.Base.create("rocketModel",e.Model,[e.REventBroker],{initializer:function(e){},destructor:function(){this.stopListening()}},{ATTRS:{}}),e.RModel=n},"gallery-2013.09.18-18-49",{requires:["model","gallery-rocket-event-broker"]});

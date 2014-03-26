@@ -1,0 +1,122 @@
+.yui3-js-enabled .yui3-carousel-loading {
+  right: -1000em;
+  position: absolute;
+  top: -1000em;
+}
+.yui3-js-enabled .yui3-carousel-hidden {
+  right: -10000em;
+  position: absolute;
+  top: -10000em;
+}
+.yui3-js-enabled .yui3-carousel-content {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: right;
+  *margin: 0;
+}
+.yui3-js-enabled .yui3-carousel-content li {
+  list-style: none;
+  margin: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+}
+.yui3-js-enabled .yui3-carousel-vertical .yui3-carousel-content li { display: block }
+.yui3-js-enabled .yui3-carousel-horizontal .yui3-carousel-content { width: 100000px }
+.yui3-js-enabled .yui3-carousel-vertical .yui3-carousel-content { height: 100000px }
+.yui3-js-enabled .yui3-carousel-vertical { min-width: 114px }
+.yui3-js-enabled .yui3-carousel-nav {
+  position: relative;
+  z-index: 1;
+}
+.yui3-skin-sam .yui3-carousel {
+  border: 1px solid #808080;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+}
+.yui3-skin-sam .yui3-carousel-content li { border: 1px solid #ccc }
+.yui3-skin-sam .yui3-carousel-content li.yui3-carousel-selected { border: 1px dotted #000 }
+.yui3-skin-sam .yui3-carousel-nav {
+  background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel-rtl/assets/skins/sam/sprite.png") repeat-x scroll 0 0 transparent;
+  margin: 0;
+  padding: 3px;
+  text-align: left;
+}
+.yui3-skin-sam .yui3-carousel-nav:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.yui3-skin-sam .yui3-carousel-button {
+  background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel-rtl/assets/skins/sam/sprite.png") repeat-x scroll 0 -600px transparent;
+  float: left;
+  height: 19px;
+  margin: 5px;
+  overflow: hidden;
+  width: 40px;
+}
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-button { background-position: 0 -800px }
+.yui3-skin-sam .yui3-carousel-button-disabled { background-position: 0 -2000px }
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-button-disabled { background-position: 0 -2100px }
+.yui3-skin-sam .yui3-carousel-button button {
+  background-color: transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  height: 44px;
+  margin: -2px -2px 0 0;
+  padding: 0 50px 0 0;
+}
+.yui3-skin-sam .yui3-carousel-first-button {
+  margin-right: -100px;
+  margin-left: 50px;
+}
+.yui3-skin-sam .yui3-carousel-next-button {
+  background-position: 0 -550px;
+}
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-first-button { background-position: 0 -750px }
+/*.yui3-skin-sam .yui3-carousel-first-button-disabled { background-position: 0 -1950px }
+ * .yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-first-button-disabled { background-position: 0 -2050px }*/
+  .yui3-skin-sam .yui3-carousel-nav ul {
+    float: left;
+    height: 19px;
+    margin: 0 -220px 0 100px;
+    padding: 0;
+}
+.yui3-skin-sam .yui3-carousel-vertical .yui3-carousel-nav ul {
+  float: none;
+  margin: 0;
+}
+.yui3-skin-sam .yui3-carousel-nav ul li {
+  background: url("http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-carousel-rtl/assets/skins/sam/sprite.png") no-repeat scroll 0 -650px transparent;
+  cursor: pointer;
+  float: right;
+  height: 9px;
+  list-style: none outside none;
+  margin: 10px 5px 0 0;
+  overflow: hidden;
+  padding: 0;
+  width: 9px;
+}
+.yui3-skin-sam .yui3-carousel-nav ul:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.yui3-skin-sam .yui3-carousel-nav ul li a {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  text-align: right;
+  text-indent: -10000px;
+  width: 100%;
+}
+.yui3-skin-sam .yui3-carousel-nav ul li.yui3-carousel-nav-item-selected { background-position: 0 -700px }

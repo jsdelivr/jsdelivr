@@ -1,0 +1,10 @@
+.textarea-expander {
+  position: relative;
+  border: 1px solid #BDC7D8;
+  background: #fff;
+}
+
+.textarea-expander > textarea, .textarea-expander > pre{
+  padding: 3px !important;
+  font: 400 13px/16px helvetica, arial, sans-serif;
+} 

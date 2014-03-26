@@ -1,0 +1,107 @@
+.yui3-timeline {
+	height:100%;
+	position:relative;
+	border: thin solid silver;
+	overflow:hidden;
+}
+.yui3-timeline-bar {
+	height:20px;
+	background-color: #eee;
+	position: absolute;
+	border:thin solid gray;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 5;
+	cursor: default;
+	text-align: center;
+}
+.yui3-timeline-compact .yui3-timeline-bar {
+	height:10px;
+	font-size: x-small;
+}
+.yui3-timeline-hasDescr {
+	background:#eee url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-timeline/assets/resize-nw.png) top right no-repeat;
+	cursor: pointer;
+}
+.yui3-timeline-fuzzy {
+	border-radius: 8px 8px 8px 8px;
+	border-style: solid none;
+	padding: 0 3px;
+}
+.yui3-timeline-grid {
+	position: absolute;
+	border-left:thin dotted silver;
+	height:100%;
+	top:0;
+	font-size: x-small;
+}
+.yui3-timeline-divider {
+	height:50%;
+	width:100%;
+	border-bottom:thin solid blue;
+}
+.yui3-timeline-pointer {
+	background-color: black;
+	border-width:5px;
+	border-color:black white white;
+	border-style: inset solid solid;
+	height: 40px;
+	width: 1px;
+	position: absolute;
+} 
+.yui3-timeline-cats {
+	position:absolute;
+	top:2px;
+	left:2px;
+	padding:2px;
+	border: thin solid silver;
+	font-size: small;
+	z-index:1;
+	background-color: white;
+}
+.yui3-timeline-cats p {
+	padding:2px;
+	margin:2px;
+	border: thin solid silver;
+	cursor: default;
+}
+
+.yui3-timeline-descr {
+	border: 2px solid goldenrod;
+	background-color: lightgoldenrodyellow;
+	max-width: 400px;
+	position: absolute;
+	border-radius:0.5em;
+	padding:2px;
+	margin-bottom: 10px;
+	display: none;
+	z-index: 9;
+	cursor: default;
+}
+.yui3-timeline-descr:after {
+	content: ' ';
+	height: 100px;
+	position: absolute;
+	width: 1px;
+	border: 10px solid transparent;
+	border-top-color: goldenrod;
+	top: 100%;
+}
+.yui3-timeline-left:after {
+	left: 5%;
+	border-left-width: 5px;
+
+}
+.yui3-timeline-center:after {
+	left: 50%;
+
+}
+.yui3-timeline-right:after {
+	left: 85%;
+	border-right-width:5px;
+
+}
+.yui3-timeline-noCat {
+	color:gray;
+	background-color:#EEEEEE;
+}

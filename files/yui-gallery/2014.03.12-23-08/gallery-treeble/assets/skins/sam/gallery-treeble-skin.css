@@ -1,0 +1,41 @@
+.yui3-skin-sam .yui3-datatable td.treeble-nub
+{
+	border-right-color: transparent;
+	cursor: pointer;
+}
+.yui3-skin-sam .yui3-datatable td.treeble-value
+{
+	border-left-color: transparent;
+}
+
+.yui3-skin-sam .yui3-datatable .row-toggle a.treeble-expand-nub
+{
+	padding:0 8px;
+	height:14px;
+	margin-left:2px;
+	*display:inline-block;
+}
+.yui3-skin-sam .yui3-datatable .row-closed a.treeble-expand-nub
+{
+	background:url(http://yui.yahooapis.com/gallery-2013.04.03-19-53/gallery-treeble/assets/skins/sam/closed.png) no-repeat;
+}
+.yui3-skin-sam .yui3-datatable .row-open a.treeble-expand-nub
+{
+	background:url(http://yui.yahooapis.com/gallery-2013.04.03-19-53/gallery-treeble/assets/skins/sam/open.png) no-repeat;
+}
+
+.yui3-skin-sam .yui3-datatable td .treeble-depth-1
+{
+	padding-left: 15px;
+	display: inline-block;
+}
+.yui3-skin-sam .yui3-datatable td .treeble-depth-2
+{
+	padding-left: 30px;
+	display: inline-block;
+}
+.yui3-skin-sam .yui3-datatable td .treeble-depth-3
+{
+	padding-left: 45px;
+	display: inline-block;
+}

@@ -1,0 +1,51 @@
+.yui3-js-enabled .yui3-carousel-loading {
+    left: -1000em;
+    position: absolute;
+    top: -1000em;
+}
+
+.yui3-js-enabled .yui3-carousel-hidden {
+    left: -10000em;
+    position: absolute;
+    top: -10000em;
+}
+
+.yui3-js-enabled .yui3-carousel-content {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: left;
+
+    *margin: 0;
+}
+
+.yui3-js-enabled .yui3-carousel-content li {
+    list-style: none;
+    margin: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.yui3-js-enabled .yui3-carousel-vertical .yui3-carousel-content li {
+    display: block;
+}
+
+.yui3-js-enabled .yui3-carousel-horizontal .yui3-carousel-content {
+    width: 100000px;
+}
+
+.yui3-js-enabled .yui3-carousel-vertical .yui3-carousel-content {
+    height: 100000px;
+}
+
+.yui3-js-enabled .yui3-carousel-vertical {
+    min-width: 114px;
+}
+
+.yui3-js-enabled .yui3-carousel-nav {
+    position: relative;
+    z-index: 1;
+}

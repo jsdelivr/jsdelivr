@@ -1,0 +1,65 @@
+.yui3-js-enabled .yui3-heatbarrater-loading {
+	display: none;
+}
+.yui3-heatbarrater {
+	display: inline;
+	zoom: 1;
+}
+.yui3-heatbarrater li {
+	list-style-type: none;
+}
+.yui3-heatbarrater-content:after {
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+.yui3-heatbarrater-rating-bar {
+	border: 1px solid #edeeee;
+	padding: 3px;
+	height: 12px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	float: left;
+	margin: 0px 8px 0px 0px;
+}
+.yui3-heatbarrater-rating-unit {
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-left: 1px;
+}
+.yui3-heatbarrater-rating-unit-first {
+	margin-left: 0px;
+	-moz-border-radius-topleft: 9px;
+	-webkit-border-top-left-radius: 9px;
+	border-top-left-radius: 9px;
+	-moz-border-radius-bottomleft: 9px;
+	-webkit-border-bottom-left-radius: 9px;
+	border-bottom-left-radius: 9px;
+}
+.yui3-heatbarrater-rating-unit-last {
+	-moz-border-radius-topright: 9px;
+	-webkit-border-top-right-radius: 9px;
+	border-top-right-radius: 9px;
+	-moz-border-radius-bottomright: 9px;
+	-webkit-border-bottom-right-radius: 9px;
+	border-bottom-right-radius: 9px;
+}
+.yui3-heatbarrater-rating-bar-unrated .yui3-heatbarrater-rating-unit {
+	background-color: #fff;
+	border: 1px solid #d7d8d8; 
+}
+.yui3-heatbarrater-rating-bar-rated .yui3-heatbarrater-rating-unit {
+	background-color: #dddddd;
+	border: 1px solid #dddddd;    
+}
+.yui3-heatbarrater-rating-legend {
+	line-height: 19px;
+	font-size: 11px;
+	font-weight: bold;
+}
+.yui3-heatbarrater-rating-legend-unrated {
+	color: #d7d8d8;
+}

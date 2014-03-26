@@ -1,0 +1,13 @@
+.yui3-datatable-inline-input:focus {
+    outline: none;
+}
+
+.yui3-datatable-inline-input {
+    border: 1px solid #cbcbcb;
+    background-color: #FFFEBB;
+    width:	100%;
+    height: 100%;
+    margin: 0;
+    padding-left:	9px;
+    z-index: 999;
+}

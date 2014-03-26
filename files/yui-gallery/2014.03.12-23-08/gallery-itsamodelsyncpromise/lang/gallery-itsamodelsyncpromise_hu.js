@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-itsamodelsyncpromise_hu",function(e){e.Intl.add("gallery-itsamodelsyncpromise","hu",{load:"Adatok bet\u00f6lt\u00e9se ...",reload:"Adatok bet\u00f6lt\u00e9se ...",update:"Adatok friss\u00edt\u00e9se ...",submit:"Adatok k\u00fcld\u00e9se ...",save:"Adatok friss\u00edt\u00e9se ...",destroy:"Adatok friss\u00edt\u00e9se ..."})},"gallery-2014.01.28-00-45");

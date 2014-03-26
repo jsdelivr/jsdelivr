@@ -1,0 +1,49 @@
+
+ ol.yui3-treeviewlite,
+ ul.yui3-treeviewlite,
+ ol.yui3-treeviewlite ol,
+ ul.yui3-treeviewlite ol, 
+ ol.yui3-treeviewlite ul,
+ ul.yui3-treeviewlite ul {
+    list-style-image:none;
+    list-style-position:inside;
+    list-style-type:none;  
+    padding-left:12px;
+    *padding-left:0;
+    padding-top:0;
+    line-height:20px;
+	}
+
+  ol.yui3-treeviewlite li,
+  ul.yui3-treeviewlite li{
+  margin: 0px 0 0px -10px;
+  padding-left:30px;
+  *padding-left:20px;
+    list-style-image:none;
+    list-style-position:inside;
+    list-style-type:none;  
+	}	
+
+  ol.yui3-treeviewlite li.yui3-treeviewlite-collapsed ol,
+  ol.yui3-treeviewlite li.yui3-treeviewlite-collapsed ul,
+  ul.yui3-treeviewlite li.yui3-treeviewlite-collapsed ol, 
+  ul.yui3-treeviewlite li.yui3-treeviewlite-collapsed ul {
+    display: none;
+  }
+  
+	
+	ol.yui3-treeviewlite li span,
+  ul.yui3-treeviewlite li span{
+	 margin-left: -30px;
+	 *margin-left:-40px;
+	 padding-left: 30px;
+	 padding-bottom:5px;
+  padding-left:31px;
+  width:auto;
+
+	}
+ol.yui3-treeviewlite li.yui3-treeviewlite-haschild>span,
+ul.yui3-treeviewlite li.yui3-treeviewlite-haschild>span{
+ cursor:pointer;
+}	
+

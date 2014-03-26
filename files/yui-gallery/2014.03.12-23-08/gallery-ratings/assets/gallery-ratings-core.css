@@ -1,0 +1,90 @@
+/* Some CSS provided by KomodoMedia.com. Used with permission */
+.yui3-gallery-ratings, .yui3-gallery-ratings .yui3-gallery-ratings-star-list li {
+  display: inline;
+}
+.yui3-gallery-ratings-content {
+  display:none;
+}
+/* inline rating */
+.yui3-gallery-ratings .yui3-gallery-ratings-inline {
+  display:inline-block;
+  vertical-align: middle;
+}
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list,
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list a:hover,
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list a:active,
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list a:focus,
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list .yui3-gallery-ratings-current{
+  background: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-ratings/assets/star.gif) left -1000px repeat-x;
+}
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list{
+  position:relative;
+  width:125px;
+  height:25px;
+  overflow:hidden;
+  list-style:none;
+  margin:0;
+  padding:0;
+  background-position: left top;
+  display:-moz-inline-block;
+  display:-moz-inline-box;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list a,
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list .yui3-gallery-ratings-current{
+  position:absolute;
+  top:0;
+  left:0;
+  text-indent:-1000em;
+  height:25px;
+  line-height:25px;
+  outline:none;
+  overflow:hidden;
+  border: none;
+}
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list a:hover {
+  background-position: left bottom;
+}
+.yui3-gallery-ratings a.clearRating, 
+.yui3-gallery-ratings a.clearRating:hover,
+.yui3-gallery-ratings a.clearRating:active,
+.yui3-gallery-ratings a.clearRating:focus {
+  background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-ratings/assets/blck25_1.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  outline:none;
+  display:-moz-inline-block;
+  display:-moz-inline-box;
+  display:inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-indent: -1000em;
+  vertical-align: middle;
+  z-index: 7;
+}
+.yui3-gallery-ratings .yui3-gallery-ratings-star-list .yui3-gallery-ratings-current{
+  z-index:1;
+  background-position: left center;
+}
+
+/* small rating */
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star ul,
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star ul a:hover,
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star ul a:active,
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star ul a:focus,
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star ul .yui3-gallery-ratings-current{
+  background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-ratings/assets/star_small.gif);
+  line-height: 10px;
+  height: 10px;
+}
+.yui3-gallery-ratings .yui3-gallery-ratings-small-star a.clearRating {
+  background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-ratings/assets/blck10_1.gif);
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  vertical-align: middle;
+}
+

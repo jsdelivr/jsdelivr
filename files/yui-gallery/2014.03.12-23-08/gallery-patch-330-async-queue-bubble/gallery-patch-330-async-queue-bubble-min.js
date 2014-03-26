@@ -1,0 +1,1 @@
+YUI.add("gallery-patch-330-async-queue-bubble",function(a){a.AsyncQueue.prototype._init=function(){a.EventTarget.call(this,{prefix:"queue",emitFacade:true});this._q=[];this.defaults={};this._initEvents();};},"gallery-2011.01.26-20-33",{requires:["async-queue"]});

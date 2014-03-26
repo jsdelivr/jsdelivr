@@ -1,0 +1,1 @@
+YUI.add("gallery-model-sync-multi",function(a){(function(c){var b=function(){};b.prototype={sync:function(f,e){e=e||{};var d=this.constructor.SYNCS[e.sync];return d&&d.prototype.sync.apply(this,arguments);}};c.namespace("ModelSync").Multi=b;}(a));},"gallery-2012.10.10-19-59",{requires:["yui-base"],skinnable:false});

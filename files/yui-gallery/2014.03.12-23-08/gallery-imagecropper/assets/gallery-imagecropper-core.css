@@ -1,0 +1,26 @@
+
+.yui3-imagecropper {
+	position: relative;
+}
+
+.yui3-imagecropper-mask, .yui3-imagecropper-resize-knob {
+	position: absolute;
+}
+
+.yui3-imagecropper-mask, .yui3-imagecropper-resize-mask {
+	width: 100%;
+	height: 100%;
+}
+
+.yui3-imagecropper-mask {
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	background: #000;
+}
+
+.yui3-imagecropper-resize-mask {
+	cursor: move;
+	border: 1px dashed #fff;
+}

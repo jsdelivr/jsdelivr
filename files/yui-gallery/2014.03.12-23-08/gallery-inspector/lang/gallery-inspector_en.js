@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-inspector_en",function(a){a.Intl.add("gallery-inspector","en",{collapse:"Collapse",expand:"Expand",filter_attrs:"Filter attributes",name:"Name",pause:"Pause",title:"Inspector",value:"Value"});},"gallery-2011.05.04-20-03");

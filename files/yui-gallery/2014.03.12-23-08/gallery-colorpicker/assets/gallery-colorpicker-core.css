@@ -1,0 +1,103 @@
+.yui3-colorpicker {
+	width: 290px;
+	height: 264px;
+	position: relative;
+	background: #111;
+	font-family: sans-serif;
+	font-size: 10pt;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.yui3-colorpicker .yui3-colorpicker-colrsqr{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: #000;
+}
+.yui3-colorpicker .yui3-colorpicker-hbar,
+.yui3-colorpicker .yui3-colorpicker-sbar,
+.yui3-colorpicker .yui3-colorpicker-lbar {
+	position: absolute;
+	top: 5px;
+	width: 30px;
+	height: 160px;
+	background: #111;
+}
+.yui3-colorpicker .yui3-colorpicker-hbar,
+.yui3-colorpicker .yui3-colorpicker-hval {
+	left: 170px;
+}
+.yui3-colorpicker .yui3-colorpicker-sbar,
+.yui3-colorpicker .yui3-colorpicker-sval {
+	left: 210px;
+}
+.yui3-colorpicker .yui3-colorpicker-lbar,
+.yui3-colorpicker .yui3-colorpicker-lval {
+	left: 250px;
+}
+.yui3-colorpicker .yui3-colorpicker-swatch {
+	position: absolute;
+	top: 170px;
+	left: 30px;
+	width: 110px;
+	height: 34px;
+	background: #000;
+}
+.yui3-colorpicker .yui3-colorpicker-val {
+	text-align: center;
+	width: 30px;
+	position: absolute;
+	overflow: hidden;
+}
+.yui3-colorpicker .yui3-colorpicker-val input {
+	border: solid 1px #333;
+	display: block;
+	color: #ccc;
+	background: #000;
+	width: 28px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 10pt;
+	margin-top: 2px;
+}
+.yui3-colorpicker .yui3-colorpicker-val label {
+	color: #ccc;
+}
+.yui3-colorpicker .yui3-colorpicker-hval,
+.yui3-colorpicker .yui3-colorpicker-sval,
+.yui3-colorpicker .yui3-colorpicker-lval {
+	top: 164px;
+}
+.yui3-colorpicker .yui3-colorpicker-hexval {
+	width: 60px;
+	left: 195px;
+}
+.yui3-colorpicker .yui3-colorpicker-hexval input {
+	width: 58px;
+}
+.yui3-colorpicker .yui3-colorpicker-rval,
+.yui3-colorpicker .yui3-colorpicker-gval,
+.yui3-colorpicker .yui3-colorpicker-bval,
+.yui3-colorpicker .yui3-colorpicker-hexval {
+	top: 216px;
+}
+.yui3-colorpicker .yui3-colorpicker-rval {
+	left: 35px;
+}
+.yui3-colorpicker .yui3-colorpicker-gval {
+	left: 70px;
+}
+.yui3-colorpicker .yui3-colorpicker-bval {
+	left: 105px;
+}
+.yui3-colorpalette .cp-swatch {
+	width: 65px;
+	height: 34px;
+	margin: 5px;
+	float: left;
+	cursor: pointer;
+	border: 1px solid #111;
+}

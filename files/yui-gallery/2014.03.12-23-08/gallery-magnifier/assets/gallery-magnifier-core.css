@@ -1,0 +1,22 @@
+.yui3-magnifier-hidden
+{
+	display: none;
+}
+
+.yui3-magnifier-display
+{
+	overflow: hidden;
+	border: 1px;
+}
+
+.yui3-magnifier-display div
+{
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.yui3-magnifier-display img
+{
+	position: absolute;
+}

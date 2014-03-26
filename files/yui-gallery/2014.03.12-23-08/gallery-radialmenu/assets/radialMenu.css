@@ -1,0 +1,23 @@
+.yui-radialmenupanel-hidden {
+	visibility: hidden;
+}
+
+.yui-radialmenu-hidden {
+	display: none;
+}
+
+.yui-radialmenu {
+	position: absolute;
+}
+
+.yui-radialmenupanel {
+	background-color: #EFEFEF;
+	height: 50px;
+	position: absolute;
+	width: 50px;
+}
+
+.yui-radialmenupanel-hover {
+	border: 1px solid #333;
+	z-index: 100 !important;
+}

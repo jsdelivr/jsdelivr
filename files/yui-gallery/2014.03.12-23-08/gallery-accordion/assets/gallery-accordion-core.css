@@ -1,0 +1,59 @@
+.yui3-accordion {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.yui3-accordion-item {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+.yui3-accordion-item .yui3-widget-hd {
+    overflow: hidden;
+}
+
+.yui3-accordion-item .yui3-widget-bd {
+    cursor: default;
+    overflow: hidden;
+    position: relative;
+}
+
+.yui3-accordion-item-icons {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    padding: 1px;
+    height: 25px;
+}
+
+.yui3-accordion-item-icon,
+.yui3-accordion-item-iconexpanded,
+.yui3-accordion-item-iconalwaysvisible,
+.yui3-accordion-item-iconclose {
+    width: 22px;
+    height: 22px;
+}
+
+.yui3-accordion-item-icon,
+.yui3-accordion-item-label {
+    float: left;
+}
+
+.yui3-accordion-item-label{
+    position: relative;
+    top: 4px;
+    _height: 22px;
+}
+
+.yui3-accordion-item-iconexpanded,
+.yui3-accordion-item-iconalwaysvisible,
+.yui3-accordion-item-iconclose {
+    float: left;
+}
+
+.yui3-accordion-item-iconclose-hidden {
+    display: none;
+}

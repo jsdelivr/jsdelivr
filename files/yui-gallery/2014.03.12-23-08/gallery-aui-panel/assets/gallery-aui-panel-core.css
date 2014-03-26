@@ -1,0 +1,38 @@
+.yui3-panel {
+}
+
+.yui3-panel-content {
+	border: 1px solid #999;
+}
+
+.yui3-panel-icons {
+	float: right;
+}
+
+.yui3-panel-hd {
+	background: #ccc;
+	border-bottom: 1px solid #999;
+	font-weight: bold;
+	padding: 2px 3px 2px 4px;
+}
+
+.yui3-panel-bd {
+	padding: 3px;
+}
+
+.yui3-panel-ft {
+	background: #eee;
+	border-top: 1px solid #ccc;
+	padding: 5px 10px;
+	text-align: right;
+	visibility: inherit;
+}
+
+.yui3-panel-collapsed .yui3-panel-hd {
+	border-bottom-width: 0;
+}
+
+.yui3-panel-hd-text {
+	float: left;
+	line-height: 2;
+}

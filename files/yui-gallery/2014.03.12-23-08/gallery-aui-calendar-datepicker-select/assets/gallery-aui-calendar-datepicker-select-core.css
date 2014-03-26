@@ -1,0 +1,24 @@
+.yui3-datepicker-content {
+	border: 1px solid #ddd;
+	padding: 3px;
+}
+
+.yui3-datepicker-display, .yui3-datepicker-select-wrapper, .yui3-field-date .yui3-datepicker-display, .yui3-field-date .yui3-datepicker-select-wrapper {
+	float: left;
+}
+
+.yui3-datepicker-button-wrapper .yui3-buttonitem-content {
+	margin: 0;
+}
+
+.yui3-datepicker-button-wrapper {
+	margin: 0 5px 0 2px;
+}
+
+.yui3-datepicker-select-wrapper select {
+	margin-left: 2px;
+}
+
+.yui3-datepicker-button-wrapper {
+	float: left;
+}

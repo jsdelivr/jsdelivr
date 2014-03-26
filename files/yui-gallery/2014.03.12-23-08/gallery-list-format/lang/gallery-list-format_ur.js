@@ -1,0 +1,1 @@
+YUI.add("lang/gallery-list-format_ur",function(e){e.Intl.add("gallery-list-format","ur",{listPatternEnd:"{0}\u060c \u0627\u0648\u0631 {1}",listPatternMiddle:"{0}\u060c {1}",listPatternStart:"{0}\u060c {1}",listPatternTwo:"{0} \u0627\u0648\u0631 {1}"})},"gallery-2013.04.17-18-52");

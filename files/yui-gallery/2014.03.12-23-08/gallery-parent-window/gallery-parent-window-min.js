@@ -1,0 +1,1 @@
+YUI.add("gallery-parent-window",function(c){var a={};try{a.doc=(a.win=window.parent).document;}catch(b){return;}c.ParentWindow=function(g,f,e,d){var h=YUI({win:a.win,doc:a.doc},g,f,e,d);h.Get.script=function(){return c.Get.script.apply(c,arguments);};return h;};},"gallery-2010.11.17-21-32");

@@ -1,0 +1,67 @@
+.yui3-image-viewer {
+	z-index: 3000;
+}
+
+.yui3-image-viewer-link {
+	outline: 0 none;
+}
+
+.yui3-image-viewer-content .yui3-icon-loading {
+	margin: 0 auto;
+}
+
+.yui3-image-viewer-bd {
+	background: #fff;
+	padding: 5px;
+	width: 16px;
+}
+
+.yui3-image-viewer-content .yui3-widget-ft {
+	background: #fff;
+	color: #222;
+	padding: 0 10px 10px;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.yui3-image-viewer-loading .yui3-image-viewer-content .yui3-widget-ft {
+	visibility: hidden;
+}
+
+.yui3-image-viewer-info {
+	color: #777;
+}
+
+.yui3-image-viewer-arrow {
+	height: 54px;
+	outline: 0;
+	position: absolute;
+	width: 30px;
+	z-index: 3000;
+}
+
+.yui3-image-viewer-arrow-left {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-image-viewer-base/assets/arrow-left.png);
+	left: 100px;
+}
+
+.yui3-image-viewer-arrow-right {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-image-viewer-base/assets/arrow-right.png);
+	right: 100px;
+}
+
+.yui3-image-viewer-close {
+	background-image: url(http://yui.yahooapis.com/gallery-2012.12.05-21-01/gallery-aui-image-viewer-base/assets/close.png);
+	background-repeat: no-repeat;
+	height: 19px;
+	outline: 0;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 19px;
+	z-index: 3000;
+}
+
+.ie6 .yui3-image-viewer-close {
+	position: absolute;
+}

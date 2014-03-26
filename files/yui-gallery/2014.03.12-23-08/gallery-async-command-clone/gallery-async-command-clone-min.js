@@ -1,0 +1,1 @@
+YUI.add("gallery-async-command-clone",function(a){(function(d,b){var c=d.Plugin;c.AsyncCommandClone=d.Base.create(b,c.Base,[],{clone:function(){var e=this.get("host").getAttrs(["args","ctx","fn"]);e.args=e.args.slice(1);return new d.AsyncCommand(e);}},{NS:"clone"});}(a,arguments[1]));},"gallery-2012.06.20-20-07",{requires:["gallery-async-command","plugin"],skinnable:false});

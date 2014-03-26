@@ -1,0 +1,1 @@
+YUI.add("gallery-array-iterate",function(e,t){(function(e){"use strict";var t=function(n,r,i,s,o){var u=r,a=n.length;if(e.Lang.isFunction(i))return t(n,r<0?a-1:0,r,i,s);for(;u>=0&&u<a;u+=i)if(u in n&&s.call(o,n[u],u,n))return!0;return!1};e.Array.iterate=t})(e)},"gallery-2013.11.14-01-08");
