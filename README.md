@@ -54,8 +54,8 @@ This system also responds immediately to performance degradation and downtime of
 
 
 
-How to submit or update projects:
----------------------------------
+# How to submit or update projects
+
 
  1. [Fork][9] the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
@@ -64,12 +64,6 @@ How to submit or update projects:
  5. That's it!
 
 
-Auto-Updating
--------------
-
-Coming soon - we are [working on it](https://github.com/jsdelivr/libgrabber)!
-
-    
 File Structure
 --------------
 Under `files/` a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
@@ -98,17 +92,50 @@ A version directory should contain the following:
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
+Auto-Updating
+-------------
+
+Coming soon - we are [working on it](https://github.com/jsdelivr/libgrabber)!
+
+
+Custom CDN Hosting
+---
+
+If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
+We can work together and setup a custom configuration for your project. This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
+
+This kind of custom hosting can be suitable for:
+
+* Binary hosting. Windows executable files and zips.
+* Frequently updated files.
+* Projects that can't follow jsDelivr file structure.
+* Some other use that will blow all of our minds.
+
+Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
+
+jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
+
+
+# Usage
+
+
 URL Structure
 -------------
 
-`//cdn.jsdelivr.net/{projectName}/{version}/{file}`
+Typical usage:  
+`//cdn.jsdelivr.net/{projectName}/{version}/{file}`  
+Example: `//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js`
 
+When you want all the files in that version folder as a single compressed archive:  
 `//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
 
+Downloads the three projects' `mainfile` from their latest versions as a single collated file:  
 `//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
 
+You may specify a specific version or version-branch per file:  
 `//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@{versionAlias},{projectName}`
 
+You may also select more than one file from a project (typically for plug-ins that ship with the project):  
 `//cdn.jsdelivr.net/g/{projectName}@{version}({filepath1}+{filepath2}),{projectName}@{versionAlias},{projectName}`
 
 
@@ -184,25 +211,6 @@ An npm module that can be used in your node.js applications:
 * https://github.com/jsdelivr/npm-jsdelivr
 
 More coming soon...
-
-
-Custom CDN Hosting
----
-
-If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
-We can work together and setup a custom configuration for your project. This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
-
-This kind of custom hosting can be suitable for:
-
-* Binary hosting. Windows executable files and zips.
-* Frequently updated files.
-* Projects that can't follow jsDelivr file structure.
-* Some other use that will blow all of our minds.
-
-Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
-
-jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
-
 
 
 Contribute Performance Data
