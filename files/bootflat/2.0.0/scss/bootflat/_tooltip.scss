@@ -1,0 +1,42 @@
+// Variables
+//------------------------------------------------------
+$tooltip-background-color:               $darkgray-dark !default;
+$tooltip-font-color:                     $white !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("tooltip") {
+
+  /**
+   * tooltip
+   * --------------------------------------------------
+   */
+
+  .tooltip {
+    @at-root #{&}-inner {
+        color: $tooltip-font-color;
+        background-color: $tooltip-background-color;
+    }
+    &.top #{&}-arrow,
+    &.top-left #{&}-arrow,
+    &.top-right #{&}-arrow {
+        border-top-color: $tooltip-background-color;
+    }
+    &.right #{&}-arrow {
+        border-right-color: $tooltip-background-color;
+    }
+    &.left #{&}-arrow {
+        border-left-color: $tooltip-background-color;
+    }
+    &.bottom #{&}-arrow,
+    &.bottom-left #{&}-arrow, 
+    &.bottom-right #{&}-arrow {
+        border-bottom-color: $tooltip-background-color;
+    }
+  }
+
+}
+
+
