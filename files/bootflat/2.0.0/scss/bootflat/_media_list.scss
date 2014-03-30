@@ -1,0 +1,26 @@
+// Variables
+//------------------------------------------------------
+$media-list-font-color-head:                $darkgray-dark !default;
+$media-list-font-color-body:                $mediumgray-dark !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("media-list") {
+
+  /**
+   * media list
+   * --------------------------------------------------
+   */
+  .media-list {
+    color: $media-list-font-color-body;
+    @at-root .media-heading {
+      font-size: 14px;
+      color: $media-list-font-color-head;
+    }
+  }
+
+}
+
+

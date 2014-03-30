@@ -1,0 +1,121 @@
+// Variables
+//------------------------------------------------------
+$breadcrumb-font-color:                        $darkgray-dark !default;
+$breadcrumb-link-color:                        $aqua-dark !default;
+$breadcrumb-background-color:                  $lightgray-dark !default;
+
+$breadcrumb-arrow-radius:                      4px !default;
+$breadcrumb-arrow-font-color:                  $white !default;
+$breadcrumb-arrow-background-color:            $aqua-dark !default;
+$breadcrumb-arrow-background-color-hover:      $aqua-light !default;
+
+// Exports
+//------------------------------------------------------
+@include exports("breadcrumb") {
+
+  /**
+   * breadcrumb
+   * --------------------------------------------------
+   */
+  .breadcrumb {
+      color: $breadcrumb-font-color;
+      background-color: $breadcrumb-background-color;
+      & > .active {
+          color: $breadcrumb-font-color;
+      }
+      & a {
+          color: $breadcrumb-link-color;        
+      }
+  }
+
+  .breadcrumb-arrow {
+      padding: 0;
+      list-style: none;
+      background-color: $breadcrumb-background-color;
+      height: 36px;
+      line-height: 36px;
+
+      & li:first-child a {
+          @include radius($type: border-radius, $value: $breadcrumb-arrow-radius 0 0 $breadcrumb-arrow-radius);
+      }
+      & li,
+      & li a,
+      & li span{
+          display: inline-block;
+          vertical-align: top;
+      }
+      & li:not(:first-child) {
+          margin-left: -5px;
+      }
+      & li + li:before {
+          padding: 0;
+          content: "";
+      }
+      & li span {
+          padding: 0 10px;
+      }
+      & li a,
+      & li:not(:first-child) span {
+          padding: 0 10px 0 25px;
+          height: 35px;
+          line-height: 35px;
+      }
+      & li:first-child a {
+          padding: 0 10px;
+      }
+      & li a {
+          position: relative;
+          border: 1px solid $breadcrumb-arrow-background-color;
+          color: $breadcrumb-arrow-font-color;
+          background-color: $breadcrumb-arrow-background-color;
+          text-decoration: none;
+      }
+      & li:first-child a {
+          padding-left: 10px;
+      }
+      & li a:before,
+      & li a:after {
+          position: absolute;
+          top: 0;
+          content: '';
+          width: 0;
+          height: 0;
+          border-top: 17px solid transparent;
+          border-bottom: 17px solid transparent;
+      }
+      & li a:before {
+          right: -10px;
+          border-left-width: 10px;
+          border-left-style: solid;
+          border-left-color: $breadcrumb-arrow-background-color;
+          z-index: 3;
+      }
+      & li a:after{
+          right: -11px;
+          border-left: 10px solid darken($breadcrumb-arrow-background-color, 10%);
+          z-index: 2;
+      }
+      & li a:hover,
+      & li a:focus {
+          background-color: $breadcrumb-arrow-background-color-hover;
+          border: 1px solid $breadcrumb-arrow-background-color-hover;
+      }
+      & li a:hover:before,
+      & li a:focus:before {
+          border-left-color: $breadcrumb-arrow-background-color-hover;
+      }
+      & li a:active {
+          background-color: darken($breadcrumb-arrow-background-color, 10%);
+          border: 1px solid darken($breadcrumb-arrow-background-color, 10%);
+      }
+      & li a:active:before,
+      & li a:active:after {
+          border-left-color: darken($breadcrumb-arrow-background-color, 10%);
+      }
+      & li span {
+          color: $breadcrumb-font-color;
+      }
+  }
+}
+
+

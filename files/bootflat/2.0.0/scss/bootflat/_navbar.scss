@@ -1,0 +1,213 @@
+// Variables
+//------------------------------------------------------
+$navbar-background-color:                    $mint-dark !default;
+$navbar-background-color-active:             $mint-light !default;
+
+$navbar-font-color:                          $white !default;
+$navbar-item-background-color-hover:         $navbar-background-color-active !default;
+
+$navbar-inverse-background-color:            $black !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("navbar") {
+
+  /**
+   * navbar
+   * --------------------------------------------------
+   */
+
+  .navbar-default {
+      & {
+          background-color: $navbar-background-color;
+          border-color: $navbar-background-color;
+      }
+      & .navbar-brand,
+      & .navbar-link,
+      & .btn-link {
+          color: darken($navbar-background-color, 15%);
+      }
+      & .navbar-brand:hover,
+      & .navbar-brand:focus,
+      & .navbar-link:hover,
+      & .btn-link:hover,
+      & .btn-link:focus {
+          color: $navbar-font-color;
+          background-color: transparent;
+      }
+      & .navbar-text,
+      & .navbar-nav > li > a {
+          color: darken($navbar-background-color, 15%);
+      }
+      & .navbar-nav > li > a:hover,
+      & .navbar-nav > li > a:focus {
+          color: $navbar-font-color;
+      }
+      & .navbar-nav > .active > a,
+      & .navbar-nav > .active > a:hover,
+      & .navbar-nav > .active > a:focus {
+          color: $navbar-font-color;
+          background-color: $navbar-background-color-active;
+      }
+      & .btn-link[disabled]:hover,
+      fieldset[disabled] & .btn-link:hover,
+      & .btn-link[disabled]:focus,
+      fieldset[disabled] & .btn-link:focus,
+      & .navbar-nav > .disabled > a,
+      & .navbar-nav > .disabled > a:hover,
+      & .navbar-nav > .disabled > a:focus {
+          color: darken($navbar-background-color, 8%);
+          background-color: transparent;
+      }
+      & .navbar-toggle {
+          border-color: darken($navbar-background-color, 15%);
+          background-color: darken($navbar-background-color, 15%); 
+      }
+      & .navbar-toggle:hover,
+      & .navbar-toggle:focus {
+          border-color: darken($navbar-background-color, 10%);
+          background-color: darken($navbar-background-color, 10%); 
+      }
+      & .navbar-toggle .icon-bar {
+          background-color: $navbar-background-color;
+      }
+      & .navbar-collapse,
+      & .navbar-form {
+          border-color: $navbar-background-color;
+      }
+      & .navbar-nav > .open > a,
+      & .navbar-nav > .open > a:hover,
+      & .navbar-nav > .open > a:focus {
+          color: $navbar-font-color;
+          background-color: $navbar-background-color;
+      }
+
+      @media (max-width: 767px) {
+          & .navbar-nav > li > a:hover,
+          & .navbar-nav > li > a:focus {
+              background-color: $navbar-background-color-active;
+          }
+          & .navbar-nav .open .dropdown-menu > .divider {
+              background-color: $navbar-item-background-color-hover;
+          }
+          & .navbar-nav .open .dropdown-menu > li > a {
+              color: darken($navbar-background-color, 15%);;
+          }
+          & .navbar-nav .open .dropdown-menu > li > a:hover,
+          & .navbar-nav .open .dropdown-menu > li > a:focus,
+          & .navbar-nav .open .dropdown-menu > .active > a,
+          & .navbar-nav .open .dropdown-menu > .active > a:hover,
+          & .navbar-nav .open .dropdown-menu > .active > a:focus {
+              color: $navbar-font-color;
+              background-color: $navbar-item-background-color-hover;
+          }
+          & .navbar-nav .open .dropdown-menu > .dropdown-header {
+              color: darken($navbar-background-color, 15%);
+          }
+          & .navbar-nav .open .dropdown-menu > .disabled > a,
+          & .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+          & .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+              color: darken($navbar-background-color, 10%);
+          }
+      }
+  }
+
+  .navbar-inverse {
+      & {
+          background-color: lighten($navbar-inverse-background-color, 20%);
+          border-color: lighten($navbar-inverse-background-color, 20%);
+      }
+      & .navbar-brand,
+      & .navbar-link,
+      & .btn-link {
+          color: lighten($navbar-inverse-background-color, 55%);
+      }
+      & .navbar-brand:hover,
+      & .navbar-brand:focus,
+      & .navbar-link:hover,
+      & .btn-link:hover,
+      & .btn-link:focus {
+          color: $navbar-font-color;
+          background-color: transparent;
+      }
+      & .navbar-text,
+      & .navbar-nav > li > a {
+          color: lighten($navbar-inverse-background-color, 55%);
+      }
+      & .navbar-nav > li > a:hover,
+      & .navbar-nav > li > a:focus {
+          color: $navbar-font-color;
+      }
+      & .navbar-nav > .active > a,
+      & .navbar-nav > .active > a:hover,
+      & .navbar-nav > .active > a:focus {
+          color: $navbar-font-color;
+          background-color: $navbar-inverse-background-color;
+      }
+      & .btn-link[disabled]:hover,
+      fieldset[disabled] & .btn-link:hover,
+      & .btn-link[disabled]:focus,
+      fieldset[disabled] & .btn-link:focus,
+      & .navbar-nav > .disabled > a,
+      & .navbar-nav > .disabled > a:hover,
+      & .navbar-nav > .disabled > a:focus {
+          color: lighten($navbar-inverse-background-color, 40%);
+          background-color: transparent;
+      }
+      & .navbar-toggle {
+          border-color: $navbar-inverse-background-color;
+          background-color: $navbar-inverse-background-color; 
+      }
+      & .navbar-toggle:hover,
+      & .navbar-toggle:focus {
+          border-color: lighten($navbar-inverse-background-color, 10%);
+          background-color: lighten($navbar-inverse-background-color, 10%); 
+      }
+      & .navbar-toggle .icon-bar {
+          background-color: lighten($navbar-inverse-background-color, 55%);
+      }
+      & .navbar-collapse,
+      & .navbar-form {
+          border-color: $navbar-inverse-background-color;
+      }
+      & .navbar-nav > .open > a,
+      & .navbar-nav > .open > a:hover,
+      & .navbar-nav > .open > a:focus {
+          color: $navbar-font-color;
+          background-color: $navbar-inverse-background-color;
+      }
+
+      @media (max-width: 767px) {
+          & .navbar-nav > li > a:hover,
+          & .navbar-nav > li > a:focus {
+              background-color: $navbar-inverse-background-color;
+          }
+          & .navbar-nav .open .dropdown-menu > .divider {
+              background-color: $navbar-inverse-background-color;
+          }
+          & .navbar-nav .open .dropdown-menu > li > a {
+              color: lighten($navbar-inverse-background-color, 55%);
+          }
+          & .navbar-nav .open .dropdown-menu > li > a:hover,
+          & .navbar-nav .open .dropdown-menu > li > a:focus,
+          & .navbar-nav .open .dropdown-menu > .active > a,
+          & .navbar-nav .open .dropdown-menu > .active > a:hover,
+          & .navbar-nav .open .dropdown-menu > .active > a:focus {
+              color: $navbar-font-color;
+              background-color: $navbar-inverse-background-color;
+          }
+          & .navbar-nav .open .dropdown-menu > .dropdown-header {
+              color: lighten($navbar-inverse-background-color, 75%);
+          }
+          & .navbar-nav .open .dropdown-menu > .disabled > a,
+          & .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+          & .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+              color: lighten($navbar-inverse-background-color, 40%);
+          }
+      }
+  }
+
+}
+
+
