@@ -98,24 +98,6 @@ Auto-Updating
 Coming soon - we are [working on it](https://github.com/jsdelivr/libgrabber)!
 
 
-Custom CDN Hosting
----
-
-If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
-We can work together and setup a custom configuration for your project. This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
-
-This kind of custom hosting can be suitable for:
-
-* Binary hosting. Windows executable files and zips.
-* Frequently updated files.
-* Projects that can't follow jsDelivr file structure.
-* Some other use that will blow all of our minds.
-
-Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
-
-jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
-
-
 # Usage
 
 
@@ -211,6 +193,24 @@ An npm module that can be used in your node.js applications:
 * https://github.com/jsdelivr/npm-jsdelivr
 
 More coming soon...
+
+
+Custom CDN Hosting
+---
+
+If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
+We can work together and setup a custom configuration for your project. This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
+
+This kind of custom hosting can be suitable for:
+
+* Binary hosting. Windows executable files and zips.
+* Frequently updated files.
+* Projects that can't follow jsDelivr file structure.
+* Some other use that will blow all of our minds.
+
+Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
+
+jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
 
 
 Contribute Performance Data
