@@ -1,0 +1,173 @@
+#ie6 .searchform {
+	margin-bottom: 3px;
+}
+#ie6 .searchform .searchfield {
+	padding: 0 7px 0 5px;
+}
+
+#ie6 .searchform .searchsubmit {
+	height: 24px;
+	width: 24px;
+	border: none;
+	cursor: pointer;
+	text-indent: -999%;
+	margin: 0;
+	padding: 0 3px 0 3px;
+}
+
+/* a hack so that IE5.5 faulty box model is corrected */
+#ie6 #nav a,
+#ie6 #nav a:visited,
+#ie6 #nav-top a,
+#ie6 #nav-top a:visited {
+	font-size:12px;
+	width: auto;
+	display: inline-block;
+}
+
+#ie6 #nav a:hover,
+#ie6 #nav-top a:hover {
+	text-decoration: none;
+}
+
+/* another hack for IE5.5 */
+#ie6 #nav ul ul,
+#ie6 #nav-top ul ul {
+	top:35px;
+	width:120px;
+	padding-right: 0;
+	margin-right: 0;
+}
+
+/* position the third level flyout menu */
+#ie6 #nav ul ul ul,
+#ie6 #nav-top ul ul ul {
+	visibility:hidden;
+	position:absolute;
+	left:145px;
+	top:-1px;
+	width:80px;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+/* yet another hack for IE5.5 */
+#ie6 #nav ul ul a,
+#ie6 #nav ul ul a:visited,
+#ie6 #nav-top ul ul a,
+#ie6 #nav-top ul ul a:visited {
+	width:130px;
+	overflow: hidden;
+}
+
+#ie6 .fix {
+	height:1%;
+}
+
+#ie6 #commentform label {
+	padding: 6px;
+}
+
+#ie6 #commentform input[type="text"] {
+	padding-top: 6px;
+	margin-left: -4px;
+}
+
+#ie6 .post {
+	overflow: hidden;
+	width: 98%;
+}
+
+/* See Ruthsarian Menus: Ruthsarian Layouts at http://webhost.bridgew.edu/etribou/layouts/rMenu/rMenu.css
+ * There are details for z-index settings to avoid overlaps on the second line for IE 7
+ */
+#nav ul,
+#nav ul li,
+#nav ul li a,
+#nav-top ul,
+#nav-top ul li,
+#nav-top ul li a {
+	z-index: 10;
+}
+
+#nav ul a:hover ul,
+#nav ul a:hover ul li,
+#nav ul a:hover ul li a,
+#nav ul li:hover ul,
+#nav ul li:hover ul li,
+#nav ul li:hover ul li a,
+#nav-top ul a:hover ul,
+#nav-top ul a:hover ul li,
+#nav-top ul a:hover ul li a,
+#nav-top ul li:hover ul,
+#nav-top ul li:hover ul li,
+#nav-top ul li:hover ul li a {
+	z-index: 100;
+}
+
+#nav > ul li:hover ul {
+	position: absolute;
+}
+
+#nav-top > ul li:hover ul {
+	position: absolute;
+}
+
+#nav ul li:hover,
+#nav-top ul li:hover {
+	background-position: 0 0;
+}
+
+.suf-mag-headline-block li.suf-mag-headline a {
+	padding: 0 8px;
+	margin: 0;
+}
+
+.sliderPager,
+.sliderControl {
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+#ie6 #nav .home-icon,
+#ie6 #nav-top .home-icon {
+    width: 20px;
+    height: 17px;
+}
+
+#ie6 .post .date {
+	left: 0;
+}
+
+/* WPML Plugin */
+#ie6 #lang_sel ul ul a,
+#ie6 #lang_sel ul ul a:visited {
+    width: 138px;
+}
+
+/* Multi-column */
+.suf-mc-col {margin: 0 2px; padding: 4px 3px}
+
+#ie6 .meta-left-pullout { right: 0; }
+
+.suf-horizontal-widget, .flickr_badge_image, .suf-tile-byline-icons, #widgets-above-header .suf-widget {
+	zoom: 1;
+	*display: inline;
+}
+
+.page-template-no-sidebars-php #container { float: left; width: 100%; }
+
+#nav ul.sf-menu, #nav-top ul.sf-menu {
+	zoom: 1;
+	*display: inline;
+}
+#right-header-widgets {
+	max-width: 200px;
+}
+
+.suf-widget-1c { margin: 5px 0; }
+.suf-widget-2c { margin: 5px 3px; }
+.suf-widget-3c { margin: 5px 5px; }
+.suf-widget-4c { margin: 5px 3px; }
+.suf-widget-5c { margin: 5px 2px; }
+

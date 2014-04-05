@@ -1,0 +1,45 @@
+/**
+ * This stylesheet is used on attachment pages. It has been kept separate only because it is conditionally loaded and because the
+ * image it uses is heavy.
+ */
+.entry div.attachment { width: 150px; text-align: center; }
+.entry div.attachment .icon { float: left; margin: 1em 43px; }
+
+.image .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -64px -128px; }
+.audio .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -128px -192px; }
+.video .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat 0 0; }
+.text .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -128px 0; }
+.application .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -64px -192px; }
+
+.quicktime .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -320px 0; }
+.x-flv .icon, .x-shockwave-flash .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -192px -128px; }
+
+.css .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat 0 -192px; }
+.html .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -128px -128px; }
+
+.x-realaudio .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -256px 0; }
+
+.rtf .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -128px 0; }
+.javascript .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat 0 -128px; }
+.pdf .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -64px -64px; }
+
+.msword .icon, .vnd-ms-write .icon, .vnd-ms-word .icon, .vnd-openxmlformats-officedocument-wordprocessingml .icon, .vnd-oasis-opendocument-text .icon, .wordperfect .icon
+{ width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -256px -128px; }
+
+.vnd-ms-powerpoint .icon, vnd-openxmlformats-officedocument-presentationml .icon, vnd-oasis-opendocument-presentation .icon
+{ width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat 0 -64px; }
+
+.vnd-ms-excel .icon, .vnd-openxmlformats-officedocument-spreadsheetml .icon, .vnd-oasis-opendocument-spreadsheet .icon, .vnd-oasis-opendocument-chart .icon
+{ width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -192px 0; }
+
+.vnd-ms-access .icon, .vnd-oasis-opendocument-database .icon
+{ width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -320px -128px; }
+
+.x-tar .icon, .zip .icon, .x-gzip .icon
+{ width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -128px -64px; }
+
+.onenote .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -192px -64px; }
+.x-msdownload .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -192px -192px; }
+.vnd-oasis-opendocument-graphics .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -64px -128px; }
+.vnd-oasis-opendocument-formula .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -256px -64px; }
+.x-vcard .icon { width: 64px; height: 64px; background: transparent url(images/attachment.png) no-repeat -64px 0; }

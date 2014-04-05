@@ -1,0 +1,450 @@
+body {/* Default styling for everything that is un-styled and doesn't inherit*/
+	color:#b8b8b8;
+}
+
+code, pre {
+	background-color: #222222;
+}
+pre {
+	border: 1px solid #555;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	color: #eee;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #eee;
+}
+fieldset {
+	border: 1px solid #333;
+}
+#wrapper {
+	border: 1px solid #555;
+	background-color: #222;
+}
+
+.suf-widget {
+	background-color: #000;
+	border: 1px solid #555;
+}
+
+.dbx-handle {
+	border-bottom: 1px dotted #555;
+}
+
+/*div.blogtitle a {*/
+.blogtitle a {
+	color: #ccc;
+}
+
+/* search form */
+.searchfield{
+	background-color: #444;
+}
+
+#nav {
+	border-bottom: 1px solid #555;
+}
+
+#nav ul li, #nav ul ul li {
+	border: 1px solid #555;
+}
+
+#nav ul li a {
+	color: #b8b8b8;
+	background: #000;
+}
+
+#nav-top {
+	border: 1px solid #555;
+	border-top: none;
+	background-color: #222;
+}
+
+#nav-top ul li{
+	border: 1px solid #555;
+}
+
+#nav-top ul li a {
+	color: #b8b8b8;
+	background-color: #000;
+}
+
+#nav-top ul ul li {
+	border: 1px solid #555;
+}
+
+/* sub menu */
+#subnav {
+	background-color: #111;
+	border: 1px solid #555;
+}
+
+#subnav li {
+	border-right: 1px solid #666;
+}
+
+#subnav li a,
+#subnav li a:visited,
+#subnav .page_item {
+	color: #666;
+}
+
+#subnav .current_page_item,
+#subnav .current_page_parent {
+	background-color: #444;
+}
+
+/* Third level */
+.hier-nav {
+	background-color: #222;
+	border: 1px solid #555;
+	margin-top: 0px;
+}
+
+.hier-nav .current_page_item, .hier-nav .current_page_parent {
+	background-color: #444;
+	border-left: 1px solid #555;
+}
+
+.hier-nav li {
+	border-right: 1px solid #666;
+}
+
+
+#top-bar-right-spanel-tab .toggle {
+	border: 1px solid #555;
+}
+
+.post, article.page {
+	background-color: #000;
+	border: 1px solid #555;
+}
+.postdata, .postdata a, .postdata a:visited {
+	color: #999999;
+}
+
+/* post title */
+h1.posttitle,
+h1.posttitle a,
+h1.posttitle a:visited,
+h2.posttitle,
+h2.posttitle a,
+h2.posttitle a:visited  {
+	color: #fff;
+}
+
+h1.posttitle,
+h2.posttitle {
+	border-bottom: dotted 1px #555;
+}
+
+.author {
+	color: #aaa;
+}
+
+.tags {
+	color: #aaa;
+}
+
+.tags a {
+	color: #999;
+}
+
+.page-links span {
+	border-color: #222222;
+}
+
+/* next & previous page navigation */
+.page-nav {
+	background-color: #000;
+	border: 1px solid #555;
+}
+
+.page-nav a, .page-nav a:visited {
+	color: #fff;
+}
+
+.suf-page-nav a,
+.suf-page-nav a:visited,
+.suf-page-nav span {
+	border-color: #222222;
+}
+
+.page-nav .suf-page-nav a.page-numbers:hover,
+div.navigation .suf-page-nav a.page-numbers:hover {
+	color: #ffffff;
+}
+
+/* next & previous post navigation */
+.post-nav {
+	background-color: #000;
+	border: 1px solid #555;
+}
+.post-nav a, .post-nav a:visited {
+	color: #999999;
+}
+
+.post-nav .previous .icon { width: 16px; height: 16px; background-position: 0 -160px; float: left; margin-right: 4px;}
+.post-nav .next .icon { width: 16px; height: 16px; background-position: -16px -160px; float: right; margin-left: 4px;}
+
+/* commentform */
+#commentform label.suf-comment-label {
+	color:#ffffff;
+	border: solid 1px #222;
+}
+#commentform small {
+	color: #999999;
+}
+
+#commentform textarea {
+	border: solid 1px #555;
+	background-color: #333;
+}
+
+#commentform textarea:focus, #commentform input[type="text"]:focus {
+	border: solid 1px #999;
+}
+.commentlist li.comment, .commentlist li.pingback, .commentlist li.trackback { border: 1px solid #222; background-color: #080808; }
+.commentlist li.alt { border: 1px solid #333; background-color: #202020; }
+.commentlist small a, .commentlist small a:visited { color: #999999; }
+.comment-author {
+	border-bottom: 1px dotted #444;
+}
+.author-below .comment-body, .author-above .comment-body { background-color: #222; }
+.author-below .arrow, .author-above .arrow { border-left-color: #222; }
+a.comment-reply-link, a.comment-reply-login {
+	border: solid 1px #222222;
+}
+
+.comment-response-type, .response-type {
+	border: solid 1px #222222;
+}
+
+/* Comments  */
+h3#comments,
+h3.comments {
+	background-color: #333;
+}
+
+h3#respond, h3.respond, #reply-title {
+	background-color: #333;
+}
+
+#page-footer, #cred {
+	border-top: 1px solid #555;
+}
+
+#cred a {
+	color: #999;
+}
+
+/* commentform */
+label {
+	color:#666;
+	font-size: 100%;
+}
+small {
+	color: #555;
+}
+
+input{
+	background-color: #333;
+	color: #999;
+	border: solid 1px #555;
+}
+
+textarea {
+	color: #999;
+	border: solid 1px #555;
+	background-color: #333;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, #postbox textarea:focus {
+	border: solid 1px #666;
+}
+
+/* sidebar */
+#sidebar, #sidebar-b,
+#sidebar-2, #sidebar-2-b {
+	color: #666666;
+}
+
+/* sidebar */
+.suf-widget h3,
+.suf-widget h3 a,
+.suf-widget h3 a:visited {
+	color: #999;
+}
+
+div.tab-box div.sidebar-tab-content a:hover,
+div.tab-box div.sidebar-tab-content a:active,
+.suf-widget a:hover,
+.suf-widget a:active {
+	text-decoration: underline;
+}
+
+.warea ul.suf-cat-posts-list a:hover,
+.warea ul.suf-cat-posts-list a:active {
+	text-decoration: none;
+}
+
+.tab-box div.sidebar-tab-content a,
+.tab-box div.sidebar-tab-content a:visited,
+div.sidebar-tab-content a,
+div.sidebar-tab-content a:visited,
+.suf-widget a, .suf-widget a:visited,
+.warea a,
+.warea a:visited  {
+	color: #999;
+	text-decoration:none;
+}
+
+.wp-caption {
+	background-color: #000000;
+}
+
+.author-profile,
+.info-tag,
+.info-category {
+	border: solid 1px #555;
+	background-color: #000;
+}
+
+/* Settings for Featured Posts */
+#featured-posts {
+	border-color: #555555;
+	background-color: #000000;
+}
+
+#sliderIndex a,
+#sliderIndex a:hover,
+#sliderIndex a:visited {
+	border-color: #222222;
+}
+
+.index-overlaid #sliderIndex a, .index-overlaid .sliderIndex a { background-color: #000; }
+.pager-bullets.index-overlaid #sliderPager a, .pager-bullets.index-overlaid .sliderPager a { background-color: transparent; }
+
+/* These settings are for common plugins */
+.wp-pagenavi a,
+.wp-pagenavi a:visited,
+.wp-pagenavi span {
+	border-color: #222222;
+}
+
+/* Tabbed Sidebar */
+.warea ul.sidebar-tabs li a, ul.sidebar-tabs li a {
+	background-color: #000;
+	border: 1px solid #555;
+	color: #fff;
+}
+
+div.sidebar-tab-content {
+	background-color: #000;
+	border: 1px solid #555;
+}
+
+/* Magazine */
+.suf-mag-headlines,
+.suf-mag-excerpt,
+.suf-tile,
+.suf-mag-category {
+	background-color: #000;
+	border: 1px solid #555;
+}
+
+.suf-mag-headline-block li.suf-mag-headline a {
+	color: #fff;
+}
+
+h2.suf-mag-excerpt-title,
+h2.suf-tile-title {
+	border-top: 1px dotted #555;
+	border-bottom: 1px dotted #555;
+}
+
+h2.suf-mag-excerpt-title a,
+h2.suf-mag-excerpt-title a:hover,
+h2.suf-mag-excerpt-title a:visited,
+h2.suf-mag-excerpt-title a:active,
+h2.suf-tile-title a,
+h2.suf-tile-title a:hover,
+h2.suf-tile-title a:visited,
+h2.suf-tile-title a:active {
+	color: #ddd;
+}
+
+h2.suf-mag-headlines-title,
+.suf-mag-excerpts-header,
+.suf-tiles th,
+.suf-mag-categories-header {
+	border-color: #555;
+	background-color: #000;
+	color: #ddd;
+}
+
+.widget-suf-cat-posts li.suf-cat-post a,
+.suf-mag-category li.suf-mag-catblock-post a {
+	color: #eee;
+}
+
+.widget-suf-cat-posts li.suf-cat-post,
+.suf-mag-category li.suf-mag-catblock-post {
+	border-bottom: 1px dotted #222;
+}
+
+.widget-suf-cat-posts li.suf-cat-post:hover,
+.suf-mag-category li.suf-mag-catblock-post:hover {
+	border: 1px solid #555;
+}
+
+.flattened {
+    background-color: #000;
+    border: 1px solid #555;
+}
+
+.author-info {
+    border: 1px solid #555;
+}
+
+.nr-post {
+}
+.nr-post h3 {
+	border: 1px solid #444;
+}
+div.booklisting img,
+div.bookentry img {
+	border: 1px solid #444;
+}
+.nr_widget h4 {
+	border: 1px solid #444;
+}
+
+.meta-left-pullout ul { border-right: 1px dotted #555; }
+.meta-right-pullout ul { border-left: 1px dotted #555; }
+.meta-pullout li { border-bottom: 1px dotted #555; }
+
+.attachment object.text { color: #999; border: solid 1px #555; background-color: #666; }
+table.exif td { border-bottom: 1px dotted #222; }
+.flickr_badge_image img { border-color: #333; }
+.suf-twitter-avatar { border-color: #333; }
+
+.warea ul.suf-posts-thumbnail li { border-bottom: 1px dotted #333; }
+img.suf-widget-thumb { border-color: #333; }
+.suf-mosaic-img { border-color: #333; }
+
+.entry th, .comment-body th { border-bottom: 1px dotted #222; }
+.entry td, .comment-body td { border-bottom: 1px dotted #222; }
+.exif-button, .navigation-attachment { border-color: #222; }
+
+.mm-warea { background: #000; border-color: #333; color: #b8b8b8; }
+#nav .mm-warea .mm-widget ul li, #nav-top .mm-warea .mm-widget ul li { color: #b8b8b8; }
+
+.cl-widget { background: #000; border: 1px solid #333; }
+.outer-pullout-container .meta-pullout {
+	background: #000;
+	border: 1px solid #555;
+}

@@ -1,0 +1,35 @@
+.fix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.fix {
+	display:block;
+}
+
+#ie6 .fix {
+	height:1%;
+}
+
+#suf-meta-fields-tabs .ui-tabs-nav li { margin-bottom: 5px; border-bottom-width: 1px !important; width: 100%; text-align: right; }
+#suf-meta-fields-tabs ul.ui-widget-header { background: none; border: none; }
+#suf-meta-fields-tabs .ui-tabs-panel { padding: 0; width: 78%; float: left; margin-left: 1%; }
+#suf-meta-fields-tabs .ui-tabs-panel h3 {
+	font-size: 1.3em;
+	margin: 0;
+	padding: 0.5em;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
+}
+#suf-meta-fields-tabs .ui-corner-top {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+#suf-meta-fields-tabs .ui-helper-reset { font-size: 85%; }
+
+#suf-meta-fields-tabs { border: none; padding: 0; }
+
+.suf-meta-tabs td { padding: 10px 5px; }
+#suf-meta-fields-tabs textarea, #suf-meta-fields-tabs input[type='text'] { width: 90%; max-width: 500px; }

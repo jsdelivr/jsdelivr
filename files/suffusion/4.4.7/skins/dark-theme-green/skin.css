@@ -1,0 +1,87 @@
+/* Standard Styles */
+a {
+	color:#528f6c;
+}
+a:visited {
+	color: #528f6c;
+}
+
+/* sub menu */
+#subnav li a:hover {
+	color: #528f6c;
+}
+
+/* Level 3 */
+.hier-nav li a:hover {
+	color: #528f6c;
+}
+
+/* content */
+.postdata a:hover {
+	color: #528f6c;
+}
+
+/* post title */
+h1.posttitle a:hover,
+h2.posttitle a:hover {
+	color: #528f6c;
+}
+.tags a:hover {
+	color: #528f6c;
+}
+
+/* next & previous page navigation */
+.page-nav a:hover {
+	color: #528f6c;
+}
+
+/* next & previous post navigation */
+.post-nav a:hover {
+	color: #528f6c;
+}
+
+.suf-page-nav a.page-numbers,
+.suf-page-nav a.page-numbers:visited {
+	color: #528f6c;
+}
+
+/* comment list */
+.commentlist cite {
+	color: #528f6c;
+}
+.commentlist cite a, .commentlist cite a:visited {
+	color: #528f6c;
+}
+
+/* Credits  */
+#cred a:hover {
+	color: #528f6c;
+}
+
+.suf-widget h3.scheme,
+.suf-widget h3.scheme a,
+.suf-widget h3.scheme a:visited {
+	color: #fff;
+}
+
+.suf-widget a:hover,
+.suf-widget a:focus,
+.suf-widget a:active,
+.warea a:hover,
+.warea a:focus,
+.warea a:active {
+	color: #528f6c;
+}
+
+/* These settings are for common plugins */
+.wp-pagenavi a,
+.wp-pagenavi a:visited,
+.wp-pagenavi span {
+	color: #528f6c;
+}
+
+.wp-pagenavi a:hover {
+	color: #fff;
+}
+
+
