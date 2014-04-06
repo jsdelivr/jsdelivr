@@ -1,0 +1,89 @@
+/* Standard Styles */
+a, a:visited {
+	color: #97cafe;
+}
+
+/* sub menu */
+#subnav li a:hover {
+	color: #97cafe;
+}
+
+/* Level 3 */
+.hier-nav li a:hover {
+	color: #97cafe;
+}
+
+/* content */
+.postdata a:hover {
+	color: #97cafe;
+}
+
+/* post title */
+h1.posttitle a:hover,
+h2.posttitle a:hover {
+	color: #97cafe;
+}
+.tags a:hover {
+	color: #97cafe;
+}
+
+/* next & previous page navigation */
+.page-nav a:hover {
+	color: #97cafe;
+}
+
+/* next & previous post navigation */
+.post-nav a:hover {
+	color: #97cafe;
+}
+
+.suf-page-nav span,
+.suf-page-nav a.page-numbers,
+.suf-page-nav a.page-numbers:visited {
+	color: #97cafe;
+}
+
+/* comment list */
+.commentlist cite {
+	color: #97cafe;
+}
+.commentlist cite a, .commentlist cite a:visited {
+	color: #97cafe;
+}
+
+/* Credits  */
+#cred a:hover {
+	color: #97cafe;
+}
+
+.tab-box div.sidebar-tab-content a:hover,
+.tab-box div.sidebar-tab-content a:focus,
+.tab-box div.sidebar-tab-content a:active,
+.suf-widget a:hover,
+.suf-widget a:focus,
+.suf-widget a:active,
+.warea a:hover,
+.warea a:focus,
+.warea a:active {
+	color: #97cafe;
+}
+
+/* These settings are required for Featured Posts */
+.sliderIndex a, .sliderIndex a:visited,
+#sliderIndex a,
+#sliderIndex a:visited {
+	color: #97cafe;
+}
+
+/* These settings are for common plugins */
+.wp-pagenavi a,
+.wp-pagenavi a:visited,
+.wp-pagenavi span {
+	color: #97cafe;
+}
+
+.wp-pagenavi a:hover {
+	color: #fff;
+}
+
+

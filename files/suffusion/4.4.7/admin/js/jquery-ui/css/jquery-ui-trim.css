@@ -1,0 +1,37 @@
+/* JQuery UI, styled to look like WP defaults */
+#suf-meta-fields-tabs.ui-tabs { position: relative; }
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav { margin: 0; float: left; background: #ECECEC url('images/menu-shadow.png') repeat-y 100% 0; width: 20%; }
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li { list-style: none; line-height: 1em; margin-bottom: 0;}
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li a {
+	padding: 10px 20px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	display: block !important;
+	border-bottom: solid 1px #DFDFDF;
+	color: #2d749e;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	margin-bottom: 0;
+	marign-right: -20px !important;
+}
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, #suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li.ui-state-processing a, #suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li a:hover {
+	border: none;
+	padding: 10px 20px;
+	/*margin-left: -20px !important;*/
+	background: #767676;
+	color: #FFF;
+	width: 100%;
+	font-weight: bold;
+}
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-nav li a, #suf-meta-fields-tabs.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; }
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-panel { display: block; border-width: 0; background: none; float: right;}
+#suf-meta-fields-tabs.ui-tabs .ui-tabs-hide { display: none !important; }
+

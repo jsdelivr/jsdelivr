@@ -1,0 +1,243 @@
+/* Standard Styles */
+a {
+	color:#af0a4f;
+}
+a:visited {
+	color: #af0a4f;
+}
+
+/* sub menu */
+#subnav li a:hover {
+	color: #af0a4f;
+}
+
+/* Level 3 */
+.hier-nav li a:hover {
+	color: #af0a4f;
+}
+
+/* content */
+.postdata a:hover {
+	color: #af0a4f;
+}
+
+/* post title */
+h1.posttitle a:hover,
+h2.posttitle a:hover {
+	color: #af0a4f;
+}
+.tags a:hover {
+	color: #af0a4f;
+}
+
+/* next & previous page navigation */
+.page-nav a:hover {
+	color: #af0a4f;
+}
+
+/* next & previous post navigation */
+.post-nav a:hover {
+	color: #af0a4f;
+}
+
+.suf-page-nav a.page-numbers,
+.suf-page-nav a.page-numbers:visited {
+	color: #af0a4f;
+}
+
+/* comment list */
+.commentlist cite {
+	color: #af0a4f;
+}
+.commentlist cite a, .commentlist cite a:visited {
+	color: #af0a4f;
+}
+
+/* Credits  */
+#cred a:hover {
+	color: #af0a4f;
+}
+
+.suf-widget a:hover,
+.suf-widget a:focus,
+.suf-widget a:active,
+.warea a:hover,
+.warea a:focus,
+.warea a:active {
+	color: #af0a4f;
+}
+
+/* The following are defined for the dark-purple scheme only, due to the default dark-style colors not gelling well with purple*/
+#wrapper {
+	background-color: #000000;
+	border-color: #222222;
+}
+
+.dbx-handle {
+	border-bottom: 1px dotted #222222;
+}
+
+#nav {
+	border-bottom: 1px solid #222222;
+}
+
+#nav ul li{
+	border: 1px solid #222222;
+}
+
+#nav ul ul li {
+	border: 1px solid #222222;
+}
+
+#nav-top {
+	border-bottom: 1px solid #222222;
+}
+
+#nav-top ul li{
+	border: 1px solid #222222;
+}
+
+#nav-top ul ul li {
+	border: 1px solid #222222;
+}
+
+#subnav {
+	border: 1px solid #222222;
+}
+
+#subnav li {
+	border-right: 1px solid #222222;
+}
+
+#subnav .current_page_item,
+#subnav .current_page_parent {
+	background: #000;
+}
+
+.hier-nav {
+	border: 1px solid #222222;
+	margin-top: 0;
+}
+
+.hier-nav .current_page_item {
+	background: #000000;
+	border-left: 1px solid #222222;
+}
+
+.hier-nav li {
+	border-right: 1px solid #222222;
+}
+
+#top-bar-right-spanel-tab .toggle {
+	border: 1px solid #222;
+}
+
+.post, article.page {
+	border: 1px solid #222222;
+}
+
+h1.posttitle,
+h2.posttitle {
+	border-bottom: dotted 1px #222222;
+}
+
+.page-nav {
+	border: 1px solid #222222;
+}
+
+.post-nav {
+	border: 1px solid #222222;
+}
+
+#commentform textarea {
+	border: solid 1px #222222;
+}
+
+#page-footer, #cred {
+	border-top: 1px solid #222222;
+}
+
+input{
+	border: solid 1px #222222;
+}
+
+textarea {
+	border: solid 1px #222222;
+}
+
+.button, input[type="submit"], .submit {
+	border: 2px double #222222;
+}
+
+#postbox, #postbox textarea {
+	border: solid 1px #222222;
+}
+
+.author-profile,
+.info-tag,
+.info-category {
+	border-color: #222222;
+}
+
+/* Settings for Featured Posts */
+#featured-posts {
+	border-color: #222222;
+}
+
+/* These settings are for common plugins */
+.wp-pagenavi a,
+.wp-pagenavi a:visited,
+.wp-pagenavi span {
+	color: #af0a4f;
+}
+
+.wp-pagenavi a:hover {
+	color: #fff;
+}
+
+.warea ul.sidebar-tabs li a, ul.sidebar-tabs li a {
+	border: 1px solid #222;
+}
+
+div.sidebar-tab-content {
+	border: 1px solid #222;
+}
+
+/* Magazine */
+.suf-mag-headlines {
+	border: 1px solid #222;
+}
+
+.flattened {
+	border: 1px solid #222222;
+}
+
+.author-info {
+    border: 1px solid #222;
+}
+
+/* BuddyPress */
+.post form#whats-new-form, ul.item-list .activity, ul.item-list .groups, ul.item-list .blog, ul.item-list li div.activity-comments ul li, .standard-form, ul.item-list .member {
+	background-color: #000000;
+	border-color: #222222;
+}
+
+#item-nav div.item-list-tabs ul li {
+	border: 1px solid #222;
+	border-bottom: none;
+}
+
+#item-nav div.item-list-tabs, #group-create-tabs {
+	border-bottom: 1px solid #222;
+}
+
+.standard-form div#link-url-embed div#link-url-embed-content, .standard-form div#link-url-embed div#link-url-embed-avatar, .links div.link-vote-panel div.vote-count,
+#link-details-form.standard-form fieldset, #link-details-form.standard-form fieldset legend {
+	border: 1px solid #222;
+}
+
+.meta-pullout ul { border-right: 1px dotted #222; }
+.meta-pullout li { border-bottom: 1px dotted #222; }
+.outer-pullout-container .meta-pullout {
+	border: 1px solid #222;
+}

@@ -1,0 +1,39 @@
+/**
+ * Loaded by the Theme Customizer screen only.
+ */
+
+/*
+ * Image Picker
+ */
+.customize-suffusion-image-picker input[type="radio"] {
+	/*display: inline-block;*/
+	float: left;
+}
+
+.customize-section .customize-suffusion-image-picker img {
+	display: block;
+	max-width: 220px;
+	max-height: 80px;
+
+	margin: 5px auto;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #dfdfdf;
+}
+
+.customize-section .customize-suffusion-image-picker .picker-title {
+	display: block;
+	margin: 5px auto;
+}
+
+.customize-suffusion-image-text {
+	display: inline-block;
+	margin: 0 10px;
+	text-align: center;
+}
+
+.customize-suffusion-picker-choice {
+	display: block;
+	clear: both;
+}
+

@@ -1,0 +1,5 @@
+.suf-widget-2col { float: left; width: 48%; margin-right: 10px; }
+.suf-widget-3col { float: left; width: 32%; margin-right: 10px; }
+.suf-widget-block { display: inline-block; clear: both; }
+.suf-widget-block .widefat { width: 95%; }
+.suf-radio-block { display: inline-block; }

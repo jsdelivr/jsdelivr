@@ -1,0 +1,652 @@
+/*
+Theme Name: Suffusion
+Author: Sayontan Sinha
+Author URI: http://mynethome.net/blog
+*/
+
+/* Standard Styles */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+p,.p {
+	text-align: right;
+}
+
+ul {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+ol {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+blockquote{
+	margin: 0 2.5em 1em 0;
+}
+
+
+/* WordPress Standard Elements */
+.alignleft {
+	float: right;
+	margin: 0 0 5px 10px;
+}
+
+.alignright {
+	float: left;
+	margin: 0 10px 5px 0;
+}
+
+.floatleft {
+	float: right;
+	margin: 3px 0 0 7px;
+}
+
+.floatright {
+	float: left;
+	margin: 3px 7px 0 0;
+}
+
+.right {
+	float: left;
+}
+
+.left {
+	float: right;
+}
+
+#header {
+	padding: 15px 0;
+	/*float: right;*/
+}
+
+#header-widgets {
+	float: right;
+}
+/* Blog title */
+.blogtitle {
+	float: right;
+}
+
+/* Blog description on the right side of the title */
+.description {
+	float: left;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+/* search form */
+.searchfield {
+	padding: 4px 5px 2px 7px;
+}
+
+input[type="submit"].searchsubmit {
+	background-position: 0 0;
+	text-indent: 999%;
+}
+
+#right-header-widgets .searchform {
+	float: left;
+}
+
+.dbx-content .searchform {
+	float: right;
+}
+
+/* Main column  */
+#main-col {
+/*	float: right;*/
+}
+
+#single-col {
+	float: right;
+}
+
+.float-ptr {
+	background: url("images/arrows.gif") no-repeat scroll -24px 0 transparent
+}
+/* remove all the bullets, borders and padding from the default list styling */
+#nav .col-control.right ul.sf-menu, #nav-top .col-control.right ul.sf-menu { float: left; }
+#nav ul {
+	float: right;
+}
+
+#nav ul li{
+	margin: 0 0 0 4px;
+	float: right;
+}
+
+#nav ul li a{
+	padding: 8px 8px 5px 8px;
+}
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+#nav li {
+	float: right;
+}
+
+/* style the second level background */
+#nav .float-ptr {
+	float: left;
+	right: auto;
+	left: 3px;
+}
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+#nav ul ul {
+	left: auto;
+	right: 0;
+}
+
+/* position the third level flyout menu */
+#nav ul ul ul {
+	left: auto;
+	right: 145px;
+}
+
+/* style the second level links */
+#nav ul ul a,
+#nav ul ul a:visited {
+	text-align: right;
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+#nav-top ul {
+	float: right;
+}
+
+#nav-top ul li{
+	margin: 0 0 0 4px;
+	float: right;
+}
+
+#nav-top ul li a{
+	padding: 8px 8px 5px 8px;
+}
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+#nav-top li {
+	float: right;
+}
+
+/* style the second level background */
+#nav-top .float-ptr {
+	float: left;
+	right: auto;
+	left: 3px;
+}
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+#nav-top ul ul {
+	left: auto;
+	right: 0;
+}
+
+/* position the third level flyout menu */
+#nav-top ul ul ul {
+	left: auto;
+	right: 145px;
+}
+
+/* style the second level links */
+#nav-top ul ul a,
+#nav-top ul ul a:visited {
+	text-align: right;
+}
+
+/* sub menu */
+#subnav ul {
+	padding: 0 5px 0 0;
+}
+
+#subnav li {
+	float: right;
+}
+
+/* Level 3 */
+.hier-nav ul {
+	padding: 0 5px 0 0;
+}
+
+.hier-nav li {
+	float: right;
+}
+
+.breadcrumb {
+	padding: 3px 8px 3px 5px;
+}
+
+/* content */
+a.more-link {
+	float: left;
+}
+
+.postdata .category {
+	background-position: top right;
+	padding-left: 10px;
+	padding-right: 20px;
+	float: right;
+}
+
+.postdata .comments {
+	background-position: center right;
+	padding-left: 10px;
+	padding-right: 20px;
+	float: left;
+}
+
+.postdata .edit {
+	background-position: center right;
+	padding-left: 10px;
+	padding-right: 20px;
+	float: left;
+}
+
+.author {
+	float: right;
+}
+
+.tags {
+	float: left;
+	text-align: left;
+}
+
+/* next & previous page navigation */
+.previous-entries a {
+	float: right;
+	padding-left: 0;
+	margin-left: auto;
+	padding-right: 20px;
+	margin-right: 10px;
+	background-position: center right;
+}
+
+.next-entries a {
+	float: left;
+	padding-right: 0;
+	margin-right: auto;
+	padding-left: 20px;
+	margin-left: 10px;
+	background-position: center left;
+}
+
+/* next & previous post navigation */
+.post-nav .previous a {
+	float: right;
+	padding-left: 0;
+	padding-right: 20px;
+	text-align: left;
+	background-position: center right;
+}
+
+.post-nav .next a {
+	float: left;
+	padding-right: 0;
+	padding-left: 20px;
+	text-align: right;
+	background-position: center left;
+}
+
+/* Comments  */
+h3#comments,
+h3.comments {
+	background-position: 99% center;
+	padding: 7px 35px 7px 7px;
+}
+
+h3#respond,
+h3.respond {
+	background-position: 99% center;
+	padding: 7px 35px 7px 7px;
+}
+
+/* Comment navigation */
+#commentform label {
+	float: right;
+	text-align: left;
+}
+
+#commentform textarea {
+	padding: 5px 7px 3px 3px;
+}
+
+div.reply {
+	text-align: left;
+}
+
+.comment-response-type, .response-type {
+	float: right;
+}
+
+/* comment list */
+.commentlist {
+	padding-left: 0;
+	padding-right: 45px;
+}
+
+img.avatar {
+  float: left;
+}
+
+/* commentform */
+input{
+	padding: 5px 5px 3px 3px;
+}
+
+textarea {
+	padding: 5px 7px 3px 3px;
+}
+
+/* sidebar */
+.suf-widget a.openid_link,
+.recentcomments a.openid_link,
+a.openid_link {
+	padding-left: 0;
+	padding-right: 16px;
+}
+
+.tab-box div.sidebar-tab-content ul li,
+.suf-widget ul li,
+.suf-flat-widget ul li,
+.suf-panel-widget ul li {
+	padding-left: 0;
+	padding-right: 22px;
+	background-position: 100% 1px;
+}
+
+.tab-box div.sidebar-tab-content ul ul li,
+.suf-widget ul ul li {
+	padding-left: 0;
+	padding-right: 22px;
+}
+
+.tab-box div.sbtab-content-categories ul li,
+.tab-box div.sbtab-content-categories ul ul li,
+.suf-widget .widget_categories ul li,
+.suf-widget .widget_categories ul ul li {
+	background-position: 100% 2px;
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+/* Other Widget Areas */
+#right-header-widgets {
+	float: left;
+}
+
+#left-header-widgets {
+	float: right;
+}
+
+#top-bar-right-widgets {
+	float: left;
+}
+
+#top-bar-left-widgets {
+	float: right;
+}
+
+.suf-horizontal-widget {
+	float: right;
+	text-align: right;
+}
+
+/* Settings for Twitter widget */
+.twitter-icon-and-tag img {
+	margin: 5px 0 0 10px;
+	float: right;
+}
+
+.twitter-icon-and-tag {
+	margin: 10px 0 10px 5px;
+}
+/* End Twitter widget settings */
+
+/* Featured Posts */
+.featured-content .top,
+#featured-posts .top {
+    left: auto;
+    right: 0;
+}
+
+.featured-content .bottom,
+#featured-posts .bottom {
+    left: auto;
+    right: 0;
+}
+
+.featured-content .left,
+#featured-posts .left {
+    left: auto;
+    right: 0;
+}
+
+.featured-content .right,
+#featured-posts .right {
+	right: auto;
+	left: 0;
+}
+
+/* JQuery Cycle is used for the featured posts */
+.sliderContent,
+#sliderContent {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.sliderImage {
+	float: right; /* important */
+}
+
+.sliderImage div {
+	text-align: right;
+}
+
+.sliderImage div p {
+	text-align: right;
+}
+
+.sliderPager,
+#sliderPager {
+	float: left;
+}
+
+.sliderControl,
+#sliderControl {
+	float: right;
+}
+
+/* alignments */
+img[align="left"] {
+	float:left;
+	margin: 2px 10px 5px 0;
+}
+
+img[align="right"] {
+	float: right;
+	margin: 2px 0 5px 10px;
+}
+
+.author-even img.avatar {
+	float: left;
+	margin: 5px 15px 5px 0;
+}
+
+.author-odd img.avatar {
+	float: right;
+	margin: 5px 0 5px 15px;
+}
+
+.info-category a img {
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+/*
+.sidebar-container-left {
+	float: right;
+}
+
+.sidebar-container-right {
+	float: left;
+}
+*/
+/* List of tabs */
+.tab-box ul.sidebar-tabs li {
+	float: right;
+	margin: 0 0 0 2px;
+}
+
+/* Docking boxes */
+#sidebar a.dbx-toggle, #sidebar-b a.dbx-toggle,
+#sidebar a.dbx-toggle:visited, #sidebar-b a.dbx-toggle:visited,
+#sidebar-2 a.dbx-toggle, #sidebar-2-b a.dbx-toggle,
+#sidebar-2 a.dbx-toggle:visited, #sidebar-2-b a.dbx-toggle:visited {
+	left: 3px;
+	right: auto;
+	text-indent: 50px;
+}
+
+#sidebar a.dbx-toggle-open, #sidebar-b a.dbx-toggle-open,
+#sidebar a.dbx-toggle-open:visited, #sidebar-b a.dbx-toggle-open:visited,
+#sidebar-2 a.dbx-toggle-open, #sidebar-2-b a.dbx-toggle-open,
+#sidebar-2 a.dbx-toggle-open:visited, #sidebar-2-b a.dbx-toggle-open:visited {
+	background-position:0 -20px;
+}
+
+#sidebar a.dbx-toggle-closed, #sidebar-b a.dbx-toggle-closed,
+#sidebar a.dbx-toggle-closed:visited, #sidebar-b a.dbx-toggle-closed:visited,
+#sidebar-2 a.dbx-toggle-closed, #sidebar-2-b a.dbx-toggle-closed,
+#sidebar-2 a.dbx-toggle-closed:visited, #sidebar-2-b a.dbx-toggle-closed:visited {
+	background-position:0 0;
+}
+
+#sidebar a.dbx-toggle-hilite-open, #sidebar-b a.dbx-toggle-hilite-open,
+#sidebar a.dbx-toggle-hilite-open:visited, #sidebar-b a.dbx-toggle-hilite-open:visited,
+#sidebar-2 a.dbx-toggle-hilite-open, #sidebar-2-b a.dbx-toggle-hilite-open,
+#sidebar-2 a.dbx-toggle-hilite-open:visited, #sidebar-2-b a.dbx-toggle-hilite-open:visited {
+	background-position:-20px -20px;
+}
+
+#sidebar a.dbx-toggle-hilite-closed, #sidebar-b a.dbx-toggle-hilite-closed,
+#sidebar a.dbx-toggle-hilite-closed:visited, #sidebar-b a.dbx-toggle-hilite-closed:visited,
+#sidebar-2 a.dbx-toggle-hilite-closed, #sidebar-2-b a.dbx-toggle-hilite-closed,
+#sidebar-2 a.dbx-toggle-hilite-closed:visited, #sidebar-2-b a.dbx-toggle-hilite-closed:visited {
+	background-position:-20px 0;
+}
+
+.tab-box div.sbtab-content-meta .rss,
+.suf-widget .rss {
+	background-position: right top;
+}
+
+/* magazine */
+.suf-mag-headline-photo-box {
+	float:right;
+	margin: 5px 5px 5px 3px;
+}
+
+.suf-mag-headline-block {
+	float: left;
+	margin: 5px 2px 5px 5px;
+}
+
+.suf-mag-category ul.suf-mag-catblock-posts {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.suf-mag-category li.suf-mag-catblock-post {
+	padding: 6px 20px 6px 1px;
+	background-image: url(images/left_arrow.png);
+	background-position: 100% 10px;
+}
+
+.suf-mag-category li.suf-mag-catblock-post:hover {
+	padding: 5px 19px 5px 0;
+}
+
+#horizontal-outer-widgets-1, #horizontal-outer-widgets-2 {float: right;}
+#widgets-above-header .suf-widget{
+	text-align: right;
+	float: right;
+}
+#sidebar a.suf-mag-category-all-posts,
+#sidebar a.suf-mag-category-all-posts:hover,
+#sidebar a.suf-mag-category-all-posts:visited,
+#sidebar-2 a.suf-mag-category-all-posts,
+#sidebar-2 a.suf-mag-category-all-posts:hover,
+#sidebar-2 a.suf-mag-category-all-posts:visited,
+#sidebar-b a.suf-mag-category-all-posts,
+#sidebar-b a.suf-mag-category-all-posts:hover,
+#sidebar-b a.suf-mag-category-all-posts:visited,
+#sidebar-2-b a.suf-mag-category-all-posts,
+#sidebar-2-b a.suf-mag-category-all-posts:hover,
+#sidebar-2-b a.suf-mag-category-all-posts:visited,
+#horizontal-outer-widgets-1 a.suf-mag-category-all-posts,
+#horizontal-outer-widgets-1 a.suf-mag-category-all-posts:hover,
+#horizontal-outer-widgets-1 a.suf-mag-category-all-posts:visited,
+#horizontal-outer-widgets-2 a.suf-mag-category-all-posts,
+#horizontal-outer-widgets-2 a.suf-mag-category-all-posts:hover,
+#horizontal-outer-widgets-2 a.suf-mag-category-all-posts:visited,
+a.excerpt-more-append,
+a.excerpt-more-append:hover,
+a.excerpt-more-append:visited,
+a.suf-mag-excerpt-full-story,
+a.suf-mag-excerpt-full-story:hover,
+a.suf-mag-excerpt-full-story:visited,
+a.suf-mag-category-all-posts,
+a.suf-mag-category-all-posts:hover,
+a.suf-mag-category-all-posts:visited {
+	float: left;
+}
+
+#cred td.cred-left {
+	text-align: right;
+}
+
+#cred td.cred-right {
+	text-align: left;
+}
+
+/* Sliding panel. */
+/* Widget container. */
+.spanel .spanel-content {
+	text-align: right;
+}
+
+/* Sliding panel widgets. */
+.spanel .suf-panel-widget {
+	float: right;
+}
+
+#top-bar-right-spanel-tab {
+	float: left;
+}
+
+.title-container {
+	padding-left: 10px;
+	padding-right: 58px;
+}
+
+.post .date {
+	left: 58px;
+	right: auto;
+	margin-left: auto;
+	margin-right: -100%;
+	float: right;
+}
+
+.post .title {
+	float: right;
+	padding: 0 10px 0 0;
+}
+
+#ie6 .post .date {
+	left: auto;
+	right: 0;
+}
+
+.entry th, .comment-body th { text-align: right; }
