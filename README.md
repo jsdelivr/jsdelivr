@@ -252,7 +252,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
 
   [1]: http://www.jsdelivr.com
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://marijnhaverbeke.nl/uglifyjs
+  [3]: http://refresh-sf.com/yui/
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
   [5]: http://www.cdnperf.com/
   [6]: http://en.wikipedia.org/wiki/Content_delivery_network
