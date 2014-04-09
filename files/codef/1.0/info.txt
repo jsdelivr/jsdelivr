@@ -1,5 +1,5 @@
 author = "Danny D"
-github = "https://github.com/DannyCork/jsdelivr"
+github = "https://github.com/N0NameN0/CODEF"
 homepage = "http://codef.santo.fr/"
 description = "codef demo scene routines in Javascript "
 mainfile = "codef_core.min.js"
