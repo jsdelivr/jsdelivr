@@ -1,0 +1,158 @@
+/* ==========================================================================
+   IMPLEMENTATION
+   ========================================================================== */
+
+body {
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5;
+    /* Enable a font's kerning: http://stackoverflow.com/questions/15160897/font-feature-settings-what-is-the-correct-syntax */
+    font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+}
+
+
+/* 
+
+ 	font-weight: 100; Comic Neue Light
+ 	font-weight: 300; Comic Neue Regular 
+ 	font-weight: 700; Comic Neue Bold
+	font-style: oblique; for the oblique equivalents.
+
+  Change 'Comic Neue' to 'Comic Neue Angular' for the Angular variants
+  For example Comic Neue Angular Bold Oblique would be:
+
+ 	body {
+		font-family: 'Comic Neue Angular', sans-serif;
+		font-style: oblique;
+		font-weight: 700;
+    font-size: 1em;
+    line-height: 1.5;
+ 	}
+	or in shorthand: body { font: oblique 700 1em/1.5 'Comic Neue Angular', sans-serif; }
+
+*/
+
+/* ==========================================================================
+   FONT STACK
+   ========================================================================== */
+
+/*	@font-face format credit to Chris Coyier http://css-tricks.com/snippets/css/using-font-face/ */
+/*	And John, Kevin & Sven Read http://www.newnet-soft.com/blog/csstypography */
+/*	An old but still great article on @font-face performance http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/ */
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Light-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Light-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Regular-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Bold-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Light-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Light-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Regular-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: url('../fonts/ComicNeue-Angular-Bold-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Angular-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Angular-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Angular-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: oblique;
+}
