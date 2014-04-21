@@ -1,0 +1,125 @@
+//	Colors
+@mixin colors( $cls: "",
+	$baseBg: $mm_baseBg, $pageShadow: $mm_pageShadow,
+	$color: $mm_color, $dimmedColor: $mm_dimmedColor,
+	$emphasizedBg: $mm_emphasizedBg, $highlightedBg: $mm_highlightedBg,
+	$borderColor: $mm_borderColor
+) {
+	html.mm-opened#{$cls} .mm-page
+	{
+		box-shadow: $pageShadow;
+	}
+	.mm-ismenu#{$cls}
+	{
+		background: $baseBg;
+		color: $color;
+	}
+	.mm-menu#{$cls}
+	{
+		.mm-list
+		{
+			> li:after
+			{
+				border-color: $borderColor;
+			}
+			> li
+			{
+				> a
+				{
+					&.mm-subclose
+					{
+						background: $emphasizedBg;
+						color: $dimmedColor;
+					}
+					&.mm-subopen:after,
+					&.mm-subclose:before
+					{
+						border-color: $dimmedColor;
+					}
+					&.mm-subopen:before
+					{
+						border-color: $borderColor;
+					}
+				}
+			}
+			> li.mm-selected
+			{
+				> a:not(.mm-subopen),
+				> span
+				{
+					background: $emphasizedBg;
+				}
+			}
+			> li.mm-label 
+			{
+				background: $highlightedBg;
+			}
+		}
+		
+		&.mm-vertical .mm-list
+		{
+			li.mm-opened
+			{
+				> a.mm-subopen,
+				> ul
+				{
+					background: $highlightedBg;
+				}
+			}
+		}
+	}
+}
+@mixin colors_labels( $cls: "",
+	$highlightedBg: $mm_highlightedBg
+) {
+	.mm-menu#{$cls}
+	{
+		.mm-list li.mm-label > div > div
+		{
+			background: $highlightedBg;
+		}
+	}
+}
+@mixin colors_search( $cls: "",
+	$inputBg: $mm_dimmedColor, $color: $mm_color,
+	$dimmedColor: $mm_dimmedColor
+) {
+	.mm-menu#{$cls}
+	{
+		.mm-search input
+		{
+			background: $inputBg;
+			color: $color;
+		}
+		li.mm-noresults
+		{
+			color: $dimmedColor;
+		}
+	}
+}
+@mixin colors_counters( $cls: "",
+	$dimmedColor: $mm_dimmedColor
+) {
+	.mm-menu#{$cls} em.mm-counter
+	{
+		color: $dimmedColor;
+	}
+}
+@mixin colors_header( $cls: "",
+	$dimmedColor: $mm_dimmedColor,
+	$borderColor: $mm_borderColor
+) {
+	.mm-menu#{$cls}
+	{
+		.mm-header
+		{
+			border-color: $borderColor;
+			color: $dimmedColor;
+
+			a:before
+			{
+				border-color: $dimmedColor;
+			}
+		}
+	}
+}

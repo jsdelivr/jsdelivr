@@ -1,0 +1,102 @@
+/*
+	jQuery.mmenu themes extension CSS
+*/
+//	To use on widescreens only, include it using a mediaquery:
+//	<link type="text/css" href="mmenu-widescreen.css" media="all and (min-width: 900px)"/>
+
+@import "../inc/variables";
+
+//	Light
+$mm_t_cls			: ".mm-light";
+$mm_t_baseBg		: #f3f3f3;
+$mm_t_pageShadow	: 0 0 10px rgba( 0, 0, 0, 0.3 );
+$mm_t_text			: rgba( 0, 0, 0, 0.6 );
+$mm_t_dimmedText	: rgba( 0, 0, 0, 0.3 );
+$mm_t_emphasizedBg	: rgba( 255, 255, 255, 0.6 );
+$mm_t_highlightedBg	: rgba( 0, 0, 0, 0.03 );
+$mm_t_border		: rgba( 0, 0, 0, 0.1 );
+$mm_t_inputBg		: rgba( 0, 0, 0, 0.1 );
+
+@include colors( $mm_t_cls,
+	$mm_t_baseBg, $mm_t_pageShadow,
+	$mm_t_text, $mm_t_dimmedText,
+	$mm_t_emphasizedBg, $mm_t_highlightedBg,
+	$mm_t_border );
+
+@include colors_search( $mm_t_cls,
+	$mm_t_inputBg, $mm_t_text,
+	$mm_t_dimmedText );
+	
+@include colors_counters( $mm_t_cls,
+	$mm_t_dimmedText );
+
+@include colors_labels( $mm_t_cls,
+	$mm_t_highlightedBg );
+	
+@include colors_header( $mm_t_cls,
+	$mm_t_dimmedText,
+	$mm_t_border );
+	
+
+//	White
+$mm_t_cls			: ".mm-white";
+$mm_t_baseBg		: #fff;
+$mm_t_pageShadow	: 0 0 10px rgba( 0, 0, 0, 0.3 );
+$mm_t_text			: rgba( 0, 0, 0, 0.6 );
+$mm_t_dimmedText	: rgba( 0, 0, 0, 0.3 );
+$mm_t_emphasizedBg	: rgba( 0, 0, 0, 0.06 );
+$mm_t_highlightedBg	: rgba( 0, 0, 0, 0.03 );
+$mm_t_border		: rgba( 0, 0, 0, 0.1 );
+$mm_t_inputBg		: rgba( 0, 0, 0, 0.1 );
+
+@include colors( $mm_t_cls,
+	$mm_t_baseBg, $mm_t_pageShadow,
+	$mm_t_text, $mm_t_dimmedText,
+	$mm_t_emphasizedBg, $mm_t_highlightedBg,
+	$mm_t_border );
+
+@include colors_search( $mm_t_cls,
+	$mm_t_inputBg, $mm_t_text,
+	$mm_t_dimmedText );
+	
+@include colors_counters( $mm_t_cls,
+	$mm_t_dimmedText );
+
+@include colors_labels( $mm_t_cls,
+	$mm_t_highlightedBg );
+
+@include colors_header( $mm_t_cls,
+	$mm_t_dimmedText,
+	$mm_t_border );
+
+
+//	Black
+$mm_t_cls			: ".mm-black";
+$mm_t_baseBg		: #000;
+$mm_t_pageShadow	: none;
+$mm_t_text			: rgba( 255, 255, 255, 0.6 );
+$mm_t_dimmedText	: rgba( 255, 255, 255, 0.3 );
+$mm_t_emphasizedBg	: rgba( 255, 255, 255, 0.25 );
+$mm_t_highlightedBg	: rgba( 255, 255, 255, 0.15 );
+$mm_t_border		: rgba( 255, 255, 255, 0.2 );
+$mm_t_inputBg		: rgba( 255, 255, 255, 0.3 );
+
+@include colors( $mm_t_cls,
+	$mm_t_baseBg, $mm_t_pageShadow,
+	$mm_t_text, $mm_t_dimmedText,
+	$mm_t_emphasizedBg, $mm_t_highlightedBg,
+	$mm_t_border );
+
+@include colors_search( $mm_t_cls,
+	$mm_t_inputBg, $mm_t_text,
+	$mm_t_dimmedText );
+	
+@include colors_counters( $mm_t_cls,
+	$mm_t_dimmedText );
+
+@include colors_labels( $mm_t_cls,
+	$mm_t_highlightedBg );
+
+@include colors_header( $mm_t_cls,
+	$mm_t_dimmedText,
+	$mm_t_border );

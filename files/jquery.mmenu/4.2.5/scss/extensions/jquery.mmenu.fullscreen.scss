@@ -1,0 +1,30 @@
+/*
+	jQuery.mmenu fullscreen extension CSS
+*/
+
+@import "../inc/variables";
+
+$mm_fs_class		: ".mm-fullscreen";
+$mm_fs_width		: 1;
+$mm_fs_minWidth		: 140px;
+$mm_fs_maxWidth		: 10000px;
+$mm_fs_height		: 1;
+$mm_fs_minHeight	: 140px;
+$mm_fs_maxHeight	: 10000px;
+
+@include sizing( $mm_fs_class,
+	$mm_fs_width, $mm_fs_minWidth, $mm_fs_maxWidth,
+	$mm_fs_height, $mm_fs_minHeight, $mm_fs_maxHeight );
+
+@include sizing_position( $mm_fs_class,
+	$mm_fs_width, $mm_fs_minWidth, $mm_fs_maxWidth,
+	$mm_fs_height, $mm_fs_minHeight, $mm_fs_maxHeight );
+
+@include sizing_zposition( $mm_fs_class,
+	$mm_fs_width, $mm_fs_minWidth, $mm_fs_maxWidth,
+	$mm_fs_height, $mm_fs_minHeight, $mm_fs_maxHeight );
+	
+html.mm-opened#{$mm_fs_class} .mm-page
+{
+	box-shadow: none !important;
+}

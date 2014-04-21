@@ -1,0 +1,82 @@
+//	Animations
+$mm_transitionDuration: 0.4s !default;
+$mm_transitionFunction: ease !default;
+
+//	Sizing and positioning
+$mm_width: 0.8 !default;
+$mm_minWidth: 140px !default;
+$mm_maxWidth: 440px !default;
+
+$mm_height: 0.8 !default;
+$mm_minHeight: 140px !default;
+$mm_maxHeight: 880px !default;
+
+$mm_btnSize: 40px !default;
+$mm_padding: 10px !default;
+$mm_fontSize: 14px !default;
+
+$mm_subpanelOffset: 40% !default;
+
+//	Colors
+$mm_baseBg: #333 !default;
+$mm_pageShadow: 0 0 20px rgba( 0, 0, 0, 0.5 ) !default;
+$mm_color: rgba( 255, 255, 255, 0.6 ) !default;
+$mm_dimmedColor: rgba( 255, 255, 255, 0.3 ) !default;
+$mm_emphasizedBg: rgba( 0, 0, 0, 0.1 ) !default;
+$mm_highlightedBg: rgba( 255, 255, 255, 0.05 ) !default;
+$mm_borderColor: rgba( 0, 0, 0, 0.15 ) !default;
+
+
+
+@import "sizing";
+@import "colors";
+@import "arrows";
+
+
+//	Borders
+@mixin border( $border, $pseudo, $size, $pos1, $pos2 )
+{
+	&:#{$pseudo}
+	{
+		content: '';
+		border-#{$border}-width: 1px;
+		border-#{$border}-style: solid;
+		display: block;
+		#{$size}: 100%;
+		position: absolute;
+		#{$pos1}: 0;
+		#{$pos2}: 0;
+	}
+}
+@mixin border-top
+{
+	@include border( "top", "before", "width", "top", "left" );
+}
+@mixin border-right
+{
+	@include border( "right", "after", "height", "right", "top" );
+}
+@mixin border-bottom
+{
+	@include border( "bottom", "after", "width", "bottom", "left" );
+}
+@mixin border-left
+{
+	@include border( "left", "before", "height", "left", "top" );
+}
+
+//	Misc mixins
+@mixin vendor-prefix( $prop, $val )
+{
+	-webkit-#{$prop}: $val;
+	-moz-#{$prop}: $val;
+	-ms-#{$prop}: $val;
+	-o-#{$prop}: $val;
+	#{$prop}: $val;
+}
+@mixin ellipsis
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
