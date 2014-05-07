@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 50px 0;
+  }
+
+  .container {
+    width: 600px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .icon {
+    display: inline-block;
+    margin: 10px;
+    width: 16px;
+    height: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <p class='intro'>
+    Make sure to run this through a web server otherwise you won&rsquo;t see any icons. You can use <a href="https://github.com/visionmedia/serve">Serve</a> for local testing.
+  </p>
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#account-login"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#account-logout"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#action-redo"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#action-undo"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#align-center"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#align-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#align-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#aperture"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-circle-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-circle-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-circle-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-circle-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-thick-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-thick-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-thick-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-thick-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#arrow-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#audio-spectrum"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#audio"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#badge"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#ban"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bar-chart"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#basket"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#battery-empty"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#battery-full"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#beaker"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bell"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bluetooth"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bold"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bolt"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#book"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bookmark"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#box"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#briefcase"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#british-pound"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#browser"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#brush"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bug"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#bullhorn"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#calculator"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#calendar"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#camera-slr"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#caret-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#caret-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#caret-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#caret-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cart"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#chat"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#check"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#chevron-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#chevron-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#chevron-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#chevron-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#circle-check"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#circle-x"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#clipboard"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#clock"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cloud-download"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cloud-upload"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cloud"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cloudy"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#code"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#cog"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#collapse-down"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#collapse-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#collapse-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#collapse-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#command"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#comment-square"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#compass"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#contrast"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#copywriting"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#credit-card"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#crop"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#dashboard"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#data-transfer-download"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#data-transfer-upload"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#delete"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#dial"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#document"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#dollar"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#double-quote-sans-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#double-quote-sans-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#double-quote-serif-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#double-quote-serif-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#droplet"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#eject"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#elevator"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#ellipses"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#envelope-closed"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#envelope-open"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#euro"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#excerpt"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#expand-down"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#expand-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#expand-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#expand-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#external-link"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#eye"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#eyedropper"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#file"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#fire"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#flag"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#flash"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#folder"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#fork"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#fullscreen-enter"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#fullscreen-exit"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#globe"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#graph"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#grid-four-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#grid-three-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#grid-two-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#hard-drive"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#header"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#headphones"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#heart"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#home"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#image"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#inbox"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#infinity"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#info"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#italic"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#justify-center"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#justify-left"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#justify-right"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#key"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#laptop"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#layers"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#lightbulb"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#link-broken"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#link-intact"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#list-rich"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#list"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#location"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#lock-locked"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#lock-unlocked"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#loop-circular"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#loop-square"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#loop"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#magnifying-glass"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#map-marker"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#map"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-pause"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-play"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-record"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-skip-backward"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-skip-forward"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-step-backward"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-step-forward"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#media-stop"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#medical-cross"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#menu"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#microphone"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#minus"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#monitor"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#moon"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#move"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#musical-note"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#paperclip"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#pencil"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#people"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#person"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#phone"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#pie-chart"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#pin"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#play-circle"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#plus"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#power-standby"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#print"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#project"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#pulse"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#puzzle-piece"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#question-mark"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#rain"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#random"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#reload"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#resize-both"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#resize-height"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#resize-width"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#rss-alt"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#rss"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#script"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#share-boxed"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#share"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#shield"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#signal"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#signpost"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#sort-ascending"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#sort-descending"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#spreadsheet"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#star"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#sun"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#tablet"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#tag"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#tags"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#target"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#task"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#terminal"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#text"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#thumb-down"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#thumb-up"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#timer"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#transfer"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#trash"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#underline"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#vertical-align-bottom"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#vertical-align-center"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#vertical-align-top"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#video"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#volume-high"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#volume-low"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#volume-off"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#warning"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#wifi"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#wrench"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#x"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#yen"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#zoom-in"></use>
+  </svg>
+
+  <svg viewBox="0 0 8 8" class="icon">
+    <use xlink:href="open-iconic.min.svg#zoom-out"></use>
+  </svg>
+
+</div>
+</body>
+</html>
