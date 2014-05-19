@@ -15,7 +15,8 @@ Feel free to open issues and pull requests if you think something should be chan
 All changes made to this repo are synced to the CDN.
 It can take a few minutes for the changes to appear on the website.
 
-[jsDelivr – The advanced open source public CDN][11] -
+[jsDelivr – The advanced open source public CDN][11]
+
 [How jsDelivr works (outdated)][4]
 
 [Compare public CDNs][5]
