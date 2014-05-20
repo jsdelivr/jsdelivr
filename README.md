@@ -21,6 +21,7 @@ It can take a few minutes for the changes to appear on the website.
 
 [Compare public CDNs][5]
 
+[jsDelivr community chat][12]
 
 # Why jsDelivr?
 
@@ -262,3 +263,4 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [9]: https://github.com/jsdelivr/jsdelivr/fork
   [10]: http://www.cedexis.com/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
+  [12]: https://gitter.im/jsdelivr/jsdelivr
