@@ -199,7 +199,11 @@ An npm module that can be used in your node.js applications:
 
 * https://github.com/jsdelivr/npm-jsdelivr
 
-More coming soon...
+### jsdelivr-cdn-data
+
+replace references to your bower resources 
+
+https://github.com/shahata/jsdelivr-cdn-data
 
 
 Custom CDN Hosting
