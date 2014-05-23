@@ -5,7 +5,3 @@
 .WebRupee { font-size:14px; font-family:'WebRupee';}
 html>body .WebRupee {margin-right:2px;}
 html>body .WebRupee {*margin-right:0;} 
-
-
-/* C O N T E N T */
-#container {width:500px; margin:50px auto;}
