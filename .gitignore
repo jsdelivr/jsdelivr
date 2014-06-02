@@ -216,6 +216,3 @@ pip-log.txt
 
 #No more ZIPs. Generation handled by origin
 *.zip
-files/bootstrap/2.3.2/css/bootstrap-responsive.min.css
-files/bootstrap/2.3.2/css/bootstrap-responsive.css
-files/bootstrap/2.3.2/css/bootstrap-responsive.css
