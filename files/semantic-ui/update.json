@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "semantic-ui",
+  "repo": "Semantic-Org/Semantic-UI",
+  "files": {
+    "basePath": "build/packaged/"
+  }
+}
