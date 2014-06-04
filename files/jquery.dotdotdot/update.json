@@ -3,7 +3,7 @@
   "name": "jquery.dotdotdot",
   "repo": "BeSite/jQuery.dotdotdot",
   "files": {
-    "basePath": "src/js",
-    "include": ["*"]
+    "basePath": "src/js/",
+    "include": ["*.js"]
   }
 }
