@@ -4,6 +4,6 @@
   "repo": "julianshapiro/velocity",
   "files": {
     "basePath": "/",
-    "include": ["jquery.velocity.min.js", "jquery.velocity.js"]
+    "include": ["jquery.velocity.min.js"]
   }
 }
