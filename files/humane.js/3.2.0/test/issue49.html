@@ -1,0 +1,9 @@
+<link href='../themes/bigbox.css' rel='stylesheet'>
+<script src='//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min.js'></script>
+<script>
+requirejs.config({ baseUrl: '../' })
+require(['humane'], function (humane) {
+  console.assert(!window.humane, 'global should not exist')
+  humane.log('hello')
+})
+</script>
