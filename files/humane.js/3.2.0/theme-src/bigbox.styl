@@ -1,0 +1,65 @@
+@import 'nib'
+vendor-prefixes = moz webkit ms o official
+support-for-ie = false
+
+html, body { min-height: 100% }
+.humane
+.humane-bigbox
+  position   : fixed
+  transition : all .3s ease-out
+  z-index    : 100000
+  filter     : unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=100)")
+
+.humane
+.humane-bigbox
+  font-family       : Ubuntu, Verdana, sans-serif
+  line-height       : 40px
+  font-size         : 35px
+  top               : 25%
+  left              : 25%
+  opacity           : 0
+  width             : 50%
+  min-height        : 40px
+  padding           : 30px
+  text-align        : center
+  background-image  : linear-gradient-image(200px, rgba(0,0,0,1), rgba(100,100,100,0.8))
+  background        : linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.9)) no-repeat
+  *background-color : #000
+  color             : #fff
+  border-radius     : 15px
+  text-shadow       : 0 -1px 1px #ddd
+  box-shadow        : 0 15px 15px -15px #000
+  transform         : scale(0.1)
+  p, ul
+    margin: 0
+    padding: 0
+  ul
+    list-style: none
+  &.humane-bigbox-info
+    background-image  : linear-gradient-image(200px, rgba(0,0,100,1), rgba(0,0,100,0.8))
+    background        : linear-gradient(top, rgba(0,0,100,1), rgba(0,0,100,0.9)) no-repeat
+    *background-color : #030
+  &.humane-bigbox-success
+    background-image  : linear-gradient-image(200px, rgba(0,100,0,1), rgba(0,100,0,0.8))
+    background        : linear-gradient(top, rgba(0,100,0,1), rgba(0,100,0,0.9)) no-repeat
+    *background-color : #030
+  &.humane-bigbox-error
+    background-image  : linear-gradient-image(200px, rgba(100,0,0,1), rgba(100,0,0,0.8))
+    background        : linear-gradient(top, rgba(100,0,0,1), rgba(100,0,0,0.9)) no-repeat
+    *background-color : #300
+
+.humane.humane-animate
+.humane-bigbox.humane-bigbox-animate
+  opacity: 1
+  transform: scale(1)
+  &:hover
+    opacity: 0.6
+    transform: scale(0.8)
+
+.humane.humane-js-animate
+.humane-bigbox.humane-bigbox-js-animate
+  opacity: 1
+  transform: scale(1)
+  &:hover
+    opacity: 0.6
+    filter     : unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=60)")
