@@ -4,6 +4,6 @@
   "repo": "wavded/humane-js",
   "files": {
     "basePath": "/",
-    "exclude": [".gitignore", "Makefile", "*.json", "*.md", "*.html", "test", "theme-src"]
+    "exclude": [".gitignore", "Makefile", "*.json", "*.md", "*.html", "test/", "theme-src/"]
   }
 }
