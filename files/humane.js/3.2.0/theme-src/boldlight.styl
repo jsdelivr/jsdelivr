@@ -1,0 +1,64 @@
+@import 'nib'
+vendor-prefixes = moz webkit ms o official
+support-for-ie = false
+
+html, body { min-height: 100% }
+.humane
+.humane-boldlight
+  position   : fixed
+  transition : all .3s ease-out
+  z-index    : 100000
+  filter     : unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=100)")
+
+.humane
+.humane-boldlight
+  font-family      : Ubuntu, Verdana, sans-serif
+  font-size        : 25px
+  letter-spacing   : -1px
+  top              : 25%
+  left             : 25%
+  opacity          : 0
+  width            : 50%
+  color            : #000
+  padding          : 10px
+  text-align       : center
+  background-image : linear-gradient-image(150px, rgba(255,255,255,0.8), rgba(150,150,150,0.8))
+  background       : linear-gradient(top, rgba(255,255,255,0.8), rgba(150,150,150,0.8)) no-repeat
+  *background-color: #fff
+  border-radius    : 15px
+  text-shadow      : 0 -1px 1px rgba(#ddd,0.4)
+  box-shadow       : 0 4px 4px -4px #eee
+  transform        : scale(1.1)
+  p, ul
+    margin: 0
+    padding: 0
+  ul
+    list-style: none
+  &.humane-boldlight-info
+    background-image  : linear-gradient-image(200px, rgba(100,100,255,1), rgba(100,100,255,0.8))
+    background        : linear-gradient(top, rgba(100,100,255,1), rgba(100,100,255,0.8)) no-repeat
+    *background-color  : rgb(100,100,255)
+  &.humane-boldlight-success
+    background-image  : linear-gradient-image(200px, rgba(100,255,100,0.8), rgba(100,255,100,0.8))
+    background        : linear-gradient(top, rgba(100,255,100,1), rgba(100,255,100,0.8)) no-repeat
+    *background-color  : rgb(100,255,100)
+  &.humane-boldlight-error
+    background-image  : linear-gradient-image(200px, rgba(255,100,100,0.8), rgba(255,100,100,0.8))
+    background        : linear-gradient(top, rgba(255,100,100,1), rgba(255,100,100,0.8)) no-repeat
+    *background-color  : rgb(255,100,100)
+
+.humane.humane-animate
+.humane-boldlight.humane-boldlight-animate
+  opacity   : 1
+  transform : scale(1)
+  &:hover
+    opacity   : 0.4
+    transform : scale(1.8)
+
+.humane.humane-animate
+.humane-boldlight.humane-boldlight-js-animate
+  opacity   : 1
+  transform : scale(1)
+  &:hover
+    opacity   : 0.4
+    filter  : unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=40)")
