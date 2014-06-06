@@ -4,6 +4,6 @@
   "repo": "wavded/humane-js",
   "files": {
     "basePath": "/",
-    "include": ["humane.min.js", "humane.js", "themes"]
+    "exclude": [".gitignore", "Makefile", "*.json", "*.md", "*.html", "test", "theme-src"]
   }
 }
