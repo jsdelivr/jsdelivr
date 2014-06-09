@@ -1,0 +1,187 @@
+// Variables
+//------------------------------------------------------
+$list-primary:                                 $aqua-light !default;
+$list-info:                                    $mint-light !default;
+$list-warning:                                 $sunflower-light !default;
+$list-success:                                 $grass-light !default;
+$list-danger:                                  $grapefruit-light !default;
+
+$list-primary-hover:                           $aqua-dark !default;
+$list-info-hover:                              $mint-dark !default;
+$list-warning-hover:                           $sunflower-dark !default;
+$list-success-hover:                           $grass-dark !default;
+$list-danger-hover:                            $grapefruit-dark !default;
+
+$list-border-color:                            $lightgray-dark !default;
+$list-background-color:                        $white !default;
+$list-font-color:                              $darkgray-dark !default;
+$list-font-color-hover:                        $mediumgray-dark !default;
+
+$list-item-background-color:                   $lightgray-dark !default;
+
+$list-radius:                                  4px !default;
+$list-shadow:                                  0 1px 2px rgba(0, 0, 0, .2) !default;
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("list") {
+
+  /**
+   * list
+   * --------------------------------------------------
+   */
+  .list-group {
+    @include radius($type: border-radius, $value: $list-radius);
+    @include box-shadow($value: $list-shadow);
+    @at-root #{&}-item {
+      border-top-color: $list-border-color;
+      &:first-child {
+        border-top: none;
+      }
+      @at-root #{&}-heading {
+        color: $list-font-color;
+      }
+    }
+  }
+
+
+  a.list-group-item {
+    color: $list-font-color;
+
+    & .list-group-item-heading {
+      font-size: 16px;
+      color: $list-font-color;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $list-item-background-color;
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      background-color: $list-primary;
+      border-color: $list-primary;
+    }
+    &.active .list-group-item-text,
+    &.active:hover .list-group-item-text,
+    &.active:focus .list-group-item-text {
+      color: $list-background-color;
+    }
+  }
+  .list-group-item-primary {
+    color: darken($list-primary, 10%);
+    border-color: $list-primary-hover transparent transparent transparent;
+    background-color: $list-primary;
+    &:first-child {
+      border-color: transparent;      
+    }
+    @at-root a#{&} {
+      color: darken($list-primary, 30%);
+      &:hover,
+      &:focus {
+        color: $list-background-color;
+        background-color: $list-primary-hover;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $list-primary-hover;
+        border-color: $list-primary transparent transparent transparent;
+      }
+    }
+  }
+  .list-group-item-success {
+    color: darken($list-success, 10%);
+    border-color: $list-success-hover transparent transparent transparent;
+    background-color: $list-success;
+    &:first-child {
+      border-color: transparent;      
+    }
+    @at-root a#{&} {
+      color: darken($list-success, 30%);
+      &:hover,
+      &:focus {
+        color: $list-background-color;
+        background-color: $list-success-hover;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $list-success-hover;
+        border-color: $list-success transparent transparent transparent;
+      }
+    }
+  }
+  .list-group-item-warning {
+    color: darken($list-warning, 10%);
+    border-color: $list-warning-hover transparent transparent transparent;
+    background-color: $list-warning;
+    &:first-child {
+      border-color: transparent;      
+    }
+    @at-root a#{&} {
+      color: darken($list-warning, 40%);
+      &:hover,
+      &:focus {
+        color: $list-background-color;
+        background-color: $list-warning-hover;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $list-warning-hover;
+        border-color: $list-warning transparent transparent transparent;
+      }
+    }
+  }
+  .list-group-item-info {
+    color: darken($list-info, 10%);
+    border-color: $list-info-hover transparent transparent transparent;
+    background-color: $list-info;
+    &:first-child {
+      border-color: transparent;      
+    }
+    @at-root a#{&} {
+      color: darken($list-info, 30%);
+      &:hover,
+      &:focus {
+        color: $list-background-color;
+        background-color: $list-info-hover;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $list-info-hover;
+        border-color: $list-info transparent transparent transparent;
+      }
+    }
+  }
+  .list-group-item-danger {
+    color: darken($list-danger, 10%);
+    border-color: $list-danger-hover transparent transparent transparent;
+    background-color: $list-danger;
+    &:first-child {
+      border-color: transparent;      
+    }
+    @at-root a#{&} {
+      color: darken($list-danger, 30%);
+      &:hover,
+      &:focus {
+        color: $list-background-color;
+        background-color: $list-danger-hover;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $list-danger-hover;
+        border-color: $list-danger transparent transparent transparent;
+      }
+    }
+  }
+}
+
+

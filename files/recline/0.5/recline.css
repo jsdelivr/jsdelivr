@@ -1,0 +1,633 @@
+.recline-graph .graph {
+  height: 500px;
+}
+
+.recline-graph .legend table {
+  width: auto;
+  margin-bottom: 0;
+}
+
+.recline-graph .legend td {
+  padding: 5px;
+  line-height: 13px;
+}
+
+.recline-graph .graph .alert {
+  width: 450px;
+  margin: auto;
+}
+
+/**********************************************************
+  * (Data) Grid
+  *********************************************************/
+
+table.recline-grid {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.recline-grid .btn-group .dropdown-toggle {
+  padding: 1px 3px;
+  line-height: auto;
+}
+
+.recline-grid td, .recline-grid th {
+  border-left: 1px solid #ccc;
+  padding: 3px 4px;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.recline-grid tbody tr {
+  vertical-align: top;
+  border-bottom: solid 1px #ccc;
+}
+
+.recline-grid tbody tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.recline-grid tbody td:last-child {
+  border-right: 1px solid #ccc;
+}
+
+/* direct borrowing from twitter buttons */
+.recline-grid th {
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+/**********************************************************
+  * Fixed Header - http://www.imaputz.com/cssStuff/bigFourVersion.html
+  *********************************************************/
+
+div.table-container {
+  overflow: auto;
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.table-container {
+  overflow: hidden;
+}
+
+thead.fixed-header tr {
+  overflow-x: hidden;
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of table-container has an overflow property set to auto */
+thead.fixed-header tr {
+  position: relative
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixed-header tr {
+  display: block
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+tbody.scroll-content {
+  display: block;
+  max-height: 500px;
+  overflow: auto;
+}
+
+/**********************************************************
+  * Data Table Menus
+  *********************************************************/
+
+.column-header-menu, a.root-header-menu {
+  float: right;
+}
+
+div.data-table-cell-content {
+  line-height: 1.2;
+  color: #222;
+  position: relative;
+}
+
+div.data-table-cell-content-numeric {
+  text-align: right;
+}
+
+a.data-table-cell-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 25px;
+  height: 16px;
+  text-decoration: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAQCAYAAABUWyyMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTNEODNFMjVEMDA5MTFERjk5NzhEQzZDRDUwRkEzMUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTNEODNFMjZEMDA5MTFERjk5NzhEQzZDRDUwRkEzMUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5M0Q4M0UyM0QwMDkxMURGOTk3OERDNkNENTBGQTMxQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5M0Q4M0UyNEQwMDkxMURGOTk3OERDNkNENTBGQTMxQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpApVmcAAAKVSURBVHjaYvz//z/DcAAsIGLaxjf2QKoLiM2oaPYpIC7L8hc5COI4F9+hmR17e1UOskAFVgCxBJUDyQxqriQ97GCCCpBkATCUGQxVOTHY7KyMDFoKHMhKJXCwCQJgKDNEOAlisHk5mRh8LPgw7GChNEg2HfvI8OnbPzDbwYAH6BkmhmsPflA12EtnPmN4/vY3mF0YKgb2zJYTn5CV/EfxiKgAC4O7CS8DHzczw5PXvxl2nv7E8PP3fxTx87e/o1hipMrFcOfZT6BmVgYZUTawmKUWN8Pxa1+xOkpNhp2hLk6CQVKYleHcrW8MTYteMHz+/g9FfMW+9yh6Ih0FGA5e/MLAAIx5IzUusFiqtzDD7K1vYUpcmZA1+FnxM7z++AccyqBkAgphmMPY2ZiAHvsMFkcGMkAPgMQ+ff3L8PPXPzD++O0vztDtypBmuPXkJziUebiYwSEMcxiID/IYiEYJLKDjQWLP3v1h+AI0G4RhMQQF5UzoDvr5CxIDoJhQlmKHy527/Y3hLjDkD4BCBgsAxSAoiYEwrqQFchAoWcBiAOQge30euBwoJkAh37/6FVb9oBgEeQCE0ZKWC8488vj1LzCmJTgLTKZn0ZIquYAJOURBsQDKB68//GHgYEWkOlBMgPICKIYcoCGIC4BiFRSDuEIUFBtSQizg5AWKHRgAxQSoZALFECy54QKgZAbLKxgegZVAfFxM4LyiLMUGTPeQ0ujAhS9gz7mb8sI9iisWQclSG7UIRgFlM56CM3R3uhTY0bC0DkpOtx//AGd4mEdxxSIoWaIVwQyMoCYKsGanWTsFWM8wQmt2mtkBqmdgMfKCRna8wMGmth2MMI/EAfEdKltwB2ouAz3sYBwurV8mhmECAAIMAEe3EkMWh/DvAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
+
+a.data-table-cell-edit:hover {
+  background-position: -25px 0px;
+}
+
+.recline-grid td:hover .data-table-cell-edit {
+  visibility: visible;
+}
+
+div.data-table-cell-content-numeric > a.data-table-cell-edit {
+  left: 0px;
+  right: auto;
+}
+
+.data-table-value-nonstring {
+  color: #282;
+}
+
+.data-table-error {
+  color: red;
+}
+
+.data-table-cell-editor-editor {
+  overflow: hidden;
+  display: block;
+  width: 98%;
+  height: 3em;
+  font-family: monospace;
+  margin: 3px 0;
+}
+
+.data-table-cell-copypaste-editor {
+  overflow: hidden;
+  display: block;
+  width: 98%;
+  height: 10em;
+  font-family: monospace;
+  margin: 3px 0;
+}
+
+.data-table-cell-editor-action {
+  float: left;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.data-table-cell-editor-key {
+  font-size: 0.8em;
+  color: #999;
+}
+
+/**********************************************************
+  * Read-only mode
+  *********************************************************/
+
+.recline-read-only .recline-grid .write-op,
+.recline-read-only .recline-grid a.data-table-cell-edit
+{
+  display: none;
+}
+
+.recline-read-only a.row-header-menu {
+  display: none;
+}
+
+.recline-map .map {
+  height: 500px;
+}
+
+/**********************************************************
+  * Editor
+  *********************************************************/
+
+.recline-map .editor {
+  float: right;
+  width: 200px;
+  padding-left: 0px;
+  margin-left: 10px;
+}
+
+.recline-map .editor form {
+  padding-left: 4px;
+}
+
+.recline-map .editor select {
+  width: 100%;
+}
+
+.recline-map .editor .editor-options {
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  padding: 5px 0;
+}
+.recline-data-explorer .data-view-container {
+  display: block;
+  margin-right: 225px;
+}
+
+.recline-data-explorer .data-view-sidebar {
+  float: right;
+  margin-left: 8px;
+  width: 220px;
+}
+
+.recline-data-explorer .header .navigation {
+  margin-bottom: 8px;
+}
+
+.recline-data-explorer .header .navigation,
+.recline-data-explorer .header .pagination,
+.recline-data-explorer .header .pagination form
+{
+  display: inline;
+}
+
+.recline-data-explorer .header .navigation {
+  float: left;
+}
+
+.recline-data-explorer .header .menu-right {
+  float: right;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: solid 2px #ddd;
+}
+
+.header .recline-results-info {
+  line-height: 28px;
+  margin-left: 20px;
+  float: left;
+}
+
+/**********************************************************
+  * Query Editor
+  *********************************************************/
+
+.header .recline-query-editor {
+  float: right;
+  height: 30px;
+}
+
+.header .input-prepend {
+  margin-bottom: auto;
+}
+
+.header .add-on {
+  float: left;
+}
+
+/* needed for Chrome but not FF */
+.header .add-on {
+  margin-left: -27px;
+}
+
+/* needed for FF but not chrome */
+.header .input-prepend {
+  vertical-align: top;
+}
+
+.header .recline-query-editor form button {
+  vertical-align: top;
+}
+
+/**********************************************************
+  * Pager
+  *********************************************************/
+
+.header .recline-pager {
+  float: left;
+  margin: auto;
+  display: block;
+  margin-left: 20px;
+}
+
+.header .recline-pager .pagination input {
+  width: 30px;
+  height: 18px;
+  padding: 2px 4px;
+  margin: 0;
+  margin-top: -4px;
+}
+
+.header .recline-pager .pagination a {
+  line-height: 26px;
+  padding: 0 6px;
+}
+
+/**********************************************************
+  * Filter Editor
+  *********************************************************/
+
+.recline-filter-editor {
+  padding: 8px;
+}
+
+.recline-filter-editor .filter-term a {
+  font-size: 18px;
+}
+
+.recline-filter-editor input,
+.recline-filter-editor select
+{
+  width: 175px;
+}
+
+
+/**********************************************************
+  * Fields Widget
+  *********************************************************/
+
+.recline-fields-view .fields-list {
+  padding: 0;
+}
+
+.recline-fields-view .fields-list .accordion-heading,
+.recline-fields-view .fields-list h3
+{
+  margin: 3px 0 3px 5px;
+}
+
+.recline-fields-view .fields-list .accordion-heading a,
+.recline-fields-view .fields-list .accordion-heading h4 {
+  display: inline;
+}
+
+.recline-fields-view .fields-list .accordion-heading a {
+  padding: 0;
+}
+
+.recline-fields-view .fields-list .accordion-heading h4 {
+  word-wrap: break-word
+}
+
+.recline-fields-view .clear {
+  clear: both;
+}
+
+.recline-fields-view .facet-items {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.recline-fields-view .facet-item .term {
+  font-weight: bold;
+}
+
+.recline-fields-view .facet-item .count {
+}
+
+/**********************************************************
+  * Notifications
+  *********************************************************/
+
+.recline-data-explorer .notification-loader {
+  width: 18px;
+  margin-left: 5px;
+  background-image: url(data:image/gif;base64,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%3D%3D);
+  display: inline-block;
+}
+
+.recline-data-explorer .alert-loader {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 10000;
+  padding: 40px 0px 40px 0px;
+  margin-top: -10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border-top: none;
+}
+
+/*
+IMPORTANT:
+In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+classes should alter those!
+*/
+
+.recline-slickgrid .slick-header-columns .slick-header-column {
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recline-slickgrid .slick-header-column:hover, .slick-header-column-active {
+}
+
+.recline-slickgrid .slick-headerrow {
+  background: #fafafa;
+}
+
+.recline-slickgrid .slick-headerrow-column {
+  background: #fafafa;
+  border-bottom: 0;
+  height: 100%;
+}
+
+.recline-slickgrid .slick-row.ui-state-active {
+  background: #F5F7D7;
+}
+
+.recline-slickgrid .slick-row {
+  position: absolute;
+  background: white;
+  border: 0px;
+  line-height: 20px;
+}
+
+.recline-slickgrid .slick-row.selected {
+  z-index: 10;
+  background: #DFE8F6;
+}
+
+.recline-slickgrid .slick-cell {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.recline-slickgrid .slick-group {
+  border-bottom: 2px solid silver;
+}
+
+.recline-slickgrid .slick-group-toggle {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+}
+
+.recline-slickgrid .slick-group-toggle.expanded {
+  background: url(../images/collapse.gif) no-repeat center center;
+}
+
+.recline-slickgrid .slick-group-toggle.collapsed {
+  background: url(../images/expand.gif) no-repeat center center;
+}
+
+.recline-slickgrid .slick-group-totals {
+  color: gray;
+  background: white;
+}
+
+.recline-slickgrid .slick-cell.selected {
+  background-color: beige;
+}
+
+.recline-slickgrid .slick-cell.active {
+  border-color: gray;
+  border-style: solid;
+}
+
+.recline-slickgrid .slick-sortable-placeholder {
+  background: silver !important;
+}
+
+.recline-slickgrid .slick-row[row$="1"], .slick-row[row$="3"], .slick-row[row$="5"], .slick-row[row$="7"], .slick-row[row$="9"] {
+  background: #fafafa;
+}
+
+.recline-slickgrid .slick-row.ui-state-active {
+  background: #F5F7D7;
+}
+
+.recline-slickgrid .slick-row.loading {
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+}
+
+.recline-slickgrid .slick-cell.invalid {
+  border-color: red;
+}
+
+.recline-slickgrid .slick-row .slick-cell:first-child,
+.recline-slickgrid .slick-header {
+  border-left: 1px solid #ccc;
+}
+
+/* add one pixel extra as added one pixel to left border of header */
+.recline-slickgrid .slick-row .slick-cell {
+  margin-right: -1px;
+}
+
+/* Slick grid context menu (not part of the recline-slickgrid div) */
+.slick-contextmenu {
+  border-radius: 5px
+}
+
+.slick-contextmenu li {
+  clear: both;
+  height: 24px;
+  cursor: pointer;
+}
+
+.slick-contextmenu .divider {
+  cursor: default;
+}
+
+.slick-contextmenu > li:hover {
+  background-color: #0088cc;
+}
+
+.slick-contextmenu .divider:hover {
+  background-color: #E5E5E5;
+}
+
+.slick-contextmenu li:hover > label {
+  color: white;
+}
+
+.slick-contextmenu input {
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.slick-contextmenu label {
+  float: left;
+  margin-right: 15px;
+  margin-left: 5px;
+  margin-top: 3px;
+  color: #555;
+  cursor: pointer;
+}
+
+.recline-transform .script {
+  margin-right: 10px;
+}
+
+.recline-transform .script textarea {
+  width: 100%;
+  height: 100px;
+  font-family: monospace;
+}
+
+.recline-transform h2 {
+  margin-bottom: 10px;
+}
+
+.recline-transform h2 .okButton {
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
+.recline-transform .preview {
+  margin-right: 10px;
+}
+
+.expression-preview-parsing-status {
+  color: #999;
+}
+
+.expression-preview-parsing-status.error {
+  color: red;
+}
+
+.recline-transform .before-after .after {
+  font-style: italic;
+}
+
+.recline-transform .before-after .after.different {
+  font-weight: bold;
+}
+

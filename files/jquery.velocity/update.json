@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.velocity",
+  "repo": "julianshapiro/velocity",
+  "files": {
+    "basePath": "/",
+    "include": ["jquery.velocity.min.js"]
+  }
+}
