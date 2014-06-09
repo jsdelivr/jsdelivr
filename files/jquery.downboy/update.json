@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery.downBoy",
+  "repo": "eustasy/jquery.downboy",
+  "files": {
+    "basePath": "/",
+    "include": ["**/*.js"]
+  }
+}
