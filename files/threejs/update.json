@@ -3,6 +3,6 @@
   "name": "threejs",
   "repo": "mrdoob/three.js",
   "files": {
-    "basePath": "build/",
+    "basePath": "build/"
   }
 }

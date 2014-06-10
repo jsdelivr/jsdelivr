@@ -3,6 +3,6 @@
   "name": "uikit",
   "repo": "uikit/uikit",
   "files": {
-    "basePath": "dist/",
+    "basePath": "dist/"
   }
 }
