@@ -1,0 +1,134 @@
+
+.son_tweet_div {
+	display: none;
+}
+
+/* bootstrap muadili: text-center */
+.twitp_center {
+    text-align:center;
+}
+
+.twitp_center2 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twitp_right {
+    text-align:right;
+}
+
+.twitp_inline_icons {
+    display: inline-block;
+    border: solid 1px black;
+}
+
+tr.action-shade {
+    background-color: #c5bb90 !important;
+}
+
+/*.border-bottom {
+    border-bottom: solid 1px black;
+}*/
+
+/*table tbody tr td.twitp_striket {*/
+.twitp_striket {
+    background: transparent url('http://trante.github.io/twt/img/striket.png')  0 50% repeat-x  !important;
+}
+
+/* disables link underline */
+.twitp_nounderline {
+    text-decoration: none;
+}
+
+/* disables link underline-important */
+.twitp_nounderline_imp {
+    text-decoration: none !important;
+}
+
+.twitp_vert_mid {
+    vertical-align:middle !important;
+}
+
+.twitp_sidebar_doorman {
+    top: 60px;
+    bottom:0;
+    left:0;
+    position: fixed;
+    width: 30px;
+    height: 100%;
+    /*background-color: #f4f4f4;*/
+    opacity: 0.9;
+    z-index:51;
+    /*display: none;*/
+}
+.twitp_sidebar {
+    /*top: 0;*/
+    top: 55px;
+    bottom:0;
+    left: 0;
+    position: fixed;
+    /*width: 180px;*/
+    /*height: 100%;*/
+    /*background-color: #55da3d;*/
+    /*opacity: 0.9;*/
+    /*overflow: hidden;*/
+    overflow: auto;
+    z-index:52;
+    /*margin: 0;*/
+    padding: 0;
+    display: none;
+}
+@media (max-width: 340px) {
+    .twitp_sidebar_doorman { top: 120px; }
+}
+@media (max-width: 340px) {
+    .twitp_sidebar { top: 120px; }
+}
+/*.twitp_sidebar ul li a {
+    color:#428bca;
+    color: #ca632e;
+}*/
+
+#contactDialogOuter .row {
+    margin-bottom:10px;
+}
+
+/* twitp_split1: splitted for small screens */
+/* twitp_split2: splitted for big screens */
+
+.tour_link {
+    white-space: normal;
+}
+
+/*.navbar-sam-main .navbar-toggle{
+    z-index:1;
+}*/
+
+/*.navbar-sam-main .navbar-nav > li >span{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.navbar-sam-main .navbar-nav > li >span .navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+}*/
+
+/* lefti right yapiyor */
+.twitp_ltr1 {
+    left: auto;
+    right:0;
+}
+
+/* eger html dir-rtl ise, lefti right yapiyor */
+html[dir="rtl"] .twitp_ltr2 {
+    left: auto;
+    right:0;
+}
+
+@media (max-width: 768px) {
+    .twitp_xs_no_top_margin { margin-top: 0; }
+}
