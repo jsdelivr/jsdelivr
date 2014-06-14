@@ -1,0 +1,106 @@
+/* Spinner */
+
+.infinite-loader {
+	height: 36px;
+	padding: 24px 0;
+}
+
+.infinite-loader .spinner {
+	margin: 0 auto;
+	top: 18px !important;
+	left: 0 !important;
+}
+
+.rtl .infinite-loader .spinner {
+	right: 0 !important;
+	left: auto !important;
+}
+
+/* Click-to-load */
+
+#infinite-handle {
+	padding: 24px 0;
+	text-align: center;
+}
+
+#infinite-handle span {
+	background: #24890d;
+	border-radius: 2px;
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 12px 30px;
+	text-transform: uppercase;
+}
+
+#infinite-handle span:hover {
+	background-color: #41a62a;
+}
+
+#infinite-handle span:active {
+	background-color: #55d737;
+}
+
+/* Footer */
+
+#infinite-footer {
+	z-index: 2;
+}
+
+#infinite-footer .container {
+	margin: 0;
+	padding: 4px 20px;
+}
+
+#infinite-footer .blog-info a {
+	color: #2b2b2b;
+}
+
+#infinite-footer .blog-credits,
+#infinite-footer .blog-credits a {
+	color: #767676;
+}
+
+#infinite-footer .blog-info a:hover,
+#infinite-footer .blog-credits a:hover {
+	color: #41a62a;
+	text-decoration: none;
+}
+
+/* Elements to hide: post navigation, normal footer. */
+
+.infinite-scroll .paging-navigation,
+.infinite-scroll.neverending #colophon {
+	display: none;
+}
+
+@media (max-width: 640px) {
+	#infinite-footer {
+		display: none;
+	}
+}
+
+/* Hooks to infinity-end body class to restore footer. */
+
+.infinity-end.neverending #colophon {
+	display: block;
+}
+
+@media screen and (min-width: 401px) {
+	.infinite-loader,
+	#infinite-handle {
+		padding: 0 0 48px;
+	}
+
+	.list-view .site-content .infinite-wrap .hentry:first-of-type {
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		padding-top: 48px;
+	}
+
+	.list-view .site-content .infinite-wrap .hentry.has-post-thumbnail {
+		border-top: 0;
+		padding-top: 0;
+	}
+}
