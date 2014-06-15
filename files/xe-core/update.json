@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "xe-core",
+  "repo": "xpressengine/xe-core",
+  "files": {
+    "include": ["**/*.js", "**/*.css"]
+  }
+}
