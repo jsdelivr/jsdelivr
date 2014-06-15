@@ -1,0 +1,316 @@
+@charset "utf-8";
+/*! Copyright (C) NAVER <http://www.navercorp.com> */
+/* @author NAVER <developers@xpressengine.com> */
+/*csslint unqualified-attributes: false, display-property-grouping: false*/
+
+/* Element Reset */
+body,
+table,
+input,
+textarea,
+select,
+button {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+body {
+	position: relative;
+	word-wrap: break-word;
+}
+a img {
+	border: 0;
+}
+[hidden] {
+	display: none;
+}
+.xe_content img {
+	max-width: 100%;
+	height: auto;
+}
+@media \0screen {
+	img {
+		max-width: none;
+	}
+}
+
+.xe-widget-wrapper {
+	overflow: hidden;
+}
+
+/* Popup Menu Area */
+#popup_menu_area {
+	position: absolute;
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #e9e9e9;
+	border-radius: 3px;
+	font-size: 12px;
+	box-shadow: 0 0 6px #666;
+	filter: progid: DXImageTransform.Microsoft.Shadow(color=#999999,direction=135, strength=5);
+	background: #fff;
+}
+#popup_menu_area ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#popup_menu_area li {
+	margin: 0;
+	padding: 0;
+	line-height: 1.25;
+}
+#popup_menu_area a {
+	display: block;
+	padding: 1px 3px;
+	border-radius: 2px;
+	text-decoration: none;
+	color: #333;
+}
+#popup_menu_area a:hover,
+#popup_menu_area a:active,
+#popup_menu_area a:focus {
+	color: #fff;
+	background: #666;
+}
+
+/* Message */
+.message {
+	position: relative;
+	margin: 1em 0;
+	padding: 0 1em;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	line-height: 1.4;
+	font-size: 13px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #f8f8f8;
+}
+body>.message {
+	margin: 1em;
+}
+.message p {
+	margin: 1em 0 !important;
+}
+.message.info {
+	border-color: #BCE8F1;
+	color: #3A87AD;
+	background-color: #D9EDF7;
+}
+.message.error {
+	border-color: #EED3D7;
+	color: #B94A48;
+	background-color: #F2DEDE;
+}
+.message.update {
+	border-color: #D6E9C6;
+	color: #468847;
+	background-color: #DFF0D8;
+}
+
+/* Waiting for server response */
+.wfsr {
+	z-index: 100;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 20px 0 0 0;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font: bold 16px/60px "Helvetica Neue", Helvetica, Arial, 돋움, Dotum, sans-serif;
+	color: #fff;
+	opacity: .8;
+	filter: alpha(opacity=80);
+	box-shadow: 0 0 5px #000;
+	background: #333 url("../../common/img/msg.loading.gif") no-repeat center 15px;
+}
+
+/* Admin Bar */
+#adminBar {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	width: 100%;
+	height: 28px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	font: 12px/28px Arial, Helvetica, sans-serif;
+	color: #fff;
+	overflow: hidden;
+	box-shadow: 0 0 5px #333;
+	background: #666;
+}
+#adminBar>h1 {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 6px 0 0 10px;
+	line-height: 1;
+	font-size: 12px;
+}
+#adminBar img {
+	vertical-align: top;
+}
+#adminBar>p {
+	margin: 0;
+}
+#adminBar>.admin {
+	float: left;
+}
+#adminBar>.link {
+	float: right;
+	padding: 0 10px 0 0;
+}
+#adminBar a {
+	text-decoration: none;
+	color: #fff;
+}
+#adminBar a:hover,
+#adminBar a:active,
+#adminBar a:focus {
+	text-decoration: underline;
+}
+
+/* Button */
+.btnArea {
+	clear: both;
+	margin: 10px 0;
+	padding: 0;
+	text-align: right;
+	zoom: 1;
+}
+.btnArea:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+.btn {
+	display: inline-block;
+	*display: inline;
+	margin: 0;
+	padding: 0 12px !important;
+	height: 24px !important;
+	overflow: visible;
+	border: 1px solid #bbbbbb;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-bottom-color: #a2a2a2;
+	border-radius: 2px;
+	text-decoration: none !important;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: top;
+	line-height: 24px !important;
+	font-family: inherit;
+	font-size: 12px;
+	color: #333333;
+	*zoom: 1;
+	cursor: pointer;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	background-color: #f5f5f5;
+	*background-color: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+}
+input.btn,
+button.btn {
+	height: 26px !important;
+}
+.btn:hover,
+.btn:active,
+.btn[disabled] {
+	color: #333;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9;
+}
+.btn>a,
+.btn>button,
+.btn>input,
+.btn>span {
+	display: inline-block;
+	*zoom: 1;
+	margin: 0 -12px !important;
+	padding: 0 12px !important;
+	overflow: visible;
+	width: auto;
+	height: 24px;
+	border: 0;
+	vertical-align: top;
+	text-decoration: none !important;
+	line-height: 24px;
+	font-family: inherit;
+	font-size: 12px;
+	color: #333;
+	cursor: pointer;
+	background: none;
+}
+.btn-group {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*margin-left: .3em;
+	white-space: nowrap;
+	vertical-align: middle;
+	font-size: 0;
+	*zoom: 1;
+}
+.btn-group:first-child {
+	*margin-left: 0;
+}
+.btn-group+.btn-group {
+	margin-left: 5px;
+}
+.btn-group>.btn {
+	position: relative;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.btn-group>.btn+.btn {
+	margin-left: -1px;
+}
+.btn-group>.btn:first-child {
+	margin-left: 0;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+}
+.btn-group>.btn: last-child {
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
+}
+.btn-group>.btn:hover,
+.btn-group>.btn:focus,
+.btn-group>.btn:active,
+.btn-group>.btn.active {
+	z-index: 2;
+}

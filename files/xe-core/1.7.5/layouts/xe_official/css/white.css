@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* NAVER (developers@xpressengine.com) */
+/* Site Layout - Body Wrap */
+body{background:#fff}
+.xe{position:relative;width:960px;margin:0 auto;padding:1.5em 0 0 0;font-family:Tahoma, Geneva, sans-serif}
+/* Site Layout - Header */
+.header{position:relative;width:958px;height:114px;border-top:6px solid #323232;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;background:url(../images/white/bgHeader.png) no-repeat right bottom;margin-bottom:10px;z-index:2}
+.header h1{margin:0;position:absolute;top:32px;left:25px}
+.header h1 a{color:#333;text-decoration:none}
+.language{position:absolute;top:12px;right:19px;z-index:100}
+.language strong{display:inline-block;height:15px;color:#5c5c5c;font:.75em/15px Tahoma;margin-right:3px;vertical-align:top}
+.language .toggle{background:none;border:0;cursor:pointer;vertical-align:top;padding:0;height:15px}
+.language ul{position:absolute;top:15px;right:0px;display:none;border:1px solid #d9d9d9;background:#fff;margin:0;padding:0}
+.language li{list-style:none}
+.language li button{display:block;width:61px;padding:3px 8px;font-size:9px;color:#5c5c5c;text-decoration:none;background:none;border:0;text-align:left;white-space:nowrap;cursor:pointer}
+.gnb{position:absolute;top:76px;left:0;height:38px;white-space:nowrap;margin-bottom:10px}
+.gnb ul{list-style:none;margin:0;padding:0;zoom:1}
+.gnb ul:after{content:"";display:block;clear:both}
+.gnb ul ul{display:none;position:absolute;left:-1px;top:38px;padding:5px 0;background:#fff;border:1px solid #ddd;border-top:0}
+.gnb li{list-style:none;float:left;background:url(../images/white/bgGnbVr.gif) no-repeat left center;padding-left:2px;position:relative;white-space:nowrap}
+.gnb li.first{padding:0;background:none}
+.gnb li li{float:none;background:none;padding:0;left:0}
+.gnb li a{display:block;float:left;padding:13px 15px 0 15px;height:25px;color:#727272;white-space:nowrap;text-decoration:none}
+.gnb li a:hover,
+.gnb li a:focus{color:#000}
+.gnb li.active a{font-weight:bold;color:#3f3f3f;background:url(../images/white/bgGnbOn.gif) no-repeat center top}
+.gnb li li a{float:none;display:block;padding:5px 15px !important;background:none !important;height:auto;font-weight:normal !important}
+.gnb li li.active a{font-weight:bold !important}
+.iSearch{position:absolute;top:48px;right:15px;width:214px;text-align:right}
+.iSearch .iText{vertical-align:middle;position:relative;top:0;_top:-1px;left:1px;padding:3px 3px 1px 3px;width:94px;height:13px;color:#000;border:1px solid #B0B0AF;background-color:#fff}
+.iSearch .iText:hover,
+.iSearch .iText:focus{border:1px solid #8E8E8D;background-color:#fff}
+.iSearch .submit{vertical-align:middle;_position:relative;_top:-1px}
+/* Site Layout - Content Body */
+.body{position:relative;z-index:1;padding-bottom:30px;overflow:hidden;background:url(../images/white/bgContentBody.gif) repeat-y left top;border-bottom:1px solid #ddd;zoom:1}
+.body:after{content:"";display:block;clear:both}
+/* Site Layout - Column Left */
+.lnb{position:relative;width:201px;float:left}
+.lnb h2{margin:0}
+.lnb h2 a{display:block;padding:10px 0 10px 20px;text-decoration:none;color:#333}
+.locNav{border-top:1px solid #ddd;padding:4px 5px;width:190px;margin:0 0 1em 0;list-style:none}
+.locNav li{padding:0 0 4px 0;vertical-align:top}
+.locNav li a{padding:6px 5px 6px 13px;display:block;border:1px solid #e8e8e8;border-left:0;border-right:0;background:url(../images/white/bgLnbOff.gif) repeat-x;color:#3e3e3e;position:relative;z-index:99;text-decoration:none}
+.locNav li.active a{color:#fff;background:#de4332;border:1px solid #de4332;border-left:0;border-right:0}
+.locNav li ul{display:block;position:relative;width:184px;padding:0 3px;margin:0;position:relative;border-top:1px solid #fff;overflow:hidden}
+.locNav li li{padding:0;border-top:1px solid #f2f2f2;position:relative;top:-1px}
+.locNav li li a{padding:6px 5px 6px 10px;width:169px;color:#818181 !important;border:none;background:none !important;border:none !important}
+.locNav li.active li.active a{color:#ff1a00 !important;font-weight:bold !important;background:url(../images/white/bulletLnb.gif) no-repeat 175px center  !important}
+/* Site Layout - Column Right */
+.content{width:740px;float:right;overflow:hidden}
+/* Site Layout - Footer */
+.footer{border-top:3px solid #f4f4f4;padding:1em 0;clear:both}
+.footer p{text-align:center;margin:0}
+.footer a{color:#999;font-size:.9em;text-decoration:none}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* Layout */
+hr{display:none}
+form, fieldset{border:0;margin:0;padding:0}
+.user_layout{width:960px;margin:0 auto}
+.header{zoom:1;background:#ddd}
+.header:after{content:"";display:block;clear:both}
+.header .search{float:right}
+.gnb{float:left}
+.body{margin:20px 0;zoom:1;background:#eee}
+.body:after{content:"";display:block;clear:both}
+.lnb{float:left;width:200px;background:#ddd}
+.account{}
+.content{float:right;width:740px;background:#ddd}
+.footer{background:#ddd}

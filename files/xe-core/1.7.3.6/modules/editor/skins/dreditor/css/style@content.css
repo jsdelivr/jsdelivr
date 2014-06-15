@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* textyleContent */
+.textyleContent{font-size:12px;line-height:1.6;clear:both}
+.textyleContent h1{font-size:24px}
+.textyleContent h2{font-size:20px}
+.textyleContent h3{font-size:18px}
+.textyleContent h4{font-size:16px}
+.textyleContent h5{font-size:14px}
+.textyleContent h6{font-size:12px}
+
+/* Attached File */
+.textyleContent dl.attachedFile{margin:1em 0;padding:1em 0;background:#f9f9f9;border:1px solid #eee}
+.textyleContent dl.attachedFile dt{padding:0 2em .5em 2em;margin:0 0 1em 0;font-weight:bold;text-indent:1em;border-bottom:1px solid #eee;background:#f9f9f9 url(../img/iconClip.gif) no-repeat 2em .3em;font-size:12px}
+.textyleContent dl.attachedFile em{font-size:11px;font-weight:normal;font-style:normal;margin:0 5px}
+.textyleContent dl.attachedFile dd{margin:0;padding:0 2em;color:#8b8b8b;font-size:11px}
+.textyleContent dl.attachedFile dd a{text-decoration:none;color:#0092cf;margin-right:10px}
+.textyleContent dl.attachedFile dd a:hover,
+.textyleContent dl.attachedFile dd a:active,
+.textyleContent dl.attachedFile dd a:focus{text-decoration:underline}
+
+/* Table Of Content */
+.textyleContent .toc{background:#fff;border:1px solid #ddd;font-size:14px;line-height:1.6;margin:1em 0;padding:15px}
+.textyleContent .toc li{font-weight:bold;color:#555;margin-left:35px}
+.textyleContent .toc li.toc3{}
+.textyleContent .toc li.toc4{margin-left:55px}
+.textyleContent .toc li.toc5{margin-left:75px}
+.textyleContent .toc li a{color:#648ab9;text-decoration:none;font-weight:normal}
+.textyleContent .toc li a:hover,
+.textyleContent .toc li a:active,
+.textyleContent .toc li a:focus{text-decoration:underline}
+
+/* Object */
+.textyleContent object,
+.textyleContent embed{margin:1em 0}
+
+/* Horizontal Rule */
+.textyleContent hr{display:block;position:static;border-bottom:0;height:1px;overflow:hidden;color:#e2e2e2;clear:both}
+
+/* Blockquote */
+.textyleContent blockquote{margin:1em 0!important;padding:1em 40px!important;border:0!important;background:#f6f6f6 url(../img/bgBlockquote.gif) no-repeat 20px 1.5em;-moz-border-radius:5px;-webkit-border-radius:5px}
+
+/* Cite */
+.textyleContent cite{display:block;margin:1em 0}
+
+/* Link */
+.textyleContent .xe_dr_link p strong{display:block}
+
+/* P */
+.xe_content p,
+.textyleContent p{margin:1em 0!important}

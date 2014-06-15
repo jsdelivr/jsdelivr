@@ -1,0 +1,12 @@
+.wToolbar li.fold button{ background:url(fold.gif) no-repeat center 12px; }
+
+.editorArea ._fold{ padding:0;}
+.editorArea ._fold ._fold_cap{ border:3px solid #f90; padding:5px 20px; margin:2px;}
+.editorArea ._fold_first ._fold_cap{ border-bottom:0;}
+.editorArea ._fold_last ._fold_cap{ border-top:0;}
+.editorArea ._fold span { cursor:pointer; font-weight:bold; }
+.editorArea ._fold_last span { display:none; }
+.editorArea ._fold span.more { display:none; }
+.editorArea ._fold_more span.less { display:none; }
+.editorArea ._fold_more span.more { display:inline; }
+.editorArea ._fold_hide { display:none; }

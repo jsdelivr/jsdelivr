@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* -- Button Gray Style -- */
+.buttonGray,
+.buttonGray button{position:relative;border:0;margin:0;display:inline-block;color:#000;font-family:Tahoma, Sans-serif;cursor:pointer;text-decoration:none!important;white-space:nowrap;vertical-align:middle;background-color:transparent;background-image:url(../img/buttonGray.gif)!important;background-repeat:no-repeat}
+.buttonGray{margin-right:2px}
+.buttonGray button{left:2px;overflow:visible}
+
+/* Medium Size */
+.buttonGray.medium{background-position:left -30px}
+.buttonGray.medium button{height:24px;padding:0 10px 0 8px;*padding:0 5px 0 3px;font:12px/25px Sans-serif;background-position:right -30px;_top:-1px}
+
+/* Strong Button */
+.buttonGray.strong *{font-weight:bold!important}
+
+/* Icon Add */
+.buttonGray .icon{position:relative;margin-right:5px;vertical-align:middle}
+
+/* Button Reset */
+.buttonDrEditor,
+.buttonDrEditor a,
+.buttonDrEditor button,
+.buttonDrEditor input{position:relative;margin:0;display:inline-block;text-decoration:none!important;border:0;font-size:12px;font-family:Tahoma, Sans-serif;white-space:nowrap;background:url(../img/buttonWhite.gif) no-repeat;vertical-align:middle;overflow:visible;color:#333}
+.buttonDrEditor{height:23px;padding:0;margin-right:2px;background-position:left top}
+.buttonDrEditor a,
+.buttonDrEditor button,
+.buttonDrEditor input{left:2px;*vertical-align:top;cursor:pointer}
+
+/* Button Size */
+.buttonDrEditor.large{height:29px;background-position:left -30px}
+.buttonDrEditor.xLarge{height:35px;background-position:left -65px}
+.buttonDrEditor.small{height:18px;background-position:left -107px}
+.buttonDrEditor a,
+.buttonDrEditor button,
+.buttonDrEditor input{height:23px;padding:0 10px 0 8px;font-size:12px;line-height:23px;background-position:right top}
+.buttonDrEditor.large a,
+.buttonDrEditor.large button,
+.buttonDrEditor.large input{height:30px;padding:0 10px 0 8px;font-size:16px;line-height:29px;background-position:right -30px}
+.buttonDrEditor.xLarge a,
+.buttonDrEditor.xLarge button,
+.buttonDrEditor.xLarge input{height:35px;padding:0 10px 0 8px;font-size:20px;line-height:35px;background-position:right -65px}
+.buttonDrEditor.small a,
+.buttonDrEditor.small button,
+.buttonDrEditor.small input{height:18px;padding:0 6px 0 4px;font-size:11px;line-height:18px;background-position:right -107px}
+
+/* Button Text Color */
+.buttonDrEditor *:hover,
+.buttonDrEditor *:active,
+.buttonDrEditor *:focus{color:#690}
+.buttonDrEditor.green,
+.buttonDrEditor.green a,
+.buttonDrEditor.green button,
+.buttonDrEditor.green input{background-image:url(../img/buttonGreen.gif);color:#fff}
+.buttonDrEditor.green *:hover,
+.buttonDrEditor.green *:active,
+.buttonDrEditor.green *:focus{color:#ff0}
+.buttonDrEditor.black,
+.buttonDrEditor.black a,
+.buttonDrEditor.black button,
+.buttonDrEditor.black input{background-image:url(../img/buttonBlack.gif);color:#fff}
+.buttonDrEditor.black *:hover,
+.buttonDrEditor.black *:active,
+.buttonDrEditor.black *:focus{color:#ff0}
+.buttonDrEditor.red,
+.buttonDrEditor.red a,
+.buttonDrEditor.red button,
+.buttonDrEditor.red input{background-image:url(../img/buttonRed.gif);color:#fff}
+.buttonDrEditor.red *:hover,
+.buttonDrEditor.red *:active,
+.buttonDrEditor.red *:focus{color:#ff0}
+.buttonDrEditor.blue,
+.buttonDrEditor.blue a,
+.buttonDrEditor.blue button,
+.buttonDrEditor.blue input{background-image:url(../img/buttonBlue.gif);color:#fff}
+.buttonDrEditor.blue *:hover,
+.buttonDrEditor.blue *:active,
+.buttonDrEditor.blue *:focus{color:#ff0}
+
+/* Button Text Strong */
+.buttonDrEditor.strong *{font-weight:bold!important}

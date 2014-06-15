@@ -1,0 +1,5 @@
+// <![CDATA[
+jQuery(function($){
+	//
+});
+// ]]>

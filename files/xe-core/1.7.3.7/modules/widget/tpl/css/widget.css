@@ -1,0 +1,38 @@
+@charset "utf-8";
+.widget_title{border:1px solid #ddd;margin:10px 5px 5px 0;padding:3px}
+.widget_mid_list{margin:0 0 5px 10px}
+.widget_description{color:#aaa;border-top:1px dotted #eee;margin:5px 0 0 0;padding:5px 0 0 0}
+#colorset_area{margin-top:.5em}
+#colorset_area .header{float:left;margin-right:.5em;padding-top:.2em}
+#colorset_area .footer{float:left}
+#zonePageContent{overflow:hidden;width:100%;padding:0 !important;margin:0 !important}
+.pageAddContent{width:700px}
+.widgetOutput{float:left;cursor:move;z-index:998;overflow:hidden;position:relative;width:100%;min-height:24px}
+.widgetOutput .widgetBorder,
+.widgetOutput .widgetBoxBorder{height:100%;border:1px dashed #ccc;z-index:999;box-sizing:border-box;min-height:24px}
+.widgetOutput .widgetResize {border:0;background:transparent url("../images/btn_resize.gif") no-repeat left bottom;width:12px;height:12px;position:absolute;bottom:1px;right:1px;cursor:pointer;z-index:1000}
+.widgetOutput .widgetResizeLeft {border:0;background:transparent url("../images/btn_resize_left.gif") no-repeat left bottom;width:12px;height:12px;position:absolute;bottom:1px;left:1px;cursor:pointer;z-index:1000}
+.widgetOutput .widgetBoxResize {border:0;background:transparent url("../images/btn_resize.gif") no-repeat left bottom;width:12px;height:12px;position:absolute;bottom:1px;right:1px;cursor:pointer;z-index:1000}
+.widgetOutput .widgetBoxResizeLeft{border:0;background:transparent url("../images/btn_resize_left.gif") no-repeat left bottom;width:12px;height:12px;position:absolute;bottom:0;left:1px;cursor:pointer;z-index:1000}
+.widgetButtons{z-index:1000;overflow:hidden;*zoom:1;float:left;padding:0 10px;line-height:24px;position:absolute;top:0;visibility:hidden;box-shadow:0 0 3px #333 inset}
+.widgetButtons#widgetButton{background-color:#C7DBE9;left:0}
+.widgetButtons#widgetBoxButton{background-color:#D2E9C7;right:0}
+.widgetButtons>button{border:0;width:14px;height:14px;padding:14px 0 0 0;overflow:hidden;cursor:pointer;z-index:99;background:transparent url("../../../admin/tpl/img/glyphicons-halflings.png") no-repeat}
+.widgetButtons .widgetSetup{background-position:-432px 0}
+.widgetButtons .widgetSize,
+.widgetButtons .widgetBoxSize{background-position:-96px -120px}
+.widgetButtons .widgetStyle{background-position:-456px -144px}
+.widgetButtons .widgetCopy,
+.widgetButtons .widgetBoxCopy{background-position:0 -96px}
+.widgetButtons .widgetRemove,
+.widgetButtons .widgetBoxRemove{background-position:-456px 0}
+.help{padding:5px 0;background-color:#EFEFEF;border-top:1px solid #ccc}
+ul.midCommand{float:left;margin:0 0 0 10px;;padding:0;*zoom:1}
+ul.midCommand li{display:block;margin-bottom:5px;list-style:none}
+a.widgetStyle{display:inline-block;margin:0 10px 10px 0;border:1px solid #fff;overflow:hidden;*zoom:1;width:96px;height:96px;position:relative;text-decoration:none}
+a.widgetStyle:hover{border:1px dashed #ccc}
+a.widgetStyle:hover span{display:none}
+a.widgetStyle.selected{border:1px dashed #999}
+a.widgetStyle img {width:96px;height:96px;margin:1px}
+a.widgetStyle span{position:absolute;left:0;bottom:0;display:block;width:96px;background-color:#888;color:#fff;padding:4px 3px 3px 3px;opacity:.8;filter:alpha(opacity=80);text-align:center;font-family:tahoma}
+#zonePageContent .widgetContainer{min-height:20px}

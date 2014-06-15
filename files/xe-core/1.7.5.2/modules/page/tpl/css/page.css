@@ -1,0 +1,7 @@
+@charset "utf-8";
+h3 { margin:0 10px 0 10px; }
+
+.buttonBox { border:2px solid #EEEEEE; padding:5px; overflow:hidden; *zoom:1;}
+.buttonBox .fr { height:28px; }
+.buttonBox .fl { height:28px; }
+.buttonBox .buttonDiv { margin:2px 0; padding:0; border-top:1px solid EEEEEE; clear:both; }
