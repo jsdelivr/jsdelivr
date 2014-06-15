@@ -3,6 +3,6 @@
   "name": "xe-core",
   "repo": "xpressengine/xe-core",
   "files": {
-    "include": ["**/*.js", "**/*.css", "**/*.swf", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.mp3"]
+    "include": ["**/*.js", "**/*.css"]
   }
 }
