@@ -1,0 +1,14 @@
+{
+  "packageManager": "github",
+  "name": "xe-core",
+  "repo": "xpressengine/xe-core",
+  "files": {
+    "include": ["./common/**.js", "./common/**.css",
+		"./addons/**.js", "./addons/**.css",
+		"./classes/**.js", "./classes/**.css",
+		"./modules/**.js", "./modules/**.css",
+		"./widgets/**.js", "./widgets/**.css",
+		"./widgetstyles/**.js", "./widgetstyles/**.css"],
+	"exclude" : ["./common/js/unitest"]
+  }
+}
