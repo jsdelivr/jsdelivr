@@ -3,6 +3,7 @@
   "name": "ng-sharepoint",
   "repo": "Kaldeera/ng-SharePoint",
   "files": {
-    "include": ["build/ng-sharepoint-0.0.1.min.js"]
+    "basePath": "build/",
+    "include": ["**/*.js"]
   }
 }
