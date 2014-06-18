@@ -4,6 +4,6 @@
   "repo": "Kaldeera/ng-SharePoint",
   "files": {
     "basePath": "build/",
-    "include": ["**/*.js"]
+    "include": ["*.js"]
   }
 }
