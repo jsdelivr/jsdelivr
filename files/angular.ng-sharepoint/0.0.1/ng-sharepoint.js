@@ -88,7 +88,7 @@ angular.module('kld.CamlHelper', [])
 								var eachValue = each.trim();
 								var eachValueTag = "";
 
-								// Si al transformar el valor a número no es NaN, es un número
+								// Si al transformar el valor a numero no es NaN, es un numero
 								if (!isNaN(parseInt(eachValue))) {
 									eachValueTag = "<Value Type='Integer'>" + eachValue + "</Value>";
 								} else {
@@ -329,7 +329,7 @@ angular.module('kld.CamlHelper', [])
 							sentenceValue = sentenceValue.replace("[", "");
 							sentenceValue = sentenceValue.replace("]", "");
 
-							// Se intenta hacer un split por ',' y se coge el primer elemento, que será el que nos guiará si es lookup o no
+							// Se intenta hacer un split por ',' y se coge el primer elemento, que sera el que nos guiara si es lookup o no
 							var tempArray = sentenceValue.split(",");
 
 							if (!isNaN(parseInt(tempArray[0]))) {
@@ -390,14 +390,14 @@ angular.module('kld.CamlHelper', [])
 
 					var rowLimitQuery = "";
 
-					// Generamos el string con el parámetro Top
+					// Generamos el string con el parametro Top
 					if (this.Top !== undefined && this.Top !== "") {
 						rowLimitQuery += "<RowLimit Paged='TRUE'>" + this.Top + "</RowLimit>";
 					}
 
 					var viewFieldsQuery = "";
 
-					// Generamos el string de los campos que se seleccionarán
+					// Generamos el string de los campos que se seleccionaran
 					if (this.Select.length > 0) {
 						viewFieldsQuery = "<ViewFields>";
 
@@ -806,16 +806,16 @@ angular.module('kld.ngSharePoint')
 			}
 
 			return {
-				// propiedades
+				// properties
 				webUrl: webUrl,
 				ListName: listName,
 				webId: webId,
 
-				// métodos internos
+				// inernal methods
 				initContext: function() {
 					var def = $q.defer();
 
-					// Si ya está inicializado ... no hacemos nada
+					// Si ya esta inicializado ... no hacemos nada
 					if (this.Context && this.List && this.Schema) {
 						def.resolve(this.Schema);
 						return def.promise;
@@ -910,7 +910,7 @@ angular.module('kld.ngSharePoint')
 					self.deferred.reject(err);
 				},
 
-				// métodos públicos
+				// public methods
 				getListItems: function(queryInfo) {
 					this.deferred = $q.defer();
 					var self = this;
@@ -1086,7 +1086,7 @@ angular.module('kld.ngSharePoint')
 					SPUtils.SharePointReady().then(function() {
 						self.context = new SP.ClientContext.get_current();
 
-						/* Esta opción retorna un objeto de tipo Usuario, pero no
+						/* Esta opcion retorna un objeto de tipo Usuario, pero no
 						   retorna ninguna de las propiedades del usuario.
 						   En lugar del web.getCurrentUser optamos por hacer una
 						   query sobre la lista de usuarios con el id del usuario
@@ -1242,7 +1242,7 @@ angular.module('kld.ngSharePoint').factory('SPUtils', ['$q', 'ODataParserProvide
 			if (queryInfo === undefined) {
 				camlQuery = SP.CamlQuery.createAllItemsQuery();
 			} else {
-				// El formato del parámetro puede ser un objeto, que hay que procesar, o un string directo de CamlQuery
+				// El formato del parametro puede ser un objeto, que hay que procesar, o un string directo de CamlQuery
 				if (typeof queryInfo === 'string') {
 					camlQueryXml = queryInfo;
 				} else if (typeof queryInfo === 'object') {
