@@ -1,8 +1,8 @@
 [jsDelivr][1] - Open Source CDN
 ========
 
-Similar to Google Hosted Libraries, jsDelivr is an open source [CDN][6] that allows developers to host their own projects 
-and anyone to link to our hosted files in their websites. 
+Similar to Google Hosted Libraries, jsDelivr is an open source [CDN][6] that allows developers to host their own projects
+and anyone to link to our hosted files in their websites.
 
 We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
@@ -15,11 +15,13 @@ Feel free to open issues and pull requests if you think something should be chan
 All changes made to this repo are synced to the CDN.
 It can take a few minutes for the changes to appear on the website.
 
-[jsDelivr – The advanced open source public CDN][11] - 
+[jsDelivr – The advanced open source public CDN][11]
+
 [How jsDelivr works (outdated)][4]
 
 [Compare public CDNs][5]
 
+[jsDelivr community chat][12]
 
 # Why jsDelivr?
 
@@ -40,7 +42,7 @@ Unlike the competition, jsDelivr uses multiple CDN providers which results in be
 
 On top of CDN providers, jsDelivr also utilizes custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users on those locations.
 
-If a CDN or custom server goes down, websites that use jsDelivr won't have any issues, because all traffic will be instantly redirected to remaining operational providers. 
+If a CDN or custom server goes down, websites that use jsDelivr won't have any issues, because all traffic will be instantly redirected to remaining operational providers.
 
 
 Smart Load Balancing
@@ -48,28 +50,27 @@ Smart Load Balancing
 
 jsDelivr uses [Cedexis][10] with real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
 
-All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time. 
+All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time.
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under a DDoS attack, and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all affected users.
 
 
 
-How to submit or update projects:
----------------------------------
+# How to submit or update projects
+
 
  1. [Fork][9] the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
+
+  **Note** If there is a previous version of the project you are adding please ensure that the new version contains same files. For example if in the previous version there are both .min.js and .js files please add both to the new version.
+  
+  **Note** If you are adding a project for the first time please add only the minified version
+
  3. Send a pull request with a description of the changes you made. Please follow the same file structure as other projects in the repo.
  4. Wait for our approval.
  5. That's it!
 
 
-Auto-Updating
--------------
-
-Coming soon - we are [working on it](https://github.com/jsdelivr/libgrabber)!
-
-    
 File Structure
 --------------
 Under `files/` a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
@@ -83,13 +84,13 @@ Under `files/` a directory for each project is created. Please follow the instru
 A project's directory should contain the following:
 
 1. An `info.ini` containing all needed information. [Example][2]
-2. Directories named after the version of each project. 
+2. Directories named after the version of each project.
 3. The version directories can contain in their names numbers, letters and `. - _`.
 4. Do not create `latest` directories; they are automatically created on our side.
 
 A version directory should contain the following:
 
-1. Static files needed for the project to work. 
+1. Static files needed for the project to work.
 2. If there is no minified version of the main JS/CSS file, please create your own using this ([minification tool][3]).
 3. If there are official or expected source maps for the minified js, please include those in the folder.  Currently, the following projects officially support the `.map` files:
   * angularjs
@@ -98,17 +99,48 @@ A version directory should contain the following:
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
 
+Auto-Updating
+-------------
+
+jsDelivr can auto-update all projects, in an easy and fast way.
+All you have to do is enable this feature in each project.
+To do so each project needs an `update.json` file in its root directory.
+
+Example:
+```
+{
+  "packageManager": "github",
+  "name": "humane.js",
+  "repo": "wavded/humane-js",
+  "files": {
+    "include": ["humane.min.js", "humane.js", "./themes/**/*"]
+  }
+}
+```
+
+[Full documentation is available here.][13]
+
+
+# Usage
+
+
 URL Structure
 -------------
 
-`//cdn.jsdelivr.net/{projectName}/{version}/{file}`
+Typical usage:  
+`//cdn.jsdelivr.net/{projectName}/{version}/{file}`  
+Example: `//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js`
 
+When you want all the files in that version folder as a single compressed archive:  
 `//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
 
+Downloads the three projects' `mainfile` from their latest versions as a single collated file:  
 `//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
 
+You may specify a specific version or version-branch per file:  
 `//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@{versionAlias},{projectName}`
 
+You may also select more than one file from a project (typically for plug-ins that ship with the project):  
 `//cdn.jsdelivr.net/g/{projectName}@{version}({filepath1}+{filepath2}),{projectName}@{versionAlias},{projectName}`
 
 
@@ -168,7 +200,7 @@ Now if all files in the combination have a `.css` extension then the server will
 The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
 
 
-API 
+API
 ---
 
 jsDelivr has [a fully featured API](https://github.com/jsdelivr/api) that also supports Google Hosted Libraries and cdnjs
@@ -204,7 +236,6 @@ Simply send an email to [jimaek](https://github.com/jimaek) with a request or fo
 jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
 
 
-
 Contribute Performance Data
 ---
 
@@ -220,7 +251,7 @@ These benchmarks are completely transparent to the user and do not impact on bro
 * Performance metrics to each of our providers.
 * Availability metrics to each of our providers.
 * Browser’s User-Agent
-* First three octets of the user’s IP address 
+* First three octets of the user’s IP address
 
 Our JS code is executed with a 2 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
@@ -239,7 +270,7 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
 
   [1]: http://www.jsdelivr.com
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://marijnhaverbeke.nl/uglifyjs
+  [3]: http://refresh-sf.com/yui/
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
   [5]: http://www.cdnperf.com/
   [6]: http://en.wikipedia.org/wiki/Content_delivery_network
@@ -248,3 +279,5 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [9]: https://github.com/jsdelivr/jsdelivr/fork
   [10]: http://www.cedexis.com/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
+  [12]: https://gitter.im/jsdelivr/jsdelivr
+  [13]: https://github.com/jsdelivr/libgrabber#updatejson-schema

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "morris.js",
+  "repo": "morrisjs/morris.js",
+  "files": {
+    "include": ["morris.css", "morris.js", "morris.min.js"]
+  }
+}

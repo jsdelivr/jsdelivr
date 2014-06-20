@@ -1,0 +1,6 @@
+/*!
+ * jquery.event.drag.live - v 2.2
+ * Copyright (c) 2010 Three Dub Media - http://threedubmedia.com
+ * Open Source MIT License - http://threedubmedia.com/code/license
+ */
+;(function(d){var b=d.event,c=b.special.drag,a=c.add,e=c.teardown;c.noBubble=false;c.livekey="livedrag";c.add=function(g){a.apply(this,arguments);var f=d.data(this,c.datakey);if(!f.live&&g.selector){f.live=true;b.add(this,"draginit."+c.livekey,c.delegate)}};c.teardown=function(){e.apply(this,arguments);var f=d.data(this,c.datakey)||{};if(f.live){b.remove(this,"draginit."+c.livekey,c.delegate);f.live=false}};c.delegate=function(h){var f=[],i,g=d.data(this,"events")||{};d.each(g||[],function(k,j){if(k.indexOf("drag")!==0){return}d.each(j||[],function(l,m){i=d(h.target).closest(m.selector,h.currentTarget)[0];if(!i){return}b.add(i,m.origType+"."+c.livekey,m.origHandler||m.handler,m.data);if(d.inArray(i,f)<0){f.push(i)}})});if(!f.length){return false}return d(f).bind("dragend."+c.livekey,function(){b.remove(this,"."+c.livekey)})}})(jQuery);
