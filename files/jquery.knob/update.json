@@ -3,6 +3,7 @@
   "name": "jquery.knob",
   "repo": "aterrien/jQuery-Knob",
   "files": {
-    "include": ["js/jquery.knob.js"]
+    "basePath": "dist/",
+    "include": ["*.js"]
   }
 }
