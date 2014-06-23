@@ -5,5 +5,5 @@
 	"files": {
 	"basePath": "build/",
 	"exclude": ["jquery.js", "DO NOT CHANGE THESE FILES. USE -src- FOLDER.txt"]
-  }
+	}
 }
