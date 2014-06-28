@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "angular-all",
+  "name": "angular.all",
   "repo": "Todd-Werelius/angularJS.All",
   "files": {
     "include": ["angular-all.min.js", "angular-all.min.js.map"]
