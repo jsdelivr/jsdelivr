@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery.postcodify",
+  "repo": "kijin/postcodify",
+  "files": {
+    "basePath": "api",
+    "include": ["search.js", "search.min.js"],
+  }
+}
