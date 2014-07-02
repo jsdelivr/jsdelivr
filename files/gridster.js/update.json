@@ -3,6 +3,6 @@
   "name": "gridster.js",
   "repo": "ducksboard/gridster.js",
   "files": {
-    "basePath": "dist/",
+    "basePath": "dist/"
   }
 }

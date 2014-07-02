@@ -4,6 +4,6 @@
   "repo": "kijin/postcodify",
   "files": {
     "basePath": "api",
-    "include": ["search.min.js"],
+    "include": ["search.min.js"]
   }
 }
