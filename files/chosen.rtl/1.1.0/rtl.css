@@ -1,0 +1,75 @@
+/* @group Base */
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  @include user-select(none);
+  .chosen-drop {
+    position: absolute;
+    top: 100%;
+    left: -9999px;
+    z-index: 1010;
+    @include box-sizing(border-box);
+    width: 100%;
+    border: 1px solid #aaa;
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(#000,.15);
+  }
+  &.chosen-with-drop .chosen-drop {
+    left: 0;
+  }
+  a{
+    cursor: pointer;
+  }
+}
+/* @end */
+
+/* @group Single Chosen */
+.chosen-container-single{
+  .chosen-single {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0 8px;
+    height: 23px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    @include background(linear-gradient(top, #fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%));
+    background-clip: padding-box;
+    box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(#000,.1);
+    color: #444;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 24px;
+  }
+  .chosen-default {
+    color: #999;
+  }
+  .chosen-single span {
+    display: block;
+    overflow: hidden;
+    margin-right: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .chosen-single-with-deselect span {
+    margin-right: 38px;
+  }
+  .chosen-single abbr {
+    position: absolute;
+    top: 6px;
+    right: 26px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: $chosen-sprite -42px 1px no-repeat;
+    font-size: 1px;
+    &:hover {
+      background-position: -42px -10px;
+    }
+  }
