@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "select2",
+  "repo": "ivaynberg/select2",
+  "files": {
+	"basePath": "./",
+    "include": ["*.js", "*css", "*.gif", "*.png"]
+  }
+}
