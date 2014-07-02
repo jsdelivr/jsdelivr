@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "postcodify",
+  "repo": "kijin/postcodify",
+  "files": {
+    "basePath": "api",
+    "include": ["search.min.js"]
+  }
+}

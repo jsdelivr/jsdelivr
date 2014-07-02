@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dropkick",
+  "repo": "Robdel12/DropKick",
+  "files": {
+    "include": ["jquery.dropkick-min.js", "jquery.dropkick.js", "css/dropkick.css"]
+  }
+}
