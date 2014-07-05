@@ -4,6 +4,6 @@
   "repo": "jon4888/flexgrid",
   "files": {
     "basePath": "CDN/",
-    "include": ["flexgrid.min.css" "flexgrid.min.js"]
+    "include": ["flexgrid.min.css", "flexgrid.min.js"]
   }
 }
