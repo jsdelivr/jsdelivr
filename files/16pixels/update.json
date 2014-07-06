@@ -4,6 +4,6 @@
 	"repo": "englishextra/16pixels",
 	"files": {
 		"basePath": "CDN/16pixels/latest/css/",
-		"include": ["16pixels.min.css"]
+		"include": ["16pixels.css", "16pixels.min.css"]
 	}
 }
