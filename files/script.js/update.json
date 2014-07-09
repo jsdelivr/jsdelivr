@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "script.js",
+  "repo": "ded/script.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["script.js", "script.min.js"]
+  }
+}
