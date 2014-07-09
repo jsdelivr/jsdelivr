@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ractive-events-hover",
+  "repo": "ractivejs/ractive-events-hover",
+  "files": {
+    "include": ["ractive-events-hover.min.js"]
+  }
+}
