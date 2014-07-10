@@ -4,6 +4,6 @@
   "repo": "chemerisuk/better-dom",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js", "*.htc"]
+    "include": ["better-dom.min.js", "better-dom-legacy.min.js", "better-dom-legacy.htc"]
   }
 }
