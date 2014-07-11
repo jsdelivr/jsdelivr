@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ng-sharepoint",
+  "repo": "Kaldeera/ng-SharePoint",
+  "files": {
+    "basePath": "build/",
+    "include": ["ng-sharepoint.min.js"]
+  }
+}
