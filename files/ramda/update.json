@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "repo": "ramda",
+  "name": "ramda",
+  "files": {
+    "include": ["ramda.min.js", "ext/lazylist/lazylist.js"]
+  }
+}
