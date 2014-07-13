@@ -1,0 +1,11 @@
+/* Webfont: Lato-Thin */@font-face {
+    font-family: 'LatoThin';
+    src: url('Lato-Thin.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Thin.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Thin.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

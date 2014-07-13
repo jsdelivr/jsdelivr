@@ -1,0 +1,11 @@
+/* Webfont: Lato-HairlineItalic */@font-face {
+    font-family: 'LatoHairline';
+    src: url('Lato-HairlineItalic.eot'); /* IE9 Compat Modes */
+    src: url('Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-HairlineItalic.woff') format('woff'), /* Modern Browsers */
+         url('Lato-HairlineItalic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
