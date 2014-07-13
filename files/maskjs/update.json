@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "maskjs",
+	"repo": "atmajs/maskjs",
+	"files": {
+		"basePath": "lib/",
+		"include": ["mask.min.js", "mask.min.js.map"]
+	}
+}
