@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinThin-Regular */@font-face {
+    font-family: 'LatoLatinThin';
+    src: url('LatoLatinThin-Regular.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinThin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinThin-Regular.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinThin-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
