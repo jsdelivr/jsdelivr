@@ -9,6 +9,6 @@
 		"./modules/**/*.js", "./modules/**/*.css",
 		"./widgets/**/*.js", "./widgets/**/*.css",
 		"./widgetstyles/**/*.js", "./widgetstyles/**/*.css"],
-	"exclude" : ["./common/js/unitest"]
+	"exclude" : ["./common/js/unitest/**"]
   }
 }
