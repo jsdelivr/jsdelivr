@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "bootstrap-select",
-  "repo": "silviomoreto/bootstrap-select",
-  "files": {
-    "basePath": "/",
-    "include": ["bootstrap-select.css", "bootstrap-select.min.css", "bootstrap-select.js", "bootstrap-select.min.js"]
-  }
-}
