@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.image-gallery",
+  "repo": "blueimp/Bootstrap-Image-Gallery",
+  "files": {
+    "include": ["css/bootstrap-image-gallery.min.css", "css/bootstrap-image-gallery.min.css", "js/bootstrap-image-gallery.js", "js/bootstrap-image-gallery.min.js", "img/loading.gif"]
+  }
+}
