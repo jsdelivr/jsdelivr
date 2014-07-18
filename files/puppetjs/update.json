@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "puppetjs",
+  "repo": "puppetjs/puppetjs",
+  "files": {
+    "include": ["puppetjs.min.js", "puppetjs.min.js.map"]
+  }
+}
