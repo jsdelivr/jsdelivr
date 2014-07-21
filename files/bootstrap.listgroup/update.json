@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "listgroup.js",
+  "repo": "rickardn/listgroup.js",
+  "files": {
+    "include": ["listgroup.min.js"]
+  }
+}
