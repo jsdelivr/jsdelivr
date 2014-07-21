@@ -216,3 +216,8 @@ pip-log.txt
 
 #No more ZIPs. Generation handled by origin
 *.zip
+
+#############
+## IDEA IDE (WebStorm, PHPStorm)
+#############
+.idea
