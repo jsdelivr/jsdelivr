@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "repo": "eragonj/trip.js",
+  "name": "Trip.js",
+  "files": {
+    "include": ["src/trip.min.js", "src/trip.min.css"]
+  }
+}
