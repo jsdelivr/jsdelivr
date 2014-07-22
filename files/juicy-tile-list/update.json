@@ -4,7 +4,7 @@
   "repo": "Juicy/juicy-tile-list",
   "files": {
     "include": [
-    	"dist/juicy-tile-list.html"
+    	"dist/juicy-tile-list.html",
     	"dist/package.js",
     	"dist/package.js.map",
     	"dist/packer.js",
