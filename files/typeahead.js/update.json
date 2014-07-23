@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "typeahead.js",
+  "repo": "twitter/typeahead.js",
+  "files": {
+    "basePath": "dist"
+  }
+}
