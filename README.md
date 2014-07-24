@@ -106,7 +106,7 @@ jsDelivr can automatically keep a project up-to-date as new versions are release
 Configuration is fast and easy: All you need to enable this feature for a project
 is to create an `update.json` file in its root directory along with the `info.ini`.
 
-Example (*/files/humane.js/update.json*):
+Example ([*/files/humane.js/update.json*](https://github.com/jsdelivr/jsdelivr/blob/master/files/humane.js/update.json)):
 ```
 {
   "packageManager": "github",
