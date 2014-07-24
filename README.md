@@ -102,11 +102,11 @@ A version directory should contain the following:
 Auto-Updating
 -------------
 
-jsDelivr can auto-update all projects, in an easy and fast way.
-All you have to do is enable this feature in each project.
-To do so each project needs an `update.json` file in its root directory.
+jsDelivr can automatically keep a project up-to-date as new versions are released.
+Configuration is fast and easy: All you need to enable this feature for a project
+is to create an `update.json` file in its root directory along with the `info.ini`.
 
-Example:
+Example (*/files/humane.js/update.json*):
 ```
 {
   "packageManager": "github",
