@@ -1,0 +1,15 @@
+/*
+Copyright (c) 2014, Zebulon McCorkle
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+body{font-family:Roboto,sans-serif;padding-top:70px;margin-left:10px;margin-right:10px}a{color:#FF4081;font-weight:700;text-decoration:none;text-transform:uppercase}a:hover{text-decoration:underline}a.gray{color:rgba(0,0,0,.54)}.navbar{background-color:#3F51B5;color:#FFF;font-weight:700;position:fixed;top:0;width:100%;left:0;right:0;height:65px}.navbar a{color:#FFF}.navbar li{list-style-type:none;display:inline;position:relative;top:19px;padding-right:30px;font-size:13pt}.navbar ul{display:inline;position:relative;left:1%}.btn{border:1px solid #F50057;padding:5px;padding-left:20px;padding-right:20px;color:#fff;background-color:#F50057;box-shadow:1px 1px 2px 0 #000;font-size:14px}a.btn:hover{text-decoration:none;position:relative;top:-1px;box-shadow:1px 2px 2px 0 #000}a.btn:active{position:relative;top:1px;box-shadow:1px 1px 2px 0 #000}a.btn.gray{color:rgba(0,0,0,.54);background-color:#fff;border:1px solid #fff}div.dialog{position:fixed;width:40%;left:30%;right:30%;height:60%;top:20%;bottom:20%;box-shadow:1px 3px 10px 1px #000;padding:24px;padding-top:16px;z-index:100;background-color:#fff}div.dialog p{color:rgba(0,0,0,.54);font-weight:300;padding-top:8px}div.dialog h1{color:rgba(0,0,0,.7);font-size:19pt}div.dialog div.buttons{position:absolute;bottom:0;right:0;margin-bottom:32px;margin-right:48px;text-align:right;float:right}div.dialog div.buttons a{padding-left:16px}div.dialog div.buttons a:hover{text-decoration:none}hr{position:absolute;left:0;right:0;height:1px}
