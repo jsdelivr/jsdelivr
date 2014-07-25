@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "webmail-linker",
+  "repo": "sebbo2002/webmail-linker.js",
+  "files": {
+    "basePath": "lib/browser/",
+  }
+}
