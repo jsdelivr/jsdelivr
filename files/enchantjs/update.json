@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "enchantjs",
-  "repo": "uei/enchant.js-builds",
-  "files": {
-    "basePath": "build/",
-    "include": ["enchant.min.js"]
-  }
-}
