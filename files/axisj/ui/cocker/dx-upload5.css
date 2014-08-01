@@ -1,0 +1,325 @@
+.none {
+  display: none;
+}
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: 99999px;
+  overflow: hidden;
+}
+.AXUpload5 {
+  height: 26px;
+}
+.AXUpload5 .swfupload {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.AXUpload5 table,
+.AXUpload5 table td {
+  background: none !important;
+  border: 0px none !important;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+.AXUpload5 .AXFileSelector {
+  padding-right: 26px;
+  padding-left: 5px;
+  background: url('images/dx-upload5-icon.png') no-repeat 100%;
+}
+.AXUpload5 .AXFileDisplay {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #525252;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem {
+  position: relative;
+  height: 24px;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadTit {
+  text-indent: 46px;
+  font-size: 12px;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadBtns {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 1em;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadBtns .AXUploadBtnsA {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('images/dx-upload5-remove-icon.png') no-repeat center center;
+  text-indent: -1000px;
+  overflow: hidden;
+  line-height: 50000px;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadLabel {
+  position: absolute;
+  left: 24px;
+  top: 4px;
+  line-height: 1em;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadLabel .AXUploadDownload {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('images/dx-upload5-download-icon.png') no-repeat #ffffff;
+  text-indent: -1000px;
+  overflow: hidden;
+  line-height: 50000px;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadLabel .AXUploadDownload:hover {
+  background-color: #000000;
+}
+.AXUpload5 .AXFileDisplay .AXUploadItem .AXUploadLabel .AXUploadMainImage {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('images/dx-upload5-main-image-icon.png') no-repeat #ffffff;
+  text-indent: -1000px;
+  overflow: hidden;
+  float: left;
+  line-height: 50000px;
+}
+.AXUpload5 .AXFileDisplay .AXUploadProcess {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  height: 8px;
+  width: 100px;
+  background: #b2b2b2;
+  border: 1px solid #b2b2b2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 1px;
+  line-height: 1px;
+}
+.AXUpload5 .AXFileDisplay .AXUploadProcess .AXUploadProcessBar {
+  background: #ffffff;
+  height: 8px;
+  width: 0px;
+  min-width: 5px;
+  border-radius: 4px;
+}
+.AXUpload5QueueBox {
+  position: relative;
+  border: 1px solid #b1b1b1;
+  background: #f7f7f7;
+  overflow: auto;
+}
+.AXUpload5QueueBox.allowDrop {
+  background-image: url('images/dx-upload5-drop-icon-img.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.AXUpload5QueueBox.allowDrop .dropZoneBox {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+.AXUpload5QueueBox .AXUploadItem {
+  box-sizing: content-box !important;
+  position: relative;
+  float: left;
+  padding: 10px;
+  margin: 9px 0px 0px 9px;
+  width: 100px;
+  height: 148px;
+  color: #525252;
+  overflow: hidden;
+  z-index: 100;
+}
+.AXUpload5QueueBox .AXUploadItem.readyselect {
+  cursor: pointer;
+}
+.AXUpload5QueueBox .AXUploadItem.beSelected {
+  background: #68adcf;
+  color: #ffffff;
+}
+.AXUpload5QueueBox .AXUploadItem.beSelected .AXUploadBtns .AXUploadBtnsA {
+  background: url('images/dx-upload5-remove-icon-white.png') no-repeat center center;
+}
+.AXUpload5QueueBox .AXUploadItem.AX_selecting {
+  background: #68adcf;
+  color: #ffffff;
+}
+.AXUpload5QueueBox .AXUploadItem.AX_selecting .AXUploadBtns .AXUploadBtnsA {
+  background: url('images/dx-upload5-remove-icon-white.png') no-repeat center center;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadIcon {
+  background-color: #e0e0e0;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 14px;
+  color: #888888;
+  font-weight: bold;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadType {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 1.3em;
+  padding-top: 3px;
+  text-align: right;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadTit {
+  font-size: 12px;
+  line-height: 1.3em;
+  word-break: break-all;
+  height: 32px;
+  overflow: hidden;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadSize {
+  font-size: 11px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadProcess {
+  position: absolute;
+  left: 20px;
+  top: 54px;
+  height: 8px;
+  width: 78px;
+  background: #b2b2b2;
+  border: 1px solid #b2b2b2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 1px;
+  line-height: 1px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadProcess .AXUploadProcessBar {
+  background: #ffffff;
+  height: 8px;
+  width: 0px;
+  min-width: 5px;
+  border-radius: 4px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadBtns {
+  position: absolute;
+  left: 3px;
+  top: 110px;
+  line-height: 1em;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadBtns .AXUploadBtnsA {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('images/dx-upload5-remove-icon-black.png') no-repeat center center;
+  text-indent: -1000px;
+  overflow: hidden;
+  line-height: 50000px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadLabel {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  line-height: 1em;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadLabel .AXUploadMainImage {
+  display: none;
+  width: 16px;
+  height: 16px;
+  background: url('images/dx-upload5-main-image-icon.png') no-repeat #ffffff;
+  text-indent: -1000px;
+  overflow: hidden;
+  float: left;
+  line-height: 50000px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadLabel .AXUploadDownload {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('images/dx-upload5-download-icon.png') no-repeat #ffffff;
+  text-indent: -1000px;
+  overflow: hidden;
+  line-height: 50000px;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadLabel .AXUploadDownload:hover {
+  background-color: #000000;
+}
+.AXUpload5QueueBox .AXUploadItem .AXUploadPreview {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.AXUpload5Single table tbody tr td {
+  border: 0px none;
+  background: none;
+}
+.AXUpload5Single .AXUploadDisplay {
+  position: relative;
+  padding: 0px 0px 0px 5px;
+}
+.AXUpload5Single .AXUploadDisplay .AXUploadProcess {
+  position: relative;
+  width: 120px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  font-size: 1px;
+  line-height: 1px;
+  box-shadow: 0px 0px 3px #ccc;
+  overflow: hidden;
+}
+.AXUpload5Single .AXUploadDisplay .AXUploadProcess .AXUploadProcessBar {
+  background: url('images/dx-red-small.png') repeat-x 0px center;
+  height: 15px;
+  width: 0px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.AXUpload5Single .AXUploadDisplay .AXFileTitleBlock {
+  position: relative;
+}
+.AXUpload5Single .AXUploadDisplay .AXFileTitleBlock .AXFileTitle {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding-right: 24px;
+  text-decoration: none;
+  color: #444444;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AXUpload5Single .AXUploadDisplay .AXFileTitleBlock .AXFileDelete {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  background: url('images/dx-cross-button.png') no-repeat 100% center;
+  height: 24px;
+  width: 24px;
+  line-height: 2000px;
+  overflow: hidden;
+}

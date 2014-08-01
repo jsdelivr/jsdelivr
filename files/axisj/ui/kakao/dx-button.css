@@ -1,0 +1,537 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.axbutton-style-normal {
+  background: #ffea00;
+  color: #493334;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #493334;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-gray {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #0dc5b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #ff5b49;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-disabled {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: 1px solid #d7d7d7;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal {
+  background: #ffea00;
+  color: #493334;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal:hover,
+.axbutton-event-normal:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.axbutton-event-normal:active {
+  box-shadow: none;
+}
+.axbutton-event-classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #493334;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-classic:hover,
+.axbutton-event-classic:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.axbutton-event-classic:active {
+  box-shadow: none;
+}
+.axbutton-event-gray {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-gray:hover,
+.axbutton-event-gray:focus {
+  background: #f7f7f7;
+  color: #4a4a4a;
+  border: 1px solid #f7f7f7;
+}
+.axbutton-event-gray:active {
+  box-shadow: none;
+}
+.axbutton-event-green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #0dc5b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-green:hover,
+.axbutton-event-green:focus {
+  background: #0dc5b9;
+  color: #ffea00;
+  border: 1px solid #0dc5b9;
+}
+.axbutton-event-green:active {
+  box-shadow: none;
+}
+.axbutton-event-red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #ff5b49;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-red:hover,
+.axbutton-event-red:focus {
+  background: #ff5b49;
+  color: #ffea00;
+  border: 1px solid #ff5b49;
+}
+.axbutton-event-red:active {
+  box-shadow: none;
+}
+.axbutton-event-disabled {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: 1px solid #d7d7d7;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-disabled:hover,
+.axbutton-event-disabled:focus {
+  background: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}
+.axbutton-event-disabled:active {
+  box-shadow: none;
+}
+.AXButton {
+  position: relative;
+  font-size: 12px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButton {
+  background: #ffea00;
+  color: #493334;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton:hover,
+.AXButton:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButton:active {
+  box-shadow: none;
+}
+.AXButton.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #493334;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Classic:hover,
+.AXButton.Classic:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButton.Classic:active {
+  box-shadow: none;
+}
+.AXButton.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Blue:hover,
+.AXButton.Blue:focus {
+  background: #f7f7f7;
+  color: #4a4a4a;
+  border: 1px solid #f7f7f7;
+}
+.AXButton.Blue:active {
+  box-shadow: none;
+}
+.AXButton.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #0dc5b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Green:hover,
+.AXButton.Green:focus {
+  background: #0dc5b9;
+  color: #ffea00;
+  border: 1px solid #0dc5b9;
+}
+.AXButton.Green:active {
+  box-shadow: none;
+}
+.AXButton.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #ff5b49;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Red:hover,
+.AXButton.Red:focus {
+  background: #ff5b49;
+  color: #ffea00;
+  border: 1px solid #ff5b49;
+}
+.AXButton.Red:active {
+  box-shadow: none;
+}
+.AXButton[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: 1px solid #d7d7d7;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton[disabled]:hover,
+.AXButton[disabled]:focus {
+  background: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}
+.AXButton[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonSmall {
+  position: relative;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonSmall {
+  background: #ffea00;
+  color: #493334;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall:hover,
+.AXButtonSmall:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButtonSmall:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #493334;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Classic:hover,
+.AXButtonSmall.Classic:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButtonSmall.Classic:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Blue:hover,
+.AXButtonSmall.Blue:focus {
+  background: #f7f7f7;
+  color: #4a4a4a;
+  border: 1px solid #f7f7f7;
+}
+.AXButtonSmall.Blue:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #0dc5b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Green:hover,
+.AXButtonSmall.Green:focus {
+  background: #0dc5b9;
+  color: #ffea00;
+  border: 1px solid #0dc5b9;
+}
+.AXButtonSmall.Green:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #ff5b49;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Red:hover,
+.AXButtonSmall.Red:focus {
+  background: #ff5b49;
+  color: #ffea00;
+  border: 1px solid #ff5b49;
+}
+.AXButtonSmall.Red:active {
+  box-shadow: none;
+}
+.AXButtonSmall[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: 1px solid #d7d7d7;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall[disabled]:hover,
+.AXButtonSmall[disabled]:focus {
+  background: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}
+.AXButtonSmall[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonLarge {
+  position: relative;
+  font-size: 12px;
+  height: 46px;
+  line-height: 46px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonLarge {
+  background: #ffea00;
+  color: #493334;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge:hover,
+.AXButtonLarge:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButtonLarge:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #493334;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Classic:hover,
+.AXButtonLarge.Classic:focus {
+  background: #493334;
+  text-decoration: none;
+  color: #ffea00;
+  border: 1px solid #493334;
+}
+.AXButtonLarge.Classic:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Blue:hover,
+.AXButtonLarge.Blue:focus {
+  background: #f7f7f7;
+  color: #4a4a4a;
+  border: 1px solid #f7f7f7;
+}
+.AXButtonLarge.Blue:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #0dc5b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Green:hover,
+.AXButtonLarge.Green:focus {
+  background: #0dc5b9;
+  color: #ffea00;
+  border: 1px solid #0dc5b9;
+}
+.AXButtonLarge.Green:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #ff5b49;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Red:hover,
+.AXButtonLarge.Red:focus {
+  background: #ff5b49;
+  color: #ffea00;
+  border: 1px solid #ff5b49;
+}
+.AXButtonLarge.Red:active {
+  box-shadow: none;
+}
+.AXButtonLarge[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: 1px solid #d7d7d7;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge[disabled]:hover,
+.AXButtonLarge[disabled]:focus {
+  background: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}
+.AXButtonLarge[disabled]:active {
+  box-shadow: none;
+}

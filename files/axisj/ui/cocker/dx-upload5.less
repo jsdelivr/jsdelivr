@@ -1,0 +1,209 @@
+@import "preset";
+@import "AXUtils";
+
+// AXUpload5 ///////////////////////////////////////////////////
+.AXUpload5{
+	.dx-axupload5-preset();
+	height:26px;
+	.swfupload{
+		position:absolute;left:0px;top:0px;
+	}
+	table, table td{
+		background:none !important;
+		border:0px none !important;
+		border-collapse:collapse;border-spacing:0px;padding:0px;margin:0px;
+		text-align:left;
+	}
+	.AXFileSelector{
+		padding-right:26px;padding-left:5px;
+		background:url('images/dx-upload5-icon.png') no-repeat 100%;
+	}
+	.AXFileDisplay{
+		.util-text-ellipsis();
+		color:@color;
+		.AXUploadItem{
+			position:relative;height:24px;
+			.AXUploadTit{
+				text-indent:46px;font-size:12px;line-height:24px;
+				.util-text-ellipsis();
+			}
+			.AXUploadBtns{
+				position:absolute;left:0px;top:0px;line-height:1em;
+				.AXUploadBtnsA{
+					display:block;width:24px;height:24px;
+					background:url('images/dx-upload5-remove-icon.png') no-repeat center center;
+					text-indent:-1000px;overflow:hidden;line-height:50000px;
+				}
+			}
+			.AXUploadLabel{
+				position:absolute;left:24px;top:4px;line-height:1em;
+				.AXUploadDownload{
+					display:block;width:16px;height:16px;
+					background:url('images/dx-upload5-download-icon.png') no-repeat #fff;
+					text-indent:-1000px;overflow:hidden;line-height:50000px;
+					&:hover{background-color:@bgcolor;}
+				}
+				.AXUploadMainImage{
+					display:block;width:16px;height:16px;
+					background:url('images/dx-upload5-main-image-icon.png') no-repeat #fff;
+					text-indent:-1000px;overflow:hidden;float:left;line-height:50000px;					
+				}
+			}			
+		}
+		.AXUploadProcess{
+			position:absolute;left:10px;top:8px;height:8px;
+			width:100px;
+			background:@bgcolor-b;border:@border;
+			.util-border-radius(@radius);
+			font-size:1px;line-height:1px;			
+			.AXUploadProcessBar{
+				background:@bgcolor-a;height:8px;width:0px;min-width:5px;border-radius:4px;
+			}			
+		}
+	}
+}
+
+.AXUpload5QueueBox{
+	.dx-axupload5-preset();
+	position:relative;
+	border:@border-a;background:@bgcolor-c;
+	overflow:auto;
+	&.allowDrop{
+		background-image:url('images/dx-upload5-drop-icon-img.png');
+		background-repeat:no-repeat;
+		background-position:center center;
+		.dropZoneBox{
+			position:absolute;
+			left:0px;top:0px;
+			z-index:1000;
+		}
+	}
+	.AXUploadItem{
+		box-sizing:content-box !important;
+		position:relative;float:left;padding:10px;margin:9px 0px 0px 9px;width:100px;
+		height:148px;color:@color-a;overflow:hidden;z-index:100;
+		&.readyselect{cursor:pointer;}
+		&.beSelected{
+			background:@bgcolor-d;color:@color-b;
+			.AXUploadBtns{
+				.AXUploadBtnsA{
+					background:url('images/dx-upload5-remove-icon-white.png') no-repeat center center;
+				}
+			}
+		}
+		&.AX_selecting{
+			background:@bgcolor-d;color:@bgcolor-a;
+			.AXUploadBtns{
+				.AXUploadBtnsA{
+					background:url('images/dx-upload5-remove-icon-white.png') no-repeat center center;
+				}
+			}
+		}
+		
+		.AXUploadIcon{
+			background-color:@bgcolor-e;
+			width:100px;height:100px;
+			text-align:center;line-height:100px;
+			font-size:14px;color:@color-c;font-weight:bold;
+		}
+		.AXUploadType{
+			.util-text-ellipsis();
+			font-size:12px;line-height:1.3em;padding-top:3px;text-align:right;			
+		}
+		.AXUploadTit{
+			font-size:12px;line-height:1.3em;word-break:break-all;height:32px;overflow:hidden;
+		}
+		.AXUploadSize{
+			font-size:11px;
+		}
+		.AXUploadProcess{
+			position:absolute;left:20px;top:54px;height:8px;width:78px;background:@bgcolor-b;
+			border:@border;
+			.util-border-radius(@radius);
+			font-size:1px;line-height:1px;
+			.AXUploadProcessBar{
+				background:@bgcolor-a;height:8px;width:0px;min-width:5px;border-radius:4px;
+			}
+		}
+		.AXUploadBtns{
+			position:absolute;left:3px;top:110px;line-height:1em;
+			.AXUploadBtnsA{
+				display:block;width:24px;height:24px;background:url('images/dx-upload5-remove-icon-black.png') no-repeat center center;
+				text-indent:-1000px;overflow:hidden;line-height:50000px;
+			}
+		}
+		.AXUploadLabel{
+			position:absolute;right:14px;top:14px;line-height:1em;
+			.AXUploadMainImage{
+				display:none;width:16px;height:16px;background:url('images/dx-upload5-main-image-icon.png') no-repeat #fff;
+				text-indent:-1000px;overflow:hidden;float:left;line-height:50000px;
+			}
+			.AXUploadDownload{
+				display:block;width:16px;height:16px;background:url('images/dx-upload5-download-icon.png') no-repeat #fff;
+				text-indent:-1000px;overflow:hidden;line-height:50000px;				
+				&:hover{
+					background-color:@bgcolor;
+				}
+			}
+		}
+		.AXUploadPreview{
+			background-size:contain;
+			background-position:center center;
+			background-repeat:no-repeat;
+			background-color:transparent;
+		}
+		
+	}
+}
+
+
+.AXUpload5Single{
+	.dx-axupload5-preset();
+	table{
+		tbody{
+			tr{
+				td{border:0px none;background:none;}
+			}
+		}
+	}
+	.AXUploadButton{}
+	.AXUploadDisplay{
+		position:relative;
+		padding:0px 0px 0px 5px;
+		.AXUploadProcess{
+			position:relative;width:120px;background:@bgcolor-a;
+			border:@border-b;border-radius:@radius-a;
+			font-size:1px;line-height:1px;
+			box-shadow:0px 0px 3px #ccc;
+			overflow:hidden;
+			.AXUploadProcessBar{
+				background:url('images/dx-red-small.png') repeat-x 0px center;
+				height:15px;width:0px;
+				border:@border-c; border-radius:@radius;
+			}
+		}
+		.AXFileTitleBlock{
+			position:relative;		
+			.AXFileTitle{
+				display:inline-block;
+				height:24px;line-height:24px;
+				padding-right:24px;
+				text-decoration:none;
+				color:@color-d;
+				max-width:150px;
+				.util-text-ellipsis();
+			}	
+			.AXFileDelete{
+				position:absolute;
+				right:0px;top:0px;
+				display:block;
+				background:url('images/dx-cross-button.png') no-repeat 100% center;
+				height:24px;width:24px;
+				line-height:2000px;overflow:hidden;
+			}
+		}
+		
+	}
+	
+}
+

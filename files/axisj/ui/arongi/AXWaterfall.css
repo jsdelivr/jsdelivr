@@ -1,0 +1,14 @@
+.AXWaterfall {
+  position: relative;
+}
+.AXWaterfall .WaterBox {
+  position: absolute;
+  left: -200px;
+  top: 0px;
+}
+.AXWaterfall .WaterBoxMobile {
+  position: absolute;
+  left: -200px;
+  top: 0px;
+  width: 300px;
+}

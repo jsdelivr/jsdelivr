@@ -1,0 +1,426 @@
+// Description ////////////////////////////////////////////////////////////////////
+//
+// CSS Script by Jowrney Kim
+// Last update. Feb 21, 2014	
+//
+///////////////////////////////////////////////////////////////////////////////////
+
+@import "preset";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+// Common /////////////////////////////////////////////////////////////
+html, body	{
+	font-family: @font-family;
+	margin:0; padding:0; 
+	height:100%;
+    font-size:12px;line-height: 1.6em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-stroke: 0.6px;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	color:@color; background: @bgcolor; 
+	a 		{color:@link; text-decoration: none;}	 	
+	a:hover {color:@link-hover;}
+	a:active{color:@link-active;}	
+	
+	h1{font-size:20px; }
+	h2{font-size:16px;}
+	h3{font-size:12px;}
+}
+img{border:0px;}
+.ax-wrap		{position:relative; margin:0 auto;}
+.H10			{height:10px; font-size:1px;}
+.H20			{height:20px; font-size:1px;}
+.H30			{height:30px; font-size:1px;}
+.H40			{height:40px; font-size:1px;}
+.H50			{height:50px; font-size:1px;}
+
+// AXPage /////////////////////////////////////////////////////////////
+#AXPage {
+
+	font-family:@font-family;
+	font-size:@font-size; 
+	overflow: hidden;
+	.ax-wrap 	{margin:0 auto;}
+	.ax-clear	{clear:both;}
+	.ax-layer 	{}
+	.ax-unit	{margin:0 10px; position:relative; }
+	
+	div[class^="ax-col-"] {float:left; }
+	.ax-col-1	{width:8.3334%;}	
+	.ax-col-2	{width:16.6667%}		
+	.ax-col-3	{width:25%}			
+	.ax-col-4	{width:33.3334%; }
+	.ax-col-5 	{width:41.6667%;}
+	.ax-col-6	{width:50%;}
+	.ax-col-7	{width:58.3334%}
+	.ax-col-8	{width:66.6667%}
+	.ax-col-9	{width:75%}
+	.ax-col-10 	{width:83.3334%}
+	.ax-col-11	{width:91.6667%}
+	.ax-col-12	{width:100%}
+
+	#AXPageHead{
+      position: relative;z-index:10;
+      .ax-layer-1{
+        position: relative;z-index:10;
+          .ax-unit{
+              background:@bgcolor-a; margin:0px;
+              .navMenu{
+              	  display:block;
+                  height:40px; overflow: hidden;
+                  border-bottom:@border;
+                  h3 {
+                      float:left; margin: 0px; padding:0px; line-height: 40px; height: 40px; font-size:12px; font-weight: normal;
+                      border-right:@border; background: @bgcolor-c; color:@bgcolor;
+                      a{display: block;height: 40px;line-height: 40px;}
+                  }
+                  #sampleMenuBox{
+                    position: absolute;left: 110px;top: 0px;
+                  }
+                  ul{
+                      list-style: none; margin:0px; padding:0px;
+                      li{
+                          float:left; border-right:@border;display:block;
+                          a{
+                              font-size:13px; display: block; line-height: 40px;
+                              padding:0px 10px; background: @bgcolor-a;
+                              span{
+                                  font-size:10px; margin:0px 2px;
+                              }
+                              &:hover{
+                                  background: @bgcolor-b;
+                              }
+                              &.on{
+                                  background: @bgcolor-b;
+                              }
+                          }
+                      }
+                  }
+
+                  .parentMenu{
+                    position:relative;
+                  }
+                  .childMenu{
+                    position:absolute;line-height:25px;font-size:12px;display:none;
+                    ul{
+                      padding:0px; margin:0px;display:block;position:relative;border-top:@border;
+                      li{
+                        float:none;padding:0px; margin:0px;border:@border;border-top: 0px none;
+                        a{
+                          display:block;_width:100%;
+                          padding:0px 10px;
+                          height:30px;line-height:30px;
+                          background:@bgcolor-a;
+                          text-decoration: none;white-space:nowrap;
+                          &:hover{background: @bgcolor-b;}
+                          &.on{background: @bgcolor-b;}
+                          &.expand{
+                            //background-image:url(images/rightArrows.png);background-repeat:no-repeat;background-position:100% 0px;padding-right:30px;
+                            &:hover{
+                              //background-image:url(images/rightArrows.png);background-repeat:no-repeat;background-position:100% -30px;padding-right:30px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .childsMenu{
+                    position:absolute;line-height:20px;font-size:12px;
+                    ul{
+
+                      li{
+
+                      }
+                    }
+                  }
+
+
+              }
+          }
+      }
+      .ax-layer-2{
+        position: relative;z-index:9;
+          .ax-unit{
+              margin:0px;
+              .themeInfo{
+              	display:block;
+                  background: @bgcolor-d;
+                  height:70px;
+                  .logo{
+                      overflow: hidden;
+                      position: absolute;
+                      top:5px; left:5px;
+                      width:60px; height:60px;
+                      background: #eaeaea;
+                      border-radius: 30px;
+                  }
+                  h1{
+                      position: absolute; margin-left:80px; font-size:14px; margin-top:16px; font-weight: bold;
+                      color:@color;
+                      .support{
+                          font-size:10px; background: @bgcolor-a;
+                          color:@color-c;
+                          border-radius: 10px; padding:2px 6px; margin-left:2px;
+                      }
+                  }
+                  h2{position: absolute; margin-left:80px; font-size:11px; margin-top:38px; font-weight: normal;
+                      color:@color;
+                      a{
+                          color:@link;
+                          &:hover{
+                              color:@link-hover;
+                              text-decoration: underline;
+                          }
+                      }
+                  }
+                .facebook{position: absolute;right:5px;top: 5px;font-size:11px;}
+                .github{position: absolute;right:5px;top: 25px;font-size:11px;}
+                .api{position: absolute;right:5px;top: 45px;font-size:11px;}
+              }
+          }
+      }
+      .ax-layer-3{
+          .ax-unit{
+              margin:0px;
+              .AXdemoPageTabTarget{
+                  background:@bgcolor-d;
+              }
+          }
+
+      }
+
+      #devCentermobileMenu{
+        z-index:10;
+        display: none;
+        position: absolute; top: 0px; right: 0px;
+      }
+	}
+	
+	#AXPageBody{
+		.title{
+			h1{
+				text-indent: 10px;
+			}
+		}
+		.ax-wrap{
+			margin-bottom:30px;
+			.ax-layer-1{
+				.secBlock{
+					border:2px solid @bgcolor-a; margin:10px; overflow: hidden;
+					h3{
+						text-align: center; background: @bgcolor-a; font-size:18px;
+						margin: 4px; padding:0px; height:40px; line-height: 40px; 
+					}
+					ul{
+						font-size:14px;
+						margin:10px; padding:0px; list-style-position: inside;
+						li{
+							line-height: 180%;
+							a{
+								&:hover{
+									text-decoration: underline;
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.SampleAXButton {
+			label {
+				display: inline-block; margin-right:10px;
+				vertical-align: middle;
+				width:60px; text-align: right;
+			}
+			.withIcons{
+				button {margin-bottom:10px;}
+			}
+		}
+		&.SampleAXTabs {		
+		}
+		&.SampleAXInput {	
+			label {
+				display: inline-block; margin-right:10px;
+				vertical-align: middle;
+				width:80px; text-align: right;
+			}
+			.bindCheckbox{
+				label { text-align: left; }
+			}
+			
+		}
+		&.SampleAXSelec{
+			
+		}		
+		
+	}
+	
+	#AXPageFoot{
+		position: fixed; bottom:0px; width:100%;z-index:100;
+		.ax-layer-1{
+			.ax-unit{
+				background:@bgcolor-a; margin:0px;
+				.navTheme{
+					display:block;
+					height:30px; overflow: hidden;
+					border-top:@border;
+					h3 {
+						float:left; margin: 0px; padding:0px; line-height: 30px; font-size:12px; font-weight: normal;
+						padding:0 20px; border-right:@border; background: @bgcolor-c; color:@bgcolor;
+					}
+					ul{
+						list-style: none; margin:0px; padding:0px;
+						li{
+							float:left; border-right:@border;
+							a{
+								font-size:10px; display: block; line-height: 30px;
+								padding:0px 10px; background: @bgcolor-a; 
+								span{
+									font-size:10px; margin:0px 2px;
+								}
+								&:hover{
+									background: @bgcolor-b;
+								}
+								&.on{
+									background: @bgcolor-b;
+                                    font-size:13px;
+								}
+							}
+						}
+					}
+				}
+			}	
+		}
+	}
+
+}
+	
+// MediaQuery //////////////////////////////////////////////////////////////
+@media @wide {
+	
+}
+
+@media @desktop {
+
+}
+
+@media @tablet {
+
+	#AXPageBody{
+		.ax-wrap {width:100%;}
+		.ax-col-3	{width:50%}		
+	}		
+}
+
+@media @mobile {
+  #AXPageBody{
+      .ax-wrap {width:100%;}
+      .ax-col-3	{width:100%}
+  }
+  #sampleMenuBox{
+    display: none;
+  }
+  #AXPage{
+    #AXPageHead {
+      #devCentermobileMenu {
+        display: block;
+        position: absolute;
+        top: 5px;right: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+/* { oldCode Css -------------------------------------------------------------------- */
+
+.AXdemoPageTabTarget{padding: 5px 0px 0px 0px;}
+.AXdemoPageContent{padding: 0px 10px 50px 10px;}
+
+.clear{clear:both;}
+.Hspace1{font-size:1px;line-height:1px;height:1px;}
+.Hspace2{font-size:1px;line-height:1px;height:2px;}
+.Hspace3{font-size:1px;line-height:1px;height:3px;}
+.Hspace5{font-size:1px;line-height:1px;height:5px;}
+.Hspace10{font-size:1px;line-height:1px;height:10px;}
+.Hspace15{font-size:1px;line-height:1px;height:15px;}
+.Hspace20{font-size:1px;line-height:1px;height:20px;}
+.Hspace30{font-size:1px;line-height:1px;height:30px;}
+
+.description{padding-left:20px;color:#888;}
+
+.method{
+  position:relative;border:@border-a;border-radius:4px;overflow: hidden;
+  line-height:1.6em;
+  .methodName{
+    padding:10px;font-size:14px;font-weight:bold;border-bottom:@border-a;background:@bgcolor-a;
+  }
+  .methodDesc{
+    padding:10px;padding-left:10px;
+    .desc{
+      color:@color;
+      padding-bottom:5px;
+      font-style:italic;
+    }
+    ul{
+      padding:0px;margin:0px;
+      li{padding:3px;font-size:14px;}
+      ul{padding-left:20px;}
+    }
+    .methodDescContent{
+      padding:5px 10px;
+      color:@border;border:@border;border-radius:5px;
+      background:@bgcolor-b;
+    }
+  }
+  .methodExam{
+    padding:10px;border-top:@border-a;background:@bgcolor-b;position:relative;
+  }
+  table{
+    border-top:1px solid #E3E3E3;
+    width:100%;
+    caption{
+      text-align:left;padding:10px;color:#0080C0;
+    }
+    th{
+      border-right:1px solid #E3E3E3;
+      background:#E1F0FF;
+    }
+    th, td{
+      border-bottom:1px solid #E3E3E3;
+    }
+  }
+}
+.contentContainer{padding:20px;}
+table.setConfig {
+  border:1px solid #E3E3E3;
+  width:100%;
+  border-collapse:collapse;
+  caption{
+    text-align:left;padding:10px;color:#0080C0;
+  }
+  th{
+    border:1px solid #E3E3E3;
+    background:#E1F0FF;
+  }
+  td{
+    border:1px solid #E3E3E3;
+    &.ti5{
+      text-indent:5px;
+    }
+    &.ti10{
+      text-indent:10px;
+    }
+    &.ti20{
+      text-indent:20px;
+    }
+  }
+  pre{margin:0px;}
+}
+.tac {text-align:center;}
+.fieldsetBody{width:100%;background: #eeeeee;border: 0px none;padding: 0px;font-size:12px;line-height:1.8em;}
+/* -------------------------------------------------------------------- oldCode Css} */

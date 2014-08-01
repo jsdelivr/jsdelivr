@@ -1,0 +1,122 @@
+//Border Radius Simple
+.util-border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+//Border Radius Custom
+.util-border-radius (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+    -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+    -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+    border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+//Border Radius Disabled
+.util-border-radius-none{
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+}
+
+.util-box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5, @inset:outset) {
+	-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha) @inset;
+	-moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha) @inset;
+	box-shadow: @x @y @blur rgba(0, 0, 0, @alpha) @inset;
+}
+
+//Transition
+.util-transition (@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+
+//Transform
+.util-transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+//Linear Gradient
+.util-gradient (@origin: top, @start: #ffffff, @stop: #000000) {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(@start, @stop); /* For Safari */
+  background-image: -o-linear-gradient(@start, @stop); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(@start, @stop); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(@start, @stop); /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=@start, endColorstr=@stop); /*For IE7-8-9*/
+}
+
+//Quick Gradient
+.util-quick-gradient (@origin: left, @alpha: 0.2) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=@start, endColorstr=@stop); /*For IE7-8-9*/        
+}
+
+//Webkit Reflection
+.util-reflect (@length: 50%, @opacity: 0.2){
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255,255,255,@opacity)));
+}
+
+//Drop Shadow
+.util-drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:			@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+
+//Opacity
+.util-opacity(@opacity:50){
+	-moz-opacity: @opacity/100;
+	opacity: @opacity/100;
+	filter: alpha(opacity=@opacity);
+}
+
+
+//Text Ellipsis
+.util-text-ellipsis{
+	white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+.util-textHidden{
+  text-indent: -9999px;overflow:hidden;
+}
+
+.util-text-shadow-black(@y:-1px, @alpha: 0.25){
+	text-shadow:0px @y rgba(0, 0, 0, @alpha);;
+};
+
+.util-text-shadow-white(@y:-1px, @alpha: 0.25){
+	text-shadow:0px @y rgba(255, 255, 255, @alpha);;
+};
+
+
+.util-hspace(@height: 1px){
+	font-size:1px;line-height:1px;height:@height;
+}
+
+.util-rotate(@deg:0){
+	-ms-transform: rotate(unit(@deg, deg)); /* IE 9 */
+	-webkit-transform: rotate(unit(@deg, deg)); /* Chrome, Safari, Opera */
+	transform: rotate(unit(@deg, deg));	
+}
+
+.util-appearance(){
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+
+
+

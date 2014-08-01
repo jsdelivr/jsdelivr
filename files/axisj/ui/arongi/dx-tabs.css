@@ -1,0 +1,1185 @@
+.none {
+  display: none;
+}
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: 99999px;
+  overflow: hidden;
+}
+.axtabs-style-normal {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Safari */
+  background-image: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#fdfdfd, #e8e8e8);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fdfdfd, endColorstr=#e8e8e8);
+  /*For IE7-8-9*/
+  color: #6e7a85;
+  border: 1px solid #b9babc;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-classic {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c1cdd5, #98a4ae);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c1cdd5, endColorstr=#98a4ae);
+  /*For IE7-8-9*/
+  color: #ebf4f7;
+  border: 1px solid #81898e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-blue {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#6faee1, #468ec9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#6faee1, #468ec9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#6faee1, #468ec9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#6faee1, #468ec9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6faee1, endColorstr=#468ec9);
+  /*For IE7-8-9*/
+  color: #d0ebfe;
+  border: 1px solid #3f80b1;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-green {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#98c87b, #79aa5a);
+  /* For Safari */
+  background-image: -o-linear-gradient(#98c87b, #79aa5a);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#98c87b, #79aa5a);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#98c87b, #79aa5a);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#98c87b, endColorstr=#79aa5a);
+  /*For IE7-8-9*/
+  color: #dffebe;
+  border: 1px solid #6a9751;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-red {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c65a5b, #a93b3e);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c65a5b, #a93b3e);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c65a5b, #a93b3e);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c65a5b, #a93b3e);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c65a5b, endColorstr=#a93b3e);
+  /*For IE7-8-9*/
+  color: #fcccc9;
+  border: 1px solid #87302b;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-disabled {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Safari */
+  background-image: -o-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#d7d7d7, #d7d7d7);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d7d7d7, endColorstr=#d7d7d7);
+  /*For IE7-8-9*/
+  color: #eaeaea;
+  border: 1px solid #cccccc;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-normal {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Safari */
+  background-image: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#fdfdfd, #e8e8e8);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fdfdfd, endColorstr=#e8e8e8);
+  /*For IE7-8-9*/
+  color: #6e7a85;
+  border: 1px solid #b9babc;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-normal:hover,
+.axtabs-event-normal:focus {
+  background: #e8e8e8;
+}
+.axtabs-event-normal:active {
+  box-shadow: none;
+}
+.axtabs-event-normal.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-classic {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c1cdd5, #98a4ae);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c1cdd5, endColorstr=#98a4ae);
+  /*For IE7-8-9*/
+  color: #ebf4f7;
+  border: 1px solid #81898e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-classic:hover,
+.axtabs-event-classic:focus {
+  background: #98a4ae;
+}
+.axtabs-event-classic:active {
+  box-shadow: none;
+}
+.axtabs-event-classic.on {
+  text-shadow: none;
+  color: #81898e;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-blue {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#6faee1, #468ec9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#6faee1, #468ec9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#6faee1, #468ec9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#6faee1, #468ec9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6faee1, endColorstr=#468ec9);
+  /*For IE7-8-9*/
+  color: #d0ebfe;
+  border: 1px solid #3f80b1;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-blue:hover,
+.axtabs-event-blue:focus {
+  background: #468ec9;
+}
+.axtabs-event-blue:active {
+  box-shadow: none;
+}
+.axtabs-event-blue.on {
+  text-shadow: none;
+  color: #3f80b1;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-green {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#98c87b, #79aa5a);
+  /* For Safari */
+  background-image: -o-linear-gradient(#98c87b, #79aa5a);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#98c87b, #79aa5a);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#98c87b, #79aa5a);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#98c87b, endColorstr=#79aa5a);
+  /*For IE7-8-9*/
+  color: #dffebe;
+  border: 1px solid #6a9751;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-green:hover,
+.axtabs-event-green:focus {
+  background: #79aa5a;
+}
+.axtabs-event-green:active {
+  box-shadow: none;
+}
+.axtabs-event-green.on {
+  text-shadow: none;
+  color: #6a9751;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-red {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c65a5b, #a93b3e);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c65a5b, #a93b3e);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c65a5b, #a93b3e);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c65a5b, #a93b3e);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c65a5b, endColorstr=#a93b3e);
+  /*For IE7-8-9*/
+  color: #fcccc9;
+  border: 1px solid #87302b;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-red:hover,
+.axtabs-event-red:focus {
+  background: #a93b3e;
+}
+.axtabs-event-red:active {
+  box-shadow: none;
+}
+.axtabs-event-red.on {
+  text-shadow: none;
+  color: #87302b;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-disabled {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Safari */
+  background-image: -o-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#d7d7d7, #d7d7d7);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d7d7d7, endColorstr=#d7d7d7);
+  /*For IE7-8-9*/
+  color: #eaeaea;
+  border: 1px solid #cccccc;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-disabled:hover,
+.axtabs-event-disabled:focus {
+  background: #d7d7d7;
+}
+.axtabs-event-disabled:active {
+  box-shadow: none;
+}
+.axtabs-event-disabled.on {
+  text-shadow: none;
+  color: #cccccc;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs {
+  position: relative;
+  min-height: 30px;
+  overflow: hidden;
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray {
+  background: url('images/dx-tab-bg.png');
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 30px;
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray .AXTabSplit {
+  display: none;
+}
+.AXTabs .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 26px;
+  min-width: 50px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 2px 0px 0px 2px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 12px;
+  color: #6e7a86;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabs .AXTabsTray .AXTab {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Safari */
+  background-image: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#fdfdfd, #e8e8e8);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fdfdfd, endColorstr=#e8e8e8);
+  /*For IE7-8-9*/
+  color: #6e7a85;
+  border: 1px solid #b9babc;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab:hover,
+.AXTabs .AXTabsTray .AXTab:focus {
+  background: #e8e8e8;
+}
+.AXTabs .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabs .AXTabsTray .AXTab.Classic {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c1cdd5, #98a4ae);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c1cdd5, endColorstr=#98a4ae);
+  /*For IE7-8-9*/
+  color: #ebf4f7;
+  border: 1px solid #81898e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Classic:hover,
+.AXTabs .AXTabsTray .AXTab.Classic:focus {
+  background: #98a4ae;
+}
+.AXTabs .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #81898e;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Blue {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#6faee1, #468ec9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#6faee1, #468ec9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#6faee1, #468ec9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#6faee1, #468ec9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6faee1, endColorstr=#468ec9);
+  /*For IE7-8-9*/
+  color: #d0ebfe;
+  border: 1px solid #3f80b1;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Blue:hover,
+.AXTabs .AXTabsTray .AXTab.Blue:focus {
+  background: #468ec9;
+}
+.AXTabs .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #3f80b1;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Green {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#98c87b, #79aa5a);
+  /* For Safari */
+  background-image: -o-linear-gradient(#98c87b, #79aa5a);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#98c87b, #79aa5a);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#98c87b, #79aa5a);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#98c87b, endColorstr=#79aa5a);
+  /*For IE7-8-9*/
+  color: #dffebe;
+  border: 1px solid #6a9751;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Green:hover,
+.AXTabs .AXTabsTray .AXTab.Green:focus {
+  background: #79aa5a;
+}
+.AXTabs .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #6a9751;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Red {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c65a5b, #a93b3e);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c65a5b, #a93b3e);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c65a5b, #a93b3e);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c65a5b, #a93b3e);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c65a5b, endColorstr=#a93b3e);
+  /*For IE7-8-9*/
+  color: #fcccc9;
+  border: 1px solid #87302b;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Red:hover,
+.AXTabs .AXTabsTray .AXTab.Red:focus {
+  background: #a93b3e;
+}
+.AXTabs .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #87302b;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab[disabled] {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Safari */
+  background-image: -o-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#d7d7d7, #d7d7d7);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d7d7d7, endColorstr=#d7d7d7);
+  /*For IE7-8-9*/
+  color: #eaeaea;
+  border: 1px solid #cccccc;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab[disabled]:hover,
+.AXTabs .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabs .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #cccccc;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 28px;
+  background: #fff;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 28px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge {
+  position: relative;
+  min-height: 46px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray {
+  background: url('images/dx-tab-bg-large.png');
+}
+.AXTabsLarge .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 46px;
+}
+.AXTabsLarge .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 40px;
+  min-width: 100px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 4px 0px 0px 4px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 14px;
+  color: #6e7a86;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Safari */
+  background-image: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#fdfdfd, #e8e8e8);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fdfdfd, endColorstr=#e8e8e8);
+  /*For IE7-8-9*/
+  color: #6e7a85;
+  border: 1px solid #b9babc;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab:hover,
+.AXTabsLarge .AXTabsTray .AXTab:focus {
+  background: #e8e8e8;
+}
+.AXTabsLarge .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c1cdd5, #98a4ae);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c1cdd5, endColorstr=#98a4ae);
+  /*For IE7-8-9*/
+  color: #ebf4f7;
+  border: 1px solid #81898e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Classic:focus {
+  background: #98a4ae;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #81898e;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#6faee1, #468ec9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#6faee1, #468ec9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#6faee1, #468ec9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#6faee1, #468ec9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6faee1, endColorstr=#468ec9);
+  /*For IE7-8-9*/
+  color: #d0ebfe;
+  border: 1px solid #3f80b1;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Blue:focus {
+  background: #468ec9;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #3f80b1;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#98c87b, #79aa5a);
+  /* For Safari */
+  background-image: -o-linear-gradient(#98c87b, #79aa5a);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#98c87b, #79aa5a);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#98c87b, #79aa5a);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#98c87b, endColorstr=#79aa5a);
+  /*For IE7-8-9*/
+  color: #dffebe;
+  border: 1px solid #6a9751;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Green:focus {
+  background: #79aa5a;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #6a9751;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c65a5b, #a93b3e);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c65a5b, #a93b3e);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c65a5b, #a93b3e);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c65a5b, #a93b3e);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c65a5b, endColorstr=#a93b3e);
+  /*For IE7-8-9*/
+  color: #fcccc9;
+  border: 1px solid #87302b;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Red:focus {
+  background: #a93b3e;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #87302b;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled] {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Safari */
+  background-image: -o-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#d7d7d7, #d7d7d7);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d7d7d7, endColorstr=#d7d7d7);
+  /*For IE7-8-9*/
+  color: #eaeaea;
+  border: 1px solid #cccccc;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:hover,
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #cccccc;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 44px;
+  background: #fff;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 44px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall {
+  position: relative;
+  min-height: 24px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray {
+  background: url('images/dx-tab-bg-small.png');
+}
+.AXTabsSmall .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 24px;
+}
+.AXTabsSmall .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 20px;
+  min-width: 60px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 2px 0px 0px 2px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 11px;
+  color: #6e7a86;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Safari */
+  background-image: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#fdfdfd, #e8e8e8);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fdfdfd, endColorstr=#e8e8e8);
+  /*For IE7-8-9*/
+  color: #6e7a85;
+  border: 1px solid #b9babc;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab:hover,
+.AXTabsSmall .AXTabsTray .AXTab:focus {
+  background: #e8e8e8;
+}
+.AXTabsSmall .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c1cdd5, #98a4ae);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c1cdd5, #98a4ae);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c1cdd5, endColorstr=#98a4ae);
+  /*For IE7-8-9*/
+  color: #ebf4f7;
+  border: 1px solid #81898e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Classic:focus {
+  background: #98a4ae;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #81898e;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#6faee1, #468ec9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#6faee1, #468ec9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#6faee1, #468ec9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#6faee1, #468ec9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6faee1, endColorstr=#468ec9);
+  /*For IE7-8-9*/
+  color: #d0ebfe;
+  border: 1px solid #3f80b1;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Blue:focus {
+  background: #468ec9;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #3f80b1;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#98c87b, #79aa5a);
+  /* For Safari */
+  background-image: -o-linear-gradient(#98c87b, #79aa5a);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#98c87b, #79aa5a);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#98c87b, #79aa5a);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#98c87b, endColorstr=#79aa5a);
+  /*For IE7-8-9*/
+  color: #dffebe;
+  border: 1px solid #6a9751;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Green:focus {
+  background: #79aa5a;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #6a9751;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#c65a5b, #a93b3e);
+  /* For Safari */
+  background-image: -o-linear-gradient(#c65a5b, #a93b3e);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#c65a5b, #a93b3e);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#c65a5b, #a93b3e);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c65a5b, endColorstr=#a93b3e);
+  /*For IE7-8-9*/
+  color: #fcccc9;
+  border: 1px solid #87302b;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Red:focus {
+  background: #a93b3e;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #87302b;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled] {
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Safari */
+  background-image: -o-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#d7d7d7, #d7d7d7);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#d7d7d7, #d7d7d7);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d7d7d7, endColorstr=#d7d7d7);
+  /*For IE7-8-9*/
+  color: #eaeaea;
+  border: 1px solid #cccccc;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:hover,
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #cccccc;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 22px;
+  background: #fff;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 22px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}

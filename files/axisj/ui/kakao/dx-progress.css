@@ -1,0 +1,183 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.AXprogressTray {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 5001;
+}
+.AXlineProgress .AXprogressTitle {
+  padding: 5px;
+  color: #513636;
+  text-shadow: 0px 1px 0px #fff;
+  font-size: 12px;
+  text-align: center;
+}
+.AXlineProgress .AXprogressCancel {
+  display: block;
+  position: absolute;
+  right: -30px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background: url('images/dx-dialog-close.png') no-repeat center center;
+  line-height: 10000px;
+  overflow: hidden;
+}
+.AXlineProgress .AXprogress {
+  position: relative;
+  padding: 5px 0px;
+}
+.AXlineProgress .AXprogress .AXprogressContainer {
+  background: #b3b3b3;
+  border-radius: 8px;
+}
+.AXlineProgress .AXprogress .AXprogressContainer .AXprogressBar {
+  position: relative;
+  height: 14px;
+  border: 1px solid #e9e9e9;
+  background: url('images/dx-progress-bar.png') repeat-x !important;
+  border-radius: 8px;
+}
+.AXlineProgress .AXprogress .AXprogressLoadedText {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  color: #513636;
+  text-shadow: 0px 1px 0px #fff;
+  font-size: 11px;
+  font-family: verdana;
+  white-space: nowrap;
+}
+.AXlineProgress .AXprogress .AXprogressLoadedText span {
+  padding-left: 5px;
+  font-size: 10px;
+}
+.AXCircleProgress .AXprogressTitle {
+  padding: 5px;
+  color: #513636;
+  text-shadow: 0px 1px 0px #fff;
+  font-size: 12px;
+  text-align: center;
+}
+.AXCircleProgress .AXprogressCancel {
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 24px;
+  height: 24px;
+  background: url('images/dx-dialog-close.png') no-repeat center center;
+  line-height: 10000px;
+  overflow: hidden;
+}
+.AXCircleProgress .AXprogress {
+  position: relative;
+  padding: 5px 0px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer {
+  position: relative;
+  height: 66px;
+  width: 66px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar {
+  position: relative;
+  height: 66px;
+  width: 66px;
+  background: url('images/dx-progress-circle.png') no-repeat;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent5 {
+  background-position: 0px -66px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent10 {
+  background-position: 0px -132px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent15 {
+  background-position: 0px -198px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent20 {
+  background-position: 0px -264px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent25 {
+  background-position: 0px -330px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent30 {
+  background-position: 0px -396px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent35 {
+  background-position: 0px -462px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent40 {
+  background-position: 0px -528px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent50 {
+  background-position: 0px -594px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent55 {
+  background-position: 0px -660px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent60 {
+  background-position: 0px -726px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent65 {
+  background-position: 0px -792px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent70 {
+  background-position: 0px -858px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent75 {
+  background-position: 0px -924px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent80 {
+  background-position: 0px -990px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent85 {
+  background-position: 0px -1056px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent90 {
+  background-position: 0px -1122px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent95 {
+  background-position: 0px -1188px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressBar.percent100 {
+  background-position: 0px -1254px;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressLoadedText {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 66px;
+  height: 66px;
+  text-align: center;
+  line-height: 60px;
+  color: #513636;
+  text-shadow: 0px 1px 0px #fff;
+  font-size: 15px;
+  font-family: verdana;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.AXCircleProgress .AXprogress .AXprogressContainer .AXprogressLoadedText span {
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  width: 66px;
+  line-height: 20px;
+  font-size: 10px;
+}

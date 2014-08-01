@@ -1,0 +1,152 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.AXInputLabel {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.AXInputLabel SPAN {
+  display: block;
+  line-height: 24px;
+  font-size: 12px;
+  color: #593629;
+  padding: 0px 3px;
+}
+.AXInputLabel.fullWidth {
+  display: block;
+  padding-right: 8px;
+}
+.AXInputLabel.fullWidth SPAN {
+  display: block;
+}
+.AXInputLabel.fullWidth input[type=text],
+.AXInputLabel.fullWidth input[type=password] {
+  width: 100%;
+  box-size: border-box;
+}
+.AXNotification {
+  width: 280px;
+  border: 2px solid #99847e;
+  background: #ffffff;
+  padding: 10px;
+  margin: 10px 0px;
+  box-shadow: 0px 0px 3px #b2b2b2;
+  font-size: 12px;
+  color: #525252;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px 5px 5px 5px;
+  -moz-border-radius: 4px 5px 5px 5px;
+  border-radius: 4px 5px 5px 5px;
+}
+.AXNotification.Warning .AXNotificationIcon {
+  width: 42px;
+  height: 42px;
+  background: url('images/dx-noti-warning.png') no-repeat center center !important;
+}
+.AXNotification.Warning .AXNotificationBody B {
+  color: #bf601b;
+}
+.AXNotification.Caution .AXNotificationIcon {
+  width: 42px;
+  height: 42px;
+  background: url('images/dx-noti-caution.png') no-repeat center center !important;
+}
+.AXNotification.Caution .AXNotificationBody B {
+  color: #c25c5f;
+}
+.AXNotification .AXNotificationHead {
+  font-weight: bold;
+  color: #58362a;
+  text-shadow: 0px 1px #fff;
+  padding: 5px 15px;
+  height: 20px;
+  line-height: 20px;
+  background: #ccc2be url('images/dx-dialog-title.png') repeat-x;
+  text-align: center;
+}
+.AXNotification .AXNotificationTable {
+  width: 100%;
+  border: 0px none !important;
+  background: #ffffff;
+}
+.AXNotification .AXNotificationTable td,
+.AXNotification .AXNotificationTable th {
+  border: 0px none !important;
+  background: #ffffff;
+}
+.AXNotification .AXNotificationIcon {
+  width: 42px;
+  height: 42px;
+  background: url('images/dx-noti-complete.png') no-repeat center 5px !important;
+}
+.AXNotification .AXNotificationBody {
+  font-size: 12px;
+  color: #525252;
+  padding-right: 5px;
+  line-height: 1.6em;
+}
+.AXNotification .AXNotificationBody B {
+  color: #99847e;
+}
+.AXNotification .AXNotificationButton {
+  width: 45px;
+}
+.AXNotification .AXNotificationButtons {
+  padding: 10px 0px;
+  text-align: center;
+  background: #ffffff;
+}
+.AXNotificationTray {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 5001;
+  width: 310px;
+}
+.AXNotificationTrayDialog {
+  position: fixed;
+  left: 0px;
+  top: 50px;
+  width: 100%;
+  z-index: 5001;
+}
+.AXNotificationTrayDialog .AXNotification {
+  width: 280px;
+  border: 2px solid #99847e;
+  background: #ffffff;
+  padding: 0px;
+  margin: 0px auto;
+  box-shadow: 0px 0px 3px #888;
+  font-size: 12px;
+  color: #525252;
+  overflow: hidden;
+  -moz-opacity: 1;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px 5px 5px 5px;
+  -moz-border-radius: 4px 5px 5px 5px;
+  border-radius: 4px 5px 5px 5px;
+}
+.AXNotificationTrayDialog .AXNotification .AXNotificationCT {
+  padding: 10px;
+}

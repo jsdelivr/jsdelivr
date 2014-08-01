@@ -1,0 +1,868 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.axtabs-style-normal {
+  background: #ffea00;
+  color: #493334;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-style-disabled {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-normal {
+  background: #ffea00;
+  color: #493334;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-normal:hover,
+.axtabs-event-normal:focus {
+  background: #493334;
+  color: #ffea00;
+}
+.axtabs-event-normal:active {
+  box-shadow: none;
+}
+.axtabs-event-normal.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-normal.on:hover {
+  color: #523636;
+}
+.axtabs-event-classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-classic:hover,
+.axtabs-event-classic:focus {
+  background: #493334;
+}
+.axtabs-event-classic:active {
+  box-shadow: none;
+}
+.axtabs-event-classic.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-blue:hover,
+.axtabs-event-blue:focus {
+  background: #f7f7f7;
+}
+.axtabs-event-blue:active {
+  box-shadow: none;
+}
+.axtabs-event-blue.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-green:hover,
+.axtabs-event-green:focus {
+  background: #0dc5b9;
+}
+.axtabs-event-green:active {
+  box-shadow: none;
+}
+.axtabs-event-green.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-red:hover,
+.axtabs-event-red:focus {
+  background: #ff5b49;
+}
+.axtabs-event-red:active {
+  box-shadow: none;
+}
+.axtabs-event-red.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.axtabs-event-disabled {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.axtabs-event-disabled:hover,
+.axtabs-event-disabled:focus {
+  background: #d7d7d7;
+}
+.axtabs-event-disabled:active {
+  box-shadow: none;
+}
+.axtabs-event-disabled.on {
+  text-shadow: none;
+  color: #eaeaea;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs {
+  position: relative;
+  min-height: 30px;
+  overflow: hidden;
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray {
+  background: url('images/dx-tab-bg.png');
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 30px;
+  box-sizing: content-box !important;
+}
+.AXTabs .AXTabsTray .AXTabSplit {
+  display: none;
+}
+.AXTabs .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 26px;
+  min-width: 50px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 2px 0px 0px 2px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 12px;
+  color: #6e7a86;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabs .AXTabsTray .AXTab {
+  background: #ffea00;
+  color: #493334;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab:hover,
+.AXTabs .AXTabsTray .AXTab:focus {
+  background: #493334;
+  color: #ffea00;
+}
+.AXTabs .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.on:hover {
+  color: #523636;
+}
+.AXTabs .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabs .AXTabsTray .AXTab.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Classic:hover,
+.AXTabs .AXTabsTray .AXTab.Classic:focus {
+  background: #493334;
+}
+.AXTabs .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Blue:hover,
+.AXTabs .AXTabsTray .AXTab.Blue:focus {
+  background: #f7f7f7;
+}
+.AXTabs .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Green:hover,
+.AXTabs .AXTabsTray .AXTab.Green:focus {
+  background: #0dc5b9;
+}
+.AXTabs .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab.Red:hover,
+.AXTabs .AXTabsTray .AXTab.Red:focus {
+  background: #ff5b49;
+}
+.AXTabs .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .AXTab[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabs .AXTabsTray .AXTab[disabled]:hover,
+.AXTabs .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabs .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabs .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #eaeaea;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 28px;
+  background: #fff;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 28px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabs .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge {
+  position: relative;
+  min-height: 46px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray {
+  background: url('images/dx-tab-bg-large.png');
+}
+.AXTabsLarge .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 46px;
+}
+.AXTabsLarge .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 40px;
+  min-width: 100px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 4px 0px 0px 4px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 14px;
+  color: #6e7a86;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab {
+  background: #ffea00;
+  color: #493334;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab:hover,
+.AXTabsLarge .AXTabsTray .AXTab:focus {
+  background: #493334;
+  color: #ffea00;
+}
+.AXTabsLarge .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.on:hover {
+  color: #523636;
+}
+.AXTabsLarge .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Classic:focus {
+  background: #493334;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Blue:focus {
+  background: #f7f7f7;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Green:focus {
+  background: #0dc5b9;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red:hover,
+.AXTabsLarge .AXTabsTray .AXTab.Red:focus {
+  background: #ff5b49;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:hover,
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabsLarge .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #eaeaea;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 44px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 44px;
+  background: #fff;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 44px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsLarge .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall {
+  position: relative;
+  min-height: 24px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray {
+  background: url('images/dx-tab-bg-small.png');
+}
+.AXTabsSmall .AXTabsTray .trayScroll {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 24px;
+}
+.AXTabsSmall .AXTabsTray .AXTab {
+  display: block;
+  float: left;
+  cursor: pointer;
+  height: 20px;
+  min-width: 60px;
+  padding: 0px 10px;
+  box-sizing: content-box !important;
+  margin: 2px 0px 0px 2px;
+  border: 1px solid #b9babc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 11px;
+  color: #6e7a86;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab {
+  background: #ffea00;
+  color: #493334;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab:hover,
+.AXTabsSmall .AXTabsTray .AXTab:focus {
+  background: #493334;
+  color: #ffea00;
+}
+.AXTabsSmall .AXTabsTray .AXTab:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.on {
+  text-shadow: none;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.on:hover {
+  color: #523636;
+}
+.AXTabsSmall .AXTabsTray .AXTab:first-child {
+  margin-left: 5px;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic {
+  background: #493334;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Classic:focus {
+  background: #493334;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Classic.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue {
+  background: #f7f7f7;
+  color: #959595;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Blue:focus {
+  background: #f7f7f7;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Blue.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green {
+  background: #0dc5b9;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Green:focus {
+  background: #0dc5b9;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Green.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red {
+  background: #ff5b49;
+  color: #ffffff;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red:hover,
+.AXTabsSmall .AXTabsTray .AXTab.Red:focus {
+  background: #ff5b49;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab.Red.on {
+  text-shadow: none;
+  color: #493334;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled] {
+  background: #d7d7d7;
+  color: #eaeaea;
+  border: none;
+  box-shadow: none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:hover,
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled]:active {
+  box-shadow: none;
+}
+.AXTabsSmall .AXTabsTray .AXTab[disabled].on {
+  text-shadow: none;
+  color: #eaeaea;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-left-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .leftArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-left-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox {
+  position: absolute;
+  right: 24px;
+  top: 1px;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox .tabArrow {
+  display: block;
+  width: 29px;
+  height: 22px;
+  background: url('images/dx-right-arrows-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .rightArrowHandleBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 24px;
+  height: 22px;
+  background: #fff;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox .tabArrow {
+  display: block;
+  width: 24px;
+  height: 22px;
+  background: url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.AXTabsSmall .AXTabsTray .rightArrowMoreBox .tabArrow:hover {
+  background: url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+}

@@ -1,0 +1,314 @@
+@import "preset";
+@import "AXUtils";
+
+
+// AXTabs Style ///////////////////////////////////////////////////
+.axtabs-style-normal{
+	.dx-axtabs-preset-normal();
+	background: @bgcolor-a;
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+	.util-border-radius (4px, 4px, 0, 0);
+}
+.axtabs-style-classic{
+	.dx-axtabs-preset-classic();
+	background: @bgcolor-a;
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	.util-border-radius (4px, 4px, 0, 0);
+}
+.axtabs-style-blue{
+	.dx-axtabs-preset-blue();
+	background: @bgcolor-a;	
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	.util-border-radius (4px, 4px, 0, 0);
+}
+.axtabs-style-green{
+	.dx-axtabs-preset-green();
+	background: @bgcolor-a;	
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px -1px 0px rgba(0,0,0,0.25);	
+	.util-border-radius (4px, 4px, 0, 0);
+}
+.axtabs-style-red{
+	.dx-axtabs-preset-red();
+	background: @bgcolor-a;	
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px -1px 0px rgba(0,0,0,0.25);	
+	.util-border-radius (4px, 4px, 0, 0);
+}
+.axtabs-style-disabled{
+	.dx-axtabs-preset-disabled();
+	background: @bgcolor-a;	
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	border:@border;
+	//text-shadow: 0px -1px 0px rgba(0,0,0,0.10);	
+	box-shadow: none;
+	.util-border-radius (4px, 4px, 0, 0);
+}
+
+// AXTabs Events ///////////////////////////////////////////////////
+.axtabs-event-normal{
+	&				{.axtabs-style-normal;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-normal();
+		background: @bgcolor-b;	
+		color:@color-a;
+	}
+	&:active		{
+		box-shadow: none;
+	}
+	&.on{
+		text-shadow:none;
+		background:#fff; border-bottom:1px solid #fff;
+		&:hover{
+			color:@color; 
+		}
+	}			
+}
+
+.axtabs-event-classic{
+	&				{.axtabs-style-classic;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-classic();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}
+	&.on{
+		.dx-axtabs-preset-classic();
+		text-shadow:none;		
+		color:@color-a;	
+		background:#fff; border-bottom:1px solid #fff;
+	}					
+}
+
+.axtabs-event-blue{
+	&				{.axtabs-style-blue;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-blue();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+	&.on{
+		.dx-axtabs-preset-blue();
+		text-shadow:none;		
+		color:@color-a;	
+		background:#fff; border-bottom:1px solid #fff;
+	}				
+}
+
+.axtabs-event-green{
+	&				{.axtabs-style-green;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-green();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}
+	&.on{
+		.dx-axtabs-preset-green();
+		text-shadow:none;		
+		color:@color-a;	
+		background:#fff; border-bottom:1px solid #fff;
+	}					
+}
+
+.axtabs-event-red{
+	&				{.axtabs-style-red;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-red();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+	&.on{
+		.dx-axtabs-preset-red();
+		text-shadow:none;		
+		color:@color-a;	
+		background:#fff; border-bottom:1px solid #fff;
+	}				
+}
+
+.axtabs-event-disabled{
+	&				{.axtabs-style-disabled;}
+	&:hover, &:focus{
+		.dx-axtabs-preset-disabled();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}
+	&.on{
+		.dx-axtabs-preset-disabled();
+		text-shadow:none;		
+		color:@color-a;	
+		background:#fff; border-bottom:1px solid #fff;
+	}					
+}
+
+
+// AXTabs Component ///////////////////////////////////////////////////
+.AXTabs {
+	position:relative;min-height:30px;
+	overflow:hidden;
+	box-sizing:content-box !important;
+	.AXTabsTray{
+		background:url('images/dx-tab-bg.png');
+		box-sizing:content-box !important;	
+		.trayScroll{
+			position:absolute; 
+			left:0px;top:0px;
+			height:30px;
+			box-sizing:content-box !important;		
+		}
+		.AXTabSplit{
+			display:none;
+		}
+		.AXTab{
+			.axtabs-unit-tab;
+			&.Classic		{.axtabs-event-classic;}
+			&.Blue			{.axtabs-event-blue;}
+			&.Green			{.axtabs-event-green;}		
+			&.Red			{.axtabs-event-red;}
+			&[disabled]		{.axtabs-event-disabled;}		
+			
+		}
+		.leftArrowHandleBox		{.axtabs-unit-left}		
+		.rightArrowHandleBox	{.axtabs-unit-right}				
+		.rightArrowMoreBox		{.axtabs-unit-more}
+	}	
+}
+
+.AXTabsLarge{
+	position:relative;min-height:46px;
+	overflow:hidden;
+	.AXTabsTray{
+		background:url('images/dx-tab-bg-large.png');
+		.trayScroll{
+			position:absolute;
+			left:0px;top:0px;
+			height:46px;
+		}
+		.AXTab{
+			.axtabs-unit-tab(40px, 100px, 14px, 4px);
+			&.Classic		{.axtabs-event-classic;}
+			&.Blue			{.axtabs-event-blue;}
+			&.Green			{.axtabs-event-green;}		
+			&.Red			{.axtabs-event-red;}
+			&[disabled]		{.axtabs-event-disabled;}		
+			
+		}
+		.leftArrowHandleBox		{.axtabs-unit-left(44px)}		
+		.rightArrowHandleBox	{.axtabs-unit-right(44px)}				
+		.rightArrowMoreBox		{.axtabs-unit-more(44px)}
+	}
+}
+
+.AXTabsSmall{
+	position:relative;min-height:24px;
+	overflow:hidden;
+	.AXTabsTray{
+		background:url('images/dx-tab-bg-small.png');
+		.trayScroll{
+			position:absolute;
+			left:0px;top:0px;
+			height:24px;
+		}
+		.AXTab{
+			.axtabs-unit-tab(20px, 60px, 11px, 2px);
+			&.Classic		{.axtabs-event-classic;}
+			&.Blue			{.axtabs-event-blue;}
+			&.Green			{.axtabs-event-green;}		
+			&.Red			{.axtabs-event-red;}
+			&[disabled]		{.axtabs-event-disabled;}		
+			
+		}
+		.leftArrowHandleBox		{.axtabs-unit-left(22px)}		
+		.rightArrowHandleBox	{.axtabs-unit-right(22px)}				
+		.rightArrowMoreBox		{.axtabs-unit-more(22px)}
+	}
+}
+
+.axtabs-unit-tab(@height:26px, @min-width:50px, @font-size:12px, @margin:2px){
+	//Default Horzonntal 
+	display:block;float:left;
+	cursor:pointer;
+	height:@height;min-width:@min-width;
+	padding:0px 10px;
+	box-sizing:content-box !important;
+	margin:@margin 0px 0px @margin;
+	border:1px solid #b9babc;
+	border-top-left-radius:4px;border-top-right-radius:4px;
+	font-size:@font-size;color:#6e7a86;line-height:@height; text-align:center;
+	text-decoration:none;
+	outline:none;
+	& {.axtabs-event-normal;}
+	&:first-child{margin-left:5px;}
+}
+
+.axtabs-unit-left(@height:28px){
+	position:absolute;
+	left:0px;top:1px;
+	width:29px;height:@height;
+	background:url('images/dx-left-arrows-bg.png') repeat-y 0px 0px;
+	.tabArrow{
+		display:block;width:29px;height:@height;
+		background:url('images/dx-left-arrows-01.png') no-repeat 50%;
+		text-indent:-1000px;overflow:hidden;
+		&:hover{
+			background:url('images/dx-left-arrows-01-r.png') no-repeat 50%;	
+		}
+	}
+}
+
+.axtabs-unit-right(@height:28px){
+	position:absolute;
+	right:24px;top:1px;
+	width:29px;height:@height;
+	background:url('images/dx-right-arrows-bg.png') repeat-y 100% 0px;	
+	.tabArrow{
+		display:block;width:29px;height:@height;
+		background:url('images/dx-right-arrows-01.png') no-repeat 50%;
+		text-indent:-1000px;overflow:hidden;
+		&:hover{
+			background:url('images/dx-right-arrows-01-r.png') no-repeat 50%;
+		}
+	}	
+}
+
+.axtabs-unit-more(@height:28px){
+	position:absolute;
+	right:0px;top:1px;
+	width:24px;height:@height;
+	background:#fff;	
+	.tabArrow{
+		display:block;width:24px;height:@height;
+		background:url('images/dx-right-arrows-more-01.png') no-repeat 50%;
+		text-indent:-1000px;overflow:hidden;
+		&:hover{
+			background:url('images/dx-right-arrows-more-01-r.png') no-repeat 50%;
+		}
+	}	
+}
+
+
+
+

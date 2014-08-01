@@ -1,0 +1,560 @@
+@import "preset";
+@import "AXUtils";
+
+// AXInput ///////////////////////////////////////////////////
+.AXanchor{
+	position:absolute;height:0px;left:0px;top:0px;
+	display:none;
+	vertical-align:middle;
+}
+.AXInput{
+	.dx-axinput-preset-normal();
+	border:@border;
+	background:@bgcolor;
+	color:@color;
+	box-shadow:inset 0px 1px 2px #dddddd;
+	.util-border-radius(@radius);
+	font-size:12px;line-height:15px;height:15px;
+	padding:4px;
+	margin:0px auto;
+	vertical-align: middle;
+	&:focus{
+		border:@border-a;
+		box-shadow:inset 0px 0px 3px #949fa8;
+		outline:none;
+		color:@color-a;
+	}
+	&[disabled]{
+		background:url('images/dx-default-regular.png') repeat-x;
+		background-position:0px -78px;
+		color:@color-b;text-shadow:0px -1px #b7b7b7;
+		box-shadow:inset 0px 1px 2px #b1b1b1;
+	}
+	&[readonly]{
+		background:#eee;
+		color:@color-c;text-shadow:0px 1px #fff;
+		box-shadow:inset 0px 1px 2px #b1b1b1;
+	}
+	&::-webkit-input-placeholder	{color:@color-d;}
+	&::-moz-placeholder				{color:@color-d;}
+	&:-ms-input-placeholder			{color:@color-d;}
+
+	&.Round{
+		.util-border-radius(@radius-a, @radius-a, @radius-a, @radius-a);
+	}
+}
+
+.AXInputSmall{
+	.dx-axinput-preset-normal();
+	border:@border;
+	background:@bgcolor;	
+	color:@color;
+	box-shadow:inset 0px 1px 1px #dddddd;
+	.util-border-radius(4px);
+	font-size:12px;line-height:12px;height:12px;
+	padding:3px 3px;
+	margin:0px auto;
+	vertical-align: middle;	
+	&:focus{
+		border:@border-a;
+		box-shadow:inset 0px 0px 3px #949fa8;
+		outline:none;		
+		color:@color-a;
+	}
+	&[disabled]{
+		background:url('images/dx-default-small.png') repeat-x;
+		background-position:0px -60px;
+		color:@color-b;text-shadow:0px -1px #b7b7b7;
+		box-shadow:inset 0px 1px 2px #b1b1b1;
+	}	
+	&[readonly]{
+		background:#eee;
+		color:@color-c;text-shadow:0px 1px #fff;
+		box-shadow:inset 0px 1px 2px #b1b1b1;
+	}
+	&::-webkit-input-placeholder	{color:@color-d;}
+	&::-moz-placeholder				{color:@color-d;}
+	&:-ms-input-placeholder			{color:@color-d;}
+
+	&.Round{
+		.util-border-radius(@radius-a, @radius-a, @radius-a, @radius-a);
+	}
+}
+
+// AXCheckbox ///////////////////////////////////////////////////
+.AXCheckbox{
+	position:relative;display:inline-block;
+	height:26px;line-height:26px;
+	padding:1px 0 0 30px;margin:0 0px 0 0;
+	font-weight:normal;vertical-align:top;white-space:nowrap;cursor:pointer;
+	overflow:hidden;
+	background:url('images/dx-checkbox.png') no-repeat left 0px;
+	vertical-align: middle;	
+	&.checked{
+		background-position:left -26px;
+	}
+	input[type="checkbox"]{
+		position:absolute;left:-56px;
+	}
+}
+
+
+// AXInputLabel ///////////////////////////////////////////////////
+.AXInputLabel{
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+    box-sizing: border-box;
+	span{
+		line-height:24px;font-size:12px;color:#717b85;
+		padding:0px 3px;
+		&.bloack{
+			display:block;
+		}
+	}
+	&.fullWidth{
+		display:block;
+		padding-right:10px;
+		span{
+			display:block;			
+		}
+		input[type=text],input[type=password]{
+			width:100%;	
+		}
+	}
+	
+}
+
+// AXInputGroup ///////////////////////////////////////////////////
+.AXInputGroup{
+	position:relative;
+	border:1px solid #b6b6b6;background:#fff;
+	box-shadow:inset 0px 1px 2px #dddddd;
+	.util-border-radius(4px);
+	padding:0px 0px 0px 4px;
+	display:block;
+	&.inline{
+		display:inline-block;
+		*display:inline;
+		*margin-right:3px;
+		input[type=text], input[type=password]{
+			*width:auto;			
+		}
+	}
+	input[type=text],input[type=password]{
+		border:0px none;padding:0px;
+		width:100%;
+		padding:4px 0px;
+		font-size:12px;line-height:15px;height:15px;
+		background:none;
+	}
+}
+
+// AXbindPlaceHolder ///////////////////////////////////////////////////
+.AXanchorPlaceHolder{
+	position:absolute;
+	display:block;
+	width:18px;height:18px;
+	white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+	color:#888;text-decoration:none;line-height:100%;
+	text-indent:7px;
+	cursor:text;
+}
+
+// AXbindSearch ///////////////////////////////////////////////////
+.AXanchorSearch{
+	position:absolute;
+	display:block;
+	background:url('images/dx-delete-value.png') center center no-repeat;
+	width:18px;height:18px;
+	overflow:hidden;text-indent:-2000px;
+}
+
+// AXbindNumber ///////////////////////////////////////////////////
+.AXanchorNumberContainer{
+	position:absolute;
+	width:18px;height:18px;
+	overflow:hidden;
+	background:url('images/dx-default-regular.png') repeat-x;
+	border:1px solid #b9babc;border-top-right-radius:4px;border-bottom-right-radius:4px;
+	overflow:hidden;
+	.AXanchorIncrease{
+		position:absolute;
+		display:block;
+		background:url('images/dx-up-arrow.png') center center no-repeat;
+		*background-position: center 2px;
+		width:18px;height:18px;
+		overflow:hidden;text-indent:-2000px;
+		border-bottom:1px solid #b9babc;
+		&:active{
+			background-image:url('images/dx-up-arrow-on.png');
+		}
+	}	
+	.AXanchorDecrease{
+		position:absolute;
+		display:block;
+		background:url('images/dx-down-arrow.png') center center no-repeat;
+		*background-position: center 2px;
+		width:18px;height:18px;
+		overflow:hidden;text-indent:-2000px;
+		border-top:1px solid #b9babc;
+		&:active{
+			background-image:url('images/dx-down-arrow-on.png');
+		}
+	}
+}
+
+
+
+
+// AXbindSelector ///////////////////////////////////////////////////
+.AXanchorSelectorHandleContainer{
+	.dx-axinput-preset-selector();
+	position:absolute;
+	width:18px;height:18px;
+	background:url('images/dx-default-regular.png') repeat-x;
+	border:@border;
+	border-top-right-radius:@radius;
+	border-bottom-right-radius:@radius;
+	.AXanchorSelectorHandle{
+		position:absolute;
+		width:18px;height:18px;
+		background:url('images/dx-slide-down-arrow.png') center center no-repeat;
+		overflow:hidden;text-indent:-2000px;
+		&.on{
+			background:url('images/dx-slide-up-arrow.png') center center no-repeat;
+		}
+	}
+
+	
+}
+
+.AXanchorSelectorFinderContainer{
+	.dx-axinput-preset-selector();
+	position:absolute;
+	width:18px;height:18px;
+	background:url('images/dx-default-regular.png') repeat-x;
+	border:@border;
+	.AXanchorSelectorFinder{
+		position:absolute;
+		width:18px;height:18px;
+		background:url('images/dx-selector-search.png') center center no-repeat;
+		overflow:hidden;text-indent:-2000px;
+		&.on{
+			background:url('images/dx-selector-search.png') center center no-repeat;
+		}
+	}
+	
+}
+
+
+//Select에 이벤트가 발생하여 생성되는 경우 필요한 개체로 컴포넌트 컨테이너에 포함되지 않는다. 최상위
+.AXanchorSelectorExpandBox{
+	position:absolute !important;left:0px;top:0px;
+	border:1px solid #b9babc;border-radius:4px;
+	background:#fff;
+	box-shadow:0px 1px #e9eced;
+	overflow:hidden !important;
+	.AXanchorSelectorExpandScroll{
+		padding:2px 0px;	
+	}
+	a{
+		display:block;padding:3px 8px;
+		font-size:12px;line-height:20px;color:#888888;text-decoration:none;
+		border-bottom:1px solid #d8d9db;background:#fff;
+		&.on{
+			background:#d7dde3;			
+		}
+		&:hover{
+			background:#5ea3db;color:#fff;
+		}
+		span{
+			color:#aaa;
+			padding-left:7px;
+		}
+	}
+	.empty{
+		display:block;padding:3px 8px;
+		font-size:12px;line-height:20px;color:#888888;text-decoration:none;
+		border-bottom:1px solid #d8d9db;background:#fff;
+	}	
+	
+	
+}
+
+.AXanchorSliderBox{
+	.dx-axinput-preset-slider();
+	position:absolute;left:0px;top:-3px;	
+	.AXanchorSliderMinTitle{
+		position:absolute;left:0px;bottom:3px;display:block;
+		text-decoration:none;color:@color;text-align:left;font-size:11px;line-height:14px;font-family:Arial;
+	}
+	.AXanchorSliderMaxTitle{
+		position:absolute;right:0px;bottom:3px;display:block;
+		text-decoration:none;color:@color;text-align:right;font-size:11px;line-height:14px;font-family:Arial;
+	}
+	.AXanchorSliderBar{
+		position:absolute;left:0px;top:0px;
+		background:@bgcolor;height:4px;border-radius:@radius;
+	}
+	.AXanchorSliderBarInside{
+		position:absolute;left:0px;top:0px;
+		background:@bgcolor-a;height:4px;border-radius:@radius;
+	}
+	.AXanchorSliderHandle{
+		position:absolute;left:0px;top:-16px;
+		width:24px;height:30px;
+		background:url('images/dx-slide-handle.png') no-repeat;
+		text-indent:-1000px;overflow:hidden;
+	}
+	.AXanchorSliderHandle:active{
+		background:url('images/dx-slide-handle.png') no-repeat 0px -30px;
+	}
+	.AXanchorSliderHandleTitle{
+		position:absolute;left:0px;bottom:-22px;
+		display:block;
+		text-decoration:none;color:@color-a;text-align:center;font-size:11px;font-family:@font-family;
+	}
+	.AXanchorSliderHandleMin{
+		position:absolute;left:0px;top:-8px;
+		width:15px;height:20px;
+		background:url('images/dx-slider-handle-min.png') no-repeat;
+		text-indent:-1000px;overflow:hidden;
+	}
+	.AXanchorSliderHandleMin:active{
+		--background:url('images/dx-slider-handle-min.png') no-repeat 0px -30px;
+	}
+	.AXanchorSliderHandleMinTitle{
+		position:absolute;left:0px;bottom:-25px;
+		display:block;
+		text-decoration:none;color:#444;text-align:right;font-size:11px;font-family:Arial;
+	}
+	.AXanchorSliderHandleMax{
+		position:absolute;left:0px;top:-8px;
+		width:15px;height:20px;
+		background:url('images/dx-slider-handle-max.png') no-repeat;
+		text-indent:-1000px;overflow:hidden;
+	}
+	.AXanchorSliderHandleMax:active{
+		--background:url('images/dx-slider-handle-max.png') no-repeat 0px -30px;
+	}
+	.AXanchorSliderHandleMaxTitle{
+		position:absolute;left:0px;bottom:-25px;
+		display:block;
+		text-decoration:none;color:#444;font-size:11px;font-family:Arial;
+	}	
+	
+
+}
+
+
+// AXbindDate ///////////////////////////////////////////////////
+.AXanchorDate{
+	position:absolute;
+	display:block;
+	background:url('images/dx-calendar-handle.png') center center no-repeat;
+	width:21px;height:18px;
+	overflow:hidden;text-indent:-2000px;
+}
+
+.AXanchorDateExpandBox{
+	position:absolute;left:0px;top:0px;	
+}
+
+// AXanchorSwitch ///////////////////////////////////////////////////
+
+
+.AXanchorSwitchBox{
+	.dx-axinput-preset-switch();
+	position:absolute;left:0px;top:0px;height:22px;
+	border:@border;
+	background:@bgcolor;
+	box-shadow:inset 0px 1px 2px #dddddd;
+	border-radius:@radius;
+	padding:0px;margin:0px;
+	outline:none;
+	.AXanchorSwitchDisplay{
+		text-align:center;padding-left:18px;
+		font-family:Arial;font-size:11px;
+		color:@color;line-height:22px;
+		white-space:nowrap;overflow:hidden;
+	}
+	.AXanchorSwitchHandle{
+		position:absolute;left:1px;top:0px;
+		display:block;
+		width:22px;height:21px;
+		background:url('images/dx-switch.png') no-repeat 0px center;
+		text-indent:-1000px;overflow:hidden;
+	}
+	&.on{
+		position:absolute;left:0px;top:0px;
+		border:@border-a;
+		background:@bgcolor-a;box-shadow:inset 0px 1px 2px #828282;
+		padding:0px;margin:0px;
+		outline:none;
+		.AXanchorSwitchDisplay{
+			text-align:center;padding-left:0px;padding-right:18px;
+			font-size:11px;color:@color-a;
+			text-shadow:0px -1px #8b969d;
+			white-space:nowrap;overflow:hidden;
+		}
+		.AXanchorSwitchHandle{
+			position:absolute;left:auto;right:1px;top:0px;
+			display:block;
+			width:22px;height:21px;
+			background:url('images/dx-switch.png') no-repeat -60px center;
+			text-indent:-1000px;overflow:hidden;
+		}
+	}
+}
+
+// AXanchorSegment ///////////////////////////////////////////////////
+.AXanchorSegmentBox{
+	.dx-axinput-preset-segments();
+	position:absolute;left:0px;top:0px;
+	padding:0px;margin:0px;
+	.AXanchorSegmentHandle{
+		cursor:pointer;display:block;float:left;
+		padding:0px;
+		margin:0px;
+		border-top:@border;border-left:@border;border-bottom:@border;
+		font-size:12px;
+		color:@color;
+		text-align:center;text-decoration:none;
+		.util-gradient(top,@bgcolor-a,@bgcolor-b);
+		.util-text-ellipsis();
+		&:hover, &:focus{
+			.util-gradient(top,@bgcolor-c,@bgcolor-d);
+			text-shadow:0px 1px #fff;
+		}
+		&.segmentLeft{
+			border-top-left-radius:@radius;border-bottom-left-radius:@radius;	
+		}
+		&.segmentRight{
+			border-right:@border;
+			border-top-right-radius:@radius;border-bottom-right-radius:@radius;
+		}
+		&.on{
+			.util-gradient(top,@bgcolor-e,@bgcolor-f);
+			color:@color-a;
+			text-shadow:0px 1px #4e585f;
+		}
+	}
+}
+
+// AXanchorSegment ///////////////////////////////////////////////////
+.AXanchorDateHandle{
+	position:absolute;
+	display:block;
+	background:url('images/dx-calendar-handle.png') center center no-repeat;
+	width:21px;height:20px;
+	overflow:hidden;text-indent:-2000px;
+}
+
+.AXbindDateExpandBox{
+	.dx-axinput-preset-date();
+	position:absolute;left:0px;top:0px;
+	padding:5px;
+	background:url('images/dx-calendar-box-bg.png');
+	border:@border;border-radius:@radius;
+	box-shadow:0px 1px 3px #ccc;
+	.dateControlBox{
+		position:relative;
+		width:181px;height:26px;
+		background:url('images/dx-calendar-bgs.png') repeat-x;
+		border:@border-a;
+		.prevbutton{
+			position:absolute;left:0px;top:0px;width:26px;height:26px;
+			display:block;text-indent:-1000px;overflow:hidden;
+			background:url('images/dx-prev-arrow.png') no-repeat;
+			&:hover{
+				background:url('images/dx-prev-arrow.png') no-repeat 0px -26px;				
+			}
+		}
+		.nextbutton{
+			position:absolute;right:0px;top:0px;width:26px;height:26px;
+			display:block;text-indent:-1000px;overflow:hidden;
+			background:url('images/dx-next-arrow.png') no-repeat;
+			&:hover{
+				background:url('images/dx-next-arrow.png') no-repeat 0px -26px;				
+			}
+		}
+		.yearbutton{
+			position:absolute;left:55px;top:0px;
+			text-decoration:none;color:@color;line-height:26px;
+			font-family:Arial;font-size:12px;text-shadow:0px -1px #869198;
+		}
+		.monthbutton{
+			position:absolute;left:100px;top:0px;	
+			text-decoration:none;color:@color;line-height:26px;
+			font-family:Arial;font-size:12px;text-shadow:0px -1px #869198;
+		}
+	}
+	.dateDisplayBox{
+		background:@bgcolor;border:@border-b;border-top:0px none;
+		width:181px;
+	}
+	.timeDisplayBox{
+		padding-top:10px;
+		height:120px;
+	}
+}
+
+
+	
+.AXbindTwinDateExpandBox{
+	.dx-axinput-preset-date();
+	position:absolute;left:0px;top:0px;
+	padding:5px;
+	background:url('images/dx-calendar-box-bg.png');
+	border:@border;border-radius:@radius;
+	box-shadow:0px 1px 3px #ccc;
+	.dateControlBox{
+		position:relative;
+		height:26px;
+		background:url('images/dx-calendar-bgs.png') repeat-x;
+		border:@border-a;
+		width:181px;
+		.prevbutton{
+			position:absolute;left:0px;top:0px;width:26px;height:26px;
+			display:block;text-indent:-1000px;overflow:hidden;
+			background:url('images/dx-prev-arrow.png') no-repeat;
+			&:hover{
+				background:url('images/dx-prev-arrow.png') no-repeat 0px -26px;				
+			}
+		}
+		.nextbutton{
+			position:absolute;right:0px;top:0px;width:26px;height:26px;
+			display:block;text-indent:-1000px;overflow:hidden;
+			background:url('images/dx-next-arrow.png') no-repeat;
+			&:hover{
+				background:url('images/dx-next-arrow.png') no-repeat 0px -26px;
+			}
+			
+		}
+		.yearbutton{
+			position:absolute;left:55px;top:0px;
+			text-decoration:none;color:@color;line-height:26px;
+			font-family:@font-family;font-size:12px;text-shadow:0px -1px #869198;
+		}
+		.monthbutton{
+			position:absolute;left:100px;top:0px;	
+			text-decoration:none;color:@color;line-height:26px;
+			font-family:@font-family;font-size:12px;text-shadow:0px -1px #869198;
+		}
+	}
+	.dateDisplayBox{
+		background:@bgcolor;border:@border-b;border-top:0px none;
+		width:181px;
+	}
+	.timeDisplayBox{
+		padding-top:10px;
+		height:120px;
+	}
+	.dateTypeName{
+		height:22px;line-height:21px;text-align:center;
+		color:@color-a;text-shadow:0px 1px #fff;font-family:@font-family;	
+	}
+}
+
+	

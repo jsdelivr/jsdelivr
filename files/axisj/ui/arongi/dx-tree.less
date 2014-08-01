@@ -1,0 +1,1048 @@
+@import "preset";
+@import "AXUtils";
+
+// AXTree ///////////////////////////////////////////////////
+.AXTree{
+	.dx-axtree-preset();
+	position:relative;
+	.AXTreeScrollBody{
+		position:relative;
+		border:@border-i;
+		overflow:hidden;
+		//Tree Head...
+
+		.AXTreeColHead{
+			position:absolute;left:0px;top:0px;
+			width:100%;
+			//background:url('images/dx-tree-head-bg.png') repeat-x 0px 0px #fff;
+			.util-gradient(top, @bgcolor-a, @bgcolor-b);
+			border-bottom:@border;
+			.colHeadTable{
+				table-layout:fixed;
+				//background:url('images/dx-tree-head-bg.png') repeat-x 0px 0px #fff;
+				.util-gradient(top, @bgcolor-a, @bgcolor-b);				
+				tbody{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-head-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							cursor:pointer;				
+							&:hover{
+								background-color:@bgcolor;								
+							}
+							&.colHeadBottomBorder{
+								border-bottom:@border;
+							}
+							&.sortDesc{
+								background-color:@bgcolor;
+								.colHeadNode{
+									background:url('images/dx-sort-desc.png') no-repeat center 0px;
+								}
+							}
+							&.sortAsc{
+								background-color:@bgcolor;
+								.colHeadNode{
+									background:url('images/dx-sort-asc.png') no-repeat center 0px;
+								}
+							}
+							.colHeadResizer{
+								position:absolute;right:0px;top:0px;
+								width:5px;height:20px;
+								cursor:col-resize;
+								&:active{
+									background:@bgcolor-a;
+								}
+							}
+							.colHeadTool{
+								position:absolute;right:1px;top:0px;
+								display:block;
+								width:20px;height:30px;
+								cursor:pointer;
+								text-indent:-2000px;overflow:hidden;
+								&.readyTool{
+									background:url('images/dx-tree-head-tool.png') no-repeat -2px center;
+									&:hover{
+										background:url('images/dx-tree-head-tool-on.png') no-repeat -2px center;
+									}
+									
+								}								
+							}
+							.colHeadNode{
+								position:relative;
+								padding:0px;
+							}
+							.colHeadTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.colHeadTdCheck{
+								height:20px;padding:7px 1px 3px 0px;
+								color:@color;
+								input{vertical-align:middle;}
+							}
+							.colHeadTdHtml{
+								height:30px;padding:0px 1px 0px 0px;
+								color:@color;
+							}					
+						}
+					} 
+				}
+			}
+		}
+		.fixedColHead{
+			position:absolute;left:0px;top:0px;
+			width:auto;
+			box-shadow:0px 0px 3px #ccc;
+		}
+		//Tree Body...
+		.AXTreeBody{
+			position:absolute;left:0px;top:0px;
+			width:100%;overflow:hidden;
+			.treeScrollContent{
+				overflow:visible;position:relative;
+			}
+			.treeFixedScrollContent{
+				overflow:visible;position:absolute;left:0px;top:0px;
+				box-shadow:0px 0px 3px #ccc;
+			}
+			.treeScrollTrackXY{
+				position:absolute;right:0px;bottom:0px;
+				width:9px;height:9px;border:1px solid #B6B6B6;
+				background:url('images/dx-diagonal-bg.png');
+				display:none;
+			}
+			.treeScrollTrackY{
+				position:absolute;right:0px;top:0px;
+				width:9px;height:9px;
+              /*
+				border-left:@border-a;
+				border-right:@border-a;
+				background:#f3f3f3;
+				*/
+				display:none;
+				.treeScrollHandle{
+					position:absolute;left:-1px;top:0px;
+					width:9px;height:20px;
+                  background: #000;
+                  border:0px none;
+                  .util-opacity(20);
+                  .util-border-radius(5px, 5px, 5px, 5px);
+
+					cursor:pointer;
+					&:hover, &.hover{
+                      .util-opacity(50);
+					}
+				}
+			}
+			.treeScrollTrackX{
+				position:absolute;left:0px;bottom:0px;
+				width:9px;height:9px;
+              /*
+				border-top:@border-a;border-bottom:@border-a;
+				background:@bgcolor-c;
+				*/
+				display:none;
+				.treeScrollHandle{
+					position:absolute;left:0px;top:-1px;
+					width:20px;height:9px;
+                  background: #000;
+                  border:0px none;
+                  .util-opacity(20);
+                  .util-border-radius(5px, 5px, 5px, 5px);
+
+					cursor:pointer;
+					&:hover, &.hover{
+                      .util-opacity(50);
+					}
+				}
+			}
+			.treeBodyTable{
+				width:100%;table-layout:fixed;
+				tbody{
+					tr{
+						&.noListTr{
+							td{
+								vertical-align:middle;
+								height:100px;
+								border-bottom:@border-d;
+							}
+						}
+						&.line0{
+							td{}
+						}
+						&.line1{
+							td{}
+						}
+						&.AXTreeSplit{
+							td{
+								vertical-align:middle;
+								height:1px;line-height:1px;background:@bgcolor-d;
+								border-bottom:0px none;
+							}
+						}
+						&.red{
+							td{ background-color:@bgcolor-e; }
+						}
+						&.green{
+							td{ background-color:@bgcolor-f; }	
+						} 
+						&.blue{
+							td{ background-color:@bgcolor-g; }	
+						} 
+						&.yellow{
+							td{ background-color:@bgcolor-h; }	
+						} 
+						&.hover{ 
+							td{background-color:@bgcolor-i;}
+						}
+						&.selected{
+							td{background-color:@bgcolor-j;}
+						}
+						&.disable{ 
+							td{
+								background-color:@bgcolor-k;
+								color:#ccc ! important;
+							}
+						}
+						&.copied{
+							td{
+								background-color:@bgcolor-l;
+								border-top:@border-e;
+								border-bottom:@border-e;
+							}
+						}
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							cursor:pointer;
+							&.selected{
+								background-color:@bgcolor-j;box-shadow:inset 0px 0px 2px #000;
+							}
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;								
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+								.connectionLineContainer{
+									display:block;position:absolute;
+									top:0px;left:0px;	
+									.connectionLine{
+										display:block;position:absolute;
+										top:0px;left:0px;
+										width:20px;height:30px;
+										background:url('images/dx-tree-line.png') no-repeat center 0px;
+										&.isLastChild{
+											background:url('images/dx-tree-line-last.png') no-repeat center 0px;
+										}
+										&.isParentInside{
+											background:url('images/dx-tree-line-middle.png') no-repeat center 0px;
+										}
+										&.isParentOutside{
+											background:url('images/blank.png') no-repeat center 0px;
+										}
+									}
+								}
+								.bodyNodeIndent{
+									display:block;
+									position:absolute;
+									top:5px;
+									width:20px;height:20px;
+									background:url('images/dx-tree-arrows.png') no-repeat -65px center;
+									&.noChild{
+										background:url('images/dx-tree-line-no-child.png') no-repeat center center;
+										&:hover{
+											background:url('images/dx-tree-line-no-child.png') no-repeat center center;
+										}
+									}	
+									&:hover{
+										background:url('images/dx-tree-arrows.png') no-repeat -5px center;
+									}
+									&.expand{
+										background:url('images/dx-tree-arrows.png') no-repeat -95px center;
+										&:hover{
+											background:url('images/dx-tree-arrows.png') no-repeat -35px center;
+										}
+										&.loading{
+											background:url('images/dx-progresss-ani-white-1.gif') no-repeat 2px center;
+										}
+										&.noChild{
+											background:url('images/dx-tree-line-no-child.png') no-repeat center center;											
+											&:hover{background:url('images/dx-tree-line-no-child.png') no-repeat center center;}
+										}
+									}
+								}
+								.bodyNodeIcon{
+									display:block;
+									position:absolute;
+									top:5px;
+									width:20px;height:20px;
+									&.folder	{background:url('images/dx-tree-icons.png') no-repeat -5px center;}
+									&.AXfolder	{background:url('images/dx-tree-icons.png') no-repeat -5px center;}
+									&.movie		{background:url('images/dx-tree-icons.png') no-repeat -65px center;}
+									&.img		{background:url('images/dx-tree-icons.png') no-repeat -95px center;}
+									&.zip		{background:url('images/dx-tree-icons.png') no-repeat -125px center;}
+									&.file		{background:url('images/dx-tree-icons.png') no-repeat -155px center;}
+									&.fileTxt	{background:url('images/dx-tree-icons.png') no-repeat -185px center;}
+									&.fileTag	{background:url('images/dx-tree-icons.png') no-repeat -215px center;}
+									&.company	{background:url('images/dx-tree-icons2.png') no-repeat -5px center;}
+									&.computer	{background:url('images/dx-tree-icons2.png') no-repeat -35px center;}
+									&.desktop	{background:url('images/dx-tree-icons2.png') no-repeat -65px center;}
+									&.tree		{background:url('images/dx-tree-icons2.png') no-repeat -95px center;}
+									&.userHtml		{background:url('images/dx-tree-icons2.png') no-repeat -215px center;}
+								}
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;	
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;	
+							}
+						}						
+					}
+				}
+				thead, tfoot{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							background-color:@bgcolor-m;
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}							
+							&.bodyNullTd{
+								background-image:none;								
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;	
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;	
+							}
+						}
+					}
+				} 
+			}
+			.treeFixedBodyTable{
+				table-layout:fixed;
+				tbody{
+					tr{
+						&.noListTr{
+							td{
+								vertical-align:middle;
+								height:100px;
+							}
+						}	
+						&.line0{
+							td	{background-color:@bgcolor-o;}	
+						} 
+						&.line1{
+							td	{background-color:@bgcolor-p;}
+						}	
+						&.AXTreeSplit{
+							td{
+								vertical-align:middle;
+								height:1px;line-height:1px;background:#eee;
+								border-bottom:0px none;
+							}
+						}	
+						&.red{
+							td{ background-color:@bgcolor-e;} 	
+						} 
+						&.green{
+							td{ background-color:@bgcolor-f;} 
+						} 
+						&.blue{
+							td{ background-color:@bgcolor-g;} 
+						} 
+						&.yellow{
+							td{ background-color:@bgcolor-h;} 
+						} 	
+						&.selected{
+							td{background-color:@bgcolor-j;}
+						}		
+						&.hover{
+							td{background-color:@bgcolor-q;}
+						}																		
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							cursor:pointer;
+							&.fixedLine{
+								background:url('images/dx-tree-fixed-body-border.png') repeat-y 100% 0px #FFFFEC;								
+							}
+							&.selected{
+								background-color:@bgcolor-j;box-shadow:inset 0px 0px 2px #000;
+							}
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;	
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;									
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;
+							}
+						}
+					}
+				}
+				thead, tfoot{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							background-color:@bgcolor-m;
+							&.fixedLine{
+								background:url('images/dx-tree-fixed-body-border.png') repeat-y 100% 0px #FFFFEC;
+							}	
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;	
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;									
+							}							
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;
+							}						
+						}
+					}
+				}
+			}
+		}
+		//Tree Foot
+		.AXTreeFoot{}		
+	}
+	.tdRelBlock{
+		position:relative;
+	}	
+}
+
+
+// AXTree_none ///////////////////////////////////////////////////
+.AXTree_none{
+	.dx-axtree-preset();
+	position:relative;
+	.AXTreeScrollBody{
+		position:relative;
+		border:@border-i;
+		overflow:hidden;
+		.AXTreeColHead{
+			position:absolute;left:0px;top:0px;
+			width:100%;
+			background:url('images/dx-tree-head-bg.png') repeat-x 0px 0px #fff;
+			border-bottom:@border;
+			.colHeadTable{
+				table-layout:fixed;
+				background:url('images/dx-tree-head-bg.png') repeat-x 0px 0px #fff;
+				tbody{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-head-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							cursor:pointer;
+							&:hover{
+								background-color:@bgcolor;								
+							}
+							&.sortDesc{
+								background-color:@bgcolor;
+								.colHeadNode{
+									background:url('images/dx-sort-desc.png') no-repeat center 0px;
+								}								
+							}
+							&.sortAsc{
+								background-color:@bgcolor;
+								.colHeadNode{
+									background:url('images/dx-sort-asc.png') no-repeat center 0px;
+								}								
+							}
+							&.colHeadBottomBorder{
+								border-bottom:@border;
+							}
+							.colHeadResizer{
+								position:absolute;right:0px;top:0px;
+								width:5px;height:20px;
+								cursor:col-resize;
+								&:active{
+									background:@bgcolor-a;
+								}
+							}
+							.colHeadTool{
+								position:absolute;right:1px;top:0px;
+								display:block;
+								width:20px;height:30px;
+								cursor:pointer;
+								text-indent:-2000px;overflow:hidden;
+								&.readyTool{
+									background:url('images/dx-tree-head-tool.png') no-repeat -2px center;
+									&:hover{
+										background:url('images/dx-tree-head-tool-on.png') no-repeat -2px center;
+									}
+								}
+								
+							}
+							.colHeadNode{
+								position:relative;
+								padding:0px;
+							}		
+							.colHeadTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 0px;
+								color:@color;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.colHeadTdCheck{
+								height:20px;padding:7px 1px 3px 0px;
+								color:@color;
+								input{
+									vertical-align:middle;
+								}
+							}
+							.colHeadTdHtml{
+								height:30px;padding:0px 1px 0px 0px;
+								color:@color;
+							}
+						}						
+					}	
+				}
+			}
+		}
+		.fixedColHead{
+			position:absolute;left:0px;top:0px;
+			width:auto;
+			box-shadow:0px 0px 3px #ccc;
+		}
+		//Body ...
+		.AXTreeBody{
+			position:absolute;left:0px;top:0px;
+			width:100%;overflow:hidden;
+			.treeScrollContent{
+				overflow:visible;position:relative;
+			}			
+			.treeFixedScrollContent{
+				overflow:visible;position:absolute;left:0px;top:0px;
+				box-shadow:0px 0px 3px #ccc;
+			}
+			.treeScrollBody{
+				.treeScrollTrackY{
+					.treeScrollHandle{
+						&.hover{
+							background:@bgcolor-g;border:@border-c;
+						}
+					}
+				}
+			}
+			.treeScrollTrackXY{
+				position:absolute;right:0px;bottom:0px;
+				width:9px;height:9px;border:@border-b;
+				background:url('images/dx-diagonal-bg.png');
+				display:none;
+			}
+			.treeScrollTrackY{
+				position:absolute;right:0px;top:0px;
+				width:9px;height:9px;
+              /*
+				border-left:@border-a;border-right:@border-a;
+				background:@bgcolor-c;
+				*/
+				display:none;
+				.treeScrollHandle{
+					position:absolute;left:-1px;top:0px;
+					width:9px;height:20px;
+                  background: #000;
+                  border:0px none;
+                  .util-opacity(20);
+                  .util-border-radius(5px, 5px, 5px, 5px);
+                  /*
+					background:url('images/dx-diagonal-bg.png');
+					border:@border-b;
+					*/
+					cursor:pointer;
+					&:hover, &.hover{
+						/*background:@bgcolor-g;border:@border-c;*/
+                      .util-opacity(50);
+					}
+				}
+			}
+			.treeScrollTrackX{
+				position:absolute;left:0px;bottom:0px;
+				width:9px;height:9px;
+              /*
+				border-top:@border-a;border-bottom:@border-a;
+				background:@bgcolor-c;
+				*/
+				display:none;
+				.treeScrollHandle{
+					position:absolute;left:0px;top:-1px;
+					width:20px;height:9px;
+                  background: #000;
+                  border:0px none;
+                  .util-opacity(20);
+                  .util-border-radius(5px, 5px, 5px, 5px);
+
+					cursor:pointer;
+					&:hover, &.hover{
+                      .util-opacity(50);
+					}
+				}
+			}
+			.treeBodyTable{
+				width:100%;table-layout:fixed;
+				tbody{
+					tr{
+						&.noListTr{
+							td{
+								vertical-align:middle;
+								height:100px;
+							}							
+						}
+						&.line0{
+							td {}
+						}
+						&.line1{
+							td {}
+						}
+						&.AXTreeSplit{
+							td{
+								vertical-align:middle;
+								height:1px;line-height:1px;background:@bgcolor-r;
+								border-bottom:0px none;
+							}							
+						}
+						&.red{
+							td{ background-color:@bgcolor-e; }
+						}
+						&.green{
+							td{ background-color:@bgcolor-f; }
+						}
+						&.blue{
+							td{ background-color:@bgcolor-g; }
+						}
+						&.yellow{
+							td{ background-color:@bgcolor-h; }
+						}
+						&.hover{
+							td{background-color:@bgcolor-i;}
+						}
+						&.selected{
+							td{background-color:@bgcolor-j;}
+						}
+						&.disable{
+							td{
+								background-color:#F5F5F1;
+								color:#ccc ! important;
+							}
+						}
+						&.copied{
+							td{
+								background-color:@bgcolor-l;
+								border-top:@border-e;
+								border-bottom:@border-e;
+							}
+						}
+						td{
+							padding:0px;
+							vertical-align:bottom;
+							cursor:pointer;
+							&.selected{
+								background-color:@bgcolor-j;box-shadow:inset 0px 0px 2px #000;
+							}
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+								.connectionLineContainer{
+									display:block;position:absolute;
+									top:0px;left:0px;
+									.connectionLine{
+										display:block;position:absolute;
+										top:0px;left:0px;
+										width:20px;height:30px;
+										background:url('images/dx-tree-line.png') no-repeat center 0px;
+										&.isLastChild{
+											background:url('images/dx-tree-line-last.png') no-repeat center 0px;
+										}
+										&.isParentInside{
+											background:url('images/dx-tree-line-middle.png') no-repeat center 0px;
+										}
+										&.isParentOutside{
+											background:url('images/blank.png') no-repeat center 0px;
+										}
+									}
+								}
+								.bodyNodeIndent{
+									display:block;
+									position:absolute;
+									top:5px;
+									width:20px;height:20px;
+									background:url('images/dx-tree-arrows.png') no-repeat -65px center;
+									&:hover{
+										background:url('images/dx-tree-arrows.png') no-repeat -5px center;
+									}
+									&.noChild{
+										background:url('images/dx-tree-line-no-child.png') no-repeat center center;
+										&:hover{
+											background:url('images/dx-tree-line-no-child.png') no-repeat center center;											
+										}
+									}
+
+									&.expand{
+										background:url('images/dx-tree-arrows.png') no-repeat -95px center;
+										&:hover{
+											background:url('images/dx-tree-arrows.png') no-repeat -35px center;	
+										}
+										&.noChild{
+											background:url('images/dx-tree-line-no-child.png') no-repeat center center;
+											&:hover{
+												background:url('images/dx-tree-line-no-child.png') no-repeat center center;																						}
+										}
+									}
+								}
+								.bodyNodeIcon{
+									display:block;
+									position:absolute;
+									top:5px;
+									width:20px;height:20px;
+									&.folder		{background:url('images/dx-tree-icons.png') no-repeat -5px center;}
+									&.AXfolder		{background:url('images/dx-tree-icons.png') no-repeat -35px center;}
+									&.movie			{background:url('images/dx-tree-icons.png') no-repeat -65px center;}
+									&.img			{background:url('images/dx-tree-icons.png') no-repeat -95px center;}
+									&.zip			{background:url('images/dx-tree-icons.png') no-repeat -125px center;}
+									&.file			{background:url('images/dx-tree-icons.png') no-repeat -155px center;}
+									&.fileTxt		{background:url('images/dx-tree-icons.png') no-repeat -185px center;}
+									&.fileTag		{background:url('images/dx-tree-icons.png') no-repeat -215px center;}
+									&.company		{background:url('images/dx-tree-icons2.png') no-repeat -5px center;}
+									&.computer		{background:url('images/dx-tree-icons2.png') no-repeat -35px center;}
+									&.desktop		{background:url('images/dx-tree-icons2.png') no-repeat -65px center;}
+									&.tree			{background:url('images/dx-tree-icons2.png') no-repeat -95px center;}
+								}
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;									
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;	
+							}
+						}
+					}
+				}
+				thead, tfoot{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							background-color:@bgcolor-m;
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;									
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;	
+							}
+						}
+					}
+				}
+			}
+			.treeFixedBodyTable{
+				table-layout:fixed;
+				tbody{
+					tr{
+						&.noListTr{
+							td{
+								vertical-align:middle;
+								height:100px;
+								background:@bgcolor-n;
+								border-bottom:@border-f;
+							}
+						}
+						&.line0{
+							td{
+								background-color:@bgcolor-o;
+							}
+						}
+						&.line1{
+							td{
+								background-color:@bgcolor-p;
+							}
+						}
+						&.AXTreeSplit{
+							td{
+								vertical-align:middle;
+								height:1px;line-height:1px;background:@bgcolor-d;
+								border-bottom:0px none;
+							}
+						}
+						&.red{
+							td{ background-color:@bgcolor-e;}
+						}
+						&.green{
+							td{ background-color:@bgcolor-f;}
+						}
+						&.blue{
+							td{ background-color:@bgcolor-g;}
+						}
+						&.yellow{
+							td{ background-color:@bgcolor-h;}
+						}
+						&.selected{
+							td{background-color:@bgcolor-j;}								
+						}
+						&.hover{
+							td{background-color:@bgcolor-q;}
+						}
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							cursor:pointer;
+							&.fixedLine{
+								background:url('images/dx-tree-fixed-body-border.png') repeat-y 100% 0px #FFFFEC;
+							}
+							&.selected{
+								background-color:@bgcolor-j;box-shadow:inset 0px 0px 2px #000;
+							}
+							&.bodyBottomBorder{
+								border-bottom:@border-f;
+							}
+							&.bodyNullTd{
+								background-image:none;
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:AppleGothic, 'Malgun Gothic',Gulim;
+								.util-text-ellipsis();
+							}	
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;
+							}
+													
+						}
+					}
+				}
+				thead, tfoot{
+					tr{
+						td{
+							padding:0px;
+							background:url('images/dx-tree-body-border.png') repeat-y 100% 0px;
+							vertical-align:bottom;
+							border-bottom:@border-d;
+							background-color:@bgcolor-m;
+							&.fixedLine{
+								background:url('images/dx-tree-fixed-body-border.png') repeat-y 100% 0px #FFFFEC;
+							}
+							&.bodyBottomBorder{
+								border-bottom:@border-d;
+							}
+							&.bodyNullTd{
+								background-image:none;
+							}
+							.bodyNode{
+								position:relative;
+								padding:0px;
+							}
+							.bodyTdText{
+								position:relative;
+								line-height:20px;
+								padding:5px 8px;
+								color:@color-a;text-shadow:0px 1px 0px #fff;
+								font-family:@font-family;
+								.util-text-ellipsis();
+							}
+							.bodyTdHtml{
+								padding:0px 1px 0px 0px;
+							}
+							.bodyTdCheckBox{
+								line-height:20px;height:20px;
+								padding:5px 1px 5px 0px;
+							}
+						}
+					}
+				}
+			}
+		}
+		//Foot ...
+		.AXTreeFoot{}
+	}
+
+	//AXGridEditor...
+	.AXTreeEditor{
+		position:absolute;left:0px;top:0px;
+		width:100%;height:60px;
+		.editorContent{
+			position:absolute;left:0px;top:0px;
+			width:100%;
+			background:@bgcolor-s;
+			border-bottom:@border-g;		
+			box-shadow:1px 1px 3px #ccc;
+		}
+		.editorButtons{
+			position:absolute;left:50px;top:19px;
+			height:30px;padding:1px 3px;
+			background:@bgcolor-s;
+			border-left:@border-g;
+			border-right:@border-g;
+			border-bottom:@border-g;
+			box-shadow:@border-g;
+			border-bottom-left-radius:@radius;border-bottom-right-radius:@radius;
+		}
+		.editorBodyTable{
+			table-layout:fixed;width:100%;
+		}
+	}
+	.tdRelBlock{
+		position:relative;
+	}	
+}
+
+
+// AXTreeColGroupListBox ///////////////////////////////////////////////////
+.AXTreeColGroupListBox{
+	.dx-axtree-preset();
+	z-index:4999;
+	position:absolute;left:0px;top:0px;
+	width:146px;
+	background:@bgcolor-t;
+	border:@border;border-radius:@radius-a;
+	box-shadow:0px 0px 5px #ccc;
+	.AXTreeColGroupListBoxItem{
+		display:block;
+		line-height:15px;padding:5px 5px 5px 25px;
+		color:@color;text-decoration:none;
+		border-bottom:@border-h;
+		font-size:12px;
+		&.last{
+			border-bottom:0px none;
+		}
+		&.on{
+			color:@color-b;
+			background:url('images/dx-item-check.png') no-repeat 3px center;
+		}
+	}
+}
+
+
+.AXtreeSelector{
+	.dx-axtree-preset();
+	height:400px;
+	background:@bgcolor-t;
+}
+
+

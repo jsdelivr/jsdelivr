@@ -1,0 +1,557 @@
+// Description ////////////////////////////////////////////////////////////////////
+//
+// AXISJ는 AXU(Application eXperience Universal) UX가이드라인에 따르고 있습니다.
+// preset 문서는 UI의 테마 전체 영역의 색상, 선 굵기, 이미지 등의 값을 포괄 관리하도록 되어 있습니다.
+// 이는 테마생성시 preset파일을 변경하면 테마전체에 빠르게 변경 가능하도록 목표하고 있습니다.
+// AXU는 크게 "거치형(Heavy-ware)"과 "휴대형(Light-ware)"으로 나누어집니다.
+// 
+// 네임스페이스(ax는 네임스페이스로 사용할 수 없습니다.)
+// Heavy-ware : cx(Watch), mx(Mobile)*, tx(Tablet)
+// light-ware : dx(Desktop)*, wx(Wide), ux(Ultra), fx(4k)
+// * 기준사이즈 mx, dx 기준사이즈임
+// 자세한 사항은 axu.axisj.com의 "AXU UX Guideline"을 참조해주세요.
+// 
+// 변수명은 모두 소문자로 작성하면 의미소 단위로 하이픈(-)을 이용하여 구분하여 작성합니다.
+// 변수명 명명법(Common은 예외입니다.)
+// @type-ui-atrribute-variation
+//
+///////////////////////////////////////////////////////////////////////////////////
+
+// Common ///////////////////////////////////////////////////
+@color:#5e5e5e;			
+@color-a:#565b61; 		
+@color-b:#565b61;		
+@color-c:#526271;		
+
+@link:#6e7a86;	
+@link-hover:#565b61;
+@link-focus:#565b61;
+@link-active:#82898f;
+@link-visited:#c3cad0;
+
+@font-family:"Nanum Gothic";
+@font-size:12px;
+
+@border:1px solid #6c7b8a;
+@border-a:1px solid #6c7b8a;
+@border-s:1px solid #f05353;
+
+@bgcolor:#fff;
+@bgcolor-a:#d9d9d9;
+@bgcolor-b:#c6cdd3;
+@bgcolor-c:#526271;
+@bgcolor-d:#d7dde3;
+
+@wide:		~"(min-width:1152px)";
+@desktop:   ~"only screen and (min-width: 1024px) and (max-width: 1151px)";
+@tablet:    ~"only screen and (min-width: 768px) and (max-width: 1023px)";
+@mobile:	~"(max-width: 767px)";
+
+
+
+// AXButton ///////////////////////////////////////////////////
+.dx-axbutton-preset-normal(){
+	@bgcolor	:#e5e5e5;
+	@bgcolor-a	:#e5e5e5;
+	@bgcolor-b	:#cacaca;	
+	@color		:#6e7a85;
+	@color-a	:#6e7a85;
+	@border		:none;	
+	@radius		:2px;
+}
+
+.dx-axbutton-preset-classic(){
+	@bgcolor	:#536270;
+	@bgcolor-a	:#536270;
+	@bgcolor-b	:#495764;	
+	@color		:#fff;
+	@color-a	:#ccc;	
+	@border		:none;	
+	@radius		:2px;	
+}
+
+.dx-axbutton-preset-blue(){
+	@bgcolor	:#4aaded;
+	@bgcolor-a	:#4aaded;
+	@bgcolor-b	:#338fcc;	
+	@color		:#fff;
+	@color-a	:#d3edfd;		
+	@border		:none;	
+	@radius		:2px;	
+}
+
+.dx-axbutton-preset-green(){
+	@bgcolor	:#1dbb9a;
+	@bgcolor-a	:#1dbb9a;
+	@bgcolor-b	:#179e82;	
+	@color		:#fff;
+	@color-a	:#a8f2e3;		
+	@border		:none;	
+	@radius		:2px;	
+}
+
+.dx-axbutton-preset-red(){
+	@bgcolor	:#f05353;
+	@bgcolor-a	:#f05353;
+	@bgcolor-b	:#d24545;
+	@color		:#fff;
+	@color-a	:#ffd5d5;		
+	@border		:none;	
+	@radius		:2px;	
+}
+
+.dx-axbutton-preset-disabled(){
+	@bgcolor	:#bfbfbf;
+	@bgcolor-a	:#bfbfbf;
+	@bgcolor-b	:#bfbfbf;
+	@color		:#fff;
+	@color-a	:#fff;
+	@border		:none;	
+	@radius		:2px;	
+}
+
+
+// AXTab ///////////////////////////////////////////////////
+.dx-axtabs-preset-normal(){
+	@bgcolor	:#e5e5e5;
+	@bgcolor-a	:#e5e5e5;
+	@bgcolor-b	:#cacaca;	
+	@color		:#6e7a85;
+	@color-a	:#6e7a85;
+	@border		:1px solid #b9babc;	
+	@border-a	:1px solid #b9babc;		
+	@radius		:2px;
+}
+
+.dx-axtabs-preset-classic(){
+	@bgcolor	:#536270;
+	@bgcolor-a	:#536270;
+	@bgcolor-b	:#495764;	
+	@color		:#fff;
+	@color-a	:#6e7a85;	
+	@border		:1px solid #536270;	
+	@border-a	:1px solid #b9babc;			
+	@radius		:2px;	
+}
+
+.dx-axtabs-preset-blue(){
+	@bgcolor	:#4aaded;
+	@bgcolor-a	:#4aaded;
+	@bgcolor-b	:#338fcc;	
+	@color		:#fff;
+	@color-a	:#6e7a85;		
+	@border		:1px solid #4aaded;	
+	@border-a	:1px solid #b9babc;
+	@radius		:2px;	
+}
+
+.dx-axtabs-preset-green(){
+	@bgcolor	:#1dbb9a;
+	@bgcolor-a	:#1dbb9a;
+	@bgcolor-b	:#179e82;	
+	@color		:#fff;
+	@color-a	:#6e7a85;		
+	@border		:1px solid #1dbb9a;	
+	@border-a	:1px solid #b9babc;			
+	@radius		:2px;	
+}
+
+.dx-axtabs-preset-red(){
+	@bgcolor	:#f05353;
+	@bgcolor-a	:#f05353;
+	@bgcolor-b	:#d24545;
+	@color		:#fff;
+	@color-a	:#6e7a85;		
+	@border		:1px solid #f05353;	
+	@border-a	:1px solid #b9babc;			
+	@radius		:2px;	
+}
+
+.dx-axtabs-preset-disabled(){
+	@bgcolor	:#bfbfbf;
+	@bgcolor-a	:#bfbfbf;
+	@bgcolor-b	:#bfbfbf;
+	@color		:#fff;
+	@color-a	:#fff;
+	@border		:1px solid #bfbfbf;
+	@border-a	:1px solid #bfbfbf;				
+	@radius		:2px;	
+}
+
+
+// AXEditor ///////////////////////////////////////////////////
+.dx-axeditor-preset(){
+
+	@border		:2px solid #bebebe;
+	@border-a	:1px solid #bebebe;
+	@border-b	:1px solid #a4b5d8;
+	@border-c	:1px solid #fff;
+	@border-d	:1px solid #929292;
+	@border-e	:1px solid #ccc;
+	@border-f	:1px solid #777;
+	@border-g	:1px solid #a1a1a1;
+	@border-h	:1px solid #0080FF;
+	@bgcolor	:#fff;
+	@bgcolor-a	:#e0e0e0;
+	@bgcolor-b	:#f3f3f3;
+	@color		:#5c5c5c;
+	@color-a	:#ccc;
+	@color-b	:#000;
+	@color-c	:#0080FF;
+	@color-d	:#4b6baf;
+	@color-e	:#eaeaea;
+	@color-f	:#888;
+	@color-g	:#000;
+	@radius		:2px;
+	@radius-a	:5px;
+	@radius-b	:3px;
+	
+}
+
+// AXGrid ///////////////////////////////////////////////////
+.dx-axgrid-preset(){
+	@border		:1px solid #fff;		// Grid head, body, footer border
+	@border-a	:1px solid #fff;		// Scroll handle border
+	@border-b	:1px solid #fff;		// Scroll track border
+	@border-c	:1px solid #636363;		// Scroll handle over border
+	@border-d	:1px solid #fff;		// Grid body rows bottom border
+	@border-e	:1px dashed #fff;		// Grid body rows bottom border(Dashed)
+	@border-f	:1px solid #ccc;		// Grid Icon(Preview-viewMode) block border
+	@border-g	:1px solid #eee;		// Grid Icon(Thumbnail-viewMode) block border
+	@border-h	:1px solid #BDCCD7;		// Grid Editor bottom border
+	@border-i	:1px solid #e3e3e3;		// Grid head option(tools) list border
+
+	@bgcolor	:#fff;					// Grid base bgcolor
+	@bgcolor-a	:#d5dadf;				// Grid header gradient element-a bgcolor
+	@bgcolor-b	:#d5dadf;				// Grid header gradient element-b bgcolor
+	@bgcolor-c	:#d7dde3;				// Grid footer gradient element-a bgcolor
+	@bgcolor-d	:#d7dde3;				// Grid footer gradient element-a bgcolor
+
+	@bgcolor-e	:#ffbbcc;				// Grid head vertical resize handle bgcolor
+	@bgcolor-f	:#f3f3f3;				// Scroll track bgcolor
+	@bgcolor-g	:#929292;				// Scroll handle over bgcolor
+	@bgcolor-h	:#e7f1fa;				// Grid body rows over bgcolor
+	@bgcolor-i	:#f7f7f7;				// Grid body rows element-a bgcolor
+	@bgcolor-j	:#fff;					// Grid body rows element-b bgcolor
+	
+	@bgcolor-k	:#FFE8E8;				// Grid body rows red bgcolor
+	@bgcolor-l	:#F7FDEA;				// Grid body rows green bgcolor
+	@bgcolor-m	:#EAF5FD;				// Grid body rows blue bgcolor
+	@bgcolor-n	:#FEFEE9; 				// Grid body rows yellow bgcolor
+	@bgcolor-o	:#fff;					// Grid body rows white bgcolor
+	@bgcolor-p	:#f7f7f7;				// Grid body rows gray bgcolor
+	@bgcolor-q	:#e7f1fa;				// Grid Icon(Preview-viewMode) over bgcolor
+	@bgcolor-r	:#fffdd2;				// Grid Sum rows bgcolor
+	@bgcolor-s	:#eaedef;				// Grid body rows fixed element-a bgcolor
+	@bgcolor-t	:#F7F8F9;				// Grid body rows fixed element-b bgcolor
+	@bgcolor-u	:#d7dde3;				// Grid body rows fixed hover bgcolor
+	@bgcolor-v	:#d8e1e7;				// Grid Editor rows bgcolor
+	@bgcolor-w	:#D2D9DF; 				// Grid Editor same @bgcolor-h
+	
+	@bgcolor-x	:#bcc4cc; 				// Grid head hover bgcolor
+	@bgcolor-y	:#faf8c4; 				// Grid Sum rows fixed bgcolor
+	
+	@color		:#5e5e5e;				// Grid head font color
+	@color-a	:#3b3b3b;				// Grid body font color
+	@color-b	:#666;					// Grid foot right label font color
+	@color-c	:#f47820;				// Grid foot right label font(Bold) color
+	@color-d	:#7b8590;				// Grid head option(tools) list font color
+		
+	@radius		:4px;					// Grid editor button radius
+	@radius-a	:5px;					// Grid head option(tools) list radius
+	
+}
+
+
+// AXInput ///////////////////////////////////////////////////
+.dx-axinput-preset-normal(){
+	@color		:#333;
+	@color-a	:#222;				//focus
+	@color-b	:#fff;				//diabled	
+	@color-c	:#676767;			//readonly
+	@color-d	:#bbb;				//placeholder
+	@bgcolor	:#fff;	
+	@bgcolor-a	:#fff;				//focus
+	@bgcolor-b	:#fff;				//diabled
+	@bgcolor-c	:#fff;				//readonly
+	@bgcolor-d	:#fff;				//placeholder
+	@border		:1px solid #ccc;
+	@border-a	:1px solid #3badeb;	//focus
+	@radius		:2px;
+	@radius-a	:15px;
+}
+.dx-axinput-preset-number(){
+	@border		:1px solid #b9babc;
+	@border-a 	:1px solid #ccc;
+	@border-b 	:1px solid #ccc;	
+	@bgcolor 	:#b3b5b7;
+	@radius 	:2px;	
+}
+
+.dx-axinput-preset-switch(){
+	@color		:#808084;
+	@color-a	:#fff;
+	@border		:1px solid #e5e5e5;
+	@border-a	:1px solid #536270;
+	@radius		:14px;
+	@bgcolor	:#e5e5e5;
+	@bgcolor-a	:#536270;
+}
+
+.dx-axinput-preset-segments(){
+	@color		:#6e7a8d;
+	@color-a	:#fff;
+	@border		:1px solid #ccc;
+	@bgcolor	:#e5e5e5;
+	@bgcolor-a	:#e5e5e5;
+	@bgcolor-b	:#e5e5e5;			
+	@bgcolor-c	:#bbb;
+	@bgcolor-d	:#bbb;
+	@bgcolor-e	:#808080;
+	@bgcolor-f	:#808080;
+	@radius		:3px;
+}
+
+.dx-axinput-preset-slider(){
+	@color		:#acacac;
+	@color-a	:#444;
+	@bgcolor	:#e2e3e4;
+	@bgcolor-a	:#1dbb9a;
+	@radius		:2px;
+}
+
+.dx-axinput-preset-selector(){
+	@border		:1px solid #b9b9b9;
+	@bgcolor 	:#b9b9b9;
+	@bgcolor-a	:#42aee8;	
+	@radius		:4px;
+}
+
+.dx-axinput-preset-date(){
+	//AXInput.less
+	@font-family:Arial;
+	@color		:#fff; 		//year & Month
+	@color-a	:#828f9e;	//dateTypeName
+	@border		:none;
+	@border-a	:1px solid #1dbb9a;
+	@border-b	:1px solid #b9babc;
+	@radius		:5px;
+	@bgcolor	:#fff;
+	@bgcolor-a	:#1dbb9a;
+	@bgcolor-b	:#f2f2f2; //Twin container bg;	
+}
+
+.dx-axcalenter-preset(){
+	//AXJ.less
+	@font-family:Arial;
+	@color		:#7b7b7b; 	
+	@color-a	:#c78b82;	//SUN
+	@color-b	:#627d9b; 	//SAT
+	@color-c	:#fff; 	//Table body
+	@color-d	:#fff; 
+	@color-e	:#fff; 	
+	@color-f	:#bfbfc1;
+	@color-g	:#738089; 	//hour, minute, 
+	
+	@border		:1px solid #536270;		//Table body 
+	@border-a	:1px solid #f2f2f3;		//Table head right;
+	@border-b	:1px solid #b9babc;		//Table head left;
+	@border-c	:1px solid #7f8d9c;
+
+	@bgcolor	:#1dbb9a;
+	@bgcolor-a	:#536270;
+	@bgcolor-b	:#536270;
+	@bgcolor-c	:#1dbb9a;	
+	@bgcolor-d	:#1dbb9a;
+	@bgcolor-e	:#758798;
+	@bgcolor-f	:#758798;  //Active	
+	@radius		:5px;
+
+}
+
+// AXProgress ///////////////////////////////////////////////////
+.dx-axprogress-preset(){
+	//AXJ.less
+	@font-family:Arial;
+	@color		:#666;
+	@color-a	:#fff;
+	@bgcolor 	:#E5E5E5;
+	@bgcolor-a	:#00BC9A;
+	@border		:1px solid #e9e9e9;
+}
+
+
+// AXNotification ///////////////////////////////////////////////////
+.dx-axnotification-preset(){
+	//AXJ.less
+	@color   	:#525252;
+	@color-a   	:#717b85;
+	@color-b	:#526271;	//Complete
+	@color-c	:#bf601b; 	//Warinig
+	@color-d	:#f2524f;	//Caution
+	@border		:1px solid #c5c5c5;
+	@border-a	:1px solid #444;
+	@bgcolor	:#ebebeb;
+	@bgcolor-a  :#fff;
+	@radius		:4px;
+}
+
+
+// AXScroll ///////////////////////////////////////////////////
+.dx-axscroll-preset(){
+	//AXJ.less
+	@bgcolor	:#000;
+	@radius 	:5px;
+	@opacity	:10;
+	@opacity-a	:20;	
+	@opacity-b	:30;		
+	@opacity-c	:50;			
+}
+
+// AXScroll ///////////////////////////////////////////////////
+.dx-axmodal-preset{
+	@border:1px solid #a6a6a6;
+	@bgcolor:#fff;
+	@color:#525252;
+}
+
+
+// AXSearch ///////////////////////////////////////////////////
+.dx-axsearch-preset(){
+	@border		:1px solid #ccc;
+	@border-a	:1px solid #d8d8d8;	
+	@border-b	:1px solid #c1c1c1;
+	@border-c	:1px dotted #000;
+	@bgcolor	:#eee;
+	@bgcolor-a 	:#fff;
+	@bgcolor-b	:#f5f5f5;
+	@bgcolor-c	:#eee;
+	@bgcolor-d	:#f3f3f3;
+	
+	@bgcolor-e	:#FFE8E8;
+	@bgcolor-f	:#F7FDEA;
+	@bgcolor-g	:#EAF5FD;
+	@bgcolor-h	:#FEFEE9;
+	@color		:#888;
+	@color-a	:#444;
+	@color-b	:#ccc;
+	@color-c	:#616161;
+	@color-d	:#666;
+	
+	
+}
+
+// AXSelect ///////////////////////////////////////////////////
+.dx-axselect-preset(){
+	@color		:#717b85;
+	@color-a	:#888;
+	@color-b	:#fff;
+	@border 	:1px solid #e6e6e6;
+	@border-a	:1px solid #b9babc;
+	@border-b	:1px solid #d8d9db;	
+	@bgcolor   	:#fff;
+	@bgcolor-a	:#e6e6e6;
+	@bgcolor-b	:#e8e8e8;
+	@bgcolor-c	:#fff;
+	@bgcolor-d	:#d7dde3;
+	@bgcolor-e	:#00bc9c;	
+	@bgcolor-f	:#bbb;		
+	@radius		:2px;
+
+}
+
+// AXTree ///////////////////////////////////////////////////
+.dx-axtree-preset(){
+
+	@border		:1px solid #fff;		//Tree outline border
+	@border-a	:1px solid #dbdbdb;		//Scroll track border
+	@border-b	:1px solid #B6B6B6;		//Scroll handle border
+	@border-c	:1px solid #636363;		//Scroll handle(over) border
+	@border-d	:1px solid #fff;		//Tree rows bottom border
+	@border-e	:1px dotted;			//.copied
+	@border-f	:1px dashed #c8c8c8;	//.bodyBottomBorder	
+	@border-g	:1px solid #7f8d9c;		//AXTreeEditor
+	@border-h	:1px solid #e3e3e3;		//Tree option(tool) list bottom border
+	@border-i	:1px solid #d5dadf; 	//.AXTreeScrollBody
+	
+	
+	@bgcolor	:#e5e6eb;
+	@bgcolor-a	:#d6dbe0;				// Tree head element-a bgcolor
+	@bgcolor-b	:#d6dbe0;				// Tree head element-b bgcolor
+	@bgcolor-c	:#f3f3f3;				// Scroll track bgcolor
+	@bgcolor-d	:#eee;					//.AXTreeSplit
+	
+	@bgcolor-e	:#FFE8E8;				//.red
+	@bgcolor-f	:#F7FDEA;				//.green
+	@bgcolor-g	:#EAF5FD;				//.blue
+	@bgcolor-h	:#FEFEE9;				//.yellow
+
+	@bgcolor-i	:#e7f1fa;				// Tree rows over bgcolor
+	@bgcolor-j	:#d2d9df;				// Tree rows selected bgcolor
+	
+	@bgcolor-k	:#F5F5F1;				// Tree rows disabeld disable bgcolor;
+	@bgcolor-l	:#FFFFBF;				//.copied
+	
+	@bgcolor-m	:#FFFFEC;				//.treeBodyTable
+	@bgcolor-n	:#f7f7f7;				//.treeFixedBodyTable
+	
+	@bgcolor-o	:#eaedef;				//.treeFixedBodyTable .line0
+	@bgcolor-p	:#F7F8F9;				//.treeFixedBodyTable .line1
+	
+	@bgcolor-q	:#d7dde3;				//.treeFixedBodyTable .hover
+	@bgcolor-r	:#ccc;					//.treeBodyTable .AXTreeSplit
+	@bgcolor-s	:#d8e1e7;				//.AXTreeEditor
+	@bgcolor-t	:#fff;					//.AXTreeColGroupListBox
+	
+	@bgcolor-u	:#f2f2f2;
+	
+	@color		:#5e5e5e;				//Tree head font color
+	@color-a	:#3b3b3b;				//Tree body font color
+	@color-b	:#7b8590;				//Tree option(tool) list font color
+	
+	@radius		:4px;
+	@radius-a	:5px;
+	
+
+}
+
+// AXUpload5 ///////////////////////////////////////////////////
+.dx-axupload5-preset(){
+	@border:1px solid #b2b2b2;
+	@border-a:1px solid #b1b1b1;
+	@border-b:1px solid #000;
+	@border-c:1px solid #fff;
+	@color:#525252;
+	@color-a:#525252;
+	@color-b:#fff;
+	@color-c:#888;
+	@color-d:#444;
+	@bgcolor:#000;
+	@bgcolor-a:#fff;
+	@bgcolor-b:#b2b2b2;
+	@bgcolor-c:#f7f7f7;
+	@bgcolor-d:#68adcf;
+	@bgcolor-e:#e0e0e0;
+	@radius:5px;
+	@radius-a:7px;	
+}
+
+
+// AXMobileModal ///////////////////////////////////////////////////
+.dx-axmobilemodal-preset(){
+  @border:1px solid #c8c8c8;
+  @border-a:1px solid #b9babc;
+  @radius:5px;
+
+  @font-color:#3b3b3b;
+  @font-color-a:#3b3b3b;
+  @font-color-b:#3b3b3b;
+
+  @bgcolor:rgb(202, 202, 202);
+  @bgcolor-a:#fff;
+  @bgcolor-b:#f7f7f7;
+  @bgcolor-c:#5ea3db;
+  @bgcolor-d:#536372;
+}
+
+

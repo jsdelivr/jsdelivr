@@ -1,0 +1,568 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.axbutton-style-normal {
+  background: #e5e5e5;
+  color: #6e7a85;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-classic {
+  background: #536270;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-blue {
+  background: #4aaded;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-green {
+  background: #1dbb9a;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-red {
+  background: #f05353;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-disabled {
+  background: #bfbfbf;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal {
+  background: #e5e5e5;
+  color: #6e7a85;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal:hover,
+.axbutton-event-normal:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #cacaca;
+  text-decoration: none;
+  color: #6e7a85;
+}
+.axbutton-event-normal:active {
+  box-shadow: none;
+}
+.axbutton-event-classic {
+  background: #536270;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-classic:hover,
+.axbutton-event-classic:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #495764;
+  text-decoration: none;
+  color: #cccccc;
+}
+.axbutton-event-classic:active {
+  box-shadow: none;
+}
+.axbutton-event-blue {
+  background: #4aaded;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-blue:hover,
+.axbutton-event-blue:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #338fcc;
+  color: #d3edfd;
+}
+.axbutton-event-blue:active {
+  box-shadow: none;
+}
+.axbutton-event-green {
+  background: #1dbb9a;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-green:hover,
+.axbutton-event-green:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #179e82;
+  color: #a8f2e3;
+}
+.axbutton-event-green:active {
+  box-shadow: none;
+}
+.axbutton-event-red {
+  background: #f05353;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-red:hover,
+.axbutton-event-red:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #d24545;
+  color: #ffd5d5;
+}
+.axbutton-event-red:active {
+  box-shadow: none;
+}
+.axbutton-event-disabled {
+  background: #bfbfbf;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-disabled:hover,
+.axbutton-event-disabled:focus {
+  background: #bfbfbf;
+}
+.axbutton-event-disabled:active {
+  box-shadow: none;
+}
+.AXButton {
+  position: relative;
+  font-size: 12px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButton {
+  background: #e5e5e5;
+  color: #6e7a85;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton:hover,
+.AXButton:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #cacaca;
+  text-decoration: none;
+  color: #6e7a85;
+}
+.AXButton:active {
+  box-shadow: none;
+}
+.AXButton.Classic {
+  background: #536270;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Classic:hover,
+.AXButton.Classic:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #495764;
+  text-decoration: none;
+  color: #cccccc;
+}
+.AXButton.Classic:active {
+  box-shadow: none;
+}
+.AXButton.Blue {
+  background: #4aaded;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Blue:hover,
+.AXButton.Blue:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #338fcc;
+  color: #d3edfd;
+}
+.AXButton.Blue:active {
+  box-shadow: none;
+}
+.AXButton.Green {
+  background: #1dbb9a;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Green:hover,
+.AXButton.Green:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #179e82;
+  color: #a8f2e3;
+}
+.AXButton.Green:active {
+  box-shadow: none;
+}
+.AXButton.Red {
+  background: #f05353;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Red:hover,
+.AXButton.Red:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #d24545;
+  color: #ffd5d5;
+}
+.AXButton.Red:active {
+  box-shadow: none;
+}
+.AXButton[disabled] {
+  background: #bfbfbf;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton[disabled]:hover,
+.AXButton[disabled]:focus {
+  background: #bfbfbf;
+}
+.AXButton[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonSmall {
+  position: relative;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonSmall {
+  background: #e5e5e5;
+  color: #6e7a85;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall:hover,
+.AXButtonSmall:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #cacaca;
+  text-decoration: none;
+  color: #6e7a85;
+}
+.AXButtonSmall:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Classic {
+  background: #536270;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Classic:hover,
+.AXButtonSmall.Classic:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #495764;
+  text-decoration: none;
+  color: #cccccc;
+}
+.AXButtonSmall.Classic:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Blue {
+  background: #4aaded;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Blue:hover,
+.AXButtonSmall.Blue:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #338fcc;
+  color: #d3edfd;
+}
+.AXButtonSmall.Blue:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Green {
+  background: #1dbb9a;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Green:hover,
+.AXButtonSmall.Green:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #179e82;
+  color: #a8f2e3;
+}
+.AXButtonSmall.Green:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Red {
+  background: #f05353;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Red:hover,
+.AXButtonSmall.Red:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #d24545;
+  color: #ffd5d5;
+}
+.AXButtonSmall.Red:active {
+  box-shadow: none;
+}
+.AXButtonSmall[disabled] {
+  background: #bfbfbf;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall[disabled]:hover,
+.AXButtonSmall[disabled]:focus {
+  background: #bfbfbf;
+}
+.AXButtonSmall[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonLarge {
+  position: relative;
+  font-size: 12px;
+  height: 46px;
+  line-height: 46px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonLarge {
+  background: #e5e5e5;
+  color: #6e7a85;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge:hover,
+.AXButtonLarge:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #cacaca;
+  text-decoration: none;
+  color: #6e7a85;
+}
+.AXButtonLarge:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Classic {
+  background: #536270;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Classic:hover,
+.AXButtonLarge.Classic:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #495764;
+  text-decoration: none;
+  color: #cccccc;
+}
+.AXButtonLarge.Classic:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Blue {
+  background: #4aaded;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Blue:hover,
+.AXButtonLarge.Blue:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #338fcc;
+  color: #d3edfd;
+}
+.AXButtonLarge.Blue:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Green {
+  background: #1dbb9a;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Green:hover,
+.AXButtonLarge.Green:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #179e82;
+  color: #a8f2e3;
+}
+.AXButtonLarge.Green:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Red {
+  background: #f05353;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Red:hover,
+.AXButtonLarge.Red:focus {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  background: #d24545;
+  color: #ffd5d5;
+}
+.AXButtonLarge.Red:active {
+  box-shadow: none;
+}
+.AXButtonLarge[disabled] {
+  background: #bfbfbf;
+  color: #ffffff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge[disabled]:hover,
+.AXButtonLarge[disabled]:focus {
+  background: #bfbfbf;
+}
+.AXButtonLarge[disabled]:active {
+  box-shadow: none;
+}

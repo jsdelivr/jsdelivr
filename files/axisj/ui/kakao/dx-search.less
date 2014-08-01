@@ -1,0 +1,291 @@
+@import "preset";
+@import "AXUtils";
+
+// AXSearch ///////////////////////////////////////////////////
+.AXSearch{
+	.dx-axsearch-preset();
+	position:relative;
+	.expandHandle{
+		display:block;
+		border-bottom:@border;
+		background:@bgcolor;
+		text-align:center;
+		color:@color;
+		text-decoration:none;
+		font-size:11px;line-height:20px;height:20px;
+	}
+	.searchGroup{
+		position:relative;
+		background: @bgcolor-a;
+		min-height:40px;
+		&.gray{
+			background: @bgcolor-b;
+			padding:0px;
+			min-height:25px;
+			.searchItem{
+				&.searchLabel{
+					background: @bgcolor-c;				
+				}
+			}
+		}
+		.searchItem{
+			float:left;
+			line-height:20px;min-height:20px;
+			padding:0px;
+			text-align:center;
+			position:relative;
+			.itemTable{
+                position:relative;
+                display: table-cell;*display:block;*float:left;
+                span.th{
+                  display: table-cell;*display:block;*float:left;
+                  color:#616161;
+                  border-right:@border-a;
+                  min-height:20px;line-height: 20px;
+                  padding: 10px 0px;
+                  box-sizing: content-box;
+                }
+                span.th.none {
+                  border: 0px none;
+                }
+                span.td{
+                  display: table-cell;*display:block;*float:left;
+                  height:30px;line-height: auto;
+                  padding: 5px 10px;
+                  *line-height: 30px;
+                  box-sizing: content-box;
+                  vertical-align: middle;
+                  &.selectBox{
+                    *padding-top: 7px;
+                    *height:28px;
+                  }
+                  &.inputText{
+                    *padding-top: 6px;
+                    *height:29px;
+                  }
+                  &.button{
+                    *padding-top: 6px;
+                    *height:29px;
+                  }
+                  select{
+                    box-sizing: border-box;
+                    height: 25px;margin: 0px;
+                  }
+                  input{vertical-align: middle;}
+                  label{vertical-align: middle;}
+                }
+			}
+			&.secondItem{
+				.itemTable{
+                  span.th{border-left:@border-a};
+				}				
+			}
+			&.rightPadding0{
+				.itemTable{
+					span.td{padding-right:0px;}
+				}				
+			}
+			&.leftPadding0{
+				.itemTable{
+					span.td{padding-left:0px;}
+				}				
+			}
+			&.padding0{
+				.itemTable{
+					span.td{padding:5px 0px}
+				}				
+			}
+			&.searchLabel{
+				background: @bgcolor-d;
+				font-weight:bold;
+				font-size:11px;
+				color:@color-a;
+			}
+			&.searchLink{
+				color:@color-b;
+				.searchLinkItem{
+					color:@color-c;
+					text-decoration:none;padding:0px 3px;
+					&.on{
+						color:@color-c;
+						font-weight:bold;
+						text-decoration:underline;
+					}	
+				}
+			}
+		}
+		.groupClear{
+			font-size:1px;line-height:1px;height:1px;
+			background:@color-b;
+			clear:both;
+		}
+	}	
+    &.mx {
+      .expandHandle{
+        display:block;
+        border-bottom:@border;
+        background:@bgcolor;
+        text-align:center;
+        color:@color;
+        text-decoration:none;
+        font-size:11px;line-height:30px;height:30px;
+      }
+      .searchGroup{
+        position:relative;
+        background: @bgcolor-a;
+        min-height:40px;
+        &.gray{
+          background: @bgcolor-b;
+          padding:0px;
+          min-height:25px;
+          .searchItem{
+            &.searchLabel{
+              background: @bgcolor-c;
+            }
+          }
+        }
+        .searchItem{
+          float:none;
+          line-height:auto;min-height:auto;
+          padding:0px;
+          text-align:left;
+          position:relative;
+          .itemTable{
+            position:relative;
+            display:block;float:left;
+            span.th{
+              display:block;float:none;
+              color:#616161;
+              border:none;
+              padding: 0px;
+              margin: 10px 10px 10px 15px;
+              box-sizing: content-box;
+              text-align:left;font-weight:bold;
+            }
+            span.td{
+              display:block;float:none;
+              height:auto;line-height: auto;
+              padding: 0px;
+              margin: 0px 10px 10px 10px;
+              *line-height: 30px;
+              box-sizing: content-box;
+              vertical-align: middle;
+              text-align:left;
+              select{
+                box-sizing: border-box;
+                height: 25px;margin: 0px;
+              }
+              input{vertical-align: middle;}
+              label{vertical-align: middle;}
+            }
+          }
+          &.secondItem{
+            .itemTable{
+              span.th{border-left:none};
+            }
+          }
+          &.rightPadding0{
+            .itemTable{
+              span.td{padding-right:0px;}
+            }
+          }
+          &.leftPadding0{
+            .itemTable{
+              span.td{padding-left:0px;}
+            }
+          }
+          &.padding0{
+            .itemTable{
+              span.td{padding:5px 0px}
+            }
+          }
+          &.searchLabel{
+            background: @bgcolor-d;
+            font-weight:bold;
+            font-size:11px;
+            color:@color-a;
+          }
+          &.searchLink{
+            color:@color-b;
+            .searchLinkItem{
+              color:@color-c;
+              text-decoration:none;padding:0px 2px;
+              &.on{
+                color:@color-c;
+                font-weight:bold;
+                text-decoration:underline;
+              }
+            }
+          }
+        }
+        .itemClear{
+          clear:both;
+        }
+        .groupClear{
+          font-size:1px;line-height:1px;height:1px;
+          background:@color-b;
+          clear:both;
+        }
+      }
+    }
+}
+
+
+
+// AXSearchTable ///////////////////////////////////////////////////
+.AXSearchTable{
+	.dx-axsearch-preset();
+	border-top:@border-b;border-bottom:0px none;
+	width:100%;table-layout:fixed;
+	font-size:12px;
+	td, th{
+		.tdRel{
+			padding:0px 10px;
+		}	
+	}
+	tbody{
+		td{
+			min-height:36px;height:36px;overflow:visible;
+			border-bottom:@border-b;
+			color:@color-d;
+			background:url('images/dx-grid-body-border.png') repeat-y 100% 0px;			
+		}
+		th{
+			min-height:36px;height:36px;overflow:visible;
+			border-bottom:@border-b;
+			color:@color-a;
+			text-align:center;
+			background:url('images/dx-grid-body-border.png') repeat-y 100% 0px #fff;			
+		}
+		tr{
+			.gray{
+				td, th{
+					background-color:@bgcolor-b;
+				}
+			}
+			.red{
+				td, th{
+					background-color:@bgcolor-e;
+				}				
+			}
+			.green{
+				td, th{
+					background-color:@bgcolor-f;
+				}
+			}
+			.blue{
+				td, th{
+					background-color:@bgcolor-g;
+				}
+			}
+			.yellow{
+				td, th{
+					background-color:@bgcolor-h;
+				}
+			}
+		}
+		td.last, th.last{
+			background:url() repeat-y 100% 0px;	
+		}
+	}
+}

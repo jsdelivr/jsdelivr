@@ -1,0 +1,131 @@
+@import "preset";
+@import "AXUtils";
+
+// AXSelect ///////////////////////////////////////////////////
+
+
+.AXSelect{
+	.dx-axselect-preset();
+	border:@border;
+	background:@bgcolor;
+	.util-border-radius(@radius);
+	font-size:12px;
+	height:26px;line-height:26px;
+	padding:2px;
+	margin:0px auto;
+	box-sizing: content-box;	
+	vertical-align: middle;
+}
+
+.AXSelectSmall{
+	.dx-axselect-preset();
+	border:@border;background:@bgcolor;
+	.util-drop-shadow (0, 1px, 0, 0, 0.15);	
+	.util-border-radius(@radius);
+	font-size:11px; 
+	height:20px;line-height:20px;
+	padding:2px;
+	margin:0px auto;
+	box-sizing: content-box;	
+	outline:none;	
+	vertical-align: middle;	
+}
+
+.AXTextarea{
+	.dx-axselect-preset();
+	border:@border;background:@bgcolor;
+	.util-drop-shadow (0, 1px, 0, 0, 0.15);	
+	.util-border-radius(@radius);
+	font-size:12px;line-height:15px;
+	padding:4px;
+	margin:0px auto;
+	box-sizing: content-box;	
+	outline:none;	
+}
+
+
+.AXanchorSelect{
+	.dx-axselect-preset();
+	position:absolute;left:0px;top:0px;
+	padding:0px;
+	margin:0px;
+	vertical-align: middle;	
+	.selectedTextBox{
+		display:block;
+		border:@border;
+		background:@bgcolor-a; 
+		//.util-gradient(top, @bgcolor-a, @bgcolor-b);		
+		//background:url('images/defaultRegular.png') repeat-x;
+		//.util-drop-shadow (0, 1px, 0, 0, 0.15);	
+		.util-border-radius(@radius,@radius,@radius,@radius);
+		cursor:pointer;
+		text-decoration:none;
+		.util-text-ellipsis();
+		text-align:left;
+		.selectedText{
+			color:@color; 
+			.util-text-shadow-white();
+		}
+		&:focus{
+	        outline:none;
+		}
+		&:active{
+			box-shadow: none;
+		}			
+		
+	}
+	&.disabled{
+		.selectedTextBox{
+			display:block;
+			border:@border;
+			//background:url('images/dx-default-regular.png') repeat-x;
+			background: @bgcolor-a;
+			background-position:0px -78px;
+			//box-shadow:inset 0px 1px 1px #888;
+			border-radius:@radius;
+			cursor:pointer;
+			text-decoration:none;
+			.util-text-ellipsis();
+		}		
+	}	
+	.rootSelectBox{
+		position:absolute;left:0px;top:0px;
+		.util-opacity(@opacity:0);
+	}
+	.selectBoxArrow{
+		position:absolute;display:block;
+		right:0px;top:0px;
+		width:24px;height:18px;
+		background:url('images/dx-slide-down-arrow.png') center center no-repeat;
+		background-color: @bgcolor-f;
+		.util-border-radius(@radius,@radius,@radius,@radius);
+		overflow:hidden;text-indent:-2000px;	
+		&.on{
+			background:url('images/dx-slide-up-arrow.png') center center no-repeat; 
+			background-color: @bgcolor-f;
+		}
+
+	}	
+	
+}
+
+.AXselectExpandBox{
+	.dx-axselect-preset();
+	z-index:5002;
+	position:absolute;left:0px;top:0px;
+	border:@border-a;border-radius:@radius;
+	background:@bgcolor;
+	box-shadow:0px 1px #e9eced;
+	overflow:hidden;
+	.selectExpandScroll{padding:2px 0px;}
+	a{
+		display:block;padding:3px 8px;
+		font-size:12px;line-height:18px;
+		color:@color-a;text-decoration:none;
+		border-bottom:@border-b;
+		background:@bgcolor-c;
+		&.on	{background:@bgcolor-d;}
+		&:hover	{background:@bgcolor-e;color:@color-b;}
+	}	
+	
+}

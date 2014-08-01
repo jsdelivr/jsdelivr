@@ -1,0 +1,51 @@
+﻿	/* AXModelControlGrid */
+	.AXModelControlGrid{
+		
+	}
+	
+	.AXModelControlGrid .AXgridScrollBody{
+		border:1px solid #c0b5a6;
+	}
+	.AXModelControlGrid .AXGridColHead{
+		
+	}
+	.AXModelControlGrid .colHeadTable{
+		table-layout:fixed;
+		border-spacing:0px;
+		border-collapse:collapse;
+	}
+	.AXModelControlGrid .colHeadTable td, .AXModelControlGrid .colHeadTable th{
+		/*border-top:1px solid #c0b5a6;*/
+		border-bottom:1px solid #c0b5a6;
+        border-right:1px solid #c0b5a6;
+	}
+
+	.AXModelControlGrid .colHeadTable td .tdRelBlock{
+		position:relative;
+		padding:3px;padding-right:4px;
+	}
+	
+	.AXModelControlGrid .AXGridBody{
+
+	}
+	.AXModelControlGrid .gridBodyTable{
+		table-layout:fixed;	
+		border-spacing:0px;
+		border-collapse:collapse;
+	}
+	.AXModelControlGrid .gridBodyTable td{
+		border-bottom:1px solid #c0b5a6;
+        border-right:1px solid #c0b5a6;
+	}
+	.AXModelControlGrid .gridBodyTable td:last-child{
+		background:none;
+	}
+	.AXModelControlGrid .gridBodyTable td .tdRelBlock{
+		position:relative;
+		padding:3px;padding-right:4px;
+	}
+	.AXModelControlGrid .gridBodyTable tfoot td{
+		border-bottom:none;
+		background:#FCF7E2 !important;
+		padding:3px 0px 10px 0px;
+	}

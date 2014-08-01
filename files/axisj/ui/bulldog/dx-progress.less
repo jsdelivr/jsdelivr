@@ -1,0 +1,117 @@
+@import "preset";
+@import "AXUtils";
+
+// AXProgress ///////////////////////////////////////////////////
+.AXprogressTray{
+	position:fixed;left:0px;top:0px;
+	width:100%;
+	z-index:5001;
+}
+
+.AXlineProgress{
+	.dx-axprogress-preset();
+	.AXprogressTitle{
+		padding:5px;
+		color:@color;text-shadow:0px 1px 0px #fff;
+		font-size:12px;text-align:center;
+	}
+	.AXprogressCancel{
+		display:block;
+		position:absolute;right:-30px;top:2px;
+		width:24px;height:24px;
+		background:url('images/dx-dialog-close.png') no-repeat center center;
+		line-height:10000px;overflow:hidden;
+	}
+	.AXprogress{
+		position:relative;
+		padding:5px 0px;
+		.AXprogressContainer{
+			background: @bgcolor;
+			.AXprogressBar{
+				position:relative;
+				height:14px;
+				border:@border;
+				background: @bgcolor-a;
+				//background:url('images/dx-progress-bar.png') repeat-x !important;
+				//border-radius:@radius;		 
+			}
+		}
+        .AXprogressLoadedText{
+          position:absolute;left:0px;top:0px;
+          color:@color-a;
+          font-size:11px;font-family:@font-family;
+          line-height: 24px; text-indent: 10px;
+          white-space:nowrap;
+          span{
+            padding-left:5px;font-size:10px;
+          }
+        }
+		
+	}
+	
+	
+}
+		
+.AXCircleProgress{
+	.dx-axprogress-preset();
+	.AXprogressTitle{
+		padding:5px;
+		color:@color;text-shadow:0px 1px 0px #fff;
+		font-size:12px;text-align:center;
+	}
+	.AXprogressCancel{
+		display:block;
+		position:absolute;right:-10px;bottom:-10px;
+		width:24px;height:24px;
+		background:url('images/dx-dialog-close.png') no-repeat center center;
+		line-height:10000px;overflow:hidden;
+	}
+	.AXprogress{
+		position:relative;
+		padding:5px 0px;
+		.AXprogressContainer{
+			position:relative;
+			height:66px;width:66px;
+			.AXprogressBar{
+				position:relative;
+				height:66px;width:66px;
+				background:url('images/dx-progress-circle.png') no-repeat;
+				&.percent5	{background-position:0px -66px;}
+				&.percent10	{background-position:0px -132px;}
+				&.percent15	{background-position:0px -198px;}
+				&.percent20	{background-position:0px -264px;}
+				&.percent25	{background-position:0px -330px;}
+				&.percent30	{background-position:0px -396px;}
+				&.percent35	{background-position:0px -462px;}
+				&.percent40	{background-position:0px -528px;}
+				&.percent50	{background-position:0px -594px;}
+				&.percent55	{background-position:0px -660px;}
+				&.percent60	{background-position:0px -726px;}
+				&.percent65	{background-position:0px -792px;}
+				&.percent70	{background-position:0px -858px;}
+				&.percent75	{background-position:0px -924px;}
+				&.percent80	{background-position:0px -990px;}
+				&.percent85	{background-position:0px -1056px;}
+				&.percent90	{background-position:0px -1122px;}
+				&.percent95	{background-position:0px -1188px;}
+				&.percent100{background-position:0px -1254px;}				
+			}
+			.AXprogressLoadedText{
+				display:block;
+				position:absolute;left:0px;top:0px;
+				width:66px;height:66px;text-align:center;
+				line-height:60px;
+				color:@color;text-shadow:0px 1px 0px #fff;
+				font-size:15px;font-family:@font-family;font-weight:bold;
+				white-space:nowrap;
+				span{
+					display:block;
+					position:absolute;left:0px;bottom:10px;
+					width:66px;
+					line-height:20px;font-size:10px;
+				}				
+			}
+		}
+	}
+}
+

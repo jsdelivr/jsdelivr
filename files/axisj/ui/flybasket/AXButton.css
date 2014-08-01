@@ -1,0 +1,588 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.axbutton-style-normal {
+  background: #99847d;
+  color: #ccc2be;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #593629;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-classic {
+  background: #c1cdd5;
+  color: #81898e;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #81898e;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-blue {
+  background: #72afdf;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #d1ebfd;
+  border: 2px solid #4281af;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-green {
+  background: #99c77e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #defbbf;
+  border: 2px solid #6b9654;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-red {
+  background: #c45b5d;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #fbccca;
+  border: 2px solid #86312d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-style-disabled {
+  background: #d7d7d7;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #eaeaea;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal {
+  background: #99847d;
+  color: #ccc2be;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #593629;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-normal:hover,
+.axbutton-event-normal:focus {
+  background: #856b62;
+  text-decoration: none;
+  color: #ffffff;
+}
+.axbutton-event-normal:active {
+  box-shadow: none;
+}
+.axbutton-event-classic {
+  background: #c1cdd5;
+  color: #81898e;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #81898e;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-classic:hover,
+.axbutton-event-classic:focus {
+  background: #b4c1ca;
+  text-decoration: none;
+  color: #5a6267;
+}
+.axbutton-event-classic:active {
+  box-shadow: none;
+}
+.axbutton-event-blue {
+  background: #72afdf;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #d1ebfd;
+  border: 2px solid #4281af;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-blue:hover,
+.axbutton-event-blue:focus {
+  background: #4a8fc7;
+  color: #ffffff;
+}
+.axbutton-event-blue:active {
+  box-shadow: none;
+}
+.axbutton-event-green {
+  background: #99c77e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #defbbf;
+  border: 2px solid #6b9654;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-green:hover,
+.axbutton-event-green:focus {
+  background: #7aa95e;
+  color: #ffffff;
+}
+.axbutton-event-green:active {
+  box-shadow: none;
+}
+.axbutton-event-red {
+  background: #c45b5d;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #fbccca;
+  border: 2px solid #86312d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-red:hover,
+.axbutton-event-red:focus {
+  background: #a73c40;
+  color: #ffffff;
+}
+.axbutton-event-red:active {
+  box-shadow: none;
+}
+.axbutton-event-disabled {
+  background: #d7d7d7;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #eaeaea;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.axbutton-event-disabled:hover,
+.axbutton-event-disabled:focus {
+  background: #d7d7d7;
+}
+.axbutton-event-disabled:active {
+  box-shadow: none;
+}
+.AXButton {
+  position: relative;
+  font-size: 12px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButton {
+  background: #99847d;
+  color: #ccc2be;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #593629;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton:hover,
+.AXButton:focus {
+  background: #856b62;
+  text-decoration: none;
+  color: #ffffff;
+}
+.AXButton:active {
+  box-shadow: none;
+}
+.AXButton.Classic {
+  background: #c1cdd5;
+  color: #81898e;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #81898e;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Classic:hover,
+.AXButton.Classic:focus {
+  background: #b4c1ca;
+  text-decoration: none;
+  color: #5a6267;
+}
+.AXButton.Classic:active {
+  box-shadow: none;
+}
+.AXButton.Blue {
+  background: #72afdf;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #d1ebfd;
+  border: 2px solid #4281af;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Blue:hover,
+.AXButton.Blue:focus {
+  background: #4a8fc7;
+  color: #ffffff;
+}
+.AXButton.Blue:active {
+  box-shadow: none;
+}
+.AXButton.Green {
+  background: #99c77e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #defbbf;
+  border: 2px solid #6b9654;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Green:hover,
+.AXButton.Green:focus {
+  background: #7aa95e;
+  color: #ffffff;
+}
+.AXButton.Green:active {
+  box-shadow: none;
+}
+.AXButton.Red {
+  background: #c45b5d;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #fbccca;
+  border: 2px solid #86312d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton.Red:hover,
+.AXButton.Red:focus {
+  background: #a73c40;
+  color: #ffffff;
+}
+.AXButton.Red:active {
+  box-shadow: none;
+}
+.AXButton[disabled] {
+  background: #d7d7d7;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #eaeaea;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButton[disabled]:hover,
+.AXButton[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXButton[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonSmall {
+  position: relative;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonSmall {
+  background: #99847d;
+  color: #ccc2be;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #593629;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall:hover,
+.AXButtonSmall:focus {
+  background: #856b62;
+  text-decoration: none;
+  color: #ffffff;
+}
+.AXButtonSmall:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Classic {
+  background: #c1cdd5;
+  color: #81898e;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #81898e;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Classic:hover,
+.AXButtonSmall.Classic:focus {
+  background: #b4c1ca;
+  text-decoration: none;
+  color: #5a6267;
+}
+.AXButtonSmall.Classic:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Blue {
+  background: #72afdf;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #d1ebfd;
+  border: 2px solid #4281af;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Blue:hover,
+.AXButtonSmall.Blue:focus {
+  background: #4a8fc7;
+  color: #ffffff;
+}
+.AXButtonSmall.Blue:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Green {
+  background: #99c77e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #defbbf;
+  border: 2px solid #6b9654;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Green:hover,
+.AXButtonSmall.Green:focus {
+  background: #7aa95e;
+  color: #ffffff;
+}
+.AXButtonSmall.Green:active {
+  box-shadow: none;
+}
+.AXButtonSmall.Red {
+  background: #c45b5d;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #fbccca;
+  border: 2px solid #86312d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall.Red:hover,
+.AXButtonSmall.Red:focus {
+  background: #a73c40;
+  color: #ffffff;
+}
+.AXButtonSmall.Red:active {
+  box-shadow: none;
+}
+.AXButtonSmall[disabled] {
+  background: #d7d7d7;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #eaeaea;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonSmall[disabled]:hover,
+.AXButtonSmall[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXButtonSmall[disabled]:active {
+  box-shadow: none;
+}
+.AXButtonLarge {
+  position: relative;
+  font-size: 12px;
+  height: 46px;
+  line-height: 46px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+.AXButtonLarge {
+  background: #99847d;
+  color: #ccc2be;
+  text-align: center;
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #593629;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge:hover,
+.AXButtonLarge:focus {
+  background: #856b62;
+  text-decoration: none;
+  color: #ffffff;
+}
+.AXButtonLarge:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Classic {
+  background: #c1cdd5;
+  color: #81898e;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  border: 2px solid #81898e;
+  -webkit-border-radius: 1px 1px 1px 1px;
+  -moz-border-radius: 1px 1px 1px 1px;
+  border-radius: 1px 1px 1px 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Classic:hover,
+.AXButtonLarge.Classic:focus {
+  background: #b4c1ca;
+  text-decoration: none;
+  color: #5a6267;
+}
+.AXButtonLarge.Classic:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Blue {
+  background: #72afdf;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #d1ebfd;
+  border: 2px solid #4281af;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Blue:hover,
+.AXButtonLarge.Blue:focus {
+  background: #4a8fc7;
+  color: #ffffff;
+}
+.AXButtonLarge.Blue:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Green {
+  background: #99c77e;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #defbbf;
+  border: 2px solid #6b9654;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Green:hover,
+.AXButtonLarge.Green:focus {
+  background: #7aa95e;
+  color: #ffffff;
+}
+.AXButtonLarge.Green:active {
+  box-shadow: none;
+}
+.AXButtonLarge.Red {
+  background: #c45b5d;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: #fbccca;
+  border: 2px solid #86312d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge.Red:hover,
+.AXButtonLarge.Red:focus {
+  background: #a73c40;
+  color: #ffffff;
+}
+.AXButtonLarge.Red:active {
+  box-shadow: none;
+}
+.AXButtonLarge[disabled] {
+  background: #d7d7d7;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #eaeaea;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.AXButtonLarge[disabled]:hover,
+.AXButtonLarge[disabled]:focus {
+  background: #d7d7d7;
+}
+.AXButtonLarge[disabled]:active {
+  box-shadow: none;
+}

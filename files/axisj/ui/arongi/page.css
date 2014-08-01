@@ -1,0 +1,607 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html,
+body {
+  font-family: "Nanum Gothic";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 1.6em;
+  color: #565b61;
+  background: #ffffff;
+}
+html a,
+body a {
+  color: #6e7a86;
+  text-decoration: none;
+}
+html a:hover,
+body a:hover {
+  color: #565b61;
+}
+html a:active,
+body a:active {
+  color: #82898f;
+}
+html h1,
+body h1 {
+  font-size: 20px;
+}
+html h2,
+body h2 {
+  font-size: 16px;
+}
+html h3,
+body h3 {
+  font-size: 12px;
+}
+img {
+  border: 0px;
+}
+.ax-wrap {
+  position: relative;
+  margin: 0 auto;
+}
+.H10 {
+  height: 10px;
+  font-size: 1px;
+}
+.H20 {
+  height: 20px;
+  font-size: 1px;
+}
+.H30 {
+  height: 30px;
+  font-size: 1px;
+}
+.H40 {
+  height: 40px;
+  font-size: 1px;
+}
+.H50 {
+  height: 50px;
+  font-size: 1px;
+}
+#AXPage {
+  font-family: "Nanum Gothic";
+  font-size: 12px;
+  overflow: hidden;
+}
+#AXPage .ax-wrap {
+  margin: 0 auto;
+}
+#AXPage .ax-clear {
+  clear: both;
+}
+#AXPage .ax-unit {
+  margin: 0 10px;
+  position: relative;
+}
+#AXPage div[class^="ax-col-"] {
+  float: left;
+}
+#AXPage .ax-col-1 {
+  width: 8.3334%;
+}
+#AXPage .ax-col-2 {
+  width: 16.6667%;
+}
+#AXPage .ax-col-3 {
+  width: 25%;
+}
+#AXPage .ax-col-4 {
+  width: 33.3334%;
+}
+#AXPage .ax-col-5 {
+  width: 41.6667%;
+}
+#AXPage .ax-col-6 {
+  width: 50%;
+}
+#AXPage .ax-col-7 {
+  width: 58.3334%;
+}
+#AXPage .ax-col-8 {
+  width: 66.6667%;
+}
+#AXPage .ax-col-9 {
+  width: 75%;
+}
+#AXPage .ax-col-10 {
+  width: 83.3334%;
+}
+#AXPage .ax-col-11 {
+  width: 91.6667%;
+}
+#AXPage .ax-col-12 {
+  width: 100%;
+}
+#AXPage #AXPageHead {
+  position: relative;
+  z-index: 10;
+}
+#AXPage #AXPageHead .ax-layer-1 {
+  position: relative;
+  z-index: 10;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit {
+  background: #e8e8e8;
+  margin: 0px;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu {
+  display: block;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 1px solid #ffffff;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu h3 {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  line-height: 40px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: normal;
+  border-right: 1px solid #ffffff;
+  background: #717b85;
+  color: #ffffff;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu h3 a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu #sampleMenuBox {
+  position: absolute;
+  left: 110px;
+  top: 0px;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul li {
+  float: left;
+  border-right: 1px solid #ffffff;
+  display: block;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul li a {
+  font-size: 13px;
+  display: block;
+  line-height: 40px;
+  padding: 0px 10px;
+  background: #e8e8e8;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul li a span {
+  font-size: 10px;
+  margin: 0px 2px;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul li a:hover {
+  background: #c6cdd3;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu ul li a.on {
+  background: #c6cdd3;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .parentMenu {
+  position: relative;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu {
+  position: absolute;
+  line-height: 25px;
+  font-size: 12px;
+  display: none;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  position: relative;
+  border-top: 1px solid #ffffff;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu ul li {
+  float: none;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid #ffffff;
+  border-top: 0px none;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu ul li a {
+  display: block;
+  _width: 100%;
+  padding: 0px 10px;
+  height: 30px;
+  line-height: 30px;
+  background: #e8e8e8;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu ul li a:hover {
+  background: #c6cdd3;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childMenu ul li a.on {
+  background: #c6cdd3;
+}
+#AXPage #AXPageHead .ax-layer-1 .ax-unit .navMenu .childsMenu {
+  position: absolute;
+  line-height: 20px;
+  font-size: 12px;
+}
+#AXPage #AXPageHead .ax-layer-2 {
+  position: relative;
+  z-index: 9;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit {
+  margin: 0px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo {
+  display: block;
+  background: #d4d4d4;
+  height: 70px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo .logo {
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  background: #eaeaea;
+  border-radius: 30px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo h1 {
+  position: absolute;
+  margin-left: 80px;
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #565b61;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo h1 .support {
+  font-size: 10px;
+  background: #e8e8e8;
+  color: #565b61;
+  border-radius: 10px;
+  padding: 2px 6px;
+  margin-left: 2px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo h2 {
+  position: absolute;
+  margin-left: 80px;
+  font-size: 11px;
+  margin-top: 38px;
+  font-weight: normal;
+  color: #565b61;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo h2 a {
+  color: #6e7a86;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo h2 a:hover {
+  color: #565b61;
+  text-decoration: underline;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo .facebook {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 11px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo .github {
+  position: absolute;
+  right: 5px;
+  top: 25px;
+  font-size: 11px;
+}
+#AXPage #AXPageHead .ax-layer-2 .ax-unit .themeInfo .api {
+  position: absolute;
+  right: 5px;
+  top: 45px;
+  font-size: 11px;
+}
+#AXPage #AXPageHead .ax-layer-3 .ax-unit {
+  margin: 0px;
+}
+#AXPage #AXPageHead .ax-layer-3 .ax-unit .AXdemoPageTabTarget {
+  background: #d4d4d4;
+}
+#AXPage #AXPageHead #devCentermobileMenu {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#AXPage #AXPageBody .title h1 {
+  text-indent: 10px;
+}
+#AXPage #AXPageBody .ax-wrap {
+  margin-bottom: 30px;
+}
+#AXPage #AXPageBody .ax-wrap .ax-layer-1 .secBlock {
+  border: 2px solid #e8e8e8;
+  margin: 10px;
+  overflow: hidden;
+}
+#AXPage #AXPageBody .ax-wrap .ax-layer-1 .secBlock h3 {
+  text-align: center;
+  background: #e8e8e8;
+  font-size: 18px;
+  margin: 4px;
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+}
+#AXPage #AXPageBody .ax-wrap .ax-layer-1 .secBlock ul {
+  font-size: 14px;
+  margin: 10px;
+  padding: 0px;
+  list-style-position: inside;
+}
+#AXPage #AXPageBody .ax-wrap .ax-layer-1 .secBlock ul li {
+  line-height: 180%;
+}
+#AXPage #AXPageBody .ax-wrap .ax-layer-1 .secBlock ul li a:hover {
+  text-decoration: underline;
+}
+#AXPage #AXPageBody.SampleAXButton label {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 60px;
+  text-align: right;
+}
+#AXPage #AXPageBody.SampleAXButton .withIcons button {
+  margin-bottom: 10px;
+}
+#AXPage #AXPageBody.SampleAXInput label {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 80px;
+  text-align: right;
+}
+#AXPage #AXPageBody.SampleAXInput .bindCheckbox label {
+  text-align: left;
+}
+#AXPage #AXPageFoot {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit {
+  background: #e8e8e8;
+  margin: 0px;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme {
+  display: block;
+  height: 30px;
+  overflow: hidden;
+  border-top: 1px solid #ffffff;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme h3 {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 20px;
+  border-right: 1px solid #ffffff;
+  background: #717b85;
+  color: #ffffff;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul li {
+  float: left;
+  border-right: 1px solid #ffffff;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul li a {
+  font-size: 10px;
+  display: block;
+  line-height: 30px;
+  padding: 0px 10px;
+  background: #e8e8e8;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul li a span {
+  font-size: 10px;
+  margin: 0px 2px;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul li a:hover {
+  background: #c6cdd3;
+}
+#AXPage #AXPageFoot .ax-layer-1 .ax-unit .navTheme ul li a.on {
+  background: #c6cdd3;
+  font-size: 13px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #AXPageBody .ax-wrap {
+    width: 100%;
+  }
+  #AXPageBody .ax-col-3 {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  #AXPageBody .ax-wrap {
+    width: 100%;
+  }
+  #AXPageBody .ax-col-3 {
+    width: 100%;
+  }
+  #sampleMenuBox {
+    display: none;
+  }
+  #AXPage #AXPageHead #devCentermobileMenu {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+}
+/* { oldCode Css -------------------------------------------------------------------- */
+.AXdemoPageTabTarget {
+  padding: 5px 0px 0px 0px;
+}
+.AXdemoPageContent {
+  padding: 0px 10px 50px 10px;
+}
+.clear {
+  clear: both;
+}
+.Hspace1 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 1px;
+}
+.Hspace2 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 2px;
+}
+.Hspace3 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 3px;
+}
+.Hspace5 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 5px;
+}
+.Hspace10 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 10px;
+}
+.Hspace15 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 15px;
+}
+.Hspace20 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 20px;
+}
+.Hspace30 {
+  font-size: 1px;
+  line-height: 1px;
+  height: 30px;
+}
+.description {
+  padding-left: 20px;
+  color: #888;
+}
+.method {
+  position: relative;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1.6em;
+}
+.method .methodName {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #d4d4d4;
+  background: #e8e8e8;
+}
+.method .methodDesc {
+  padding: 10px;
+  padding-left: 10px;
+}
+.method .methodDesc .desc {
+  color: #565b61;
+  padding-bottom: 5px;
+  font-style: italic;
+}
+.method .methodDesc ul {
+  padding: 0px;
+  margin: 0px;
+}
+.method .methodDesc ul li {
+  padding: 3px;
+  font-size: 14px;
+}
+.method .methodDesc ul ul {
+  padding-left: 20px;
+}
+.method .methodDesc .methodDescContent {
+  padding: 5px 10px;
+  color: 1px solid #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: #c6cdd3;
+}
+.method .methodExam {
+  padding: 10px;
+  border-top: 1px solid #d4d4d4;
+  background: #c6cdd3;
+  position: relative;
+}
+.method table {
+  border-top: 1px solid #E3E3E3;
+  width: 100%;
+}
+.method table caption {
+  text-align: left;
+  padding: 10px;
+  color: #0080C0;
+}
+.method table th {
+  border-right: 1px solid #E3E3E3;
+  background: #E1F0FF;
+}
+.method table th,
+.method table td {
+  border-bottom: 1px solid #E3E3E3;
+}
+.contentContainer {
+  padding: 20px;
+}
+table.setConfig {
+  border: 1px solid #E3E3E3;
+  width: 100%;
+  border-collapse: collapse;
+}
+table.setConfig caption {
+  text-align: left;
+  padding: 10px;
+  color: #0080C0;
+}
+table.setConfig th {
+  border: 1px solid #E3E3E3;
+  background: #E1F0FF;
+}
+table.setConfig td {
+  border: 1px solid #E3E3E3;
+}
+table.setConfig td.ti5 {
+  text-indent: 5px;
+}
+table.setConfig td.ti10 {
+  text-indent: 10px;
+}
+table.setConfig td.ti20 {
+  text-indent: 20px;
+}
+table.setConfig pre {
+  margin: 0px;
+}
+.tac {
+  text-align: center;
+}
+.fieldsetBody {
+  width: 100%;
+  background: #eeeeee;
+  border: 0px none;
+  padding: 0px;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+/* -------------------------------------------------------------------- oldCode Css} */

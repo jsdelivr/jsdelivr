@@ -1,0 +1,214 @@
+﻿@import "preset";
+@import "AXUtils";
+
+.AXSlideViewer{
+	z-index:6000;
+	position:fixed;top:0px;left:0px;width:100%;height:100%;
+	/* 하위 브라우저를 위한 hack */
+	.background{
+		position:absolute;top:0px;left:0px;width:100%;height:100%;
+		background:#000;
+		/*.util-opacity(1000);*/
+	}
+	.slideItem{
+		position:absolute;
+		left:0px;top:0px;width:100%;height:100%;
+		overflow:hidden;
+		.img{
+			position:absolute;
+			display:none;
+		}
+	}
+	.controller{
+		
+		.hgroup{
+			position:absolute;
+			left:0px;top:0px;
+			width:100%;height:55px;
+			background:rgba(0, 0, 0, 0.3);
+			color:#fff;
+			h1{
+				font-size:17px;line-height:17px;
+				padding:10px 10px 0px 10px;margin:0px;
+			}
+			span{
+				font-size:12px;
+				padding:0px 10px;
+			}
+		}
+		
+		.navigation{
+			position:absolute;
+			left:0px;top:60px;
+			width:100%;height:20px;
+			color:#fff;font-size:15px;line-height:20px;
+			text-align:center;
+		}
+		
+		.buttonGroup{
+			position:absolute;bottom:0px;left:50%;
+			width:0px;
+			.ToggleHandle{
+				position:absolute;
+				left:-25px;top:-70px;
+				width:50px;height:50px;
+				background:url(images/dx-axviewer-button-extends.png) no-repeat;
+				border:0px none;
+				margin:0px;padding:0px;
+				.util-textHidden();
+				cursor:pointer;
+				-webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.5s;
+				z-index:10;
+				.util-opacity(50);
+			}
+			.Prev{
+				position:absolute;
+				left:-22px;top:-67px;
+				width:44px;height:44px;
+				background:url(images/dx-axviewer-button-prev.png) no-repeat;
+				border:0px none;
+				margin:0px;padding:0px;
+				.util-textHidden();
+				cursor:pointer; 
+				.util-opacity(0);
+				-webkit-transition: all 0.5s 0.05s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.5s 0.05s;
+				&.disabled{
+					/*background:url(images/dx-axviewer-button-prev-disabled.png) no-repeat;*/
+				}
+			}
+			.Next{
+				position:absolute;
+				right:-22px;top:-67px;
+				width:44px;height:44px;
+				background:url(images/dx-axviewer-button-next.png) no-repeat;
+				border:0px none;
+				margin:0px;padding:0px;
+				.util-textHidden();
+				cursor:pointer;
+				.util-opacity(0);
+				-webkit-transition: all 0.5s 0.15s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.5s 0.15s;
+				&.disabled{
+					/*background:url(images/dx-axviewer-button-next-disabled.png) no-repeat;*/
+				}
+			}
+			.ZoomIn{
+				position:absolute;
+				left:-22px;top:-67px;
+				width:44px;height:44px;
+				background:url(images/dx-axviewer-button-zoomin.png) no-repeat;
+				border:0px none;
+				margin:0px;padding:0px;
+				.util-textHidden();
+				cursor:pointer;
+				.util-opacity(0);
+				-webkit-transition: all 0.5s 0.1s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.5s 0.1s;
+			}
+			.ZoomOut{
+				position:absolute;
+				left:-22px;top:-67px;
+				width:44px;height:44px;
+				background:url(images/dx-axviewer-button-zoomout.png) no-repeat;
+				border:0px none;
+				margin:0px;padding:0px;
+				.util-textHidden();
+				cursor:pointer;
+				.util-opacity(0);
+				-webkit-transition: all 0.5s 0.2s; /* For Safari 3.1 to 6.0 */
+				transition: all 0.5s 0.2s;
+			}
+		}
+		
+		.buttonGroup.open{
+			.ToggleHandle{
+				left:-25px;top:-110px;
+				.util-rotate(180);
+				.util-opacity(100);
+			}
+			.Prev{
+				left:-79px;top:-107px;
+				.util-opacity(100);
+				.util-rotate(360);
+				&.disabled{
+					.util-opacity(20);
+				}
+			}
+			.Next{
+				right:-79px;top:-107px;
+				.util-opacity(100);
+				.util-rotate(360);
+				&.disabled{
+					.util-opacity(20);
+				}
+			}
+			.ZoomIn{
+				left:-22px;top:-164px;
+				.util-opacity(100);
+				.util-rotate(360);
+				&.disabled{
+					.util-opacity(20);
+				}
+			}
+			.ZoomOut{
+				left:-22px;top:-50px;
+				.util-opacity(100);
+				.util-rotate(360);
+				&.disabled{
+					.util-opacity(20);
+				}
+			}
+		}
+		
+		.Close{
+			position:absolute;
+			right:10px;top:10px;
+			width:44px;height:44px;
+			background:url(images/dx-axviewer-button-close.png) no-repeat;
+			border:0px none;
+			margin:0px;padding:0px;
+			.util-textHidden();
+			cursor:pointer;
+		}
+		
+		@media all and (max-width: 1200px){ /* mobile */
+			.buttonGroup{
+				width:0px;
+				.ToggleHandle{
+					background:url(images/mx-axviewer-button-extends.png) no-repeat;
+					background-size:50px auto;
+				}
+				.Prev{
+					background:url(images/mx-axviewer-button-prev.png) no-repeat;
+					background-size:44px auto;
+					&.disabled{
+						/*background:url(images/mx-axviewer-button-prev-disabled.png) no-repeat;*/
+					}
+				}
+				.Next{
+					background:url(images/mx-axviewer-button-next.png) no-repeat;
+					background-size:44px auto;
+					&.disabled{
+						/*background:url(images/mx-axviewer-button-next-disabled.png) no-repeat;*/
+					}
+				}
+				.ZoomIn{
+					background:url(images/mx-axviewer-button-zoomin.png) no-repeat;
+					background-size:44px auto;
+				}
+				.ZoomOut{
+					background:url(images/mx-axviewer-button-zoomout.png) no-repeat;
+					background-size:44px auto;
+				}
+			}
+			
+			.Close{
+				background:url(images/mx-axviewer-button-close.png) no-repeat;
+				background-size:44px auto;
+			}	
+		}
+		
+	}
+}

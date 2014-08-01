@@ -1,0 +1,178 @@
+﻿@import "AXUtils.less";
+
+/* ---------------------------- AXMobileModal ------------------------------- */
+.AXMobileModal{
+  z-index:6000;
+  position:fixed;
+  left:0px;top:0px;
+  .AXMobileModalPanel{
+    position:absolute;
+    left:0px;top:0px;
+    background:#d7dde3;
+    border-radius:4px;
+    box-shadow:0px 0px 3px rgba(0,0,0,10);
+
+    .mobileModalHead{
+      position:relative;
+      height:44px;
+      .modalTitle{
+        padding:0px 10px;
+        line-height:44px;
+        color:#3b3b3b;font-size:15px;
+        font-weight:bold;
+      }
+
+      .AXDateControlBox{
+        .prevbutton{
+          display:block;
+          position:absolute;
+          left:0px;top:0px;
+          width:44px;height:44px;
+          background:url(images/mx-modal-icon-prev.png) center center no-repeat;
+          background-size:50% 50%;
+          text-indent:-9999;overflow:hidden;
+        }
+        .nextbutton{
+          display:block;
+          position:absolute;
+          right:0px;top:0px;
+          width:44px;height:44px;
+          background:url(images/mx-modal-icon-next.png) center center no-repeat;
+          background-size:50% 50%;
+          text-indent:-9999;overflow:hidden;
+        }
+        .yearbutton{
+          display:block;
+          position:absolute;
+          left:100px;top:0px;
+          height:44px;line-height:44px;
+          text-decoration:none;
+          color:#3b3b3b;font-size:15px;font-weight:bold;
+        }
+        .monthbutton{
+          display:block;
+          position:absolute;
+          left:160px;top:0px;
+          height:44px;line-height:44px;
+          text-decoration:none;
+          color:#3b3b3b;font-size:15px;font-weight:bold;
+        }
+      }
+      .AXContextMenuHome{
+        display:block;
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:44px;height:44px;
+        background:url(images/mx-modal-icon-home.png) center center no-repeat;
+        background-size:50% 50%;
+        line-height:1000px;overflow:hidden;
+      }
+      .AXContextMenuPrev{
+        display:block;
+        position:absolute;
+        left:44px;
+        top:0px;
+        height:44px;
+        line-height:44px;
+        padding-left:30px;
+        color:#3b3b3b;font-size:13px;
+        font-weight:bold;
+        text-decoration:none;
+        background:url(images/mx-modal-icon-prev.png) 0px center no-repeat;
+        background-size:22px auto;
+        cursor: pointer;
+      }
+    }
+
+    .mobileModelClose{
+      display:block;
+      position:absolute;
+      right:0px;
+      top:0px;
+      width:44px;height:44px;
+      background:url(images/mx-modal-icon-close.png) center center no-repeat;
+      background-size:50% 50%;
+      line-height:1000px;overflow:hidden;
+    }
+
+    .mobileModalBody{ /* 모달창 바디 */
+      .AXContextMenuContainer{ /* 모달창 바디 안에 위치한 스크롤 컨테이너 */
+        background:#fff;
+      }
+      .AXDateDisplayBox{ /* 모달창 바디 안에 위치한 달력 컨테이너 */
+        background:#fff;
+        border-top:1px solid #b9babc;
+        border-bottom:1px solid #b9babc;
+      }
+      .AXTimeDisplayBox{
+        height:144px;
+        background:#fff;
+      }
+
+      .AXContextMenuContainer{
+        .AXContextMenuScroll{
+          .contextMenuItem{
+            position:relative;
+            display:block;padding:0px 10px;
+            font-size:12px;line-height:43px;
+            color:#3b3b3b;text-decoration:none;
+            border-bottom:1px solid #c8c8c8;background:#fff;
+            &:nth-child(odd){
+              background:#f7f7f7;
+            }
+            &.on{
+              background:#5ea3db;
+            }
+
+            .tool-checkbox{
+              display:inline-block;vertical-align:middle;
+              width:43px;height:43px;
+              background:url('images/mx-item-check.png') no-repeat center center;
+              background-size:30px 30px;
+              &.on{
+                background:url('images/mx-item-checkOn.png') no-repeat center center;
+                background-size:30px 30px;
+              }
+            }
+            .label{
+              display:inline;
+            }
+            .tool-rightGroup{
+              position:absolute;right:0px;top:0px;
+              height:43px;
+              .contextSubMenuIcon{
+                display:inline-block;
+                width:43px;height:43px;
+                background-image:url('images/dx-context-sub-icon.png');
+                background-repeat:no-repeat;
+                background-position:0px center;
+              }
+              .tool-sort{
+                display:inline-block;
+                width:43px;height:43px;
+                background:url('images/mx-item-sort.png') no-repeat center center;
+                background-size:30px 30px;
+                &.asc{
+                  background:url('images/mx-item-sortAsc.png') no-repeat center center;
+                  background-size:30px 30px;
+                }
+                &.desc{
+                  background:url('images/mx-item-sortDesc.png') no-repeat center center;
+                  background-size:30px 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mobileModalFoot{
+      .AXDateButtonBox{
+        text-align:center;
+        padding:7px;
+      }
+    }
+  }
+}

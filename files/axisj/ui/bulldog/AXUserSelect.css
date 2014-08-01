@@ -1,0 +1,77 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.modsSortGhost {
+  float: left;
+  width: 1px;
+  height: 93px;
+  margin: 5px 0px 5px 5px;
+}
+.userSelectBox {
+  border: 1px solid #aaa;
+  padding: 5px;
+  border-radius: 4px;
+  overflow: auto;
+}
+.userSelectBox .readyDrag {
+  border: 1px solid #6c7b8a;
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#ffffff, #d9d9d9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#ffffff, #d9d9d9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#ffffff, #d9d9d9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#ffffff, #d9d9d9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#d9d9d9);
+  /*For IE7-8-9*/
+  color: #565b61;
+  padding: 3px 5px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  line-height: auto;
+}
+.userSelectBox .readyDrag div {
+  height: 20px ! important;
+  line-height: 20px ! important;
+}
+.userSelectBox .modsSortGhost {
+  float: none;
+  width: auto;
+  height: 1px;
+  margin: 5px 0px;
+  border: 1px solid #6c7b8a;
+  /*background: @stop;*/
+  background-image: -webkit-linear-gradient(#ffffff, #d9d9d9);
+  /* For Safari */
+  background-image: -o-linear-gradient(#ffffff, #d9d9d9);
+  /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(#ffffff, #d9d9d9);
+  /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(#ffffff, #d9d9d9);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#d9d9d9);
+  /*For IE7-8-9*/
+}
+.userSelectBox .bedraged {
+  border: 2px solid #ff3300 !important;
+}
+.userSelectBox .beSelected {
+  border: 1px solid #f05353;
+}

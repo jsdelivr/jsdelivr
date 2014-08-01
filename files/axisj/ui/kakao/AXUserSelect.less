@@ -1,0 +1,36 @@
+﻿@import "preset";
+@import "AXUtils";
+
+.readyDrag{}
+.modsSortGhost{float:left;width:1px;height:93px;margin:5px 0px 5px 5px;}
+.bedroped{}
+
+.userSelectBox{
+  border:1px solid #aaa;
+  padding:5px;
+  border-radius:4px;
+  overflow:auto;
+  .readyDrag{
+    border:@border-a;
+    .util-gradient(top, @bgcolor-b, @bgcolor-b);
+    color:@color-a;
+
+    padding:3px 5px;
+    border-radius:3px;
+    margin-bottom:5px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    height:auto;line-height:auto;
+  }
+  .readyDrag div{
+    height:20px ! important;line-height:20px ! important;
+  }
+
+  .modsSortGhost{
+    float:none;width:auto;height:1px;margin:5px 0px;
+    border:@border-a;
+    .util-gradient(top, @bgcolor-b, @bgcolor-b);
+  }
+  .bedraged{border:2px solid #ff3300 !important;}
+  .beSelected{border:@border-s;background: #fff;}
+}
+

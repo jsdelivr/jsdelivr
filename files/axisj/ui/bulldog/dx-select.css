@@ -1,0 +1,173 @@
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.AXSelect {
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px 5px 5px 5px;
+  -moz-border-radius: 2px 5px 5px 5px;
+  border-radius: 2px 5px 5px 5px;
+  font-size: 12px;
+  height: 26px;
+  line-height: 26px;
+  padding: 2px;
+  margin: 0px auto;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.AXSelectSmall {
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px 5px 5px 5px;
+  -moz-border-radius: 2px 5px 5px 5px;
+  border-radius: 2px 5px 5px 5px;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  padding: 2px;
+  margin: 0px auto;
+  box-sizing: content-box;
+  outline: none;
+  vertical-align: middle;
+}
+.AXTextarea {
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px 5px 5px 5px;
+  -moz-border-radius: 2px 5px 5px 5px;
+  border-radius: 2px 5px 5px 5px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 4px;
+  margin: 0px auto;
+  box-sizing: content-box;
+  outline: none;
+}
+.AXanchorSelect {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 0px;
+  margin: 0px;
+  vertical-align: middle;
+}
+.AXanchorSelect .selectedTextBox {
+  display: block;
+  border: 1px solid #e6e6e6;
+  background: #e6e6e6;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.AXanchorSelect .selectedTextBox .selectedText {
+  color: #717b85;
+  text-shadow: 0px -1px rgba(255, 255, 255, 0.25);
+}
+.AXanchorSelect .selectedTextBox:focus {
+  outline: none;
+}
+.AXanchorSelect .selectedTextBox:active {
+  box-shadow: none;
+}
+.AXanchorSelect.disabled .selectedTextBox {
+  display: block;
+  border: 1px solid #e6e6e6;
+  background: #e6e6e6;
+  background-position: 0px -78px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AXanchorSelect .rootSelectBox {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.AXanchorSelect .selectBoxArrow {
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: 0px;
+  width: 24px;
+  height: 18px;
+  background: url('images/dx-slide-down-arrow.png') center center no-repeat;
+  background-color: #bbbbbb;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  overflow: hidden;
+  text-indent: -2000px;
+}
+.AXanchorSelect .selectBoxArrow.on {
+  background: url('images/dx-slide-up-arrow.png') center center no-repeat;
+  background-color: #bbbbbb;
+}
+.AXselectExpandBox {
+  z-index: 5002;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #b9babc;
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow: 0px 1px #e9eced;
+  overflow: hidden;
+}
+.AXselectExpandBox .selectExpandScroll {
+  padding: 2px 0px;
+}
+.AXselectExpandBox a {
+  display: block;
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #888888;
+  text-decoration: none;
+  border-bottom: 1px solid #d8d9db;
+  background: #ffffff;
+}
+.AXselectExpandBox a.on {
+  background: #d7dde3;
+}
+.AXselectExpandBox a:hover {
+  background: #00bc9c;
+  color: #ffffff;
+}

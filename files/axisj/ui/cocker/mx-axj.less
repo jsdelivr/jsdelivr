@@ -1,0 +1,110 @@
+@import "preset";
+@import "AXUtils";
+
+
+// AXInputGroup ///////////////////////////////////////////////////////////////
+.AXInputLabel{
+  position:relative;
+  display:inline-block;
+  vertical-align:top;
+  SPAN{
+    display:block;
+    line-height:24px;font-size:12px;color:@color-a;
+    padding:0px 3px;
+  }
+  &.fullWidth{
+    display:block;
+    padding-right:8px;
+    SPAN{
+      display:block;
+    }
+    input[type=text], input[type=password]{
+      width:100%;
+      box-size:border-box;
+    }
+  }
+}
+
+
+// AXNotification //////////////////////////////////////////////////////////////
+.AXNotification{
+  .dx-axnotification-preset();
+  width:280px;
+  border:@border;background:@bgcolor;
+  padding:10px;margin:10px 0px;
+  box-shadow:0px 0px 3px #b2b2b2;
+  font-size:12px;color:@color;
+  .util-opacity(80);
+  .util-border-radius(4px);
+  &.Warning{
+    .AXNotificationIcon{
+      width:42px;height:42px;
+      background:url('images/dx-noti-warning.png') no-repeat center center !important;
+    }
+    .AXNotificationBody{
+      B{color:@color-c;}
+    }
+  }
+  &.Caution{
+    .AXNotificationIcon{
+      width:42px;height:42px;
+      background:url('images/dx-noti-caution.png') no-repeat center center !important;
+    }
+    .AXNotificationBody{
+      B{color:@color-d;}
+    }
+  }
+  .AXNotificationHead{
+    font-weight:bold;
+    color:@color-a;text-shadow:0px 1px #fff;
+    padding:5px 15px;height:20px;line-height:20px;
+    background:@bgcolor-a url('images/dx-dialog-title.png') repeat-x;
+    text-align:center;
+  }
+  .AXNotificationTable{
+    width:100%;border:0px none !important;background:@bgcolor;
+    td, th{
+      border:0px none !important; background:@bgcolor;
+    }
+  }
+  .AXNotificationIcon{
+    width:42px;height:42px;
+    background:url('images/dx-noti-complete.png') no-repeat center 5px !important;
+  }
+  .AXNotificationBody{
+    font-size:12px;color:@color;padding-right:5px;
+    line-height:1.6em;
+    B{color:@color-b;}
+
+  }
+  .AXNotificationButton{width:45px;}
+  .AXNotificationButtons{
+    padding:10px 0px;
+    text-align:center;background:@bgcolor;
+  }
+}
+
+.AXNotificationTray{
+  position:fixed;right:0px;top:0px;z-index:5001;
+  width:310px;
+}
+
+.AXNotificationTrayDialog{
+  .dx-axnotification-preset();
+  position:fixed;left:0px;top:50px;
+  width:100%;
+  z-index:5001;
+  .AXNotification{
+    width:280px;
+    border:@border-a; background:@bgcolor;
+    padding:0px;margin:0px auto;
+    box-shadow:0px 0px 3px #888;
+    font-size:12px;color:@color;
+    overflow:hidden;
+    .util-opacity(100);
+    .util-border-radius(4px);
+    .AXNotificationCT{
+      padding:10px;
+    }
+  }
+}

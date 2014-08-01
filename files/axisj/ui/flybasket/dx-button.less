@@ -1,0 +1,211 @@
+@import "preset";
+@import "AXUtils";
+
+// AXButton Style ///////////////////////////////////////////////////
+.axbutton-style-normal{
+	.dx-axbutton-preset-normal();
+	background: @bgcolor-a;
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);
+	color:@color;
+	text-align: center;
+	border:none; 
+	padding:0 8px; 
+	margin:0; 
+	box-sizing: content-box;
+	display: inline-block; 
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	.util-drop-shadow (0, 1px, 0, 0, 0.15);
+	border:@border;
+	.util-border-radius(@radius,@radius,@radius,@radius);			
+	.util-appearance();
+}
+
+.axbutton-style-classic{
+	.dx-axbutton-preset-classic();
+	background: @bgcolor-a;
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);		
+	color:@color;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.25);	
+	.util-drop-shadow (0, 1px, 0, 0, 0.15);	
+	border:@border;
+	.util-border-radius(@radius,@radius,@radius,@radius);			
+	.util-appearance();	
+}
+.axbutton-style-blue{
+	.dx-axbutton-preset-blue();
+	background:@bgcolor-a;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);			
+	color:@color;
+	border:@border;
+	.util-appearance();	
+}
+.axbutton-style-green{
+	.dx-axbutton-preset-green();
+	background:@bgcolor-a;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);			
+	color:@color;
+	border:@border;	
+	.util-appearance();	
+}
+.axbutton-style-red{
+	.dx-axbutton-preset-red();
+	background:@bgcolor-a;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);			
+	color:@color;
+	border:@border;		
+	.util-appearance();	
+}
+.axbutton-style-disabled{
+	.dx-axbutton-preset-disabled();
+	background:@bgcolor-a;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.10);
+	.util-drop-shadow (0px, 0px, 0px, 0px, 0);	
+	//.util-gradient(top, @bgcolor-a, @bgcolor-b);			
+	color:@color;
+	border:@border;
+	.util-appearance();
+}
+
+// AXButton Events ///////////////////////////////////////////////////
+.axbutton-event-normal{
+	&				{.axbutton-style-normal;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-normal();
+		//.util-box-shadow(0px, 1px, 2px, 0.3, inset);		
+		background: @bgcolor-b;	
+		text-decoration: none; 
+		color:@color-a;	
+	}
+	&:active		{
+		box-shadow: none;
+	}		
+}
+
+.axbutton-event-classic{
+	&				{.axbutton-style-classic;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-classic();
+		//.util-box-shadow(0px, 1px, 2px, 0.3, inset);				
+		background: @bgcolor-b;
+		text-decoration: none; 
+		color:@color-a;					
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+}
+
+.axbutton-event-blue{
+	&				{.axbutton-style-blue;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-blue();
+		//.util-box-shadow(0px, 1px, 2px, 0.3, inset);				
+		background: @bgcolor-b;	
+		color:@color-a;								
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+}
+
+.axbutton-event-green{
+	&				{.axbutton-style-green;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-green();
+		//.util-box-shadow(0px, 1px, 2px, 0.3, inset);				
+		background: @bgcolor-b;
+		color:@color-a;									
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+}
+
+.axbutton-event-red{
+	&				{.axbutton-style-red;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-red();
+		//.util-box-shadow(0px, 1px, 2px, 0.3, inset);				
+		background: @bgcolor-b;		
+		color:@color-a;							
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+}
+
+.axbutton-event-disabled{
+	&				{.axbutton-style-disabled;}
+	&:hover, &:focus{
+		.dx-axbutton-preset-disabled();
+		background: @bgcolor-b;		
+	}
+	&:active		{
+		box-shadow: none;
+	}	
+}
+
+
+// AXButton Component ///////////////////////////////////////////////////
+
+//AXButton
+.AXButton {
+	position:relative;
+	font-size:12px; 
+	height:26px;line-height:26px;
+	margin:0;padding:0 10px;
+	cursor:pointer;
+	outline:none;
+	vertical-align: middle;
+	&				{.axbutton-event-normal}
+	&.Classic		{.axbutton-event-classic;}
+	&.Blue			{.axbutton-event-blue;}
+	&.Green			{.axbutton-event-green;}		
+	&.Red			{.axbutton-event-red;}
+	&[disabled]		{.axbutton-event-disabled;}		
+}
+
+
+//AXButton Small
+.AXButtonSmall{
+	position:relative;
+	font-size:11px; 
+	height:20px;line-height:20px;
+	margin:0;padding:0 10px;
+	cursor:pointer;
+	outline:none;
+	vertical-align: middle;	
+	&				{.axbutton-event-normal;}
+	&.Classic		{.axbutton-event-classic;}
+	&.Blue			{.axbutton-event-blue;}
+	&.Green			{.axbutton-event-green;}		
+	&.Red			{.axbutton-event-red;}	
+	&[disabled]		{.axbutton-event-disabled;}	
+	i{
+
+	}
+		
+}
+
+//AXButton Large
+.AXButtonLarge{
+	position:relative;
+	font-size:12px; 
+	height:46px; line-height: 46px; 
+	margin:0;padding:0 10px;
+	cursor:pointer;
+	outline:none;
+	vertical-align: middle;
+	&				{.axbutton-event-normal;}
+	&.Classic		{.axbutton-event-classic;}
+	&.Blue			{.axbutton-event-blue;}
+	&.Green			{.axbutton-event-green;}		
+	&.Red			{.axbutton-event-red;}
+	&[disabled]		{.axbutton-event-disabled;}				
+	i{
+	}
+			
+}
