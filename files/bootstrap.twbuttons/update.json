@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "twbuttons",
+  "repo": "onokumus/twbuttons",
+  "files": {
+    "basepath": "dist/",
+    "include": ["twbuttons.min.css"]
+  }
+}
