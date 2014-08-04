@@ -1,0 +1,37 @@
+액시콘은 기본적으로 LGPL 라이선스를 따릅니다. 그렇게 때문에 영리적인 목적으로 사용해도 상관없고 추가 및 개선을 하셔도 무방합니다.
+단 액시콘이 제공하는 형태를 소스를 수정하는 경우는 동일하게 공개하셔야 되는 의무가 있을 뿐입니다.
+자세한 사항은 아래의 파트별 라이선스를 참조해주세요
+
+글꼴 라이선스
+다음 디렉토리에있는 모든 데스크톱 및 webfont 파일에 적용 axicon/fonts/
+액시콘은 다음의 아이콘 파일 파일을 조합하여 재 배포 하고 있습니다. 각각의 아이콘 파일들은 다음의 라이선스를 가지고 있습니다.
+
+    Axisj
+    라이센스 : SIL OFL 1.1
+    http://axisj.com/axicon
+
+    Feather
+    라이센스 : MIT
+    URL : http://colebemis.com/feather/
+
+    ionicons
+    라이센스 : MIT
+    URL : http://ionicons.com/
+
+    Font Awesome
+    라이센스 : SIL OFL 1.1
+    http://fortawesome.github.io/Font-Awesome/
+
+코드 라이선스
+다음 디렉토리에있는 모든 CSS 적은 파일에 적용 axicon/css/ , axicon/less/
+라이센스 : MIT 라이선스
+URL : http://opensource.org/licenses/mit-license.html
+
+문서 사용 허가서
+글꼴 또는 코드 라이센스에 포함되지 않은 모든 액시콘 프로젝트 파일에 적용됩니다
+라이센스 : 3.0 CC
+URL : http://creativecommons.org/licenses/by/3.0/
+
+브랜드 아이콘
+모든 브랜드 아이콘은 해당 소유자의 상표입니다.
+이 상표의 사용은 그 반대의 액시콘에 의해 상표의 승인을 받았다는 것을 의미하지는 않습니다.
