@@ -1,0 +1,18 @@
+{
+	"packageManager": "github",
+	"name": "axicon",
+	"repo": "axisj-com/axicon",
+	"files": {
+		"basePath": "axicon/",
+		"include": [
+			"axicon.min.css",
+			"fonts/axicon.eot", 
+			"fonts/axicon.otf", 
+			"fonts/axicon.svg",
+			"fonts/axicon.ttf",
+			"fonts/axicon.woff",
+			"ie7/ie7.css",
+			"ie7/ie7.js"
+		]
+	}
+}
