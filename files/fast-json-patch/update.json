@@ -3,11 +3,7 @@
   "name": "fast-json-patch",
   "repo": "Starcounter-Jack/JSON-Patch",
   "files": {
-    "include": [
-    	"dist/json-patch.min.js", 
-    	"dist/json-patch.min.js.map",
-    	"dist/json-patch-duplex.min.js", 
-    	"dist/json-patch-duplex.min.js.map"
-    ]
+    "basePath": "dist/",
+    "include": ["json-patch.min.js", "json-patch.min.js.map", "json-patch-duplex.min.js", "json-patch-duplex.min.js.map"]
   }
 }
