@@ -1,8 +1,8 @@
 {
   "packageManager": "github",
-  "name": "humane.js",
-  "repo": "wavded/humane-js",
+  "name": "wp-slimstat.js",
+  "repo": "getusedtoit/jsdelivr",
   "files": {
-    "include": ["humane.min.js", "humane.js", "./themes/**/*"]
+    "include": ["wp-slimstat.js"]
   }
 }
