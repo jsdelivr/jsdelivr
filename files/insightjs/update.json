@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "insightjs",
+  "repo": "scottlogic/insight",
+  "files": {
+    "basePath": "dist/",
+    "include": ["insight.min.js", "insight.js", "insight.min.css"]
+  }
+}
