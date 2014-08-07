@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
-  "name": "wp-slimstat.js",
-  "repo": "getusedtoit/jsdelivr",
+  "name": "wp-slimstat",
+  "repo": "getusedtoit/wp-slimstat",
   "files": {
     "include": ["wp-slimstat.js"]
   }
