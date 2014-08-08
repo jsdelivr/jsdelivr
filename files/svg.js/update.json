@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "svg.js",
+  "repo": "wout/svg.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["svg.min.js", "svg.js"]
+  }
+}
