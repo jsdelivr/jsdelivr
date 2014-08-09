@@ -3,7 +3,7 @@
   "name": "pickadate.js",
   "repo": "amsul/pickadate.js",
   "files": {
-    "basePath": "lib/compressed",
-    "include": ["*.js", "themes/*.css"]
+    "basePath": "lib/",
+    "include": ["*.min.js", "./css/*.css"]
   }
 }
