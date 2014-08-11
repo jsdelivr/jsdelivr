@@ -3,7 +3,7 @@
 	"name": "waffles",
 	"repo": "jesseharlin/waffles",
 	"files": {
-		"basePath": "dist",
+		"basePath": "dist/",
 		"include": ["waffles.min.css"]
 	}
 }
