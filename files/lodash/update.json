@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "lodash",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js"]
+  }
+}
