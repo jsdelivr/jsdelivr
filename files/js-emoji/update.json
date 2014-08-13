@@ -4,6 +4,6 @@
 	"repo": "ping/js-emoji",
 	"files": {
 		"basePath": "deploy-cdn/",
-		"include": ["**/*"]
+		"include": ["**/*.js","**/*.css","**/*.png"]
 	}
 }
