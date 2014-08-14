@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "pouchdb",
+  "repo": "pouchdb/pouchdb",
+  "files": {
+    "include": ["dist/pouchdb.min.js", "dist/pouchdb.js"]
+  }
+}
