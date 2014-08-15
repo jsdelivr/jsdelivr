@@ -3,6 +3,6 @@
     "name": "kakao.js",
     "repo": "ping/kakao.js",
     "files": {
-        "include": ["**/*.js"]
+        "include": ["kakao.min.js"]
     }
 }
