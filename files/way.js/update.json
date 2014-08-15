@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "way.js",
+  "repo": "gwendall/way-js",
+  "files": {
+    "include": ["way.min.js"]
+  }
+}
