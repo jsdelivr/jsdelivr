@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "knockout.punches",
+  "repo": "mbest/knockout.punches",
+  "files": {
+    "include": ["knockout.punches.min.js"]
+  }
+}
