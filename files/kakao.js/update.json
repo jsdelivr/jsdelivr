@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "kakao.js",
+    "repo": "ping/kakao.js",
+    "files": {
+        "include": ["**/*.js"]
+    }
+}
