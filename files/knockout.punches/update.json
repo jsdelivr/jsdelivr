@@ -3,6 +3,6 @@
   "name": "knockout.punches",
   "repo": "mbest/knockout.punches",
   "files": {
-    "include": ["knockout.punches.js", "knockout.punches.min.js"]
+    "include": ["knockout.punches.min.js"]
   }
 }
