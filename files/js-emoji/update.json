@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "js-emoji",
+	"repo": "ping/js-emoji",
+	"files": {
+		"basePath": "deploy-cdn/",
+		"include": ["**/*.js","**/*.css","**/*.png"]
+	}
+}
