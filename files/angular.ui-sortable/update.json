@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ui-sortable",
+  "repo": "angular-ui/ui-sortable",
+  "files": {
+    "include": ["sortable.min.js"]
+  }
+}
