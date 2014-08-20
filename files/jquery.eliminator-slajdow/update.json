@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "jquery.eliminator-slajdow",
-  "repo": "maestr0/eliminator-slajdow-chrome/js",
+  "repo": "maestr0/eliminator-slajdow-chrome/js/",
   "files": {
     "include": ["eliminator-slajdow.jquery.widget.js"]
   }
