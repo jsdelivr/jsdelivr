@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "localForage",
+  "repo": "mozilla/localForage",
+  "files": {
+    "include": ["./dist/*.min.js"]
+  }
+}
