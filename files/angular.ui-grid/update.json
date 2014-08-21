@@ -8,14 +8,15 @@
             "ui-grid-unstable.min.js", 
             "ui-grid-unstable.min.css",  
             "ui-grid.min.css",  
-            "ui-grid.min.js"  
+            "ui-grid.min.js",  
+            "ui-grid.eot",     
+            "ui-grid.woff",
+            "ui-grid.svg",
+            "ui-grid.ttf" 
         ], 
         "exclude": [
-            "ui-grid.svg",
             "ui-grid.css",
-            "ui-grid.ttf",
-            "ui-grid.eot",     
-            "ui-grid.woff"
+            "ui-grid.js" 
         ]
     }
 }
