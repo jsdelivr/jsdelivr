@@ -3,6 +3,6 @@
   "name": "Parsley.js",
   "repo": "guillaumepotier/Parsley.js",
   "files": {
-     "basePath": "dist/",
+     "include": ["dist/*.js", "src/i18n/*.js"]
   }
 }
