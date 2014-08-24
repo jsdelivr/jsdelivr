@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "WOW",
+  "repo": "matthieua/WOW",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}
