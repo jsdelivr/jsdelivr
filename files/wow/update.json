@@ -3,6 +3,7 @@
   "name": "WOW",
   "repo": "matthieua/WOW",
   "files": {
-    "include": ["dist/*.min.js"]
+    "basePath": "dist/",
+    "include": "*.min.js"
   }
 }
