@@ -4,6 +4,6 @@
   "repo": "mortzdk/localStorage",
   "files": {
   	"basePath": "dist/",
-    "include": ["*.min.js,", "*.swf"]
+    "include": ["*.min.js", "*.swf"]
   }
 }
