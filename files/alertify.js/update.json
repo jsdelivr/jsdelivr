@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "alertify.js",
+  "repo": "fabien-d/alertify.js",
+  "files": {
+    "basePath": "lib/",
+    "include": ["alertify.min.js", "alertify.js", "themes/alertify.core.css", "themes/alertify.default.css"],
+  }
+}
