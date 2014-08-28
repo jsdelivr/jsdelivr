@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'KoPub Batang';
+  font-family: 'KoPub Dotum';
   font-style: normal;
   font-weight: 300;
   src: url(//cdn.jsdelivr.net/font-kopub/1.0/KoPubDotum-Light.eot);
@@ -8,7 +8,7 @@
        url(//cdn.jsdelivr.net/font-kopub/1.0/KoPubDotum-Light.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'KoPub Batang';
+  font-family: 'KoPub Dotum';
   font-style: normal;
   font-weight: 400;
   src: url(//cdn.jsdelivr.net/font-kopub/1.0/KoPubDotum-Regular.eot);
@@ -17,7 +17,7 @@
        url(//cdn.jsdelivr.net/font-kopub/1.0/KoPubDotum-Regular.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'KoPub Batang';
+  font-family: 'KoPub Dotum';
   font-style: normal;
   font-weight: 700;
   src: url(//cdn.jsdelivr.net/font-kopub/1.0/KoPubDotum-Bold.eot);
