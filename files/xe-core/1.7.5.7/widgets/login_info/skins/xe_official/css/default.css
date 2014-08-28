@@ -1,0 +1,31 @@
+.login_default{margin:0;padding:0;border:2px solid #d9d9d9;width:196px;position:relative;_padding-top:2px;display:block;font-size:12px}
+.login_default fieldset{position:relative;border:1px solid #cacaca;padding:11px 11px 7px 11px;width:172px;margin:0}
+.login_default fieldset .idpwWrap{overflow:hidden;clear:both;width:172px}
+.login_default fieldset .idpw{float:left;width:117px}
+.login_default fieldset .idpw input{border:1px solid #c9c9c9;color:#282828;width:105px;background:#fbfbfb;padding:1px 5px;margin:0 0 4px 0;font:.9em Tahoma}
+.login_default fieldset .login{float:right}
+.login_default fieldset p.securitySignIn{clear:both;padding:0 0 0 18px;margin:4px 0 0 0}
+.login_default fieldset p.noneSSL{background:url("../images/none_ssl.png") no-repeat left top}
+.login_default fieldset p.SSL{background:url("../images/ssl.png") no-repeat left top}
+.login_default fieldset p.noneSSL a{color:#BF6801;text-decoration:none}
+.login_default fieldset p.SSL a{color:#9CAC74;text-decoration:none}
+.login_default fieldset p.keep{margin:1px 0 5px 0;padding:0}
+.login_default fieldset p.keep input{vertical-align:middle;width:13px;height:13px;margin:0;padding:0;border:0}
+.login_default fieldset p.keep label{font:.9em;color:#666;vertical-align:middle}
+.login_default fieldset p.keep_msg{color:#666}
+.login_default fieldset ul.help{margin:0;border-top:1px solid #e4e4e4;overflow:hidden;padding:.5em 0 0 0;white-space:nowrap;list-style:none;clear:both}
+.login_default fieldset ul.help li{display:block;padding:0 3px 0 0}
+.login_default fieldset ul.help li.first-child{background:none;padding-left:0;margin-bottom:3px}
+.login_default fieldset ul.help li a{color:#54564b;font:.9em;white-space:nowrap;text-decoration:none}
+.login_default fieldset ul.help li.first-child a{color:#54564b;text-decoration:none}
+.login_default fieldset ul.help li a:hover{text-decoration:underline}
+.login_default fieldset .userName{position:relative;width:172px;overflow:hidden;border-bottom:1px solid #e4e4e4;padding:0 0 6px 0;margin-top:-5px}
+.login_default fieldset .userName strong{color:#282828;padding:4px 0 0 2px;font:bold .9em Tahoma}
+.login_default fieldset .userName a{position:relative;right:0px}
+.login_default fieldset .userName img{border:none}
+.login_default fieldset ul.userMenu{margin:0;position:relative;padding:0;margin-top:10px}
+.login_default fieldset ul.userMenu li{list-style:none;margin-bottom:5px}
+.login_default fieldset ul.userMenu li a{color:#54564b;text-decoration:none}
+.login_default fieldset ul.userMenu li a:hover{text-decoration:underline}
+.login_default fieldset p.latestLogin{margin:5px 0;color:#666}
+.login_default fieldset p.latestLogin span{font:1em Tahoma}
