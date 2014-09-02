@@ -3,6 +3,7 @@
   "name": "metismenu",
   "repo": "onokumus/metismenu",
   "files": {
-    "include": ["dist/metisMenu.min.js", "dist/metisMenu.min.css"]
+    "basepath": "dist"
+    "include": ["metisMenu.min.js", "metisMenu.min.css"]
   }
 } 
