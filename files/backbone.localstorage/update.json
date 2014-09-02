@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Backbone.localStorage",
+  "repo": "jeromegn/Backbone.localStorage",
+  "files": {
+    "include": ["backbone.localStorage-min.js"]
+  }
+}
