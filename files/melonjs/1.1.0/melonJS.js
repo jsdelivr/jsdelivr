@@ -996,7 +996,7 @@ if (!window.performance.now) {
          * if true, the entire layers are first rendered into an offscreen
          * canvas<br>
          * the "best" rendering method depends of your game<br>
-         * (amount of layer, layer size, amount of tiles per layer, etc…)<br>
+         * (amount of layer, layer size, amount of tiles per layer, etc...)<br>
          * note : rendering method is also configurable per layer by adding this
          * property to your layer (in Tiled)<br>
          * @type {boolean}
@@ -9253,7 +9253,7 @@ if (!window.performance.now) {
         }
     });
 
-    // based on the requestAnimationFrame polyfill by Erik Möller
+    // based on the requestAnimationFrame polyfill by Erik Moller
     (function () {
         var lastTime = 0;
         // get unprefixed rAF and cAF, if present
@@ -13606,9 +13606,9 @@ if (!window.performance.now) {
 
     /**
      * Associate a pointer event to a keycode<br>
-     * Left button – 0
-     * Middle button – 1
-     * Right button – 2
+     * Left button - 0
+     * Middle button - 1
+     * Right button - 2
      * @name bindPointer
      * @memberOf me.input
      * @public
