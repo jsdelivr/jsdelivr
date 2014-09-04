@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "emojione",
+  "repo": "Ranks/emojione",
+  "files": {
+    "include": ["lib/js/emojione.min.js", "assets/css/emojione"]
+  }
+}
