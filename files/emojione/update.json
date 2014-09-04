@@ -2,11 +2,7 @@
     "packageManager": "github",
     "name": "emojione",
     "repo": "Ranks/emojione",
-    "files": [{
-		"basepath":"assets/css/",
-		"include":"emojione.min.css"
-	},{
-		"basepath":"lib/js/",
-		"include":"emojione.min.js"
-	}]
+    "files": {
+    	"include": ["assets/css/emojione.min.css", "lib/js/emojione.min.js"]
+    }
 }
