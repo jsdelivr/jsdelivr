@@ -78,7 +78,7 @@ Under `files/` a directory for each project is created. Please follow the instru
 1. Names should be lowercase
 2. No special characters or spaces, except for `. - _`.
 3. Names should only be the name of the project
-4. If the project is a plugin of a library, append the name of the library, like `jquery.blurjs` or `bootstrap.select`.
+4. If the project is a plugin of a library, prepend the name of the library, like `jquery.blurjs` or `bootstrap.select`.
 
 
 A project's directory should contain the following:
