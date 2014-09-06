@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "qtip2",
+  "repo": "qtip2/qtip2",
+  "files": {
+    "include": ["./**/*.js", "./**/*.css", "./**/*.map"]
+  }
+}
