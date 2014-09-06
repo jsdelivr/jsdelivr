@@ -12,7 +12,7 @@
 		"handlebars.runtime.amd.js",
 		"handlebars.runtime.amd.min.js",
 		"handlebars.runtime.js",
-		"handlebars.runtime.min.js",
+		"handlebars.runtime.min.js"
 		],
 	}
 }
