@@ -3,6 +3,6 @@
   "name": "anijs",
   "repo": "anijs/anijs",
   "files": {
-    "include": ["./dist/**/*"]
+    "basePath": "dist/"
   }
 }
