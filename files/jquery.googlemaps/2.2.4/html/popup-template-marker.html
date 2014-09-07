@@ -1,0 +1,32 @@
+﻿<div class="popup-content">
+    <textarea cols="75" rows="10" class="richtext-fix"></textarea>
+    <table border="0">
+        <tr>
+            <td>Coordinates</td>
+            <td>
+                <input type="number" min="1" name="locationLat" step="any" />&nbsp;<input type="number" name="locationLng" step="any" /></td>
+        </tr>
+        <tr>
+            <td>Icon
+            </td>
+            <td>
+                <select name="icon">
+                    <option value="">default</option>
+
+                </select>
+                <select name="hover-icon">
+                    <option value="">none</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <input type="button" class="btn-popup-save" value="Save" />
+                <input type="button" class="btn-popup-cancel" value="Cancel" />
+                <input type="button" class="btn-popup-delete" value="Delete" />
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="changed" value="false" />
+</div>
