@@ -45,7 +45,7 @@ $.fn.GoogleMapEditor = function (options) {
         streetViewControl: true,            /* Show street view control */
         scrollWheel: false,                 /* Use mouse wheel to zoom in and zoom out*/
         style: null,                        /* Build custom syles at http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html */
-        stylesPath: "../src/styles.json",   /* Url of JSON file with map styles definitions. Enpowered by snazzymaps.com */
+        stylesPath: "../styles.json",   /* Url of JSON file with map styles definitions. Enpowered by snazzymaps.com */
         locations: [],                      /* Locations to be loaded with the map */
         dataChange: null,                   /* Event raised when anything on the map changed */
         locationClick: null,                /* Event raised when a location on the map is clicked */
