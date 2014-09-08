@@ -11,8 +11,8 @@
 $.fn.GoogleMapEditor = function (options) {
     var defaults = {
         editMode: true,                     /* Allow editiong on the map */
-        editTemplatesPath: "../src/html/",  /* Editor layouts html files location */
-        markerPinsPath: "../src/img/pin/",  /* Custom marker icons path */
+        editTemplatesPath: "../html/",  /* Editor layouts html files location */
+        markerPinsPath: "../img/pin/",  /* Custom marker icons path */
         markerPinFiles: ["flag-azure.png",  /* List of files to be available from custom marker icons path */
                         "flag-green.png",
                         "needle-pink.png",
