@@ -3,6 +3,6 @@
   "name": "puppetjs",
   "repo": "puppetjs/puppetjs",
   "files": {
-    "include": ["puppetjs.min.js", "puppetjs.min.js.map"]
+    "include": ["puppet.min.js", "puppet.min.js.map"]
   }
 }
