@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "ember",
+  "repo": "emberjs/ember.js",
+  "files": {
+     "include": ["ember.js", "ember.min.js", "ember.prod.js"]
+  }
+}
