@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ace",
+  "repo": "ajaxorg/ace-builds",
+  "files": {
+    "include": ["./src-min-noconflict/**", "./src-min/**", "./src-noconflict/**", "./src/**"]
+  }
+}
