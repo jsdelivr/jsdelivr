@@ -1,0 +1,15 @@
+/* add generic styling for the editor */
+.ta-scroll-window.form-control{height: auto; min-height: 300px; overflow: auto; font-family: inherit; font-size: 100%; position: relative; padding: 0;} 
+.ta-root.focussed .ta-scroll-window.form-control{border-color: #66afe9; outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);}
+.ta-editor.ta-html{min-height: 300px; height: auto; overflow: auto; font-family: inherit; font-size: 100%;}
+.ta-scroll-window > .ta-bind{height: auto; min-height: 300px; padding: 6px 12px;}
+
+/* add the styling for the awesomness of the resizer */
+.ta-root .ta-resizer-handle-overlay{z-index: 100; position: absolute; display: none;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-info{position: absolute; bottom: 16px; right: 16px; border: 1px solid black; background-color: #FFF; padding: 0 4px; opacity: 0.7;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-background{position: absolute; bottom: 5px; right: 5px; left: 5px; top: 5px; border: 1px solid black; background-color: rgba(0, 0, 0, 0.2);}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-corner{width: 10px; height: 10px; position: absolute;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-corner-tl{top: 0; left: 0; border-left: 1px solid black; border-top: 1px solid black;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-corner-tr{top: 0; right: 0; border-right: 1px solid black; border-top: 1px solid black;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-corner-bl{bottom: 0; left: 0; border-left: 1px solid black; border-bottom: 1px solid black;}
+.ta-root .ta-resizer-handle-overlay > .ta-resizer-handle-corner-br{bottom: 0; right: 0; border: 1px solid black; cursor: se-resize; background-color: white;}
