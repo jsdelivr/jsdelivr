@@ -3,6 +3,6 @@
   "name": "odometer",
   "repo": "HubSpot/odometer",
   "files": {
-    "include": ["odometer.min.js", "odometer.js"]
+    "include": ["odometer.min.js", "odometer.js", "./themes/**/*"]
   }
 }
