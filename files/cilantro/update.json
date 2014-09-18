@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "cilantro",
+    "repo": "cbmi/cilantro",
+    "files": {
+        "basePath": "cdn/"
+    }
+}
