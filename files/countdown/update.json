@@ -3,6 +3,6 @@
   "name": "countdown",
   "repo": "kbwood/countdown",
   "files": {
-    "include": ["jquery.countdown.js", "jquery.countdown.css", "jquery.countdown.min.js", "jquery.countdown-*.js"]
+    "include": [ "*.js", "*.css" ]
   }
 }
