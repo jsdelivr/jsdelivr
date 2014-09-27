@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "terra",
+  "repo": "rileyjshaw/terra",
+  "files": {
+    "basePath": "dist/"
+  }
+}
