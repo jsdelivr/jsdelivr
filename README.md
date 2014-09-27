@@ -281,4 +281,4 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [10]: http://www.cedexis.com/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
-  [13]: https://github.com/jsdelivr/libgrabber#updatejson-schema
+  [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
