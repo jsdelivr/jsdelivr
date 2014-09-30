@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title>Midnight.js - Switch fixed headers on the fly</title>
+
+  <meta name="description" content="Midnight.js is a jQuery plugin that lets you sublty change your headers to make them match the content as you scroll." />
+  <meta name="keywords" content="js, jquery, scroll, plugin, animation" />
+  <meta name="robots" content="INDEX, FOLLOW" />
+  <meta name="author" content="Aerolab" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+  <!-- Facebook Stuff -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Midnight.js" />
+  <meta property="og:title" content="Midnight.js - Switch fixed headers on the fly" />
+  <meta property="og:description" content="Midnight.js is a jQuery plugin that lets you sublty change your headers to make them match the content as you scroll." />
+  <meta property="og:image" content="http://aerolab.github.io/midnight.js/assets/images/midnight-facebook.png" />
+  <meta property="og:url" content="http://aerolab.github.io/midnight.js" />
+  <meta property="fb:app_id" content="344819049029949" />
+  
+  <!-- Twitter Stuff -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="@aerolab" />
+  <meta property="twitter:title" content="Midnight.js - Switch fixed headers on the fly" />
+  <meta property="twitter:description" content="Midnight.js is a jQuery plugin that lets you sublty change your headers to make them match the content as you scroll." />
+  <meta property="twitter:image" content="http://aerolab.github.io/midnight.js/assets/images/midnight-twitter.png" />
+  <meta property="twitter:url" content="http://aerolab.github.io/midnight.js" />
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/icon" />
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  
+  <meta name="X-UA-Compatible" content="IE=edge" />
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,300italic,400bold" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-21195039-3', 'aerolab.github.io');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+<body>
+
+  <!-- Our super awesome changing header! -->
+  <nav class="fixed">
+    <div class="midnightHeader default">
+      <div class="logo-holder">
+        <a class="logo"><span class="screenreader"></span></a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="top-links" data-midnight="white">
+    <a class="button" href="https://aerolab.github.io/midnight.js/midnight.jquery.min.js" download>Download</a>
+    <a class="button button-github" href="https://github.com/Aerolab/midnight.js" target="_blank">Fork on GitHub</a>
+  </div>
+
+
+  <div class="first-background" data-midnight="white">
+    <!-- Hi! -->
+  </div>
+
+
+  <header data-midnight="black">
+
+    <div class="container">
+
+      <h1 class="wow fadeInUp">Midnight.js lets you switch fixed headers on the fly</h1>
+      <p class="wow fadeInUp">Scroll to try it out!</p>
+
+      <div class="scroll-prompt wow fadeInUp"></div>
+
+      <figure id="space-island">
+        <img class="wow fadeInUp" src="assets/css/images/space-island.jpg" />
+      </figure>
+    </div>
+
+  </header>
+
+
+  <section class="step step-one" data-midnight="blue">
+
+    <div class="container">
+      <div class="instructions wow fadeInLeft">
+        <h2>The Header</h2>
+        <p>Create your fixed nav (or header) as you typically would.</p>
+        <p>You can use whatever markup suits you, just make sure the header works well with <em>position:fixed</em>.</p>
+      </div>
+
+      <pre class="line-numbers wow fadeInRight"><code class="language-markup">&lt;!-- Your Fixed Nav --&gt;
+&lt;nav class="fixed"&gt;
+  &lt;a class="logo"&gt;Logo&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+
+  </section>
+
+
+  <section class="step step-two" data-midnight="light">
+
+    <div class="container">
+      <div class="instructions wow fadeInLeft">
+        <h2>The Sections</h2>
+        <p>After that, take any sections of your page that need a different nav and add <em>data-midnight="your-class"</em> to it, where <em>.your-class</em> is the class you are going to use to style that header.</p>
+        <p>If you don't use the property or just leave it blank, the <em>.default</em> class will be used for that section.</p>
+      </div>
+
+      <pre class="line-numbers wow fadeInRight"><code class="language-markup">&lt;section data-midnight="white"&gt;
+  &lt;h1&gt;Use a white nav here&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;div data-midnight="blue"&gt;
+  &lt;h1&gt;And a blue nav here&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;footer&gt;
+  &lt;h1&gt;This will just use the default header&lt;/h1&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+
+  </section>
+
+
+  <section class="step step-three" data-midnight="dark">
+
+    <div class="container">
+      <div class="instructions wow fadeInLeft">
+        <h2>Styling your headers</h2>
+        <p>You can style it in your css using the class <em>.midnightHeader.your-class</em>.</p>
+        <p>Use whatever CSS or markup you like for each one. They will be switched automatically when necessary.</p>
+      </div>
+
+      <pre class="line-numbers wow fadeInRight"><code class="language-css">.midnightHeader.default {
+  background: none;
+  color: black;
+}
+.midnightHeader.white {
+  background: white;
+  color: black;
+}
+.midnightHeader.blue {
+  background: blue;
+  color: white;
+}</code></pre>
+    </div>
+
+  </section>
+
+
+
+  <section class="step step-four" data-midnight="lighter">
+
+    <div class="container">
+      <div class="instructions wow fadeInLeft">
+        <h2>The jQuery Plugin</h2>
+        <p>To make everything work, just load midnight (and jQuery) and initialize it. We take care of the rest.</p>
+      </div>
+
+      <pre class="line-numbers wow fadeInRight"><code class="language-markup">&lt;script src="midnight.jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+// Start midnight
+$(document).ready(function(){
+  // Change this to the correct selector.
+  $('nav.fixed').midnight();
+});
+&lt;/script&gt;</code></pre>
+    </div>
+
+  </section>
+
+
+  <section class="step step-five full-height" data-midnight="white">
+
+    <div class="container">
+
+      <div class="instructions wow fadeInLeft">
+        <h2>Further customization</h2>
+        <p>Want to use custom markup for each header?</p>
+        <p>You just need to add a div with the class <em>.midnightHeader.default</em> inside your header, as well as any other custom headers you want.</p>
+        <p>For instance the "butterflies" section will use the .midnightHeader.butterflies header, and any other ones will just use the markup from .midnightHeader.default.</p>
+      </div>
+
+
+      <pre class="line-numbers wow fadeInRight"><code class="language-markup">&lt;nav class="fixed"&gt;
+  &lt;!-- Your standard header --&gt;
+  &lt;div class="midnightHeader default"&gt;
+    &lt;a class="logo"&gt;Logo&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;!-- A header with butterflies --&gt;
+  &lt;div class="midnightHeader butterflies"&gt;
+    &lt;a class="logo"&gt;Logo&lt;/a&gt;
+    &lt;span class="a-butterfly"&gt;&lt;/span&gt;
+    &lt;span class="another-butterfly"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+    </div>
+
+  </section>
+
+
+
+  <footer class="footer" data-midnight="full">
+
+
+    <div class="illustration-city">
+    
+      <div class="container">
+        <div class="buttons wow fadeIn">
+          <a class="button" href="https://aerolab.github.io/midnight.js/midnight.jquery.min.js" download>Download</a>
+          <a class="button" href="https://github.com/Aerolab/midnight.js" target="_blank"><i class="icon-github"></i> Fork on GitHub</a>
+        </div>
+      </div>
+
+      <div class="signature">
+        <a href="http://aerolab.co" target="_blank" class="signature-aerolab"><span class="screenreader">by Aerolab</span></a>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+  <script src="assets/js/sscr.min.js"></script>
+  <script src="assets/js/prism.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/viewport-units-buggyfill.js"></script>
+  <script src="midnight.jquery.min.js"></script>
+  <script>
+
+
+
+    $(document).ready(function(){
+      // vh fix for iOS7 (Not that it works well on that anyway)
+      viewportUnitsBuggyfill.init();
+
+      $(window).resize(function(){
+        viewportUnitsBuggyfill.refresh();
+      });
+
+      // Start Midnight!
+      $('nav.fixed').midnight();
+
+      // Start wow.js
+      new WOW().init();
+
+      // The island disappears when the logo moves on top of it
+      var $island = $('#space-island');
+      var islandTop = $island.offset().top;
+      var windowHeight = $(window).height();
+
+      $(window).resize(function(){
+        islandTop = $island.offset().top;
+        windowHeight = $(window).height();
+      });
+
+      $(document).scroll(function(){
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var minScrollTop = islandTop - windowHeight * 0.4;
+        var maxScrollTop = islandTop;
+
+        // Opacity goes from 1.0 at the bottom 2/3 of the screen to 0.4 at the top
+        if( scrollTop <= islandTop*2 ) {
+          var targetOpacity = 1.0;
+          var minOpacity = 0.4;
+
+          if( scrollTop > minScrollTop && scrollTop < maxScrollTop ) {
+            targetOpacity = ((maxScrollTop - scrollTop) / (maxScrollTop - minScrollTop)) * (1.0 - minOpacity) + minOpacity;
+          }
+          else if( scrollTop > maxScrollTop ) {
+            targetOpacity = minOpacity;
+          }
+          else if( scrollTop < minScrollTop ) {
+            targetOpacity = 1.0;
+          }
+
+          $island.css('opacity', targetOpacity);
+        }
+
+      });
+
+      $('.scroll-prompt').click(function(event){
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: $("section.step-one").offset().top - $('nav').height() * 0.5
+        }, 1000, 'swing');
+      });
+
+      $(window).trigger('resize');
+
+    });
+  </script>
+
+</body>
+</html>
