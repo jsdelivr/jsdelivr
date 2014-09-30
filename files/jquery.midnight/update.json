@@ -3,6 +3,6 @@
   "name": "jquery.midnight",
   "repo": "Aerolab/midnight.js",
   "files": {
-    "include": "midnight.jquery.min.js"
+    "include": ["midnight.jquery.min.js"]
   }
 }
