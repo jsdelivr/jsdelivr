@@ -1,0 +1,25 @@
+{
+  "name": "midnight",
+  "version": "1.0.3",
+  "description": "Switch fixed headers on the fly",
+  "main": "midnight.jquery.js",
+  "homepage": "https://github.com/Aerolab/midnight.js",
+  "license": "MIT",
+  "authors": [
+    "Aerolab <info@aerolab.co>"
+  ],
+  "keywords": [
+    "jquery",
+    "ui",
+    "scrolling",
+    "header",
+    "midnight"
+  ],
+  "ignore": [
+    "assets",
+    "index.html",
+    "AUTHORS.txt",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
