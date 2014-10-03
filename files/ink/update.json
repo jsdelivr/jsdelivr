@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ink",
+  "repo": "sapo/Ink",
+  "files": {
+    "basePath": "dist/",
+    "include": ["./css/**/*", "./js/**/*", "./fonts/**/*"]
+  }
+}
