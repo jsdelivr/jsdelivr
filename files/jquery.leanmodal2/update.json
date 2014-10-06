@@ -4,8 +4,7 @@
 	"repo": "eustasy/jQuery.leanModal2",
 	"files": {
 		"include": [
-			"jQuery.leanModal2.min.js",
-			"jQuery.leanModal2.js"
+			"jQuery.leanModal2.min.js"
 		]
 	}
 }
