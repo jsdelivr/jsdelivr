@@ -3,7 +3,7 @@
   "name": "noUiSlider",
   "repo": "leongersen/noUiSlider",
   "files": {
-    "basePath": "distribute",
+    "basePath": "distribute/",
     "include": ["*.min.js", "*.min.css"]
   }
 }
