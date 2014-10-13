@@ -1,0 +1,26 @@
+﻿@charset "utf-8"; 
+
+/*
+ * Hangeul NanumBarunGothic Font
+ */
+@font-face {
+ font-family: 'NanumBarunGothic';
+ src: url(/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot);
+ src: url(/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot?#iefix) format('embedded-opentype'),
+      url(/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff) format('woff'),
+      url(/webfont/NanumBarunGothic/NanumBarunGothicWeb.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothicBold';
+ src: url(/webfont/NanumBarunGothic/NanumBarunGothicWebBold.eot);
+ src: url(/webfont/NanumBarunGothic/NanumBarunGothicWebBold.eot?#iefix) format('embedded-opentype'),
+      url(/webfont/NanumBarunGothic/NanumBarunGothicWebBold.woff) format('woff'),
+      url(/webfont/NanumBarunGothic/NanumBarunGothicWebBold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBareunGothicLight';
+ src: url(/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.eot);
+ src: url(/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.eot?#iefix) format('embedded-opentype'),
+      url(/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.woff) format('woff'),
+      url(/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.ttf) format('truetype');
+}
