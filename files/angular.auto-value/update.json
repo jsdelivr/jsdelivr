@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "angular-auto-value",
+  "repo": "johngeorgewright/angular-auto-value",
+  "files": {
+    "include": ["angular-auto-value.js", "angular-auto-value.min.js"]
+  }
+}
+
