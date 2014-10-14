@@ -3,6 +3,6 @@
   "name": "uikit",
   "repo": "uikit/bower-uikit",
   "files": {
-    "include": ["./css/**/*", "./fonts/**/*", "./js/**/*"]
+    "include": ["./css/**/*.min.css", "./fonts/**/*", "./js/**/*.min.js"]
   }
 }

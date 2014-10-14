@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.tooltipster",
+  "repo": "iamceege/tooltipster",
+  "files": {
+	"include": ["./css/**/*", "./js/**/*"]
+  }
+}
