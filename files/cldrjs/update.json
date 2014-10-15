@@ -3,7 +3,7 @@
   "name": "cldrjs",
   "repo": "rxaviers/cldrjs",
   "files": {
-    "basepath": "dist/",
+    "basePath": "dist/",
     "include": ["cldr.min.js", "cldr/event.min.js"]
   }
 }
