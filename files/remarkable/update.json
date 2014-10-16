@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "remarkable",
+  "repo": "jonschlinkert/remarkable",
+  "files": {
+    "include": ["dist/remarkable.min.js"]
+  }
+}
