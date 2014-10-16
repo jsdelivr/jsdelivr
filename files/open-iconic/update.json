@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "open-iconic",
+  "repo": "iconic/open-iconic",
+  "files": {
+    "include": ["./font/css/*.min.css","./font/fonts/*.*","./sprite/*.min.svg"]
+  }
+}
