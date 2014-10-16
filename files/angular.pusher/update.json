@@ -1,6 +1,6 @@
 {
   "packageManager": "bower",
-  "name": "angular.pusher",
+  "name": "pusher-angular",
   "repo": "pusher/pusher-angular",
   "files": {
     "basePath": "lib/",
