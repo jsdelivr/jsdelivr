@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "angular.pusher",
+  "repo": "pusher/pusher-angular",
+  "files": {
+    "basePath": "lib/",
+    "include": ["pusher-angular.min.js"]
+  }
+}
