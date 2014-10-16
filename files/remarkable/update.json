@@ -3,6 +3,7 @@
   "name": "remarkable",
   "repo": "jonschlinkert/remarkable",
   "files": {
-    "include": ["dist/remarkable.min.js"]
+    "basePath": "dist/",
+    "include": ["remarkable.min.js"]
   }
 }
