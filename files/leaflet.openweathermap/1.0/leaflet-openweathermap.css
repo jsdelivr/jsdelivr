@@ -1,0 +1,65 @@
+.owm-icondiv {
+	width: 50px;
+	opacity: 0.7;
+	text-align: center;
+	background-color: lightgray;
+	border-radius: 10px;
+	border: 1px solid darkgray;
+}
+
+.owm-icondiv-temp {
+	color: black;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.1em white;
+	xtext-shadow: white 0.1em 0.1em;
+}
+
+.owm-popup-name {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.owm-popup-name a:link, .owm-popup-name a:active, .owm-popup-name a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.owm-popup-name a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+.owm-popup-description {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.owm-popup-main {
+}
+
+.owm-popup-main img {
+	vertical-align: middle;
+}
+
+.owm-popup-main span {
+	padding-left: 0.5em;
+}
+
+.owm-popup-temp {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.owm-popup-details {
+}
+
+.owm-popup-detail {
+}
+
+.owm-popup-timestamp {
+	color: gray;
+	padding-top: 0.5em;
+}
+
+.owm-legend-item {
+}
