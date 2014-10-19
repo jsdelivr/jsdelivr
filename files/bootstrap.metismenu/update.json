@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "metismenu",
-  "repo": "onokumus/metismenu",
-  "files": {
-    "basepath": "dist/",
-    "include": ["metisMenu.min.js", "metisMenu.min.css"]
-  }
-} 
