@@ -1,8 +1,8 @@
 {
-  "packageManager": "github",
+  "packageManager": "bower",
   "name": "textAngular",
   "repo": "fraywing/textAngular",
   "files": {
-    "include": ["src/textAngular-sanitize.js", "src/textAngular.js", "dist/*"]
+    "include": ["src/textAngular-sanitize.js", "src/textAngular.js", "dist/*.js"]
   }
 }
