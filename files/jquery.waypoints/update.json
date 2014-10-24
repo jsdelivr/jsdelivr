@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.waypoints",
+  "repo": "imakewebthings/jquery-waypoints",
+  "files": {
+	"include": ["waypoints.min.js", "waypoints.js"]
+  }
+}
