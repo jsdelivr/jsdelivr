@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pagePiling.js",
+  "repo": "alvarotrigo/pagePiling.js",
+  "files": {
+	"basePath": "/",
+    "include": ["jquery.pagepiling.js", "jquery.pagepiling.min.js", "jquery.pagepiling.css"]
+  }
+}
