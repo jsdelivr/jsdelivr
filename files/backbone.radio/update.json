@@ -3,7 +3,6 @@
   "name": "backbone.radio",
   "repo": "marionettejs/backbone.radio",
   "files": {
-    "basePath": "build/",
-    "include": ["backbone.radio.min.js", "backbone.radio.min.js.map"]
+    "basePath": "build/"
   }
 }

@@ -4,6 +4,6 @@
   "repo": "facebook/immutable-js",
   "files": {
     "basePath": "dist/",
-    "include": ["Immutable.min.js", "Immutable.d.ts"]
+    "include": ["immutable.min.js", "immutable.d.ts"]
   }
 }
