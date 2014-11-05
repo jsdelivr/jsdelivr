@@ -4,6 +4,6 @@
   "repo": "misantronic/framewreck",
   "files": {
     "basePath": "dist/",
-    "include": ["framewreck.min.js", "./modules/**/*"]
+    "include": ["framewreck.min.js", "framewreck.all.js", "./modules/**/*"]
   }
 }
