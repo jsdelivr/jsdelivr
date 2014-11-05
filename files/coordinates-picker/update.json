@@ -1,6 +1,6 @@
 {
 	"packageManager": "bower",
-	"name": "CoordinatesPicker",
+	"name": "coordinates-picker",
 	"files": {
 		"include": [
 			"CoordinatesPicker.min.js",
