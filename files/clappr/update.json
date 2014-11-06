@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clappr",
+  "repo": "globocom/clappr",
+  "files": {
+    "basePath": "dist/",
+    "include": ["clappr.min.js", "./assets/**/*"]
+  }
+}
