@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "probtn/probtn-web",
+  "repo": "probtn/probtn-web",
+  "files": {
+    "basePath": "jsdelivr/"
+  }
+}
