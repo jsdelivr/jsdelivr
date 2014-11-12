@@ -3,6 +3,6 @@
   "name": "domtastic",
   "repo": "webpro/DOMtastic-release",
   "files": {
-    "files": "domtastic.*"
+    "include": "domtastic.*"
   }
 }
