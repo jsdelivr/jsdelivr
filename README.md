@@ -266,6 +266,12 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
 }(window, document));
 </script>
 ```
+
+Alternatively you can also include it in a /g/ combined URL. Simply add `jsdelivr-rum` at the end to include our javascript. For example:
+
+`http://cdn.jsdelivr.net/g/jquery@2.1,jsdelivr-rum`
+
+
 [Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
 
 
