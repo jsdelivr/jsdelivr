@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "qyer",
+  "repo": "zhuwenxuan/jsdelivr",
+  "files": {
+    "include": ["*.js", "*.css", "*.map", "./css/*"]
+  }
+}

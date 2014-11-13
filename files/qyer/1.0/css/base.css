@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* base reset */
+body {color:#323232;background:#fff;text-align:left;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0;padding:0;outline:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+audio,canvas,video {display:inline-block;*display:inline;*zoom:1;}
+body,button,input,select,textarea {font:12px/1.5 "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB",\5b8b\4f53,sans-serif;}
+input,button,select,textarea {font-size:100%;color:#636363;outline:none;}
+textarea {resize:none;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+iframe {display:block;}
+abbr,acronym {border:0;font-variant:normalå;}
+del {text-decoration:line-through;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:500;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+q:before,q:after {content:"";}
+sub,sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+a {text-decoration:none;color:#0073b6;}
+a:hover {text-decoration:underline;}
+
+/* reset outline */
+a:focus, input:focus {outline:none;}
+input::-moz-focus-inner,button::-moz-focus-inner{outline:none;} /*for mozilla*/
+
+/* reset firefox input width */
+input::-moz-focus-inner,button::-moz-focus-inner {border:0;padding:0;}
+
+/* reset placeholder */
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#959595 !important;}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#959595 !important;} /* Firefox 18- */
+input::-moz-placeholder,textarea::-moz-placeholder{color:#959595 !important;} /* Firefox 19+ */
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#959595 !important;}
+
+/* position */
+.cb {clear:both;}
+.clear {clear:both;height:0;overflow:hidden;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+.fr{float: right;}
+.fl{float: left;}
+
+
+/* font family */
+.fontTahoma {font-family:tahoma,\5b8b\4f53,sans-serif;}
+.fontArial {font-family:helvetica,arial,\5b8b\4f53,sans-serif;}
+.fontSong {font-family:\5b8b\4f53,sans-serif;}
+.fontYaHei {font-family:"Hiragino Sans GB","Microsoft YaHei",\9ED1\4F53,\5b8b\4f53,sans-serif;}
+
+/* color */
+.cBlack {color:#323232;}
+.cGray {color:#636363;}
+.cLightgray {color:#959595;}
+.cWhite {color:#fff;}
+.cRed {color:#790000;}
+.cBlue {color:#0073b6;}
+.cGreen {color:#077345;}
+.cRed_caution {color:#ed1c24;}
+
+/* qyer layout*/
+.qyWrap { width:980px; margin-left:auto; margin-right:auto;}
+.qySide { width:270px;}
+.qyMain { width:680px;}
+
+/* ui_input */
+.ui2_input { height:24px; overflow:hidden; padding:3px 7px; border:1px solid #c0c0c0; font-size:14px; line-height:24px;}
+.ui2_textarea {background-color: #FFFFFF; border: 1px solid #CCCCCC; font-family: Helvetica,Arial,"Hiragino Sans GB",宋体,sans-serif; padding: 2px 5px;}
+.ui2_input:focus, .ui2_textarea:focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui2_focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui2_error { border-color:#cb0900; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+
+.ui3_input { height:32px; line-height:32px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; overflow:hidden; padding:3px 7px; border:1px solid #c0c0c0; font-size:14px; }
+.ui3_input:focus{ border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui3_input_icon_ok,.ui3_input_icon_error,.ui3_input_icon_loading{
+	background-image: url(http://static.qyer.com/models/common/images/input_icons.png);
+	background-repeat: no-repeat;
+	background-position: right 3px;
+	padding-right: 28px;
+}
+.ui3_input_icon_ok{background-position: right -143px; }
+.ui3_input_icon_error{
+	background-position: right -218px; 
+	border-color:#bc0003 !important;
+}
+.ui3_input_icon_loading{background-image: url(
+	http://static.qyer.com/models/common/images/wait_16_2.gif);
+	background-position: right center;
+}
+.ui3_input_disabled[disabled="disabled"],.ui3_textarea[disabled="disabled"]{
+	border-color: #cecece;
+	background-color: #e7e7e7;
+}
+
+
+.ui3_textarea {background-color: #FFFFFF; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border: 1px solid #CCCCCC; font-family: Helvetica,Arial,"Hiragino Sans GB",宋体,sans-serif; padding: 2px 5px;}
+.ui3_textarea:focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+
+
+
+/* ui_button */
+.ui_button,
+.ui_buttonA,
+.ui_buttonB,
+.ui_buttonC,
+.ui_button_warning,
+.ui_button_disabled,
+.ui_button_load,
+.ui_button_cancel {
+	display:inline-block;
+	height:28px;
+	padding:0 15px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:14px;
+	line-height:28px;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+.ui_button { background-color:#3f9f5f;}
+.ui_button:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_button:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_buttonA { background-color:#1995dd;}
+.ui_buttonA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_buttonA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_buttonC { background-color:#f26622;}
+.ui_buttonC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_buttonC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_button_warning { background-color:#cb0900;}
+.ui_button_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_button_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+
+.ui_button_cancel { height:26px; line-height:26px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 14px; color:#323232;}
+.ui_button_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_button_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_button_disabled { height:26px; line-height:26px; border:1px solid #d7d7d7; padding:0 14px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_button_disabled:hover { text-decoration:none;}
+
+.ui_button_load { 
+	height:26px; 
+	padding:0 28px; 
+	line-height:26px; 
+	border:1px solid #d7d7d7; 
+	background:#fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center; 
+	color:#999; 
+	text-indent:-200px; 
+	cursor:default;
+}
+.ui_button_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+input.ui_button_load,
+input.ui_button_cancel,
+input.ui_button_disabled,
+button.ui_button_load,
+button.ui_button_cancel,
+button.ui_button_disabled
+{ height:28px; line-height:normal;}
+
+/* ui_btn_big */
+.ui_btn_big,
+.ui_btn_bigA,
+.ui_btn_bigC,
+.ui_btn_big_warning,
+.ui_btn_big_disabled,
+.ui_btn_big_load,
+.ui_btn_big_cancel {
+	display:inline-block;
+	height:36px;
+	padding:0 25px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:18px;
+	line-height:36px;
+	font-family:"Hiragino Sans GB","Microsoft YaHei",\9ED1\4F53,\5b8b\4f53,sans-serif;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+
+.ui_btn_big { background-color:#3f9f5f;}
+.ui_btn_big:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_btn_big:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_bigA { background-color:#1995dd;}
+.ui_btn_bigA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_btn_bigA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_bigC { background-color:#f26622;}
+.ui_btn_bigC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_btn_bigC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_big_warning  { background-color:#cb0900;}
+.ui_btn_big_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_btn_big_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+
+.ui_btn_big_cancel { height:34px; line-height:34px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 24px; color:#323232;}
+.ui_btn_big_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_btn_big_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_big_disabled { height:34px; line-height:34px; border:1px solid #d7d7d7; padding:0 24px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_btn_big_disabled:hover { text-decoration:none;}
+
+.ui_btn_big_load { height:34px; padding:0 42px; line-height:34px; border:1px solid #ccc; background:#fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center; color:#999; text-indent:-200px; cursor:default;}
+.ui_btn_big_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+input.ui_btn_big_load,
+input.ui_btn_big_cancel,
+input.ui_btn_big_disabled,
+button.ui_btn_big_load,
+button.ui_btn_big_cancel,
+button.ui_btn_big_disabled 
+{ height:36px; line-height:normal;}
+
+/* ui_btn_small */
+.ui_btn_small,
+.ui_btn_smallA,
+.ui_btn_smallB,
+.ui_btn_smallC,
+.ui_btn_small_warning,
+.ui_btn_small_disabled,
+.ui_btn_small_load,
+.ui_btn_small_cancel {
+	display:inline-block;
+	height:24px;
+	padding:0 13px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:12px;
+	line-height:24px;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+.ui_btn_small { background-color:#3f9f5f;}
+.ui_btn_small:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_btn_small:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_smallA { background-color:#1995dd;}
+.ui_btn_smallA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_btn_smallA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_smallC { background-color:#f26622;}
+.ui_btn_smallC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_btn_smallC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_warning { background-color:#cb0900;}
+.ui_btn_small_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_btn_small_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_cancel { height:22px; line-height:22px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 12px; color:#323232;}
+.ui_btn_small_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_btn_small_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_disabled { height:22px; line-height:22px; border:1px solid #d7d7d7; padding:0 12px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_btn_small_disabled:hover { text-decoration:none;}
+
+.ui_btn_small_load { height:22px; padding:0 24px; line-height:22px; border:1px solid #d7d7d7; background:#fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center; color:#999; text-indent:-200px; cursor:default;}
+.ui_btn_small_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+
+
+
+input.ui_btn_small_load,
+input.ui_btn_small_cancel,
+input.ui_btn_small_disabled,
+button.ui_btn_small_load,
+button.ui_btn_small_cancel,
+button.ui_btn_small_disabled
+{ height:24px; line-height:normal;}
