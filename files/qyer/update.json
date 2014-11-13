@@ -1,8 +1,8 @@
 {
   "packageManager": "github",
   "name": "qyer",
-  "repo": "zhuwenxuan/jsdelivr",
+  "repo": "zhuwenxuan/qyerCDN",
   "files": {
-    "include": ["*.js", "*.css", "*.map", "./css/*"]
+    "include": ["./js/*","./css/*"]
   }
 }
