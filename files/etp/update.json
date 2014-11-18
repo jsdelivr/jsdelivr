@@ -4,6 +4,6 @@
   "repo": "wsmckenz/etp",
   "files": {
     "basePath": "lib/browser",
-    "include": ["etp.min.js"],
+    "include": ["etp.min.js"]
   }
 }
