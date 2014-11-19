@@ -1,0 +1,15 @@
+.social_share_privacy_area.line li div.pinit {
+	width: 100px;
+}
+.social_share_privacy_area.box .pinterest .dummy_btn.pinit a {
+	/* pinterest style bugfix */
+	margin-top: 29px!important;
+}
+.social_share_privacy_area.line .pinterest .dummy_btn img.privacy_dummy {
+	width: 40px;
+	height: 20px;
+}
+.social_share_privacy_area.box .pinterest .dummy_btn img.privacy_dummy {
+	width: 40px;
+	height: 50px;
+}
