@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "lining.js",
+  "repo": "zmmbreeze/lining.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["lining.min.js", "lining.effect.min.js"]
+  }
+}
