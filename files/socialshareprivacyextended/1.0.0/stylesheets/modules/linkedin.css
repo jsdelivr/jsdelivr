@@ -1,0 +1,12 @@
+.social_share_privacy_area.line .linkedin img.linkedin_privacy_dummy {
+	width: 63px;
+	height: 20px;
+}
+.social_share_privacy_area.box .linkedin img.linkedin_privacy_dummy {
+	width: 61px;
+	height: 62px;
+}
+.social_share_privacy_area.box .linkedin .dummy_btn {
+	min-width: 61px;
+	min-height: 62px;
+}

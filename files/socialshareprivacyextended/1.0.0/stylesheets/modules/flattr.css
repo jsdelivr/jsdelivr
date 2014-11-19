@@ -1,0 +1,29 @@
+.social_share_privacy_area.line .flattr img {
+	width: 72px;
+	height: 20px;
+	margin-right: 98px;
+}
+.social_share_privacy_area.line .flattr a,
+.social_share_privacy_area.line .flattr iframe {
+	width: 150px;
+	height: 20px;
+	margin-right: 20px;
+}
+.social_share_privacy_area.line .flattr a {
+	display: inline-block;
+}
+.social_share_privacy_area.box .flattr a,
+.social_share_privacy_area.box .flattr img,
+.social_share_privacy_area.box .flattr iframe {
+	width: 62px;
+	height: 62px;
+}
+.social_share_privacy_area.box .flattr a {
+	display: block;
+	visibility: hidden;
+	margin: auto;
+}
+.social_share_privacy_area.box .flattr .dummy_btn {
+	min-width: 62px;
+	min-height: 67px;
+}
