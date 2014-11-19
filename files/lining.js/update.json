@@ -3,7 +3,7 @@
   "name": "lining.js",
   "repo": "zmmbreeze/lining.js",
   "files": {
-    "basePath": "dist/",
+    "basePath": "build/",
     "include": ["lining.min.js", "lining.effect.min.js"]
   }
 }
