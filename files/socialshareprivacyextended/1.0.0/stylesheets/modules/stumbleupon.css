@@ -1,0 +1,10 @@
+.social_share_privacy_area.line .stumbleupon iframe,
+.social_share_privacy_area.line .stumbleupon img {
+	width: 74px;
+	height: 18px;
+}
+.social_share_privacy_area.box .stumbleupon iframe,
+.social_share_privacy_area.box .stumbleupon img {
+	width: 50px;
+	height: 60px;
+}

@@ -1,0 +1,12 @@
+.social_share_privacy_area.line .facebook .fb_like {
+	margin-right: 30px;
+	width: 120px;
+}
+.social_share_privacy_area.line .facebook iframe {
+	width: 130px;
+	height: 21px;
+}
+.social_share_privacy_area.box .facebook iframe {
+	width: 62px;
+	height: 62px;
+}

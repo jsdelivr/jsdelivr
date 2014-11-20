@@ -1,0 +1,12 @@
+.social_share_privacy_area.line .mail a {
+	display: inline-block;
+	width: 43px;
+	height: 20px;
+	margin-right: 20px;
+}
+.social_share_privacy_area.box .mail a {
+	display: block;
+	margin: auto;
+	width: 58px;
+	height: 39px;
+}

@@ -1,0 +1,11 @@
+.social_share_privacy_area.line li div.tweet {
+	width: 115px;
+}
+.social_share_privacy_area.line .twitter iframe {
+	width: 120px;
+	height: 20px;
+}
+.social_share_privacy_area.box .twitter iframe {
+	width: 62px;
+	height: 62px;
+}

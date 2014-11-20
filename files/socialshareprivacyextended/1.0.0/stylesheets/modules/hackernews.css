@@ -1,0 +1,128 @@
+.social_share_privacy_area.line .hackernews img.privacy_dummy {
+	width: 20px;
+	height: 20px;
+	margin-right: 70px;
+}
+.social_share_privacy_area.box .hackernews img.privacy_dummy {
+	width: 62px;
+	height: 62px;
+}
+.social_share_privacy_area .hackernews .hackernews-widget {
+	line-height: 20px;
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	cursor: text;
+	white-space: nowrap;
+	text-align: left;
+}
+.social_share_privacy_area .hackernews .hackernews-widget a.name {
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	height: 20px;
+	border-radius: 3px;
+	background-color: #ff6600;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget {
+	min-width: 90px;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget .points {
+	display: inline-block;
+	padding: 0px 4px;
+	vertical-align: top;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget a.name {
+	display: inline-block;
+	width: 20px;
+}
+.social_share_privacy_area.box .hackernews .hackernews-widget {
+	display: block;
+	width: 62px;
+	height: 62px;
+	margin: auto;
+}
+.social_share_privacy_area.box .hackernews .hackernews-widget a.name {
+	display: block;
+	width: 62px;
+}
+.social_share_privacy_area .hackernews .hackernews-widget a.name:hover {
+	background-color: #ff8635;
+}
+.social_share_privacy_area .hackernews .hackernews-widget a.name:active {
+	background-color: #ff8635;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+}
+.social_share_privacy_area .hackernews .hackernews-widget .points {
+	position: relative;
+	height: 18px;
+	border: 1px solid #bbb;
+	background: white;
+	border-radius: 3px;
+	text-align: center;
+}
+.social_share_privacy_area .hackernews .hackernews-widget .points a {
+	font-weight: normal;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget .points {
+	margin-left: 4px;
+	min-width: 1em;
+}
+.social_share_privacy_area.box .hackernews .hackernews-widget .points {
+	display: block;
+	width: 60px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget .points u,
+.social_share_privacy_area.line .hackernews .hackernews-widget .points i {
+	position: absolute;
+	zoom: 1;
+	line-height: 0;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 50%;
+	margin: -4px 0 0 -4px;
+	border: 4px transparent solid;
+	border-right-color: #aaa;
+	border-left: 0;
+}
+.social_share_privacy_area.line .hackernews .hackernews-widget .points u {
+	margin-left: -3px;
+	border-right-color: #fff;
+}
+.social_share_privacy_area.box .hackernews .hackernews-widget .points u,
+.social_share_privacy_area.box .hackernews .hackernews-widget .points i {
+	position: absolute;
+	zoom: 1;
+	line-height: 0;
+	top: auto;
+	left: 50%;
+	bottom: 0;
+	right: auto;
+	margin: 0 0 -4px -4px;
+	border: 4px transparent solid;
+	border-top-color: #aaa;
+	border-bottom: 0;
+	width: 0;
+	height: 0;
+}
+.social_share_privacy_area.box .hackernews .hackernews-widget .points u {
+	margin-bottom: -3px;
+	border-top-color: #fff;
+}
+.social_share_privacy_area .hackernews .hackernews-widget .points a {
+	color: #333;
+	text-decoration: none;
+}
+.social_share_privacy_area .hackernews .hackernews-widget .points a:hover {
+	color: #333;
+	text-decoration: underline;
+}
