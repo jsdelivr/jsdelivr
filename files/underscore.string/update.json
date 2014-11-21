@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "underscore.string",
+  "repo": "epeli/underscore.string",
+  "files": {
+    basePath: "dist/"
+  }
+}
