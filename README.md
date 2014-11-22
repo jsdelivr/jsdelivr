@@ -257,14 +257,12 @@ These benchmarks are completely transparent to the user and do not impact on bro
 Our JS code is executed with a 2 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
 ```html
-<script type="text/javascript">
-(function(w, d) { var a = function() { var a = d.createElement('script'); a.type = 'text/javascript';
-a.async = 'async'; a.src = '//' + ((w.location.protocol === 'https:') ? 's3.amazonaws.com/cdx-radar/' :
-'radar.cedexis.com/') + '01-11475-radar10.min.js'; d.body.appendChild(a); };
-if (w.addEventListener) { w.addEventListener('load', a, false); }
-else if (w.attachEvent) { w.attachEvent('onload', a); }
-}(window, document));
-</script>
+<script>
+(function(a,b,c,d,e){function f(){var a=b.createElement("script");a.async=!0;
+a.src="//radar.cedexis.com/1/11475/radar.js";b.body.appendChild(a)}/\bMSIE 6/i
+.test(a.navigator.userAgent)||(a[c]?a[c](e,f,!1):a[d]&&a[d]("on"+e,f))})
+(window,document,"addEventListener","attachEvent","load");
+</script> 
 ```
 
 Alternatively you can also include it in a /g/ combined URL. Simply add `jsdelivr-rum` at the end to include our javascript. For example:
