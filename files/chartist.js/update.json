@@ -4,6 +4,6 @@
   "repo": "gionkunz/chartist-js",
   "files": {
     "basePath": "dist/",
-    "include": ["chartist.min.map", "chartist.min.js", "chartist.min.css"]
+    "include": ["chartist.min.js.map", "chartist.min.js", "chartist.min.css"]
   }
 }
