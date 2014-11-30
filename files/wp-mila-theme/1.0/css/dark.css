@@ -1,0 +1,104 @@
+/* 
+
+	Theme Name: Mila
+	Dark Style
+	
+	#ffffff			becomes			#1a1a1a
+	#f2f2f2			becomes			#212121
+	#fafafa			becomes			#1c1c1c
+	#4c4c4c			becomes			#a6a6a6
+	#333333			becomes			#d9d9d9
+	#e5e5e5			becomes			#242424
+	#666666			becomes			#666666
+	#b3b3b3			becomes			#4d4d4d
+	
+*/
+
+body { color:#a6a6a6; background: #1a1a1a; }
+
+h1, h2, h3, h4, h5, h6 { color: #d9d9d9; }
+
+input[type=text], input[type=password], textarea { background: #1a1a1a; border: 1px solid #363636; color: #666666; }
+input[type=text]:hover, input[type=password]:hover, textarea:hover, input[type=text]:focus, input[type=password]:focus, textarea:focus { border: 1px solid #4d4d4d; }
+
+input[type=submit] { background: #1a1a1a; color: #ffffff; }
+input[type=submit]:hover { background: #ffc500; color: #ffffff; }
+
+a { color: #ffc500; }
+a:hover { color: #d9d9d9; }
+a.more-link { background: #1a1a1a; color: #ffffff; }
+a.more-link:hover { background: #ffc500; }
+	
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #d9d9d9; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: #ffc500; }
+
+blockquote { color: #666666; background: #1a1a1a; }
+address { background: #1a1a1a; }
+pre { background: #1a1a1a; }	
+
+footer { background: #1a1a1a; color: #666666; }
+#main-inner { background: #212121; }
+.maincontent { background: #212121; }
+.mainside { background: #1c1c1c; }
+.mainside-bg {  background: #1c1c1c; }
+.meta_date { color: #666666; }
+.meta_date a { color: #666666; }
+.meta_date a:hover { color: #ffc500; }
+.blog-masonry .masonry-inner { border: 1px solid #242424; background: #1a1a1a; }
+.quote { background: #ffc500; }
+.link { background: #212121; }
+#post-single .link { background: #1a1a1a; }
+#post-single .aside { background: #1a1a1a; }
+#comments .comment_content { background: #1a1a1a; }
+#comments .comment_date { color: #666666; }
+	
+.meta_likes a, .meta_comments a, .meta_views a, .meta_tags a { color: #666666; }
+.meta_likes a:hover, .meta_comments a:hover, .meta_views a:hover, .meta_tags a:hover { color: #d9d9d9; }
+
+.filter li .sub-menu { background: #1a1a1a; }
+.filter li .sub-menu li a { color: #666666; }
+.filter li .sub-menu li a:hover, .filter li .sub-menu li a.active { color: #ffc500; }
+.filter-seperator { background: #ffffff; }	
+
+#single-pagination ul li a { background-color:  #1a1a1a; }
+#single-pagination ul li a.next { background-color:  #1a1a1a; }
+#single-pagination ul li a.close { background-color:  #1a1a1a; }
+#single-pagination ul li a:hover {  background-color: #ffc500;  }
+
+#load-more a { background: #ffc500; color: #ffffff; }
+#load-more a:hover { background: #1a1a1a; }
+
+.widget ul li a {  color: #ffc500; }
+.widget ul li a:hover, .widget ul li.current-menu-item a, .widget ul li.current-cat a  { color: #d9d9d9; }
+.widget #searchform input[type="submit"] { background-color: #1a1a1a; }
+
+.twitter-widget .tweet_list li .tweet_time a { color: #666666; }
+.twitter-widget .tweet_list li .tweet_time a:hover { color: #d9d9d9; }
+.tp_recent_tweets ul li .twitter_time { color: #666666; }
+.tp_recent_tweets ul li .twitter_time:hover { color: #d9d9d9; }
+
+.tag-list a { border: 1px solid #242424; background: #1a1a1a; color: #a6a6a6; }
+.tag-list a:hover { color: #ffc500; }
+	
+footer .tag-list a {  border: 1px solid #2f3434; background: #212525; }
+footer .tag-list a:hover {  border: 1px solid #454d4d; }
+
+.skill .skill_bar { background: #1a1a1a; }
+.skill .skill_bar .skill_active { background: #ffc500; }
+.skill .skill_bar span { color: #ffffff; }
+	
+.toggle { border: 1px solid #242424; background: #1a1a1a; }
+.toggle .toggle_title a:hover .toggle_icon { background-color: #d9d9d9; }
+.toggle .toggle_title a.active  { color: #d9d9d9; }
+.toggle .toggle_title a.active .toggle_icon { background-color: #d9d9d9; }
+
+.tabs ul.tab_nav { border-bottom: 1px solid #242424; }	
+.tabs ul.tab_nav li a { background: #1a1a1a; border: 1px solid #242424; color: #666666; }
+.tabs ul.tab_nav li a:hover { background: #1a1a1a; color: #d9d9d9; }
+.tabs ul.tab_nav li a.active { background: #1a1a1a; color: #d9d9d9; border-bottom: 1px solid #1a1a1a; }
+.tabs .tab_container { border: 1px solid #242424; background: #1a1a1a; }
+	
+#loading { background: #1a1a1a url(../images/loader-overlay-dark.png) center center; }
+#loading span { background: #d9d9d9 url(../images/loader-dark.gif) center center no-repeat; }
+
+#fancybox-loading { background: #d9d9d9 url(../images/loader-dark.gif) center center no-repeat; }

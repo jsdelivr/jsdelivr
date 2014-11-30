@@ -1,0 +1,86 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {width: 100%; margin: 0; padding: 0; border: }
+.flexslider .slides { padding: 0; margin: 0; }
+.flexslider .slides > li { height: auto; padding: 0; background: none; display: inline-block; display: none; text-align: center; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: inline-block; vertical-align:bottom; }
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {position: relative; zoom: 1; }
+.flexslider .slides {zoom: 1; }
+.flexslider .slides > li {position: relative;}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption { background: rgba(0,0,0,.4); width: 300px;}
+.flex-caption {position: absolute; left: 30px; bottom: 30px; padding: 15px 15px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+	background: #ffffff; /* Old browsers */ }
+.flex-caption h1, .flex-caption h2, .flex-caption h3, .flex-caption h4, .flex-caption h5, .flex-caption h6   { color: #ffffff; margin: 0; }
+
+/* Direction Nav */
+.flex-direction-nav { height: 0px; width: 100%;  z-index: 0; }
+.flex-direction-nav li { z-index: 100; position: absolute; 
+	top: 50%; margin-top: -50px;
+	width: 80px; height: 100px; display: block; cursor: pointer; text-indent: -9999px;
+	background: #ffc500; 
+	opacity: .6;
+	filter: alpha(opacity=60);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+.flex-direction-nav li { right: 0;  }
+.flex-direction-nav li:first-child { right: inherit; left: 0; }
+.flex-direction-nav li a {width: 80px; height: 100px;display: block; cursor: pointer; text-indent: -9999px; }
+.flex-direction-nav li .flex-next {background: url(../images/next-prev.png) no-repeat -80px 0px; }
+.flex-direction-nav li .flex-prev {background: url(../images/next-prev.png) no-repeat 0px 0px; }
+.flex-direction-nav li:hover { opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";  }
+.flex-direction-nav li .disabled {cursor: default; display: none;}
+
+.masonry-item .flex-direction-nav li { width: 30px;	height: 30px; margin-top: -15px; }
+.masonry-item .flex-direction-nav li a { width: 30px;	height: 30px; }
+.masonry-item .flex-direction-nav li .flex-next { background: url(../images/next-prev.png) no-repeat -190px 0px; }
+.masonry-item .flex-direction-nav li .flex-prev { background: url(../images/next-prev.png) no-repeat -160px 0px; }
+
+/* Control Nav */
+.flex-control-nav { position: absolute; bottom: 19px; left: 0px; width: 100%; text-align: center; height: 1px; z-index: 5; }
+.flex-control-nav li {margin: 0 5px 0 0px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {}
+.flex-control-nav li a {width: 10px; height: 10px; display: block; background: #ffffff; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: #b3b3b3;
+	}
+.flex-control-nav li a:hover { }
+.flex-control-nav li a.flex-active { cursor: default; background: #595959; }
