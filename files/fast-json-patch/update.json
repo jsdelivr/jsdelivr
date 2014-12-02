@@ -1,9 +1,9 @@
 {
   "packageManager": "github",
   "name": "fast-json-patch",
-  "repo": "Starcounter-Jack/JSON-Patch",
+  "repo": "Starcounter-Jack/Fast-JSON-Patch",
   "files": {
     "basePath": "dist/",
-    "include": ["json-patch.min.js", "json-patch.min.js.map", "json-patch-duplex.min.js", "json-patch-duplex.min.js.map"]
+    "include": ["json-patch.min.js", "json-patch-duplex.min.js"]
   }
 }
