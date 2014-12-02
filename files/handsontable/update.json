@@ -3,7 +3,6 @@
   "name": "handsontable",
   "repo": "handsontable/handsontable",
   "files": {
-    "basePath": "dist/",
-    "include": ["*.min.*"]
+    "include": ["dist/*.min.*", "./plugins/**/*"]
   }
 }
