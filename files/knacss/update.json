@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "knacss",
+  "repo": "raphaelgoetter/KNACSS",
+  "files": {
+    "basePath": "css/",
+    "include": ["knacss.css"]
+  }
+}

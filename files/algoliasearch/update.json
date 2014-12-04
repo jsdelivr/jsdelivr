@@ -4,6 +4,6 @@
   "repo": "algolia/algoliasearch-client-js",
   "files": {
     "basePath": "dist",
-    "include": ["algoliasearch.min.js"]
+    "include": ["algoliasearch.min.js", "algoliasearch.js"]
   }
 }
