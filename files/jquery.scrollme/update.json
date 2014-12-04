@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.scrollme",
+  "repo": "nckprsn/scrollme",
+  "files": {
+    "include": ["jquery.scrollme.min.js"]
+  }
+}
