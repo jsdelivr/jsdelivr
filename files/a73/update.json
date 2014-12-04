@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "a73js",
+  "repo": "audience73/a73js",
+  "files": {
+    "include": ["*.js"]
+  }
+}
