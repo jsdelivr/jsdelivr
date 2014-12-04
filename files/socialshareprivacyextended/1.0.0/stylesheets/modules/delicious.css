@@ -1,0 +1,155 @@
+/* 	Delicious Button v1.1
+Blog : http://www.moretechtips.net
+Project: http://code.google.com/p/delicious-button/
+Copyright 2010 [Mike @ moretechtips.net] 
+Licensed under the Apache License, Version 2.0 
+(the "License"); you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 */
+.social_share_privacy_area.box .delicious .delicious-widget,
+.social_share_privacy_area.box .delicious img.privacy_dummy {
+	width: 50px;
+	height: 62px;
+}
+.social_share_privacy_area.line .delicious .delicious-widget,
+.social_share_privacy_area.line .delicious img.privacy_dummy {
+	width: 75px;
+	height: 20px;
+	margin-right: 20px;
+}
+.social_share_privacy_area.box .delicious div.delicious-widget {
+	font-family:Arial,Tahoma,Sans-Serif;
+	font-size:11px;
+	width:50px;
+	margin: 0 auto;
+}
+.social_share_privacy_area.box .delicious a.icon,
+.social_share_privacy_area.box .delicious a.count {
+	color:#FFF!important;
+	display:block;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	outline:none!important;
+	text-decoration:none!important;
+}
+.social_share_privacy_area.box .delicious a.icon {
+	background:#fff;
+	border:1px solid #ccc;
+	height:38px;
+	overflow:hidden;
+	position:relative;
+	direction:ltr;
+}
+.social_share_privacy_area.box .delicious a.icon:hover {
+	border-color:#666;
+}
+.social_share_privacy_area.box .delicious a.count {
+	margin-top:2px;
+	text-align:center;
+	font-size:12px;
+	line-height:18px;
+	height:18px;
+	background:#3274D0;
+	border:#3274D0 1px solid;
+	text-shadow:#2A5580 1px 1px 0;
+}
+.social_share_privacy_area.box .delicious a.count:hover {
+	background:#369;
+	border-color:#369;
+}
+.social_share_privacy_area.box .delicious a.count:active {
+	background:#000;
+	border:#333 1px solid;
+	text-shadow:#222 1px 1px 0;
+	outline:none;
+}
+.social_share_privacy_area.line .delicious div.delicious-widget {
+	font-family:Arial,Tahoma,Sans-Serif;
+	font-size:11px;
+	width:76px;
+}
+.social_share_privacy_area.line .delicious a.icon,
+.social_share_privacy_area.line .delicious a.count {
+	display:block;
+	float:left;
+	line-height:18px;
+	border:#666 solid 1px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	outline:none!important;
+	text-decoration:none!important;
+	height:18px;
+	overflow:hidden;
+	color:#FFF!important;
+}
+.social_share_privacy_area.line .delicious a.icon {
+	background:#fff;
+	border-color:#ccc;
+	width:20px;
+	position:relative;
+	direction:ltr;
+	margin-right:1px;
+}
+.social_share_privacy_area.line .delicious a.icon:hover {
+	border-color:#666;
+}
+.social_share_privacy_area.line .delicious a.count {
+	font-size:12px;
+	background:#3274D0;
+	border-color:#3274D0;
+	width:50px;
+	text-align:center;
+	text-shadow:#2A5580 1px 1px 0;
+}
+.social_share_privacy_area.line .delicious a.count:hover {
+	background:#369;
+	border-color:#369;
+	text-shadow:#369 1px 1px 0;
+}
+.social_share_privacy_area.line .delicious a.count:active {
+	background:#000;
+	border-color:#333;
+	text-shadow:#222 1px 1px 0;
+}
+.social_share_privacy_area.box .delicious a.icon:hover *,
+.social_share_privacy_area.line .delicious a.icon:hover * {
+	opacity:0.85;
+	filter:alpha(opacity=85);
+}
+.social_share_privacy_area.box .delicious a.icon *,
+.social_share_privacy_area.line .delicious a.icon * {
+	width:50%;
+	height:50%;
+	position:absolute;
+	margin:0!important;
+}
+.social_share_privacy_area.box .delicious div.delicious1,
+.social_share_privacy_area.line .delicious div.delicious1 {
+	background:#3274D0;
+	left:50%;
+	top:0;
+}
+.social_share_privacy_area.box .delicious div.delicious2,
+.social_share_privacy_area.line .delicious div.delicious2 {
+	background:#000;
+	left:0;
+	top:50%;
+}
+.social_share_privacy_area.box .delicious div.delicious3,
+.social_share_privacy_area.line .delicious div.delicious3 {
+	background:#D3D2D2;
+	left:50%;
+	top:50%;
+}
+.social_share_privacy_area.box .delicious a.count i,
+.social_share_privacy_area.line .delicious a.count i {
+	display:none;
+	font-style:normal;
+}
+.social_share_privacy_area.box .delicious a.count b,
+.social_share_privacy_area.line .delicious a.count b {
+	font-weight:normal;
+}

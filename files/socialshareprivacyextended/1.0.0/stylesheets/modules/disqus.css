@@ -1,0 +1,151 @@
+.social_share_privacy_area.line .disqus img.privacy_dummy {
+	width: 49px;
+	height: 20px;
+	margin-right: 45px;
+}
+.social_share_privacy_area.box .disqus img.privacy_dummy {
+	width: 55px;
+	height: 61px;
+}
+.social_share_privacy_area .disqus .disqus-widget {
+	line-height: 20px;
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	cursor: text;
+	white-space: nowrap;
+	text-align: left;
+}
+.social_share_privacy_area .disqus .disqus-widget a,
+.social_share_privacy_area .disqus .disqus-widget a:hover {
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	-ms-text-shadow: none;
+	-o-text-shadow: none;
+	text-shadow: none;
+}
+.social_share_privacy_area .disqus .disqus-widget a.name {
+	overflow: hidden;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #5E8BA9;
+	-webkit-text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	-moz-text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	-ms-text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	-o-text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	height: 18px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#dedede));
+	background-image: -moz-linear-gradient(top,#fff,#dedede);
+	background-image: -o-linear-gradient(top,#fff,#dedede);
+	background-image: -ms-linear-gradient(top,#fff,#dedede);
+	background-image: linear-gradient(top,#fff,#dedede);
+}
+.social_share_privacy_area .disqus .disqus-widget a.name .us {
+	color: #b84;
+}
+.social_share_privacy_area.line .disqus .disqus-widget {
+	min-width: 94px;
+}
+.social_share_privacy_area.line .disqus .disqus-widget .count,
+.social_share_privacy_area.line .disqus .disqus-widget a.name {
+	display: inline-block;
+	padding: 0px 4px;
+	vertical-align: top;
+}
+.social_share_privacy_area.box .disqus .disqus-widget {
+	display: block;
+	width: 55px;
+	height: 61px;
+	margin: auto;
+}
+.social_share_privacy_area.box .disqus .disqus-widget .count,
+.social_share_privacy_area.box .disqus .disqus-widget a.name {
+	display: block;
+	width: 53px;
+	text-align: center;
+}
+.social_share_privacy_area .disqus .disqus-widget a.name:hover {
+	border-color: #bbb;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#d9d9d9));
+	background-image: -moz-linear-gradient(top,#f8f8f8,#d9d9d9);
+	background-image: -o-linear-gradient(top,#f8f8f8,#d9d9d9);
+	background-image: -ms-linear-gradient(top,#f8f8f8,#d9d9d9);
+	background-image: linear-gradient(top,#f8f8f8,#d9d9d9);
+}
+.social_share_privacy_area .disqus .disqus-widget a.name:active {
+	background-color: #efefef;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+}
+.social_share_privacy_area .disqus .disqus-widget .count {
+	position: relative;
+	height: 18px;
+	border: 1px solid #bbb;
+	background: white;
+	border-radius: 3px;
+	text-align: center;
+}
+.social_share_privacy_area .disqus .disqus-widget .count a {
+	font-weight: normal;
+}
+.social_share_privacy_area.line .disqus .disqus-widget .count {
+	margin-left: 4px;
+	min-width: 1em;
+}
+.social_share_privacy_area.box .disqus .disqus-widget .count {
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.social_share_privacy_area.line .disqus .disqus-widget .count u,
+.social_share_privacy_area.line .disqus .disqus-widget .count i {
+	position: absolute;
+	zoom: 1;
+	line-height: 0;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 50%;
+	margin: -4px 0 0 -4px;
+	border: 4px transparent solid;
+	border-right-color: #aaa;
+	border-left: 0;
+}
+.social_share_privacy_area.line .disqus .disqus-widget .count u {
+	margin-left: -3px;
+	border-right-color: #fff;
+}
+.social_share_privacy_area.box .disqus .disqus-widget .count u,
+.social_share_privacy_area.box .disqus .disqus-widget .count i {
+	position: absolute;
+	zoom: 1;
+	line-height: 0;
+	top: auto;
+	left: 50%;
+	bottom: 0;
+	right: auto;
+	margin: 0 0 -4px -4px;
+	border: 4px transparent solid;
+	border-top-color: #aaa;
+	border-bottom: 0;
+	width: 0;
+	height: 0;
+}
+.social_share_privacy_area.box .disqus .disqus-widget .count u {
+	margin-bottom: -3px;
+	border-top-color: #fff;
+}
+.social_share_privacy_area .disqus .disqus-widget .count a {
+	color: #333;
+	text-decoration: none;
+}
+.social_share_privacy_area .disqus .disqus-widget .count a:hover {
+	color: #333;
+	text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+.social_share_privacy_area.line .gplus img.gplusone_privacy_dummy {
+	width: 32px;
+}
+.social_share_privacy_area.line li div.gplusone {
+	width: 90px;
+}
+.social_share_privacy_area.box li div.gplusone {
+	min-width: 50px;
+	min-height: 65px;
+}

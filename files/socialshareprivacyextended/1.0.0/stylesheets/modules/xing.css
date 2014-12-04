@@ -1,0 +1,16 @@
+.social_share_privacy_area.line .xing img.xing_privacy_dummy {
+	width: 55px;
+	height: 20px;
+	margin-right: 66px;
+}
+.social_share_privacy_area.box .xing img.xing_privacy_dummy {
+	width: 55px;
+	height: 62px;
+}
+.social_share_privacy_area.box .xing .dummy_btn {
+	min-width: 55px;
+	min-height: 62px;
+}
+.social_share_privacy_area.box .xing .dummy_btn div {
+	margin: auto;
+}

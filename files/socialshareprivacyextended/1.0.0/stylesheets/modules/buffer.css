@@ -1,0 +1,14 @@
+.social_share_privacy_area.line .buffer iframe {
+	width: 110px;
+	height: 20px;
+}
+.social_share_privacy_area.line .buffer img {
+	width: 55px;
+	height: 20px;
+	margin-right: 55px;
+}
+.social_share_privacy_area.box .buffer iframe,
+.social_share_privacy_area.box .buffer img {
+	width: 55px;
+	height: 62px;
+}

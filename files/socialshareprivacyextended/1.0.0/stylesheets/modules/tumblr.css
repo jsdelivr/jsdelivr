@@ -1,0 +1,12 @@
+.social_share_privacy_area.line .tumblr a {
+	display: inline-block;
+	width: 81px;
+	height: 20px;
+	margin-right: 20px;
+}
+.social_share_privacy_area.box .tumblr a {
+	display: block;
+	margin: auto;
+	width: 58px;
+	height: 58px;
+}

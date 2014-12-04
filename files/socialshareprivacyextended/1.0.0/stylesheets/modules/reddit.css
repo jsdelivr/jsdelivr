@@ -1,0 +1,8 @@
+.social_share_privacy_area.line .reddit iframe {
+	width: 120px;
+	height: 18px;
+}
+.social_share_privacy_area.box .reddit iframe {
+	width: 58px;
+	height: 66px;
+}
