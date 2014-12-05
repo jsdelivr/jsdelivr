@@ -3,6 +3,6 @@
   "name": "jquery.ui-contextmenu",
   "repo": "mar10/jquery-ui-contextmenu",
   "files": {
-    "include": ["jquery.ui-contextmenu.min.js"]
+    "include": ["jquery.ui-contextmenu.min.js", "jquery.ui-contextmenu.min.js.map"]
   }
 }

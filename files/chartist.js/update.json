@@ -3,7 +3,7 @@
   "name": "chartist.js",
   "repo": "gionkunz/chartist-js",
   "files": {
-    "basePath": "libdist/",
-    "include": ["chartist.min.map", "chartist.min.js", "chartist.min.css"]
+    "basePath": "dist/",
+    "include": ["chartist.min.js.map", "chartist.min.js", "chartist.min.css"]
   }
 }
