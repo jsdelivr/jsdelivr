@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "softxpath",
+	"repo": "softxml/softxpath",
+	"files": {
+		"basePath": "",
+		"include": ["softxpath.min.js"]
+	}
+}
