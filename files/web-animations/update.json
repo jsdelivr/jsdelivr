@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "web-animations",
+  "repo": "web-animations/web-animations-js",
+  "files": {
+    "include": ["web-animations.min.js"]
+  }
+}
