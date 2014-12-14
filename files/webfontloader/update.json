@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "webfontloader",
-  "repo": "typekit/webfontloader",
-  "files": {
-    "include": ["webfontloader.js"]
-  }
-}
