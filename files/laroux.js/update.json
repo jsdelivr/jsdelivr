@@ -4,6 +4,6 @@
   "repo": "larukedi/laroux.js",
   "files": {
     "basePath": "dist/",
-    "include": ["laroux.min.js","laroux.base.min.js","laroux.ext.min.js","laroux.min.css"]
+    "include": ["laroux.min.js","laroux.min.css", "./parts/*.min.js"]
   }
 }
