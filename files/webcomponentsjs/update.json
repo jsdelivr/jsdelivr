@@ -3,6 +3,6 @@
   "name": "webcomponentsjs",
   "repo": "webcomponents/webcomponentsjs",
   "files": {
-    "include": ["webcomponents.min.js", "webcomponents-lite.min.js", "CustomElements.min.js", "HTMLImports.min.js", "ShadowDOM.min.js", ]
+    "include": ["webcomponents.min.js", "webcomponents-lite.min.js"]
   }
 }
