@@ -3,6 +3,6 @@
   "name": "respimage",
   "repo": "aFarkas/respimage",
   "files": {
-    "include": ["**/*.min.js"]
+    "include": ["*.min.js", "./plugins/**/*.min.js"]
   }
 }
