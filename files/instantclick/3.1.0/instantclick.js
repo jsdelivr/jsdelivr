@@ -159,7 +159,7 @@ var InstantClick = function(document, location) {
        *
        * 1. Removes title on pushState, so the title needs to be set after.
        *
-       * 2. Will not set the title if it’s identical when trimmed, so
+       * 2. Will not set the title if it's identical when trimmed, so
        *    appending a space won't do, but a non-breaking space works.
        */
       document.title = title + String.fromCharCode(160)
