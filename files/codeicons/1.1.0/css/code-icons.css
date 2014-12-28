@@ -1,0 +1,452 @@
+/*! Code Icons Font Pack 1.1.0 by @mabrasil - https://github.com/mabrasil
+
+Some icons were originally made by:
+* Cole Bemis (http://colebemis.com/)
+* Daniel Bruce (http://danielbruce.se/)
+* Tommy Sähl(http://tommysahl.com/)
+* Sergey Shmidt (http://shmidt.in/)
+* Github (https://github.com/github/octicons)
+
+Modified some icons to fit Code Icons grid from original.
+ 
+/* Font Path */
+@font-face {
+	font-family: 'Code-Icons';
+	src:url('../fonts/Code-Icons.eot?#iefix');
+	src:url('../fonts/Code-Icons.eot?') format('embedded-opentype'),
+		url('../fonts/Code-Icons.woff?') format('woff'),
+		url('../fonts/Code-Icons.ttf?') format('truetype'),
+		url('../fonts/Code-Icons.svg?#Code-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	font-family: 'Code-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering */
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ci-tool-atom:before {
+	content: "\f000";
+}
+.ci-tool-brackets:before {
+	content: "\f001";
+}
+.ci-tool-codepen:before {
+	content: "\f002";
+}
+.ci-tool-jetbrains-appcode:before {
+	content: "\f003";
+}
+.ci-tool-jetbrains-CLion:before {
+	content: "\f004";
+}
+.ci-tool-jetbrains-intellij:before {
+	content: "\f005";
+}
+.ci-tool-jetbrains-phpstorm:before {
+	content: "\f006";
+}
+.ci-tool-jetbrains-pycharm:before {
+	content: "\f007";
+}
+.ci-tool-jetbrains-resharper:before {
+	content: "\f008";
+}
+.ci-tool-jetbrains-rubymine:before {
+	content: "\f009";
+}
+.ci-tool-jetbrains-webstorm:before {
+	content: "\f00a";
+}
+.ci-tool-jsfiddle:before {
+	content: "\f00b";
+}
+.ci-tool-sublime:before {
+	content: "\f00c";
+}
+.ci-apache:before {
+	content: "\f00d";
+}
+.ci-cherokee:before {
+	content: "\f00e";
+}
+.ci-lighttpd:before {
+	content: "\f00f";
+}
+.ci-nginx:before {
+	content: "\f010";
+}
+.ci-node:before {
+	content: "\f011";
+}
+.ci-tomcat:before {
+	content: "\f012";
+}
+.ci-coffeescript:before {
+	content: "\f013";
+}
+.ci-css3:before {
+	content: "\f014";
+}
+.ci-html5:before {
+	content: "\f015";
+}
+.ci-java:before {
+	content: "\f016";
+}
+.ci-JS:before {
+	content: "\f017";
+}
+.ci-less:before {
+	content: "\f018";
+}
+.ci-lua:before {
+	content: "\f019";
+}
+.ci-php:before {
+	content: "\f01a";
+}
+.ci-python:before {
+	content: "\f01b";
+}
+.ci-ruby:before {
+	content: "\f01c";
+}
+.ci-sass:before {
+	content: "\f01d";
+}
+.ci-scala:before {
+	content: "\f01e";
+}
+.ci-stylus:before {
+	content: "\f01f";
+}
+.ci-host-aws:before {
+	content: "\f020";
+}
+.ci-host-digitalocean:before {
+	content: "\f021";
+}
+.ci-host-dotcloud:before {
+	content: "\f022";
+}
+.ci-host-heroku:before {
+	content: "\f023";
+}
+.ci-host-openshift:before {
+	content: "\f024";
+}
+.ci-host-webfaction:before {
+	content: "\f025";
+}
+.ci-fw-lift:before {
+	content: "\f026";
+}
+.ci-fw-rails:before {
+	content: "\f027";
+}
+.ci-fw-django:before {
+	content: "\f028";
+}
+.ci-fw-web2py:before {
+	content: "\f029";
+}
+.ci-fw-cake:before {
+	content: "\f02a";
+}
+.ci-fw-codeigniter:before {
+	content: "\f02b";
+}
+.ci-fw-laravel:before {
+	content: "\f02c";
+}
+.ci-fw-symfony:before {
+	content: "\f02d";
+}
+.ci-fw-yii:before {
+	content: "\f02e";
+}
+.ci-fw-zend:before {
+	content: "\f02f";
+}
+.ci-fw-angular:before {
+	content: "\f030";
+}
+.ci-fw-backbone:before {
+	content: "\f031";
+}
+.ci-fw-derby:before {
+	content: "\f032";
+}
+.ci-fw-ember:before {
+	content: "\f033";
+}
+.ci-fw-jquery:before {
+	content: "\f034";
+}
+.ci-fw-jquery-ui:before {
+	content: "\f035";
+}
+.ci-fw-meteor:before {
+	content: "\f036";
+}
+.ci-fw-react:before {
+	content: "\f037";
+}
+.ci-fw-hibernate:before {
+	content: "\f038";
+}
+.ci-fw-play:before {
+	content: "\f039";
+}
+.ci-fw-spring:before {
+	content: "\f03a";
+}
+.ci-fw-wicket:before {
+	content: "\f03b";
+}
+.ci-fw-bootstrap:before {
+	content: "\f03c";
+}
+.ci-fw-foundation:before {
+	content: "\f03d";
+}
+.ci-fw-semantic:before {
+	content: "\f03e";
+}
+.ci-db-cassandra:before {
+	content: "\f03f";
+}
+.ci-db-couchdb:before {
+	content: "\f040";
+}
+.ci-db-mongodb:before {
+	content: "\f041";
+}
+.ci-db-mysql:before {
+	content: "\f042";
+}
+.ci-db-neo4j:before {
+	content: "\f043";
+}
+.ci-db-postgres:before {
+	content: "\f044";
+}
+.ci-db-redis:before {
+	content: "\f045";
+}
+.ci-db-sqlite:before {
+	content: "\f046";
+}
+.ci-os-android:before {
+	content: "\f047";
+}
+.ci-adb:before {
+	content: "\f048";
+}
+.ci-layout:before {
+	content: "\f049";
+}
+.ci-layers:before {
+	content: "\f04a";
+}
+.ci-browser:before {
+	content: "\f04b";
+}
+.ci-window:before {
+	content: "\f04c";
+}
+.ci-terminal:before {
+	content: "\f04d";
+}
+.ci-code:before {
+	content: "\f04e";
+}
+.ci-bitcoin:before {
+	content: "\f04f";
+}
+.ci-tool-stack-overflow:before {
+	content: "\f050";
+}
+.ci-bitbucket:before {
+	content: "\f051";
+}
+.ci-bitbucket-square:before {
+	content: "\f052";
+}
+.ci-os-linux:before {
+	content: "\f053";
+}
+.ci-bug:before {
+	content: "\f054";
+}
+.ci-openid:before {
+	content: "\f055";
+}
+.ci-fw-drupal:before {
+	content: "\f056";
+}
+.ci-fw-joomla:before {
+	content: "\f057";
+}
+.ci-git-square:before {
+	content: "\f058";
+}
+.ci-git:before {
+	content: "\f059";
+}
+.ci-meanpath:before {
+	content: "\f05a";
+}
+.ci-code2:before {
+	content: "\f05b";
+}
+.ci-database:before {
+	content: "\f05c";
+}
+.ci-smashing:before {
+	content: "\f05d";
+}
+.ci-cloud:before {
+	content: "\f05e";
+}
+.ci-bug2:before {
+	content: "\f05f";
+}
+.ci-database2:before {
+	content: "\f060";
+}
+.ci-database3:before {
+	content: "\f061";
+}
+.ci-file-binary:before {
+	content: "\f062";
+}
+.ci-file-code:before {
+	content: "\f063";
+}
+.ci-gist:before {
+	content: "\f064";
+}
+.ci-git-branch:before {
+	content: "\f065";
+}
+.ci-git-commit:before {
+	content: "\f066";
+}
+.ci-git-compare:before {
+	content: "\f067";
+}
+.ci-git-merge:before {
+	content: "\f068";
+}
+.ci-git-pull-request:before {
+	content: "\f069";
+}
+.ci-markdown:before {
+	content: "\f06a";
+}
+.ci-organization:before {
+	content: "\f06b";
+}
+.ci-package:before {
+	content: "\f06c";
+}
+.ci-repo:before {
+	content: "\f06d";
+}
+.ci-repo-clone:before {
+	content: "\f06e";
+}
+.ci-repo-force-push:before {
+	content: "\f06f";
+}
+.ci-repo-forked:before {
+	content: "\f070";
+}
+.ci-repo-pull:before {
+	content: "\f071";
+}
+.ci-repo-push:before {
+	content: "\f072";
+}
+.ci-split:before {
+	content: "\f073";
+}
+.ci-terminal2:before {
+	content: "\f074";
+}
+.ci-github:before {
+	content: "\f075";
+}
+.ci-github-octoface-1:before {
+	content: "\f076";
+}
+.ci-github-octoface-2:before {
+	content: "\f077";
+}
+.ci-github2:before {
+	content: "\f078";
+}
+.ci-github3:before {
+	content: "\f079";
+}
+.ci-fw-wordpress-round:before {
+	content: "\f07a";
+}
+.ci-fw-wordpress-square:before {
+	content: "\f07b";
+}
+.ci-os-linux-tux:before {
+	content: "\f07c";
+}
+.ci-os-mac:before {
+	content: "\f07d";
+}
+.ci-os-mac-finder:before {
+	content: "\f07e";
+}
+.ci-os-windows:before {
+	content: "\f07f";
+}
+.ci-os-windows8:before {
+	content: "\f080";
+}
+.ci-tool-stackoverflow:before {
+	content: "\f081";
+}
+.ci-git2:before {
+	content: "\f082";
+}
+.ci-svg:before {
+	content: "\f083";
+}
+.ci-bw-chrome:before {
+	content: "\f084";
+}
+.ci-bw-firefox:before {
+	content: "\f085";
+}
+.ci-bw-IE:before {
+	content: "\f086";
+}
+.ci-bw-opera:before {
+	content: "\f087";
+}
+.ci-bw-safari:before {
+	content: "\f088";
+}
+.ci-database4:before {
+	content: "\f08c";
+}
