@@ -1,0 +1,12 @@
+/*5 Star Rating System STYLES START*/
+.star-rating,.star-rating a:hover,.star-rating a:active,.star-rating .current-rating{background:url(stars/oxygen/stars20.png) left -1000px repeat-x;cursor:pointer;}
+.star-rating{position:relative;width:100px;height:20px;overflow:hidden;list-style:none;background-position:left top;margin:0;padding:0;}
+.star-rating li{display:inline;}
+.star-rating a,.star-rating .current-rating{position:absolute;top:0;left:0;text-indent:-1000em;height:20px;line-height:20px;outline:none;overflow:hidden;border:none;}
+.star-rating a:hover,.star-rating a:active{background-position:left bottom;}
+.star-rating a.star1{width:20%;z-index:6;}
+.star-rating a.star2{width:40%;z-index:5;}
+.star-rating a.star3{width:60%;z-index:4;}
+.star-rating a.star4{width:80%;z-index:3;}
+.star-rating a.star5{width:100%;z-index:2;}
+.star-rating .current-rating{z-index:1;background-position:left center;}
