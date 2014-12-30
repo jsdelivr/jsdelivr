@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "bootstrapvalidator",
-  "repo": "nghuuphuoc/bootstrapvalidator",
-  "files": {
-	"basePath": "dist/",
-    "include": ["./css/bootstrapValidator.min.css", "./js/bootstrapValidator.min.js"]
-  }
-}
