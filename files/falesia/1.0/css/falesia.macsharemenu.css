@@ -1,0 +1,197 @@
+@media(max-width:767px){
+
+	#mac_sharemenu{
+		display: none;
+	}
+
+}
+
+#mac_sharemenu li a i
+, #mac_sharemenu li i
+{
+color:#222;
+font-size: 16px;
+text-decoration: none;
+padding-left:3px;
+}
+
+#mac_sharemenu,
+#mac_sharemenu li #search_box input.mac_sharemenu_searchinput_text,
+#mac_sharemenu li #search_box input#mac_sharemenu_searchbutton{
+}
+.mac_sharemenu_list a{
+}
+#mac_sharemenu .mac_sharemenu_list li,
+#mac_sharemenu .mac_sharemenu_list li a,
+#mac_sharemenu input{
+color:#444;
+}
+#mac_sharemenu .mac_sharemenu_list li a{
+text-decoration:none;
+}
+#mac_sharemenu .mac_sharemenu_list li:hover,
+#mac_sharemenu .mac_sharemenu_list li:hover a,
+#mac_sharemenu input:hover{
+color:#222
+}
+#mac_sharemenu input{
+border: solid 1px #ddd;
+background: #fafafa;
+}
+#mac_sharemenu input:hover{
+border-color: #bbb;
+}
+#mac_sharemenu input:focus{
+background: #ffffff;
+}
+#mac_sharemenu {}
+#mac_sharemenu,
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_small_content_container,
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_big_content_container{
+-webkit-box-shadow:  0 1px 2px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+color:#444;
+background-color:#FFFFFF;
+}
+#mac_sharemenu li {
+border-bottom:1px solid #DDDDDD;border-top:1px solid #FFFFFF
+}
+#mac_sharemenu {
+text-shadow:1px 1px #ffffff;
+}
+/*
+#mac_sharemenu li .mac_icon_ad {background:url("../../../image/ad.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_announcement {background:url("../../../image/announcement.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_blog {background:url("../../../image/blog.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_event {background:url("../../../image/event.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_forum {background:url("../../../image/forum.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_marketplace {background:url("../../../image/marketplace.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_music {background:url("../../../image/music.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_photo {background:url("../../../image/photo.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_poll {background:url("../../../image/poll.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_quiz {background:url("../../../image/quiz.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_rss {background:url("../../../image/rss.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_video {background:url("../../../image/videotv.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_user {background:url("../../../image/user.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_friend {background:url("../../../image/friend.png") no-repeat 0 8px;}
+#mac_sharemenu li .mac_icon_pages {background:url("../../../image/pages.png") no-repeat 0 8px;}
+*/
+#mac_sharemenu_container #mac_sharemenu {
+left:0;-webkit-border-radius: 0px 2px 2px 0px;-moz-border-radius: 0px 2px 2px 0px;border-radius: 0px 2px 2px 0px
+}
+#mac_sharemenu {
+position:fixed;padding:0;margin:0;top:200px;z-index:100;list-style:none;width:34px;
+}
+#mac_sharemenu > li {
+width:34px;height:30px;padding:6px;position:relative;
+}
+/*
+#mac_sharemenu > li i,
+.mac_sharemenu_list li{
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+filter: alpha(opacity=60);
+-moz-opacity: 0.6;
+-khtml-opacity: 0.6;
+opacity: 0.6;
+}
+#mac_sharemenu > li:hover i,
+.mac_sharemenu_list li:hover{
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+filter: alpha(opacity=100);
+-moz-opacity: 1;
+-khtml-opacity: 1;
+opacity: 1;
+}
+*/
+#mac_sharemenu #mac_sharemenu_second,
+#mac_sharemenu #mac_sharemenu_fourth{
+position: static !important;
+}
+#mac_sharemenu li:hover {
+cursor:pointer;
+}
+/*
+#mac_sharemenu li i {
+width:32px;height:22px;display:block;
+}		
+#mac_sharemenu_container #mac_sharemenu li i {
+padding-right:9px;background-position:left top;
+}		
+#mac_sharemenu li i {
+background-repeat:no-repeat;
+}
+#mac_sharemenu_container #mac_sharemenu li:hover i {
+background-position:left bottom;
+}		
+#mac_sharemenu li #mac_sharemenu_home {
+background-image:url("../../../image/gohome.png");
+}
+#mac_sharemenu li #mac_sharemenu_mainmenu {
+background-image:url("../../../image/share.png");
+}
+#mac_sharemenu li #mac_sharemenu_search {
+background-image:url("../../../image/search.png");
+}
+#mac_sharemenu li #mac_sharemenu_mail {
+background-image:url("../../../image/contact.png");
+}
+*/
+#mac_sharemenu_sixth,
+#mac_sharemenu_fifth{
+display:none
+}
+#mac_sharemenu li .mac_sharemenu_li_container {
+position:absolute;margin:0;top:0;left:-9999em;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity: 0;-webkit-transition: opacity 0.5s;-moz-transition: opacity 0.5s;-o-transition: opacity 0.5s;-ms-transition: opacity 0.5s;transition: opacity 0.5s;
+}
+#mac_sharemenu_container #mac_sharemenu li .mac_sharemenu_li_container {
+padding-left: 4px;
+}
+#mac_sharemenu .bottom_panel .mac_sharemenu_li_container {
+bottom:-3px;top:auto;
+}
+#mac_sharemenu_container #mac_sharemenu li:hover .mac_sharemenu_li_container {
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;
+}
+#mac_sharemenu_container #mac_sharemenu li:hover .mac_sharemenu_li_container {
+left:30px;
+}
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_small_content_container,
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_big_content_container{
+padding:10px 10px 0px 5px;position:relative;float:left;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;
+}
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_small_content_container {width: 155px;}
+#mac_sharemenu .mac_sharemenu_li_container .mac_sharemenu_big_content_container {width: 310px;}
+#mac_sharemenu .mac_small_content,
+#mac_sharemenu .mac_big_content {
+display:inline;float: left;position: relative;margin-left: 5px;margin-right: 5px;
+}
+#mac_sharemenu .mac_small_content {width:145px;}
+#mac_sharemenu .mac_big_content {width:300px;}
+#mac_sharemenu .mac_sharemenu_list {
+margin:0;padding:0 0 12px 0;list-style:none;
+}
+#mac_sharemenu .mac_sharemenu_list li {
+border:none;padding:6px 3px 3px 24px;
+}
+#mac_sharemenu li #search_box {
+margin:0;padding:0 0 10px 0;width:295px
+}
+#mac_sharemenu li #search_box input.mac_sharemenu_searchinput_text {
+padding:7px;margin:3px 0px 12px 0px;width:215px;float:left;outline:none
+}
+#mac_sharemenu li #search_box input#mac_sharemenu_searchbutton {
+padding:6px;margin:3px 0px 12px 0px;float:right;outline:none;cursor:pointer
+}
+#mac_sharemenu_container #mac_sharemenu {
+border-left:none;
+}		
+#mac_sharemenu li {
+*border-top:none;
+}
+#mac_sharemenu #mac_sharemenu_first {
+border-top:none;
+}
+#mac_sharemenu #mac_sharemenu_fifth {
+border-bottom:none;
+}
