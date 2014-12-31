@@ -1,0 +1,5 @@
+html,body{padding:0; margin:0; min-height: 100%; height:100%;}
+.darkBg{background:#2d0f0f url(images/smashing.jpg) top center;background-repeat:no-repeat;}
+.lightBg{background : url(images/snow.jpg) #b1dde0 top center no-repeat;}
+.collectonme{margin:120px auto; background: red; width:50%; text-align:center; font-size:1.2em; color:#fff;}
+.test-container{position:absolute; top:100px; width:200px; height:200px;border:1px solid black;}
