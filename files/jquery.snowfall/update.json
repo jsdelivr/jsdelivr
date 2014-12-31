@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "snowfall.jquery.js",
+  "repo": "loktar00/JQuery-Snowfall",
+  "files": {
+    "include": ["/dist/snowfall.jquery.min.js", "/dist/snowfall.min.js", "/src/snowfall.jquery.js", "/src/snowfall.js", "/examples/styles.css"]
+  }
+}
