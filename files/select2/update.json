@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "select2",
-  "repo": "ivaynberg/select2",
+  "repo": "select2/select2",
   "files": {
     "include": ["*.js", "*.css", "*.gif", "*.png"]
   }

@@ -3,6 +3,6 @@
   "name": "snabbt.js",
   "repo": "daniel-lundin/snabbt.js",
   "files": {
-    "basePath": "dist/"
+    "include": ["snabbt.min.js"]
   }
 }
