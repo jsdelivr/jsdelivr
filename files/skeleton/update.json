@@ -3,6 +3,6 @@
   "name": "Skeleton",
   "repo": "dhg/Skeleton",
   "files": {
-    "include": ["./images/**/*", "./css/**/*"]
+    "include": ["./css/**/*"]
   }
 }
