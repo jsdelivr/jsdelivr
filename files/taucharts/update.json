@@ -3,7 +3,6 @@
 	"name": "tauCharts",
 	"repo": "TargetProcess/tauCharts",
 	"files": {
-		"basePath": "build/",
-		"include": ["*.min.*", "./css/*.min.*", "./plugins/*.min.*"]
+		"basePath": "build/production"
 	}
 }
