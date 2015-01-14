@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-filestyle",
+  "repo": "markusslima/bootstrap-filestyle",
+  "files": {
+    "basePath": "src/"
+  }
+}
