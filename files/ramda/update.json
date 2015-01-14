@@ -3,6 +3,7 @@
   "repo": "ramda",
   "name": "ramda",
   "files": {
+    "basePath": "dist/",
     "include": ["ramda.min.js"]
   }
 }
