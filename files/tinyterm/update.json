@@ -4,6 +4,6 @@
   "repo": "rileyjshaw/tinyterm",
   "files": {
     "basePath": "dist/",
-    "include": ["tinyterm.min.js", "tinyterm.min.css", "themes/*.min.css"]
+    "include": ["tinyterm.min.js", "tinyterm.min.css", "./themes/*.min.css"]
   }
 }
