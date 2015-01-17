@@ -38,7 +38,7 @@ Downtime, timeouts or slow responses are simply unacceptable. The idea is not to
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. We currently use [MaxCDN][7] and [CloudFlare][8].
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [KeyCDN][14].
 
 On top of CDN providers, jsDelivr also utilizes custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users near those locations.
 
@@ -286,3 +286,4 @@ Alternatively you can also include it in a /g/ combined URL. Simply add `jsdeliv
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
   [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
+  [14]: https://www.keycdn.com/
