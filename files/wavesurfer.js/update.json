@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "wavesurfer.js",
+  "repo": "katspaugh/wavesurfer.js",
+  "files": {
+    "basePath": "build/"
+  }
+}
