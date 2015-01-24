@@ -195,7 +195,7 @@ As always it supports version aliasing and latest versions:
 
 Now if all files in the combination have a `.css` extension then the server will automatically respond with `Content-Type: text/css` header. In all other cases the server responds with `Content-Type: application/javascript` header.
 
-`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),fontawesome@4.0.3(css/font-awesome.min.css)`
+`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),animatecss@3.2.0`
 
 
 The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
