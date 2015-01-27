@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "m8tro-bootstrap",
+  "repo": "idleberg/m8tro-bootstrap",
+  "files": {
+    "include": ["./dist/m8tro.css", "./dist/m8tro.min.css"]
+  }
+}
