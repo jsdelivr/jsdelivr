@@ -3,6 +3,6 @@
   "name": "angular-material-icons",
   "repo": "klarsys/angular-material-icons",
   "files": {
-    "include": ["angular-material-icons.js"]
+    "include": ["angular-material-icons.min.js"]
   }
 }
