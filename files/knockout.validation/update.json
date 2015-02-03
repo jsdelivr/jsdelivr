@@ -4,6 +4,6 @@
   "repo": "Knockout-Contrib/Knockout-Validation",
   "files": {
     "basePath": "dist/",
-    "include": ["*.min.js", "*.min.js.map"]
+    "include": ["*.js", "*.js.map"]
   }
 }
