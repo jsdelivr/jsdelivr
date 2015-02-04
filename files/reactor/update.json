@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Reactor",
+  "repo": "Sinova/Reactor",
+  "files": {
+    "include": ["reactor.min.js"]
+  }
+}
