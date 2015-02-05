@@ -1,0 +1,13 @@
+{
+	"packageManager": "github",
+	"name": "Reactor",
+	"repo": "Sinova/Reactor",
+	"files": {
+		"basePath": "lib/",
+		"include": [
+			"reactor.min.js",
+			"reactor.min.js.map",
+			"reactor.js"
+		]
+	}
+}
