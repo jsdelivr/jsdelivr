@@ -3,6 +3,6 @@
   "name": "steno.js",
   "repo": "kenshinthebattosai/steno.js",
   "files": {
-    "include": ["steno.crushed.js", "steno.min.js"]
+    "include": ["steno.min.js"]
   }
 }
