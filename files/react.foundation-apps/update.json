@@ -3,6 +3,7 @@
   "name": "react-foundation-apps",
   "repo": "akiran/react-foundation-apps",
   "files": {
-    "include": ["./dist/*.js"]
+    "basePath": ["dist/"],
+    "include": ["*.js"]
   }
 }
