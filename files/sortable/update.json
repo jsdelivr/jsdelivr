@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "Sortable",
+	"repo": "rubaxa/sortable",
+	"files": {
+		"include": ["Sortable.js", "Sortable.min.js"]
+	}
+}
