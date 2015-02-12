@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "amplifyjs",
+  "repo": "appendto/amplify",
+  "files": {
+    "include": ["./lib/amplify.core.min.js","./lib/amplify.min.js","./lib/amplify.request.min.js","./lib/amplify.store.min.js"]
+  }
+}
