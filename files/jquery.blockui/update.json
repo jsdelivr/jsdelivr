@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "jquery.blockui",
+	"repo": "malsup/blockui",
+	"files": {
+		"include": ["jquery.blockUI.js"]
+	}
+}
