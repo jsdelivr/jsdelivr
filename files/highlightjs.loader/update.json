@@ -1,0 +1,14 @@
+{
+    "packageManager": "github",
+    "name": "highlightjs.loader",
+    "repo": "alidbg/highlight.js_loader",
+    "files": {
+    	"basePath": "/",
+        "include": [
+            "highlightjs.loader.min.js",
+            "highlightjs.loader.js",
+            "/src/nicescroll.js",
+            "/src/JStyles/*.js"
+        ]
+    }
+}
