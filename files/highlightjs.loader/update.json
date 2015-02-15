@@ -7,8 +7,7 @@
         "include": [
             "highlightjs.loader.min.js",
             "highlightjs.loader.js",
-            "./src/nicescroll.js",
-            "./src/JStyles/*.js"
+            "./src/**/*"
         ]
     }
 }
