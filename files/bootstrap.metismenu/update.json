@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "metismenu.js",
+  "repo": "onokumus/metisMenu",
+  "files": {
+    "include": ["dist/*"]
+  }
+}
