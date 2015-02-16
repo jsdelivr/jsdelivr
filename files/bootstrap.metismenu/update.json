@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "bootstrap.metismenu",
+  "repo": "onokumus/metisMenu",
+  "files": {
+	"basePath":"/",
+    "include": ["dist/*"]
+  }
+}
