@@ -1,6 +1,6 @@
 {
-  "packageManager": "github",
-  "name": "Evil Icons",
+  "packageManager": "npm",
+  "name": "evil-icons",
   "repo": "outpunk/evil-icons",
   "files": {
     "basePath": "assets/",
