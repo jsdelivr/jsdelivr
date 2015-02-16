@@ -3,7 +3,7 @@
   "name": "bootstrap.metismenu",
   "repo": "onokumus/metisMenu",
   "files": {
-	"basePath":"/"
+	"basePath":"/",
     "include": ["dist/*"]
   }
 }
