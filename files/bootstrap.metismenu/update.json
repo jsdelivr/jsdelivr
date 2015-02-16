@@ -1,8 +1,9 @@
 {
   "packageManager": "npm",
-  "name": "metismenu.js",
+  "name": "bootstrap.metismenu",
   "repo": "onokumus/metisMenu",
   "files": {
+	"basePath":"/"
     "include": ["dist/*"]
   }
 }
