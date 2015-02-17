@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "JupiterJS",
+  "repo": "mbjordan/JupiterJS",
+  "files": {
+    "include": [
+        "jupiter.js"
+    	"jupiter.min.js"
+    ]
+  }
+}
