@@ -4,7 +4,7 @@
   "repo": "mbjordan/JupiterJS",
   "files": {
     "include": [
-        "jupiter.js"
+        "jupiter.js",
     	"jupiter.min.js"
     ]
   }
