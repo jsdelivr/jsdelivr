@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "jquery.handsontable",
-  "repo": "handsontable/jquery-handsontable",
-  "files": {
-    "basePath": "dist/",
-    "exclude": ["README.md"]
-  }
-}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.selectric",
+  "repo": "lcdsantos/jQuery-Selectric",
+  "files": {
+    "basePath": "dist/",
+	"include": ["jquery.selectric.min.js", "selectric.css"]
+  }
+}

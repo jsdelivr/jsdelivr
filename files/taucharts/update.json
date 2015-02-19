@@ -3,7 +3,6 @@
 	"name": "tauCharts",
 	"repo": "TargetProcess/tauCharts",
 	"files": {
-		"basePath": "build/",
-		"include": ["tauCharts.min.js","color-brewer.min.js","css/graphic-elements.min.css","css/colorbrewer.min.css"]
+		"basePath": "build/production"
 	}
 }
