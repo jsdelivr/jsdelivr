@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "keen.js",
+  "repo": "keen/keen-js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}
