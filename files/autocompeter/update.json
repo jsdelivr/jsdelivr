@@ -3,6 +3,7 @@
   "name": "autocompeter",
   "repo": "peterbe/autocompeter",
   "files": {
-    "include": ["public/dist/autocompeter-v1.min.*"]
+    "basePath": "public/dist",
+    "include": ["autocompeter-v1.min.*"]
   }
 }
