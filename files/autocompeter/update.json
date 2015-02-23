@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "autocompeter",
+  "repo": "peterbe/autocompeter",
+  "files": {
+    "basePath": "public/dist",
+    "include": ["autocompeter.min.*"]
+  }
+}
