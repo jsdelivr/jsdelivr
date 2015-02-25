@@ -1,0 +1,86 @@
+(function(compId){var _=null,y=true,n=false,x7='break-word',e41='${CTCWaitting}',x53='35px',x48='Text3',x29='15px',x1='5.0.1',x37='12px',x24='32px',x70='Reject',x45='rgba(255,255,255,1.00)',i='none',x27='ExpenseIcon',x25='16px',x31='26px',x60='36px',x19='50px',e63='${Question}',x20='auto',x36='11px',x15='rgba(255,255,255,1)',tp='top',x46='400',x52='0.98497840447154',xc='rgba(0,0,0,1)',zy='scaleY',rz='rotateZ',x2='5.0.0',x21='rgba(0,0,0,0)',x44='37px',zx='scaleX',x57='Submitted',x40='53px',x33='CTCWaitting',x43='0',x55='10px',x47='none solid rgb(0, 0, 0)',x35='2px',x='text',x67='4px',x18='3px',m='rect',x17='0px',x61='Question',e72='${Reject}',x23='CTCShapeCircle',x28='18px',x68='9px',x3='5.0.1.386',p='px',x34='34px',x66='Accepted',x30='14px',x64='CTCGreenShapeCircle3',o='opacity',e42='${CTCShapeCircle}',e59='${Submitted}',x6='Arial, Helvetica, sans-serif',x54='1px',l='normal',x56='13px',x8='nowrap',x38='360',e51='${Text3}',x50='true',g='image',x5='24',lf='left',x16='Circle';var g26='CTCShapeCircle.svg',g32='ExpenseIcon.svg',g39='CTCWaitting.svg',g69='Accepted.svg',g65='CTCGreenShapeCircle.svg',g58='Submitted.svg',g71='Reject.svg',g22='Circle.svg';var s9="Completed",s13="Rejected",s12="Approved (no animation)",s4="Waitting",s62="?",s10="Submit",s49="1",s14="Reset",s11="Pending action";var im='https://cioenterprisearchitecture.accenture.com/Media/Default/Harmonize/',aud='media/',vid='media/',js='js/',fonts={},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=[],symbols={"stage":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:'waitting',symbolName:'waitting',t:m,r:['24','16','50','53','auto','auto']},{id:'PlayWaitting',t:x,r:['85px','29px','auto','auto','auto','auto'],cu:'pointer',text:s4,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'PlayActionsCleared',t:x,r:['85px','92px','auto','auto','auto','auto'],cu:'pointer',text:s9,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'PlaySubmit',t:x,r:['85px','154px','auto','auto','auto','auto'],cu:'pointer',text:s10,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'PlayPendingAction',t:x,r:['85px','217px','auto','auto','auto','auto'],cu:'pointer',text:s11,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'PlayApproved',t:x,r:['85px','281px','auto','auto','auto','auto'],text:s12,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'PlayRejected',t:x,r:['85px','342px','auto','auto','auto','auto'],cu:'pointer',text:s13,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'ResetActionsCleared',t:x,r:['213px','92px','auto','auto','auto','auto'],cu:'pointer',text:s14,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'ResetSubmit',t:x,r:['176px','155px','auto','auto','auto','auto'],cu:'pointer',text:s14,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'ResetPendingAction',t:x,r:['252px','217px','auto','auto','auto','auto'],cu:'pointer',text:s14,n:[x6,[x5,],xc,l,i,"",x7,x8]},{id:'actionscleared',symbolName:'actionscleared',t:m,r:['24px','79px','undefined','undefined','auto','auto']},{id:'submittedfirst',symbolName:'submittedfirst',t:m,r:['24px','141px','undefined','undefined','auto','auto']},{id:'pendingaction',symbolName:'pendingaction',t:m,r:['24px','205px','undefined','undefined','auto','auto']},{id:'rejected',symbolName:'rejected',t:m,r:['24px','330px','undefined','undefined','auto','auto']},{id:'approved',symbolName:'approved',t:m,r:['24px','268px','undefined','undefined','auto','auto']}],style:{'${Stage}':{isStage:true,r:['null','null','550px','400px','auto','auto'],overflow:'hidden',f:[x15]}}},tt:{d:1500,a:y,data:[["eid50","tr",0,function(e,d){this.eSA(e,d);},['stop','${actionscleared}',[]]],["eid94","tr",0,function(e,d){this.eSA(e,d);},['stop','${rejected}',[]]],["eid80","tr",0,function(e,d){this.eSA(e,d);},['stop','${pendingaction}',[]]],["eid51","tr",0,function(e,d){this.eSA(e,d);},['stop','${waitting}',[]]],["eid109","tr",0,function(e,d){this.eSA(e,d);},['stop','${submittedfirst}',[]]]]}},"waitting":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,id:x16,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{t:g,id:x23,r:[x24,x17,x25,x25,x20,x20],f:[x21,im+g26,x17,x17]},{t:g,id:x27,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{t:g,id:x33,r:[x34,x35,x36,x37,x20,x20],tf:[[],[x38],[0,0,0],[1,1,1]],f:[x21,im+g39,x17,x17]}],style:{'${symbolSelector}':{r:[_,_,x19,x40]}}},tt:{d:1000,a:y,data:[["eid2",zy,0,250,"easeInBack",e41,'1','1.5'],["eid10",zy,250,250,"easeOutBack",e41,'1.5','1'],["eid3",zx,0,250,"easeInBack",e42,'1','1.5'],["eid11",zx,250,250,"easeOutBack",e42,'1.5','1'],["eid1",zx,0,250,"easeInBack",e41,'1','1.5'],["eid9",zx,250,250,"easeOutBack",e41,'1.5','1'],["eid17",rz,79,921,"easeInOutQuad",e41,'0deg','360deg'],["eid4",zy,0,250,"easeInBack",e42,'1','1.5'],["eid12",zy,250,250,"easeOutBack",e42,'1.5','1']]}},"actionscleared":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x16,t:g,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{r:[x24,x17,x25,x25,x20,x20],id:x23,tf:[[],[],[],[x43,x43]],t:g,f:[x21,im+g26,x17,x17]},{id:x27,t:g,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{r:[x44,x35,x20,x20,x20,x20],n:[x6,[11,p],x45,x46,x47,l,x7,x8],id:x48,text:s49,align:lf,t:x}],style:{'${symbolSelector}':{isStage:x50,r:[undefined,undefined,x19,x40]}}},tt:{d:500,a:y,data:[["eid40",zx,0,250,"easeInBack",e51,'1','1.5'],["eid46",zx,250,250,"easeOutBack",e51,'1.5','0'],["eid4",zy,0,250,"easeInBack",e42,'1','1.5'],["eid49",zy,250,250,"easeOutBack",e42,'1.5','0'],["eid43",zy,0,250,"easeInBack",e51,'1','1.5'],["eid47",zy,250,250,"easeOutBack",e51,'1.5','0'],["eid3",zx,0,250,"easeInBack",e42,'1','1.5'],["eid48",zx,250,250,"easeOutBack",e42,'1.5','0']]}},"actionsfirst":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x16,t:g,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{r:[x24,x17,x25,x25,x20,x20],id:x23,tf:[[],[],[],[x43,x43]],t:g,f:[x21,im+g26,x17,x17]},{id:x27,t:g,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{r:[x44,x35,x20,x20,x20,x20],n:[x6,[11,p],x45,x46,x47,l,x7,x8],id:x48,text:s49,align:lf,t:x}],style:{'${symbolSelector}':{r:[_,_,x19,x40]}}},tt:{d:500,a:y,data:[["eid43",zy,0,250,"easeInBack",e51,'1','1.5'],["eid47",zy,250,250,"easeOutBack",e51,'1.5','0'],["eid4",zy,0,250,"easeInBack",e42,'1','1.5'],["eid49",zy,250,250,"easeOutBack",e42,'1.5','0'],["eid40",zx,0,250,"easeInBack",e51,'1','1.5'],["eid46",zx,250,250,"easeOutBack",e51,'1.5','0'],["eid3",zx,0,250,"easeInBack",e42,'1','1.5'],["eid48",zx,250,250,"easeOutBack",e42,'1.5','0']]}},"submitted":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,id:x16,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{t:g,id:x23,r:[x24,x17,x25,x25,x20,x20],f:[x21,im+g26,x17,x17]},{t:g,id:x27,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{r:[x34,x35,x36,x37,x20,x20],tf:[[],[x38],[0,0,0],[1,1,1]],id:x33,o:x52,t:g,f:[x21,im+g39,x17,x17]},{r:[x53,x54,x55,x56,x20,x20],id:x57,o:x43,t:g,f:[x21,im+g58,x17,x17]}],style:{'${symbolSelector}':{r:[_,_,x19,x40]}}},tt:{d:1500,a:y,data:[["eid64",zx,1000,250,"easeInBack",e59,'1','1.5'],["eid65",zx,1250,250,"easeOutBack",e59,'1.5','1'],["eid70",o,79,1171,"easeInBack",e59,'0','1'],["eid55",zx,1000,250,"easeInBack",e41,'1','1.5'],["eid56",zx,1250,250,"easeOutBack",e41,'1.5','1'],["eid69",o,79,1171,"easeInBack",e41,'0.98497840447154','0'],["eid61",zy,1000,250,"easeInBack",e42,'1','1.5'],["eid62",zy,1250,250,"easeOutBack",e42,'1.5','1'],["eid59",zx,1000,250,"easeInBack",e42,'1','1.5'],["eid60",zx,1250,250,"easeOutBack",e42,'1.5','1'],["eid57",zy,1000,250,"easeInBack",e41,'1','1.5'],["eid58",zy,1250,250,"easeOutBack",e41,'1.5','1'],["eid17",rz,79,921,"easeInOutQuad",e41,'0deg','360deg'],["eid66",zy,1000,250,"easeInBack",e59,'1','1.5'],["eid67",zy,1250,250,"easeOutBack",e59,'1.5','1']]}},"pendingaction":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{t:g,id:x16,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{t:g,id:x23,r:[x24,x17,x25,x25,x20,x20],f:[x21,im+g26,x17,x17]},{t:g,id:x27,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{t:x,r:[x60,x17,x20,x20,x20,x20],id:x61,text:s62,align:lf,n:[x6,[14,p],x45,x46,x47,l,x7,x8]}],style:{'${symbolSelector}':{r:[_,_,x19,x40]}}},tt:{d:500,a:y,data:[["eid77",zx,0,250,"easeInBack",e63,'1','1.5'],["eid78",zx,250,250,"easeOutBack",e63,'1.5','1'],["eid4",zy,0,250,"easeInBack",e42,'1','1.5'],["eid12",zy,250,250,"easeOutBack",e42,'1.5','1'],["eid75",zy,0,250,"easeInBack",e63,'1','1.5'],["eid76",zy,250,250,"easeOutBack",e63,'1.5','1'],["eid3",zx,0,250,"easeInBack",e42,'1','1.5'],["eid11",zx,250,250,"easeOutBack",e42,'1.5','1']]}},"approved":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x16,t:g,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{id:x27,t:g,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{id:x64,t:g,r:[x24,x17,x25,x25,x20,x20],f:[x21,im+g65,x17,x17]},{id:x66,t:g,r:[x53,x67,x55,x68,x20,x20],f:[x21,im+g69,x17,x17]}],style:{'${symbolSelector}':{isStage:x50,r:[undefined,undefined,x19,x40]}}},tt:{d:0,a:y,data:[]}},"rejected":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x16,t:g,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{id:x23,t:g,r:[x24,x54,x25,x25,x20,x20],f:[x21,im+g26,x17,x17]},{id:x27,t:g,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{id:x70,t:g,r:[x53,x67,x55,x55,x20,x20],f:[x21,im+g71,x17,x17]}],style:{'${symbolSelector}':{isStage:x50,r:[undefined,undefined,x19,x40]}}},tt:{d:500,a:y,data:[["eid4",zy,0,250,"easeInBack",e42,'1','1.5'],["eid12",zy,250,250,"easeOutBack",e42,'1.5','1'],["eid92",zy,0,250,"easeInBack",e72,'1','1.5'],["eid93",zy,250,250,"easeOutBack",e72,'1.5','1'],["eid3",zx,0,250,"easeInBack",e42,'1','1.5'],["eid11",zx,250,250,"easeOutBack",e42,'1.5','1'],["eid90",zx,0,250,"easeInBack",e72,'1','1.5'],["eid91",zx,250,250,"easeOutBack",e72,'1.5','1'],["eid117",tp,500,0,"easeOutBack",e72,'4px','4px']]}},"submittedfirst":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:x16,t:g,r:[x17,x18,x19,x19,x20,x20],f:[x21,im+g22,x17,x17]},{r:[x24,x17,x25,x25,x20,x20],id:x23,tf:[[],[],[],[x43,x43]],t:g,f:[x21,im+g26,x17,x17]},{id:x27,t:g,r:[x28,x29,x30,x31,x20,x20],f:[x21,im+g32,x17,x17]},{r:[x34,x35,x36,x37,x20,x20],tf:[[],[x38],[],[x43,x43]],id:x33,o:s49,t:g,f:[x21,im+g39,x17,x17]},{r:[x53,x54,x55,x56,x20,x20],id:x57,o:x43,t:g,f:[x21,im+g58,x17,x17]}],style:{'${symbolSelector}':{isStage:x50,r:[undefined,undefined,x19,x40]}}},tt:{d:1671,a:y,data:[["eid64",zx,1171,250,"easeInBack",e59,'1','1.5'],["eid65",zx,1421,250,"easeOutBack",e59,'1.5','1'],["eid70",o,0,1421,"easeInBack",e59,'0','1'],["eid103",zx,0,250,"easeInBack",e41,'0','1'],["eid55",zx,1171,250,"easeInBack",e41,'1','1.5'],["eid56",zx,1421,250,"easeOutBack",e41,'1.5','1'],["eid69",o,0,1421,"easeInBack",e41,'1','0'],["eid106",zy,0,250,"easeInBack",e42,'0','1'],["eid61",zy,1171,250,"easeInBack",e42,'1','1.5'],["eid62",zy,1421,250,"easeOutBack",e42,'1.5','1'],["eid105",zx,0,250,"easeInBack",e42,'0','1'],["eid59",zx,1171,250,"easeInBack",e42,'1','1.5'],["eid60",zx,1421,250,"easeOutBack",e42,'1.5','1'],["eid104",zy,0,250,"easeInBack",e41,'0','1'],["eid57",zy,1171,250,"easeInBack",e41,'1','1.5'],["eid58",zy,1421,250,"easeOutBack",e41,'1.5','1'],["eid17",rz,250,921,"easeInOutQuad",e41,'0deg','360deg'],["eid66",zy,1171,250,"easeInBack",e59,'1','1.5'],["eid67",zy,1421,250,"easeOutBack",e59,'1.5','1']]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-139621945");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${PlayWaitting}","touchstart",function(sym,e){sym.getSymbol("waitting").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayWaitting}","click",function(sym,e){sym.getSymbol("waitting").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayActionsCleared}","touchstart",function(sym,e){sym.getSymbol("actionscleared").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayActionsCleared}","click",function(sym,e){sym.getSymbol("actionscleared").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetActionsCleared}","click",function(sym,e){sym.getSymbol("actionscleared").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetActionsCleared}","touchstart",function(sym,e){sym.getSymbol("actionscleared").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlaySubmit}","click",function(sym,e){sym.getSymbol("submittedfirst").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlaySubmit}","touchstart",function(sym,e){sym.getSymbol("submittedfirst").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetSubmit}","click",function(sym,e){sym.getSymbol("submittedfirst").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetSubmit}","touchstart",function(sym,e){sym.getSymbol("submittedfirst").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetPendingAction}","click",function(sym,e){sym.getSymbol("pendingaction").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${ResetPendingAction}","touchstart",function(sym,e){sym.getSymbol("pendingaction").stop(0);});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayPendingAction}","click",function(sym,e){sym.getSymbol("pendingaction").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayPendingAction}","touchstart",function(sym,e){sym.getSymbol("pendingaction").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayRejected}","click",function(sym,e){sym.getSymbol("rejected").play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${PlayRejected}","touchstart",function(sym,e){sym.getSymbol("rejected").play();});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+
+//=========================================================
+
+//Edge symbol: 'waitting'
+(function(symbolName){})("waitting");
+//Edge symbol end:'waitting'
+
+//=========================================================
+
+//Edge symbol: 'waitting_1'
+(function(symbolName){})("actionscleared");
+//Edge symbol end:'actionscleared'
+
+//=========================================================
+
+//Edge symbol: 'actionscleared_1'
+(function(symbolName){})("actionsfirst");
+//Edge symbol end:'actionsfirst'
+
+//=========================================================
+
+//Edge symbol: 'waitting_1'
+(function(symbolName){})("submitted");
+//Edge symbol end:'submitted'
+
+//=========================================================
+
+//Edge symbol: 'waitting_1'
+(function(symbolName){})("pendingaction");
+//Edge symbol end:'pendingaction'
+
+//=========================================================
+
+//Edge symbol: 'pendingaction_1'
+(function(symbolName){})("approved");
+//Edge symbol end:'approved'
+
+//=========================================================
+
+//Edge symbol: 'waitting_1'
+(function(symbolName){})("rejected");
+//Edge symbol end:'rejected'
+
+//=========================================================
+
+//Edge symbol: 'submitted_1'
+(function(symbolName){})("submittedfirst");
+//Edge symbol end:'submittedfirst'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-139621945");
