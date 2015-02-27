@@ -1,0 +1,13 @@
+{ "packageManager": "github"
+, "name": "ajile"
+, "repo": "iskitz/ajile"
+
+, "files":
+    { "basePath": "/"
+    , "include":
+        [ "code/com.iskitz.ajile.src.js"
+        , "use/com.iskitz.ajile.js"
+        , "use/index.js"
+        ]
+    }
+}
