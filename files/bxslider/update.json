@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "bxslider-4",
+  "name": "bxslider",
   "repo": "stevenwanderski/bxslider-4",
   "files": {
     "basePath": "dist/",
