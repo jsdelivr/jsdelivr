@@ -3,6 +3,13 @@
   "name": "bxslider-4",
   "repo": "stevenwanderski/bxslider-4",
   "files": {
-    "include": ["jquery.bxslider.min.js", "jquery.bxslider.css", "./images/*", "./plugins/*"]
+    "basePath": "dist/",
+    "include": [
+      "jquery.bxslider.min.js",
+      "jquery.bxslider.js",
+      "jquery.bxslider.css",
+      "./images/*",
+      "./vendor/*"
+    ]
   }
 }
