@@ -4,6 +4,6 @@
   "repo": "cburgmer/csscritic",
   "files": {
     "basePath": "dist/",
-    "include": ["csscritic.allinone.js"]
+    "include": ["csscritic.allinone.js*"]
   }
 }
