@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cc-icons",
+  "repo": "cc-icons/cc-icons",
+  "files": {
+    "include": ["./css/cc-icons.min.css", "./css/cc-icons.css", "./fonts/cc-icons.eot", "./fonts/cc-icons.otf", "./fonts/cc-icons.svg", "./fonts/cc-icons.ttf", "./fonts/cc-icons.woff"]
+  }
+}

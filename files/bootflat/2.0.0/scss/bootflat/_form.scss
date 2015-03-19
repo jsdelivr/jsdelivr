@@ -1,0 +1,212 @@
+// Variables
+//------------------------------------------------------
+$form-normal:                      $mediumgray-dark !default;
+$form-default:                     $white !default;
+$form-primary:                     $aqua-dark !default;
+$form-success:                     $grass-dark !default;
+$form-danger:                      $grapefruit-dark !default;
+$form-warning:                     $sunflower-dark !default;
+$form-info:                        $mint-dark !default;
+
+$message-success:                  $grass-dark !default;
+$message-danger:                   $grapefruit-dark !default;
+$message-warning:                  $sunflower-dark !default;
+
+$form-font-color:                  $darkgray-dark !default;
+$form-placeholder-font-color:      $lightgray-dark !default;
+
+$form-disabled-color:              $lightgray-dark !default;
+
+$search-query-value:               17px !default;
+
+$search-icon-width:                30px !default;
+$search-icon-line-height:          30px !default;          
+
+// Exports
+//------------------------------------------------------
+
+@include exports("form") {
+
+  /**
+   * form
+   * --------------------------------------------------
+   */
+  .form-control {
+      color: $form-font-color;
+      border-color: $form-normal;
+
+      &,
+      &:focus {
+          @include box-shadow($value: none);
+      }
+      &:focus {
+          border-color: $form-primary;
+      }
+      &::-moz-placeholder,
+      &:-ms-input-placeholder,
+      &::-webkit-input-placeholder {
+          color: $form-placeholder-font-color;
+      }
+
+      &.disabled, 
+      &[disabled] {
+          border-color: $form-disabled-color;
+          background-color: $form-disabled-color;
+      }
+  }
+
+  .input-group-btn {
+      & .btn + .btn {
+          border-width: 1px;
+          border-style: solid;
+          border-color: darken($form-normal, 7%);
+      }
+      & .btn + .btn.btn-default {
+          border-color: darken($form-default, 7%);
+      }
+      & .btn + .btn.btn-primary {
+          border-color: darken($form-primary, 7%);
+      }
+      & .btn + .btn.btn-info {
+          border-color: darken($form-info, 7%);
+      }
+      & .btn + .btn.btn-success {
+          border-color: darken($form-success, 7%);
+      }
+      & .btn + .btn.btn-warning {
+          border-color: darken($form-warning, 7%);
+      }
+      & .btn + .btn.btn-danger {
+          border-color: darken($form-danger, 7%);
+      }
+  }
+
+  .input-group-addon {
+      background-color: $form-normal;
+      border-color: darken($form-normal, 7%);
+      color: $form-default;
+
+      & .radio,
+      & .checkbox {
+          margin: -3px 0 -4px !important;
+      }
+  }
+
+  .form-search {
+      & .search-query,
+      & .search-query:first-child,
+      & .search-query:last-child {
+          padding: 0 $search-query-value;
+          @include radius($type: border-radius, $value: $search-query-value);
+      }
+      @at-root .input-group .form-control:last-child {
+          // padding: 0 $search-query-value 0 10px;
+          @include radius($type: border-top-left-radius, $value: 0);
+          @include radius($type: border-bottom-left-radius, $value: 0);
+      }
+      @at-root .input-group .form-control:first-child {
+          @include radius($type: border-top-right-radius, $value: 0);
+          @include radius($type: border-bottom-right-radius, $value: 0);
+      }
+      & .btn {
+          @include radius($type: border-radius, $value: $search-query-value);  
+      }
+  }
+
+  .search-only {
+      position: relative;
+      & .search-icon {
+          position: absolute;
+          top: 2px;
+          left: $search-query-value / 2;
+          width: $search-icon-width;
+          line-height: $search-icon-line-height;
+          text-align: center;
+          font-size: $search-query-value;
+          color: $form-placeholder-font-color;
+          z-index: 20;
+      }
+      & .form-control:last-child {
+         padding-left: $search-icon-width + 10;
+      }
+  }
+
+  .has-success {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color: $message-success;
+      }
+      & .form-control {
+          border-color: $message-success;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color: $message-success;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color: $message-success;
+          border-color: $message-success;
+      }
+      & .form-control-feedback {
+          color: $message-success;
+      }    
+  }
+  .has-warning {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color: $message-warning;
+      }
+      & .form-control {
+          border-color: $message-warning;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color: $message-warning;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color: $message-warning;
+          border-color: $message-warning;
+      }
+      & .form-control-feedback {
+          color: $message-warning;
+      }
+  }
+  .has-error {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color:  $message-danger;
+      }
+      & .form-control {
+          border-color:  $message-danger;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color:  $message-danger;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color:  $message-danger;
+          border-color:  $message-danger;
+      }
+      & .form-control-feedback {
+          color:  $message-danger;
+      }
+  }
+
+}
+
+

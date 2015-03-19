@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "slimscroll",
+  "repo": "rochal/jQuery-slimScroll",
+  "files": {
+    "include": ["jquery.slimscroll.js", "jquery.slimscroll.min.js"]
+  }
+}

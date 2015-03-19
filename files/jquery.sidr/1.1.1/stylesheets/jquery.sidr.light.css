@@ -1,0 +1,190 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\000033}}
+.sidr {
+  /* Default Settings */
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: none;
+  overflow-y: auto;
+  /* Theme Settings */
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 15px;
+  background: #f8f8f8;
+  color: #333333;
+  -webkit-box-shadow: inset 0 0 5px 5px #ebebeb;
+  -moz-box-shadow: inset 0 0 5px 5px #ebebeb;
+  box-shadow: inset 0 0 5px 5px #ebebeb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000315}}
+.sidr .sidr-inner {
+  padding: 0 0 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000318}}
+.sidr .sidr-inner > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000324}}
+.sidr.right {
+  left: auto;
+  right: -260px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000329}}
+.sidr.left {
+  left: -260px;
+  right: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000341}}
+.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 {
+  font-size: 11px;
+  font-weight: normal;
+  padding: 0 15px;
+  margin: 0 0 5px;
+  color: #333333;
+  line-height: 24px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
+  background-image: -webkit-linear-gradient(#ffffff, #dfdfdf);
+  background-image: -moz-linear-gradient(#ffffff, #dfdfdf);
+  background-image: -o-linear-gradient(#ffffff, #dfdfdf);
+  background-image: linear-gradient(#ffffff, #dfdfdf);
+  -webkit-box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000352}}
+.sidr p {
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000355}}
+.sidr p a {
+  color: rgba(51, 51, 51, 0.9);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000360}}
+.sidr > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000365}}
+.sidr ul {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000372}}
+.sidr ul li {
+  display: block;
+  margin: 0;
+  line-height: 48px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #dfdfdf;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000381}}
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+  border-top: none;
+  line-height: 49px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000385}}
+.sidr ul li:hover > a, .sidr ul li:hover > span, .sidr ul li.active > a, .sidr ul li.active > span, .sidr ul li.sidr-class-active > a, .sidr ul li.sidr-class-active > span {
+  -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
+  -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
+  box-shadow: inset 0 0 15px 3px #ebebeb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000390}}
+.sidr ul li a, .sidr ul li span {
+  padding: 0 15px;
+  display: block;
+  text-decoration: none;
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\0000397}}
+.sidr ul li ul {
+  border-bottom: none;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003100}}
+.sidr ul li ul li {
+  line-height: 40px;
+  font-size: 13px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003104}}
+.sidr ul li ul li:last-child {
+  border-bottom: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003110}}
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+  border-top: none;
+  line-height: 41px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003114}}
+.sidr ul li ul li:hover > a, .sidr ul li ul li:hover > span, .sidr ul li ul li.active > a, .sidr ul li ul li.active > span, .sidr ul li ul li.sidr-class-active > a, .sidr ul li ul li.sidr-class-active > span {
+  -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
+  -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
+  box-shadow: inset 0 0 15px 3px #ebebeb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003119}}
+.sidr ul li ul li a, .sidr ul li ul li span {
+  color: rgba(51, 51, 51, 0.8);
+  padding-left: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003128}}
+.sidr form {
+  margin: 0 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003132}}
+.sidr label {
+  font-size: 13px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003146}}
+.sidr input[type="text"],
+.sidr input[type="password"],
+.sidr input[type="date"],
+.sidr input[type="datetime"],
+.sidr input[type="email"],
+.sidr input[type="number"],
+.sidr input[type="search"],
+.sidr input[type="tel"],
+.sidr input[type="time"],
+.sidr input[type="url"],
+.sidr textarea, .sidr select {
+  width: 100%;
+  font-size: 13px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(51, 51, 51, 0.6);
+  display: block;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003160}}
+.sidr input[type=checkbox] {
+  width: auto;
+  display: inline;
+  clear: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003167}}
+.sidr input[type=button],
+.sidr input[type=submit] {
+  color: #f8f8f8;
+  background: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\00003171}}
+.sidr input[type=button]:hover,
+.sidr input[type=submit]:hover {
+  background: rgba(51, 51, 51, 0.9);
+}

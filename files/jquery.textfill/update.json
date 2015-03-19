@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-textfill",
+  "repo": "jquery-textfill/jquery-textfill",
+  "files": {
+    "basePath": "source/",
+    "include": ["jquery.textfill.min.js"]
+  }
+}

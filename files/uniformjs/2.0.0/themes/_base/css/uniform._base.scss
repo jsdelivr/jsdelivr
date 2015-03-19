@@ -1,0 +1,617 @@
+@mixin hideYetClickable() {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	border: none;
+	background: none;
+}
+
+@mixin inline-block() {
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+@mixin ellipsis() {
+	text-overflow: ellipsis;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($def) {
+	-webkit-box-shadow: $def;
+	-moz-box-shadow: $def;
+	box-shadow: $def;
+}
+
+@mixin retina() {
+	@media only screen {
+		@media (min-resolution: 124dpi), (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+			@include use-backgrounds(url($sprite-retina), $sprite-size, url($input-background-retina), url($input-background-focus-retina), $input-background-size);
+		}
+	}
+}
+
+@mixin use-backgrounds($sprite, $sprite-size, $input, $input-focus, $input-size) {
+	div.selector,
+	div.selector span,
+	div.checker span,
+	div.radio span,
+	div.uploader,
+	div.uploader span.action,
+	div.button,
+	div.button span {
+		background-image: $sprite;
+		background-size: $sprite-size;
+	}
+
+	input.text,
+	input.email,
+	input.search,
+	input.tel,
+	input.url,
+	input.datetime,
+	input.date,
+	input.month,
+	input.week,
+	input.time,
+	input.datetime-local,
+	input.number,
+	input.color,
+	input.password,
+	select.uniform-multiselect,
+	textarea.uniform {
+		background-image: $input;
+		background-size: $input-size;
+	}
+
+	input.text:focus,
+	input.email:focus,
+	input.search:focus,
+	input.tel:focus,
+	input.url:focus,
+	input.datetime:focus,
+	input.date:focus,
+	input.month:focus,
+	input.week:focus,
+	input.time:focus,
+	input.datetime-local:focus,
+	input.number:focus,
+	input.color:focus,
+	input.password:focus,
+	select.uniform-multiselect:focus,
+	textarea.uniform:focus {
+		background-image: $input-focus;
+		background-size: $input-size;
+	}
+}
+
+$sprite: "../images/sprite.png" !default;
+$sprite-retina: "../images/sprite-retina.png" !default;
+$sprite-size: 493px !default;
+$button-height: 30px !default;
+$button-margin-left: 13px !default;
+$button-padding: 0 !default;
+$button-span-height: $button-height !default;
+$checkbox-height: 19px !default;
+$checkbox-width: 19px !default;
+$input-padding: 3px !default;
+$input-background: "../images/bg-input.png" !default;
+$input-background-retina: "../images/bg-input-retina.png" !default;
+$input-background-focus: "../images/bg-input-focus.png" !default;
+$input-background-focus-retina: "../images/bg-input-focus-retina.png" !default;
+$input-background-size: 1px !default;
+$radio-height: 18px !default;
+$radio-width: 18px !default;
+$select-fixed-width: 190px !default;
+$select-height: 26px !default;
+$select-margin-left: 10px !default;
+$select-margin-right: 25px !default;
+$select-select-height: 22px !default;
+$select-select-top: 2px !default;
+$upload-action-width: 85px !default;
+$upload-filename-margin-top: 2px !default;
+$upload-filename-margin-bottom: 2px !default;
+$upload-filename-margin-left: 2px !default;
+$upload-filename-width: 82px !default;
+$upload-filename-padding: 0 10px !default;
+$upload-height: 28px !default;
+$upload-width: 190px !default;
+
+$checkbox-voffset: (-10 * $select-height);
+$radio-voffset: ($checkbox-voffset - $checkbox-height);
+$upload-voffset: ($radio-voffset - $radio-height);
+$button-voffset: ($upload-voffset - (8 * $upload-height));
+
+/* General settings */
+
+div.selector,
+div.selector span,
+div.checker span,
+div.radio span,
+div.uploader,
+div.uploader span.action,
+div.button,
+div.button span {
+	background-image: url($sprite);
+	background-repeat: no-repeat;
+	-webkit-font-smoothing: antialiased;
+}
+
+.selector,
+.checker,
+.button,
+.radio,
+.uploader {
+	@include inline-block();
+	vertical-align: middle;
+}
+
+.selector select:focus,
+.radio input:focus,
+.checker input:focus,
+.uploader input:focus {
+	outline: 0;
+}
+
+.selector,
+.radio,
+.checker,
+.uploader,
+.button,
+.selector *,
+.radio *,
+.checker *,
+.uploader *,
+.button * {
+	margin: 0;
+	padding: 0;
+}
+
+.highContrastDetect {
+	background: url($input-background) repeat-x 0 0;
+	width: 0px;
+	height: 0px;
+}
+
+/* Input & Textarea */
+
+input.text,
+input.email,
+input.search,
+input.tel,
+input.url,
+input.datetime,
+input.date,
+input.month,
+input.week,
+input.time,
+input.datetime-local,
+input.number,
+input.color,
+input.password,
+select.uniform-multiselect,
+textarea.uniform {
+	padding: $input-padding;
+	background: url($input-background) repeat-x 0 0;
+	outline: 0;
+}
+
+/* Remove default webkit and possible mozilla .search styles */
+div.checker input,
+input.search,
+input.search:active  {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+input.text:focus,
+input.email:focus,
+input.search:focus,
+input.tel:focus,
+input.url:focus,
+input.datetime:focus,
+input.date:focus,
+input.month:focus,
+input.week:focus,
+input.time:focus,
+input.datetime-local:focus,
+input.number:focus,
+input.color:focus,
+input.password:focus,
+select.uniform-multiselect:focus,
+textarea.uniform:focus {
+	background: url($input-background-focus) repeat-x 0 0;
+}
+
+/* Select */
+
+div.selector {
+	background-position: 0 (-5 * $select-height);
+	line-height: $select-height;
+	height: $select-height;
+	padding: 0 0 0 $select-margin-left;
+	position: relative;
+	overflow: hidden;
+}
+
+div.selector.fixedWidth {
+	width: $select-fixed-width;
+}
+
+div.selector span {
+	@include ellipsis();
+	background-position: right 0;
+	height: $select-height;
+	line-height: $select-height;
+	padding-right: $select-margin-right;
+	cursor: pointer;
+	width: 100%;
+	display: block;
+}
+
+div.selector.fixedWidth span {
+	width: ($select-fixed-width - $select-margin-left - $select-margin-right);
+}
+
+div.selector select {
+	@include hideYetClickable();
+	position: absolute;
+	height: $select-select-height;
+	top: $select-select-top;
+	left: 0px;
+	width: 100%;
+}
+
+div.selector:active,
+div.selector.active {
+	background-position: 0 (-6 * $select-height);
+}
+
+div.selector:active span,
+div.selector.active span {
+	background-position: right (-1 * $select-height);
+}
+
+div.selector.focus,
+div.selector.hover,
+div.selector:hover {
+	background-position: 0 (-7 * $select-height);
+}
+
+div.selector.focus span,
+div.selector.hover span,
+div.selector:hover span {
+	background-position: right (-2 * $select-height);
+}
+
+div.selector.focus:active,
+div.selector.focus.active,
+div.selector:hover:active,
+div.selector.active:hover {
+	background-position: 0 (-8 * $select-height);
+}
+
+div.selector.focus:active span,
+div.selector:hover:active span,
+div.selector.active:hover span,
+div.selector.focus.active span {
+	background-position: right (-3 * $select-height);
+}
+
+div.selector.disabled,
+div.selector.disabled:active,
+div.selector.disabled.active {
+	background-position: 0 (-9 * $select-height);
+}
+
+div.selector.disabled span,
+div.selector.disabled:active span,
+div.selector.disabled.active span {
+	background-position: right (-4 * $select-height);
+}
+
+/* Checkbox */
+
+div.checker,
+div.checker span,
+div.checker input {
+	width: $checkbox-width;
+	height: $checkbox-height;
+}
+
+div.checker {
+	position: relative;
+}
+
+div.checker span {
+	@include inline-block();
+	text-align: center;
+	background-position: 0 $checkbox-voffset;
+}
+
+div.checker input {
+	@include hideYetClickable();
+	@include inline-block();
+}
+
+div.checker:active span,
+div.checker.active span {
+	background-position: (-1 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.focus span,
+div.checker:hover span {
+	background-position: (-2 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.focus:active span,
+div.checker:active:hover span,
+div.checker.active:hover span,
+div.checker.focus.active span {
+	background-position: (-3 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker span.checked {
+	background-position: (-4 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker:active span.checked,
+div.checker.active span.checked {
+	background-position: (-5 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.focus span.checked,
+div.checker:hover span.checked {
+	background-position: (-6 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.focus:active span.checked,
+div.checker:hover:active span.checked,
+div.checker.active:hover span.checked,
+div.checker.active.focus span.checked {
+	background-position: (-7 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.disabled span,
+div.checker.disabled:active span,
+div.checker.disabled.active span {
+	background-position: (-8 * $checkbox-width) $checkbox-voffset;
+}
+
+div.checker.disabled span.checked,
+div.checker.disabled:active span.checked,
+div.checker.disabled.active span.checked {
+	background-position: (-9 * $checkbox-width) $checkbox-voffset;
+}
+
+/* Radio */
+
+div.radio,
+div.radio span,
+div.radio input {
+	width: $radio-width;
+	height: $radio-height;
+}
+
+div.radio {
+	position: relative;
+}
+
+div.radio span {
+	@include inline-block();
+	text-align: center;
+	background-position: 0 $radio-voffset;
+}
+
+div.radio input {
+	@include hideYetClickable();
+	@include inline-block();
+	text-align: center;
+}
+
+div.radio:active span,
+div.radio.active span {
+	background-position: (-1 * $radio-width)-18px $radio-voffset;
+}
+
+div.radio.focus span,
+div.radio:hover span {
+	background-position: (-2 * $radio-width)-36px $radio-voffset;
+}
+
+div.radio.focus:active span,
+div.radio:active:hover span,
+div.radio.active:hover span,
+div.radio.active.focus span {
+	background-position: (-3 * $radio-width) $radio-voffset;
+}
+
+div.radio span.checked {
+	background-position: (-4 * $radio-width) $radio-voffset;
+}
+
+div.radio:active span.checked,
+div.radio.active span.checked {
+	background-position: (-5 * $radio-width) $radio-voffset;
+}
+
+div.radio.focus span.checked,
+div.radio:hover span.checked {
+	background-position: (-6 * $radio-width) $radio-voffset;
+}
+
+div.radio.focus:active span.checked,
+div.radio:hover:active span.checked,
+div.radio.focus.active span.checked,
+div.radio.active:hover span.checked {
+	background-position: (-7 * $radio-width) $radio-voffset;
+}
+
+div.radio.disabled span,
+div.radio.disabled:active span,
+div.radio.disabled.active span {
+	background-position: (-8 * $radio-width) $radio-voffset;
+}
+
+div.radio.disabled span.checked,
+div.radio.disabled:active span.checked,
+div.radio.disabled.active span.checked {
+	background-position: (-9 * $radio-width) $radio-voffset;
+}
+
+/* Uploader */
+
+div.uploader {
+	background-position: 0 $upload-voffset;
+	height: $upload-height;
+	width: $upload-width;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+div.uploader span.action {
+	background-position: right ($upload-voffset + (-4 * $upload-height));
+	height: $upload-height;
+	line-height: $upload-height;
+	width: $upload-action-width;
+	text-align: center;
+	float: left;
+	display: inline;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+div.uploader span.filename {
+	@include ellipsis();
+	float: left;
+	cursor: default;
+	height: ($upload-height - $upload-filename-margin-top - $upload-filename-margin-bottom);
+	margin: $upload-filename-margin-top 0 $upload-filename-margin-bottom $upload-filename-margin-left;
+	line-height: ($upload-height - $upload-filename-margin-top - $upload-filename-margin-bottom);
+	width: $upload-filename-width;
+	padding: $upload-filename-padding;
+}
+
+div.uploader input {
+	@include hideYetClickable();
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: right;
+	cursor: default;
+	width: 100%;
+	height: 100%;
+}
+
+div.uploader.focus,
+div.uploader.hover,
+div.uploader:hover {
+	background-position: 0 ($upload-voffset + (-2 * $upload-height));
+}
+
+div.uploader.focus span.action,
+div.uploader.hover span.action,
+div.uploader:hover span.action {
+	background-position: right ($upload-voffset + (-5 * $upload-height));
+}
+
+div.uploader.active span.action,
+div.uploader:active span.action {
+	background-position: right ($upload-voffset + (-6 * $upload-height));
+}
+
+div.uploader.focus.active span.action,
+div.uploader:focus.active span.action,
+div.uploader.focus:active span.action,
+div.uploader:focus:active span.action {
+	background-position: right ($upload-voffset + (-7 * $upload-height));
+}
+
+div.uploader.disabled {
+	background-position: 0 ($upload-voffset + (-1 * $upload-height));
+}
+
+div.uploader.disabled span.action {
+	background-position: right ($upload-voffset + (-3 * $upload-height));
+}
+
+/* Buttons */
+
+div.button a,
+div.button button,
+div.button input {
+	position: absolute;
+	display: none;
+}
+
+div.button {
+	background-position: 0 ($button-voffset + (-4 * $button-height));
+	height: $button-height;
+	cursor: pointer;
+	position: relative;
+}
+
+div.button span {
+	@include inline-block();
+	line-height: 1;
+	text-align: center;
+	background-position: right $button-voffset;
+	height: $button-span-height;
+	margin-left: $button-margin-left;
+	padding: $button-padding;
+}
+
+div.button.focus,
+div.button:focus,
+div.button:hover,
+div.button.hover {
+	background-position: 0 ($button-voffset + (-6 * $button-height));
+}
+
+div.button.focus span,
+div.button:focus span,
+div.button:hover span,
+div.button.hover span {
+	background-position: right ($button-voffset + (-2 * $button-height)); 
+}
+
+div.button.active,
+div.button:active {
+	background-position: 0 ($button-voffset + (-5 * $button-height));
+}
+
+div.button.active span,
+div.button:active span {
+	background-position: right ($button-voffset + (-1 * $button-height));
+	cursor: default;
+}
+
+div.button.disabled {
+	background-position: 0 ($button-voffset + (-7 * $button-height));
+}
+
+/* Separate from above due to IE8 */
+div.button:disabled {
+	background-position: 0 ($button-voffset + (-7 * $button-height));
+}
+
+div.button.disabled span {
+	background-position: right ($button-voffset + (-3 * $button-height));
+	cursor: default;
+}
+
+/* Separate from above due to IE8 */
+div.button:disabled span {
+	background-position: right ($button-voffset + (-3 * $button-height));
+	cursor: default;
+}

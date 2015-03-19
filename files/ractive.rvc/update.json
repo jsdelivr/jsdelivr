@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "rvc",
+  "repo": "ractivejs/rvc",
+  "files": {
+    "include": ["rvc.min.js"]
+  }
+}

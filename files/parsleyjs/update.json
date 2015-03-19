@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Parsley.js",
+  "repo": "guillaumepotier/Parsley.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}

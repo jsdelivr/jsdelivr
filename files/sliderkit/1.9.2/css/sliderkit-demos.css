@@ -1,0 +1,779 @@
+/** 
+ *  sliderkit-demos.css
+ *	> CSS code for demos
+ *  
+ *  This file is part of Slider Kit jQuery plugin.
+ *  http://www.kyrielles.net/sliderkit/
+ *  
+ *  Copyright (c) 2010-2012 Alan Frog
+ *  Licensed under the GNU General Public License
+ *  See <license.txt> or <http://www.gnu.org/licenses/>
+ *
+ */
+
+/*
+ *  PHOTOS SLIDERS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Photos slider > Minimal
+ *---------------------------------*/
+.photoslider-mini{width:500px;height:335px;}
+
+/* Panels buttons */
+.photoslider-mini .sliderkit-go-btn{position:absolute;top:0;z-index:10;width:50px;height:335px;}
+.photoslider-mini .sliderkit-go-prev{left:0;}
+.photoslider-mini .sliderkit-go-next{right:0;}
+.photoslider-mini .sliderkit-go-btn a{display:block;width:50px;height:335px;opacity:0.6;cursor:pointer;background-color:#fff;background-repeat:no-repeat;background-position:center center;}
+.photoslider-mini .sliderkit-go-prev a{background-image:url("../images/slider-arrow-left.gif");}
+.photoslider-mini .sliderkit-go-next a{background-image:url("../images/slider-arrow-right.gif");}
+.photoslider-mini .sliderkit-btn-disable a{opacity:0/*can be set to any value until 1*/;cursor:default;}
+.photoslider-mini .sliderkit-btn-disable a:hover{cursor:default;}
+.photoslider-mini .sliderkit-go-btn span{display:none;}
+
+/*---------------------------------
+ *  Photos slider > With nav bullets
+ *---------------------------------*/
+.photoslider-bullets{width:500px;height:335px;}
+
+/* Nav */
+.photoslider-bullets .sliderkit-nav{position:absolute;top:10px;right:10px;}
+.photoslider-bullets .sliderkit-nav-clip ul li{float:left;margin:0 1px 0 0;}
+.photoslider-bullets .sliderkit-nav-clip ul li a{width:13px;height:13px;background:transparent url("../images/bullet-off.png") no-repeat 0 0;}
+.photoslider-bullets .sliderkit-nav-clip ul li.sliderkit-selected a{background:transparent url("../images/bullet-on.png") no-repeat 0 0;}
+
+/*---------------------------------
+ *  Photos slider > 1 click
+ *---------------------------------*/
+.photoslider-1click{width:500px;height:335px;}
+
+/* Nav */
+.photoslider-1click .sliderkit-nav{position:absolute;bottom:10px;right:10px;}
+.photoslider-1click .sliderkit-nav-clip ul li{float:left;margin:0 1px 0 0;}
+.photoslider-1click .sliderkit-nav-clip ul li a{display:block;padding:2px 6px;color:#fff;background:#000}
+.photoslider-1click .sliderkit-nav-clip ul li.sliderkit-selected a{color:#000;background:#fff;}
+.photoslider-1click .sliderkit-nav-clip ul a:hover{color:#fff;background:#00668d;}
+
+/*---------------------------------
+ *  Photos slider > Vertical
+ *---------------------------------*/
+#photoslider-vertical{width:300px;height:335px;padding-left:200px;}
+
+/* Nav */
+#photoslider-vertical .sliderkit-nav{left:10px;top:99px;width:150px;height:90px;}
+#photoslider-vertical .sliderkit-nav-clip{top:19px;width:150px !important;text-align:center;}
+#photoslider-vertical .sliderkit-nav-clip li{width:150px !important;text-align:center;display:block;color:#090909;font-size:1.2em;text-transform:uppercase;}
+
+/* Buttons */
+#photoslider-vertical .sliderkit-nav-btn{position:absolute;z-index:10;left:110px;width:15px;height:15px;}
+#photoslider-vertical .sliderkit-nav-prev{top:0;}
+#photoslider-vertical .sliderkit-nav-next{top:75px;}
+#photoslider-vertical .sliderkit-nav-btn a{display:block;width:15px;height:15px;cursor:pointer;background:transparent url("../images/mc-hpslider-arrows.gif") no-repeat 0 0;}
+#photoslider-vertical .sliderkit-nav-prev a{background-position:0 0;}
+#photoslider-vertical .sliderkit-nav-next a{background-position:0 -15px;}
+#photoslider-vertical .sliderkit-nav-btn span{display:none;}
+#photoslider-vertical .sliderkit-panels{}
+
+
+/*
+ *  PHOTOS SLIDERS #2
+ *  ------------------------------------------------
+ */
+ 
+/*---------------------------------
+ *  Photos slider > Multiple sliders
+ *---------------------------------*/		
+.multiple-sliders{width:600px;}
+.multiple-sliders-part{position:relative;float:left;width:190px;height:127px;}
+.multiple-sliders-part .sliderkit{width:190px;height:127px;margin:0;}
+.multiple-sliders-part .sliderkit-panel img{width:190px;}
+
+
+/*
+ *  CONTENT SLIDERS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Content slider > Standard
+ *---------------------------------*/
+.contentslider-std{width:470px;height:250px;padding:0 50px;}
+
+/* Nav */
+.contentslider-std .sliderkit-nav{position:relative;width:470px;height:22px;text-align:left;}
+.contentslider-std .sliderkit-nav-clip{margin:0;}
+.contentslider-std .sliderkit-nav-clip li{height:22px;padding:0;margin:0 2px 0 0;}
+.contentslider-std .sliderkit-nav-clip li{float:left;}
+.contentslider-std .sliderkit-nav-clip li a{float:left;background:#424242;}
+.contentslider-std .sliderkit-nav-clip li a{height:18px;margin:0;padding:3px 10px 1px;color:#fff;text-decoration:none;}
+.contentslider-std .sliderkit-nav-clip li a:hover{background:#666;}
+.contentslider-std .sliderkit-nav-clip li.sliderkit-selected{}
+.contentslider-std .sliderkit-nav-clip li.sliderkit-selected a{color:#000;background:#ddd;}
+
+/* Panel */
+.contentslider-std .sliderkit-panels{width:470px;height:426px;overflow:hidden;padding:10px 0;background:#fff;}
+.contentslider-std .sliderkit-panel{width:450px;height:406px;overflow:auto;padding:0 10px;background:#fff;}
+.contentslider-std .sliderkit-panel h2{margin:5px 0 20px;}
+
+/* Panels buttons */
+.contentslider-std .sliderkit-go-btn{position:absolute;top:40%;z-index:10;}
+.contentslider-std .sliderkit-go-prev{left:0;}
+.contentslider-std .sliderkit-go-next{right:0;}
+.contentslider-std .sliderkit-go-btn a{display:block;width:30px;height:40px;cursor:pointer;background:transparent url("../images/arrows-h-big.png") no-repeat 0 0;}
+.contentslider-std .sliderkit-go-prev a{background-position:-30px 0;}
+.contentslider-std .sliderkit-go-next a{background-position:0 0;}
+.contentslider-std .sliderkit-go-prev a:hover{background-position:-90px 0;}
+.contentslider-std .sliderkit-go-next a:hover{background-position:-60px 0;}
+.contentslider-std .sliderkit-go-btn span{display:none;}
+
+ 
+/*
+ *  PHOTOS GALLERIES
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Photos gallery > Standard
+ *---------------------------------*/
+.photosgallery-std{width:500px;height:335px;padding:0 0 76px;}
+
+/* Navbar */
+.photosgallery-std .sliderkit-nav{left:0;bottom:0;width:480px;padding:10px;background:#000;}
+.photosgallery-std .sliderkit-nav-clip ul li{float:left;margin:0;}
+.photosgallery-std .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;margin:0;padding:3px;}
+.photosgallery-std .sliderkit-nav-clip ul li.sliderkit-selected a{padding:0;border:3px solid #fff;}
+
+/* Buttons */
+.photosgallery-std .sliderkit-btn{position:absolute;top:0;}
+.photosgallery-std .sliderkit-btn span{display:none;}
+.photosgallery-std .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}
+.photosgallery-std .sliderkit-btn-disable a:hover{cursor:default;}
+
+/* Navbar buttons */
+.photosgallery-std .sliderkit-nav .sliderkit-btn a{display:block;width:15px;height:76px;background:transparent url("../images/arrows-h.png") no-repeat center 0;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-prev{left:20px;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-next{right:20px;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-prev a:hover,
+.photosgallery-std .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.photosgallery-std .sliderkit-nav .sliderkit-nav-next a:hover,
+.photosgallery-std .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+ 
+/* Panels buttons */
+.photosgallery-std .sliderkit-go-btn{position:absolute;top:0;z-index:10;width:50px;height:335px;}
+.photosgallery-std .sliderkit-go-prev{left:0;}
+.photosgallery-std .sliderkit-go-next{right:0;}
+.photosgallery-std .sliderkit-go-btn a{display:block;width:50px;height:335px;opacity:0.6;cursor:pointer;background-color:#fff;background-repeat:no-repeat;background-position:center center;}
+.photosgallery-std .sliderkit-go-prev a{background-image:url("../images/slider-arrow-left.gif");}
+.photosgallery-std .sliderkit-go-next a{background-image:url("../images/slider-arrow-right.gif");}
+.photosgallery-std .sliderkit-btn-disable a{opacity:0/*can be set to any value until 1*/;cursor:default;}
+.photosgallery-std .sliderkit-go-btn span{display:none;}
+
+/* Panel */
+.photosgallery-std .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+/*---------------------------------
+ *  Photos gallery > With captions
+ *---------------------------------*/
+.photosgallery-captions{width:500px;height:335px;padding:0 0 76px;}
+
+/* Navbar */
+.photosgallery-captions .sliderkit-nav{left:0;bottom:0;width:480px;padding:10px;background:#000;}
+.photosgallery-captions .sliderkit-nav-clip ul li{float:left;margin:0;}
+.photosgallery-captions .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;margin:0;padding:3px;}
+.photosgallery-captions .sliderkit-nav-clip ul li.sliderkit-selected a{padding:0;border:3px solid #fff;}
+
+/* Buttons */
+.photosgallery-captions .sliderkit-btn{position:absolute;top:0;}
+.photosgallery-captions .sliderkit-btn a{display:block;height:76px;background:transparent url("../images/arrows-h.png") no-repeat center 0;}
+.photosgallery-captions .sliderkit-btn span{display:none;}
+.photosgallery-captions .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;}
+.photosgallery-captions .sliderkit-btn-disable a:hover{cursor:default;}
+
+/* Buttons > Navbar buttons */
+.photosgallery-captions .sliderkit-nav-btn{width:15px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-prev{left:15px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-next{right:15px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-prev a:hover,
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-next a:hover,
+.photosgallery-captions .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+
+/* Buttons > Go buttons */
+.photosgallery-captions .sliderkit-go-btn{width:10px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-prev{left:40px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-next{right:40px;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-prev a{background-position:0 center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-next a{background-position:-20px center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-prev a:hover,
+.photosgallery-captions .sliderkit-nav .sliderkit-go-prev a:focus{background-position:-40px center;}
+.photosgallery-captions .sliderkit-nav .sliderkit-go-next a:hover,
+.photosgallery-captions .sliderkit-nav .sliderkit-go-next a:focus{background-position:-60px center;}
+
+/* Panel */
+.photosgallery-captions .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+/* Panel > Textbox */
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-textbox{bottom:0;left:0;width:500px;height:70px;}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-text{height:50px;padding:10px 15px;font-size:0.9em;color:#fff;}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-text h4{height:auto;margin:0 0 7px;line-height:1.1em;font-size:1.1em;font-weight:bold;border:none;}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-overlay{width:500px;height:70px;background:#000;opacity:0.6;}
+
+/*---------------------------------
+ *  Photos gallery > Vertical
+ *---------------------------------*/
+.photosgallery-vertical{width:500px;height:335px;}
+
+/* Nav */
+.photosgallery-vertical .sliderkit-nav{top:0;left:0;width:95px;height:100%;background:#000;}
+.photosgallery-vertical .sliderkit-nav-clip{left:7px;}
+.photosgallery-vertical .sliderkit-nav-clip ul li{margin:0;padding:0;}
+.photosgallery-vertical .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;padding:3px;}
+.photosgallery-vertical .sliderkit-nav-clip ul li.sliderkit-selected a{padding:0;border:3px solid #c5dbe6;}
+.photosgallery-vertical .sliderkit-nav-clip ul li img{width:75px;height:50px;margin-bottom:-3px;}
+
+/* Nav buttons */
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-btn{position:absolute;left:0;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-btn a{display:block;width:95px;height:16px;background:transparent url("../images/arrows-v.png") no-repeat center 0;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-btn a span{display:none;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-prev{top:25px;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-next{bottom:25px;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-prev a{background-position:center -89px;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-next a{background-position:center -108px;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-prev a:hover,
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:center -126px;}
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-next a:hover,
+.photosgallery-vertical .sliderkit-nav .sliderkit-nav-next a:focus{background-position:center -145px;}
+
+/* Go Buttons */
+.photosgallery-vertical .sliderkit-go-btn a{width:200px;height:300px;background:#ccc;opacity:.8;}
+.photosgallery-vertical .sliderkit-go-prev{top:0;left:0;}
+.photosgallery-vertical .sliderkit-go-next{top:0;right:0;}
+
+/* Panel */
+.photosgallery-vertical .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+/* Panel > Textbox */
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-textbox{bottom:0;left:0;height:85px;width:500px;}
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-text{height:65px;padding:10px 15px 10px 115px;font-size:0.9em;color:#fff;}
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-text h4{height:auto;margin:0 0 7px;line-height:1.1em;font-size:1.1em;font-weight:bold;border:none;}
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-overlay{height:85px;width:500px;background:#000;opacity:0.6;}
+
+/*---------------------------------
+ *  Photos gallery > Minimalistic
+ *---------------------------------*/
+.photosgallery-minimalistic{width:500px;height:335px;padding:0 0 50px;}
+
+/* Navbar */
+.photosgallery-minimalistic .sliderkit-nav{left:0;bottom:0;width:500px;padding:0;background:#000;}
+.photosgallery-minimalistic .sliderkit-nav-clip{margin:0 auto;}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li{float:left;margin:0 0 0 0;}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;margin:0;padding:0;opacity:0.4;}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li a:hover{cursor:default;}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li.sliderkit-selected a{opacity:1;}
+
+/* Panel */
+.photosgallery-minimalistic .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+/* Panel */
+.photosgallery-minimalistic .sliderkit-timer{top:332px;}
+
+/*---------------------------------
+ *  Photos gallery > #5 = 'navpanelautoswitch' option
+ *---------------------------------*/
+.photosgallery-5 .sliderkit-count-lines{left:220px;top:auto;right:auto;bottom:75px;}
+
+
+/*
+ *  NEWS SLIDERS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *	News slider > Vertical
+ *---------------------------------*/			
+.newslider-vertical{width:560px;height:165px;}
+
+/* Nav */
+.newslider-vertical .sliderkit-nav{width:200px;height:165px;}
+.newslider-vertical .sliderkit-nav-clip li{height:50px;width:190px;margin-bottom:5px;padding-right:10px;}
+.newslider-vertical .sliderkit-nav-clip li.sliderkit-selected{background:transparent url("../images/newslider-arrow.gif") no-repeat right center;}
+.newslider-vertical .sliderkit-nav-clip li a{height:37px;width:180px;padding:13px 0 0 10px;text-align:left;font-size:1.3em;color:#fff;text-decoration:none;background:#00668d;}
+.newslider-vertical .sliderkit-nav-clip li a:hover,
+.newslider-vertical .sliderkit-nav-clip li a:focus{color:#fff;}
+
+/* Panel */
+.newslider-vertical .sliderkit-panels{position:absolute;left:200px;width:358px;height:158px;overflow:hidden;border:1px solid #ccc;}
+.newslider-vertical .sliderkit-panel{left:0;top:0;width:338px;height:138px;padding:10px;background:#fff;}
+
+/* News block */
+.newslider-vertical .sliderkit-news h3,
+.newslider-vertical .sliderkit-news h3 a{color:#000;font-weight:bold;}
+.newslider-vertical .sliderkit-news h3{font-size:1.2em;margin:0 0 15px;}
+.newslider-vertical .sliderkit-news img{float:right;width:130px;height:auto;margin:0 0 0 10px;overflow:hidden;}
+.newslider-vertical .sliderkit-news p{margin:0;}
+.newslider-vertical .sliderkit-news-readmore{position:absolute;right:10px;bottom:10px;}
+
+/*---------------------------------
+ *	News slider > Horizontal
+ *---------------------------------*/	
+.newslider-horizontal{width:550px;height:165px;}
+
+/* Nav */
+.newslider-horizontal .sliderkit-nav{position:absolute;bottom:0;width:550px;height:50px;}
+.newslider-horizontal .sliderkit-nav-clip li{float:left;height:35px;width:110px;padding:10px 0 0;margin:0;}
+.newslider-horizontal .sliderkit-nav-clip li.sliderkit-selected{background:transparent url("../images/newslider-arrow-up.gif") no-repeat center 0;}
+.newslider-horizontal .sliderkit-nav-clip li a{height:32px;width:89px;margin:0;padding:3px 10px 0;text-align:left;font-size:1em;color:#fff;text-decoration:none;border-right:1px solid #fff;background:#00668d;}
+.newslider-horizontal .sliderkit-nav-clip li a:hover,
+.newslider-horizontal .sliderkit-nav-clip li a:focus{color:#fff;}
+
+/* Panel */
+.newslider-horizontal .sliderkit-panels{position:absolute;left:0;width:550px;height:115px;overflow:hidden;}
+.newslider-horizontal .sliderkit-panel{left:0;top:0;width:530px;height:95px;padding:10px;background:#fff;}
+
+/* News block */
+.newslider-horizontal .sliderkit-news h3,
+.newslider-horizontal .sliderkit-news h3 a{color:#000;font-weight:bold;}
+.newslider-horizontal .sliderkit-news h3{font-size:1.2em;margin:0 0 15px;}
+.newslider-horizontal .sliderkit-news img{float:right;width:130px;height:auto;margin:0 0 0 10px;overflow:hidden;}
+.newslider-horizontal .sliderkit-news p{margin:0;}
+
+/*---------------------------------
+ *  News slider > Minimal
+ *---------------------------------*/
+.newslider-minimal{width:570px;height:16px;}
+
+/* Navbar */
+.newslider-minimal .sliderkit-panels{float:left;position:relative;width:450px;}
+.newslider-minimal .sliderkit-panel{height:16px;}
+.newslider-minimal .sliderkit-panel a{display:block;}
+.newslider-minimal .sliderkit-panel a:hover{text-decoration:underline;}
+
+/* Buttons > Disable */
+.newslider-minimal .sliderkit-legend{float:left;margin-right:10px;background:yellow;}
+
+
+/*
+ *  CAROUSEL
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Carousel > Demo #1
+ *---------------------------------*/
+.carousel-demo1{width:500px;height:84px;}
+
+/* Navbar */
+.carousel-demo1 .sliderkit-nav{left:0;bottom:0;width:480px;height:64px;padding:10px;background:#ccc;}
+.carousel-demo1 .sliderkit-nav-clip ul li{float:left;margin:0 5px 0 0;}
+.carousel-demo1 .sliderkit-nav-clip ul li a{display:block;width:96px;height:64px;overflow:hidden;margin:0;opacity:0.8;}
+.carousel-demo1 .sliderkit-nav-clip ul li a:hover{opacity:1;}
+
+/* Buttons */
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-btn{position:absolute;top:0;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-btn span{display:none;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-btn a{display:block;width:15px;height:84px;background:transparent url("../images/arrows-h.png") no-repeat center 0;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-prev{left:20px;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-next{right:20px;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-prev a:hover,
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-next a:hover,
+.carousel-demo1 .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+
+/* Buttons > Disable */
+.carousel-demo1 .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}
+
+/*---------------------------------
+ *  Carousel > Demo #2
+ *---------------------------------*/
+.carousel-demo2{width:400px;height:84px;}
+
+/* Navbar */
+.carousel-demo2 .sliderkit-nav{left:0;bottom:0;width:380px;height:64px;padding:10px;background:#ccc;}
+.carousel-demo2 .sliderkit-nav-clip ul li{float:left;margin:0 5px 0 0;}
+.carousel-demo2 .sliderkit-nav-clip ul li a{display:block;width:96px;height:64px;overflow:hidden;margin:0;opacity:0.8;}
+.carousel-demo2 .sliderkit-nav-clip ul li a:hover{opacity:1;}
+
+/* Navbar buttons */
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn{position:absolute;top:0;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn span{display:none;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn a{display:block;width:15px;height:84px;background:transparent url("../images/arrows-h.png") no-repeat center 0;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev{left:20px;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next{right:20px;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev a:hover,
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next a:hover,
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+
+/* Buttons > Disable */
+.carousel-demo2 .sliderkit-nav .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}
+
+/*---------------------------------
+ *  Carousel > Demo #3
+ *---------------------------------*/
+#carousel-demo3{width:300px;height:84px;}
+#carousel-demo3 .sliderkit-nav{width:280px;}
+
+/*---------------------------------
+ *  Carousel > Continuous
+ *---------------------------------*/
+.carousel-continuous{width:570px;height:84px;}
+
+/* Navbar */
+.carousel-continuous .sliderkit-nav{left:0;bottom:0;width:550px;height:64px;padding:10px;background:#ccc;}
+.carousel-continuous .sliderkit-nav-clip ul li{float:left;margin:0 5px 0 0;}
+.carousel-continuous .sliderkit-nav-clip ul li a{display:block;width:96px;height:64px;overflow:hidden;margin:0;opacity:0.8;}
+.carousel-continuous .sliderkit-nav-clip ul li a:hover{opacity:1;}
+
+/* Navbar buttons */
+.carousel-continuous .sliderkit-nav .sliderkit-nav-btn{position:absolute;top:0;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-btn span{display:none;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-btn a{display:block;width:15px;height:84px;background:transparent url("../images/arrows-h.png") no-repeat center 0;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-prev{left:10px;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-next{right:10px;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-prev a:hover,
+.carousel-continuous .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.carousel-continuous .sliderkit-nav .sliderkit-nav-next a:hover,
+.carousel-continuous .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+
+/* Buttons > Disable */
+.carousel-continuous .sliderkit-nav .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}
+
+/*---------------------------------
+ *  Carousel > Demo #5
+ *---------------------------------*/
+#carousel-demo5{width:700px;height:180px;margin:20px 0 0;}
+
+/* Navbar */
+#carousel-demo5 .sliderkit-nav{left:0;bottom:0;width:700px;height:180px;padding:0;background:none;}
+#carousel-demo5 .sliderkit-nav-clip ul li{float:left;width:130px;margin:0 60px 0 0;text-align:left;}
+#carousel-demo5 .sliderkit-nav-clip ul li > a{display:block;width:130px;height:87px;overflow:hidden;margin:0;opacity:0.8;border:1px solid #eee;}
+#carousel-demo5 .sliderkit-nav-clip ul li > a:hover{opacity:1;}
+#carousel-demo5 .sliderkit-nav-clip ul li h3{margin:5px 0;font-size:1em;}
+#carousel-demo5 .sliderkit-nav-clip ul li p{font-size:0.9em;}
+#carousel-demo5 .sliderkit-nav-clip ul li .rlt-link-readmore:hover{text-decoration:underline;}
+
+/* Buttons */
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-btn{position:absolute;top:74px;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-btn span{display:none;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-btn a{display:block;width:26px;height:31px;background:transparent url("../images/arrows-h-btn.gif") no-repeat 0 0;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-prev{left:20px;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-next{right:20px;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-prev a{background-position:0 0;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-next a{background-position:0 -31px;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-prev a:hover,
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-26px 0;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-next a:hover,
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-26px -31px;}
+#carousel-demo5 .sliderkit-nav .sliderkit-btn-disable a{cursor:default;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-prev.sliderkit-btn-disable a{background-position:-52px 0;}
+#carousel-demo5 .sliderkit-nav .sliderkit-nav-next.sliderkit-btn-disable a{background-position:-52px -31px;}
+
+
+/*
+ *  SLIDESHOW
+ *  ------------------------------------------------
+ */
+ 
+/*---------------------------------
+ *  Slideshow > Basic
+ *---------------------------------*/
+.slideshow-standard{width:500px;height:335px;}
+
+/* Navbar */
+.slideshow-standard .sliderkit-nav{left:0;bottom:0;width:295px;padding:10px 0 10px 205px;background:#000;}
+.slideshow-standard .sliderkit-nav-clip ul li{float:left;margin:0;}
+.slideshow-standard .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;margin:0;padding:3px;}
+.slideshow-standard .sliderkit-nav-clip ul li.sliderkit-selected a{padding:0;border:3px solid #fff;}
+
+/* Buttons */
+.slideshow-standard .sliderkit-btn a{position:relative;float:left;display:block;width:20px;height:23px;margin:0 5px;background:transparent url("../images/slideshow-btns.gif") no-repeat 0 0;}
+.slideshow-standard .sliderkit-btn span{display:none;}
+
+/* Play button */
+.slideshow-standard .sliderkit-play-btn a{background-position:-50px 0;}
+.slideshow-standard .sliderkit-play-btn a:hover,
+.slideshow-standard .sliderkit-play-btn a:focus{background-position:-50px -23px;}
+.slideshow-standard .sliderkit-pause-btn a{background-position:-75px 0;}
+.slideshow-standard .sliderkit-pause-btn a:hover,
+.slideshow-standard .sliderkit-pause-btn a:focus{background-position:-75px -23px;}
+
+/* Go buttons */
+.slideshow-standard .sliderkit-go-prev a{background-position:-25px 0;}
+.slideshow-standard .sliderkit-go-next a{background-position:0 0;}
+.slideshow-standard .sliderkit-go-prev a:hover,
+.slideshow-standard .sliderkit-go-prev a:focus{background-position:-25px -23px;}
+.slideshow-standard .sliderkit-go-next a:hover,
+.slideshow-standard .sliderkit-go-next a:focus{background-position:0 -23px;}
+
+/* Panel */
+.slideshow-standard .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+/*---------------------------------
+ *  Slideshow > + Carousel
+ *---------------------------------*/
+.slideshow-carousel{width:500px;height:335px;padding:0 0 40px;}
+
+/* Navbar */
+.slideshow-carousel .sliderkit-nav{left:0;bottom:40px;width:480px;padding:10px;}
+.slideshow-carousel .sliderkit-nav-clip ul li{float:left;margin:0;}
+.slideshow-carousel .sliderkit-nav-clip ul li a{display:block;width:75px;height:50px;overflow:hidden;margin:0;padding:3px;}
+.slideshow-carousel .sliderkit-nav-clip ul li.sliderkit-selected a{padding:0;border:3px solid #fff;}
+
+/* Controls */
+.slideshow-carousel .sliderkit-controls{position:absolute;bottom:0;left:0;width:295px;padding:10px 0 10px 205px;background:#000;}
+
+/* Go buttons */
+.slideshow-carousel .sliderkit-go-btn a,
+.slideshow-carousel .sliderkit-play-btn a{position:relative;float:left;display:block;width:20px;height:23px;margin:0 5px;background:transparent url("../images/slideshow-btns.gif") no-repeat 0 0;}
+.slideshow-carousel .sliderkit-btn span,
+.slideshow-carousel .sliderkit-play-btn span{display:none;}
+.slideshow-carousel .sliderkit-play-btn a{background-position:-50px 0;}
+.slideshow-carousel .sliderkit-play-btn a:hover,
+.slideshow-carousel .sliderkit-play-btn a:focus{background-position:-50px -23px;}
+.slideshow-carousel .sliderkit-pause-btn a{background-position:-75px 0;}
+.slideshow-carousel .sliderkit-pause-btn a:hover,
+.slideshow-carousel .sliderkit-pause-btn a:focus{background-position:-75px -23px;}
+
+.slideshow-carousel .sliderkit-go-prev a{background-position:-25px 0;}
+.slideshow-carousel .sliderkit-go-next a{background-position:0 0;}
+.slideshow-carousel .sliderkit-go-prev a:hover,
+.slideshow-carousel .sliderkit-go-prev a:focus{background-position:-25px -23px;}
+.slideshow-carousel .sliderkit-go-next a:hover,
+.slideshow-carousel .sliderkit-go-next a:focus{background-position:0 -23px;}
+
+/* Panel */
+.slideshow-carousel .sliderkit-panel{top:0;left:0;width:500px;height:335px;}
+
+
+/*
+ *  TABS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *	Tabs > Standard
+ *---------------------------------*/	
+.tabs-standard{width:550px;height:185px;}
+
+/* Nav */
+.tabs-standard .sliderkit-nav{position:relative;width:550px;height:22px;text-align:left;}
+.tabs-standard .sliderkit-nav-clip{margin:0;}
+.tabs-standard .sliderkit-nav-clip li{height:22px;padding:0 0 0 5px;margin:0 2px 0 0;}
+.tabs-standard .sliderkit-nav-clip li,
+.tabs-standard .sliderkit-nav-clip li a{float:left;background:transparent url("../images/tabs-menu.gif") no-repeat 0 0;}
+.tabs-standard .sliderkit-nav-clip li a{height:18px;margin:0;padding:4px 10px 0;color:#fff;text-decoration:none;background-position:right -22px;}
+.tabs-standard .sliderkit-nav-clip li.sliderkit-selected{background-position:0 -44px;}
+.tabs-standard .sliderkit-nav-clip li.sliderkit-selected a{color:#000;background-position:right -66px;}
+
+/* Panel */
+.tabs-standard .sliderkit-panels{width:528px;height:140px;overflow:hidden;padding:10px;border:1px solid #a3a3a3;background:#fff;}
+.tabs-standard .sliderkit-panel{width:528px;height:140px;background:#fff;}
+
+/* News block */
+.tabs-standard .sliderkit-news h3,
+.tabs-standard .sliderkit-news h3 a{color:#000;font-weight:bold;}
+.tabs-standard .sliderkit-news h3{font-size:1.2em;margin:0 0 15px;}
+.tabs-standard .sliderkit-news img{float:right;width:130px;height:auto;margin:0 0 0 10px;overflow:hidden;}
+.tabs-standard .sliderkit-news p{margin:0;}
+
+/*---------------------------------
+ *	Tabs > No height
+ *---------------------------------*/	
+.tabs-noheight{width:550px;}
+
+/* Nav */
+.tabs-noheight .sliderkit-nav{position:relative;width:550px;height:22px;text-align:left;}
+.tabs-noheight .sliderkit-nav-clip{margin:0;}
+.tabs-noheight .sliderkit-nav-clip li{height:22px;padding:0 0 0 5px;margin:0 2px 0 0;}
+.tabs-noheight .sliderkit-nav-clip li,
+.tabs-noheight .sliderkit-nav-clip li a{float:left;background:transparent url("../images/tabs-menu.gif") no-repeat 0 0;}
+.tabs-noheight .sliderkit-nav-clip li a{height:18px;margin:0;padding:4px 10px 0;color:#fff;text-decoration:none;background-position:right -22px;}
+.tabs-noheight .sliderkit-nav-clip li.sliderkit-selected{background-position:0 -44px;}
+.tabs-noheight .sliderkit-nav-clip li.sliderkit-selected a{color:#000;background-position:right -66px;}
+
+/* Panel */
+.tabs-noheight .sliderkit-panels{width:528px;padding:10px;border:1px solid #a3a3a3;background:#fff;}
+.tabs-noheight .sliderkit-panel{position:relative;}
+
+/* News block */
+.tabs-noheight .sliderkit-news h3,
+.tabs-noheight .sliderkit-news h3 a{color:#000;font-weight:bold;}
+.tabs-noheight .sliderkit-news h3{font-size:1.2em;margin:0 0 15px;}
+.tabs-noheight .sliderkit-news img{float:right;width:130px;height:auto;margin:0 0 0 10px;overflow:hidden;}
+.tabs-noheight .sliderkit-news p{margin:0;}
+
+/*---------------------------------
+ *	Tabs > Imbricate
+ *---------------------------------*/	
+.tabs-imbricate{width:550px;height:200px;}
+.tabs-imbricate img{border:none;}
+
+/* Nav */
+.tabs-imbricate .customtabs-nav{position:relative;width:550px;height:22px;text-align:left;}
+.tabs-imbricate .customtabs-nav-clip{margin:0;}
+.tabs-imbricate .customtabs-nav-clip ul{position:relative;left:0;top:0;list-style:none;margin:0;padding:0;}
+.tabs-imbricate .customtabs-nav-clip li{height:22px;padding:0 0 0 5px;margin:0 2px 0 0;}
+.tabs-imbricate .customtabs-nav-clip li,
+.tabs-imbricate .customtabs-nav-clip li a{float:left;background:transparent url("../images/tabs-menu.gif") no-repeat 0 0;}
+.tabs-imbricate .customtabs-nav-clip li a{display:block;overflow:hidden;height:18px;margin:0;padding:4px 10px 0;color:#fff;text-decoration:none;background-position:right -22px;}
+.tabs-imbricate .customtabs-nav-clip li.customtabs-selected{background-position:0 -44px;}
+.tabs-imbricate .customtabs-nav-clip li.customtabs-selected a{color:#000;background-position:right -66px;}
+
+/* Panel */
+.tabs-imbricate .customtabs-panels{width:528px;height:150px;padding:10px;border:1px solid #a3a3a3;}
+.tabs-imbricate .customtabs-panel{z-index:1;position:absolute;overflow:hidden;width:528px;height:150px;background:#fff;}
+.tabs-imbricate .customtabs-panel-active{z-index:5;}
+.tabs-imbricate .customtabs-panel-old{z-index:4;}
+
+/* News block */
+.tabs-imbricate .customtabs-news h3,
+.tabs-imbricate .customtabs-news h3 a{color:#000;font-weight:bold;}
+.tabs-imbricate .customtabs-news h3{font-size:1.2em;margin:0 0 15px;}
+.tabs-imbricate .customtabs-news img{float:right;width:130px;height:auto;margin:0 0 0 10px;overflow:hidden;}
+.tabs-imbricate .customtabs-news p{margin:0;}
+
+/* Imbricated carousel */
+.tabs-imbricate .carousel-demo2{width:528px;}
+.tabs-imbricate .carousel-demo2 .sliderkit-nav{width:508px;}
+
+/*---------------------------------
+ *	Tabs > Pagination
+ *---------------------------------*/	
+.pagination-basic .sliderkit-nav{margin:0 0 10px;text-align:right;}
+.pagination-basic .sliderkit-nav li{display:inline;margin:0 2px;}
+.pagination-basic .sliderkit-nav li a{padding:1px 3px;border:1px solid #ccc;text-decoration:none;}
+.pagination-basic .sliderkit-nav li.sliderkit-selected a,
+.pagination-basic .sliderkit-nav li a:hover{color:#fff;border:1px solid #666;background:#666;}
+
+/* Content block */
+.pagination-basic .sliderkit-block{margin:0 0 10px;padding:15px;border:1px solid #666;}
+
+
+/*
+ *  MENUS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Menus > Vertical menu list
+ *---------------------------------*/
+.vertical-menulist{width:200px;height:400px;margin:15px 0 0;}
+
+/* Nav */
+.vertical-menulist .sliderkit-nav-clip{text-align:left;border:1px solid #ccc;}
+.vertical-menulist .sliderkit-nav-clip,
+.vertical-menulist .sliderkit-nav-clip ul li{width:198px !important;margin:0;}
+.vertical-menulist .sliderkit-nav-clip ul li a{display:block;padding:5px 10px;}
+.vertical-menulist .sliderkit-nav-clip ul li a:hover{color:#fff;background:#666;}
+
+/* Buttons */
+.vertical-menulist .sliderkit-controls{width:200px;margin:0 0 5px;text-align:center;}
+.vertical-menulist .sliderkit-controls .sliderkit-btn-disable a{cursor:default;color:#b2ceea;}
+
+
+/*
+ *  EXTERNAL CONTROLS
+ *  ------------------------------------------------
+ */
+#content .sliderkit-pagination ul{display:inline;margin:0 0 10px;list-style:none;}
+#content .sliderkit-pagination ul li{display:inline;}
+#content .sliderkit-pagination ul li.selected a{color:#fff;background:#000;}
+#content .sliderkit-pagination ul li a{padding:5px;}
+#content .sliderkit-pagination ul li a:hover{color:#fff;background:#006a91;}
+
+
+/*
+ *  ADD-ONS
+ *  ------------------------------------------------
+ */
+
+/*---------------------------------
+ *  Add-on > Counter
+ *---------------------------------*/
+
+/* Example 01 */
+.counter-demo1 .sliderkit-panel .sliderkit-panel-textbox{bottom:0;left:0;width:500px;height:70px;}
+.counter-demo1 .sliderkit-panel .sliderkit-panel-text{height:50px;padding:10px 15px;font-size:0.9em;color:#fff;}
+.counter-demo1 .sliderkit-panel .sliderkit-panel-text h4{height:auto;margin:0 0 7px;line-height:1.1em;font-size:1.1em;font-weight:bold;border:none;}
+.counter-demo1 .sliderkit-panel .sliderkit-panel-overlay{width:500px;height:70px;background:#000;opacity:0.6;}
+
+/* Example 02 */
+.counter-demo2{height:120px;}
+.counter-demo2 .sliderkit-count-lines{position:relative;text-align:center;color:#000;background:none;}
+.counter-demo2 .sliderkit-count-current{font-weight:bold;}
+
+/*---------------------------------
+ *  Add-on > DelayCaption
+ *---------------------------------*/
+
+/* Example 01 */
+.delaycaptions-02 .sliderkit-panel .sliderkit-panel-textbox{bottom:0;}
+
+/* Example 02 */
+.delaycaptions-02 .sliderkit-panel .sliderkit-panel-textbox{width:150px;height:335px;}
+.delaycaptions-02 .sliderkit-panel .sliderkit-panel-text{width:120px;height:315px;}
+.delaycaptions-02 .sliderkit-panel .sliderkit-panel-overlay{width:150px;height:335px;}
+
+/*---------------------------------
+ *  Add-on > Timer
+ *---------------------------------*/
+
+/* Example 01 */
+.timer-demo01{height:335px;padding:0;}
+.timer-demo01 .sliderkit-timer-wrapper{position:absolute;z-index:10;/*top:323px;*/bottom:0;width:500px;height:8px;opacity:0.8;/*background:#0f5f7e;*/}
+.timer-demo01 .sliderkit-timer{top:0;height:8px;background:#0089BE url("../images/timer-img01.gif") repeat-x 0 center;}
+
+/*---------------------------------
+ *  Add-on > ImageFx
+ *---------------------------------*/
+
+/* Example 01 */
+.transition-demo01{padding:0 36px 5px;}
+
+.transition-demo01 .sliderkit-go-btn{top:45%;width:30px;height:30px;}
+.transition-demo01 .sliderkit-go-btn a{width:30px;height:30px;background:#fff url("../images/h-arrows-round.gif") no-repeat 0 0;}
+.transition-demo01 .sliderkit-go-prev{left:0px;}
+.transition-demo01 .sliderkit-go-prev a{background-position:0 0;}
+.transition-demo01 .sliderkit-go-prev a:hover{background-position:-60px 0;}
+.transition-demo01 .sliderkit-go-next{right:0px;}
+.transition-demo01 .sliderkit-go-next a{background-position:-30px 0;}
+.transition-demo01 .sliderkit-go-next a:hover{background-position:-90px 0;}
+.transition-demo01 .sliderkit-btn-disable{display:none;opacity:0/*can be set to any value until 1*/;cursor:default;}
+.transition-demo01 .sliderkit-btn-disable a:hover{cursor:default;}
+
+/* Example 02 */
+.transition-demo01 .sliderkit-timer-wrapper{position:absolute;bottom:0;width:500px;height:5px;background:#000;}
+.transition-demo01 .sliderkit-timer{top:0;height:5px;background:#0089BE url("../images/timer-img01.gif") repeat-x 0 center;}
+
+/* Example 02 > Buttons > Go buttons */
+.transition-demo02 .sliderkit-nav-btn{width:15px;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-prev{left:15px;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-next{right:15px;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-prev a{background-position:-89px center;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-next a{background-position:-108px center;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-prev a:hover,
+.transition-demo02 .sliderkit-nav .sliderkit-nav-prev a:focus{background-position:-126px center;}
+.transition-demo02 .sliderkit-nav .sliderkit-nav-next a:hover,
+.transition-demo02 .sliderkit-nav .sliderkit-nav-next a:focus{background-position:-145px center;}
+
+/* Example 02 > Buttons > Go buttons */
+.transition-demo02 .sliderkit-go-btn{width:10px;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-prev{left:40px;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-next{right:40px;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-prev a{background-position:0 center;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-next a{background-position:-20px center;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-prev a:hover,
+.transition-demo02 .sliderkit-nav .sliderkit-go-prev a:focus{background-position:-40px center;}
+.transition-demo02 .sliderkit-nav .sliderkit-go-next a:hover,
+.transition-demo02 .sliderkit-nav .sliderkit-go-next a:focus{background-position:-60px center;}

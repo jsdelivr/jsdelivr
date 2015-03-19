@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "angular-ie7-support",
+  "repo": "johngeorgewright/angular-ie7-support",
+  "files": {
+    "include": ["angular-ie7-support.js", "angular-ie7-support.min.js"]
+  }
+}

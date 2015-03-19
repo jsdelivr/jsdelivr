@@ -1,0 +1,230 @@
+/*!
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *               CASCADE FRAMEWORK 1.0
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *
+ * Copyright 2013, John Slegers
+ * Released under the MIT license
+ * http://jslegers.github.com/cascadeframework/license.html
+ *
+ *
+ * This means you can use Cascade Framework for any project,
+ * whether commercial or not.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * 
+ * Cascade Framework also contains the following goodies,
+ * which all have the same or similar 'permissive licenses :
+ *
+ *
+ * Includes polyfills by Joshua Bell
+ * http://www.calormen.com/polyfill/
+ * Released in public domain
+ *
+ *
+ * Includes Google ExplorerCanvas
+ * https://code.google.com/p/explorercanvas/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Google Prettify
+ * https://code.google.com/p/google-code-prettify/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Yepnope
+ * http://yepnopejs.com/
+ * Released under the WTFPL license
+ *
+ *
+ * Includes Modernizr
+ * http://modernizr.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes lodash
+ * http://lodash.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery
+ * http://jquery.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery Easing plugin
+ * http://gsgd.co.uk/sandbox/jquery/easing/
+ * Released under the BSD license
+ *
+ *
+ * Includes jQuery Flot plugin
+ * http://www.flotcharts.org/
+ * Released under the MIT license
+ *
+ *
+ * Includes the Font Awesome webfont
+ * http://fortawesome.github.com/Font-Awesome/
+ * Released under the SIL Open Font License
+ *
+ *
+ *
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * Cascade Framework was inspired by many articles and projects
+ * 
+ * Especially these authors are worth mentioning :
+ *             
+ *             Nicolle Sullivan
+ *             Jonathan Snook
+ *             Chris Coyier
+ *             Eric Meyer
+ *             Nicolas Gallagher
+ *             Paul Irish
+ *             Mark Otto
+ *             Jacob Thornton
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Date: 2013-03-15
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+*/
+
+
+
+@media (min-width:1200px) {
+    .site-center {
+        width:1160px;
+    }
+    .cell{
+        margin:15px;
+    }
+}
+
+@media (min-width:768px) and (max-width:979px) {
+    .site-center {
+        width:704px;
+    }
+}
+
+@media (max-width:767px) {
+    .site-header,.site-footer {
+        position: relative !important;
+    }
+
+    .site-header-ghost {
+        display: none !important;
+    }
+
+    section,article,header,footer,aside,nav,.col,
+    section.sizefit,section.sizefill,
+    article.sizefit,article.sizefill,
+    header.sizefit,header.sizefill,
+    footer.sizefit,footer.sizefill,
+    aside.sizefit,aside.sizefill,
+    nav.sizefit,nav.sizefill,
+    .col.sizefit,.col.sizefill {
+        padding:0 !important;
+        display:block !important;
+        float:left !important;
+        width:100% !important;
+    }
+
+    .site-center,.site-body,.site-header,.site-footer,.site-center > .body {
+        margin:0 !important;
+        width:100% !important;
+        border:none !important;
+        -webkit-box-shadow:none !important;
+        -moz-box-shadow:none !important;
+        box-shadow:none !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .center {
+        float:none !important;
+    }
+}
+
+
+/* =============================================================================
+   Sizefit and sizefill support for mobile
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    section.mobile-sizefill,
+    article.mobile-sizefill,
+    header.mobile-sizefill,
+    footer.mobile-sizefill,
+    aside.mobile-sizefill,
+    nav.mobile-sizefill,
+    .col.mobile-sizefill {display:table-cell !important;float:none!important;min-width:50px!important;width:10000px!important;}
+    section.mobile-sizefit,
+    article.mobile-sizefit,
+    header.mobile-sizefit,
+    footer.mobile-sizefit,
+    aside.mobile-sizefit,
+    nav.mobile-sizefit,
+    .col.mobile-sizefit {width:auto!important;}
+
+    .mobile-center {
+        float:none !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    section.tablet-sizefill,
+    article.tablet-sizefill,
+    header.tablet-sizefill,
+    footer.tablet-sizefill,
+    aside.tablet-sizefill,
+    nav.tablet-sizefill,
+    .col.tablet-sizefill {display:table-cell !important;float:none!important;min-width:50px!important;width:10000px!important;}
+    section.tablet-sizefit,
+    article.tablet-sizefit,
+    header.tablet-sizefit,
+    footer.tablet-sizefit,
+    aside.tablet-sizefit,
+    nav.tablet-sizefit,
+    .col.tablet-sizefit {width:auto!important;}
+
+    .tablet-center {
+        float:none !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    section.phone-sizefill,
+    article.phone-sizefill,
+    header.phone-sizefill,
+    footer.phone-sizefill,
+    aside.phone-sizefill,
+    nav.phone-sizefill,
+    .col.phone-sizefill {display:table-cell !important;float:none!important;min-width:50px!important;width:10000px!important;}
+    section.phone-sizefit,
+    article.phone-sizefit,
+    header.phone-sizefit,
+    footer.phone-sizefit,
+    aside.phone-sizefit,
+    nav.phone-sizefit,
+    .col.phone-sizefit {width:auto!important;}
+
+    .phone-center {
+        float:none !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+}
+
+
+

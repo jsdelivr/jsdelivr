@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "angularAMD",
+  "files": {
+    "include": ["*.min.js", "*.min.map"],
+    "exclude": ["README.md","bower.json"]
+  }
+}
+

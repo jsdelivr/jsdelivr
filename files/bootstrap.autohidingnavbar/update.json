@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.autohidingnavbar",
+  "repo": "istvan-ujjmeszaros/bootstrap-autohidingnavbar",
+  "files": {
+    "basePath": "dist/",
+    "exclude": [
+      "jquery.bootstrap-autohidingnavbar.js"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* SpryRating.css - version 0.1 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2007. Adobe Systems Incorporated. All rights reserved. */
+
+/* 
+ * Top-level container for rating wigdet 
+ * The name of the class ("ratingContainer") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style the rating container.
+ * This container holds floated elements, so it should be floated itself in order 
+ * for a border or background to display correctly
+*/ 
+.ratingContainer{
+	float: left;	
+}
+
+/* This selector controls the initial appearance of a rating star inside the widget.
+ * It will later be affected by the state of the rating container itself.
+ * Display is set to none so that when JavaScript is disabled, it will not show.
+ */
+.ratingButton{
+ 	 background-repeat: no-repeat;
+	 background-position: center center;
+	 display: none;
+}
+  
+/* Rating star appearance is affected by the state of the widget container.
+ * Note that the width and height are required for Internet Explorer.
+ */
+.ratingInitialState .ratingButton,
+.ratingReadOnlyState .ratingButton,
+.ratingRatedState .ratingButton
+{
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+/* Hide the input fields that are used for gracefull degradation when JavaScript is enabled. */
+.ratingInitialState input,
+.ratingReadOnlyState input,
+.ratingRatedState input
+{
+	display: none;
+}
+
+/* These selectors control individual star states, which can be: 
+* - full: the rating value exceds the current star
+* - empty: the rating value is below the current star
+* - half: the rating value is "inside" the current star  
+* - hover: special state when the user selects the current star (mouse or keyboard)
+*/
+.ratingFull{
+	 background-image: url('SpryStarFull.gif');
+}
+ 
+.ratingEmpty{
+	 background-image: url('SpryStarEmpty.gif');
+}
+ 
+.ratingHalf{
+	 background-image: url('SpryStarHalf.gif');
+}
+
+.ratingHover{
+	 background-image: url('SpryStarHover.gif');
+	 cursor: pointer;
+}
+
+/* Star state can be further modified by the state of the container widget */
+.ratingReadOnlyState .ratingFull{
+ 	background-image: url('SpryStarFullRO.gif');
+}
+
+.ratingReadOnlyState .ratingHalf{
+ 	background-image: url('SpryStarHalfRO.gif');
+}
+
+/* These are the classes applied on the messages ("read only" and "thanks for voting")
+ * which prevent them from being displayed by default 
+ */ 
+.ratingReadOnlyErrMsg, .ratingRatedMsg{	
+	display: none;
+}
+
+/* This selector change the way messages look when the widget is in "read-only" state and user tries to rate.
+ * This class sets a default red border and color for the error text.
+ * An additional class is added on the top-level container (.ratingReadOnlyErrState) 
+ * and this way only the specific error message can be shown by setting the display property to "inline".
+ */
+.ratingReadOnlyErrState .ratingReadOnlyErrMsg{
+	display: inline;
+	color: #CC3333;
+	border: 1px solid #CC3333;	
+}
+
+/* This selector change the way messages look when the widget is in "rated" state.
+ * This class makes message visible and sets a green color on it.
+ * The state class (.ratingRatedState) is applied on the top-level container for the widget,
+ * and this way only the specific error message can be shown by setting the display property to "inline".
+ * Note: set the display property below according to your needs, (e.g. inline, block, etc) depending on the container type
+ */
+.ratingRatedState .ratingRatedMsg{
+	display: block;
+	color: green;	
+}
+
+/* Customize the appearance of the rating counter */
+.ratingCounter{
+	color: green;
+}

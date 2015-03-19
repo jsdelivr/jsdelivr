@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+#obw{
+	background-color: rgba(255, 255, 255, .6);
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+	z-index: 99999;
+}
+
+#obw .content-con{
+	width:615px;
+    background-color: #FFFFFF;
+	border:1px solid #E0E0E0;
+	padding:20px 15px;
+	position: absolute;
+	z-index: 999999;
+}
+
+
+#obw .obw-browser-con{
+	display:inline-block;
+	width:100%;
+	text-align: center;
+	margin-top:15px;
+}
+
+#obw .obw-title{
+	font-weight: bold;
+	font-size:15px;
+	margin-bottom: 15px;
+}
+#obw .obw-desc{
+	margin-bottom:15px;
+}
+.obw-brwsr-item {
+	background-color: #f3f5f2;
+	width:105px;
+	height:120px;
+	border:1px solid #E0E0E0;
+	border-radius:4px;
+	text-decoration: none;
+	color:inherit;
+}
+#obw .brwsr-type-text{
+	border-top:1px solid #E0E0E0;
+	margin:0 3px;
+	text-align: center;
+}
+
+.obw-brwsr-item{
+	display:inline-block;
+	margin:0 6px;
+}
+#obw .close-btn, .obw-brwsr-item i{
+	background: url(kickIE.png) no-repeat scroll transparent;
+	display:block;
+}
+
+#obw .close-btn{
+	position: absolute;
+	right:-14px;
+	top:-14px;
+	width:30px;
+	height:32px;
+	cursor:pointer;
+	background-position:-176px -269px;
+	
+}
+
+
+.obw-brwsr-item i{
+	height:100px;
+	width:100px;
+}
+
+
+.brwsr-chrome-item i{
+	background-position: 0 0;
+}
+.brwsr-firefox-item i{
+	background-position: -100px 0;
+}
+.brwsr-opera-item i{
+	background-position: -100px -100px;
+}
+
+.brwsr-safari-item i{
+	background-position:0 -200px;
+}
+.brwsr-ie-item i{
+	background-position:0 -100px;
+}
+

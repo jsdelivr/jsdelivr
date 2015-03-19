@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "gmap3",
+  "repo": "jbdemonte/gmap3",
+  "files": {
+    "basePath": "dist/",
+    "include": ["gmap3.min.js", "gmap3.js"]
+  }
+}

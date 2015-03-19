@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "drawer",
+  "repo": "blivesta/drawer",
+  "files": {
+    "basePath": "dist/",
+	"include": ["css/drawer.min.css", "css/drawer.css.map", "js/jquery.drawer.min.js"]
+  }
+}

@@ -1,0 +1,171 @@
+/* product rating CSS */
+
+.votes{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 7pt;
+ color: #333;
+  }
+  
+span.votetext{
+ display:block;
+ overflow:visible;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9pt;
+ color: #333;
+ height: 0px;
+ }  
+  
+td.votetext{
+ width: 90px;
+  }  
+  
+td.votes{
+ text-align: center;
+  }
+ 
+.starcontainer{
+ margin: 0px;
+ padding: 0px;
+ width: 90px;
+ height: 17px;
+ overflow: hidden;
+ background: #c4c4b8;
+ position: relative;
+ } 
+
+.starcontainer a{
+ margin: 0px !important;
+ padding: 0px !important;
+ border: 0px;
+ } 
+ 
+.starcontainer a img{
+ margin: 0px !important;
+ padding: 0px !important;
+ border: 0px;
+/* border: 1px solid red; */
+ width: 18px !important;
+ height: 17px !important;
+ } 
+
+#singleimg{
+ margin: 0px;
+ padding: 0px;
+ width: 240px;
+ text-align:center; 
+ }
+ 
+#starcont2{
+ margin: 0px;
+ padding: 0px;
+ width: 90px;
+ height: 17px;
+ overflow: hidden;
+ background: #888;
+ }
+
+#starmove{
+ width: 190px;
+ margin: 0px;
+/*  height: 17px; */
+ padding-left: 10px;
+/*  border: 1px solid green; */
+ }
+  
+img.goldstar{
+/*  height: 17px; */
+/*  width: 18px;  */
+ padding: 0px;
+ margin: 0px;
+ border: none;
+ }
+ 
+#starmovenv{
+ width: 150px; 
+ margin: 0px;
+ padding: 0px;
+ height: 17px;
+  }
+
+#startxtmove{
+ width: 110px;
+ margin: 0px;
+ padding: 0px;
+  }
+  
+#goldstarcont{
+ margin: 0px;
+ padding: 0px;
+ height: 17px;
+ overflow: hidden;
+ } 
+ 
+.starimage{
+  background: transparent !important;
+  float: none !important;
+/*  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/24bit-star.png',sizingMethod='scale'); */
+ }  
+ 
+div.starcontainer a{/*
+ border: 1px solid red;
+ display: block;
+ visibility: visible;*/
+ }
+ 
+div.starcontainer a:hover{
+ background: url('../images/blue-star.gif') !important; 
+/* border: 1px solid black;*/
+ }
+   
+a.star1{
+ display:block;
+ width: 18px;
+ text-align: right;
+ z-index: 5;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ }
+ 
+a.star2{
+ display:block;
+ width: 36px;
+ text-align: right;
+ z-index: 4;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ }
+ 
+
+ 
+a.star3{
+ display:block;
+ width: 54px;
+ text-align: right;
+ z-index: 3;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ }
+ 
+
+a.star4{
+ display:block;
+ width: 72px;
+ text-align: right;
+ z-index: 2;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ }
+ 
+a.star5{
+ display:block;
+ width: 90px;
+ text-align: right;
+ z-index: 1;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ }

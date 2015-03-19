@@ -1,0 +1,220 @@
+/** 
+ *  sliderkit-site.css
+ *	> generic styles for Slider Kit plugin website presentation
+ * 
+ */
+
+/*---------------------------------
+ *  Site structure
+ *---------------------------------*/
+body{margin:0;padding:0 0 60px;text-align:center;font-family:Arial, Verdana, sans-serif;font-size:10pt;color:#333;}
+.spacer{clear:both;}
+img{border:none;}
+
+#header-wrapper{width:800px;margin:0 auto;text-align:left;}
+#header-title{float:left;padding:10px 0;font-size:1.3em;}
+#header-title,
+#header-title a{color:#fff;font-family:Verdana, sans-serif;text-decoration:none;}
+#header-title a:hover{text-decoration:underline;}
+#header-lang{float:right;margin:12px 10px 0 0;}
+#header-lang ul li{display:inline;}
+#header-lang ul li a{color:#fff;}
+
+#header{background-color:#0089be;background-image:-moz-linear-gradient(top, #00668d 0%, #0089be 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#00668d), to(#0089be));}
+
+#highlight{padding:20px 0;background:#f2f1f1;}
+
+#page{padding:15px 0 0;border:1px solid #FFFFFF;}
+#content{width:570px;}
+.inner{width:800px;margin:0 auto;text-align:left;}
+.layout-1col #content{float:none;}
+.layout-1col #content.wide{width:auto;}
+
+#donate{margin:5px 0 20px 0;padding:15px;text-align:center;background:#f2f1f1;-moz-border-radius:7px;-webkit-border-radius:7px;border:1px solid #fff;}
+#donate p{float:left;margin:5px 10px 0;}
+#donate form{float:left;}
+
+/*---------------------------------
+ *  Default tags
+ *---------------------------------*/
+a{color:blue;text-decoration:none;}
+a:hover,
+.sliderkit a:hover{text-decoration:underline;color:#000}
+a:active,
+.sliderkit a:active{color:orangeRed}
+a:focus{}
+a:visited{}
+
+
+h1{font-size:2.4em;margin:30px 0 15px;}
+h2{font-size:1.8em;margin:30px 0 15px;}
+h3{font-size:1.3em;margin:20px 0 10px;/*font-variant:small-caps;*/}
+h4{font-size:1em;margin:15px 0 7px;}
+
+ul{margin:0 0 10px 0;padding:0;list-style:disc inside none;}
+ul li{margin:0 0 5px;}
+p{margin:0 0 10px;}
+
+.noscript{margin:10px 0 15px;padding:10px;color:#fff;background:red;}
+/*.noscript .code-sitename{background:none;}*/
+#page ul{margin:10px 0 10px 15px;}
+
+/*---------------------------------
+ *  Download button
+ *---------------------------------*/
+#download{position:absolute;right:28px;width:170px;text-align:center;}
+#download.wide{width:570px;text-align:left;}
+.download{
+	display:block;line-height:0.9em;
+	margin:0 0 5px;padding:4px 0;
+	color:#fff;font-size:1.2em;text-decoration:none;text-shadow:0 -1px 0 #333;
+	-moz-border-radius:5px;-webkit-border-radius:5px;border:1px solid #00668d;
+	background:#00668d;background:-moz-linear-gradient(top, #0089be 0%, #00668d 100%);background:-webkit-gradient(linear, left top, left bottom, from(#0089be), to(#00668d));
+}
+.sliderkit .download:hover{
+	color:#fff;text-decoration:none;
+	background:#00668d;background:-moz-linear-gradient(top, #00668d 0%, #0089be 100%);background:-webkit-gradient(linear, left top, left bottom, from(#00668d), to(#0089be));
+}
+#download small{color:#ddd;font-size:0.7em;display:block}
+
+/*---------------------------------
+ *  Code formatting
+ *---------------------------------*/
+.code-details{display:none;}
+.code-pre{margin:10px 0 15px;padding:10px;overflow:auto;overflow-y:hidden;color:#333;border-left:3px solid #6ce26c;background:#F2F1F1;}
+.code-block{margin:0 0 15px;}
+.code-notes{margin:10px 0 15px;padding:10px;color:#000;border:1px solid #ccc;background:#ffffec;}
+.code-notes h4{margin-top:0;}
+.code-setting{color:#0857b8;font-weight:bold;font-style:normal;}
+.code-value{color:green;font-weight:bold;font-style:normal;}
+.code-classname{color:#990066;font-style:normal;}
+.code-filename{color:#af5f00;font-style:normal;}
+.code-comment{color:green;font-style:normal;}
+.code-togglebtn{display:block;}
+.code-sitename{/*color:#000;background:#F2F1F1;*/}
+.code-lowlight{color:#999;}
+.code-error{color:red;}
+.code-depreciated{color:red;padding:0 0 0 5px;}
+
+/*---------------------------------
+ *  Settings list
+ *---------------------------------*/
+.setting-type{color:#666;}
+.setting-value em{color:#005b7d;font-style:normal;}
+
+/*---------------------------------
+ *	Tabs menu
+ *---------------------------------*/	
+.tabs-menu{position:relative;width:800px;margin:0;display:block;border:1px solid #FFFFFF;}
+
+/* Nav */
+.tabs-menu .sliderkit-nav{position:relative;width:800px;text-align:left;/*border-bottom:1px solid #00668d;*/}
+.tabs-menu .sliderkit-nav-clip{margin:0;}
+.tabs-menu .sliderkit-nav-clip ul{list-style:none;}
+.tabs-menu .sliderkit-nav-clip li,
+.tabs-menu .sliderkit-nav-clip li a{float:left;margin:0;}
+.tabs-menu .sliderkit-nav-clip li a{margin:0;margin:0 5px 0 0;padding:4px 10px;color:#fff;font-size:1.1em;text-decoration:none;color:#fff;border:1px solid #00668d;background:#0089BE;}
+.tabs-menu .sliderkit-nav-clip li a:hover{background:#00668d;color:#fff;}
+.tabs-menu .sliderkit-nav-clip li.sliderkit-selected a{border-bottom-color:#fff;background:#fff;}
+.tabs-menu .sliderkit-nav-clip li.sliderkit-selected a,
+.tabs-menu .sliderkit-nav-clip li.sliderkit-selected a:active{color:#000;}
+.tabs-menu .sliderkit-nav-clip li.donate{float:right;}
+.tabs-menu .sliderkit-nav-clip li.donate a{margin:0;color:#000;background-color:#ffb542;border-color:#f68b01;}
+.tabs-menu .sliderkit-nav-clip li.donate a:hover{color:#000;background:#fedfa1;}
+
+/* Panel */
+.tabs-menu .sliderkit-panels{width:560px;}
+.tabs-menu .sliderkit-panel{position:relative;}
+
+/*---------------------------------
+ *  Rounded corners
+ *---------------------------------*/
+ 
+/* 4 corners */
+.tabs-menu .sliderkit-nav-clip li a{
+    -moz-border-radius:7px 7px 7px 7px; /* FF1+ (FF4-) */
+	-webkit-border-radius:7px 7px 7px 7px; /* Saf3-4, iOS 1+, Android 1.5+ */
+	-opera-border-radius:7px 7px 7px 7px; /* Opera 11- */
+    border-radius:7px 7px 7px 7px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+	
+	/* useful if you don't want a bg color from leaking outside the border: */       
+	-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;
+}
+
+/*---------------------------------
+ *  Slider kit
+ *---------------------------------*/
+.sliderkit,
+.customtabs{margin:10px 0;}
+#page .sliderkit ul,
+#page .customtabs ul{margin:0;}
+
+.sliderkit .sliderkit-nav-clip a:active{color:#fff}
+.sliderkit .sliderkit-nav-clip a:hover{text-decoration:none;}
+.tabs-standard .sliderkit-nav-clip li.sliderkit-selected a:active,
+.tabs-noheight .sliderkit-nav-clip li.sliderkit-selected a:active{color:#000}
+.tabs-standard .sliderkit-nav-clip a:hover,
+.tabs-noheight .sliderkit-nav-clip a:hover{color:#fff}
+
+#page .tabs-menu .sliderkit-panel{position:relative;}
+#page .tabs-menu .sliderkit-panel-body{width:550px;}
+#page .tabs-menu .sliderkit-panel .supertoc{position:absolute;width:180px;right:0;top:30px;}
+
+/*---------------------------------
+ *  Super TOC!
+ *---------------------------------*/
+.supertoc{position:absolute;top:65px;right:0;width:200px;margin:0 0 30px;padding:0 10px 10px;text-align:left;background:#f2f1f1;-moz-border-radius:7px;-webkit-border-radius:7px;border:1px solid #ccc;}
+.supertoc ul{list-style:disc outside none;}
+.supertoc ul li{padding:0px;}
+.supertoc ul .toc-h1{margin:10px 0 3px;list-style:none;}
+.supertoc ul .toc-h2{list-style:disc;margin:7px 0 0 20px;}
+.supertoc ul .toc-h3{list-style:circle;margin:0 0 0 35px;}
+.supertoc ul a:hover{text-decoration:underline;}
+
+/*---------------------------------
+ *  Transitions
+ *---------------------------------*/
+#page .transitions ul{padding:0;margin:0;list-style:none;}
+#page .transitions ul li{float:left;width:185px;margin:0 15px 10px 0;}
+#page .transitions ul li h3{}
+#page .transitions ul ul li{float:none;width:auto;margin:0 0 5px;}
+
+#page #transitionsSettings{position:absolute;left:580px;top:200px;}
+#page #transitionsSettings label{margin:0 5px 0 0;}
+#page #transitionsSettings select{margin:0 0 10px;}
+
+/*
+|--------------------------------------------------------------------------
+| UItoTop jQuery Plugin 1.1
+| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+|--------------------------------------------------------------------------
+*/
+
+#toTop {display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	border:none;
+	text-indent:-999px;
+	background:url(../images/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+	background:url(../images/ui.totop.png) no-repeat left -51px;
+	width:51px;
+	height:51px;
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+	outline:none;
+}

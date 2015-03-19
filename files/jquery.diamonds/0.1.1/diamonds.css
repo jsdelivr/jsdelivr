@@ -1,0 +1,77 @@
+.diamonds {
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.diamond-row-wrap {
+    text-align: center;
+    position: relative;
+    float: left;
+    clear: both;
+}
+.diamond-row-upper, .diamond-row-lower {
+    overflow: auto;
+    clear: both;
+    width: 100%;
+}
+.diamond-row-lower {
+    overflow: visible;
+    position: absolute;
+    bottom: 0;
+}
+    .diamond-row-lower .diamond-box {
+        margin-left: 64.644660941%; /* 0.5 + 1 / sqrt(2) / 2 */
+        margin-top: 64.644660941%;
+    }
+
+.diamond-box-wrap {
+    float: left;
+    width: 250px; /* Size of diamonds */
+    height: 250px;
+}
+
+.diamond-box {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    overflow: hidden;
+    
+    position: relative;
+    z-index: 1;
+    
+    width: 70.710678118%; /* x = sqrt(x^2 / 2) = 1 / sqrt(2) = 0.70710678118 */
+    height: 70.710678118%;
+    margin: 14.644660941%;
+    
+    border: 1px solid transparent;
+}
+
+.diamond-box-inner {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    width: 141.421356237%; /* sqrt(2) */
+    height: 141.421356237%;
+    margin: -20.7106781185% 0 0 -20.7106781185%; /* (1 - sqrt(2)) / 2 */
+}

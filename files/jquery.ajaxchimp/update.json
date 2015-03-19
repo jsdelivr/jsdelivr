@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery-ajaxchimp",
+  "repo": "scdoshi/jquery-ajaxchimp",
+  "files": {
+    "include": ["*.min.js"]
+  }
+}

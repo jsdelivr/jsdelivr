@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MapBBCode Editor</title>
+<link rel="stylesheet" href="leaflet.css">
+<link rel="stylesheet" href="leaflet.draw.css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="leaflet.ie.css" />
+    <link rel="stylesheet" href="leaflet.draw.ie.css" />
+<![endif]-->
+<script src="leaflet.js"></script>
+<script src="leaflet.draw.js"></script>
+<script src="mapbbcode.js"></script>
+<script src="mapbbcode-config.js"></script>
+<script src="proprietary/Bing.js"></script>
+<!-- put MapBBCode add-ons here -->
+<style>html, body, #edit, .leaflet-container { margin: 0; height: 100%; }</style>
+</head>
+<body onload="javascript:edit();">
+<div id="edit"></div>
+<script>
+<!--
+function edit() {
+    var stored = opener.storedMapBB;
+    var mapBB = new MapBBCode(stored.caller.options);
+    mapBB.setStrings(stored.caller.strings);
+    window.MapBBCodeProcessor.options = opener.MapBBCodeProcessor.options;
+    mapBB.options.editorHeight = 0;
+    mapBB.editor('edit', stored.bbcode, function(res) {
+        window.close();
+        if( stored.callback )
+            stored.callback.call(stored.context, res);
+        opener.storedMapBB = null;
+    }, this);
+}
+// -->
+</script>
+</body>
+</html>

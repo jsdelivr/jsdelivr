@@ -1,0 +1,293 @@
+/*   
+Theme Name: minimum
+Theme URI: http://www.projekktor.com/downloads
+Description: This is the minimum ... 
+Author: Lionel Loeb
+Author URI: http://www.pix-l.com
+
+Copyright 2010, Lionel Loeb, pix-l, http://www.pix-l.com
+under GNU General Public License
+http://www.projekktor.com/license/
+*/
+
+.projekktor {
+position:relative; 
+display:block;
+padding:0;
+margin:0;
+background-color:#000;
+font-family: 'Lucida Grande', Arial, Sans-Serif;
+font-size: 10px;
+text-align:center;
+font-weight: bold;
+}
+
+.pplogo.inactive,
+.ppstart.inactive,
+.ppbuffering.inactive,
+.ppcontrols.inactive,
+.ppplay.inactive,
+.pppause.inactive,
+.ppfsenter.inactive,
+.ppfsexit.inactive,
+.ppprev.inactive,
+.ppnext.inactive {
+display: none;
+}
+
+.pplogo.active,
+.ppstart.active,
+.ppbuffering.active,
+.ppcontrols.active,
+.ppplay.active,
+.pppause.active,
+.ppfsenter.active,
+.ppfsexit.active,
+.ppprev.active,
+.ppnext.active {
+display: block;
+}
+
+.ppcontrols {
+-moz-border-radius: 4px;
+border-radius: 4px;
+padding:3px;
+border:2px solid #353535;  
+position: absolute;
+bottom:30px;
+left: 50%;
+display: block;
+margin-left:-204px;
+overflow: hidden;
+width: 400px; 
+height: 40px;
+background-color:#000;
+margin-top:10px;
+}
+
+.ppplay { 
+display:block;
+position: absolute;
+top: 10px;
+left: 0;
+background: url("play.png") no-repeat center center transparent;
+width: 30px; 
+height: 30px;
+cursor: pointer;
+border-right: 1px solid #353535;
+}
+
+.pppause { 
+display:none;
+position: absolute;
+top: 10px;
+left: 0;
+width: 30px; 
+height: 30px;
+cursor: pointer;
+border-right: 1px solid #353535;
+background: url("pause.png") no-repeat center center transparent;
+}
+
+.ppfsenter { 
+display:block;
+position: absolute;
+top: 10px;
+right: 0;
+width: 30px; 
+height: 30px;
+background: url("fullscreen_on.png") no-repeat center center transparent;
+cursor: pointer;
+border-left: 1px solid #303030;
+}
+
+.ppfsexit { 
+display:block;
+position: absolute;
+top: 10px;
+right: 0;
+width: 30px; 
+height: 30px;
+background: url("fullscreen_off.png") no-repeat center center transparent;
+cursor: pointer;
+border-left: 1px solid #303030;
+}
+
+.ppscrubber {
+position: absolute;
+display: block;
+left: 0;
+top: 0;
+height: 5px; 
+width: 100%;
+background-color: #000; 
+margin: auto;
+padding: 0;
+border-bottom: 0px solid #aaa;
+}
+
+.ppplayhead, .pploaded {
+position: absolute;
+display: block;
+left: 0;
+bottom: 0;
+height: 5px; 
+width: 1px; 
+background-color: #ffffff; 
+cursor: pointer;
+z-index: 301;
+}
+
+.pploaded {
+background-color: #353535;
+z-index: 10;
+}
+
+.pptitle {
+position: absolute;
+top: 15px;
+left: 40px;    
+height: 15px; 
+color: #FFF;
+width: 290px;
+overflow: hidden;
+text-align: left;
+}
+
+.pptimeleft {
+position: absolute;
+top: 10px;
+right: 150px;    
+height: 15px; 
+color: #888;
+width: 100px;
+line-height: 30px;
+height: 30px;
+overflow: hidden;
+}
+
+.ppvmax  {
+cursor: pointer;
+position: absolute;
+top: 10px;
+right: 31px;
+width: 30px; 
+height: 30px;
+background: url("sound_on.png") no-repeat center center transparent; 
+}
+
+.ppmute  {
+cursor: pointer;
+position: absolute;
+top: 10px;
+right: 120px;
+width: 30px; 
+height: 30px;
+background: url("sound_off.png") no-repeat center center transparent; 
+}
+
+.ppvslider {
+position: absolute;
+right:62px;
+top: 22px;
+height: 6px;
+width: 60px;
+background-color:#353535;        
+}
+
+.ppvmarker {
+position: absolute;
+right:0;
+left: 0;
+height: 6px;
+width: 100%;
+background-color: #FFF;
+}
+
+.ppvknob  {
+cursor: pointer;
+z-index: 201; 
+position: absolute;
+background-color: #FFF;
+top:-2px;
+left:0px;
+width: 4px; 
+height: 10px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+
+.ppnext {
+display:block;
+position: absolute;
+top: 10px;
+left: 64px;
+background: url("next.png") no-repeat center center transparent;
+width: 30px; 
+height: 30px;
+cursor: pointer;
+}
+
+.ppprev {
+display:block;
+position: absolute;
+top: 10px;
+left: 32px;
+background: url("previous.png") no-repeat center center transparent;
+width: 30px; 
+height: 30px;
+cursor: pointer;
+}
+
+.pptestcard {
+background: url("testcard.gif") center center repeat;
+width: 100%;
+height: 100%;
+color: #FFF;
+font-size: 30px;
+overflow: hidden;
+}
+
+.pptestcard p {
+background-color: #000;
+width: 400px;
+margin: auto;
+line-height: 40px;
+position: relative;
+top: 18%;    
+padding: 10px;
+border:5px solid #000;
+text-align: center;
+}
+
+.ppbuffering {
+position: absolute;
+left: 50%;
+bottom: 50%;
+margin-left:-30px;
+margin-bottom: -30px;    
+display: block; 
+z-index:8000;
+padding: 0px;
+background: url("buffering.gif") no-repeat center center #000;
+height: 60px; 
+width: 60px; 
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;        
+display: none;
+}
+
+.ppstart {
+position: absolute;
+left: 50%;
+bottom: 50%;
+margin-left:-40px;
+margin-bottom: -35px;
+cursor: pointer;
+height: 75px; 
+width: 80px; 
+display: block; 
+z-index:8000;
+padding: 0px;
+background: url("start.png") no-repeat center center transparent;
+}

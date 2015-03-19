@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "skype-button",
+  "repo": "tomalec/skype-button",
+  "files": {
+    "include": [
+    	"src/skype-button.html"
+    ]
+  }
+}

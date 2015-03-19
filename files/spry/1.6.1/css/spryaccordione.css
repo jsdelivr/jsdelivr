@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.Accordion {
+	border-left: solid 1px gray;
+	border-right: solid 1px black;
+	border-bottom: solid 1px gray;
+	overflow: hidden;
+}
+
+	.AccordionPanel {}
+		.AccordionPanelOpen {}
+		.AccordionFocused {}
+		
+		.AccordionPanelTab {}
+			.AccordionPanelTabHover {}
+			
+			
+		.AccordionPanelContent {}

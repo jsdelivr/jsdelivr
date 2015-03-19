@@ -1,0 +1,251 @@
+/*!
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *               CASCADE FRAMEWORK 1.0
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *
+ * Copyright 2013, John Slegers
+ * Released under the MIT license
+ * http://jslegers.github.com/cascadeframework/license.html
+ *
+ *
+ * This means you can use Cascade Framework for any project,
+ * whether commercial or not.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * 
+ * Cascade Framework also contains the following goodies,
+ * which all have the same or similar 'permissive licenses :
+ *
+ *
+ * Includes polyfills by Joshua Bell
+ * http://www.calormen.com/polyfill/
+ * Released in public domain
+ *
+ *
+ * Includes Google ExplorerCanvas
+ * https://code.google.com/p/explorercanvas/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Google Prettify
+ * https://code.google.com/p/google-code-prettify/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Yepnope
+ * http://yepnopejs.com/
+ * Released under the WTFPL license
+ *
+ *
+ * Includes Modernizr
+ * http://modernizr.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes lodash
+ * http://lodash.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery
+ * http://jquery.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery Easing plugin
+ * http://gsgd.co.uk/sandbox/jquery/easing/
+ * Released under the BSD license
+ *
+ *
+ * Includes jQuery Flot plugin
+ * http://www.flotcharts.org/
+ * Released under the MIT license
+ *
+ *
+ * Includes the Font Awesome webfont
+ * http://fortawesome.github.com/Font-Awesome/
+ * Released under the SIL Open Font License
+ *
+ *
+ *
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * Cascade Framework was inspired by many articles and projects
+ * 
+ * Especially these authors are worth mentioning :
+ *             
+ *             Nicolle Sullivan
+ *             Jonathan Snook
+ *             Chris Coyier
+ *             Eric Meyer
+ *             Nicolas Gallagher
+ *             Paul Irish
+ *             Mark Otto
+ *             Jacob Thornton
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Date: 2013-03-15
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+*/
+
+
+
+
+.logo {
+    background:url('../img/cascade icons/logo-small-bg.png');
+}
+
+.logo:hover {
+    background:url('../img/cascade icons/logo-small-bg-selected.png');
+}
+
+.powered-by {
+    background:url('../img/cascade icons/powered-by.png');
+    width:150px;
+    height:56px;
+    display:block;
+}
+
+.leuven {
+    width:48%;
+    max-width: 400px !important;
+    float: right;
+}
+
+.narrow .site-header,.narrow .site-body {
+    -webkit-border-top-left-radius:8px;
+    -moz-border-radius-topleft:8px;
+    border-top-left-radius:8px;
+    -webkit-border-top-right-radius:8px;
+    -moz-border-radius-topright:8px;
+    border-top-right-radius:8px;
+}
+
+.narrow .site-center .site-body {
+    -webkit-border-bottom-left-radius:8px;
+    -moz-border-radius-bottomleft:8px;
+    border-bottom-left-radius:8px;
+    -webkit-border-bottom-right-radius:8px;
+    -moz-border-radius-bottomright:8px;
+    border-bottom-right-radius:8px;
+}
+
+.template-header h2 {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#sociallogos {
+    float:right;
+    width:130px;
+}
+
+#sociallogos a:hover {
+    text-decoration: none;
+}
+
+.sitemenutags {
+    float:right;
+    _width:145px;
+}
+
+.sitemenutags .nav li {
+    border:0;
+    margin:0;
+}
+
+.sitemenutags .nav a:hover {
+    color:#536d86;
+    background:#abbfcb;
+}
+
+.centered-content .content {
+    width:75%;
+}
+
+.centered-content input {
+    width:95%;
+    _width:55px;
+}
+
+.centered-content label {
+    float: right;
+}
+
+@media (max-width:979px) {
+    .leuven {
+        margin: 0 auto;
+        float: none !important;
+        width: 100%;
+    }
+
+    .template-header {
+        text-align: center;
+    }
+
+    .template-header h2 {
+        display: inline-block;
+    }
+
+    .sitemenutags {
+        float:left;
+    }
+
+    .sitemenu {
+        display:block;
+        clear:both;
+    }
+
+    .centered-content .content {
+        width: 100%;
+    }
+
+    .centered-content label {
+        float: left;
+    }
+}
+
+.sitemenu-responsive {
+    display:none !important;
+}
+
+.sitemenu-responsive .left {
+    position: absolute;
+    background: #2d3538;
+    overflow: hidden;
+    width:100%;
+}
+
+.sitemenu-responsive .icon-align-justify {
+    margin:0 !important;
+}
+
+.site-header,.sitemenu-responsive,.sitemenu-responsive .left {
+	z-index:900;	
+}
+
+@media (max-width:580px) {
+    .col.sitemenu {
+        display:none !important;
+    }
+
+    .sitemenu-responsive {
+        display:block !important;
+    }
+
+    .sitemenu-responsive .collapse-trigger a {
+        padding: 4px 6px 0;
+    }
+
+    .sitemenutags {
+        position: absolute;
+        right: 0;
+    }
+}

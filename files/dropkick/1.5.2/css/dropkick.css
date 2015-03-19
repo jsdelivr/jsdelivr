@@ -1,0 +1,263 @@
+/**
+ * Default DropKick theme
+ *
+ * Feel free to edit the default theme
+ * or even add your own.
+ *
+ * See the readme for themeing help
+ *
+ */
+.dk_container {
+  background-color: #f5f5f5;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .dk_container:focus {
+    outline: 0; }
+  .dk_container[disabled] {
+    opacity:.4; }
+  .dk_container a {
+    cursor: pointer;
+    text-decoration: none; }
+  .dk_container[disabled] a {
+    cursor: not-allowed; }
+
+.dk_toggle {
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 7px 45px 7px 10px;
+  text-shadow: #fff 1px 1px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-transition: border-color .5s;
+  -moz-transition: border-color .5s;
+  -o-transition: border-color .5s;
+  transition: border-color .5s;
+  position: relative; }
+  .dk_toggle:hover, .dk_toggle:focus {
+    border-color: #8c8c8c; }
+  .dk_toggle:after {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #4B4B4B; }
+
+.dk_focus .dk_toggle {
+  border-color: #40b5e2;
+  box-shadow: 0 0 5px #40b5e2;
+  -moz-box-shadow: 0 0 5px #40b5e2;
+  -webkit-box-shadow: 0 0 5px #40b5e2; }
+
+.dk_open {
+  box-shadow: 0 0 5px #40b5e2;
+  -moz-box-shadow: 0 0 5px #40b5e2;
+  -webkit-box-shadow: 0 0 5px #40b5e2;
+  z-index: 10; }
+  .dk_open .dk_toggle {
+    background-color: #ececec;
+    border-color: #8c8c8c;
+    color: #ccc;
+    box-shadow: inset 0 -2px 5px #ccc;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0; }
+
+.dk_open_top .dk_toggle {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px; }
+.dk_open_top .dk_options, .dk_open_top .dk_options_inner {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0; }
+
+.dk_options {
+  background: #fefefe;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 8px;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px; }
+  .dk_options a {
+    background-color: #fff;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    padding: 8px 10px; }
+  .dk_options a:hover, .dk_options:focus,
+  .dk_options .dk_option_current a {
+    background-color: #0084c7;
+    border-bottom-color: #004c72;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0; }
+  .dk_options li:last-child a {
+    border-bottom: none; }
+  .dk_options .disabled {
+    cursor: default; }
+    .dk_options .disabled a,
+    .dk_options .dk_optgroup.disabled > span {
+      color: #aaa; }
+    .dk_options .disabled:hover a,
+    .dk_options .disabled:focus a {
+      cursor: default;
+      background-color: #fff;
+      border-bottom-color: #999;
+      text-shadow: none; }
+  .dk_options .dk_optgroup {
+    padding-left: 5px;
+    background: #ddd;
+  }
+    .dk_options .dk_optgroup > span {
+      display: block;
+      padding: 5px 10px 5px 5px;
+      font-style: italic;
+      color: #444;
+      background: #ddd;
+      border-bottom: ;
+    }
+    .dk_options .dk_optgroup.disabled,
+    .dk_options .dk_optgroup.disabled > span {
+      background: #eee;
+    }
+
+.dk_options_inner {
+  max-height: 250px;
+  border: 1px solid #8c8c8e;
+  border-bottom-width: 2px;
+  border-bottom-color: #999;
+  color: #333;
+  text-shadow: #fff 0 1px 0;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px; }
+
+.dk_container {
+  display: none;
+  float: left; }
+  .dk_container a {
+    outline: 0; }
+
+.dk_toggle {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  zoom: 1; }
+
+.dk_open {
+  position: relative; }
+  .dk_open .dk_options {
+    display: block; }
+  .dk_open .dk_label {
+    color: inherit; }
+
+.dk_options {
+  display: none;
+  margin-top: -1px;
+  position: absolute;
+  right: 0;
+  width: 100%; }
+  .dk_options a, .dk_options a:link, .dk_options a:visited {
+    display: block; }
+
+.dk_options_inner {
+  overflow: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch; }
+
+.dk_container select {
+  position: absolute;
+  visibility: hidden; }
+
+.dk_mobile {
+  position: relative; }
+  .dk_mobile select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+
+/* Here we reflect some of the styles from .dk_container to achieve the same visual also when without javascript */
+.dk_wrap {
+  position: relative;
+  display: inline-block;
+  min-width: 173px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 18px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-transition: border-color .5s;
+  -moz-transition: border-color .5s;
+  -o-transition: border-color .5s;
+  transition: border-color .5s; }
+  .dk_wrap:after {
+    position: absolute;
+    display: block;
+    top: 45%;
+    right: 10px;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #4B4B4B;
+    pointer-events:none; }
+  .dk_wrap select {
+    position: relative;
+    display: block;
+    width: 110%;
+    min-height: 32px;
+    padding: 6px 49px 6px 6px;
+    border: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #333;
+    text-indent: 0.01px;
+    text-overflow: ''; 
+    text-shadow: #fff 1px 1px 0;
+    background: transparent;
+    background: rgba(255,255,255,0);
+    cursor: pointer;
+    border-radius: 0;
+    box-shadow: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+    .dk_wrap select:focus {
+      text-shadow: none; }
+    .dk_wrap select::-ms-expand {
+      display: none;
+    }
+
+  /* Firefox only */
+  @-moz-document url-prefix() { 
+    .dk_wrap select { padding: 7px 49px 5px 6px; }
+  }
+
+  /* IE 10 + IE 11 only */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .dk_wrap select { padding: 6px 47px 6px 8px; }
+  }
+
+  /* Opera 12 only */
+  _:-o-prefocus, body:last-child .dk_wrap select { padding: 7px 45px 5px 10px; }

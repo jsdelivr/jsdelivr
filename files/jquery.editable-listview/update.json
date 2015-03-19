@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "jqm-editable-listview",
+  "repo": "baig/jquerymobile-editablelistview",
+  "files": {
+    "basePath": "build/",
+    "include": ["jqm.editable.listview.min.js", "jqm.editable.listview.min.css"]
+  }
+}

@@ -1,0 +1,71 @@
+._wPaint_menu{padding:1px; background:#EFEFEF; border:solid #000000 2px; border-radius:5px; box-shadow:3px 3px 5px #555555; z-index:100;}
+._wPaint_options{float:left; padding:2px;}
+
+/*** icons ***/
+._wPaint_icon,
+._wPaint_dropDown,
+._wPaint_colorPicker{
+	position:relative; float:left; height:18px; width:18px; margin:0 2px; line-height:16px;
+	background-position:center center; background-repeat:no-repeat; cursor:pointer;
+	border-style:solid; border-width:1px; padding:3px; border-radius:5px;
+}
+
+._wPaint_lineWidth, ._wPaint_fontSize{padding:3px 0; width:24px;}
+._wPaint_lineWidth, ._wPaint_fontSize, ._wPaint_fontFamily{overflow:hidden;}
+
+._wPaint_dropDown select{
+	background-color:#EFEFEF; border:none; cursor:pointer;
+	text-align:center; width:44px; margin-left:-3px;
+}
+
+._wPaint_dropDown_cover{position:absolute; right:0px; top:0px; height:18px; width:4px; background-color:#EFEFEF;}
+
+._wPaint_icon,
+._wPaint_dropDown,
+._wPaint_colorPicker{border-color:#999999}
+
+._wPaint_icon:hover,
+._wPaint_icon.active{border-color:#F88017; background-color:#E5E5E5;}
+
+/*** handle ***/
+._wPaint_handle{float:left; width:10px; height:30px; background: #AFAFAF; border-radius:3px 0 0 3px; cursor:pointer;}
+
+/*** text input ***/
+._wPaint_textInput{position:absolute; border:dotted #0000FF 1px; background:none; margin:0px; padding:0px; outline-width:0; word-wrap:break-word; overflow:hidden;}
+/*._wPaint_textHolder{position:absolute; border:dotted #0000FF 1px;}*/
+
+/*** color picker overwrites ***/
+._wPaint_colorPicker{padding:0px; width:24px; height:24px;}
+._wColorPicker_buttonBorder{border:none;}
+._wColorPicker_buttonColor{width:20px !important; height:20px !important;}
+._wPaint_colorPicker{float:left;}
+
+/*** vertical overwrites ***/
+._wPaint_menu_vertical ._wPaint_icon,
+._wPaint_menu_vertical ._wPaint_dropDown,
+._wPaint_menu_vertical ._wPaint_colorPicker{
+	margin:2px 0;
+}
+
+._wPaint_menu_vertical ._wPaint_handle{
+	width:30px; height:10px; border-radius:3px 3px 0 0;
+}
+
+/***********************************************************
+ * Images
+ ***********************************************************/
+._wPaint_handle{background-image: url('./images/menu_handle.png');}
+._wPaint_undo{background-image: url('./images/undo_inactive.png');}
+._wPaint_undo.uactive{background-image: url('./images/undo.png');}
+._wPaint_redo{background-image: url('./images/redo_inactive.png');}
+._wPaint_redo.uactive{background-image: url('./images/redo.png');}
+._wPaint_clear{background-image: url('./images/clear.png');}
+._wPaint_rectangle{background-image: url('./images/icon_rectangle.png');}
+._wPaint_ellipse{background-image: url('./images/icon_ellipse.png');}
+._wPaint_line{background-image: url('./images/icon_line.png');}
+._wPaint_pencil{background-image: url('./images/icon_pencil.png');}
+._wPaint_text{background-image: url('./images/icon_text.png');}
+._wPaint_eraser{background-image: url('./images/icon_eraser.png');}
+._wPaint_bold{background-image: url('./images/icon_bold.png');}
+._wPaint_italic{background-image: url('./images/icon_italic.png');}
+._wPaint_underline{background-image: url('./images/icon_underline.png');}

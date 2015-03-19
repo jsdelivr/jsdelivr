@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import url(../../../../../modules/admin/tpl/css/admin.css);
+@import url(../../../../../common/css/bootstrap.min.css);
+
+.image_align {
+    margin:0px 0px 5px 0px;
+    float:left;
+    width:200px;
+}
+
+li {list-style:none; float:left; margin-right:.5em;}

@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "cilantro",
+    "repo": "chop-dbhi/cilantro",
+    "files": {
+        "basePath": "cdn/"
+    }
+}

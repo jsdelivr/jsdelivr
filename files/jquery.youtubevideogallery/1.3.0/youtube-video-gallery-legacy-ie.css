@@ -1,0 +1,45 @@
+
+a.youtube-videogallery-link {
+    display: inline-block;
+}
+*.youtube-videogallery-item {
+    background-color: #000;
+    border: 1px solid #888;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    *display: inline;
+    filter : progid:DXImageTransform.Microsoft.Shadow(Direction=135, Strength=3, Color='#333333');
+}
+
+a.youtube-videogallery-link:hover img.youtube-videogallery-play,
+a.youtube-videogallery-link:focus img.youtube-videogallery-play {
+
+}
+*.youtube-videogallery-play {
+
+}
+body *.youtube-videogallery-title {
+    border-top: 0 none;
+    border-bottom:1px solid #000;
+    color:#fff;
+    display: inline-block;
+    height: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+body.youtube-videogallery-legacy-ie div.youtube-videogallery-bodycover {
+    filter: alpha(opacity=50);
+}
+div.youtube-videogallery-display {
+    filter : progid:DXImageTransform.Microsoft.Shadow(Direction=135, Strength=5, Color='#000000');
+    padding: 4px;
+}
+* html div.youtube-videogallery-display { position: absolute; }  /* for IE 6 */
+* + html div.youtube-videogallery-display { position: absolute; }  /* for IE 7 */
+div.youtube-videogallery-bodycover,
+div.youtube-videogallery-display {
+    display:none;
+}
+body.youtube-videogallery-active div.youtube-videogallery-bodycover {
+    filter: alpha(opacity=50);
+}

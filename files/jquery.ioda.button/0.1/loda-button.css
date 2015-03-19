@@ -1,0 +1,83 @@
+/* OVERRIDABLE */
+
+.loda-btn, .loda-btn:visited {
+  background:            #E5E6E6;
+  text-decoration:       none;
+  color:                 #FF7676;
+  padding:               1em 1em 1em 2.6em;
+  border-radius:         .3em;
+  -webkit-border-radius: .3em;
+  -moz-border-radius:    .3em;
+  -ms-border-radius:     .3em;
+  -o-border-radius:      .3em;
+}
+
+.loda-btn.loda-btn-loading {
+  color:  #bbb;
+  cursor: default;
+}
+
+.loda-btn.loda-btn-loading .loda-icon {
+  color: #bbb;
+}
+
+.loda-btn .loda-icon {
+  top: 1em;
+  left: 1em;
+}
+
+/* NOT OVERRIDABLE */
+
+.loda-btn, .loda-btn:visited {
+  position:              relative;
+  display:               inline-block;
+}
+
+.loda-btn .loda-icon {
+	position: absolute;
+
+	-webkit-transition: -webkit-transform .3s;
+     -moz-transition: -moz-transform .3s;
+      -ms-transition: -moz-transform .3s;
+       -o-transition: -o-transform .3s;
+          transition: transform .3s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.loda-btn.loda-btn-loading .loda-icon {
+	animation: loda-anim .5s infinite linear;
+  -webkit-animation: loda-anim .5s infinite linear alternate;
+  -moz-animation: loda-anim .5s infinite linear alternate;
+  -ms-animation: loda-anim .5s infinite linear alternate;
+	-o-animation: loda-anim .5s infinite linear alternate;
+}
+
+@keyframes loda-anim {
+  from { -webkit-transform: rotateY(1deg); }
+  to { -webkit-transform: rotateY(179deg); }
+}
+
+@-moz-keyframes loda-anim {
+  from { -moz-transform: rotateY(1deg); }
+  to { -moz-transform: rotateY(179deg); }
+}
+
+@-webkit-keyframes loda-anim {
+  from { -webkit-transform: rotateY(1deg); }
+  to { -webkit-transform: rotateY(179deg); }
+}
+
+@-ms-keyframes loda-anim {
+  from { -ms-transform: rotateY(1deg); }
+  to { -ms-transform: rotateY(179deg); }
+}
+
+@-o-keyframes loda-anim {
+  from { -o-transform: rotateY(1deg); }
+  to { -o-transform: rotateY(179deg); }
+}
+

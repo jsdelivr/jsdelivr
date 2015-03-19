@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "backbone.radio",
+  "repo": "marionettejs/backbone.radio",
+  "files": {
+    "basePath": "build/"
+  }
+}

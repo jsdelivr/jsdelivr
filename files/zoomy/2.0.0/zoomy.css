@@ -1,0 +1,138 @@
+/*
+* Zoomy 1.4.6 - jQuery plugin 
+* http://zoomy.me
+*
+* Copyright (c) 2010 Jacob Lowe (http://redeyeoperations.com)
+* Dual licensed under the MIT (MIT-LICENSE.txt)
+* and GPL (GPL-LICENSE.txt) licenses.
+*
+* Built for jQuery library
+* http://jquery.com
+*
+* Addition fixes and modifications done by Larry Battle ( blarry@bateru.com )
+* Code has been refactored and the logic has been corrected.
+*
+*Cusor fix from IE by Chris Pearson ( http://www.upland.co.uk )
+*
+*/
+body{
+    -webkit-touch-callout: none!important;
+}
+
+.parent-zoom{
+    -webkit-user-select: none!important;
+}
+
+.parent-zoom img{
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 200ms;
+    -webkit-transition-timing-function: ease;
+    cursor:  cell;
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    border: 0;
+}
+
+.zoomy{
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 5px 10px #000;
+    -moz-box-shadow: 0px 5px 10px #000;
+    -o-box-shadow: 0px 5px 10px #000;
+    -ms-box-shadow: 0px 5px 10px #000;
+    box-shadow: 0px 5px 10px #000;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color='#3333333', Positive='true');
+    line-height: 100px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 999;
+    overflow: hidden;
+    cursor: url(./img/blank.cur), move;
+    -webkit-transition-property: border-width, border-color, opacity;
+    -webkit-transition-duration: 500ms, 1s, 500ms;
+    -webkit-transition-timing-function: ease;
+}
+
+.zoomy span{
+    display: block;
+    margin: 5px auto;
+    background: -moz-linear-gradient(top, rgba(255,255,255,.6) 0%, rgba(255,255,255,0) 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.6)), color-stop(100%,rgba(255,255,255,0))); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#55FFFFFF, endColorstr=#00ffffff);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#55FFFFFF, endColorstr=#00ffffff);
+}
+
+
+.zoomy a{
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.inactive img{
+    opacity: 0.85!important;
+    filter:alpha(opacity=85)!important;
+}
+
+.zoomy #tmp{
+    max-width: none;
+    max-height: none;
+    top: -999999px;
+    left: -999999px;
+}
+
+.zoomy.start{
+        border-width: 2px;
+        border-color: #444;
+}
+
+.zoomy-wrap{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+.zoomy-btn{
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -30px;
+    border-radius: 50%;
+    height: 60px;
+    width : 60px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 1px 2px rgba(255,255,255,.8);
+    box-shadow: 0px 1px 2px rgba(255,255,255,.8);
+    background: rgba(0,0,0,.8);
+    background-position: 0px 0px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+    line-height: 100px;
+    color: #fff;
+}
+
+.zoomy-btn svg{
+    margin: 8px auto;
+    display: block;
+}
+
+.active .zoomy-btn svg{
+    display: none;
+}
+
+.active .zoomy-btn{
+    width: 100%;
+    height: 100%;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    color: rgba(0,0,0,0);
+}
+
+

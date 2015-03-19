@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jq-console",
+  "repo": "replit/jq-console",
+  "files": {
+    "include": ["jqconsole.min.js"]
+  }
+}

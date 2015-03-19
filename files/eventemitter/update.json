@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "EventEmitter",
+  "repo": "Wolfy87/EventEmitter",
+  "files": {
+    "include": ["EventEmitter.min.js"]
+  }
+}

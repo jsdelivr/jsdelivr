@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Backbone.ModelBinder",
+  "repo": "theironcook/Backbone.ModelBinder",
+  "files": {
+    "include": ["Backbone.ModelBinder.min.js", "Backbone.CollectionBinder.min.js"]
+  }
+}

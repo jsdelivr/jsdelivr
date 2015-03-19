@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "devicons",
+  "repo": "vorillaz/devicons",
+  "files": {
+    "include": ["./css/devicons.min.css", "./fonts/devicons.eot", "./fonts/devicons.svg", "./fonts/devicons.ttf", "./fonts/devicons.woff"]
+  }
+}

@@ -1,0 +1,3 @@
+.barContainer{margin-right:103px;position:relative;height:100%;}
+.graphHr{position:relative; display:inline-block; background:transparent url(images/iconBar.gif) 4px 0 repeat-x;height:5px}
+.graphHr>span{position:absolute;top:-7px;left:100%;padding-left:4px;width:100px}

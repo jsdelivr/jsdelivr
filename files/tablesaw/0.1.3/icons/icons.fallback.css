@@ -1,0 +1,18 @@
+.tablesaw-bar .tablesaw-columntoggle-btnwrap > a.btn,
+.icon-arrow-gray-down { background-image: url('png/arrow-gray-down.png'); background-repeat: no-repeat; }
+
+.tablesaw-bar .tablesaw-advance > .btn.left,
+.icon-arrow-gray-left { background-image: url('png/arrow-gray-left.png'); background-repeat: no-repeat; }
+
+.tablesaw-bar .tablesaw-advance > .btn.right,
+.icon-arrow-gray-right { background-image: url('png/arrow-gray-right.png'); background-repeat: no-repeat; }
+
+.tablesaw-bar .btn-selected.btn-checkbox:after,
+.icon-check { background-image: url('png/check.png'); background-repeat: no-repeat; }
+
+.tablesaw-sortable .sortable-head.sortable-ascending button:after,
+.icon-sort-ascending { background-image: url('png/sort-ascending.png'); background-repeat: no-repeat; }
+
+.tablesaw-sortable .sortable-head.sortable-descending button:after,
+.icon-sort-descending { background-image: url('png/sort-descending.png'); background-repeat: no-repeat; }
+

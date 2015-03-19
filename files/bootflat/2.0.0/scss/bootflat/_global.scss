@@ -1,0 +1,238 @@
+// Global Variables
+//------------------------------------------------------
+$modules:                     () !global;
+
+$experimental:                true !default;
+
+// prefix elements
+$prefix-webkit:               true !global;
+$prefix-moz:                  true !global;
+$prefix-spec:                 true !global;
+
+// color elements
+$white:                       #FFF !default;
+$black:                       #000 !default;
+
+$bluejeans-dark:              #4A89DC !default;
+$bluejeans-light:             #5D9CEC !default;
+
+$aqua-dark:                   #3BAFDA !default;
+$aqua-light:                  #4FC1E9 !default;
+
+$mint-dark:                   #37BC9B !default;
+$mint-light:                  #48CFAD !default;
+
+$grass-dark:                  #8CC152 !default;
+$grass-light:                 #A0D468 !default;
+
+$sunflower-dark:              #F6BB42 !default;
+$sunflower-light:             #FFCE54 !default;
+
+$bittersweet-dark:            #E9573F !default;
+$bittersweet-light:           #FC6E51 !default;
+
+$grapefruit-dark:             #DA4453 !default;
+$grapefruit-light:            #ED5565 !default;
+
+$lavander-dark:               #967ADC !default;
+$lavander-light:              #AC92EC !default;
+
+$pinkrose-dark:               #D770AD !default;
+$pinkrose-light:              #EC87C0 !default;
+
+$lightgray-dark:              #E6E9ED !default;
+$lightgray-light:             #F5F7FA !default;
+
+$mediumgray-dark:             #AAB2BD !default;
+$mediumgray-light:            #CCD1D9 !default;
+
+$darkgray-dark:               #434A54 !default;
+$darkgray-light:              #656D78 !default;
+
+// Global Mixins
+//------------------------------------------------------
+
+// We use this to loading scss files
+@mixin exports($name) {
+  @if (index($modules, $name) == false) {
+    $modules: append($modules, $name);
+    @content;
+  }
+}
+
+// We use this to do set opacity
+@mixin opacity($opacity:50, $filter: true) {
+	opacity: $opacity / 100;
+	@if $filter {
+		filter: alpha(opacity=$opacity);
+	}
+}
+
+// We use this to ellipsis text
+@mixin ellipsis($width: 100%) {
+  display: inline-block;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// We use this to add across browser prefixes
+@mixin prefixer($property, $value, $prefixes: webkit moz spec) {
+	@if $experimental {
+		@each $prefix in $prefixes {
+			@if $prefix != spec {
+				@if $property == border-top-left-radius and $prefix == moz {
+					@if $prefix-moz {
+						-moz-border-radius-topleft: $value;
+					}
+				} @else if $property == border-top-right-radius and $prefix == moz {
+					@if $prefix-moz {
+						-moz-border-radius-topright: $value;
+					}
+				} @else if $property == border-bottom-right-radius and $prefix == moz {
+					@if $prefix-moz {
+						-moz-border-radius-bottomright: $value;
+					}
+				} @else if $property == border-bottom-left-radius and $prefix == moz {
+					@if $prefix-moz {
+						-moz-border-radius-bottomleft: $value;
+					}
+				} @else {
+					@if $prefix == webkit {
+					  @if $prefix-webkit {
+					    -webkit-#{$property}: $value;
+					  }
+					}
+					@if $prefix == moz {
+					  @if $prefix-moz {
+					    -moz-#{$property}: $value;
+					  }
+					}
+				}
+			} @else {
+			  @if $prefix-spec {
+			    #{$property}: $value;
+			  }
+			}
+		}
+	}
+}
+
+// We use this to add box-sizing across browser prefixes
+@mixin box-sizing($value: border-box) {
+	@include prefixer($property: box-sizing, $value: $value, $prefixes: webkit moz spec);
+}
+
+// We use this to control border radius.
+@mixin radius($type: border-radius, $value: $global-radius) {	
+	@include prefixer($property: $type, $value: $value, $prefixes: webkit moz spec);	
+}
+
+// We use this to control box shadow.
+@mixin box-shadow($value) {
+	@include prefixer($property: box-shadow, $value: $value, $prefixes: webkit moz spec);		
+}
+// We use this to creat animation effect.
+// Examples:
+// @include keyframes(move-the-object) {
+//   0%   { left: 100px; }
+//   100% { left: 200px; }
+// }
+// .object-to-animate {
+//   @include animation(move-the-object .5s 1);
+// } 
+@mixin animation ($value...) {
+	@include prefixer($property: animation, $value: $value, $prefixes: webkit moz spec);
+}
+// Individual Animation Properties
+@mixin animation-name ($value...) {
+  	@include prefixer($property: animation-name, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-duration ($value...) {
+  	@include prefixer($property: animation-duration, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-timing-function ($value...) {
+	// ease | linear | ease-in | ease-out | ease-in-out
+  	@include prefixer($property: animation-timing-function, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-iteration-count ($value...) {
+	// infinite | <number>
+  	@include prefixer($property: animation-iteration-count, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-direction ($value...) {
+  	@include prefixer($property: animation-direction, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-play-state ($value...) {
+	// running | paused
+  	@include prefixer($property: animation-play-state, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-delay ($value...) {
+  	@include prefixer($property: animation-delay, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin animation-fill-mode ($value...) {
+	// none | forwards | backwards | both
+  	@include prefixer($property: animation-fill-mode, $value: $value, $prefixes: webkit moz spec);
+}
+@mixin keyframes($name) {
+	$original-prefix-webkit:    $prefix-webkit;
+	$original-prefix-moz:       $prefix-moz;
+	$original-prefix-spec:      $prefix-spec;
+
+	@if $original-prefix-webkit {
+		@include disable-prefix();
+		$prefix-webkit: true !global;
+	    @-webkit-keyframes #{$name} {
+	      @content;
+	    }
+	}
+	@if $original-prefix-moz {
+		@include disable-prefix();
+		$prefix-moz: true !global;
+	    @-moz-keyframes #{$name} {
+	      @content;
+	    }
+	}
+	@if $original-prefix-spec {
+		@include disable-prefix();
+		$prefix-spec: true !global;
+	    @keyframes #{$name} {
+	      @content;
+	    }
+	}
+
+	$prefix-webkit:       $original-prefix-webkit !global;
+	$prefix-moz:          $original-prefix-moz !global;
+	$prefix-spec:         $original-prefix-spec !global;
+}
+
+// We use this to set transform.
+@mixin transform($value: none) {
+	//  none | <transform-function>
+  	@include prefixer($property: transform, $value: $value, $prefixes: webkit moz spec);
+}
+
+@mixin transform-origin($value: 50%) {
+	// x-axis - left | center | right  | length | %
+	// y-axis - top  | center | bottom | length | %
+	// z-axis -                          length
+  	@include prefixer($property: transform-origin, $value: $value, $prefixes: webkit moz spec);
+}
+
+@mixin transform-style ($value: flat) {
+  	@include prefixer($property: transform-style, $value: $value, $prefixes: webkit moz spec);
+}
+
+// We use this to set transition.
+// example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
+
+@mixin transition ($value...) {
+	@if length($value) >= 1 {
+	@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+	} @else {
+	$value: all 0.15s ease-out 0s;
+		@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+	}
+}

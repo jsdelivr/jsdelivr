@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "polymer",
+  "repo": "polymer/polymer",
+  "files": {
+    "include": ["polymer.js", "polymer.js.map"]
+  }
+}

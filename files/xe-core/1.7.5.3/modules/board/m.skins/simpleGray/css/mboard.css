@@ -1,0 +1,542 @@
+@charset "utf-8";
+/* Mobile XE */
+/*csslint unqualified-attributes:false, display-property-grouping:false, universal-selector:false, font-sizes:false*/
+body {
+	margin: 0;
+	background: #fff;
+	color: #000;
+	word-wrap: break-word;
+}
+body,
+input,
+textarea,
+select,
+button,
+table {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+img {
+	border: 0;
+}
+em {
+	font-style: normal;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+form ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+form li {
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px dashed #999;
+}
+form li:last-child {
+	border: 0;
+}
+form p {
+	margin: 0;
+}
+form p.help {
+	color: #666;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+input,
+textarea,
+select {
+	font-size: 16px;
+}
+button {
+	font-size: 12px;
+	cursor: pointer;
+	background: #eee;
+	border: 1px solid #666;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	overflow: visible;
+	padding: 3px;
+	text-shadow: 1px 1px 0 #fff;
+	-moz-box-shadow: 0 0 2px #666;
+	-webkit-box-shadow: 0 0 2px #666;
+	box-shadow: 0 0 2px #666;
+	text-decoration: none;
+	font-weight: normal;
+}
+select {
+	width: 90%;
+}
+/* Common Class */
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cb {
+	clear: both;
+}
+.al {
+	text-align: left;
+}
+.ar {
+	text-align: right;
+}
+.ac {
+	text-align: center;
+}
+.itx {
+	border: 1px solid #ccc;
+	width: 90%;
+	font-size: 20px;
+	height: 30px;
+	padding: 5px 10px;
+}
+.itxx {
+	border: 1px solid #ccc;
+	width: 90%;
+	font-size: 20px;
+	padding: 5px 10px;
+	resize: vertical;
+}
+.db {
+	display: block;
+}
+.di {
+	display: inline;
+}
+.fb {
+	font-weight: bold;
+}
+.fn {
+	font-weight: normal;
+}
+.sn {
+	margin: 10px;
+	zoom: 1;
+}
+.sn:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wn {
+	background: #f00;
+	color: #fff;
+	padding: 10px;
+	margin: 0;
+}
+.mm {
+	text-align: left;
+	width: 100%;
+	background: #f4f4f4;
+	border: 1px solid #6c0;
+	border-top-color: #660;
+	border-left-color: #660;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.mm strong {
+	font-size: 20px;
+}
+/* Read */
+.rd .hx {
+	padding: 10px;
+	background: #ddd;
+	border: 1px solid #ccc;
+	border-left: 0;
+	border-right: 0;
+	text-shadow: 1px 1px #fff;
+}
+.rd .hx h2 {
+	display: inline;
+	font-size: 20px;
+}
+.rd .hx em,.rd .hx span {
+	font-size: 12px;
+	color: #666;
+}
+.rd .hx span {
+	padding: 0 0 0 10px;
+	border-left: 1px solid #ccc;
+}
+.rd .hx a {
+	color: #000;
+}
+.rd .co {
+	margin: 10px;
+	word-break: break-word;
+	overflow: hidden;
+}
+.rd .tg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 0;
+	text-align: right;
+	top: 0;
+	left: 0;
+	font-size: 12px;
+	margin: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.rd .tgo {
+	display: none;
+}
+.rd .tgo.open {
+	display: block;
+}
+.rd .tgo a {
+	color: #333;
+}
+/* Reply */
+.rp {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.rp ul {
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+.rp li {
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+	overflow: hidden;
+}
+.rp li li {
+	border-bottom: 0;
+	border-left: 1px solid #ccc;
+}
+.rp li:last-child {
+	border-bottom: 0;
+}
+.rp p {
+	display: inline;
+}
+.rp em,.rp span {
+	color: #666;
+	font-size: 12px;
+}
+.rp span,.rp .md {
+	padding: 0 0 0 5px;
+	border-left: 1px solid #ccc;
+}
+.rp em a {
+	text-decoration: none;
+}
+.rp .md {
+	font-size: 12px;
+}
+/* List */
+.lt,.lt ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.lt li {
+	border-bottom: 1px solid #999;
+}
+.lt li:last-child {
+	border: 0;
+}
+.lt .notice {
+	background: #000;
+	color: #fff;
+	padding: 0 3px;
+}
+.lt a {
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	color: #000;
+	zoom: 1;
+}
+.lt a:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.lt a:visited {
+	color: #666;
+}
+.lt .title span {
+	color: #f60;
+}
+.lt .titlex {
+	display: block;
+	padding: 10px;
+	color: #000;
+}
+.lt .auth {
+	font-size: 12px;
+	color: #666;
+}
+.lt .auth em {
+	margin: 0 5px 0 0;
+	border-left: 1px solid #ccc;
+	padding: 0 0 0 5px;
+}
+.lt .auth span {
+	border-left: 1px solid #ccc;
+	padding: 0 0 0 5px;
+}
+.lt .th {
+	float: left;
+	margin: 0 10px 5px 0;
+	border: 1px solid #ccc;
+	background: #afafaf;
+	color: #efefef;
+	text-align: center;
+	line-height: 80px;
+	width: 80px;
+	height: 80px;
+	font-size: 14px;
+}
+.lt p {
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+	color: #666;
+}
+.lt p a {
+	display: inline;
+	padding: 0;
+	text-decoration: underline;
+}
+.lt p a:after {
+	display: none;
+}
+.lt em {
+	color: #f60;
+}
+/* Pagenation */
+.pn {
+	padding: 10px 0;
+	text-align: center;
+	border-top: 1px solid #999;
+	font-size: 12px;
+}
+.pn a,.pn strong {
+	padding: 5px 10px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	background: #f8f8f8;
+	color: #333;
+}
+.pn a:visited {
+	color: #666;
+}
+.pn strong {
+	border: 0;
+	background: none;
+}
+/* Body */
+.bd {
+	position: relative;
+	overflow: hidden;
+	clear: both;
+}
+.bd .h2 {
+	font-size: 20px;
+	background: #ccc;
+	border: 1px solid #aaa;
+}
+.bd .h3 {
+	font-size: 16px;
+	background: #eee;
+	border: 1px solid #ccc;
+}
+.bd .h2,.bd .h3 {
+	position: relative;
+	margin: -1px 0;
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-left: 0;
+	border-right: 0;
+	text-shadow: 1px 1px #fff;
+}
+.bd .h2 em,.bd .h3 em {
+	font-weight: normal;
+	color: #f60;
+	font-size: 12px;
+}
+.bd .h2 a,.bd .h3 a {
+	color: #000;
+}
+.bd .h2 .bn {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	font-size: 12px;
+	margin: 0;
+}
+/* Context */
+.cm {
+	margin: 0;
+	padding: 10px;
+	background: #777;
+	color: #fff;
+	text-align: center;
+	list-style: none;
+	border-top: 1px solid #555;
+	zoom: 1;
+}
+.cm:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.cm .fl {
+	margin: 0 5px 0 0;
+}
+.cm .fr {
+	margin: 0 0 0 5px;
+}
+/* Button */
+.bn {
+	display: inline-block;
+	padding: 5px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	border: 1px solid #333;
+	background: #eee;
+	color: #000;
+	text-shadow: 1px 1px 0 #fff;
+	-moz-box-shadow: 0 0 3px #333;
+	-webkit-box-shadow: 0 0 3px #333;
+	box-shadow: 0 0 3px #333;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+/* GNB */
+.gn,.gn ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.gn li {
+	margin: -1px 0;
+	border: 1px solid #999;
+	border-left: 0;
+	border-right: 0;
+	vertical-align: top;
+}
+.gn li a {
+	display: block;
+	text-decoration: none;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 10px;
+	color: #000;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.gn li a em {
+	font-weight: normal;
+	color: #f60;
+	font-size: 12px;
+}
+.gn li a:visited {
+	color: #666;
+}
+.gn li li a {
+	padding: 0 10px 0 20px;
+}
+.gn li li li a {
+	padding: 0 10px 0 30px;
+}
+.gn li li li li a {
+	padding: 0 10px 0 50px;
+}
+/* Extension Vars */
+.xv {
+	background: #eee;
+	border: 1px solid #999;
+	padding: 10px;
+}
+.xv dt {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.xv dd {
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #666;
+}
+.exvar input[type=text],
+.exvar input[type=email],
+.exvar input[type=url],
+.exvar input[type=search] {
+	border: 1px solid #ccc;
+	font-size: 20px;
+	height: 30px;
+	padding: 5px 10px;
+}
+.exvar input[type=text].text {
+	width: 90%;
+}
+.exvar input[type=email].email_address {
+	width: 90%;
+}
+.exvar input[type=url].address {
+	width: 70%;
+}
+.exvar textarea {
+	border: 1px solid #ccc;
+	width: 90%;
+	font-size: 20px;
+	padding: 5px 10px;
+	height: 200px;
+	resize: vertical;
+}
+.exvar li {
+	border: 0;
+	display: inline;
+	margin-right:  10px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 5px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	border: 1px solid #333;
+	background: #eee;
+	color: #000;
+	text-shadow: 1px 1px 0 #fff;
+	-moz-box-shadow: 0 0 3px #333;
+	-webkit-box-shadow: 0 0 3px #333;
+	box-shadow: 0 0 3px #333;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+.rd .origin {
+	padding: 10px;
+	margin: 10px 10px 20px 10px;
+	background: #ddd;
+}

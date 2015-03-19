@@ -1,0 +1,92 @@
+/* Shutter */
+#shNavBar a {
+color: #aaf; /* colour for the text buttons */
+text-decoration: none;
+}
+#shNavBar a:hover {
+color: #fff; /* highlight colour for the text buttons */
+}
+#shDisplay div#shTitle {
+font: normal 12px/17px 'Lucida Grande', Verdana, sans-serif; /* caption font */
+color: #ffffff; /* caption colour */
+text-align: center;
+margin: 0 auto;
+}
+div#shNavBar {
+font: normal 12px/12px 'Lucida Grande', Verdana, sans-serif; /* font for text buttons and image numbers */
+color: #999; /* colour for the image numbers */
+position: fixed;
+left: 0;
+bottom: 0;
+background-color: #2e2e2e;
+width: 100%;
+padding: 4px 0 5px;
+text-align: center;
+cursor: pointer;
+z-index: 1011;
+}
+body {
+height: 100%;
+}
+#shShutter *, #shDisplay * {
+padding: 0;
+margin: 0;
+}
+div#shShutter, div#shDisplay {
+top: 0;
+left: 0;
+width: 100%;
+position: absolute;
+}
+div#shShutter {
+height: 100%;
+z-index: 1000;
+background-color: #000000;
+opacity: 0.8;
+filter:alpha(opacity=80);
+}
+div#shDisplay {
+display: block;
+background-color: transparent;
+z-index: 1002;
+}
+div#shDisplay img#shTopImg {
+margin: 0 auto;
+border: 1px solid #555;
+background: transparent;
+display: block;
+max-width: none;
+max-height: none;
+}
+div#shDisplay div#shWrap {
+visibility: hidden;
+}
+div#shWaitBar {
+position: absolute;
+width: 100px;
+left: 50%;
+margin-left: -50px;
+margin-top: 120px;
+}
+#shWaitBar img {
+border: 0;
+}
+#fullSize {
+display: none;
+}
+#shNavBar img {
+border: 0;
+vertical-align: middle;
+margin: 0 2px;
+opacity: 0.6;
+filter: alpha(opacity=60);
+}
+#shNavBar img:hover {
+opacity: 0.999;
+filter: alpha(opacity=100);
+}
+* html div#shNavBar {
+_position: absolute;
+_top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight : document.body.scrollTop+document.body.clientHeight-this.clientHeight);
+_left: expression(eval(document.compatMode&&document.compatMode=='CSS1Compat') ? document.documentElement.scrollLeft : document.body.scrollLeft);
+}

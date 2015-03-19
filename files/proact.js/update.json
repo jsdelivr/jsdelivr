@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "proact.js",
+  "repo": "proactjs/proactjs",
+  "files": {
+    "basePath": "dist/js",
+    "include": ["proact.min.js"]
+  }
+}

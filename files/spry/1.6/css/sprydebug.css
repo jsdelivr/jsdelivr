@@ -1,0 +1,214 @@
+#debugdiv{
+	border: 1px solid black;
+	position: absolute;
+	top: 10px;
+	left: 600px;
+	width: 600px;
+	z-index: 9999;
+	background-color: white;
+	font-family: Lucida Grande, Tahoma, sans-serif;
+	font-size: 12px;
+}
+#debugIframe{
+	position: absolute;
+	top: 10px;
+	left: 600px;
+	width: 600px;
+	z-index: 9998;
+	filter:alpha(opacity=0.1);
+}
+#textdiv{
+	width: 100%;
+	height: 484px;
+	overflow: auto;
+}
+#headdiv{
+	background-color:#000088;
+	width:100%;
+	height:17px;
+	cursor:move;
+	overflow:hidden;
+}
+#closediv, #maximdiv, #cleardiv, #invdiv{
+	background-color: #D6D3CE;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #000000;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-left:4px;
+	width: 10px;
+	height: 7px;
+	float:right;
+	color: #000000;
+	cursor:pointer;
+	font-family: Lucida Grande, Tahoma, sans-serif;
+	font-size:11px;
+	margin-left: 1px;
+	margin-top:1px;
+	line-height:4px;
+}
+#closediv{
+	margin-right:2px;
+	line-height:4px;
+}
+#maximdiv{
+	padding-left:0px;
+}
+#maximdiv div{
+	border: 1px solid black;
+	border-top: 2px solid black;
+	width: 4px;
+	height: 4px;
+	margin-left: 2px;
+}
+#cleardiv{
+	width: 29px;
+	line-height: 4px;
+	text-align: center;
+}
+#invdiv{
+	line-height: 4px;
+}
+#consolediv{
+	border-top: 1px solid red;
+	margin:0px;
+	padding: 0px;
+}
+#debugForm{
+	margin:0px;
+	padding:0px;
+}
+#debugtext{
+	width: 99.4%;
+	margin: 0px;
+	padding: 0px;
+}
+#submitform{
+	width: 1px;
+	height: 1px;
+	background-color:white;
+	visibility:hidden;
+	margin:0px;
+	padding:0px;
+}
+#debuggersuggestions{
+	width: 99%;
+	border: 1px solid blue;
+	height: 100px;
+	overflow: auto;
+	display:none;
+	position: relative;
+}
+
+#highlighterTop, #highlighterRight, #highlighterBottom, #highlighterLeft{
+	position:absolute;
+	height: 0px;
+	width: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+#highlighterTop{
+	height: 1px;
+	border-top: 1px solid red;
+}
+#highlighterRight{
+	width: 1px;
+	border-right: 1px solid red;
+}
+#highlighterBottom{
+	height: 1px;
+	border-bottom: 1px solid red;
+}
+#highlighterLeft{
+	width: 1px;
+	border-left: 1px solid red;
+}
+#debugdiv.maximized{
+	width: 99%;
+	height: 94%;
+}
+#debugdiv.maximized #textdiv{
+	width: 100%;
+	height: 80%;
+}
+.debuggersuggest{
+	width:95%;
+}
+.varlabel{
+	background-color: #DDDDDD;
+	width: 20%;
+	float: left;
+}
+.varvalue{
+	padding: 0px;
+	margin: 0px;
+	width: 75%;
+	float: left;
+	border-right: 0px;
+}
+.varvalue pre{
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+	border: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	font-family: "Courier New", Courier, monospace;
+	font-size:1em;
+}
+.error .varlabel{
+	color: red;
+	height: 70px;
+}
+.varlabel.computed{
+	color:#FF3333;
+}
+.objectlabel{
+	color: #555;
+}
+.dumptable{
+	margin-right:2px;
+	margin-left:2px;
+	font-family: Lucida Grande, Tahoma, sans-serif;
+	font-size:12px;
+	color: black;
+}
+.dumptable div{
+	vertical-align: top;
+	text-align: left;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.hidedump{
+	display: none;
+}
+.urldump{
+	font-family: Lucida Grande, Tahoma, sans-serif;
+	font-size: 12px;
+	color: black;
+}
+.specialvaluedump{
+	background-color:#dddddd;
+	color: white;
+	background-color: black;
+}
+.contenturldump{
+	border: 1px solid black;
+	display:none;
+	font-family: Lucida Grande, Tahoma, sans-serif;
+	font-size:12px;
+	color: black;
+}
+.commandExecResultsLabel{
+	color: blue;
+}
+.clear{
+	height: 1px;
+	clear:both;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}

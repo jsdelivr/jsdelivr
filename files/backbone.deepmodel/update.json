@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "backbone-deep-model",
+  "repo": "powmedia/backbone-deep-model",
+  "files": {
+    "basePath": "distribution/",
+    "include": ["deep-model.min.js"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "packageManager": "bower",
+  "name": "textAngular",
+  "repo": "fraywing/textAngular",
+  "files": {
+    "include": [
+      "src/textAngular.css",
+      "dist/*"
+    ]
+  }
+}

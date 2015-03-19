@@ -1,0 +1,122 @@
+// Variables
+//------------------------------------------------------
+$dropdown-background-color:               $darkgray-dark !default;
+$dropdown-background-color-hover:         $darkgray-light !default;
+
+$dropdown-normal:                         $mediumgray-dark !default;
+$dropdown-default:                        $white !default;
+
+$dropdown-padding:                        5px 20px !default;
+
+$dropdown-radius:                         4px !default;
+
+$dropdown-font-size:                      14px !default;
+$dropdown-font-color-dark:                $darkgray-dark !default;
+$dropdown-font-color-light:               $white !default;
+$dropdown-font-weight:                    700 !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("dropdown") {
+
+  /**
+   * dropdown-menu
+   * --------------------------------------------------
+   */
+  .dropdown-menu {
+      border: none;
+      background-color: $dropdown-background-color;
+
+      & .dropdown-header {
+          padding: $dropdown-padding;
+          font-size: $dropdown-font-size;
+          font-weight: $dropdown-font-weight;
+          color: $dropdown-normal;
+      }
+
+      & li a {
+          padding: $dropdown-padding;
+          color: $dropdown-font-color-light;
+      }
+      & li a:hover,
+      & li a:focus,
+      & .active a,
+      & .active a:hover,
+      & .active a:focus{
+          color: $dropdown-font-color-light;
+          background-color: $dropdown-background-color-hover;
+          outline: none;
+      }
+      & .disabled a,
+      & .disabled a:hover,
+      & .disabled a:focus {
+          color: $dropdown-background-color-hover;
+          cursor: default;
+      }
+      & .divider {
+          background-color: $dropdown-background-color-hover;
+          border-bottom: none;
+      }
+
+      @at-root .dropup & {
+          margin-bottom: 0;
+          @include radius($type: border-radius, $value: $dropdown-radius $dropdown-radius 0 0);
+      }
+  }
+  /**
+   * dropdown-submenu
+   * --------------------------------------------------
+   */
+  .dropdown-submenu {
+      position: relative;
+
+      & .dropdown-menu {
+          top: 0;
+          left: 100%;
+          margin-top: -6px;
+          margin-left: -1px;
+          @include radius($type: border-radius, $value: 0 4px 4px 4px);
+      }
+      &:hover .dropdown-menu {
+          display: block;
+      }
+      .dropup & .dropdown-menu {
+          top: auto;
+          bottom: 0;
+          margin-top: 0;
+          margin-bottom: -2px;
+          @include radius($type: border-radius, $value: 4px 4px 4px 0);
+      }
+      & > a:after {
+          display: block;
+          content: " ";
+          float: right;
+          width: 0;
+          height: 0;
+          border-color: transparent;
+          border-style: solid;
+          border-width: 5px 0 5px 5px;
+          border-left-color: $dropdown-default;
+          margin-top: 5px;
+          margin-right: -10px;
+      }
+      @at-root .dropdown-default & > a:after {
+          border-left-color: $dropdown-font-color-dark;
+      }
+      &:hover a:after {
+          border-left-color: $dropdown-default;
+      }
+      &.pull-left {
+          float: none;
+      }
+      &.pull-left .dropdown-menu {
+          left: -100%;
+          margin-left: 10px;
+          @include radius($type: border-radius, $value: 4px 0 4px 4px);
+      }
+  }
+
+}
+
+

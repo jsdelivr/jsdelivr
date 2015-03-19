@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MapBBCode Editor</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="//cdn.jsdelivr.net/mapbbcode-loader/1.2.0/MapBBCodeLoader.js"></script>
+<style>html, body, #edit, .leaflet-container { margin: 0; height: 100%; }</style>
+</head>
+<body>
+<div id="edit"></div>
+<script>
+<!--
+var lopt = mapBBCodeLoaderOptions;
+lopt.set(opener.mapBBCodeLoaderOptions);
+
+var path, lpath = lopt.path || '.', wpath = lopt.mapBBCodeOptions.windowPath;
+if( wpath.indexOf('/') < 0 )
+	wpath = './' + wpath;
+wpath = wpath.replace(/\/[^\/.]+\.[a-z]+$/, '/');
+if( lpath.substring(lpath.length - 1) !== '/' )
+	lpath += '/';
+if( wpath.substring(wpath.length - 1) !== '/' )
+	wpath += '/';
+lpath = lpath.replace(/(^|\/)\.\//g, '$1');
+wpath = wpath.replace(/(^|\/)\.\//g, '$1');
+
+if( lopt.pathInWindow )
+	path = lopt.pathInWindow;
+else if( lpath === wpath )
+	path = '';
+else if( /^([a-z]:)?\//.test(lpath) )
+	path = lpath;
+else if( /^([a-z]:)?\//.test(wpath) )
+	path = wpath;
+else {
+	// derive path from relative lopt.path and windowPath (does not expand '..')
+	var pathFrag = lpath.split('/'), wpathFrag = wpath.split('/'), i = 0, j;
+	while( pathFrag.length > 0 && pathFrag[pathFrag.length - 1] === '' )
+		pathFrag.pop();
+	while( wpathFrag.length > 0 && wpathFrag[wpathFrag.length - 1] === '' )
+		wpathFrag.pop();
+	while( i < pathFrag.length && i < wpathFrag.length && pathFrag[i] === wpathFrag[i] )
+		i++;
+	path = '';
+	for( j = i; j < wpathFrag.length; j++ )
+		path += '../';
+	for( j = i; j < pathFrag.length; j++ )
+		path += pathFrag[j] + '/';
+}
+
+lopt.set({
+	path: path,
+	force: true,
+	draw: true,
+	onload: function(mapBB) {
+		var stored = opener.storedMapBB;
+		mapBB.options.editorHeight = 0;
+		mapBB.options.editorCloseButtons = true;
+		mapBB.editor('edit', stored.bbcode, function(res) {
+			window.close();
+			if( stored.callback )
+				stored.callback.call(stored.context, res);
+			opener.storedMapBB = null;
+		}, this);
+	}
+});
+// -->
+</script>
+</body>
+</html>

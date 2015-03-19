@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.material-design",
+  "repo": "FezVrasta/bootstrap-material-design",
+  "files": {
+    "basePath": "dist/",
+	"exclude": ["test.html", "css/material.css", "css/material-wfont.css", "js/material.js", "js/ripples.js"]
+  }
+}

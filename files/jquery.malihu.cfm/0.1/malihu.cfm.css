@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* cursor following menu style */
+#cf_menu{position:absolute; display:inline-block; z-index:10; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; cursor:pointer; top:0; left:0; background:url(empty.gif);} /* stupid IE needs a background value */
+#cf_menu .container{position:relative; font-family:Arial, Helvetica, sans-serif; font-size:10px;}
+#cf_menu .title{position:relative; display:inline-block; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; background:#333; font-size:10px; text-transform:uppercase; text-decoration:none; margin:1px; color:#fff; padding:5px 8px;}
+#cf_menu ul{margin:0; padding:0; list-style:none; display:none;}
+#cf_menu ul li{margin:0; padding:0;}
+#cf_menu ul ul{margin:0 0 0 2px; padding:0; list-style:none; display:inline-block;}
+#cf_menu ul ul li{margin:0 2px 0 0; padding:0; display:inline-block;}
+#cf_menu a:link,#cf_menu a:visited{position:relative; display:inline-block; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; font-size:10px; text-transform:uppercase; text-decoration:none; margin:1px 1px 5px 1px; padding:5px 8px; border-bottom:1px solid #f33; border-right:1px solid #f33; color:#fff; background:#f33;}
+#cf_menu a:hover{background:#fff; color:#000; border-bottom:1px solid #000; border-right:1px solid #000;}
+#cf_menu ul ul a:link,#cf_menu ul ul a:visited{background:#333; color:#ddd; border-bottom:1px solid #333; border-right:1px solid #333;}
+#cf_menu ul ul a:hover{background:#fff; color:#000;}
+.cf_menu_transparency{filter:alpha(opacity=25); -moz-opacity:0.25; -khtml-opacity:0.25; opacity:0.25;} /* menu opacity */

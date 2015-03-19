@@ -1,0 +1,12 @@
+{
+    "obviel-forms": [
+        {
+            "locale": "en_US",
+            "url": null
+        },
+        {
+            "locale": "nl_NL",
+            "url": "obviel-forms-nl.json"
+        }
+    ]
+}

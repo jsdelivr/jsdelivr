@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.ttf')  format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: oblique;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.ttf')  format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: oblique;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.ttf')  format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.ttf')  format('truetype');
+  font-weight: 700;
+  font-style: oblique;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light.ttf')  format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Light-Oblique.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: oblique;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular.ttf')  format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Regular-Oblique.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: oblique;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold.ttf')  format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: cursive;
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.eot');
+  src: url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.woff') format('woff'),
+       url('//cdn.jsdelivr.net/comic-sans-replacer/1.1/fonts/ComicNeue-Bold-Oblique.ttf')  format('truetype');
+  font-weight: 700;
+  font-style: oblique;
+}

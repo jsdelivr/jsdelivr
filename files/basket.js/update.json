@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "basket.js",
+  "repo": "addyosmani/basket.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["basket.full.min.js", "basket.full.min.js.map", "basket.min.js", "basket.min.js.map"]
+  }
+}

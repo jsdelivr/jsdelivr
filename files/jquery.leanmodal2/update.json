@@ -1,0 +1,10 @@
+{
+	"packageManager": "github",
+	"name": "jQuery.leanModal2",
+	"repo": "eustasy/jQuery.leanModal2",
+	"files": {
+		"include": [
+			"jQuery.leanModal2.min.js"
+		]
+	}
+}

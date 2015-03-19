@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/**
+ * Styling for the FV Code Highlifhter options page.
+ *
+ * @author  Frank Verhoeven <info@frank-verhoeven.com>
+ * @version 1.1
+ */
+
+.fvch-options-page {
+    position: relative;
+}
+
+.fvch-support {
+    text-align: center;
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fvch-background-option {
+	float: left;
+}
+
+.fvch-background-example {
+	width: 100px;
+	height: 100px;
+	margin: 4px 20px 0 0;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+    display: block;
+    vertical-align: middle;
+}
+
+.fvch-background-example.fvch-notepaper {
+	background: url(../images/notepaper.png) top left repeat;
+}
+
+.fvch-background-example.fvch-white {
+	background: #fff;
+}
+.fvch-background-example.fvch-custom {
+    position: relative;
+}
+
+#fvch-colorpicker {
+     position: absolute;
+     top: 105px;
+     left: -1px;
+     background: #eee;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+     display: none;
+ }

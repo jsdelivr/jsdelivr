@@ -1,0 +1,13 @@
+#tooltip{
+	position:absolute;
+	width: 400px;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:2px 5px;
+	font-size:11px;
+	color:#333;
+	display:none;
+}
+.tooltip:hover {
+	cursor: help;
+}

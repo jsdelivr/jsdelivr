@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "smooth-scroll",
+  "repo": "cferdinandi/smooth-scroll",
+  "files": {
+    "basePath": "dist/js/",
+    "include": ["smooth-scroll.min.js"]
+  }
+}

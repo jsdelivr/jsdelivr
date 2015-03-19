@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinExtBd-Regular */@font-face {
+    font-family: 'LatoLatinExtBd';
+    src: url('LatoLatinExtBd-Regular.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinExtBd-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinExtBd-Regular.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinExtBd-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

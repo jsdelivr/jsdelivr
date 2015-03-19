@@ -1,0 +1,35 @@
+/* 
+    Document   : failsafe.css
+    Created on : 9 Aug, 2013
+    Author     : RAM
+    Description: For plugin styling
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+.fs-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:.6;filter:alpha(opacity=60);z-index:9999}
+.fs-container{position:fixed;width:100%;margin:60px auto;text-align:center;display:block;z-index:9999}
+.bar{width:30px;margin-left:10px;background-color:#fff;display:inline-block;vertical-align:bottom}
+.bar-1{height:20px}
+.bar-2{height:45px}
+.bar-3{height:65px}
+.bar-4{height:90px}
+.bar-5{height:120px}
+.fs-sep:after{margin:20px;content:"+";font-size:60px;color:#fff;display:block}
+.battery{width:300px;height:130px;padding:4px;-moz-border-radius:12px;-webkit-border-radius:12px;border-radius:12px;border:12px solid #fff;display:inline-block}
+.battery-charge{height:100%;width:100%;background-color:#F00;display:block}
+.battery-head{width:15px;height:60px;background-color:#fff;border-radius:0 50px 50px 0;-moz-border-radius:0 50px 50px 0;-webkit-border-radius:0 50px 50px 0;vertical-align:240%;display:inline-block}
+.fs-msg{margin-top:20px;font-family:'Lato',Calibri,Arial,sans-serif;font-weight:300;font-size:32px;color:#fff}
+/*For Responsiveness*/
+@media (min-width:32.438em) and (max-width: 38.688em) {
+    .bar{width:20px;margin-left:5px}
+    .fs-sep:after{margin:10px;content:"+";font-size:30px}
+    .battery{width:200px;height:80px;}
+    .battery-head{width:8px;height:35px;padding:3px;vertical-align:170%}
+    .fs-msg{font-size:18px}
+}
+@media (max-width: 32.438em) {
+    .bar{width:15px;margin-left:3px}
+    .fs-sep:after{margin:10px;content:"+";font-size:20px}
+    .battery{width:120px;height:50px;padding:2px;border-width:8px;}
+    .battery-head{width:8px;height:20px;vertical-align:120%}
+    .fs-msg{font-size:13px}
+}

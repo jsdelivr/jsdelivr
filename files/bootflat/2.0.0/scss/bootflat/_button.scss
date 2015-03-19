@@ -1,0 +1,205 @@
+// Variables
+//------------------------------------------------------
+$button-normal:                  $mediumgray-dark !default;
+$button-default:                 $white !default;
+$button-primary:                 $aqua-dark !default;
+$button-success:                 $grass-dark !default;
+$button-danger:                  $grapefruit-dark !default;
+$button-warning:                 $sunflower-dark !default;
+$button-info:                    $mint-dark !default;
+
+$button-normal-hover:            $mediumgray-light !default;
+$button-default-hover:           $button-default !default;
+$button-primary-hover:           $aqua-light !default;
+$button-success-hover:           $grass-light !default;
+$button-danger-hover:            $grapefruit-light !default;
+$button-warning-hover:           $sunflower-light !default;
+$button-info-hover:              $mint-light !default;
+
+$button-font-color-dark:         $darkgray-dark !default;
+$button-font-color-light:        $white !default;
+
+$button-opacity:                 45 !default;
+$button-shaodw:                  inset 0 1px 2px rgba(0, 0, 0, .125) !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("button") {
+
+  /**
+   * button
+   * --------------------------------------------------
+   */
+  .btn {
+    color: $button-font-color-light;
+
+    &,
+    &.disabled, 
+    &[disabled] {
+        border-color: $button-normal;
+        background-color: $button-normal;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $button-font-color-light;
+        border-color: $button-normal-hover;
+        background-color: $button-normal-hover; 
+        outline: none !important;     
+    }
+    &:active,
+    &.active {
+        @include box-shadow($value: $button-shaodw);
+    }
+    &.disabled, 
+    &[disabled] {
+        @include opacity($opacity: $button-opacity, $filter: true);
+    }
+
+    @at-root #{&}-link {
+      &,
+      &:hover, 
+      &:focus, 
+      &:active, 
+      &.active,
+      &.disabled,
+      &[disabled] {
+          border-color: transparent;
+          background-color: transparent;
+          color: $button-primary;
+          @include box-shadow($value: none);
+      }
+      &:hover, 
+      &:focus {
+          text-decoration: underline;
+      }
+    }
+
+    @at-root #{&}-default {
+        color: $button-font-color-dark;
+        border-color: $button-normal !important; 
+
+        &:hover, 
+        &:focus,
+        &:active, 
+        &.active {
+            border-color: $button-normal-hover;
+            background-color: $button-normal-hover;           
+        } 
+        &,
+        &.disabled,
+        &[disabled] {
+            background-color: $button-default;
+        }
+    }
+    @at-root .open .dropdown-toggle#{&}-default {
+        border-color: $button-normal-hover;
+        background-color: $button-normal-hover;      
+    }
+
+    @at-root #{&}-primary {
+      &, 
+      &:active, 
+      &.active,
+      &.disabled,
+      &[disabled] {
+          border-color: $button-primary;
+          background-color: $button-primary;    
+      }
+      &:hover, 
+      &:focus {
+          border-color: $button-primary-hover;
+          background-color: $button-primary-hover;         
+      }
+    }
+    @at-root .open .dropdown-toggle#{&}-primary {
+        border-color: $button-primary-hover;
+        background-color: $button-primary-hover;      
+    }
+
+    @at-root #{&}-info {
+      &, 
+      &:active, 
+      &.active, 
+      &.disabled,
+      &[disabled] {
+          border-color: $button-info;
+          background-color: $button-info;    
+      }
+      &:hover, 
+      &:focus {
+          border-color: $button-info-hover;
+          background-color: $button-info-hover;           
+      }
+    }
+    @at-root .open .dropdown-toggle#{&}-info {
+        border-color: $button-info-hover;
+        background-color: $button-info-hover;      
+    }
+
+    @at-root #{&}-success {
+      &, 
+      &:active, 
+      &.active, 
+      &.disabled,
+      &[disabled] {
+          border-color: $button-success;
+          background-color: $button-success;    
+      }
+      &:hover, 
+      &:focus {
+          border-color: $button-success-hover;
+          background-color: $button-success-hover;           
+      }
+    }
+    @at-root .open .dropdown-toggle#{&}-success {
+        border-color: $button-success-hover;
+        background-color: $button-success-hover;      
+    }
+
+    @at-root #{&}-warning {
+      &, 
+      &:active, 
+      &.active, 
+      &.disabled,
+      &[disabled] {
+          border-color: $button-warning;
+          background-color: $button-warning;    
+      }
+      &:hover, 
+      &:focus {
+          border-color: $button-warning-hover;
+          background-color: $button-warning-hover;          
+      }
+    }
+    @at-root .open .dropdown-toggle#{&}-warning {
+        border-color: $button-warning-hover;
+        background-color: $button-warning-hover;      
+    }
+
+    @at-root #{&}-danger {
+      &, 
+      &:active, 
+      &.active, 
+      &.disabled,
+      &[disabled],
+      .open .dropdown-toggle#{&} {
+          border-color: $button-danger;
+          background-color: $button-danger;    
+      }
+      &:hover, 
+      &:focus {
+          border-color: $button-danger-hover;
+          background-color: $button-danger-hover;           
+      }
+    }
+    @at-root .open .dropdown-toggle#{&}-danger {
+        border-color: $button-danger-hover;
+        background-color: $button-danger-hover;      
+    }
+  }
+}
+
+

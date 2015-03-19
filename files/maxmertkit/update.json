@@ -1,0 +1,10 @@
+{
+  "packageManager": "bower",
+  "name": "maxmertkit",
+  "repo": "maxmert/maxmertkit",
+  "files": {
+    "basePath": "build",
+    "include": ["css/maxmertkit.css", "css/maxmertkit.min.css", "js/maxmertkit.js", "js/maxmertkit.min.js"],
+    "exclude": ["css/maxmertkit.gzip.css", "js/maxmertkit.gzip.js"]
+  }
+}

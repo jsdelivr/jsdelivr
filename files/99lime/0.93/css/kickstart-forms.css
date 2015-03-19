@@ -1,0 +1,426 @@
+/*---------------------------------
+	FORMS
+-----------------------------------*/
+form{
+padding:0;
+margin:0;
+}
+
+fieldset{
+margin:30px 0 20px 0;
+padding:5px 15px 15px 15px;
+border:1px solid #ccc;
+background:#f5f5f5;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+position: relative;
+top:0;
+left:0;
+}
+
+	legend{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #ccc;
+	background:#f5f5f5;
+	padding:2px 10px;
+	margin:0 0 0 0;
+	display:block;
+	position: relative;
+	top:0;
+	left:0;
+	}
+	
+	/*IE ONLY - I know, this is a stop gap*/
+	.msie fieldset{padding-top:25px;}
+	.msie legend{position:absolute;top:-0.7em;left:10px;}
+
+label{
+display:inline-block;
+*display:inline;
+vertical-align: middle;
+margin:0;
+padding:0;
+position:relative;
+top:0;
+left:0;
+zoom:1;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+	label.inline{
+	display:inline;
+	margin:0;
+	}
+	
+	label span{
+	color:#999;
+	font-size:0.9em;
+	}
+	
+	label span.right{
+	position:absolute;
+	bottom:0;
+	right:0;
+	text-align:right;
+	display:inline-block;
+	*display:inline;
+	}
+	
+	label.disabled{
+	color:#ccc;
+	}
+
+input{
+display:inline-block;
+*display:inline;
+vertical-align: middle;
+width:auto;
+zoom:1;
+margin:0;
+border:1px solid #ccc;
+font-size:1em;
+padding:5px 0;
+text-indent: 5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+background:#fff;
+-moz-box-shadow:inset 0px 0px 6px #ccc;
+-webkit-box-shadow:inset 0px 1px 6px #ccc;
+box-shadow:inset 0px 1px 6px #ccc;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+	input::-webkit-input-placeholder,
+	input:-moz-placeholder,
+	.placeholder{
+	color:#bbb;
+	}
+	
+	input::-moz-focus-inner {border:0;}
+
+	input[disabled="disabled"], input.disabled{
+	color:#999;
+	background:#f5f5f5;
+	-moz-box-shadow:inset 0px 0px 2px #ddd;
+	-webkit-box-shadow:inset 0px 1px 2px #ddd;
+	box-shadow:inset 0px 1px 2px #ddd;
+	}
+	
+	/* FOCUS STATES */
+	input[type="text"]:focus,
+	textarea:focus,
+	button:focus,
+	a.button:focus,
+	select:focus,
+	input[type="file"]:focus,
+	input[type="password"]:focus,
+	.rte-editor:focus,
+	textarea.rte:focus{
+	-webkit-box-shadow: 0 0 7px #6DB9FF;
+	-moz-box-shadow   : 0 0 7px #6DB9FF;
+	box-shadow        : 0 0 7px #6DB9FF;
+	border: 1px solid #50B1FE;
+	outline: none;
+	}
+	
+	/* TRANSITION */
+	input[type="text"],
+	textarea,
+	button,
+	a.button,
+	a,
+	input[type="file"]{
+	-moz-transition: -moz-box-shadow 0.5s, border 0.5s, background 0.5s;
+	-webkit-transition: -webkit-box-shadow 0.5s, border 0.5s, background 0.5s;
+	-o-transition:  box-shadow 0.5s, border 0.5s, background 0.5s;
+	transition: box-shadow 0.5s, border 0.5s, background 0.5s;
+	}
+
+input.checkbox,
+input[type="checkbox"]{
+display:inline;
+width:auto;
+margin:0;
+padding:0;
+border:0;
+background:none;
+vertical-align:center;
+*vertical-align: top;
+}
+
+input.radio,
+input[type="radio"]{
+display:inline;
+width:auto;
+margin:0;
+padding:0;
+border:0;
+background:none;
+vertical-align:center;
+*vertical-align: top;
+}
+
+	input[type="radio"]:focus,
+	input[ type="checkbox"]:focus{
+	-webkit-box-shadow: 0 0 5px #6DB9FF;
+	-moz-box-shadow   : 0 0 5px #6DB9FF;
+	box-shadow        : 0 0 5px #6DB9FF;
+	outline-color: #6DB9FF;
+	}
+
+input.file,
+input[type="file"]{
+/*font-size:0.8em;*/
+-moz-box-shadow:none;
+-webkit-box-shadow:none;
+box-shadow:none;
+border:none;
+}
+
+select{
+display:inline;
+width:auto;
+margin:0;
+line-height:100%;
+padding:3px;
+vertical-align: middle;
+}
+
+textarea{
+width:auto;
+height:200px;
+margin:0;
+border:1px solid #ccc;
+padding:5px;
+vertical-align: middle;
+font-family:inherit;
+font-size:0.9em;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+-moz-box-shadow:inset 0px 0px 6px #ccc;
+-webkit-box-shadow:inset 0px 1px 6px #ccc;
+box-shadow:inset 0px 1px 6px #ccc;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*---------------------------------
+	RTE
+-----------------------------------*/
+.rte-wrap{
+width:100%;
+position:relative;
+top:0;
+left:0;
+margin:0 0 10px 0;
+}
+
+.rte-toolbar{
+border:1px solid #ccc;
+border-bottom:0;
+background:#f5f5f5;
+z-index:50;
+position: relative;
+top:0;
+left:0;
+}
+
+	.rte-toolbar ul{
+	margin:0;
+	padding:0;
+	display:inline;
+	float:left;
+	}
+	
+	.rte-toolbar li{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	float:left;
+	display:block;
+	}
+	
+	.rte-toolbar li.html-toggle{
+	position:absolute;
+	top:-16px;
+	right:-1px;
+	font-size:10px;
+	line-height:100%;
+	width:auto;
+	}
+	
+	.rte-toolbar li.html-toggle a{
+	background:#efefef;
+	border:1px solid #ddd;
+	border-bottom:1px solid #ccc;
+	width:auto;
+	padding:2px;
+	line-height:100%;
+	}
+	
+	.rte-toolbar li a{
+	display:block;
+	float:left;
+	padding:0;
+	/*border-right:1px solid #ddd;
+	border-left:1px solid #fff;
+	border-top:1px solid #fff;*/
+	width:20px;
+	height:20px;
+	text-align:center;
+	text-decoration:none;
+	color:inherit;
+	color:#777;
+	text-shadow:0px 1px 0px #fff;
+	}
+	
+	a.rte-bold			{background:url(img/rte/text_bold.png) no-repeat center center;}
+	a.rte-italic		{background:url(img/rte/text_italic.png) no-repeat center center;}
+	a.rte-ul			{background:url(img/rte/text_list_bullets.png) no-repeat center center;}
+	a.rte-ol			{background:url(img/rte/text_list_numbers.png) no-repeat center center;}
+	a.rte-img			{background:url(img/rte/picture_empty.png) no-repeat center center;}
+	a.rte-link			{background:url(img/rte/link.png) no-repeat center center;}
+	a.rte-unlink		{background:url(img/rte/link_break.png) no-repeat center center;}
+	a.rte-justifyleft	{background:url(img/rte/text_align_left.png) no-repeat center center;}
+	a.rte-justifycenter	{background:url(img/rte/text_align_center.png) no-repeat center center;}
+	a.rte-justifyright	{background:url(img/rte/text_align_right.png) no-repeat center center;}
+	a.rte-sub			{background:url(img/rte/text_subscript.png) no-repeat center center;}
+	a.rte-sup			{background:url(img/rte/text_superscript.png) no-repeat center center;}
+	.rte-toolbar li a:hover{color:#333;background-color:#efefef;}
+	
+	/* show/hide tools */
+	.rte-wrap .rte-toolbar li{display:none;}
+	.rte-wrap.editmode .rte-toolbar li{display:block;}
+	.rte-wrap .rte-toolbar li.html-toggle,
+	.rte-wrap.editmode .rte-toolbar li.html-toggle{display:block;}
+
+	.rte-toolbar select.inline{
+	float:left;
+	display:inline;
+	width:50px;
+	height:17px;
+	margin:1px 3px 0 1px;
+	bordeR:1px solid #ccc;
+	}
+
+textarea.rte,
+.rte-editor{
+width:100%;
+margin:0;
+border:1px solid #ccc;
+background:#fff;
+padding:5px;
+overflow:auto;
+vertical-align: middle;
+font-family:inherit;
+font-size:0.9em;
+-moz-border-radius-topleft:0px;
+-moz-border-radius-topright:0px;
+-webkit-border-top-left-radius:0px;
+-webkit-border-top-right-radius:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+-moz-border-radius-bottomleft:5px;
+-moz-border-radius-bottomright:5px;
+-webkit-border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+-moz-box-shadow:inset 0px 0px 6px #ccc;
+-webkit-box-shadow:inset 0px 1px 6px #ccc;
+box-shadow:inset 0px 1px 6px #ccc;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+z-index:40;
+}
+
+textarea.rte{
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+font-size:0.9em;
+}
+
+.rte-editor ul li,
+.rte-editor ol li{
+padding:0;
+}
+
+/*---------------------------------
+	COLUMN SIZES
+-----------------------------------*/
+
+/* sizes */
+input[class*="col_"]{
+float:none;display:inline-block;*display:inline;margin-bottom:0;
+*margin-left: 0.5%;*margin-right: 0.5%;/* this is for IE 7 Only and is not a good fix - work needed here */
+}
+
+label[class*="col_"]{
+float:none;display:inline-block;*display:inline;margin-bottom:0;
+*margin-left: 0.5%;*margin-right: 0.5%;/* this is for IE 7 Only and is not a good fix - work needed here */
+}
+
+/*---------------------------------
+	FORMS VERTICAL
+-----------------------------------*/
+form.vertical{
+
+}
+
+	form.vertical label{display:block;}
+	form.vertical input,
+	form.vertical select,
+	form.vertical textarea{width:100%;display:block;margin-bottom:10px;}
+	form.vertical .chzn-container{display:block;margin-bottom:10px;}
+	form.vertical .chzn-choices{display:block;margin-bottom:10px;}
+	
+	/* radios & checks */
+	form.vertical input.checkbox,
+	form.vertical input[type="checkbox"],
+	form.vertical input.radio,
+	form.vertical input[type="radio"],
+	form.vertical label.inline{display:inline;width:auto;margin:0;}
+/*---------------------------------
+	FORM VALIDATION
+-----------------------------------*/
+label.error{color:red;}
+input.error{border:1px solid red;}
+
+/*---------------------------------
+	NOTICES
+-----------------------------------*/
+.notice{
+border:1px solid gold;
+background:lightyellow;
+padding:10px 20px 10px 40px;
+margin:10px 0;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+color:#DEAE00;
+line-height:120%;
+vertical-align: center;
+text-shadow:0px 1px rgba(255,255,255,0.5);
+position:relative;
+top:0;
+left:0;
+clear:both;
+}
+
+	.notice.warning{}/*default*/
+	.notice.error{border:1px solid red;background:pink;color:red;}
+	.notice.success{border:1px solid green;background:lightgreen;color:green;}
+	.notice .icon{position:absolute;top:50%;left:7px;margin-top:-0.4em;}
+	.notice a.icon.close,
+	.notice a.icon.close:active,
+	.notice a.icon.close:visited{font-size:12px;position:absolute;top:5px;right:5px;left:auto;color:inherit;margin-top:0;left:auto;}

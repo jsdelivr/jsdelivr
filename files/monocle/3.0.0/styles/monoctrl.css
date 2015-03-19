@@ -1,0 +1,165 @@
+/*===========================================================================
+  CONTROLS
+
+  The standard Monocle stylesheet for the optional Monocle controls. See
+  comments for monocore.css, which apply here too.
+---------------------------------------------------------------------------*/
+
+/* Contents */
+
+div.monelem_controls_contents_container {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  left: 12.5%;
+  top: 12.5%;
+  background: #EEE;
+  border: 2px solid #F7F7F7;
+  border-radius: 9px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+}
+
+ol.monelem_controls_contents_list {
+  margin: 6px;
+  padding: 0;
+}
+
+li.monelem_controls_contents_chapter {
+  list-style: none;
+  line-height: 220%;
+  padding-left: 1em;
+  padding-right: 2em;
+  border-bottom: 2px groove #FEFEFE;
+  cursor: pointer;
+}
+
+li.monelem_controls_contents_chapter_active {
+  background: #999;
+  color: white;
+}
+
+/* Magnifier */
+
+.monelem_controls_magnifier_button {
+  cursor: pointer;
+  color: #555;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  padding: 0 2px;
+}
+
+.monelem_controls_magnifier_a {
+  font-size: 11px;
+}
+
+.monelem_controls_magnifier_A {
+  font-size: 18px;
+  opacity: 0.3;
+}
+
+
+/* Spinner */
+
+.monelem_controls_spinner_anim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* Scrubber */
+
+div.monelem_controls_scrubber_container {
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 4px;
+  height: 30px;
+  background: rgba(255,255,255,0.8);
+}
+
+div.monelem_controls_scrubber_track {
+  margin-top: 10px;
+  height: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+div.monelem_controls_scrubber_needle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  background: #CCC;
+  border: 1px solid #999;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+div.monelem_controls_scrubber_trail {
+  position: absolute;
+  background: #DDD;
+  top: 11px;
+  left: 1px;
+  height: 5px;
+}
+
+div.monelem_controls_scrubber_bubble {
+  display: none;
+  position: absolute;
+  padding: 1em;
+  min-width: 20%;
+  max-width: 30%;
+  bottom: 2.5em;
+  background: rgba(0, 0, 0, 0.9);
+  color: #CCC;
+  font: bold 12px Lucida Grande, Tahoma, Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+
+/* Stencil */
+div.monelem_controls_stencil_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.monelem_controls_stencil_mask {
+  display: block;
+  position: absolute;
+}
+
+div.monelem_controls_stencil_highlighted .monelem_controls_stencil_mask {
+  background: rgba(0,0,255,0.15);
+}
+
+
+/*===========================================================================
+  DATA URIs
+
+  These are data-uri packed images, inlined for loading speed and simplicity.
+  Placed at the end of this file because they're visually noisy...
+---------------------------------------------------------------------------*/
+
+div.monelem_controls_spinner_anim {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA0CAMAAAANBM47AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABV0RVh0Q3JlYXRpb24gVGltZQAxNy81LzEwnOhoKAAAAE5QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxKKmWQAAABp0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBl0wLilAAAC8klEQVQYGZXBB2LjOAADQFCimtVFEoD//9HLbrJxipzoZoBToYptUwV8V/Xrsc8RP6i7aduPXHI69mWIAR9UY6Is5rnCuTBsWXeLkijbTFOLf7okW6R8zxEnwphskfIrifJdW4u/RtlpbGLsdjoHfDNkSZTSNg192w3jchSJEtcawCRzDvgjLPINX1SbSSvNXcC7eNuLXpQuTFbp8CZkH/isyS68H0PAF+0iUzxoNni33HPAR51UxDHgRLObslLEw3TPFT7oKPqIeOImURs+WJ0CHlqKXgLOxL4NgyRqxbuqeMNDXURPOBNWSokquRRP+GeVOzwcLlpwJmx3WVJuY2ZRi1ezfOBhdNGGU52ZhrloBzqSucKLerdLxLtIKlc4Nd9LA6wuNTC5aAbQZzs3eFhE9Tg3mw2wqkQgHCZrTJK3iIcoasMTvXX0E30EAK2k+Wbrho8mky2eCLslSz3+2ERKucVHIZsbnqp2WWXEX60ossMnrakeP+jGocabg9SGzyaXHHDRpOIO/zRjDWCTNlzVsLjFm4bODapE33BZoke8mVy8oqXY4rLNXvFmEnXDKJYaly3SjlchkSOwiCngstFMeDXLE4CVygGX3e6FawUgzFIKANbiHHDZ7U4qL7c5SWzxYqFywGXjvVD3F3Zu8ccs5gqXzeYx7CTTWOOvnmTEZZu0ItSxrvAmZrrHZYme8dkhLbiqLkUDPlvMA1cNIiM+613Y4KJNSviiprTgmrrQM75arVzhkllUxFetqBlXVEXa8d0hMeKCxVSH73rRG37XidpxZlXRiN9UhYUtztRFVI+fhUPFE851KlSHn4TNxTueGU2yx3PVbipVeGpxIaeAJ2IynRv8YHEp3iNOjRRdGvxotGjONb7pD7M4RfyiK6ZclhYf1bdDprRW+FW9SZSUlqGtq1BVTTftRaKce1zS7bIpWyW/oK0i38tU4apupWyRsijKVhoj/o+6W45cJEoqaR+bgP8txH5a1nUZ2gq/+Q/51T5MhuG3fQAAAABJRU5ErkJggg==);
+}

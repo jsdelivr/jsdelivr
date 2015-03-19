@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "zeroclipboard",
+  "repo": "zeroclipboard/ZeroClipboard",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ZeroClipboard.Core.min.js", "ZeroClipboard.Core.min.map", "ZeroClipboard.js", "ZeroClipboard.min.js", "ZeroClipboard.min.map", "ZeroClipboard.swf"]
+  }
+}

@@ -1,0 +1,11 @@
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Regular.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,114 @@
+/*! #######################################################################
+
+	HeadShrinker v1.0.2
+	--------
+	
+	To be used with jquery.headshrinker.js by Chris Wharton (https://github.com/weare2ndfloor/HeadShrinker)
+
+####################################################################### */
+
+
+/* 
+
+	The body class of "headshrinker" is added when the plugin is active 
+
+	We also add a class of "headshrunk" onto the cloned header in case you want to overwrite CSS specifically	
+	
+*/
+
+.headshrinker .headshrunk {
+	background: #fff;
+}
+
+.headshrinker .headshrunk nav ul li a {
+	color: #34485d;
+}
+
+.headshrinker .headshrunk nav ul li a:hover {
+	color: #3498db;
+}
+
+.headshrinker .headshrunk a.headshrinker-reveal {
+	width: 44px;
+	height: 44px;
+	background: #f7f7f7;
+	display: inline-block;
+	position: absolute;
+	top: 12px;
+	right: 20px;
+}
+
+.headshrinker .headshrunk a.headshrinker-reveal.hs-reveal-left {
+	right: auto;
+	left: 20px;
+}
+
+.headshrinker .headshrunk a.headshrinker-reveal span {
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+	background: #000;
+	height: 4px;
+	margin-top: 13px !important;
+	margin-bottom: -10px !important;
+	border-radius: 50px;
+}
+
+.headshrinker .headshrunk .headshrinker-menu {
+	position: absolute;
+	left: 0;
+	overflow-y: scroll;
+	max-height: 500px;
+}
+
+.headshrinker .headshrunk .headshrinker-menu {
+	display: block;
+	width: 100%;
+	text-align: left;	
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul, .headshrinker .headshrunk .headshrinker-menu li  {
+	display: block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.headshrinker .headshrunk .headshrinker-menu a {
+	display: block;
+	background: #fff;
+	padding: 10px 20px !important;
+	border-bottom: 1px solid #efefef;
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul ul a {
+	padding-left: 40px !important;
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul ul ul a {
+	padding-left: 60px !important;
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul ul ul ul a {
+	padding-left: 80px !important;
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul ul ul ul ul a {
+	padding-left: 100px !important;
+}
+
+.headshrinker .headshrunk .headshrinker-menu ul li a.headshrinker-expand {
+	width: 26px;
+	height: 26px;
+	border: none !important;
+	padding: 7px !important;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	font-weight: 700;
+	background: none !important;
+	font-size: 20px;
+}

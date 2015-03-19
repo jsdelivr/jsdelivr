@@ -1,0 +1,51 @@
+.login_black { margin:0; padding:0; border:2px solid #515151; width:196px; position:relative; _padding-top:2px; display:block; }
+*:first-child+html body#black .login_black { padding-top:2px;}
+.login_black legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+.login_black form { position:relative; border:1px solid #6b6b6b; padding:11px 11px 7px 11px; width:172px;}
+.login_black form .idpwWrap { overflow:hidden; clear:both; width:172px;}
+.login_black form .idpw { float:left; width:110px;}
+.login_black form .idpw input { border:1px solid #6b6b6b; color:#cbcbcb; width:105px; background:#515151; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma;}
+.login_black form .login { float:right;}
+
+.login_black form p.securitySignIn { clear:both; padding:0 0 0 18px; margin:4px 0 0 0; }
+.login_black form p.noneSSL { background:url("../images/none_ssl.png") no-repeat left top; }
+.login_black form p.SSL { background:url("../images/ssl.png") no-repeat left top; }
+.login_black form p.noneSSL a { color:#BF6801; text-decoration:none; }
+.login_black form p.SSL a { color:#9CAC74; text-decoration:none; }
+
+.login_black form p.save { margin:0; clear:both; padding:.3em 0;}
+.login_black form p.save input { vertical-align:middle; _margin:-3px;}
+*:first-child+html body#black .login_black form p input { margin:-3px; }
+.login_black form p.save label { font:.9em; color:#818181;}
+.login_black form ul.help { margin:0; border-top:1px solid #515151; overflow:hidden; padding:.5em 0 0 0; white-space:nowrap; list-style:none;}
+.login_black form ul.help li { list-style:none; float:left; display:block; padding:0 3px 0 7px; background:url(../images/black/vrType1.gif) no-repeat left center;}
+.login_black form ul.help li.first-child { background:none; padding-left:0;}
+.login_black form ul.help li a { color:#818181; font:.9em; white-space:nowrap; text-decoration:none;}
+.login_black form ul.help li a:hover { text-decoration:underline;}
+.login_black form ul.help li.first-child a { color:#cbcbcb;}
+.login_black form .userName { margin:0; position:relative; width:172px; overflow:hidden; border-bottom:1px solid #515151; padding:0 0 6px 0; margin-top:-5px;}
+.login_black form .userName strong { color:#cbcbcb; padding:4px 0 0 2px; font:bold .9em Tahoma;}
+.login_black form .userName a { position:relative; right:0px; }
+.login_black form .userName img { border:none; }
+.login_black form ul.userMenu { margin:0; position:relative; padding:0 0 6px 4px; overflow:hidden; margin-top:10px;}
+.login_black form ul.userMenu li { list-style:none; color:#cbcbcb; list-style:none;padding-left:10px; background:url(../images/black/bulletFF1A00.gif) no-repeat left 4px; margin-bottom:5px;}
+.login_black form ul.userMenu li a { color:#cbcbcb;text-decoration:none;}
+.login_black form ul.userMenu li a:hover {text-decoration:underline;}
+.login_black form p.latestLogin { margin:0; color:#818181; font:.9em;}
+.login_black form p.latestLogin span { font:1em Tahoma;}
+
+img.login_mask { width:201px; height:5px; background:#3d3d3d; display:block;}
+
+.openid_login_black { padding:0; margin:0; border:2px solid #515151; width:196px; position:relative; _padding-top:2px; display:block;}
+*:first-child+html body#black .openid_login_black { padding-top:2px;}
+.openid_login_black legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+.openid_login_black form { position:relative; border:1px solid #6b6b6b; padding:11px 11px 7px 11px; width:172px;}
+.openid_login_black form .idpwWrap { overflow:hidden; clear:both; width:172px;}
+.openid_login_black form .idpw { float:left;}
+.openid_login_black form .idpw p { margin:0; padding:0; margin-bottom:5px; background: url(../images/openid_login_bg.gif) left no-repeat; padding-left:18px; font-size:.9em Tahoma;color:#999999}
+.openid_login_black form .idpw input { border:1px solid #6b6b6b; color:#cbcbcb; width:105px; background:#515151; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma;}
+.openid_login_black form .login { float:right;}
+.openid_login_black form p.save { margin:0; padding:0; clear:both; padding:.3em 0;}
+.openid_login_black form p.save input { vertical-align:middle; _margin:-3px;}
+*:first-child+html body .openid_login_black form p input { margin:-3px; }
+.openid_login_black form p.save label { font:.9em; color:#818181;}

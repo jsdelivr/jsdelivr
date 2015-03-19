@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "classjs",
+	"repo": "atmajs/classjs",
+	"files": {
+		"basePath": "lib/",
+		"include": ["class.min.js", "class.min.js.map"]
+	}
+}

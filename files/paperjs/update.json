@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "paperjs",
+  "repo": "paperjs/paper.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

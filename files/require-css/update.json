@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "require-css",
+  "repo": "guybedford/require-css",
+  "files": {
+    "basePath": "/",
+    "include": ["css.min.js"]
+  }
+}

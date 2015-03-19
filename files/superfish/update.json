@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "superfish",
+  "repo": "joeldbirch/superfish",
+  "files": {
+    "basePath": "dist/",
+	"include": ["./js/*.js", "./css/*.css"],
+	"exclude": ["./js/jquery.js"]
+  }
+}

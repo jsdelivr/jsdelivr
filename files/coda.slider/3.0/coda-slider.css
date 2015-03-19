@@ -1,0 +1,369 @@
+/***********************************************************************
+	jQuery Coda-Slider v3.0 - kevinbatdorf.github.com/codaslider
+	Copyright (c) 2012 Kevin Batdorf
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+************************************************************************/
+/********************************************
+SASS stylesheet.
+
+No idea what CSS preprocessing is all about? No problem... just use the style.css file instead.
+If you want to learn more, check out this article by Chris Coyier
+
+css-tricks.com/musings-on-preprocessing/
+
+********************************************/
+/* line 18, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /* Eric Meyer's reset http://meyerweb.com/eric/tools/css/ */
+  /*******************************************************
+  *
+  * Most common stuff you'll need to change 
+  * will be below this line.
+  *
+  ********************************************************/
+  /******************************************************
+  * 
+  * Main wrapper padding 
+  *
+  *******************************************************/
+  padding: 20px 0;
+}
+/* line 21, ../sass/coda-slider.scss */
+.coda-slider-wrapper div, .coda-slider-wrapper span, .coda-slider-wrapper applet, .coda-slider-wrapper object, .coda-slider-wrapper iframe, .coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6, .coda-slider-wrapper p, .coda-slider-wrapper blockquote, .coda-slider-wrapper pre, .coda-slider-wrapper a, .coda-slider-wrapper abbr, .coda-slider-wrapper acronym, .coda-slider-wrapper address, .coda-slider-wrapper big, .coda-slider-wrapper cite, .coda-slider-wrapper code, .coda-slider-wrapper del, .coda-slider-wrapper dfn, .coda-slider-wrapper em, .coda-slider-wrapper font, .coda-slider-wrapper img, .coda-slider-wrapper ins, .coda-slider-wrapper kbd, .coda-slider-wrapper q, .coda-slider-wrapper s, .coda-slider-wrapper samp, .coda-slider-wrapper small, .coda-slider-wrapper strike, .coda-slider-wrapper strong, .coda-slider-wrapper sub, .coda-slider-wrapper sup, .coda-slider-wrapper tt, .coda-slider-wrapper var, .coda-slider-wrapper b, .coda-slider-wrapper u, .coda-slider-wrapper i, .coda-slider-wrapper center, .coda-slider-wrapper dl, .coda-slider-wrapper dt, .coda-slider-wrapper dd, .coda-slider-wrapper ol, .coda-slider-wrapper ul, .coda-slider-wrapper li, .coda-slider-wrapper fieldset, .coda-slider-wrapper form, .coda-slider-wrapper label, .coda-slider-wrapper legend, .coda-slider-wrapper table, .coda-slider-wrapper caption, .coda-slider-wrapper tbody, .coda-slider-wrapper tfoot, .coda-slider-wrapper thead, .coda-slider-wrapper tr, .coda-slider-wrapper th, .coda-slider-wrapper td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* line 21, ../sass/coda-slider.scss */
+.coda-slider-wrapper body {
+  line-height: 1;
+}
+/* line 21, ../sass/coda-slider.scss */
+.coda-slider-wrapper ol, .coda-slider-wrapper ul {
+  list-style: none;
+}
+/* line 21, ../sass/coda-slider.scss */
+.coda-slider-wrapper blockquote, .coda-slider-wrapper q {
+  quotes: none;
+}
+/* line 21, ../sass/coda-slider.scss */
+.coda-slider-wrapper blockquote:before, .coda-slider-wrapper blockquote:after, .coda-slider-wrapper q:before, .coda-slider-wrapper q:after {
+  content: '';
+  content: none;
+}
+/* line 37, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider {
+  /******************************************************
+  * 
+  * Inner wrapper styles 
+  *
+  *******************************************************/
+  background: #f2f2f2;
+  /******************************************************
+  * 
+  * Width of the container. Typically you will want to 
+  * match this with the width of the panel as well. 
+  *
+  *******************************************************/
+  width: 700px;
+}
+/* line 54, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider .panel {
+  /******************************************************
+  * 
+  * Width of each individual panel. 
+  * Typically you will want to match this with the width 
+  * of the container as well. 
+  *
+  *******************************************************/
+  width: 700px;
+}
+/* line 64, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider .panel .panel-wrapper {
+  /******************************************************
+  * 
+  * Panel wrapper styles 
+  *
+  *******************************************************/
+  padding: 20px;
+}
+/* line 75, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav {
+  /******************************************************
+  * 
+  * Tab styles 
+  *
+  *******************************************************/
+}
+/* line 82, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav .current {
+  /******************************************************
+  * 
+  * Current tab styles 
+  *
+  *******************************************************/
+  background: #0090ff;
+}
+/* line 91, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav a {
+  /******************************************************
+  * 
+  * Tab styles 
+  *
+  *******************************************************/
+  background: #000;
+  color: #fff;
+  margin-right: 1px;
+  padding: 3px 6px;
+}
+/* line 103, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav a:hover {
+  /******************************************************
+  * 
+  * Tab styles 
+  *
+  *******************************************************/
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+/* line 115, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-right {
+  /******************************************************
+  * 
+  * Arrow Styles 
+  *
+  *******************************************************/
+}
+/* line 122, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left a, .coda-slider-wrapper .coda-nav-right a {
+  /******************************************************
+  * 
+  * Arrow Styles 
+  *
+  *******************************************************/
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  width: 100px;
+}
+/* line 135, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left-arrow {
+  /******************************************************
+  * 
+  * Graphical arrow styles 
+  *
+  *******************************************************/
+  width: 25px;
+  height: 25px;
+  background: url(../img/arrow.png) no-repeat top left;
+  margin-top: 50px;
+}
+/* line 146, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left-arrow:hover {
+  /************************************************
+  * 
+  * Graphical arrows hover
+  *
+  *************************************************/
+  background: url(../img/arrow.png) no-repeat bottom left;
+}
+/* line 155, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left-arrow:active {
+  /************************************************
+  * 
+  * Graphical arrows 
+  *
+  *************************************************/
+  margin-top: 55px;
+}
+/* line 165, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-right-arrow {
+  /******************************************************
+  * 
+  * Graphical arrow styles 
+  *
+  *******************************************************/
+  width: 25px;
+  height: 25px;
+  background: url(../img/arrow.png) no-repeat top right;
+  margin-top: 50px;
+}
+/* line 176, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-right-arrow:hover {
+  /************************************************
+  * 
+  * Graphical arrows hover
+  *
+  *************************************************/
+  background: url(../img/arrow.png) no-repeat bottom right;
+}
+/* line 185, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-right-arrow:active {
+  /************************************************
+  * 
+  * Graphical arrows 
+  *
+  *************************************************/
+  margin-top: 55px;
+}
+/* line 195, ../sass/coda-slider.scss */
+.coda-slider-wrapper .loading {
+  /******************************************************
+  * 
+  * Style for preloader 
+  *
+  *******************************************************/
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* line 207, ../sass/coda-slider.scss */
+.arrows .coda-slider {
+  /******************************************************
+  * 
+  * Margin between slider and arrows 
+  *
+  *******************************************************/
+  margin: 0 10px;
+}
+
+/**********************************************************************
+*
+* Don't change anything below here unless you know what you're doing 
+*
+***********************************************************************/
+/* line 223, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /************************************************
+  * 
+  * Wrapper styles 
+  *
+  *************************************************/
+  clear: both;
+  overflow: auto;
+}
+/* line 232, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider {
+  /************************************************
+  * 
+  * slider styles 
+  *
+  *************************************************/
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+/* line 242, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider .panel-container {
+  /************************************************
+  * 
+  * Panel container styles 
+  *
+  *************************************************/
+  position: relative;
+}
+/* line 250, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-slider .panel-container .panel {
+  /************************************************
+  * 
+  * Panel styles 
+  *
+  *************************************************/
+  display: block;
+  float: left;
+}
+/* line 262, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav {
+  /************************************************
+  * 
+  * Navigation tabs 
+  *
+  *************************************************/
+}
+/* line 269, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav ul {
+  /************************************************
+  * 
+  * Navigation tabs 
+  *
+  *************************************************/
+  clear: both;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+/* line 280, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav ul li {
+  /************************************************
+  * 
+  * Navigation tabs 
+  *
+  *************************************************/
+  display: inline;
+}
+/* line 288, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav ul li a {
+  /************************************************
+  * 
+  * Navigation tabs 
+  *
+  *************************************************/
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+/* line 302, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left-arrow, .coda-slider-wrapper .coda-nav-right-arrow {
+  /************************************************
+  * 
+  * Graphical arrows 
+  *
+  *************************************************/
+  cursor: pointer;
+  float: left;
+}
+/* line 311, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left-arrow a, .coda-slider-wrapper .coda-nav-right-arrow a {
+  /************************************************
+  * 
+  * Graphical arrows 
+  *
+  *************************************************/
+  display: block;
+}
+/* line 321, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-right {
+  /************************************************
+  * 
+  * Html arrows 
+  *
+  *************************************************/
+  float: left;
+}
+/* line 328, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left a, .coda-slider-wrapper .coda-nav-right a {
+  /************************************************
+  * 
+  * Html arrow styles 
+  *
+  *************************************************/
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 340, ../sass/coda-slider.scss */
+.coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-left-arrow {
+  /************************************************
+  * 
+  * Html and graphical arrow styles 
+  *
+  *************************************************/
+  clear: both;
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "instafeed.js",
+  "repo": "stevenschobert/instafeed.js",
+  "files": {
+    "include": ["instafeed.min.js", "instafeed.js"]
+  }
+}

@@ -1,0 +1,57 @@
+/**
+ * jqPlot
+ * Pure JavaScript plotting plugin using jQuery
+ *
+ * Version: 1.0.0b2_r1012
+ *
+ * Copyright (c) 2009-2011 Chris Leonello
+ * jqPlot is currently available for use in all personal or commercial projects 
+ * under both the MIT (http://www.opensource.org/licenses/mit-license.php) and GPL 
+ * version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html) licenses. This means that you can 
+ * choose the license that best suits your project and use it accordingly. 
+ *
+ * Although not required, the author would appreciate an email letting him 
+ * know of any substantial use of jqPlot.  You can reach the author at: 
+ * chris at jqplot dot com or see http://www.jqplot.com/info.php .
+ *
+ * If you are feeling kind and generous, consider supporting the project by
+ * making a donation at: http://www.jqplot.com/donate.php .
+ *
+ * sprintf functions contained in jqplot.sprintf.js by Ash Searle:
+ *
+ *     version 2007.04.27
+ *     author Ash Searle
+ *     http://hexmen.com/blog/2007/03/printf-sprintf/
+ *     http://hexmen.com/js/sprintf.js
+ *     The author (Ash Searle) has placed this code in the public domain:
+ *     "This code is unrestricted: you are free to use it however you like."
+ *
+ * included jsDate library by Chris Leonello:
+ *
+ * Copyright (c) 2010-2011 Chris Leonello
+ *
+ * jsDate is currently available for use in all personal or commercial projects 
+ * under both the MIT and GPL version 2.0 licenses. This means that you can 
+ * choose the license that best suits your project and use it accordingly.
+ *
+ * jsDate borrows many concepts and ideas from the Date Instance 
+ * Methods by Ken Snyder along with some parts of Ken's actual code.
+ * 
+ * Ken's origianl Date Instance Methods and copyright notice:
+ * 
+ * Ken Snyder (ken d snyder at gmail dot com)
+ * 2008-09-10
+ * version 2.0.2 (http://kendsnyder.com/sandbox/date/)     
+ * Creative Commons Attribution License 3.0 (http://creativecommons.org/licenses/by/3.0/)
+ *
+ * jqplotToImage function based on Larry Siden's export-jqplot-to-png.js.
+ * Larry has generously given permission to adapt his code for inclusion
+ * into jqPlot.
+ *
+ * Larry's original code can be found here:
+ *
+ * https://github.com/lsiden/export-jqplot-to-png
+ * 
+ * 
+ */
+(function(c){c.jqplot.EnhancedLegendRenderer=function(){c.jqplot.TableLegendRenderer.call(this)};c.jqplot.EnhancedLegendRenderer.prototype=new c.jqplot.TableLegendRenderer();c.jqplot.EnhancedLegendRenderer.prototype.constructor=c.jqplot.EnhancedLegendRenderer;c.jqplot.EnhancedLegendRenderer.prototype.init=function(d){this.numberRows=null;this.numberColumns=null;this.seriesToggle="normal";this.disableIEFading=true;c.extend(true,this,d);if(this.seriesToggle){c.jqplot.postDrawHooks.push(b)}};c.jqplot.EnhancedLegendRenderer.prototype.draw=function(){var f=this;if(this.show){var q=this._series;var r;var v="position:absolute;";v+=(this.background)?"background:"+this.background+";":"";v+=(this.border)?"border:"+this.border+";":"";v+=(this.fontSize)?"font-size:"+this.fontSize+";":"";v+=(this.fontFamily)?"font-family:"+this.fontFamily+";":"";v+=(this.textColor)?"color:"+this.textColor+";":"";v+=(this.marginTop!=null)?"margin-top:"+this.marginTop+";":"";v+=(this.marginBottom!=null)?"margin-bottom:"+this.marginBottom+";":"";v+=(this.marginLeft!=null)?"margin-left:"+this.marginLeft+";":"";v+=(this.marginRight!=null)?"margin-right:"+this.marginRight+";":"";this._elem=c('<table class="jqplot-table-legend" style="'+v+'"></table>');if(this.seriesToggle){this._elem.css("z-index","3")}var A=false,p=false,d,n;if(this.numberRows){d=this.numberRows;if(!this.numberColumns){n=Math.ceil(q.length/d)}else{n=this.numberColumns}}else{if(this.numberColumns){n=this.numberColumns;d=Math.ceil(q.length/this.numberColumns)}else{d=q.length;n=1}}var z,x,e,l,k,m,o,t,h,g;var u=0;for(z=q.length-1;z>=0;z--){if(n==1&&q[z]._stack||q[z].renderer.constructor==c.jqplot.BezierCurveRenderer){p=true}}for(z=0;z<d;z++){e=c(document.createElement("tr"));e.addClass("jqplot-table-legend");if(p){e.prependTo(this._elem)}else{e.appendTo(this._elem)}for(x=0;x<n;x++){if(u<q.length&&q[u].show&&q[u].showLabel){r=q[u];m=this.labels[u]||r.label.toString();if(m){var w=r.color;if(!p){if(z>0){A=true}else{A=false}}else{if(z==d-1){A=false}else{A=true}}o=(A)?this.rowSpacing:"0";l=c(document.createElement("td"));l.addClass("jqplot-table-legend jqplot-table-legend-swatch");l.css({textAlign:"center",paddingTop:o});h=c(document.createElement("div"));h.addClass("jqplot-table-legend-swatch-outline");g=c(document.createElement("div"));g.addClass("jqplot-table-legend-swatch");g.css({backgroundColor:w,borderColor:w});l.append(h.append(g));k=c(document.createElement("td"));k.addClass("jqplot-table-legend jqplot-table-legend-label");k.css("paddingTop",o);if(this.escapeHtml){k.text(m)}else{k.html(m)}if(p){if(this.showLabels){k.prependTo(e)}if(this.showSwatches){l.prependTo(e)}}else{if(this.showSwatches){l.appendTo(e)}if(this.showLabels){k.appendTo(e)}}if(this.seriesToggle){var y;if(typeof(this.seriesToggle)=="string"||typeof(this.seriesToggle)=="number"){if(!c.jqplot.use_excanvas||!this.disableIEFading){y=this.seriesToggle}}if(this.showSwatches){l.bind("click",{series:r,speed:y},a);l.addClass("jqplot-seriesToggle")}if(this.showLabels){k.bind("click",{series:r,speed:y},a);k.addClass("jqplot-seriesToggle")}}A=true}}u++}l=k=h=g=null}}return this._elem};var a=function(d){d.data.series.toggleDisplay(d);if(d.data.series.canvas._elem.hasClass("jqplot-series-hidden")){c(this).addClass("jqplot-series-hidden");c(this).next(".jqplot-table-legend-label").addClass("jqplot-series-hidden");c(this).prev(".jqplot-table-legend-swatch").addClass("jqplot-series-hidden")}else{c(this).removeClass("jqplot-series-hidden");c(this).next(".jqplot-table-legend-label").removeClass("jqplot-series-hidden");c(this).prev(".jqplot-table-legend-swatch").removeClass("jqplot-series-hidden")}};var b=function(){if(this.legend.renderer.constructor==c.jqplot.EnhancedLegendRenderer&&this.legend.seriesToggle){var d=this.legend._elem.detach();this.eventCanvas._elem.after(d)}}})(jQuery);

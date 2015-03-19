@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+.ias_loader, .ias_trigger {
+	text-align:center;
+	margin: 30px 0 40px;
+}
+
+.ias_trigger a:link,
+.ias_trigger a:visited {
+    padding: 4px 50px;
+
+    background-color: #f9f9f9;
+    border: solid 1px #ddd;
+    border-radius: 2px;
+
+    font: bold 12px Arial, sans-serif;
+    color: #555;
+    text-decoration: none;
+}
+
+.ias_trigger a:hover,
+.ias_trigger a:active {
+    border-color: #ccc;
+}

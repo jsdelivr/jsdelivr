@@ -1,0 +1,25 @@
+/* HTML TAGS */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:20px;
+	background: #fff;
+	color:#333;
+}
+a {
+	color:#187076 !important;
+}
+h3 {
+	color:#00B3BE;
+	font-family:Georgia,Times,serif;
+	font-size:20px;
+	margin:10px 0;
+}
+
+/* OBJECTS */
+
+
+
+
+/* CLASSES */

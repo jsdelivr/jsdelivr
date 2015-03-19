@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinBlack-Italic */@font-face {
+    font-family: 'LatoLatinBlack';
+    src: url('LatoLatinBlack-Italic.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinBlack-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinBlack-Italic.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinBlack-Italic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
