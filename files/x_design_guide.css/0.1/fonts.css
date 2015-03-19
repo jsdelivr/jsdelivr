@@ -1,0 +1,22 @@
+@charset "utf-8"
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nanum Barun Gothic Light'), local('Nanum Barun Gothic'), local('NanumBarunGothic');
+  src: url('../webfont/NanumBarunGothic.eot');
+  src: url('../webfont/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+       url('../webfont/NanumBarunGothic.woff') format('woff'),
+       url('../webfont/NanumBarunGothic.otf') format('truetype');
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Nanum Barun Gothic Ultra Light'), local('Nanum Barun Gothic-Ultra Light'), local('NanumBarunGothic Ultra Light');
+  src: url('../webfont/NanumBarunGothicUltraLight.eot');
+  src: url('../webfont/NanumBarunGothicUltraLight.eot?#iefix') format('embedded-opentype'),
+       url('../webfont/NanumBarunGothicUltraLight.woff') format('woff'),
+       url('../webfont/NanumBarunGothicUltraLight.otf') format('truetype');
+}
