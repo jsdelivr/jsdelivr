@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "flat-ui",
+  "repo": "designmodo/Flat-UI",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["index.html"]
+  }
+}

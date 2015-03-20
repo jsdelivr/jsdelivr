@@ -1,5 +1,5 @@
 {
-  "packageManager": "bower",
+  "packageManager": "github",
   "name": "jquery.scrollTo",
   "repo": "flesler/jquery.scrollTo",
   "files": {
