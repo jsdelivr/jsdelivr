@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-data-schema",
+  "repo": "js-data/js-data-schema",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js-data-schema.min.js"]
+  }
+}
