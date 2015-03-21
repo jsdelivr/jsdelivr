@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "papaparse",
+  "repo": "nprapps/pym.js",
+  "files": {
+    "basePath": "dist"
+    "include": [ "pym.min.js" ]
+  }
+}
