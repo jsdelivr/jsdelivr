@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "open-dyslexic",
+  "repo": "TheTannerRyan/open-dyslexic",
+  "files": {
+  	"basePath": "",
+    "include": ["*.eot", "*.otf", "*.svg", "*.ttf", "*.woff"]
+  }
+}
