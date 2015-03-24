@@ -3,11 +3,6 @@
   "name": "XEIcon",
   "repo": "xpressengine/XEIcon",
   "files": {
-    "include": [
-      "xeicon.css",
-      "xeicon.min.css",
-      "./fonts/*",
-      "./ie7/*"
-    ]
+    "include": ["xeicon.css", "xeicon.min.css", "./fonts/*", "./ie7/*"]
   }
 }
