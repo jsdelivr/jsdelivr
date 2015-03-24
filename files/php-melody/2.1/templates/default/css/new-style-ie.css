@@ -1,0 +1,56 @@
+.row-fluid [class*="span"] {
+    min-height: 20px;
+}
+
+
+@media (min-width: 1200px) {
+    .row-fluid [class*="span"] {
+        min-height: 30px;
+    }
+}
+input {
+    font-family: Arial, Verdana, sans-serif !important;
+}
+img {
+	width: auto\9;	
+	height: auto\9;
+}
+.pm-ul-top-videos li {
+	width: 280px;
+}
+.pm-comment-avatar {
+	width: 40px;
+	height: 40px;
+	width: auto\9;
+}
+.pm-comment-avatar img {
+	width: 40px;
+    height: 40px;
+	width: auto\9;
+	padding: 2px;
+	display: inline-block;
+}
+.pm-img-avatar {
+	min-width: 40px;
+	min-height: 40px;
+}
+.pm-ad-zone {
+	display: block;	
+	max-width: 730px;
+	margin: 10px auto 0;
+	text-align:center;
+}
+
+#user-pane a.dropdown-toggle i {
+	left: 4px;
+	top: 0;
+	visibility: visible;
+	display: block;
+}
+
+ul.nav ul#ul_categories li:hover ul.hidden_li {
+	box-shadow: 0px 1px 2px #ddd;
+	-moz-box-shadow: 0px 1px 2px #ddd;
+	-webkit-box-shadow: 0px 1px 2px #ddd;
+	border: 1px solid #ddd;
+}
