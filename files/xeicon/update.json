@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "xeicon",
+  "repo": "xpressengine/XEIcon",
+  "files": {
+    "basePath": "/",
+    "include": ["xeicon.css", "xeicon.min.css", "./fonts/*", "./ie7/*"]
+  }
+}
