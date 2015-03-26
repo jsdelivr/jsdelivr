@@ -1,0 +1,229 @@
+/*   	The pretty sweet Textile CSS package, version 1.0, the Official First Release!
+	Fonts are all hand-picked.
+	Updated occasionally.
+	Enjoy.
+	Check out the official website @ [ http://textile.robertreed.us ]!
+
+===============================================================
+Additions to v1.0:
+	-Added Source Sans Pro
+	-Added Bree Serif
+	-Added Alegreya SC
+
+Fixes in v0.1.10:
+	- Fixed typo that did not allow of Oswald, weight 700
+===============================================================
+
+							*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Coustard:400,900|Damion|Quicksand:300,400,700|Bangers|Belgrano|Oswald:300,400,700|Oxygen:300,400,700|Patrick+Hand+SC|Lily+Script+One|Limelight|Raleway:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Rokkitt:400,700|Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Bree+Serif|Alegreya+SC:400,400italic,700,700italic,900,900italic);
+
+
+span {
+	font-style: normal;
+	clearfix: none;
+}
+
+
+span.lato {
+	font-family: 'Lato';
+}
+span.coustard {
+	font-family: 'Coustard';
+}
+span.damion {
+	font-family: 'Damion';
+}
+span.quicksand {
+	font-family: 'Quicksand';
+}
+span.bangers {
+	font-family: 'Bangers';
+}
+span.belgrano {
+	font-family: 'Belgrano';
+}
+span.oswald {
+	font-family: 'Oswald';
+}
+span.oxygen {
+	font-family: 'Oxygen';
+}
+span.patrick-hand-sc {
+	font-family: 'Patrick Hand SC';
+}
+span.lily-script-one {
+	font-family: 'Lily Script One';
+}
+span.limelight {
+	font-family: 'Limelight';
+}
+span.raleway {
+	font-family: 'Raleway';
+}
+span.open-sans {
+	font-family: 'Open Sans';
+}
+span.rokkitt {
+	font-family: 'Rokkitt';
+}
+span.source-sans-pro {
+	font-family: 'Source Sans Pro';
+}
+span.bree-serif {
+	font-family: 'Bree Serif';
+}
+span.alegreya-sc {
+	font-family: 'Alegreya SC';
+}
+
+
+span.w100 {
+	font-weight: 100;
+}
+span.w200 {
+	font-weight: 200;
+}
+span.w300 {
+	font-weight: 300;
+}
+span.w400 {
+	font-weight: 400;
+}
+span.w500 {
+	font-weight: 500;
+}
+span.w600 {
+	font-weight: 600;
+}
+span.w700 {
+	font-weight: 700;
+}
+span.w800 {
+	font-weight: 800;
+}
+span.w900 {
+	font-weight: 900;
+}
+
+
+span.biggest {
+	font-size: 100pt;
+}
+span.bigger {
+	font-size: 80pt;
+}
+span.big {
+	font-size: 65pt;
+}
+span.medium-big {
+	font-size: 50pt;
+}
+span.medium {
+	font-size: 40pt;
+}
+span.medium-small {
+	font-size: 33pt;
+}
+span.small {
+	font-size: 25pt;
+}
+span.smaller {
+	font-size: 20pt;
+}
+span.smallest {
+	font-size: 10pt;
+}
+
+
+span.biggest.shadow, span.bigger.shadow, span.big.shadow {
+	text-shadow: 3px 3px 3px #BBBBBB;
+	opacity: 0.8;
+	transparency: filter(alpha=80);
+}
+span.medium-big.shadow, span.medium.shadow, span.medium-small.shadow {
+	text-shadow: 2px 2px 2px #BBBBBB;
+	opacity: 0.9;
+	transparency: filter(alpha=90);
+}
+span.small.shadow, span.smaller.shadow, span.smallest.shadow {
+	text-shadow: 1px 1px 1px #BBBBBB;
+	opacity: 1.0;
+	transparency: filter(alpha=100);
+}
+span.lato.w100.shadow {
+	text-shadow: none;
+}
+span.lato.w200.shadow {
+	text-shadow: none;
+}
+
+
+span.black {
+	color: #000000;
+}
+span.grey {
+	color: #999999;
+}
+span.white {
+	color: #FFFFFF;
+}
+span.light-blue {
+	color: #00AAFF;
+}
+span.blue {
+	color: #007FAA;
+}
+span.dark-blue {
+	color: #00526E;
+}
+span.light-green {
+	color: #0AF0AF;
+}
+span.green {
+	color: #47C930;
+}
+span.dark-green {
+	color: #116E01;
+}
+span.light-red {
+	color: #F54949;
+}
+span.red {
+	color: #F22222;
+}
+span.darkred {
+	color: #A30D0D;
+}
+span.yellow {
+	color: #E3DD2B;
+}
+span.orange {
+	color: #FF7E0D;
+}
+span.teal {
+	color: #0DFF66;
+}
+span.indigo {
+	color: #A20DFF;
+}
+span.purple {
+	color: #E70DFF;
+}
+
+span.under {
+	text-decoration: underline;
+}
+span.strike {
+	text-decoration: line-through;
+}
+span.over {
+	text-decoration: overline;
+}
+span.bold {
+	font-weight: bolder;
+}
+span.italic {
+	font-style: italic;
+}

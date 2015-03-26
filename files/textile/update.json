@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "textile",
+	"repo": "robertclaytonreed/textile",
+	"files": {
+		"include": ["textile.css"]
+	}
+}
