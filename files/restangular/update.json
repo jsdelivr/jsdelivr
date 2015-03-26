@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "restangular",
+  "repo": "mgonto/restangular",
+  "files": {
+    "basePath": "dist/",
+	"include": ["restangular.js", "restangular.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "walkway",
+  "repo": "ConnorAtherton/walkway",
+  "files": {
+	"include": ["walkway.min.js"]
+  }
+}

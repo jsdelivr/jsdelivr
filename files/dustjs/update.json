@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "dustjs",
+  "repo": "linkedin/dustjs",
+  "files": {
+    "basePath": "dist/",
+	"exclude": ["LICENSE"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "laroux.js",
+  "repo": "larukedi/laroux.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["laroux.min.js","laroux.min.css", "./parts/*.min.js"]
+  }
+}

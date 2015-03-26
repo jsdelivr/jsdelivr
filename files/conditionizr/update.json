@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "conditionizr",
+  "repo": "conditionizr/conditionizr",
+  "files": {
+    "basePath": "dist/",
+    "include": ["conditionizr.min.js"]
+  }
+}

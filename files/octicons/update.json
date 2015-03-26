@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "octicons",
+  "repo": "github/octicons",
+  "files": {
+    "basePath": "octicons/",
+    "exclude": ["README.md"]
+  }
+}

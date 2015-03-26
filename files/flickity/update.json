@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "flickity",
+  "repo": "metafizzy/flickity",
+  "files": {
+    "basePath": "dist/",
+    "include": ["flickity.pkgd.min.js","flickity.min.css"]
+  }
+}

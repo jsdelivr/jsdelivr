@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.select",
+  "repo": "silviomoreto/bootstrap-select",
+  "files": {
+    "basePath": "dist/"
+  }
+}

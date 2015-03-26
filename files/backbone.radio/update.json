@@ -1,9 +1,8 @@
 {
   "packageManager": "github",
   "name": "backbone.radio",
-  "repo": "jmeas/backbone.radio",
+  "repo": "marionettejs/backbone.radio",
   "files": {
-    "basepath": "build/",
-    "include": ["backbone.radio.min.js", "backbone.radio.min.map"]
+    "basePath": "build/"
   }
 }

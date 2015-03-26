@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.waitforimages",
+  "repo": "alexanderdickson/waitForImages",
+  "files": {
+    "basePath": "dist/"
+  }
+}

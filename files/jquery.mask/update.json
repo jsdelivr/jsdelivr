@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery-Mask-Plugin",
+  "repo": "igorescobar/jQuery-Mask-Plugin",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

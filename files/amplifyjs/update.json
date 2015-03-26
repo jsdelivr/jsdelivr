@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "amplifyjs",
+  "repo": "appendto/amplify",
+  "files": {
+	"basePath": "lib/",
+    "include": ["*.min.js"]
+  }
+}

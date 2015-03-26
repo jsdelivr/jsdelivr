@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "menu-io",
+  "repo": "coderaiser/menu-io",
+  "files": {
+    "include": ["menu-io.min.js", "menu-io.min.css"]
+  }
+}

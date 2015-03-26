@@ -5,6 +5,7 @@
 *.pydevproject
 .project
 .metadata
+.idea/
 bin/
 tmp/
 *.tmp
@@ -195,7 +196,6 @@ $RECYCLE.BIN/
 dist/
 build/
 eggs/
-parts/
 var/
 sdist/
 develop-eggs/

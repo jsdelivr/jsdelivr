@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "odometer",
+  "repo": "HubSpot/odometer",
+  "files": {
+    "include": ["odometer.min.js", "odometer.js", "./themes/**/*"]
+  }
+}

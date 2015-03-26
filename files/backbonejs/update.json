@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "backbone",
+  "repo": "jashkenas/backbone",
+  "files": {
+    "include": ["backbone.js", "backbone-min.map", "backbone-min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.scrolldepth.js",
+  "repo": "robflaherty/jquery-scrolldepth",
+  "files": {
+    "include": ["jquery.scrolldepth.min.js"]
+  }
+}

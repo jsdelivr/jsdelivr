@@ -1,9 +1,9 @@
 {
   "packageManager": "github",
   "repo": "eragonj/trip.js",
-  "name": "Trip.js",
+  "name": "jquery.trip.js",
   "files": {
-	"basePath": "src/",
+    "basePath": "dist/",
     "include": ["trip.min.js", "trip.min.css"]
   }
 }

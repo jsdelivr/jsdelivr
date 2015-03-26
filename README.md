@@ -38,7 +38,7 @@ Downtime, timeouts or slow responses are simply unacceptable. The idea is not to
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers which results in best possible uptime and performance. We currently use [MaxCDN][7] and [CloudFlare][8].
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [KeyCDN][14].
 
 On top of CDN providers, jsDelivr also utilizes custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users near those locations.
 
@@ -195,7 +195,7 @@ As always it supports version aliasing and latest versions:
 
 Now if all files in the combination have a `.css` extension then the server will automatically respond with `Content-Type: text/css` header. In all other cases the server responds with `Content-Type: application/javascript` header.
 
-`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),fontawesome@4.0.3(css/font-awesome.min.css)`
+`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),animatecss@3.2.0`
 
 
 The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
@@ -257,15 +257,19 @@ These benchmarks are completely transparent to the user and do not impact on bro
 Our JS code is executed with a 2 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
 ```html
-<script type="text/javascript">
-(function(w, d) { var a = function() { var a = d.createElement('script'); a.type = 'text/javascript';
-a.async = 'async'; a.src = '//' + ((w.location.protocol === 'https:') ? 's3.amazonaws.com/cdx-radar/' :
-'radar.cedexis.com/') + '01-11475-radar10.min.js'; d.body.appendChild(a); };
-if (w.addEventListener) { w.addEventListener('load', a, false); }
-else if (w.attachEvent) { w.attachEvent('onload', a); }
-}(window, document));
-</script>
+<script>
+(function(a,b,c,d,e){function f(){var a=b.createElement("script");a.async=!0;
+a.src="//radar.cedexis.com/1/11475/radar.js";b.body.appendChild(a)}/\bMSIE 6/i
+.test(a.navigator.userAgent)||(a[c]?a[c](e,f,!1):a[d]&&a[d]("on"+e,f))})
+(window,document,"addEventListener","attachEvent","load");
+</script> 
 ```
+
+Alternatively you can also include it in a /g/ combined URL. Simply add `jsdelivr-rum` at the end to include our javascript. For example:
+
+`http://cdn.jsdelivr.net/g/jquery@2.1,jsdelivr-rum`
+
+
 [Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
 
 
@@ -281,4 +285,5 @@ else if (w.attachEvent) { w.attachEvent('onload', a); }
   [10]: http://www.cedexis.com/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
-  [13]: https://github.com/jsdelivr/libgrabber#updatejson-schema
+  [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
+  [14]: https://www.keycdn.com/

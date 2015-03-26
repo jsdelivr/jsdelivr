@@ -1,8 +1,11 @@
 {
-  "packageManager": "github",
+  "packageManager": "bower",
   "name": "textAngular",
   "repo": "fraywing/textAngular",
   "files": {
-    "include": ["./src/*","./dist/*"]
+    "include": [
+      "src/textAngular.css",
+      "dist/*"
+    ]
   }
 }

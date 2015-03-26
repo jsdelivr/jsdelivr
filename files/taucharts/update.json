@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "tauCharts",
+	"repo": "TargetProcess/tauCharts",
+	"files": {
+		"basePath": "build/production"
+	}
+}

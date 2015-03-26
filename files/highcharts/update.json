@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "highcharts",
+  "repo": "highslide-software/highcharts-release",
+  "files": {
+	"exclude": ["README.md", "bower.json"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.angular-cache",
+  "repo": "jmdobry/angular-cache",
+  "files": {
+    "basePath": "dist/",
+    "include": ["angular-cache.js", "angular-cache.min.js"]
+  }
+}

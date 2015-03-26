@@ -3,6 +3,7 @@
   "name": "angular.ngtable",
   "repo": "esvit/ng-table",
   "files": {
-    "include": ["ng-table.js", "ng-table.css", "ng-table.min.js", "ng-table.min.css", "ng-table.map" ]
+    "basePath": "dist/",
+    "include": ["ng-table.js", "ng-table.css", "ng-table.min.js", "ng-table.min.css", "ng-table.min.js.map" ]
   }
 }

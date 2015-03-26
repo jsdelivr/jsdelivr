@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "cldrjs",
-  "repo": "rxaviers/cldrjs",
-  "files": {
-    "basepath": "dist/",
-    "include": ["cldr.min.js", "cldr/event.min.js"]
-  }
-}

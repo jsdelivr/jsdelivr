@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.finger",
+  "repo": "ngryman/jquery.finger",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

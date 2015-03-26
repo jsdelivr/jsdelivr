@@ -1,0 +1,110 @@
+/**
+ * Copyright (C) Zoomdata, Inc. 2012-2014. All rights reserved.
+ */
+.widgetContent .zd-legend {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1;
+}
+
+.zd-legend .color-key {
+    padding: 7px 12px;
+    border-radius: 12px;
+    background: #F6F6F6;
+    -webkit-box-shadow: 2px 2px 1px 0px #A3A6A2;
+    -moz-box-shadow: 2px 2px 1px 0px #A3A6A2;
+    -ms-box-shadow: 2px 2px 1px 0px #A3A6A2;
+    -o-box-shadow: 2px 2px 1px 0px #A3A6A2;
+    box-shadow: 2px 2px 1px 0px #A3A6A2;
+}
+
+.zd-legend .color-key.ui-draggable-dragging {
+    opacity: 0.9;
+}
+
+.widgetContent .zd-legend .color-key {
+    width: 200px;
+}
+
+.zd-legend .color-key-metric-label {
+    color: #939292;
+    font-size: 13px;
+    text-align: center;
+}
+
+.zd-legend .color-key-linear-view {
+    margin-top: 5px;
+}
+
+.zd-legend ul.color-key-list-view {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: inherit;
+    overflow-y: auto;
+}
+
+.zd-legend .color-list-item {
+    height: 19px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.zd-legend .color-key-list-view .color-item {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    margin-right: 6px;
+    border: none;
+}
+
+.color-item {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #E6E6E5;
+    border-left: none;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.color-item:first-child {
+    border-left: 1px solid #E6E6E5;
+}
+
+.zd-legend .color-key-scale,
+.color-scale-range {
+    height: 17px;
+    margin: 0 auto;
+    border: 1px solid #E6E6E5;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.zd-legend .color-key-scale .color-item,
+.color-scale .color-item {
+    margin-top: 0;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.zd-legend .color-key-labels {
+    overflow: hidden;
+}
+
+.zd-legend .color-key-label {
+    float: left;
+    color: #939292;
+    text-align: center;
+}
+
+.zd-legend .color-key-label:first-child {
+    text-align: left;
+}
+
+.zd-legend .color-key-label:last-child {
+    float: right;
+    text-align: right;
+}

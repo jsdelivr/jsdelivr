@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "yasgui-yasqe",
+  "files": {
+  	"basePath": "dist/",
+	"include": ["*.min.js", "*.min.js.map", "*.min.css"]
+  }
+}

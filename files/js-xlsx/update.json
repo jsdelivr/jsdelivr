@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-xlsx",
+  "repo": "SheetJS/js-xlsx",
+  "files": {
+    "basePath": "dist",
+    "exclude": ["LICENSE"]
+  }
+}

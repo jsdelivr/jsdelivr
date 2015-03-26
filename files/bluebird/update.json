@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "bluebird",
+  "files": {
+    "basePath": "js/browser/",
+    "include": ["bluebird.js", "bluebird.min.js"]
+  }
+}

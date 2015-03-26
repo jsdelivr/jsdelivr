@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "particles.js",
+  "repo": "VincentGarreau/particles.js",
+  "files": {
+	"include": ["particles.min.js"]
+  }
+}

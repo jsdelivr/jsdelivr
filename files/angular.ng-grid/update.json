@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.ng-grid",
+  "repo": "angular-ui/ng-grid",
+  "files": {
+    "include": ["ng-grid.min.css", "build/ng-grid.min.js", "build/ng-grid.js"]
+  }
+}

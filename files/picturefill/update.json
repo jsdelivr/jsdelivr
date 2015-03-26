@@ -4,6 +4,6 @@
   "repo": "scottjehl/picturefill",
   "files": {
     "basePath": "dist/",
-    "include": "picturefill.min.js"
+	"include": ["picturefill.min.js"]
   }
 }

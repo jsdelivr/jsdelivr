@@ -3,6 +3,6 @@
   "name": "mithril",
   "repo": "lhorie/mithril",
   "files": {
-    "include": ["mithril.js", "mithril.min.js", "mithril.min.map"]
+    "include": ["mithril.js", "mithril.min.js", "mithril.min.js.map"]
   }
 }

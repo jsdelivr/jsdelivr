@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "respimage",
+  "repo": "aFarkas/respimage",
+  "files": {
+    "include": ["*.min.js", "./plugins/**/*.min.js"]
+  }
+}

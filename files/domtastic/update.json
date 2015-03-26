@@ -3,6 +3,6 @@
   "name": "domtastic",
   "repo": "webpro/DOMtastic-release",
   "files": {
-    "basePath": "bundle/full/"
+    "include": ["domtastic.*"]
   }
 }

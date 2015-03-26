@@ -1,0 +1,13 @@
+{
+  "packageManager": "github",
+  "name": "highlight.js",
+  "repo": "highlightjs/cdn-release",
+  "files": {
+    "basePath": "build/",
+    "include": [
+      "highlight.min.js",
+      "./languages/*.min.js",
+      "./styles/*.min.css"
+    ]
+  }
+}

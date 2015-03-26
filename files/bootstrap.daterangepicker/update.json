@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.daterangepicker",
+  "repo": "dangrossman/bootstrap-daterangepicker",
+  "files": {
+    "include": ["daterangepicker-bs2.css", "daterangepicker-bs3.css", "daterangepicker.js"]
+  }
+}

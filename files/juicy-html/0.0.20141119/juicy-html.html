@@ -1,0 +1,83 @@
+<!--
+juicy-html.html v0.0.20141119
+(c) 2013 Joachim Wester
+MIT license
+https://github.com/Juicy/juicy-html
+-->
+<script>
+  (function () {
+    var JuicyHTMLPrototype = Object.create( (HTMLTemplateElement || HTMLElement ).prototype);
+
+    JuicyHTMLPrototype.loadTemplate_ = function() {
+      var val = this.getAttribute('content');
+      if (val && (val.indexOf('/') === 0 || val.indexOf('./') === 0)) {
+        //val is a URL, load the partial from the HTTP server/cache
+        var oReq = new XMLHttpRequest();
+        var that = this;
+        oReq.onload = function (event) {
+          that.reattachTemplate_(event.target.responseText);
+        };
+        oReq.open("GET", val, true);
+        oReq.send();
+      }
+      else {
+        //val is HTML code, insert the partial from the string
+        this.reattachTemplate_(val);
+      }
+    };
+
+    JuicyHTMLPrototype.reattachTemplate_ = function(html) {
+      if( this.subTemplate ){
+        // IDEA: or maybe just this.subTempalte.clear()? - to leave lightDOM template untouched (tomalec)
+        this.clear();
+      } else {
+        this.subTemplate = document.createElement("template");
+      }
+      this.subTemplate.setAttribute("bind", this.getAttribute("bind") || "");
+      this.subTemplate.setAttribute("repeat", this.getAttribute("repeat") );
+      this.subTemplate.setAttribute("if", this.getAttribute("if") );
+      this.subTemplate.innerHTML = html;
+      this.parentNode.insertBefore(this.subTemplate, this.nextSibling);
+      if(window.PolymerExpressions) {
+        this.subTemplate.bindingDelegate = new PolymerExpressions; //use PolymerExpressions if available. This allows <template if="{{val == 1}}">, etc
+      }
+      this.subTemplate.model = this.model;
+
+    };
+
+    /**
+     * Empty xhml content.
+     * @TODO clear also siblings for `juicy-html[currentnode]`
+     * @requires HTMLTemplateElement#clear (https://github.com/Polymer/TemplateBinding/blob/51df59c16e0922dec041cfe604016aac00918d5d/src/TemplateBinding.js#L595)
+     * @extends HTMLTemplateElement.prototype.clear
+     * @return  see HTMLTemplateElement.prototype.clear
+     */
+    JuicyHTMLPrototype.clear = function(){
+      return this.subTemplate.clear() && HTMLTemplateElement.prototype.clear.call(this);
+    };
+
+
+    JuicyHTMLPrototype.attachedCallback = function () {
+      var that = this;
+      this.loadTemplate_();
+
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          if (mutation.type === "attributes" && mutation.attributeName === "content") {
+            that.loadTemplate_();
+          }
+        });
+      });
+      observer.observe(this, {
+        attributes: true
+      });
+
+      return true;
+    };
+
+    document.registerElement('juicy-html', {
+      prototype: JuicyHTMLPrototype,
+      extends: "template"
+    });
+  })();
+</script>
