@@ -1,13 +1,23 @@
+### Preparation
+
+1. Choose your files for public hosting:
+ * Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in production.
+ * Please add **only the minified** versions for all files if you are adding a project for the first time.  Also compress images & fonts the best you can.
+ * If there is a previous version of the project you are adding, please ensure that the new version contains same files. For example if in the previous version there are `*.min.js` and `*.js` (& perhaps `*.min.map`) files, please add both to the new version.
+2. Ensure there is a open-source or 'free to use commercially' license.
+3. (Optional: recommended) Ensure you have a [comment banner](https://github.com/tomByrer/web-engeneering-notes/blob/master/banner-tips.md#mini-banner) in your files' top line.
+4. Choose adding your project via GitHub's [web interface](#web-interface-recommended) or [`git`](#advanced).
+
+
 ### Web interface (Recommended)
 
 *This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
 
-1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2]
-2. In the same directory create an update.json file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json)
+1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure) / [Example][2]
+2. In the same directory create an update.json file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema) / [Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json)
 3. Dont add any project related files. Our bot will add them after your PR gets merged
 4. Make sure you do everything correctly the first time. If your PR exceeds 2 commits(1 per file) it will be declined.
 5. Wait for approval!
-
 
 
 ### Advanced
@@ -33,7 +43,6 @@ Under `files/` a directory for each project is created. Please follow the instru
 3. Name should only contain the name of the project. (no versions or additional information)
 4. If the project is a plugin of a library, prepend the name of the library, like `jquery.blurjs` or `bootstrap.select`.
 
-
 A project's directory should contain the following:
 
 1. An `info.ini` containing all needed information. [Example][2]
@@ -44,12 +53,7 @@ A project's directory should contain the following:
 A version directory should contain the following:
 
 1. Static files needed for the project to work.
-2. If there is no minified version of the main JS/CSS file, please create your own using this ([minification tool][3]).
-3. If there are official or expected source maps for the minified js, please include those in the folder.  Currently, the following projects officially support the `.map` files:
-  * angularjs
-  * jQuery
-  * mithril
-4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
+2. To shrink JS/CSS, you can use YUI ([minification tool][3]).
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
