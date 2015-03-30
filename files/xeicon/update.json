@@ -4,6 +4,6 @@
   "repo": "xpressengine/XEIcon",
   "files": {
     "basePath": "/",
-    "include": ["xeicon.min.css", "./fonts/*", "./ie7/*"]
+    "include": ["xeicon.min.css", "./fonts/*"]
   }
 }
