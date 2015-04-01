@@ -59,6 +59,20 @@ This system also responds immediately to performance degradation and downtime of
 # How to submit or update projects
 
 
+### Web interface (Recommended)
+
+*This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
+
+1. Using your browser go to [files/](15) and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/#file-structure)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/algoliasearch/info.ini)
+2. In the same directory create an update.json file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json)
+3. Dont add any project related files. Our bot will add them after your PR gets merged
+4. Make sure you do everything correctly the first time. If your PR exceeds 2 commits(1 per file) it will be declined.
+5. Wait for approval!
+
+
+
+### Advanced
+
  1. [Fork][9] the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
 
@@ -287,3 +301,4 @@ Alternatively you can also include it in a /g/ combined URL. Simply add `jsdeliv
   [12]: https://gitter.im/jsdelivr/jsdelivr
   [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
   [14]: https://www.keycdn.com/
+  [15]: https://github.com/jsdelivr/jsdelivr/tree/master/files
