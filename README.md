@@ -60,7 +60,7 @@ SPDY
 All of our POPs support [SPDY](https://developers.google.com/speed/spdy/) loading, allowing performant transfers when possible.
 
 # [How to submit or update projects](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md)
-
+Refer to [CONTRIBUTING.md](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md) for instructions on how to add a new project to jsDelivr.
 
 
 Auto-Updating
