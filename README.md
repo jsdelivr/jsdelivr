@@ -54,7 +54,10 @@ All providers (CDNs and custom servers) are tested millions times per day by rea
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under a DDoS attack, and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all affected users.
 
+SPDY
+-----------------
 
+All of our POPs support [SPDY](https://developers.google.com/speed/spdy/) loading, allowing performant transfers when possible.
 
 # How to submit or update projects
 
