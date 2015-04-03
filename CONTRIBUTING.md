@@ -12,7 +12,7 @@
 
 ### Advanced
 
- 1. [Fork][9] the jsDelivr repository.
+ 1. Fork the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
 
   **Note** If there is a previous version of the project you are adding please ensure that the new version contains same files. For example if in the previous version there are both .min.js and .js files please add both to the new version.
