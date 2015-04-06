@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Korean Webfonts",
+  "repo": "c8seki/Korean-Webfonts",
+  "files": {
+    "basePath": "dist/"
+  }
+}
