@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "p5.js",
-  "repo": "lmccart/p5.js",
+  "repo": "processing/p5.js",
   "files": {
     "basePath": "lib/",
     "include": ["p5.min.js", "./addons/**/*"]
