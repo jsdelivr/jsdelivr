@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "m8tro-bootstrap",
+  "name": "bootstrap.m8tro",
   "repo": "idleberg/m8tro-bootstrap",
   "files": {
     "basePath": "dist/css/",
