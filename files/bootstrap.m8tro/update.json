@@ -3,7 +3,7 @@
   "name": "m8tro-bootstrap",
   "repo": "idleberg/m8tro-bootstrap",
   "files": {
-    "basePath": "dist/",
+    "basePath": "dist/css/",
     "include": ["m8tro.min.css"]
   }
 }
