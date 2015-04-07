@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "ion.rangeslider",
+  "repo": "IonDen/ion.rangeSlider",
+  "files": {
+    "include": [
+        "./css/*.css",
+        "./js/*.min.js",
+        "./img/*.png"
+    ]
+  }
+}
