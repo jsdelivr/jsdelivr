@@ -4,6 +4,6 @@
   "repo": "katspaugh/wavesurfer.js",
   "files": {
     "basePath": “dist/“,
-    "include": ["wavesurfer.min.js"]
+    "include": ["wavesurfer.min.js”, “./plugin/**/*”]
   }
 }

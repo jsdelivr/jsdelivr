@@ -3,6 +3,7 @@
   "name": "ractive-adaptors-backbone",
   "repo": "ractivejs/ractive-adaptors-backbone",
   "files": {
-    "include": ["ractive-adaptors-backbone.min.js"]
+	"basePath": "dist/"
+	"include": ["ractive-adaptors-backbone.min.js"]
   }
 }

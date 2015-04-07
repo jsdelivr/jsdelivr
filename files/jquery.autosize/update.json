@@ -3,6 +3,7 @@
   "name": "jquery.autosize",
   "repo": "jackmoore/autosize",
   "files": {
-    "include": ["jquery.autosize.js", "jquery.autosize.min.js"]
+	"basePath": "dest/"
+    "include": ["autosize.min.js"]
   }
 }
