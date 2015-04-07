@@ -3,7 +3,6 @@
   "name": "dropzone.js",
   "repo": "enyo/dropzone",
   "files": {
-    "basePath": "downloads/",
-    "exclude": ["readme.md", "css/stylus/*"]
+    "basePath": “dist/min/“
   }
 }
