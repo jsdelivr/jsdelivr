@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "socialmedia",
+	"repo": "jabranr/socialmedia",
+	"files": {
+		"include": ["socialmedia.js", "socialmedia.min.js"]
+	}
+}
