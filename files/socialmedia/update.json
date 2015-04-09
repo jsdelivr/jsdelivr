@@ -3,6 +3,7 @@
 	"name": "socialmedia",
 	"repo": "jabranr/socialmedia",
 	"files": {
-		"include": ["socialmedia.js", "socialmedia.min.js"]
+		"basePath": "dist/",
+		"include": ["socialmedia.min.js"]
 	}
 }
