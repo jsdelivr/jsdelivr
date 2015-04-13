@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "isotope",
+  "repo": "metafizzy/isotope",
+  "files": {
+    "include": ["dist/*", "js/isotope.js"]
+  }
+}
