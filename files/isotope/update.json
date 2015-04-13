@@ -3,6 +3,6 @@
   "name": "isotope",
   "repo": "metafizzy/isotope",
   "files": {
-    "basePath": "dist/"
+    "include": ["dist/*", "js/isotope.js"]
   }
 }
