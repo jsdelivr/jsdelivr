@@ -53,4 +53,4 @@ A version directory should contain the following:
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://refresh-sf.com/yui/
+  [3]: http://refresh-sf.com/
