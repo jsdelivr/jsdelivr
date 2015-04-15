@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tubular",
+  "repo": "unosquare/tubular",
+  "files": {
+    "include": ["tubular-bundle.js", "tubular-bundle.min.js", "tubular-bundle.css","tubular-bundle.min.css"]
+  }
+}
