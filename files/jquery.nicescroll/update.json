@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.nicescroll",
+  "repo": "inuyaksa/jquery.nicescroll",
+  "files": {
+    "basePath": "dist/",
+   }
+}
