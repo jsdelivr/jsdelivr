@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "babel",
+  "repo": "babel-core",
+  "files": {
+    "include": ["browser.js", "browser-polyfill.js"]
+  }
+}
