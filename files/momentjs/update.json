@@ -3,7 +3,7 @@
   "name": "momentjs",
   "repo": "moment/moment",
   "files": {
-	"basePath": "min/“,
-	"exclude": [“tests.js”]
+	"basePath": "min/",
+	"exclude": ["tests.js"]
   }
 }
