@@ -3,7 +3,7 @@
   "name": "jquery.selectric",
   "repo": "lcdsantos/jQuery-Selectric",
   "files": {
-    "basePath": “public/“,
+    "basePath": "public/",
 	"include": ["jquery.selectric.min.js", "selectric.css"]
   }
 }
