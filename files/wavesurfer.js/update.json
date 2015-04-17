@@ -3,7 +3,7 @@
   "name": "wavesurfer.js",
   "repo": "katspaugh/wavesurfer.js",
   "files": {
-    "basePath": “dist/“,
+    "basePath": "dist/",
     "include": ["wavesurfer.min.js”, “./plugin/**/*”]
   }
 }
