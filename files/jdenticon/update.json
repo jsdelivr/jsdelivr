@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jdenticon",
+  "repo": "dmester/jdenticon",
+  "files": {
+    "basePath": "dist/",
+    "exclude": "jdenticon.js"
+  }
+}
