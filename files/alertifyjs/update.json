@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "alertifyjs",
+  "repo": "mohammadyounes/alertifyjs",
+  "files": {
+    "basePath": "build/",
+    "exclude": ["alertify.zip"]
+  }
+}
