@@ -4,6 +4,6 @@
   "repo": "mohammadyounes/alertifyjs",
   "files": {
     "basePath": "build/",
-    "exclude": ["alertify.zip"]
+    "include": ["*.min.js","./css/**/*.min.css"]
   }
 }
