@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "diejs",
+  "repo": "claudiobarahona/diejs",
+  "files": {
+    "include": ["die.min.js", "die.js", "die.css"]
+  }
+}
