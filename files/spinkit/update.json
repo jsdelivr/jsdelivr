@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "SpinKit",
+  "repo": "tobiasahlin/SpinKit",
+  "files": {
+    "include": ["css/spinkit.css"],
+  }
+}
