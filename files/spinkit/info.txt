@@ -1,0 +1,5 @@
+author = "Tobias Ahlin"
+github = "https://github.com/tobiasahlin/SpinKit"
+homepage = "http://tobiasahlin.com/spinkit/"
+description = "A collection of loading indicators animated with CSS"
+mainfile = "css/spinkit.css"
