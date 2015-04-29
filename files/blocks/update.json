@@ -3,6 +3,7 @@
   "name": "blocks",
   "repo": "astoilkov/jsblocks",
   "files": {
+    "include": ["*.min.*", "./mvc/*.min.*", "./query/*.min.*"],
     "basePath": "dist/"
   }
 }
