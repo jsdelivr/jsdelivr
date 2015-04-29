@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jdlib",
+  "repo": "jackdalton/jdlib",
+  "files": {
+    "include": ["jdlib.min.js"]
+  }
+}
