@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "blocks",
+  "repo": "astoilkov/jsblocks",
+  "files": {
+    "basePath": "dist/"
+  }
+}
