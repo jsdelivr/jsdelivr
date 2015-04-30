@@ -1,0 +1,7 @@
+{
+  "packageManager": "github",
+  "name": "moblify",
+  "repo": "ilovecode1/moblify",
+  "files": {
+    "include": ["Moblify-Unminified.css", "Moblify.css", "Moblify.scss"]
+  }
