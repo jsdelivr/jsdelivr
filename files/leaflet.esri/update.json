@@ -1,6 +1,6 @@
 {
-  "packageManager": "npm",
-  "name": "esri-leaflet",
+  "packageManager": "github",
+  "name": "leaflet.esri",
   "repo": "esri/esri-leaflet",
   "files": {
     "basePath": "dist/"
