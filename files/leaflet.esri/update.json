@@ -3,6 +3,7 @@
   "name": "leaflet.esri",
   "repo": "esri/esri-leaflet",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "exclude": ["README.md"]
   }
 }
