@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "AudioFX",
+  "repo": "madebywild/audioFX",
+  "files": {
+    "include": ["dist/AudioFX.js", "dist/AudioFX.min.js"]
+  }
+}
