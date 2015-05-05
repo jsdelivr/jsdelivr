@@ -3,6 +3,6 @@
   "name": "lodash.compat",
   "repo": "lodash/lodash",
   "files": {
-    "include": ["**/*.js", "**/*.map"]
+    "include": ["lodash.min.js"]
   }
 }
