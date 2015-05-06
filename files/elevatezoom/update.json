@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "elevatezoom",
+  "repo": "elevateweb/elevatezoom",
+  "files": {
+    "include": ["jquery.elevatezoom.js"]
+  }
+}
