@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "seedrandom",
-  "repo": "davidbau.seedrandom",
+  "repo": "davidbau/seedrandom",
   "files": {
     "include": ["seedrandom.js", "seedrandom.min.js", "lib/*"]
   }
