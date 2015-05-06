@@ -3,6 +3,6 @@
   "name": "HTML-KickStart",
   "repo": "joshuagatcke/HTML-KickStart",
   "files": {
-    "include": ["css/*","js/*",]
+    "include": ["css/*","js/*"]
   }
 }
