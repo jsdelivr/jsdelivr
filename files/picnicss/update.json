@@ -4,6 +4,6 @@
 	"repo": "picnicss/picnic",
 	"files": {
 		"basePath": "releases",
-		"include": ["picnic.css", "plugins.min.css"]
+		"include": ["picnic.min.css", "plugins.min.css"]
 	}
 }
