@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cutback",
+  "repo": "jlaran/cutback-js",
+  "files": {
+    "include": ["cutback.min.js"]
+  }
+}
