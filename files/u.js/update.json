@@ -2,8 +2,8 @@
   "packageManager": "github",
   "name": "u.js",
   "repo": "iamso/u.js",
-  "basePath": "dist/",
   "files": {
+    "basePath": "dist/",
     "include": [
       "*.min.*"
     ]
