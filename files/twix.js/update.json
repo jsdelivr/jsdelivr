@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "twix.js",
+  "repo": "icambron/twix.js",
+  "files": {
+    "basePath": "bin/",
+	"include" : ["*.min.js"]
+  }
+}
