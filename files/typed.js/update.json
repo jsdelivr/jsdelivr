@@ -3,6 +3,6 @@
   "name": "typed.js",
   "repo": "mattboldt/typed.js",
   "files": {
-    "basePath": "dist/"
+    "basePath": "js/"
   }
 }
