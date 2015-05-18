@@ -3,6 +3,6 @@
   "name": "jsy",
   "repo": "labidiaymen/jsy",
   "files": {
-    "include": ["jsy.min.js","jsy.js"]
+    "include": ["jsy.min.js"]
   }
 }
