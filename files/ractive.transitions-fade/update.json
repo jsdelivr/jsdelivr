@@ -3,6 +3,7 @@
   "name": "ractive-transitions-fade",
   "repo": "ractivejs/ractive-transitions-fade",
   "files": {
-    "include": ["ractive-transitions-fade.min.js"]
+		"basePath": "dist/",
+		"include": ["*.min.*"]
   }
 }

@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "typed.js",
-  "repo": "mattboldt/typed.js",
-  "files": {
-    "basePath": "dist/"
-  }
-}

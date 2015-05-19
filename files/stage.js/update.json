@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "stage.js",
+	"repo": "piqnt/stage.js",
+	"files": {
+		"basePath": "dist/",
+		"include": ["*.min.*"]
+	}
+}
