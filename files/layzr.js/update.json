@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "layzr.js",
+  "repo": "callmecavs/layzr.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
