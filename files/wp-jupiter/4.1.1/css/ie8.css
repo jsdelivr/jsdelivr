@@ -1,0 +1,7 @@
+#mk-header, #theme-page, #mk-footer {
+	zoom:1;
+}
+
+.image-hover-overlay {
+	display: none !important;
+}
