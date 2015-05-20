@@ -1,0 +1,36 @@
+/* Shortcode:Content Slideshow
+-------------------------------------------------------------------- */
+.mk-content-slideshow-shortcode {
+	margin-bottom: 40px;
+	padding-right: 20px;
+	.mk-flex-content {
+		padding: 30px;
+		.border-radius(10px);
+	}
+	p {
+		margin-bottom: 0;
+	}
+	.flex-direction-nav {
+		a{width: 0;
+			height: 0;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			.border-radius(4px);
+		}
+	}
+	.flex-direction-nav .flex-next {
+		top: 30px;
+		right: 0 !important;
+		margin: 0;
+		border-left-width: 11px;
+		border-left-style: solid;
+	}
+	.flex-direction-nav .flex-prev {
+		top: 30px;
+		right: 0 !important;
+		margin: 14px 0 0 0;
+		border-right-width: 11px;
+		border-right-style: solid;
+		background-position: 0 bottom;
+	}
+}

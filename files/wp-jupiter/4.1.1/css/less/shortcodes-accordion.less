@@ -1,0 +1,240 @@
+/* Shortcode:Accordion
+-------------------------------------------------------------------- */
+
+.mk-accordion {
+    margin-bottom: 20px;
+    &.fancy-style {
+        border-bottom: 1px solid #ececec;
+        .mk-accordion-single {
+            overflow: hidden;
+            border: 1px solid #ececec;
+            border-bottom: 0;
+            background-color: #fff;
+        }
+        .mk-accordion-tab {
+            position: relative;
+            position: relative;
+            padding: 9px 30px 12px 15px;
+            color: #222;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 22px;
+            cursor: pointer;
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            span {
+                vertical-align: middle;
+            }
+            i {
+                margin-right: 10px;
+                color: #b9b9b9;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            &:hover {
+                i {
+                    color: #868686;
+                }
+                background-color: #f8f8f8;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                right: 14px;
+                display: block;
+                margin-top: -9px;
+                padding: 3px 6px 2px;
+                color: #adadad;
+                content: "\f054";
+                font-size: 12px !important;
+                line-height: 16px;
+            }
+            background-color: #fdfdfd;
+        }
+        .mk-accordion-single.current {
+            .mk-accordion-pane {
+                border-top: 1px solid #ececec;
+            }
+            .mk-accordion-tab:before {
+                .rotate(90deg);
+            }
+        }
+        .mk-accordion-pane {
+            display: none;
+            padding: 20px;
+        }
+        &.mobile-true {
+            @media handheld, only screen and (max-width: 767px) {
+                .mk-accordion-single {
+                    border-bottom: 1px solid #ececec;
+                }
+                .mk-accordion-tab {
+                    border-bottom: 1px solid #ececec;
+                }
+            }
+        }
+    }
+    &.simple-style {
+        .mk-accordion-tab {
+            position: relative;
+            position: relative;
+            padding: 9px 30px 12px 15px;
+            border-bottom: 1px solid #ececec;
+            color: #222;
+            font-size: 13px;
+            line-height: 22px;
+            font-weight: 600;
+            cursor: pointer;
+            span {
+                vertical-align: middle;
+            }
+            i {
+                margin-right: 10px;
+                color: #b9b9b9;
+                font-size: 16px;
+            }
+            &:before {
+                position: absolute;
+                top: 16px;
+                right: 10px;
+                display: block;
+                padding: 3px 6px 2px;
+                color: #dddddd;
+                content: "\f054";
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+        .mk-accordion-single.current {
+            border: none;
+            .mk-accordion-tab:before {
+                .rotate(90deg);
+                color: #252525;
+            }
+        }
+        .mk-accordion-pane {
+            display: none;
+            padding: 10px;
+            border-bottom: 1px solid #ececec;
+            background-color: #fff;
+        }
+        &.mobile-true {
+            @media handheld, only screen and (max-width: 767px) {
+                .mk-accordion-pane {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    &.mobile-true {
+        @media handheld, only screen and (max-width: 767px) {
+            .mk-accordion-single {
+                margin-bottom: 15px;
+            }
+            .mk-accordion-pane {
+                display: block !important;
+            }
+            .mk-accordion-tab {
+                cursor: default;
+                &:before {
+                    content: '';
+                }
+            }
+        }
+    }
+    &.toggle-action .mk-accordion-pane {
+        display: none;
+    }
+}
+/* Shortcode:Accordion
+-------------------------------------------------------------------- */
+
+.mk-toggle {
+    margin: 0;
+    &.fancy-style {
+        margin-bottom: 3px;
+        border: 1px solid #ececec;
+        .mk-toggle-title {
+            position: relative;
+            position: relative;
+            display: block;
+            padding: 9px 30px 9px 15px;
+            color: #222;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 22px;
+            cursor: pointer;
+            span {
+                vertical-align: middle;
+            }
+            i {
+                margin-right: 15px;
+                color: #b9b9b9;
+                font-size: 24px;
+                vertical-align: middle;
+            }
+            &:hover {
+                background-color: #f8f8f8;
+            }
+            &:before {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: block;
+                padding: 3px 6px 2px;
+                content: "\f054";
+                font-size: 12px !important;
+                line-height: 16px;
+                color: #adadad;
+            }
+            &.active-toggle {
+                border-bottom: 1px solid #ececec;
+                &:before {
+                    .rotate(90deg);
+                }
+            }
+           background-color: #fdfdfd;
+        }
+    }
+    &.simple-style {
+        .mk-toggle-title {
+            position: relative;
+            position: relative;
+            display: block;
+            padding: 8px 25px 8px 23px;
+            color: #444444;
+            font-size: 13px;
+            cursor: pointer;
+            span {
+                vertical-align: middle;
+            }
+            i {
+                display: none;
+            }
+            &:before {
+                position: absolute;
+                top: 11px;
+                left: -4px;
+                display: block;
+                padding: 3px 6px 2px;
+                color: #adadad;
+                content: "\f054";
+                font-size: 12px;
+                line-height: 12px;
+            }
+            &.active-toggle {
+                &:before {
+                    left: -6px;
+                    .rotate(90deg);
+                }
+            }
+        }
+    }
+    .mk-toggle-pane {
+        position: relative;
+        display: none;
+        padding: 20px;
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,67 @@
+.mk-portfolio-grid-item {
+	float: left;
+	overflow: hidden;
+	&.portfolio-one-column {
+		width: 100%;
+	}
+	&.portfolio-two-column {
+		width: 50%;
+	}
+	&.portfolio-three-column {
+		width: 33.3%;
+	}
+	&.portfolio-four-column {
+		width: 24.96%;
+	}
+	&.portfolio-five-column {
+		width: 20%;
+	}
+	&.portfolio-six-column {
+		width: 16.66%;
+	}
+	@media handheld, only screen and (max-width:1140px) {
+		&.portfolio-four-column, &.portfolio-five-column, &.portfolio-six-column {
+			width: 33.3% !important;
+		}
+	}
+	@media handheld, only screen and (max-width:960px) {
+		&.portfolio-two-column, &.portfolio-three-column, &.portfolio-four-column, &.portfolio-five-column, &.portfolio-six-column {
+			width: 49.96% !important;
+		}
+	}
+	@media handheld, only screen and (max-width:620px) { 
+		&.portfolio-two-column, &.portfolio-three-column, &.portfolio-four-column, &.portfolio-five-column, &.portfolio-six-column {
+			width: 100% !important; 	
+		}
+		
+	}
+
+
+}
+
+.mk-fullwidth-false .mk-portfolio-grid-item.portfolio-six-column {
+		.portfolio-meta {
+			display: none;
+		}
+}
+
+.mk-fullwidth-true .mk-portfolio-grid-item {
+	&.portfolio-two-column {
+		width: 49.96%;
+	}
+
+	&.portfolio-five-column {
+		width: 19.96%;
+	}
+	&.portfolio-six-column {
+		width: 16.6%;
+	}
+
+
+}
+/*
+.mk-main-wrapper.right-layout, .mk-main-wrapper.right-layout {
+	.mk-portfolio-grid-item.portfolio-two-column, .mk-portfolio-grid-item.portfolio-three-column, .mk-portfolio-grid-item.portfolio-four-column, .mk-portfolio-grid-item.portfolio-five-column, .mk-portfolio-grid-item.portfolio-six-column {
+		width: 49.5%;
+	}
+}*/

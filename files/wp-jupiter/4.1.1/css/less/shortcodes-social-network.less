@@ -1,0 +1,105 @@
+/* Shortcode:Social Networks
+-------------------------------------------------------------------- */
+.mk-social-network-shortcode {
+	margin: 10px 0;
+	padding: 0;
+	&.social-align-right {
+		text-align: right;
+	}
+	&.social-align-center {
+		text-align: center;
+	}
+	&.social-align-left {
+		text-align: left;
+	}
+	&.small i {
+		font-size: 16px;
+	}
+	&.medium i {
+		font-size: 24px;
+	}
+	&.large i {
+		font-size: 32px;
+	}
+	&.x-large i {
+		font-size: 48px;
+	}
+	&.xx-large i {
+		font-size: 64px;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0;
+			a {
+				display: block;
+				line-height: 100%;
+			}
+		}
+	}
+	&.social-style-square-pointed, 
+	&.social-style-square-rounded,
+	&.social-style-simple-rounded {
+		a {
+			border-width: 2px;
+			border-style: solid;
+			background-color: rgb(255,255,255);
+			background-color: rgba(50,50,50, 0);
+			.transition(background-color 0.2s ease);
+			i {
+				display: block; 
+			}
+		}
+		&.xx-large {
+			a {
+				padding: 25px;
+			}
+			i {
+				font-size: 20px; 
+			}
+		}
+		&.x-large {
+			a {
+				padding: 20px;
+			}
+			i {
+				font-size: 18px; 
+			}
+		}
+		&.large {
+			a {
+				padding: 15px;
+			}
+			i {
+				font-size: 16px; 
+			}
+		}
+		&.medium {
+			a {
+				padding: 10px;
+				border-width: 1px;
+			}
+			i {
+				font-size: 14px; 
+			}
+		}
+		&.small {
+			a {
+				padding: 5px;
+				border-width: 1px;
+			}
+			i {
+				font-size: 12px; 
+			}
+		}
+	}
+	&.social-style-square-rounded a {
+		border-radius: 25%;
+	}
+	&.social-style-simple-rounded a {
+		border-radius: 50%;
+	}
+}

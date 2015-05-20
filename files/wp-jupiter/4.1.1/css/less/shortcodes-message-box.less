@@ -1,0 +1,73 @@
+/* Shortcode:Message Boxes
+-------------------------------------------------------------------- */
+.mk-message-box {
+	position: relative;
+	display: block;
+	margin-bottom: 20px;
+	border-width: 1px;
+	border-style: solid;
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	span {
+		display: block;
+		padding: 15px 15px 15px 65px;
+		text-align: left;
+	}
+	.box-close-btn {
+		position: absolute;
+		top: 0;
+		right: 6px;
+	}
+	&.mk-comment-message-box {
+		border-color: #dddddd;
+		background-color: #eeeeee;
+		background-image: url(../../images/box-comment-icon.png);
+		i {
+			color: #aaaaaa;
+		}
+	}
+	&.mk-info-message-box {
+		border-color: #afe0ee;
+		background-color: #d1eff8;
+		background-image: url(../../images/box-info-icon.png);
+		i {
+			color: #3ea3bc;
+		}
+		.button.wc-forward {
+			background-color: #3ea2c1;
+		}
+	}
+	&.mk-error-message-box {
+		border-color: #fd8585;
+		background-color: #fac6bf;
+		background-image: url(../../images/box-error-icon.png);
+		i {
+			color: #de303a;
+		}
+		.button.wc-forward {
+			background-color: #df3531;
+		}
+	}
+	&.mk-confirm-message-box {
+		border-color: #72dd9d;
+		background-color: #b8f4d0;
+		background-image: url(../../images/box-confirm-icon.png);
+		i {
+			color: #20b66e;
+		}
+		.button.wc-forward {
+			background-color: #28b863;
+		}
+	}
+	&.mk-warning-message-box {
+		border-color: #e0c069;
+		background-color: #fbf1c8;
+		background-image: url(../../images/box-warning-icon.png);
+		i {
+			color: #be9a34;
+		}
+		.button.wc-forward {
+			background-color: #be9c00;
+		}
+	}
+}

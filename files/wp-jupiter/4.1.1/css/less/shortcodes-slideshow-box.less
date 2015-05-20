@@ -1,0 +1,24 @@
+/* Shortcode: Slideshow Box
+-------------------------------------------------------------------- */
+
+.mk-slideshow-box {
+
+	&.full-width-true {
+		.mk-slideshow-box-content {
+			padding-left: 0;
+			padding-right: 0; 
+		}
+	}
+	.mk-slideshow-box-content{
+		@media handheld, only screen and (max-width:767px) {
+			h1, h2, h3, h4, h5, h6{
+				padding-top: 0!important;
+				margin-top: 0!important;
+			}
+			.mk-button {
+				margin-bottom: 20px !important;
+			}
+		}
+	}
+	
+}

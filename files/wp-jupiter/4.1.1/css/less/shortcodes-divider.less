@@ -1,0 +1,126 @@
+/* Shortcode:Dividers
+-------------------------------------------------------------------- */
+.mk-divider {
+	display: block;
+	// text-align: center;
+	&.custom-width.center {
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+	}
+	&.custom-width.left {
+		text-align: left;
+	}
+	&.custom-width.right {
+		margin-left: auto;
+		text-align: right;
+	}
+	@media handheld, only screen and (max-width:767px) {
+		&.custom-width.right,
+		&.custom-width.left {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+	}
+	&.divider_one_half .divider-inner,
+	&.divider_one_third .divider-inner,
+	&.divider_one_fourth .divider-inner {
+		display: inline-block;
+	}
+	&.divider_one_half.center,
+	&.divider_one_fourth.center,
+	&.divider_one_third.center{
+		text-align: center;
+	}
+	&.divider_one_half.right,
+	&.divider_one_fourth.right,
+	&.divider_one_third.right{
+		text-align: right;
+	}
+	&.divider_one_half.left,
+	&.divider_one_fourth.left,
+	&.divider_one_third.left{
+		text-align: left;
+	}
+	&.divider_one_half .divider-inner {
+		width: 50%;
+	}
+	&.divider_one_third .divider-inner {
+		width: 33.33%;
+	}
+	&.divider_one_fourth .divider-inner {
+		width: 25%;
+	}
+	.divider-inner {
+		//height: 6px;
+	}
+	&.double_dot .divider-inner {
+		height: 5px;
+		border-top: 1px dashed #dadada;
+		border-bottom: 1px dashed #dadada;
+	}
+	&.thick_solid .divider-inner {
+		border-top: 2px solid #e5e5e5;
+		border-top: 2px solid rgba(0, 0, 0, 0.1);
+	}
+	&.thin_solid .divider-inner {
+		border-top: 1px solid #e5e5e5;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	&.single_dotted .divider-inner {
+		border-top: 1px dashed #dadada;
+	}
+	&.shadow_line .divider-inner {
+		height: 7px;
+		.divider-shadow-left,
+		.divider-shadow-right {
+			display: inline-block;
+			width: 50%;
+			height: 7px;
+			background-image: url(../../images/shadow-divider.png);
+			background-repeat: no-repeat;
+		}
+		.divider-shadow-left {
+			background-position: left center;
+		}
+		.divider-shadow-right {
+			background-position: right center;
+		}
+	}
+	&[class*='go_top'] .divider-inner {
+		position: relative;
+		height: 12px;
+		&:before {
+			top: 6px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: #e5e5e5;
+			background-color: rgba(0, 0, 0, 0.1);
+			content: "";
+		}
+		.divider-go-top {
+			position: absolute;
+			top: -10px;
+			right: 0;
+			float: right;
+			padding-left: 4px;
+			i {
+				padding-left: 6px;
+				vertical-align: top;
+				font-size: 16px;
+				color: #ccc;
+			}
+		}
+	}
+	&.go_top_thick .divider-inner:before {
+		height: 2px;
+	}
+	&.padding_space .divider-inner {
+	}
+	&.divider_page_divider {
+		width: 100%;
+	}
+}

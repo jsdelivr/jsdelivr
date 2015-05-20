@@ -1,0 +1,207 @@
+/* Shortcode:Page Serction
+-------------------------------------------------------------------- */
+.mk-page-section {
+	position: relative;
+	overflow: hidden;
+
+	&.drop-top-shadow {
+		.box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.07));
+	}
+	.vc_row-fluid {
+		position: relative;
+	}
+	.theme-content {
+		padding: 0 20px;
+	}
+
+	&.full-height-true {
+		min-height: 300px;
+	}
+	.page-section-fullwidth {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.background-layer {
+		position: absolute;
+		top:0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
+	    .gpu();
+	    
+		  @media handheld, only screen and (max-width:1024px) {
+		    background-attachment: scroll !important;
+		    position: absolute !important;
+		  }
+	}
+	.background-clipper {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    clip: rect(auto,auto,auto,auto);
+	    // -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%); // webkit alternative for above
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.abb-skip-to-next {
+		z-index: 10;
+	}
+}
+
+.mk-half-layout {
+	width: 50%; 
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	&.half_left_layout {
+		left: 0;
+	}
+	&.half_right_layout {
+		right: 0;
+	}
+	@media handheld, only screen and (max-width:767px) {
+		width: 100%;
+		height: 500px;
+	}
+}
+.mk-video-mask,
+.mk-video-color-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.mk-video-color-mask {
+	.opacity(70);
+}
+.mk-video-mask {
+	background: url(../../images/video-mask.png) center center repeat;
+}
+.mk-video-preload {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.mk-section-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	min-height: 100%;
+	z-index: 2;
+	-webkit-transform-style: preserve-3d;
+	.video-social-hosted {
+		display: inline-block; /* let it be styled thusly */
+	    padding: 0;            /* get rid of pre-styling */
+	    margin: 0;
+	    width: 100%;            
+	    padding-top: 56.25%;   /* give aspect ratio of 16:9; "720 / 1280 = 0.5625" */
+	    heigth: 0px;           /* don't want it to expand beyond padding */
+	    position: relative;
+	}
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.mk-section-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	min-width: 100%;
+	min-height: 100%;
+	-webkit-transform-style: preserve-3d;
+	background-position: center;
+	background-size: cover;
+}
+
+.mk-half-layout-container {
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.mk-half-layout-container {
+	width: 40%;
+	margin: 0 5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&.half_left_layout {
+		float: right;
+	}
+	&.half_right_layout {
+		float: left;
+	}
+	@media handheld, only screen and (max-width:767px) {
+		width: auto !important;
+		margin: 0;
+		padding-top: 530px !important;
+		padding-left: 20px;
+		padding-right: 20px;
+		float: none !important;
+	}
+}
+
+.mk-video-section-touch {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	// display: none;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+@media only screen and (min-device-width:320px) and (max-width:1024px){ 
+	.mk-page-section {
+		background-position: center !important;
+		background-attachment: scroll !important;
+	}
+	.mk-section-video {
+		display: none !important;
+	}
+	.mk-video-section-touch  {
+		display: block !important;
+	}
+}
+
+
+.mk-page-section-loader {
+	background-color: #fff;
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	.mk-preloader {
+		top:50%;
+	}
+}

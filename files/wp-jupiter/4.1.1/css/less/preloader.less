@@ -1,0 +1,91 @@
+.mk-body-loader-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+.ie .mk-body-loader-overlay {
+  display: none !important;
+}
+.qLlogo {
+  text-align: center;
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -210px;
+  top: 20%;
+}
+@media handheld, only screen and (max-width: 767px) {
+  .qLlogo {
+    top: 5%;
+  }
+}
+
+
+
+
+
+/* 
+** Preloader ****
+*/
+.mk-preloader { 
+  cursor: wait;
+  background-color: transparent;
+  border-radius: 100%;
+  margin: 5% auto;
+  animation: mk_preloader 0.8s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  -moz-animation: mk_preloader 0.8s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  -webkit-animation: mk_preloader 0.8s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  border: 2px solid black;
+  border-top-color: #eee;
+  border-right-color:#eee;
+  border-left-color: #aaa;
+  border-bottom-color:#aaa;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left:50%;
+  margin: -22px 0 0 -22px;
+}
+//sss
+
+ @keyframes mk_preloader {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    };
+}
+
+ @-moz-keyframes mk_preloader {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    };
+}
+
+@-webkit-keyframes mk_preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
+}
+
+
+
+.loop-main-wrapper {
+  position: relative;
+    .mk-preloader{
+    top:200px;
+    }
+  } 

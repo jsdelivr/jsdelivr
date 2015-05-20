@@ -1,0 +1,49 @@
+.abb-skip-to-next { 
+	position: absolute;
+	display: table;
+	left: 50%;
+	cursor: pointer;
+	bottom: 0;
+	margin: -26px 0 26px -26px; // Adjust to center by half width + half width of outer border style
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	opacity: 0.9;
+	.transition(all 0.2s ease-out);
+
+	i {
+		font-size: 16px;
+		display: table-cell;
+		vertical-align: middle;
+		.transition(all 0.2s ease-out);
+	}
+
+	&:hover {
+		opacity: 1;
+		i {
+			.translate3d(0, 5%, 0);
+		}
+	}
+
+	&[data-skin="dark"] {
+		border: 2px solid #333;
+		i {
+			color: #333;
+		}
+	}
+
+	&[data-skin="light"] {
+		border: 2px solid #fff;
+		i {
+			color: #fff;
+		}
+	}
+}
+
+.mk-swipe-slideshow {
+	.mk-swiper-wrapper {
+		height: 0;
+		overflow: hidden;
+	}
+}

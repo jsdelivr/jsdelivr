@@ -1,0 +1,292 @@
+/* Shortcode:Tabs
+-------------------------------------------------------------------- */
+.mk-tabs {
+	margin-bottom: 20px;
+	.mk-tabs-tabs {
+		
+		li {
+			position: relative;
+			display: inline;
+			float: left;
+			margin: 0;
+			padding: 0;
+			@media handheld, only screen and (max-width:767px) {
+				float: none;
+				display: block;
+			}
+			a {
+				display: block;
+				margin: 0;
+				outline: none;
+				color: #444444;
+				white-space: nowrap;
+				font-weight: bold;
+				font-size: 13px;
+				line-height: 24px;
+				cursor: pointer;
+			}
+		}
+		
+	}
+	.mk-tabs-panes {
+		.title-mobile{
+			display: none;
+			color: #444444;
+			white-space: nowrap;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 15px;
+			background-color: rgba(0, 0, 0, 0.05);
+			border-bottom:2px solid rgba(0, 0, 0, 0.1);
+			padding: 5px 10px;
+			
+		}
+		.mk-tabs-pane {
+			position: relative;	
+		}
+	}
+	&.mobile-true {
+		@media handheld, only screen and (max-width:767px) {
+			.mk-tabs-tabs {
+					display: none;
+			}
+			.mk-tabs-panes {
+				.title-mobile {
+						display: block;
+				}
+			.mk-tabs-pane {
+					margin-bottom: 20px;
+			}
+			}
+		}
+	}
+}
+.mk-tabs.default-style {
+	margin-bottom: 20px;
+	.mk-tabs-tabs {
+		position: relative;
+		margin: 0 0 -1px 0 !important;
+		@media handheld, only screen and (max-width:767px) {
+			margin-bottom: 20px !important;
+			margin-left: 0 !important;
+		}
+		li {
+			a{
+				padding: 10px 20px;
+				border: 1px solid #e5e5e5;
+				border-left: none;
+				background-color: #ebebeb;
+				background-color: rgba(0,0,0,0.05);
+			}
+			&:first-child a {
+				border-left: 1px solid #e5e5e5;
+				-webkit-border-top-left-radius: 2px;
+				border-top-left-radius: 2px;
+				-moz-border-radius-topleft: 2px;
+			}
+			&:last-of-type a {
+				-webkit-border-top-right-radius: 2px;
+				border-top-right-radius: 2px;
+				-moz-border-radius-topright: 2px;
+			}
+			&:hover {
+				i{color: #868686 !important;
+				}
+			}
+			&.tab-with-icon a {
+				padding: 10px 20px 10px 14px !important;
+				line-height: 24px;
+				i {
+					margin-right: 8px;
+					color: #b9b9b9;
+					font-size: 16px;
+				}
+			} 
+			&.ui-tabs-active a {
+				padding-bottom: 11px !important;
+				border-bottom: none !important;
+				cursor: default;
+				.gradient(transparent, transparent);
+				@media handheld, only screen and (max-width:767px) {
+					border: 1px solid #e5e5e5 !important;
+				}
+			}
+		}
+	}
+	.mk-tabs-panes {
+		border: 1px solid #e5e5e5;
+		position: relative;
+		margin: 0;
+		@media handheld, only screen and (max-width:767px) {
+			border: 0;
+		}
+		.mk-tabs-pane {
+			padding: 25px 25px 20px;
+			@media handheld, only screen and (max-width:767px) {
+				padding: 0 !important;
+			}
+		}
+	}
+	
+	/* Vertical Style */
+	&.vertical-style {
+		.mk-tabs-tabs {
+			float: left;
+			margin: 0 -1px 0 0 !important;
+			width: 25%;
+			border: 1px solid #e5e5e5;
+			border-right: none;
+			border-bottom: none;
+			li {
+				display: block;
+				float: none;
+				a {
+					border: 1px solid #e5e5e5;
+					border-top: none;
+					border-left: none;
+				}
+				&:last-of-type a {
+					-webkit-border-top-right-radius: 0;
+					border-top-right-radius: 0;
+					-moz-border-radius-topright: 0;
+				}
+				&.ui-tabs-active a {
+					padding-right: 21px !important;
+					border-right: 1px solid #fff;
+					border-bottom: 1px solid #e5e5e5 !important;
+				}
+				a {
+					white-space: normal;
+				}
+			}
+		}
+		.mk-tabs-panes { 
+			float: left;
+			width: 75%;
+			border: none;
+			border: 1px solid #e5e5e5;
+			@media handheld, only screen and (max-width:767px) {
+				float: none !important;
+				width: 100% !important;
+				border: 0 !important;
+			}
+		}
+		&.vertical-right {
+			.mk-tabs-tabs {
+				float: right;
+				margin: 0 0 0 -1px !important;
+				@media handheld, only screen and (max-width:767px) {
+					width: 100%;
+					margin-bottom: 20px !important;
+					float: none;
+				} 
+				li {
+					a{border: 1px solid #e5e5e5;
+						border-top: none;
+						border-left: none;
+					}
+					&.ui-tabs-active a {
+						margin-left: -1px !important;
+						border-bottom: 1px solid #e5e5e5 !important;
+						border-left: none !important;
+					}
+				}
+			}
+			.mk-tabs-panes {
+				float: right;
+			}
+		}
+
+		&.mobile-true {
+			@media handheld, only screen and (max-width:767px) {
+				.mk-tabs-tabs {
+					width: 100%;
+					margin-bottom: 20px !important;
+					margin-right: 0 !important;
+					float: none;
+					li.ui-tabs-active a {
+						border: 1px solid #e5e5e5 !important;
+						margin: 0 !important;
+					}
+				}
+				&.vertical-right .mk-tabs-tabs li.ui-tabs-active a {
+					border: 1px solid #e5e5e5 !important;
+					margin: 0 !important;
+				}
+
+			}
+		}
+	}
+	@media handheld, only screen and (max-width:600px) {
+		&.vertical-style {
+			.mk-tabs-panes {
+				width: 60%;
+			}
+			.mk-tabs-tabs {
+				width: 40%;
+			}
+		}
+		&.horizental-style {
+			.mk-tabs-tabs {
+				border-bottom: 1px solid #e5e5e5;
+				li {
+					display: block;
+					float: none;
+					border-bottom: none;
+					border-left: 1px solid #e5e5e5;
+					a {
+						border-bottom: none !important;
+					}
+					&:first-child a {
+						border-left: none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Simple Style:since v3.0 */
+.mk-tabs.simple-style {
+	.mk-tabs-tabs {
+		margin: 0;
+		border-bottom: 2px solid #eeeeee;
+		li {
+			a{padding: 14px 18px;
+				margin: 0 0 -2px 0;
+				@media handheld, only screen and (max-width:767px) {
+					margin: 0;
+				}
+			}
+			&.tab-with-icon a {
+				line-height: 22px;
+				i {
+					font-size: 20px;
+					margin-right: 6px;
+				}
+			}
+			&.ui-tabs-active a {
+				border-bottom-style: solid;
+				border-bottom-width: 2px;
+			}
+		}
+	}
+	.mk-tabs-panes {
+		padding: 25px 0 15px;
+		.mk-tabs-pane {
+		}
+	}
+	@media handheld, only screen and (max-width:780px) {
+		.mk-tabs-tabs {
+			border-bottom: none !important;
+			li {
+				float: none !important;
+				display: block !important;
+				a {
+					border-bottom: 2px solid #eeeeee;
+				}
+			}
+		}
+	}
+}

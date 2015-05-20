@@ -1,0 +1,75 @@
+.ajax-container {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	margin: 0 auto;
+	.opacity(0);
+}
+.ajax_project {
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-top:none;
+}
+.ajax-controls {
+	border: 1px solid #dddddd;
+	overflow: hidden;
+	margin-top: 20px;
+	a {
+		float: right;
+		width: 37px;
+		height: 37px;
+		text-align: center;
+		color: #bbbbbb;
+		border-left: 1px solid #dddddd;
+		i {
+			font-size: 16px;
+			line-height: 37px;
+		}
+		&:hover {
+			color: #222222;
+		}
+	}
+}
+@media handheld, only screen and (max-width:960px) {
+	.ajax-portfolio-share.portfolio-social-share {
+		text-align: center;
+		.mk-love-holder, .blog-share-container {
+			float: none !important;
+		}
+		&.single-social-section .single-share-box {
+			left: -120px !important;
+			right: auto !important;
+			bottom: -60px !important;
+			width: 180px !important;
+			&:before {
+				display: none !important;
+			}
+		}
+	}
+}
+.portfolio-loader {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	.mk-preloader {
+		position: relative;
+		left:auto;
+		margin: 0;
+		top:auto;
+
+	}
+}
+.portfolio-loader > div {
+	background: #fff;
+	border-radius: 50%;
+	padding: 10px;
+	left: 50%;
+	margin-left: -30px;
+	margin-top: -30px;
+	position: absolute;
+	top: 40%;
+}

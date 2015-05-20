@@ -1,0 +1,122 @@
+.mk-blog-grid-item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	.blog-grid-holder {
+		margin: 0 12px 24px 12px;
+		border: 1px solid #e3e3e3;
+		background-color: #fff;
+	}
+	&.one-column {
+		width: 100%;
+	}
+	&.two-column {
+		width: 50%;
+	}
+	&.three-column {
+		width: 33.1%;
+	}
+	&.four-column {
+		width: 25%;
+		.blog-grid-holder {
+			margin: 0 8px 16px 8px;
+		}
+	}
+	.mk-swipe-slideshow img{
+		width: 100%;
+	}
+	@media handheld, only screen and (max-width:960px) {
+		&.three-column,
+		&.four-column {
+			width: 49.5% !important;
+		}
+	}
+	@media handheld, only screen and (max-width:650px) {
+		&.three-column,
+		&.four-column,
+		&.two-column,
+		&.one-column {
+			width: 100% !important;
+			.blog-grid-holder {
+				margin: 0 0 18px 0 !important;
+			}
+		}
+	}
+	.featured-image {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		img {
+			position: relative;
+			width: 100%;
+		}
+		&:hover {
+			.blog-grid-hover-icon {
+				.opacity(100);
+			}
+		}
+	}
+	.mk-blog-meta {
+		padding: 20px;
+		line-height: 18px;
+	}
+	time {
+		display: block;
+		margin-bottom: 10px;
+		a {
+			color: #999999;
+			font-style: italic;
+			font-size: 11px;
+		}
+	}
+	.the-title {
+		margin-top: 5px;
+		text-transform: uppercase !important;
+		line-height: 18px !important;
+		a {
+			letter-spacing: 1px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	.the-excerpt {
+		margin: 5px 0;
+	}
+	.blog-grid-hover-icon {
+		font-size: 48px;
+		width: 48px;
+		height: 48px;
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%; 
+		margin: -24px 0 0 -24px;
+		.opacity(0);
+	}
+	.blog-grid-footer {
+		position: relative;
+		padding: 15px 20px;
+		border-top: 1px solid #e3e3e3;
+	}
+	.mk-love-holder {
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		span {
+		}
+	}
+
+}
+
+.mk-blog-container.no-border .mk-blog-grid-item .blog-grid-holder {
+	border: transparent;
+}
+.mk-blog-container.no-border .mk-blog-grid-item .blog-grid-holder .blog-grid-footer {
+	border: transparent;
+}

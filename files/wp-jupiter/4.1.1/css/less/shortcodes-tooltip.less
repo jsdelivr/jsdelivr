@@ -1,0 +1,47 @@
+/* Shortcode:Tooltip
+-------------------------------------------------------------------- */
+.mk-tooltip {
+	position: relative;
+	.tooltip-init {
+		cursor: help;
+	}
+	.tooltip-text {
+		position: absolute;
+		bottom: 28px;
+		left: 0;
+		padding: 12px;
+		min-width: 140px;
+		max-width: 230px;
+		color: #fff;
+		font-size: 11px;
+		line-height: 16px;
+		background: #444;
+		&:after {
+			position: absolute;
+			bottom: -5px;
+			left: 15px;
+			display: block;
+			width: 10px;
+			height: 10px;
+			content: "";
+			background: #444;
+			.rotate(45deg);
+		}
+		.opacity(0);
+		// .box-shadow(0 0 6px 3px rgba(0, 0, 0, 0.1));
+	}
+}
+.mk-shortcode-heading.mk-fancy-title {
+	margin-bottom: 18px;
+	font-weight: bold !important;
+	font-size: 14px !important;
+	&.pattern-false {
+		background: none !important;
+		span {
+			background: none !important;
+		}
+	}
+	span {
+		padding-right: 8px;
+	}
+}

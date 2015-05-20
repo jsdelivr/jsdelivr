@@ -1,0 +1,740 @@
+/* Shortcode:Contact Form
+-------------------------------------------------------------------- */
+
+// By default browsers utylize OS settings for form elements. 
+// Turn on inharitance so it would receive styling consistency
+textarea, input, button, select {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+.contact-captcha-invalid {
+    &::-webkit-input-placeholder {
+       color: red !important;
+       letter-spacing: 0 !important;
+    }
+    &::-moz-placeholder,
+    &:-moz-placeholder { /* Firefox 18- */
+       color: red !important;
+       letter-spacing: 0 !important;  
+    }
+    &:-ms-input-placeholder {  
+       color: red !important;
+       letter-spacing: 0 !important;  
+    }
+}
+.contact-captcha-valid {
+    &::-webkit-input-placeholder {
+       color: rgb(0, 130, 0) !important;
+       letter-spacing: 0 !important;
+    }
+    &::-moz-placeholder,
+    &:-moz-placeholder { /* Firefox 18- */
+       color: rgb(0, 130, 0) !important;
+       letter-spacing: 0 !important;  
+    }
+    &:-ms-input-placeholder {  
+       color: rgb(0, 130, 0) !important;
+       letter-spacing: 0 !important;  
+    }
+}
+
+.mk-contact-form-wrapper {
+	position: relative;
+	margin-bottom: 20px;
+	&.classic-style {
+		.mk-form-row {
+			position: relative;
+			margin-bottom: 10px;
+			.captcha-image {
+				max-height: 40px;
+			}
+			.captcha-change-image {
+				font-size: 10px;
+				line-height: 1;
+			}
+			i {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				color: #909090;
+				&:before {
+					font-size: 20px;
+				}
+			}
+			.text-input {
+				padding: 10px 10px 10px 45px;
+				width: 70%;
+				background-color: #fff;
+				background-image: url(../../images/contact-inputs-bg.png);
+				background-position: left top;
+				background-repeat: repeat-y;
+			}
+			.mk-textarea {
+				padding: 10px 10px 10px 45px;
+				width: 100%;
+				height: 230px;
+				background-color: #fff;
+				background-image: url(../../images/contact-inputs-bg.png);
+				background-position: left top;
+				background-repeat: repeat-y;
+			}
+			button {
+				margin-top: 10px;
+				padding: 17px 30px 16px;
+				font-weight: bold;
+				font-size: 12px;
+			}
+		}
+		.mk-form-row:last-of-type {
+			i {
+				color: inherit;
+			}
+		}
+	}
+
+	&.modern-style {
+		.mk-form-row {
+			position: relative;
+			margin-bottom: 12px;
+			text-align: center;
+			.text-input,
+			.mk-textarea {
+				border: 1px solid transparent;
+				font-size: 14px;
+				.box-shadow(none) !important;
+				.border-radius(0) !important;
+			}
+			.text-input {
+				padding: 14px;
+				width: 100%;
+				text-align: center;
+			}
+			.mk-textarea {
+				padding: 15px;
+				width: 100%;
+				height: 200px;
+				text-align: center;
+			}
+			.captcha-image {
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-height: 47px;
+			}
+			.captcha-change-image {
+				position: absolute;
+				top: 15px;
+				right: 10px;
+				text-align: right;
+				font-size: 10px;
+				line-height: 1;
+			}
+
+		}
+		&.contact-light {
+			.captcha-change-image {
+				color: rgb(150,150,150);
+			}
+			.text-input,
+			.mk-textarea {
+				background-color: rgba(255,
+				255,
+				255,
+				0.6);
+				color: #252525;
+				&::-webkit-input-placeholder {
+					color: #252525;
+				}
+				&:-ms-input-placeholder {
+					color: #252525;
+				}
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+					color: #252525;
+				}
+				&:focus {
+					background-color: rgba(0,
+					0,
+					0,
+					0.6);
+					color: #fff;
+					&::-webkit-input-placeholder {
+						color: #fff;
+					}
+					&:-ms-input-placeholder {
+						color: #fff;
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+						color: #fff;
+					}
+				}
+			}
+		}
+		&.contact-dark {
+			.captcha-change-image {
+				color: rgb(150,150,150);
+			}
+			.text-input,
+			.mk-textarea {
+				background-color: rgba(0,
+				0,
+				0,
+				0.8);
+				color: #fff;
+				&::-webkit-input-placeholder {
+					color: #fff;
+				}
+				&:-ms-input-placeholder {
+					color: #fff;
+				}
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+					color: #fff;
+				}
+				&:focus {
+					background-color: rgba(255,
+					255,
+					255,
+					0.6);
+					color: #252525;
+					&::-webkit-input-placeholder {
+						color: #252525;
+					}
+					&:-ms-input-placeholder {
+						color: #252525;
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+						color: #252525;
+					}
+				}
+			}
+		}
+		.mk-invalid {
+			border: 1px solid #ff0000 !important;
+		}
+	}
+
+	/* Outline Style */
+	&.outline-style {
+		.mk-form-row {
+			width:100%;
+			position: relative;
+			text-align: center;
+			.captcha-block {
+				position: absolute;
+				width: 50%;
+				right: 0;
+				top: 0;
+
+				a,
+				img { 
+					display: inline-block; 
+					text-align: left;
+					line-height: 1;
+					font-size: 10px;
+				}
+				a {
+					color: rgb(150,150,150);
+					display: inline-block;
+					padding: 17px 0;
+				}
+				img {
+					height: 50px;
+					max-width: 50%;
+					position: relative;
+					top: -5px;
+				}
+			}
+			.text-input,
+			.mk-textarea {
+				margin: 0;
+				font-size: 13px;
+				background-color: transparent;
+				.border-radius(0);
+				outline: none;
+				.transition(all 0.2s);
+				padding: 18px;	
+
+				&::-webkit-input-placeholder {
+				   font-size: 12px;
+				   letter-spacing: 2px;
+				   text-transform: uppercase;
+				}
+				&:-ms-input-placeholder {
+				   font-size: 12px;
+				   letter-spacing: 2px;
+				   text-transform: uppercase;
+				}
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+				   font-size: 12px;
+				   letter-spacing: 2px;
+				   text-transform: uppercase;
+				}
+				
+				&:focus {
+					&::-webkit-input-placeholder {
+					   font-size: 12px;
+					   letter-spacing: 2px;
+					   text-transform: uppercase;
+					}
+					&:-ms-input-placeholder {
+					   font-size: 12px;
+					   letter-spacing: 2px;
+					   text-transform: uppercase;
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+					   font-size: 12px;
+					   letter-spacing: 2px;
+					   text-transform: uppercase;
+					}
+				}
+
+			}
+			.text-input.full {
+				width:100%;	
+			}
+			.text-input.half {
+				width:50%;	
+			}
+			.text-input.two-third {
+				width:33.3333%;
+			}
+			.mk-textarea {
+				width: 100%;
+				height: 200px;
+				text-align: left;
+			}
+			.contact-outline-submit {
+				width: 100%;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				background: transparent;
+				outline: none;
+				padding: 18px;
+				font-size: 13px;
+				font-weight: bold;
+				.transition(all 0.15s);
+
+			}
+
+
+		}
+
+		&.contact-dark {
+			.text-input,
+			.mk-textarea {
+				color: #222;
+				border:1px solid #333;
+				.box-shadow(0 0 0 1px #333);
+
+				&::-webkit-input-placeholder {
+				   color: rgba(0,0,0, 0.8);
+				}
+				&:-ms-input-placeholder {
+				   color: rgba(0,0,0, 0.8);
+				}
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+				   color: rgba(0,0,0, 0.8);
+				}
+
+				&:focus {
+					background-color: rgba(0,0,0,0.1);
+					color: #222;
+
+					&::-webkit-input-placeholder {
+					   color: rgba(0,0,0, 0.4);
+					}
+					&:-ms-input-placeholder {
+					   color: rgba(0,0,0, 0.4);
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+					   color: rgba(0,0,0, 0.4);
+					}
+				}
+			}
+
+			.contact-outline-submit {
+				color:#222;
+				border: 1px solid #333;
+				.box-shadow(0 0 0 1px #333);
+				
+				&:hover {
+					background: rgba(0,0,0,0.3);
+				}
+
+			}
+
+			.mk-contact-loading {
+				color: #222;
+			}
+			.mk-contact-success {
+				color: #222;
+			}
+
+		}
+
+		&.contact-light {
+			.text-input,
+			.mk-textarea {
+				position: relative;
+				color: #fff;
+				border:1px solid #e5e5e5;
+				.box-shadow(0 0 0 1px #e5e5e5);
+
+
+				&::-webkit-input-placeholder {
+				   color: rgba(255, 255, 255, 0.7);
+				}
+				&:-ms-input-placeholder {
+				   color: rgba(255, 255, 255, 0.7);
+				}
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+				   color: rgba(255, 255, 255, 0.7);
+				}
+
+				&:focus {
+					background-color: rgba(255,255,255,0.1);
+					color: #fff;
+
+					&::-webkit-input-placeholder {
+					   color: rgba(255, 255, 255, 0.4);
+					}
+					&:-ms-input-placeholder {
+					   color: rgba(255, 255, 255, 0.4);
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+					   color: rgba(255, 255, 255, 0.4);
+					}
+				}
+			}
+
+			.contact-outline-submit {
+				color:#fff;
+				border: 1px solid #e5e5e5;
+				.box-shadow(0 0 0 1px #e5e5e5);
+
+				&:hover {
+					background: rgba(255,255,255,0.4);
+				}
+
+			}
+
+			.mk-contact-loading {
+				color: #fff;
+			}
+			.mk-contact-success {
+				color: #fff;
+			}
+
+		}
+
+		.mk-contact-loading {
+			right: 15px;
+			bottom: 16px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 1;
+			box-sizing: border-box;
+		}
+		.mk-contact-success {
+			right: 15px;
+			bottom: 20px;
+			width: 20px;
+			height: 20px;
+			font-size: 20px;
+		}
+
+		.mk-invalid {
+			border: 1px solid #ff0000 !important;
+			.box-shadow(0 0 0 1px #ff0000) !important;
+		}
+	}
+
+	/* Corporate Style */
+	&.corporate-style {
+		.mk-form-row {
+			width:100%;
+			position: relative;
+			text-align: center;
+
+
+			.captcha-image {
+				max-height: 54px;
+				position: absolute;
+				top: 4px;
+				right: 0;
+				z-index: 10;
+			}
+			.captcha-change-image {
+				font-size: 10px;
+				line-height: 1;
+				display: block;
+				text-align: right;
+				padding: 10px 0;
+			}
+			.mk-form-third {
+				padding: 5px;
+				width:33.3333%;
+				display: inline-block;
+			}
+			.mk-form-half {
+				padding: 5px;
+				width: 50%;
+				display: inline-block;
+			}
+			.mk-form-full {
+				padding: 5px;
+			}
+
+			.text-input,
+			.mk-textarea {
+				margin: 0;
+				font-size: 13px;
+				.border-radius(0);
+				outline: none;
+				.transition(all 0.2s);
+				padding: 18px;	
+				width: 100%;
+				position: relative;
+				border:1px solid #f6f6f6;
+
+				&::-webkit-input-placeholder,
+				&:-ms-input-placeholder,
+				&::-moz-placeholder,
+				&:-moz-placeholder {
+				   font-size: 12px;
+				   letter-spacing: 2px;
+				}
+
+				&:focus {
+					background: red;
+					&::-webkit-input-placeholder {
+					   .opacity(80);
+					}
+					&:-ms-input-placeholder {
+					   .opacity(80);
+					}
+					&::-moz-placeholder,
+					&:-moz-placeholder {
+					   .opacity(80);
+					}
+				}
+
+			}
+			.mk-textarea {
+				width: 100%;
+				height: 200px;
+				text-align: left;
+			}
+			.contact-submit {
+				text-transform: uppercase;
+				outline: none;
+				padding: 20px 28px;
+				font-size: 12px;
+				font-weight: bold;
+				.transition(all 0.15s);
+				border: 1px solid #e5e5e5;
+				float: right;
+				margin-right: 5px;
+				margin-top: 5px;
+
+				i {
+					position: relative;
+					left: 15px;
+				}
+			}
+		}
+
+
+		.mk-contact-loading {
+			right: 15px;
+			bottom: 16px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 1;
+			box-sizing: border-box;
+		}
+		.mk-contact-success {
+			right: 15px;
+			bottom: 20px;
+			width: 20px;
+			height: 20px;
+			font-size: 20px;
+		}
+
+		.state-success {
+			right: 30px !important;
+		}
+
+		.mk-invalid {
+			border: 1px solid #ff0000 !important;
+			.box-shadow(0 0 0 1px #ff0000) !important;
+		}
+	}
+
+}
+.mk-contact-loading {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	display: none;
+	color: #c3c3c3;
+	font-size: 16px;
+}
+.mk-contact-success {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	display: none;
+	width: 24px;
+	height: 24px;
+	color: #90b64d;
+	font-size: 24px;
+}
+.mk-invalid {
+	border: 1px solid #ff0000;
+}
+.mk-contactinfo-shortcode {
+	margin-bottom: 20px;
+}
+@media handheld, only screen and (max-width:960px) {
+	.mk-contact-form-shortcode {
+		.contact-form-spliter {
+			float: none !important;
+			margin-bottom: 6px;
+			width: 100% !important;
+		}
+		button {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+
+// Progress button 
+
+.mk-progress-button {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 3px;
+	text-transform: uppercase;
+}
+ 
+.mk-progress-button[disabled],
+.mk-progress-button[disabled].state-loading {
+    cursor: default;
+}
+ 
+.mk-progress-button .mk-progress-button-content,  {
+    position: relative;
+    display: block;
+}
+ 
+.mk-progress-button .state-success,
+.mk-progress-button .state-error  {
+    position: absolute;
+    right: 10px;
+    top:50%;
+    margin-top:-8px;
+    display:block;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.mk-progress-button.medium .state-success,
+.mk-progress-button.medium .state-error {
+	right: 20px;
+	font-size: 14px;
+}
+ 
+.notransition {
+    transition: none !important;
+}
+ 
+.mk-progress-button .mk-progress-inner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0;
+    transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+}
+
+.outline-btn-dark .mk-progress-inner, 
+.flat-dimension .mk-progress-inner, 
+.outline-btn-light:hover .mk-progress-inner, 
+// ! below lines are overwriting the above and actually invert the colors. This makes the progress bar invisible for most scenarios. If needs to be redone for some scenario, asign it to Bart
+// .contact-dark .contact-outline-submit:hover .mk-progress-inner,
+// .contact-light .contact-outline-submit .mk-progress-inner,
+.mk-contact-button .mk-progress-inner {
+    background: rgba(0,0,0,.5);
+}
+
+.outline-btn-light .mk-progress-inner, 
+.outline-btn-dark:hover .mk-progress-inner, 
+// .contact-dark .contact-outline-submit .mk-progress-inner,
+// .contact-light .contact-outline-submit:hover .mk-progress-inner,
+.mk-contact-button:hover .mk-progress-inner {
+    background: rgba(255,255,255,.5);
+}
+
+.mk-progress-button[data-horizontal] .mk-progress-inner {
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    transition: width 0.3s, opacity 0.3s;
+    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+}
+ 
+.mk-progress-button[data-vertical] .mk-progress-inner {
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s, opacity 0.3s;
+}
+
+/* move-up */
+/* ====================== */
+
+.mk-progress-button[data-style="move-up"] {
+	overflow: visible;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.mk-progress-button[data-style="move-up"] .mk-progress-button-content {
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+}
+
+.mk-progress-button[data-style="move-up"] .mk-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.mk-progress-button[data-style="move-up"].state-loading .mk-progress-button-content {
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}

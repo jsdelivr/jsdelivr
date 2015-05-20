@@ -1,0 +1,691 @@
+.mk-employees {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &.simple-style, &.classic-style {
+        &.one-column .mk-employee-item {
+            width: 100%;
+            padding: 0 0 50px;
+        }
+        &.two-column .mk-employee-item {
+            width: 50%;
+            padding: 0 40px 70px 40px;
+        }
+        &.three-column .mk-employee-item {
+            width: 33.33%;
+            padding: 0 30px 70px 30px;
+        }
+        &.four-column .mk-employee-item {
+            width: 25%;
+            padding: 0 25px 70px 25px;
+        }
+        &.five-column .mk-employee-item {
+            width: 20%;
+            padding: 0 25px 60px 25px;
+        }
+    }
+    /* ==========================================================================
+   Classic Style
+   ========================================================================== */
+    
+    &.classic-style {
+        // &.one-column .team-thumbnail{
+        // 	padding: 0 40px;
+        // }
+        // &.two-column .team-thumbnail{
+        // 	padding: 0 40px;
+        // }
+        // &.three-column .team-thumbnail{
+        // 	padding: 0 20px;
+        // }
+        // &.four-column .team-thumbnail{
+        // 	padding: 0 10px;
+        // }
+        // &.five-column .team-thumbnail{
+        // 	padding: 0 10px;
+        // }
+        .mk-employee-item {
+            &:hover .mk-employeee-networks {
+                opacity: 1;
+                .transition(all 0.3s 0.1s ease-out);
+            }
+            &:hover .employee-hover-overlay {
+                background: rgba(0, 0, 0, 0.3);
+                .transform(rotate(45deg) scale(1.5, 2));
+                // opacity: 1;
+            }
+        }
+        .team-thumbnail {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            .employee-hover-overlay {
+                // z-index: 100;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                // background:rgba(0,0,0,0);
+                // .rotate(45deg);
+                .transform(rotate(45deg) scale(0, 2));
+                .transition(all 0.3s ease-in-out);
+                pointer-events: none;
+            }
+            img {
+                .backface-visibility();
+            }
+        }
+        .mk-employeee-networks {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            text-align: center;
+            width: 100%;
+            opacity: 0;
+            .transition(all 0.3s ease-out);
+            li {
+                display: inline-block;
+                margin: 0 auto;
+                a {
+                    display: block;
+                    margin: 0 6px;
+                    width: 48px;
+                    height: 48px;
+                    .border-radius(50%);
+                    line-height: 44px;
+                    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+                    text-align: center;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    vertical-align: middle;
+                    .transition(all 0.1s ease-out);
+                    i {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                    &:hover {
+                        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6) inset;
+                    }
+                }
+            }
+        }
+        .team-member-name {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .team-member-position {
+            font-size: 14px;
+            color: #888;
+            font-weight: 600;
+            font-style: italic;
+            text-transform: none;
+        }
+        .team-member-desc {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        /* Gets social links smaller for 3+ columns */
+        
+        &.five-column .mk-employeee-networks li a, &.four-column .mk-employeee-networks li a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+    /* ==========================================================================
+   Simple Style
+   ========================================================================== */
+    
+    &.simple-style {
+        &.one-column .team-thumbnail.rounded-true {
+            padding: 0 40px;
+        }
+        &.two-column .team-thumbnail.rounded-true {
+            padding: 0 60px;
+        }
+        &.three-column .team-thumbnail.rounded-true {
+            padding: 0 40px;
+        }
+        &.four-column .team-thumbnail.rounded-true {
+            padding: 0 30px;
+        }
+        &.five-column .team-thumbnail.rounded-true {
+            padding: 0 20px;
+        }
+        .mk-employee-item {
+            text-align: center;
+            display: inline-block;
+            float: left;
+            .team-thumbnail {
+                &.rounded-true {
+                    .border-radius(50%);
+                    overflow: hidden;
+                    img {
+                        position: relative;
+                        .border-radius(50%);
+                    }
+                }
+                img {
+                    filter: grayscale(100%);
+                    /* Current draft standard */
+                    
+                    -webkit-filter: grayscale(100%);
+                    /* New WebKit */
+                    
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    /* Not yet supported in Gecko, Opera or IE */
+                    
+                    filter: gray;
+                    /* IE */
+                    
+                    -webkit-filter: grayscale(1);
+                    /* Old WebKit */
+                    
+                    .transition(all 0.3s);
+                    .backface-visibility();
+                }
+            }
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                    /* Current draft standard */
+                    
+                    -webkit-filter: grayscale(0);
+                    /* New WebKit */
+                    
+                    -moz-filter: grayscale(0);
+                    -ms-filter: grayscale(0);
+                    -o-filter: grayscale(0);
+                    /* Not yet supported in Gecko, Opera or IE */
+                    
+                    filter: normal;
+                    /* IE */
+                    
+                    -webkit-filter: grayscale(0);
+                    /* Old WebKit */
+                }
+            }
+            .team-member-name {
+                color: #333333;
+            }
+            .team-member-position {
+                color: #777;
+                letter-spacing: 1px;
+            }
+            .team-member-desc {}
+        }
+    }
+    /* ==========================================================================
+   Boxed Style
+   ========================================================================== */
+    
+    &.boxed-style {
+        &.one-column .mk-employee-item {
+            width: 100%;
+            margin: 55px 0 20px;
+        }
+        &.two-column .mk-employee-item {
+            width: 48.5%;
+            margin: 55px 0 3% 3%;
+        }
+        &.three-column .mk-employee-item {
+            width: 31.333%;
+            margin: 55px 0 3% 3%;
+        }
+        &.four-column .mk-employee-item {
+            width: 23.4%;
+            margin: 55px 0 2% 2%;
+        }
+        &.five-column .mk-employee-item {
+            width: 18.4%;
+            margin: 55px 0 0 2%;
+        }
+        .mk-employee-item {
+            padding: 60px 35px 36px;
+            // .border-radius(2px);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            background-color: #f4f4f4;
+            background-color: rgba(0, 0, 0, 0.03);
+            position: relative;
+            .team-member-name {
+                color: #333333;
+            }
+            .mk-employeee-networks {
+                li a {
+                    padding: 0 8px;
+                }
+            }
+            &.employee-item-blur {
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                .team-thumbnail {
+                    border: 3px solid #fff !important;
+                }
+                .team-member-position {
+                    color: #fff;
+                    font-weight: bold;
+                }
+                .mk-employeee-networks {
+                    i {
+                        color: #fff !important;
+                    }
+                    a:hover i {
+                        color: #fff !important;
+                    }
+                }
+            }
+            &.em-first-column {
+                margin-left: 0 !important;
+            }
+            .team-thumbnail {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -45px;
+                left: 50%;
+                margin-left: -50px;
+                overflow: hidden;
+                border: 2px solid #c6c6c6;
+                .border-radius(50%);
+                overflow: hidden;
+                img {
+                    position: relative;
+                    .border-radius(50%);
+                }
+            }
+            .team-member-name {
+                margin-top: 10px;
+                letter-spacing: 1px;
+            }
+            .team-member-position {
+                letter-spacing: 1px;
+            }
+            .team-member-desc {}
+        }
+    }
+    // .hover-overlay {
+    // 	position:absolute;
+    // 	width:100%;
+    // 	height: 100%;
+    // 	top: 0;
+    //     background:rgba(0,0,0,0);
+    //     .transition(all 0.3s ease-out);
+    // }
+}
+/* ==========================================================================
+   GLOBAL RULLSETS
+   ========================================================================== */
+
+.mk-employee-item {
+    text-align: center;
+    display: inline-block;
+    float: left;
+    .team-thumbnail {
+        margin: 0 auto 25px;
+        overflow: hidden;
+    }
+    .team-member-name {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        display: block;
+        font-weight: bold;
+    }
+    .team-member-position {
+        font-size: 12px;
+        text-transform: uppercase;
+        display: block;
+    }
+    .team-member-desc {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+@media handheld, only screen and (max-width: 960px) {
+    .mk-employees.simple-style, .mk-employees.classic-style {
+        &.one-column, &.two-column, &.three-column {
+            .mk-employee-item {
+                display: block;
+                margin: 0 0px 50px;
+                width: 100%;
+                float: auto;
+            }
+            .team-thumbnail {
+                float: left;
+                width: 30%;
+                display: inline-block;
+            }
+            .team-info-wrapper {
+                float: left;
+                display: inline-block;
+                width: 65%;
+                padding: 10px 0 0 20px;
+            }
+        }
+    }
+    .mk-employees.simple-style, .mk-employees.classic-style {
+        &.four-column, &.five-column {
+            .mk-employee-item {
+                width: 48% !important;
+                padding: 0 20px 30px;
+            }
+        }
+    }
+    .boxed-style {
+        .mk-employee-item {
+            display: block;
+            margin-left: 0 !important;
+            width: 100% !important;
+            float: auto;
+            padding: 60px 10px 36px !important;
+        }
+    }
+    .mk-employees.classic-style {
+        &.one-column, &.two-column, &.three-column {
+            .team-thumbnail {
+                width: 50%;
+            }
+            .team-info-wrapper {
+                width: 45%;
+            }
+        }
+    }
+}
+@media handheld, only screen and (max-width: 767px) {
+    // .simple-style {
+    // 	.mk-employee-item {
+    // 		display: block;
+    // 		margin: 0 0px 50px;
+    // 		width: 100% !important;
+    // 		float: auto !important;
+    // 	}
+    // 	.team-thumbnail {
+    // 		float: none !important;
+    // 		display: block;
+    // 	}
+    // 	.team-info-wrapper {
+    // 		float: none !important;
+    // 		width: 100% !important;
+    // 		display: block !important;
+    // 		padding:0 !important;
+    // 	}
+    // }
+    .mk-employees.classic-style {
+        &.one-column, &.two-column, &.three-column, &.four-column, &.five-column {
+            .mk-employee-item {
+                display: block;
+                margin: 0 0px 50px;
+                width: 100% !important;
+                float: auto !important;
+                padding: 0 10px 30px !important;
+            }
+            .team-thumbnail {
+                width: 100%;
+                float: none !important;
+                display: block;
+            }
+            .team-info-wrapper {
+                float: none !important;
+                width: 100% !important;
+                display: block;
+            }
+        }
+    }
+    .mk-employees.simple-style {
+        &.one-column, &.two-column, &.three-column, &.four-column, &.five-column {
+            .mk-employee-item {
+                display: block;
+                margin: 0 0px 50px;
+                width: 100% !important;
+                float: auto !important;
+            }
+            .team-thumbnail {
+                width: 60%;
+                float: none !important;
+                display: block;
+            }
+            .team-info-wrapper {
+                float: none !important;
+                width: 100% !important;
+                display: block;
+                padding: 0 !important;
+            }
+        }
+    }
+}
+@media handheld, only screen and (max-width: 550px) {
+    .mk-employees.simple-style {
+        &.four-column, &.five-column {
+            .mk-employee-item {
+                width: 100% !important;
+                padding: 0 10px 10px;
+            }
+        }
+    }
+    .mk-employees.simple-style {
+        &.one-column, &.two-column, &.three-column, &.four-column, &.five-column {
+            .team-thumbnail {
+                width: 80%;
+            }
+        }
+    }
+}
+.mk-employeee-networks {
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        list-style: none;
+        display: inline-block;
+        a {
+            display: block;
+            line-height: 4px;
+            margin: 10px 9px 0 0;
+            i {
+                font-size: 16px;
+                color: #aaa;
+            }
+            &:hover i {
+                .transition(all 0.2s);
+                color: #797979;
+            }
+        }
+    }
+}
+.mk-single-employee {
+    .single-employee-sidebar, .single-employee-hero-title, .single-employee-content {
+        .employees-featured-image {
+            @media handheld, only screen and (max-width: 767px) {
+                text-align: center
+            }
+        }
+        .team-member-name, .team-member-position {
+            display: block;
+            text-align: center;
+        }
+        .team-member-name {
+            margin-top: 40px;
+            font-weight: bold;
+            color: #222;
+            font-size: 22px;
+        }
+        .team-member-position {
+            margin-top: 15px;
+            font-weight: normal;
+            color: #777;
+            font-size: 14px;
+        }
+        .mk-employeee-networks {
+            text-align: center;
+            margin-top: 15px;
+            a {
+                border: 1px solid #b2b2b2;
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                .border-radius(50%);
+                color: #222;
+                -webkit-transition: background-color .2s ease, border-color .2s ease;
+                -moz-transition: background-color .2s ease, border-color .2s ease;
+                -ms-transition: background-color .2s ease, border-color .2s ease;
+                -o-transition: background-color .2s ease, border-color .2s ease;
+                transition: background-color .2s ease, border-color .2s ease;
+                > i {
+                    display: block;
+                    line-height: 32px;
+                    color: #222;
+                    -webkit-transition: color .2s ease;
+                    -moz-transition: color .2s ease;
+                    -ms-transition: color .2s ease;
+                    -o-transition: color .2s ease;
+                    transition: color .2s ease;
+                }
+                &:hover {
+                    background-color: #222;
+                    color: #fff;
+                    border-color: #222;
+                    > i {
+                        color: #fff
+                    }
+                }
+            }
+        }
+    }
+    .single-employee-sidebar {
+        width: 275px;
+        //margin-right: 70px;
+        display: inline-block;
+        float: left;
+        @media handheld, only screen and (max-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+            display: block;
+            float: none;
+            margin-bottom: 50px;
+        }
+    }
+    .single-employee-content {
+        padding-left: 345px;
+        @media handheld, only screen and (max-width: 767px) {
+            padding-left: 0;
+        }
+    }
+    &.layout-style1 {
+        .single-employee-sidebar {
+            .employees-featured-image img {
+                .border-radius(50%);
+            }
+        }
+    }
+    &.layout-style2 {
+        .single-employee-content {
+            .team-member-name, .team-member-position, .mk-employeee-networks {
+                text-align: left;
+                @media handheld, only screen and (max-width: 767px) {
+                    text-align: center;
+                }
+            }
+            .mk-employeee-networks {
+                margin-bottom: 65px;
+                @media handheld, only screen and (max-width: 767px) {
+                    margin-bottom: 50px;
+                }
+                a {
+                    text-align: center;
+                }
+            }
+            .team-member-name {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.layout-style3 {
+        margin: 0 !important;
+        .single-employee-hero-title {
+            text-align: center;
+            padding: 85px 0;
+            margin-bottom: 20px;
+            .employees-featured-image img {
+                .border-radius(50%);
+            }
+            .employees-featured-image {
+                display: inline-block;
+                > img {
+                    display: block;
+                }
+            }
+            &.skin-light {
+                .team-member-name {
+                    color: #fff;
+                }
+                .team-member-position {
+                    color: #fff;
+                }
+                .mk-employeee-networks {
+                    a {
+                        border: 1px solid #fff;
+                        color: #fff;
+                        > i {
+                            color: #fff;
+                        }
+                        &:hover {
+                            background-color: #fff;
+                            color: #222;
+                            border-color: #fff;
+                            > i {
+                                color: #222
+                            }
+                        }
+                    }
+                }
+            }
+            &.skin-dark {
+                .team-member-name {
+                    color: #222;
+                }
+                .team-member-position {
+                    color: #222;
+                }
+                .mk-employeee-networks {
+                    a {
+                        border: 1px solid #222;
+                        color: #222;
+                        > i {
+                            color: #222;
+                        }
+                        &:hover {
+                            background-color: #222;
+                            color: #fff;
+                            border-color: #222;
+                            > i {
+                                color: #fff
+                            }
+                        }
+                    }
+                }
+            }
+            @media handheld, only screen and (max-width: 960px) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+        }
+        .single-employee-content {
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+/* Shortcode:Fancy Title
+-------------------------------------------------------------------- */
+.mk-fancy-title {
+	margin-bottom: 18px;
+	&.pattern-style {
+		background: url(../../images/fancy-title-pattern.png) left center repeat-x;
+		p {
+			display: inline;
+		}
+	}
+	&.simple-style span {
+		background: transparent !important;
+	}
+	p {
+		margin-bottom: 0 !important;
+	}
+}
+@media handheld, only screen and (max-width:767px) {
+	.mk-fancy-title {
+		text-align: center !important;
+		&.pattern-style {
+			span {
+				padding: 0 8px !important;
+			}
+		}
+		&.mk-force-responsive {
+			font-size: 36px !important;
+		}
+	}
+}
+.mk-title-box {
+	line-height: 100%;
+	p {
+		margin: 0;
+	}
+	span {
+		padding: 4px 0;
+	}
+}

@@ -1,0 +1,87 @@
+/* Shortcode:FAQ
+-------------------------------------------------------------------- */
+.mk-faq-container {
+	margin-bottom: 20px;
+	&.fancy-style-wrapper {
+		border-top: 1px solid #ececec;
+		.mk-faq-toggle {
+			margin-bottom: 0 !important;
+			border-top: none !important;
+		}
+		.mk-faq-toggle {
+			padding: 0;
+		}
+		.mk-toggle-title {
+			padding: 18px;
+			background: transparent;
+			.transition(all 0.2s);
+
+			&:hover {
+				background: rgb(100, 100, 100);
+				background: rgba(0, 0, 0, 0.02);				
+			}
+
+			&:before {
+				margin: 10px 4px;
+				color: rgba(0, 0, 0, 0.3);
+				font-size: 10px !important;
+			}
+				i {
+					color: rgba(0, 0, 0, 0.2) !important;
+					font-size:16px !important;
+				}
+		}
+
+	}
+}
+.mk-faq-toggle {
+	display: block;
+	width: 100%;
+	padding: 4px 10px;
+	.mk-toggle-title {
+		font-weight: bold;
+
+		i{
+			color: #d6d6d6 !important;
+			// font-size:12px;
+		}
+		&:before {
+			font-size: 10px !important;
+		}
+	}
+
+	.mk-toggle-pane {
+		padding:20px;
+	}
+}
+.filter-faq {
+	margin-bottom: 30px;
+	text-align: center;
+	ul {
+		display: inline-block;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+				display: inline-block;
+				a {
+					padding: 12px 14px;
+					line-height: 13px;
+					font-size: 13px;
+					color:#333;
+					color:rgb(50,50,50, 0.8);
+					display: block;
+					letter-spacing: 1px;
+					&.current {
+						background-color: rgb(150,150,150);
+						background-color: rgba(0,0,0,0.08);
+						.border-radius(2px);
+					}
+					&:hover {
+					} 
+				}
+			}
+	}
+
+}

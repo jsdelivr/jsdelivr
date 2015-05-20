@@ -1,0 +1,79 @@
+.mk-portfolio-masonry-item {
+	position: relative;
+	width: 12.44%;
+	overflow: hidden;
+	
+	&.size_two_x_x, &.size_two_x_two_x {
+		width: 24.88%;
+	}
+
+	&.size_three_x_x, &.size_three_x_two_x {
+		width: 37.32%;	
+	}
+
+	&.size_four_x_x, &.size_four_x_two_x {
+		width: 49.76%;
+	}
+
+	.item-holder {
+		margin: 0;
+	}
+	@media handheld, only screen and (max-width:1280px) {
+		&.size_x_x, &.size_x_two_x,
+		&.size_three_x_x,
+		&.size_three_x_two_x{
+			width: 24.88%;
+		}
+
+		&.size_two_x_x, &.size_two_x_two_x {
+			width: 24.88%;
+		}
+		&.size_four_x_x, 
+		&.size_four_x_two_x,
+		&.size_two_x_x, 
+		&.size_two_x_two_x{
+			width: 49.76%;
+		}
+	}
+	@media handheld, only screen and (max-width:1140px) {
+		&.size_x_x, &.size_x_two_x,
+		&.size_two_x_x, &.size_two_x_two_x,
+		&.size_three_x_x,
+		&.size_three_x_two_x{
+			width: 49.76%;
+		}
+
+		&.size_two_x_x, &.size_two_x_two_x {
+			width: 49.76%;
+		}
+		&.size_four_x_x, &.size_four_x_two_x {
+			width: 100%;
+		}
+	}
+
+	@media handheld, only screen and (max-width:850px) {
+		&.size_x_x, &.size_x_two_x {
+			width: 49.76%;
+		}
+		&.size_two_x_x, &.size_two_x_two_x {
+			width: 100%;
+		}
+		&.size_three_x_x, &.size_three_x_two_x {
+			width: 100%;
+		}
+		&.size_four_x_x, &.size_four_x_two_x {
+			width: 100%;
+		}
+	}
+	@media handheld, only screen and (max-width:600px) {
+		width: 100% !important;
+	}
+	.featured-image {
+		line-height: 4px;
+		position: relative;
+		.item-featured-image {
+			max-width: 100.7%;
+			width: 100.7%;
+		}
+	}
+}

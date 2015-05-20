@@ -1,0 +1,64 @@
+.mk-event-countdown {
+	margin-bottom: 30px !important;
+	.mk-event-title {
+		display: block;
+		margin-bottom: 25px;
+		color: #999999;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		color:#333;
+	}
+}
+
+.mk-event-countdown-ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	width: 100%;
+	
+	li {
+		display: inline-block;
+		margin: 0 0 15px 15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 20%;
+		border: 2px solid rgba(0,0,0,0.1);
+		padding: 20px 4px;
+		.timestamp {
+			position: relative;
+			display: block;
+			font-size: 70px;
+			font-weight: 300;
+			padding: 18px 5px 35px 5px;
+			color: #555;
+			text-shadow: 1px 1px #fff;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width:30px;
+				height: 3px;
+				letter-spacing: 2px;
+				background: #dddddd;
+				left:50%;
+				.translate(-50%, 66px);
+			}
+		}
+		.timeRef {
+			color: #898989;
+			display: block;
+			font-size: 12px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			padding-top:20px;
+		}
+		@media handheld, only screen and (max-width:750px) {
+			width: 90%;
+			display: block;
+			margin: 0 auto 15px;
+		}
+	}
+}

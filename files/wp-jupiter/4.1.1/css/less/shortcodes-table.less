@@ -1,0 +1,53 @@
+/* Shortcode:Tables
+-------------------------------------------------------------------- */
+.mk-fancy-table {
+	overflow: hidden;
+	margin-bottom: 20px;
+	@media handheld, only screen and (max-width:767px) {
+		overflow-x: scroll !important;
+	}
+}
+.mk-fancy-table table {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	.border-radius(3px);
+}
+.mk-fancy-table th {
+	padding: 18px 12px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+.mk-fancy-table tfoot td {
+	padding: 8px;
+}
+.mk-fancy-table.table-style1 {
+	tr:nth-child(odd) {
+		background-color: rgba(0, 0, 0, 0.04);
+	}
+	tfoot {
+		background-color: #f3f3f3;
+	}
+	tr {
+		background-color: rgba(0, 0, 0, 0.02);
+	}
+	td {
+		padding: 12px;
+		border-left: 1px solid #fff;
+		text-align: center;
+	}
+}
+.mk-fancy-table.table-style2 {
+	border-bottom: 1px solid #dcdcdc;
+	td {
+		padding: 12px;
+		border-bottom: 1px solid #dcdcdc;
+		text-align: center;
+	}
+}
