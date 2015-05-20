@@ -1,3 +1,5 @@
-author = "jupiter 2.0.8"
-homepage = "http://artbees.net/themes/jupiter-demo/"
-description = "WP theme"
+author = “Artbees”
+github = ""
+homepage = "http://artbees.net/themes/jupiter/"
+description = “Jupiter is a wordpress premium Theme from artbees”
+mainfile = ""

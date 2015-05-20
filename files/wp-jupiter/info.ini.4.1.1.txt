@@ -1,3 +1,0 @@
-author = "jupiter 4.1.1”
-homepage = "http://artbees.net/themes/jupiter-demo/"
-description = "WP theme"
