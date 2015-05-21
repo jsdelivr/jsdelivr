@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "admin-lte",
+  "repo": "almasaeed2010/AdminLTE",
+  "files": {
+    "basePath": "dist/",
+    "include": ["css/*.min.css", "css/skins/*.min.css", "js/*.min.js"]
+  }
+}
