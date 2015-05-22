@@ -4,6 +4,6 @@
   "repo": "wenzhixin/bootstrap-table",
   "files": {
     "basePath": "dist/",
-	"include": ["*.min.*"]
+	"include": ["*.min.*", "./extensions/**/*.min*", "./locale/*.min.*"]
   }
 }
