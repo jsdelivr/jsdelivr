@@ -3,6 +3,7 @@
   "name": "bootstrap.table",
   "repo": "wenzhixin/bootstrap-table",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+	"include": ["*.min.*"]
   }
 }
