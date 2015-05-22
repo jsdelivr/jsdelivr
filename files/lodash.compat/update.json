@@ -1,6 +1,6 @@
 {
-  "packageManager": "bower",
-  "name": "lodash.compat",
+  "packageManager": "npm",
+  "name": "lodash-compat",
   "repo": "lodash/lodash",
   "files": {
     "include": ["lodash.min.js"]

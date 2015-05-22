@@ -3,6 +3,7 @@
   "name": "ractive-load",
   "repo": "ractivejs/ractive-load",
   "files": {
-    "include": ["ractive-load.min.js"]
+		"basePath": "dist/",
+		"include": ["*.min.*"]
   }
 }

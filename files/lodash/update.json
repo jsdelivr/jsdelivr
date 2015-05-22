@@ -1,8 +1,0 @@
-{
-  "packageManager": "bower",
-  "name": "lodash",
-  "repo": "lodash/lodash",
-  "files": {
-    "include": ["**/*.js", "**/*.map"]
-  }
-}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.table",
+  "repo": "wenzhixin/bootstrap-table",
+  "files": {
+    "basePath": "dist/",
+	"include": ["*.min.*", "./extensions/**/*.min*", "./locale/*.min.*"]
+  }
+}
