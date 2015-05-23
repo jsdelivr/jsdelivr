@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "PhotoSwipe",
+  "repo": "dimsemenov/PhotoSwipe",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*", "photoswipe.css", "./default-skin/**/*"]
+  }
+}
