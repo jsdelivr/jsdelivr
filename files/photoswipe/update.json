@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "PhotoSwipe",
+  "repo": "dimsemenov/PhotoSwipe",
+  "files": {
+    "basePath": "dist/"
+  }
+}
