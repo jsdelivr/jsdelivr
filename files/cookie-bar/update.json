@@ -1,0 +1,21 @@
+{
+  "packageManager": "github",
+  "name": "cookie-bar",
+  "repo": "ToX82/cookie-bar",
+  "files": {
+    "include": [
+    	"cookiebar-latest.js",
+    	"cookiebar.css",
+    	"logo.png",
+    	"x.png",
+    	"browsers/chrome.png",
+    	"browsers/firefox.png",
+    	"browsers/ie.png",
+    	"browsers/opera.png",
+    	"browsers/safari.png",
+    	"lang/en.html",
+    	"lang/fr.html",
+    	"lang/it.html",
+    ]
+  }
+}
