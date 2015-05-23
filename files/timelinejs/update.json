@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "TimelineJS",
+  "repo": "NUKnightLab/TimelineJS",
+  "files": {
+    "basePath": "build/",
+    "include": ["css/**/*", "js/**/*"]
+  }
+}
