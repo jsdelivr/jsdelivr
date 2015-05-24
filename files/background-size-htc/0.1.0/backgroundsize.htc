@@ -1,0 +1,271 @@
+<component lightWeight="true">
+<attach event="onpropertychange" onevent="handlePropertychange()" />
+<attach event="ondetach" onevent="restore()" />
+<attach event="onresize" for="window" onevent="handleResize()" />
+<script type="text/javascript">
+
+var rsrc = /url\(["']?(.*?)["']?\)/,
+	positions = {
+		top: 0,
+		left: 0,
+		bottom: 1,
+		right: 1,
+		center: .5
+	},
+	doc = element.document;
+
+init();
+
+// remove the background-image and emulate it with a wrapped <img/>
+function init() {
+	var wrapper = doc.createElement( "div" ),
+		img = doc.createElement( "img" ),
+		expando,
+		pos;
+
+	wrapper.style.position = "absolute";
+	wrapper.style.zIndex = -1;
+	wrapper.style.top = 0;
+	wrapper.style.right = 0;
+	wrapper.style.left = 0;
+	wrapper.style.bottom = 0;
+	wrapper.style.overflow = "hidden";
+
+	img.alt = "";
+	img.style.position = "absolute";
+	img.style.width = img.style.width = "auto";
+
+	wrapper.appendChild( img );
+
+	element.insertBefore( wrapper, element.firstChild );
+
+	pos = [
+		element.currentStyle.backgroundPositionX,
+		element.currentStyle.backgroundPositionY
+	];
+
+	// save useful data for quick access
+	element.bgsExpando = expando = {
+		wrapper: wrapper,
+		img: img,
+		backgroundSize: element.currentStyle['background-size'],
+		// Only keywords or percentage values are supported
+		backgroundPositionX: positions[ pos[0] ] || parseFloat( pos[0] ) / 100,
+		backgroundPositionY: positions[ pos[1] ] || parseFloat( pos[1] ) / 100
+	};
+
+	// This is the part where we mess with the existing DOM
+	// to make sure that the background image is correctly zIndexed
+	if ( element.currentStyle.zIndex == "auto" ) {
+		element.style.zIndex = 0;
+	}
+	if ( element.currentStyle.position == "static" ) {
+		element.style.position = "relative";
+	}
+
+	if ( refreshDisplay( element, expando ) ) {
+		refreshDimensions( element, expando );
+		refreshBackgroundImage( element, expando, function() {
+			updateBackground( element, expando );
+		});
+	}
+}
+
+function refreshDisplay( element, expando ) {
+	var display = element.currentStyle.display;
+
+	if ( display != expando.display ) {
+		expando.display = display;
+		expando.somethingChanged = true;
+	}
+
+	return display != "none";
+}
+
+function refreshDimensions( element, expando ) {
+	var innerWidth = element.offsetWidth
+			- ( parseFloat( element.currentStyle.borderLeftWidth ) || 0 )
+			- ( parseFloat( element.currentStyle.borderRightWidth ) || 0 ),
+		innerHeight = element.offsetHeight
+			- ( parseFloat( element.currentStyle.borderTopWidth ) || 0 )
+			- ( parseFloat( element.currentStyle.borderBottomWidth ) || 0 );
+
+	if ( innerWidth != expando.innerWidth || innerHeight != expando.innerHeight ) {
+		expando.innerWidth = innerWidth;
+		expando.innerHeight = innerHeight;
+		expando.somethingChanged = true;
+	}
+}
+
+function refreshBackgroundImage( element, expando, callback ) {
+	var img = expando.img,
+		src = ( rsrc.exec( element.currentStyle.backgroundImage ) || [] )[1];
+
+	if ( src && src != expando.backgroundSrc ) {
+		expando.backgroundSrc = src;
+		expando.somethingChanged = true;
+
+		img.onload = function() {
+			var width = img.width,
+				height = img.height;
+
+			// ignore onload on the proxy image
+			if ( width == 1 && height == 1 ) { return; }
+
+			expando.imgWidth = width;
+			expando.imgHeight = height;
+			expando.constrain = false;
+
+			callback();
+
+			img.style.visibility = "visible";
+			img.onload = null;
+		};
+
+		img.style.visibility = "hidden";
+		img.src = expando.backgroundSrc;
+
+		// force onload execution
+		if ( img.readyState || img.complete ) {
+			img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+			img.src = expando.backgroundSrc;
+		}
+
+		expando.ignoreNextPropertyChange = true;
+		element.style.backgroundImage = "none";
+	
+	} else {
+		// the callback should be exacuted in all cases
+		callback();
+	}
+}
+
+function updateBackground( element, expando ) {
+	if ( !expando.somethingChanged ) { return; }
+
+	var img = expando.img,
+		elemRatio = expando.innerWidth / expando.innerHeight,
+		imgRatio = expando.imgWidth / expando.imgHeight,
+		prevConstrain = expando.constrain,
+		curConstrain,
+		delta;
+
+	if ( expando.backgroundSize == "contain" ) {
+		if ( imgRatio > elemRatio ) {
+			expando.constrain = curConstrain = "width";
+
+			delta = Math.floor(
+				( expando.innerHeight - expando.innerWidth / imgRatio )
+				* expando.backgroundPositionY
+			);
+
+			img.style.top = delta + "px";
+
+			// when switching from height to width constraint,
+			// make sure to release constraint on height and reset left
+			if ( curConstrain != prevConstrain ) {
+				img.style.width = "100%";
+				img.style.height = "auto";
+				img.style.left = 0;
+			}
+		
+		// elemRatio > imgRatio
+		} else {
+			expando.constrain = curConstrain = "height";
+
+			delta = Math.floor(
+				( expando.innerWidth - expando.innerHeight * imgRatio )
+				* expando.backgroundPositionX
+			);
+
+			img.style.left = delta + "px";
+
+			if ( curConstrain != prevConstrain ) {
+				img.style.width = "auto";
+				img.style.height = "100%";
+				img.style.top = 0;
+			}
+		}
+
+	} else if ( expando.backgroundSize == "cover" ) {
+		if ( imgRatio > elemRatio ) {
+			expando.constrain = curConstrain = "height";
+
+			delta = Math.floor(
+				( expando.innerHeight * imgRatio - expando.innerWidth )
+				* expando.backgroundPositionX
+			);
+
+			img.style.left = -delta + "px";
+
+			// when switching from height to width constraint,
+			// make sure to release constraint on height and reset left
+			if ( curConstrain != prevConstrain ) {
+				img.style.width = "auto";
+				img.style.height = "100%";
+				img.style.top = 0;
+			}
+		
+		// elemRatio > imgRatio
+		} else {
+			expando.constrain = curConstrain = "width";
+
+			delta = Math.floor(
+				( expando.innerWidth / imgRatio - expando.innerHeight )
+				* expando.backgroundPositionY
+			);
+
+			img.style.top = -delta + "px";
+
+			if ( curConstrain != prevConstrain ) {
+				img.style.width = "100%";
+				img.style.height = "auto";
+				img.style.left = 0;
+			}
+		}
+	}
+
+	expando.somethingChanged = false;
+}
+
+// handle different style changes
+function handlePropertychange() {
+	var expando = element.bgsExpando;
+
+	// this prevents handling propertychange events caused by this script
+	// TODO: make it reliable
+	if ( expando.ignoreNextPropertyChange ) {
+		expando.ignoreNextPropertyChange = false;
+		return;
+	}
+
+	if ( refreshDisplay( element, expando ) ) {
+		refreshDimensions( element, expando );
+		refreshBackgroundImage( element, expando, function() {
+			updateBackground( element, expando );
+		});
+	}
+}
+
+function handleResize() {
+	// TODO: throttle resize events
+
+	var expando = element.bgsExpando;
+
+	if ( expando.display != "none" ) {
+		refreshDimensions( element, expando );
+		updateBackground( element, expando );
+	}
+}
+
+function restore() {
+	var expando = element.bgsExpando;
+
+	try {
+		element.style.backgroundImage = "url('" + expando.backgroundSrc + "')";
+		element.removeChild( expando.wrapper );
+		element.bgsExpando = null;
+	} catch(e) {}
+}
+
+</script>
