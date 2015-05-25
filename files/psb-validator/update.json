@@ -1,0 +1,14 @@
+{
+  "packageManager"  : "github",
+  "name"            : "psb-validator",
+  "repo"            : "pssgcsim/psb-validator",
+  "files"           :
+  {
+    "include"       :
+    [
+      "psb-validator.js",
+      "psb-validator.min.js",
+      "psb-validator.min.js.map"
+    ]
+  }
+}
