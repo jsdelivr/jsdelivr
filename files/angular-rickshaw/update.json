@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "angular-rickshaw",
+  "repo": "ngyewch/angular-rickshaw",
+  "files": {
+    "basePath": "/",
+    "include": ["README.MD", "LICENSE.html","bower.json","rickshaw.js"],
+    "exclude": [".gitignore","CHANGELOG.MD"]
+  }
+}
