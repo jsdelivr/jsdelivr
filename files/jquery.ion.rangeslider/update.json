@@ -3,6 +3,6 @@
   "name": "jquery.ion.rangeslider",
   "repo": "IonDen/ion.rangeSlider",
   "files": {
-    "include": ["./js/*.min.js", "./css/*.css", "./img/*.png"]
+    "include": ["./js/*.js", "./css/*.css", "./img/*.png"]
   }
 }

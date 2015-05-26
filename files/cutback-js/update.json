@@ -3,6 +3,6 @@
   "name": "cutback-js",
   "repo": "jlaran/cutback-js",
   "files": {
-    "include": ["cutback.min.js"]
+    "include": ["cutback.min.js", "cutback-stats.min.js"]
   }
 }

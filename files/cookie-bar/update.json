@@ -1,0 +1,14 @@
+{
+  "packageManager": "github",
+  "name": "cookie-bar",
+  "repo": "ToX82/cookie-bar",
+  "files": {
+    "exclude": [
+    	".gitignore",
+    	"LICENSE",
+    	"README.md",
+    	"logo_big.png",
+    	"logo_icon.png"
+    ]
+  }
+}
