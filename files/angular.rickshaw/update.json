@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular-rickshaw",
+  "repo": "ngyewch/angular-rickshaw",
+  "files": {
+    "basePath": "/",
+    "include": ["rickshaw.js"]
+  }
+}
