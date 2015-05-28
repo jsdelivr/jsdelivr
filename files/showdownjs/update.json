@@ -3,6 +3,6 @@
   "name": "showdown",
   "repo": "showdownjs/showdown",
   "files": {
-    "include": ["showdown.js", "showdown.min.js", "showdown.min.js.map"]
+    "include": ["showdown.min.js", "showdown.min.js.map"]
   }
 }
