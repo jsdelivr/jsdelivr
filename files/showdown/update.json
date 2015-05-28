@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "showdown",
+  "repo": "showdownjs/showdown",
+  "files": {
+    "include": ["showdown.min.js", "showdown.min.js.map"]
+  }
+}
