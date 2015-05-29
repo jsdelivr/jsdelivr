@@ -1,0 +1,41 @@
+#pp-timeline {
+    position: relative;
+    line-height: 2;
+}
+#pp-timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+}
+    #pp-timeline ul {
+        padding: 0 0 0 25px;
+        list-style: none;
+    }
+        #pp-timeline .pp-item > span {
+            position: relative;
+            cursor: pointer;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+        #pp-timeline .pp-item > span:hover {
+            color: #000;
+        }
+        #pp-timeline .pp-item > span.currentChapter {
+            color: #000;
+        }
+
+#pp-pointer {
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #000;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
