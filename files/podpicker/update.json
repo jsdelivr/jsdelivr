@@ -3,7 +3,6 @@
   "name": "PodPicker",
   "repo": "RoberMac/PodPicker",
   "files": {
-    "basePath": "dist/",
-    "exclude": ["PodPicker.min.js", "PodPicker.min.css"]
+    "basePath": "dist/"
   }
 }
