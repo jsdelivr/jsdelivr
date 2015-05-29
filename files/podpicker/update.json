@@ -4,6 +4,6 @@
   "repo": "RoberMac/PodPicker",
   "files": {
     "basePath": "dist/",
-    "exclude": ["PodPicker.min.js", "PodPicker.min.css"]
+    "include": ["PodPicker.min.js", "PodPicker.min.css"]
   }
 }
