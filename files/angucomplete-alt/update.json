@@ -3,6 +3,6 @@
   "name": "angucomplete-alt",
   "repo": "ghiden/angucomplete-alt",
   "files": {
-    "include": ["./dist/angucomplete-alt.min.js", "angucomplete-alt.js"]
+    "include": ["dist/angucomplete-alt.min.js"]
   }
 }
