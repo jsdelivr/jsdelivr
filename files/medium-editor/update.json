@@ -4,6 +4,6 @@
   "repo": "yabwe/medium-editor",
   "files": {
     "basePath": "dist/",
-    "include": ["js/medium-editor.min.js", "css/medium-editor.min.css", "css/themes/*.min.css"]
+    "include": ["./js/medium-editor.min.js", "./css/medium-editor.min.css", "./css/themes/*.min.css"]
   }
 }
