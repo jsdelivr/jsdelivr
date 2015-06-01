@@ -4,6 +4,6 @@
   "repo": "kahwee/viewability",
   "files": {
     "basePath": "dist/",
-    "include": ["viewability.js", "viewability.min.js"]
+    "include": ["viewability.min.js"]
   }
 }
