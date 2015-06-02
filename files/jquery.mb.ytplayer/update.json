@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.mb.ytplayer",
+  "repo": "pupunzi/jquery.mb.YTPlayer",
+  "files": {
+    "basePath": "dist/"
+  }
+}
