@@ -4,5 +4,6 @@
   "repo": "pupunzi/jquery.mb.YTPlayer",
   "files": {
     "basePath": "dist/"
+    "exclude": ["dist/index.html"]
   }
 }
