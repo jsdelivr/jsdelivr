@@ -3,7 +3,7 @@
   "name": "jquery.mb.ytplayer",
   "repo": "pupunzi/jquery.mb.YTPlayer",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
     "exclude": ["dist/index.html"]
   }
 }
