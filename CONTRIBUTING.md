@@ -1,4 +1,4 @@
-### Web interface (Recommended)
+### Web Interface (Recommended)
 
 *This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
 
@@ -52,5 +52,5 @@ A version directory should contain the following:
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
-  [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
+  [2]: https://github.com/jsdelivr/jsdelivr/blob/master/files/abaaso/info.ini
   [3]: http://refresh-sf.com/
