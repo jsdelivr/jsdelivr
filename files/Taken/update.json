@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Taken",
+  "repo": "isnit0/Taken",
+  "files": {
+    "include": ["Taken.js"]
+  }
+}
