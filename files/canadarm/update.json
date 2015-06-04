@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "canadarm",
+  "repo": "cerner/canadarm",
+  "files": {
+    "basePath": "build/",
+    "include": ["canadarm.min.js"]
+  }
+}
