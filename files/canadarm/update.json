@@ -3,6 +3,7 @@
   "name": "canadarm",
   "repo": "cerner/canadarm",
   "files": {
-    "basePath": "build/"
+    "basePath": "build/",
+    "include": ["canadarm.min.js"]
   }
 }
