@@ -4,7 +4,6 @@
   "repo": "RobLoach/jquery-once",
   "files": {
     "include": [
-      "jquery.once.js",
       "jquery.once.min.js",
       "jquery.once.min.js.map"
     ]
