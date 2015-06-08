@@ -4,6 +4,6 @@
   "repo": "albeebe/phoneformat.js",
   "files": {
     "basePath": "dist",
-    "include": ["phone-format.js", "phone-format.min.js", "phone-format.min.js.map"]
+    "include": ["*.min.*"]
   }
 }
