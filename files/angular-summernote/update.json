@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "angular-summernote",
-  "repo": "summernote/angular-summernote",
-  "files": {
-	"basePath": "dist/"
-  }
-}
