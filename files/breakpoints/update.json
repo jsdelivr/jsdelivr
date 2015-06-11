@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "breakpoints",
+  "repo": "xoxco/breakpoints",
+  "files": {
+    "include": ["breakpoints.js"]
+  }
+}
