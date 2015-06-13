@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "gridjs",
+  "repo": "gridjs/gridjs",
+  "files": {
+    "include": ["gridjs.js"]
+  }
+}
