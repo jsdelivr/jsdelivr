@@ -3,6 +3,6 @@
   "name": "gridjs",
   "repo": "gridjs/gridjs",
   "files": {
-    "include": ["gridjs.js"]
+    "include": ["gridjs.js", "gridjs.min.js"]
   }
 }
