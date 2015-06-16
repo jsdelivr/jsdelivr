@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "startbootstrap-agency",
+  "repo": "leonciokof/startbootstrap-agency",
+  "basePath": "dist",
+  "files": {
+    "include": ["css/agency.min.css", "js/agency.min.js"]
+  }
+}
