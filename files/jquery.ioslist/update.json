@@ -4,6 +4,6 @@
   "repo": "brianhadaway/iOSList",
   "files": {
 	"basePath" : "dist/",
-    "include": ["js/jquery.ioslist.js", "css/jquery.ioslist.css"]
+    "include": ["js/jquery.ioslist.min.js", "css/jquery.ioslist.css"]
   }
 }
