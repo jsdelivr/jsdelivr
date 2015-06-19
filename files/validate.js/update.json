@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "validate.js",
+  "repo": "rickharrison/validate.js",
+  "files": {
+    "include": ["validate.js","validate.min.js"]
+  }
+}
