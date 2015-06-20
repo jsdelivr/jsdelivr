@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.facebox",
+  "repo": "NightOwl888/jquery.facebox.dist",
+  "files": {
+    "include": ["jquery.facebox.min.*", "**/*.png", "**/*.gif"]
+  }
+}
