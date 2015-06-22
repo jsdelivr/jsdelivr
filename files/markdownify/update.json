@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "markdownify-markdown-editor",
+  "repo": "NextStepWebs/markdownify-markdown-editor",
+  "files": {
+    "include": ["markdownify.min.js", "markdownify.min.css"]
+  }
+}
