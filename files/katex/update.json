@@ -1,9 +1,9 @@
 {
-  "packageManager": "bower",
+  "packageManager": "github",
   "name": "katex",
   "repo": "Khan/KaTeX",
   "files": {
-    "basePath": "bower_components/katex/dist",
+    "basePath": "dist/",
     "exclude": ["README.md"]
   }
 }
