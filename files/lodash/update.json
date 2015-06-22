@@ -3,6 +3,6 @@
   "name": "lodash",
   "repo": "lodash/lodash",
   "files": {
-    "include": [*.js"]
+    "include": ["*.js"]
   }
 }
