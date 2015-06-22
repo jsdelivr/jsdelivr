@@ -4,6 +4,6 @@
   "repo": "Robdel12/DropKick",
   "files": {
     "basePath": "build/",
-    "include": ["dropkick.min.js", "css/dropkick.css"]
+    "include": ["js/dropkick.min.js", "css/dropkick.css"]
   }
 }
