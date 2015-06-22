@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "ng-file-upload",
+  "repo": "danialfarid/ng-file-upload-bower",
+  "files": {
+    "include": ["*.js", "*.ico", "*.swf"]
+  }
+}
