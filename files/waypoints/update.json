@@ -1,0 +1,22 @@
+{
+  "packageManager": "github",
+  "name": "waypoints",
+  "repo": "imakewebthings/waypoints",
+  "files": {
+  	"include": [
+      "jquery.waypoints.js",
+      "jquery.waypoints.min.js",
+      "noframework.waypoints.js",
+      "noframework.waypoints.min.js",
+      "waypoints.debug.js",
+      "zepto.waypoints.js",
+      "zepto.waypoints.min.js",
+      "./shortcuts/infinite.js",
+      "./shortcuts/infinite.min.js",
+      "./shortcuts/inview.js",
+      "./shortcuts/inview.min.js",
+      "./shortcuts/sticky.js",
+      "./shortcuts/sticky.min.js"
+    ]
+  }
+}
