@@ -5,8 +5,7 @@
 1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2]
 2. In the same directory create an update.json file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json)
 3. Dont add any project related files. Our bot will add them after your PR gets merged
-4. Make sure you do everything correctly the first time. If your PR exceeds 2 commits(1 per file) it will be declined.
-5. Wait for approval!
+4. Wait for approval!
 
 
 
