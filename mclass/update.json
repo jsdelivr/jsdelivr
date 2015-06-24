@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "mclass",
-  "repo": "edwinm/mClass",
-  "files": {
-    "include": ["mclass.js"]
-  }
-}
