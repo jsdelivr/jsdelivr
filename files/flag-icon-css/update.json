@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flag-icon-css",
+  "repo": "lipis/flag-icon-css",
+  "files": {
+	"include": ["./css/**/*", "./flags/**/*"]
+  }
+}
