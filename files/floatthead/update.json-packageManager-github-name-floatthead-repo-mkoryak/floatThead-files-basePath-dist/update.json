@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "floatthead",
+  "repo": "mkoryak/floatThead",
+  "files": {
+    "basePath": "dist/"
+  }
+}
