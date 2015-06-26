@@ -4,6 +4,6 @@
   "repo": "marionettejs/backbone.marionette",
   "files": {
     "basePath": "lib/",
-    "include": ["backbone.marionette.js", "backbone.marionette.map", "backbone.marionette.min.js"]
+    "include": ["backbone.marionette.js", "backbone.marionette.map", "backbone.marionette.min.js", "./core/*"]
   }
 }
