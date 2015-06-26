@@ -3,7 +3,7 @@
   "name": "backbone.marionette",
   "repo": "marionettejs/backbone.marionette",
   "files": {
-    "basePath": "lib/"
+    "basePath": "lib/",
     "include": ["backbone.marionette.js", "backbone.marionette.map", "backbone.marionette.min.js"]
   }
 }
