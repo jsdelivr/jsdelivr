@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "youtube-google-analytics",
+  "repo": "lunametrics/youtube-google-analytics",
+  "files": {
+    "include": ["lunametrics-youtube.gtm.js", "lunametrics-youtube.gtm.min.js"]
+  }
+}
