@@ -1,0 +1,14 @@
+{
+  "packageManager": "github",
+  "name": "jquery.ajax-combobox",
+  "repo": "sutara79/jquery.ajax-combobox",
+  "files": {
+    "include": [
+      "dist/jquery.ajax-combobox.min.js",
+      "dist/jquery.ajax-combobox.min.css",
+      "dist/jquery.ajax-combobox.php",
+      "dist/bitly.php",
+      "dist/btn.png",
+    ]
+  }
+}
