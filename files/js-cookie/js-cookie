@@ -1,4 +1,0 @@
-github = "https://github.com/js-cookie/js-cookie"
-homepage = "https://github.com/js-cookie/js-cookie"
-description = "A simple, lightweight JavaScript API for handling cookies"
-mainfile = "js.cookie.min.js"
