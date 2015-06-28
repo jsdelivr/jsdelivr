@@ -3,6 +3,11 @@
   "name": "jquery-colorbox",
   "repo": "jackmoore/colorbox",
   "files": {
-    "include": ["jquery.colorbox-min.js", "jquery.colorbox.js"]
+    "include": [
+      "jquery.colorbox-min.js",
+      "jquery.colorbox.js",
+      "example?/*.css",
+      "example?/images/*"
+    ]
   }
 }
