@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "js-cookie",
+  "repo": "js-cookie/js-cookie",
+  "files": {
+    "include": ["src/js.cookie.js"]
+  }
+}
