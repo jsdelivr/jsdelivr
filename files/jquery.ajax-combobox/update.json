@@ -5,7 +5,7 @@
   "files": {
     "include": [
       "dist/jquery.ajax-combobox.min.js",
-      "dist/jquery.ajax-combobox.min.css",
+      "dist/jquery.ajax-combobox.css",
       "dist/btn.png",
     ]
   }
