@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>cookieBAR</title>
+    <script type="text/javascript">
+        var expirationDate = new Date();
+        expirationDate.setDate(128);
+        document.cookie = "dummy=1; expires="+expirationDate.toUTCString()+"; path=/";
+    </script>
+</head>
+<body>
+<h1>Demo</h1>
+<script src="../cookiebar-latest.js?"></script>
+</body>
+</html>
