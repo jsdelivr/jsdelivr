@@ -1,0 +1,47 @@
+.ai-hbeat {
+    display: none;
+    position: fixed;
+    bottom: 53px;
+    margin: 0 auto;
+    z-index: 15;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.ai-phone-menu {
+    font-size: 21px;
+    z-index: 101;
+    height: 105px;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: -125px;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+
+.ai-phone-menu .ai-menu-item:nth-child(1) {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+
+.ai-phone-menu .ai-menu-item{
+    padding: 10px;
+    color: #000000;
+}
+
+.ai-phone-menu .ai-menu-item a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.ai-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: #000000;
+    position: fixed;
+    display: none;
+    z-index: 100;
+}

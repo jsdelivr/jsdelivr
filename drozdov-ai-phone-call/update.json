@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "drozdov-ai-phone-call",
+  "repo": "gustoase/drozdovai",
+  "files": {
+    "include": ["widget.js", "widget.css"]
+  }
+}
