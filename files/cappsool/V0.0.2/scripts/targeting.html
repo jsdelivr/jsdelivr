@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+<script>
+
+    var user;
+
+    if (localStorage.getItem('guid')) {
+      user = localStorage.getItem('guid');
+      parent.postMessage(user, window.location.search.split('?returnUrl=')[1]);
+    }
+
+    window.addEventListener('message', updateGuid, false);
+
+    function updateGuid(e) {
+      if (/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}[a-zA-Z0-9\\?\\.\\=\\&\\-\\+]*$/.test(e.data)) {
+        localStorage.setItem('guid', e.data);
+      } else if (e.data === 'optOut') {
+        localStorage.setItem('guid', 'optOut');
+      }
+    }
+
+
+</script>
+</body>
+</html>
