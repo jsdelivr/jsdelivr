@@ -1,0 +1,3623 @@
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+/* ===============================================================
+Your custom styles, here you need to specify container's and slide's
+sizes, pagination, etc.
+================================================================*/
+.swiper-container {
+	/* Specify Swiper's Size: */
+
+	/*width:200px;
+	height: 100px;*/
+}
+.swiper-slide {
+	/* Specify Slides's Size: */
+
+	/*width: 100%;
+	height: 100%;*/
+}
+.swiper-slide-active {
+	/* Specific active slide styling: */
+
+}
+.swiper-slide-visible {
+	/* Specific visible slide styling: */
+
+}
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.swiper-pagination-switch {
+	/* Stylize pagination button: */
+
+}
+.swiper-active-switch {
+	/* Specific active button style: */
+
+}
+.swiper-visible-switch {
+	/* Specific visible button style: */
+
+}
+
+.swiper-container {
+  width: 100%;
+  height: 180px;
+  color: #fff;
+  background: #222;
+  text-align: center;
+}
+.swiper-slide {
+  height: 100%;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: translate(0px, 106px) scale(0.8);
+  -moz-transform: translate(0px, 106px) scale(0.8);
+  -ms-transform: translate(0px, 106px) scale(0.8);
+  -o-transform: translate(0px, 106px) scale(0.8);
+  transform: translate(0px, 106px) scale(0.8);
+  opacity: 0.7;
+}
+.swiper-slide-visible {
+  -webkit-transform: translate(0px, 106px) scale(0.8);
+  -moz-transform: translate(0px, 106px) scale(0.8);
+  -ms-transform: translate(0px, 106px) scale(0.8);
+  -o-transform: translate(0px, 106px) scale(0.8);
+  transform: translate(0px, 106px) scale(0.8);
+  opacity: 0.7;
+}
+.swiper-slide-active {
+  opacity: 1.0;
+  top: 0;
+  -webkit-transform: translate(0px, 94px) scale(1);
+  -moz-transform: translate(0px, 94px) scale(1);
+  -ms-transform: translate(0px, 94px) scale(1);
+  -o-transform: translate(0px, 94px) scale(1);
+  transform: translate(0px, 94px) scale(1);
+}
+.swiper-slide .cs-icon-subtitle {
+  font-family: Arial;
+  font-size: 11px;
+  margin-top: 5px;
+  line-height: 11px;
+}
+.swiper-visible-switch {
+  top: 0;
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-slide .cs-icon-subtitle {
+  display: none;
+}
+.swiper-slide-active .cs-icon-subtitle {
+  display: inline-block;
+}
+
+
+.cs-icon-subtitle span.rating-star {
+  display: block;
+  float: left;
+  width: 11px;
+  height: 11px;
+  margin-right: 2px;
+  background: url(../images/rating_star_yellow.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.cs-icon-subtitle span.rating-star.half {
+  /*width: 6px;
+  height: 11px;*/
+  background: url(../images/rating_star_yellow_half.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.cs-icon-subtitle span.rating-star.ghost {
+  background: url(../images/rating_star_off.png) 0 0 no-repeat;
+  background-size: 100%
+  /*position: absolute;
+  width: 0;
+  margin: 0;
+  background: 0*/
+}
+
+
+.swiper-slide img {
+  height: 54px;
+  width: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  background: #000;
+  display: block;
+}
+
+.swiper-slide-active img {
+  border: 2px solid #fff;
+}
+.swiper-slide {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.widget-head {
+  line-height: 24px;
+  background: #ddd url(../images/logo.png) no-repeat right 12px center;
+  font-size: 15px;
+  color: #000;
+  text-align: left;
+  padding-left: 12px;
+  z-index: 8;
+}
+.BGimage {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.BGimage .back-slide {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.BGimage .back-slide.cappsool-loading{
+    /*background: #000 url(../images/loading.gif) no-repeat center;
+    display: block;
+    margin-top: 24px;*/
+}
+.BGimage .back-slide.cappsool-loading img{
+    display: none;
+}
+.BGimage .bactive {
+  display: block;
+}
+.BGimage img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs-arrow {
+  width: 35px;
+  height: 70%;
+  position: absolute;
+  background-size: 20px 33px;
+  background-repeat: no-repeat;
+  background-position: 7px 60%;
+  z-index: 2;
+}
+.cs-arrow.left {
+  background-image: url(../images/chevron_left.png);
+  left: 0px;
+}
+
+.cs-arrow.right {
+  background-image: url(../images/chevron_right.png);
+  right: 0px;
+}
+
+.swiper-slide .larrow, .swiper-slide .rarrow {
+  content: '';
+  background: url(../images/right_arrow.png) no-repeat;
+  width: 6px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: -5px;
+  cursor: pointer;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: scale(0) translate(60px, 0px);
+  -moz-transform: scale(0) translate(60px, 0px);
+  -ms-transform: scale(0) translate(60px, 0px);
+  -o-transform: scale(0) translate(60px, 0px);
+  transform: scale(0) translate(60px, 0px);
+}
+.swiper-slide .rarrow {
+  -webkit-transform: scale(0) translate(-60px, 0px);
+  -moz-transform: scale(0) translate(-60px, 0px);
+  -ms-transform: scale(0) translate(-60px, 0px);
+  -o-transform: scale(0) translate(-60px, 0px);
+  transform: scale(0) translate(-60px, 0px);
+}
+.swiper-slide .larrow {
+  background: url(../images/left_arrow.png) no-repeat;
+  left: -5px;
+}
+.swiper-slide-active .rarrow, .swiper-slide-active .larrow {
+  -webkit-transform: scale(1) translate(0px, 0px);
+  -moz-transform: scale(1) translate(0px, 0px);
+  -ms-transform: scale(1) translate(0px, 0px);
+  -o-transform: scale(1) translate(0px, 0px);
+  transform: scale(1) translate(0px, 0px);
+}
+
+
+.cappsool-widget
+{
+  max-width : 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.widget-title {
+  position: absolute;
+  width: 100%;
+  font-size: x-large;
+  z-index: 4;
+}
+
+.widget-description {
+  position: absolute;
+  width: 100%;
+  font-size: large;
+  z-index: 4;
+}
+
+.cappsool-widget .video {
+  background: transparent;
+  position: relative!important;
+  overflow: hidden!important;
+}
+
+.cappsool-widget .install-button.ios-button {
+  background-color:white;
+  border: 1px solid #0283fa;
+  color: #0283fa;
+  font-size: 9pt;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.animated-jpg {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.animated-jpg.hide{
+  display: none;
+}
+
+.BGimage img .hide{
+  display: none;
+}
+
+.top-title {
+  pointer-events: none;
+  background-image: url(../images/top_shadow_long.png);
+  width: 100%;
+  height: 35px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-size: 1px 36px;
+  line-height: 35px;
+}
+
+.ribbon {
+  pointer-events: none;
+  background-repeat: no-repeat;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  z-index: 5;
+}
+
+.ribbon.col1 {
+  background: url(../images/strip_orange.png);
+  background-size: 56px 56px;
+}
+
+.ribbon.col2 {
+  background: url(../images/strip_red.png);
+  background-size: 56px 56px;
+}
+
+.ribbon.col3, .ribbon.col0 {
+  background: url(../images/strip_green.png);
+  background-size: 56px 56px;
+}
+
+.ribbon .ribbon-text {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  right: 0px;
+  bottom: 30px;
+  font-size: 14px;
+}
+
+.cappsool-wrapper.popup {
+  position: fixed;
+  bottom: 0px;
+  z-index: 99999997;
+  background-color: #FFF;
+  width: 100%;
+}
+
+.cs-close-btn {
+  width: 18px;
+  background: url(../images/close.png);
+  background-size: 18px 18px;
+  height: 18px;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+  display: none;
+}
+.cappsool-wrapper.popup .cs-close-btn {
+  display: block;
+}
+
+.cappsool-wrapper.popup .widget-head {
+  padding-left: 28px;
+}
+
+.cappsool-widget.hide {
+  display: none;
+}
+
+.widget-cta {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,  0.6);
+  z-index: 0;
+  pointer-events: none;
+
+}
+
+.widget-cta span{
+  display: inline-block;
+  margin-top: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  line-height: 16px;
+  padding: 7px 7px 7px 7px;
+  font-size: large;
+}
+
+.widget-cta button {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  margin-top: 42px;
+  border-radius: 4px;
+  line-height: 16px;
+  padding: 7px 7px 7px 7px;
+  font-size: large;
+  background: rgba(128,128,128,0.8);
+  color: #fff;
+  font-weight: bold;
+}
+
+.cappsool-wrapper {
+  direction: ltr!important;
+}
+
+.cappsool-wrapper iframe {
+  border: 0;
+  width:100%;
+  height:1px;
+  visibility: hidden
+}
+
+.cappsool-wrapper .cappsool-share {
+  display: none;
+}
+
+.cappsool-wrapper .share .cappsool-share span {
+  width: 26px;
+  height: 26px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.cappsool-wrapper .share .cappsool-share span.cappsool-share-facebook {
+  background: url(../images/share_facebook.png) no-repeat;
+  background-size: 26px 26px;
+}
+.cappsool-wrapper .share .cappsool-share span.cappsool-share-whatsapp {
+  background: url(../images/share_whatsapp.png) no-repeat;
+  background-size: 26px 26px;
+}
+
+.cappsool-wrapper .share .cappsool-share {
+  border: 0;
+  visibility: visible;
+  height: 30px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+  top: 17px;
+  display: block;
+}
+.cappsool-wrapper .frappe-wrapper .cappsool-share {
+
+}
+
+.widget-head.calcalist {
+  color : #C82027;
+  background :  #ededee url(../images/logo_small.png) no-repeat left 16px center;
+  text-align: right;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.widget-head.calcalist span {
+  display:none
+}
+
+.widget-head.calcalist:after {
+  content : "אפליקציות מומלצות"
+}
+
+
+/*@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {*/
+@media only screen and (min-width: 640px) and (orientation: portrait){
+
+  .cappsool-widget
+  {
+    max-width : 750px;
+  }
+
+   .swiper-container {
+    height: 360px;
+  }
+
+   .top-title {
+    height: 70px;
+    background-size: 2px 72px;
+    line-height: 70px;
+    top: -2px;
+  }
+
+   .ribbon {
+    width: 112px;
+    height: 112px;
+    top: -2px;
+    right: 0px;
+  }
+
+   .ribbon.col1 {
+    background-size: 112px 112px;
+  }
+
+   .ribbon.col2 {
+    background-size: 112px 112px;
+  }
+
+  .ribbon.col3, .ribbon.col0 {
+    background-size: 112px 112px;
+  }
+
+   .ribbon .ribbon-text {
+    top: 14px;
+    left: 4px;
+    right: 0px;
+    bottom: 16px;
+    font-size: 28px;
+  }
+
+  .widget-title {
+    font-size: 50px;
+  }
+
+   .widget-description {
+    font-size: 40px;
+  }
+
+   .widget-cta span{
+    margin-top: 84px;
+    line-height: 32px;
+    padding: 14px 14px 14px 14px;
+    font-size: 32px;
+  }
+
+   .widget-cta button {
+    margin-top: 84px;
+    line-height: 32px;
+    padding: 14px 14px 14px 14px;
+    font-size: 32px;
+  }
+
+   .cs-arrow {
+    width: 70px;
+    background-size: 40px 66px;
+    background-position: 14px 60%;
+  }
+
+   .swiper-slide img {
+    height: 108px;
+    width: 108px;
+  }
+
+   .swiper-container {
+    height: 360px;
+  }
+   .swiper-slide {
+    -webkit-transform: translate(0px, 212px) scale(0.8);
+    -moz-transform: translate(0px, 212px) scale(0.8);
+    -ms-transform: translate(0px, 212px) scale(0.8);
+    -o-transform: translate(0px, 212px) scale(0.8);
+    transform: translate(0px, 212px) scale(0.8);
+    opacity: 0.7;
+  }
+   .swiper-slide-visible {
+    -webkit-transform: translate(0px, 212px) scale(0.8);
+    -moz-transform: translate(0px, 212px) scale(0.8);
+    -ms-transform: translate(0px, 212px) scale(0.8);
+    -o-transform: translate(0px, 212px) scale(0.8);
+    transform: translate(0px, 212px) scale(0.8);
+  }
+   .swiper-slide-active {
+    opacity: 1.0;
+    -webkit-transform: translate(0px, 188px) scale(1);
+    -moz-transform: translate(0px, 188px) scale(1);
+    -ms-transform: translate(0px, 188px) scale(1);
+    -o-transform: translate(0px, 188px) scale(1);
+    transform: translate(0px, 188px) scale(1);
+  }
+   .swiper-slide .cs-icon-subtitle {
+    font-size: 22px;
+    margin-top: 10px;
+    line-height: 22px;
+  }
+
+   .cs-icon-subtitle span.rating-star {
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+  }
+
+  .widget-head {
+    line-height: 40px;
+    background: #ddd url(../images/logo_small.png) no-repeat right 16px center;
+    font-size: 14px;
+    background-size: 82px 18px;
+    padding-left: 16px;
+  }
+
+  .widget-head.calcalist {
+    color : #C82027;
+    background :  #ededee url(../images/logo_small.png) no-repeat left 16px center;
+    background-size: 82px 18px;
+    text-align: right;
+    padding-right: 16px;
+    font-size: 25px;
+    font-family: arial;
+    font-weight: bold;
+    line-height: 55px;
+  }
+
+  .widget-head.calcalist span {
+    display:none
+  }
+
+  .widget-head.calcalist:after {
+    content : "אפליקציות מומלצות"
+  }
+}
+
+
+/* begin : frappe widget */
+
+.frappe-wrapper {
+  background-color: #e5e6e1;
+  height:204px;
+  display:inline-block;
+  width:100%;
+  position:relative;
+}
+
+.frappe-wrapper.dailyapp {
+  height: 244px!important;
+}
+
+.frappe-wrapper.calcalist {
+  background-color: #ededee;
+  margin-top: 6px;
+}
+
+.frappe-wrapper.g101 {
+  height:210px;
+}
+
+.frappe-wrapper .suggest {
+  background-color: white;
+  -webkit-transition: height 0.3s, margin-top 0.3s; /* Safari */
+  transition: height 0.3s, margin-top 0.3s;
+  height:160px;
+  width:92%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-top: 0px;
+  align-content: center;
+  padding-top: 7px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 4px;
+}
+
+.frappe-wrapper .suggest.dailyapp {
+  height: 194px!important;
+}
+
+.frappe-wrapper .suggest.g101 {
+  height:159px;
+  margin-top: 1px;
+}
+
+.frappe-wrapper .title {
+  height: 13%;
+  position:relative;
+}
+
+.frappe-wrapper .title > p {
+  position:absolute;
+  margin-top:0px;
+  top:50%;
+  left:2%;
+  color: #333335;
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  line-height: 0px;
+}
+
+.frappe-wrapper .title.g101 {
+  background-color: #3d7209;
+  margin-bottom: 4px;
+  height: 29px;
+}
+
+.frappe-wrapper .title.g101 > p {
+  color: white;
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 21px;
+}
+
+.frappe-wrapper .title.g101 .logo {
+  top:20%;
+}
+
+.frappe-wrapper .title .logo {
+  position:absolute;
+  margin-top:0px;
+  top:24%;
+  right:0%;
+  width:80px;
+  height:17px;
+}
+
+.frappe-wrapper .title .widget-head {
+  background: transparent url(../images/logo_green.png) no-repeat right 14px center;
+  background-size: 65%;
+}
+
+.frappe-wrapper .video {
+  width:100%;
+  height:70%;
+  position: relative;
+}
+
+.frappe-wrapper.dailyapp .video {
+  height:74%;
+}
+
+.frappe-wrapper .video-overlay {
+  position:absolute;
+  z-index: 10;
+  background-color: rgba(44, 44, 44, 0.4);
+  width:100%;
+  height:100%;
+}
+
+.frappe-wrapper .video-overlay > div {
+  position:absolute;
+  color:white;
+  text-align: center;
+  font-size: 10pt;
+  font-family: arial, sans-serif!important;
+  font-weight: 500;
+  vertical-align: top;
+  margin-left: 0px;
+  left:23%;
+}
+
+.frappe-wrapper .video-overlay .replay {
+  top:85%;
+  left:36%;
+  font-weight: 100;
+  font-size: 9pt;
+}
+
+.frappe-wrapper.dailyapp .video-overlay .replay {
+  left:39%;
+}
+
+.frappe-wrapper .video-overlay .replay .text {
+  position:relative;
+  top:-10px;
+}
+
+.frappe-wrapper .video-overlay .install {
+  top:18%;
+  left:6%;
+  width:86%;
+  font-size: 18pt;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.frappe-wrapper.jpost .app-description {
+  top:45%!important;
+  font-size: 8pt!important;
+  font-family: arial, sans-serif!important;
+  color: #90909A!important;
+  max-width: 62%!important;
+}
+
+.frappe-wrapper.jpost .very-small-text {
+  font-size: 6.5pt!important;
+  top: 50%!important;
+}
+
+.frappe-wrapper.jpost .app-category {
+  font-size: 8pt!important;
+  font-family: arial, sans-serif!important;
+  color: #333335!important;
+}
+
+.frappe-wrapper.jpost .app-name {
+  font-size: 10pt!important;
+  font-family: arial, sans-serif!important;
+  font-weight: 700!important;
+  color: #333335!important;
+}
+
+.frappe-wrapper.jpost .title>p {
+  color: #333335!important;
+  font-family: arial,sans-serif!important;
+  font-size: 10pt!important;
+  line-height: 0!important;
+}
+.frappe-wrapper.articlesbase .title>p {
+  top : 0%;
+}
+
+.frappe-wrapper.articlesbase .details p {
+  padding:0;
+}
+
+.cappsool-widget .ynet .title {
+  background-color: #3D749A;
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 34px;
+}
+.cappsool-widget .bombon-wrapper .title.ynet,
+.cappsool-widget .ynet .title>p  {
+  color : #ffffff;
+  right: 0px;
+  padding: 0px 5px 6px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+}
+
+.cappsool-widget .bombon-wrapper .title.ynet {
+  padding: 4px 5px 0px;
+}
+
+.cappsool-widget .bombon-wrapper.ynet .title {
+  height: 30px;
+}
+
+.cappsool-widget .bombon-wrapper .title.ynet:after,
+.cappsool-widget .frappe-wrapper.ynet .title>p:before {
+  content: "אפליקציות מומלצות";
+}
+
+.cappsool-widget .ynet .title .logo {
+  left:0px;
+  top: 18%;
+}
+
+.cappsool-widget .ynet .title .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat left 5px top 5px;
+  background-size: 60%;
+}
+
+.cappsool-widget .ynet {
+  background-color:transparent;
+  border-bottom:none;
+}
+.cappsool-widget .ynet .suggest {
+  background-color: #f2f2f2;
+}
+
+
+
+/****************** sport5 */
+
+
+.cappsool-widget .bombon-wrapper .title.sport5,
+.cappsool-widget .sport5 .title>p  {
+  color : #ffffff;
+  right: 0px;
+  padding-right: 5px;
+  font-family: 'south web light';
+  font-weight: bold;
+  font-size: 17px;
+  text-align: right;
+}
+
+.cappsool-widget .bombon-wrapper .title.sport5:after,
+.cappsool-widget .frappe-wrapper.sport5 .title>p:before {
+  content: "אפליקציות מומלצות";
+}
+
+.cappsool-widget .sport5 .title .logo {
+  left:0px;
+  top: 18%;
+}
+
+.cappsool-widget .sport5 .title .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat right 14px center;
+  background-size: 65%;
+}
+
+.cappsool-widget .bombon-wrapper.sport5 .title {
+  height: 26px;
+}
+
+
+.cappsool-widget .sport5 .title {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(1, 75, 173);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  color: rgb(1, 75, 173);
+  background-color: rgb(246, 246, 246);
+}
+
+.cappsool-widget .bombon-wrapper .title.sport5:after,
+.cappsool-widget .frappe-wrapper.sport5 .title>p:before {
+  color: rgb(37, 109, 204);
+  height: 17px;
+  top: auto;
+  bottom: 4px;
+  right: 0px;
+  left: auto;
+  text-align: right;
+  direction: rtl;
+  padding-right: 10px;
+  float: right;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cappsool-widget .sport5 .title {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(1, 75, 173);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  color: rgb(1, 75, 173);
+  background-color: rgb(246, 246, 246);
+}
+
+.bombon-wrapper.sport5,
+.frappe-wrapper.sport5 {
+  background-color: white;
+  margin-bottom: 5px;
+  border-bottom:none;
+}
+
+
+
+.bombon-wrapper.sport5 .title .logo,
+.frappe-wrapper.sport5 .title .logo {
+  margin-top: 2px;
+  left: -2%!important;
+}
+
+.sport5 .video-overlay .question:before {
+  content: '?מעוניין'!important;
+}
+
+.sport5 p.up:before {
+  content: 'בכיף'!important;
+}
+
+.sport5 p.down:before {
+  content: 'דפדף'!important;
+}
+
+.frappe-wrapper.sport5.thumbs .thumb-wrapper {
+  top:28%
+}
+
+/************************************/
+
+/************playbuzz******************/
+
+.cappsool-widget .bombon-wrapper.playbuzz .title,
+.cappsool-widget .playbuzz .title>p  {
+  color : #ffffff;
+  left: 0px;
+  padding-left: 5px;
+  font-family: 'south web light';
+  font-weight: bold;
+  font-size: 17px;
+  text-align: right;
+}
+
+.cappsool-widget .playbuzz .title .logo {
+  right:0px;
+  top: 18%;
+  margin: initial!important;
+}
+
+.frappe-wrapper.playbuzz  .title .widget-head {
+  background-image: url("http://server.cappsool.com/assets/widget/images/logo_small.png")!important;
+
+}
+
+.cappsool-widget .bombon-wrapper.playbuzz .title {
+  height: 26px;
+}
+
+
+.cappsool-widget .playbuzz .title {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #009CFF!important;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  color: #009CFF!important;
+  background-color: rgb(246, 246, 246);
+}
+
+.cappsool-widget .bombon-wrapper.playbuzz .title:before {
+  content: 'Apps You May Like';
+  padding-left: 10px!important;
+}
+
+.cappsool-widget .bombon-wrapper.playbuzz .title:before,
+.cappsool-widget .frappe-wrapper.playbuzz .title>p:before {
+  color: #009CFF;
+  height: 17px;
+  top: auto;
+  bottom: 4px;
+  right: auto;
+  left: 2px;
+  text-align: right;
+  padding-right: 10px;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cappsool-widget .playbuzz  .title {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(1, 75, 173);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  color: rgb(1, 75, 173);
+  background-color: rgb(246, 246, 246);
+}
+
+.bombon-wrapper.playbuzz,
+.frappe-wrapper.playbuzz {
+  background-color: white;
+  margin-bottom: 5px;
+  border-bottom:none;
+}
+
+.bombon-wrapper.playbuzz .title .logo,
+.frappe-wrapper.playbuzz .title .logo {
+  margin-top: 0px;
+  right:0px;
+}
+
+.bombon-wrapper.playbuzz .title .logo {
+  left: auto!important;
+}
+
+.frappe-wrapper.playbuzz ,
+.bombon-wrapper.playbuzz  {
+  line-height: 1.5!important;
+}
+
+.bombon-wrapper.playbuzz .app-stamp {
+  left: 76%!important;
+}
+
+.cappsool-widget .bombon-wrapper.playbuzz .title {
+
+  text-align: left
+}
+
+/**************************************/
+
+/****************largebutton***************/
+
+
+.bombon-wrapper.largebutton .app-rating {
+  display: none;
+}
+
+.bombon-wrapper.largebutton .app-call-to-action {
+  display: none;
+}
+
+.bombon-wrapper.largebutton .install-button.ios-button,
+.bombon-wrapper.largebutton .install-button.android-button{
+  padding: 0px;
+  background: none;
+  background-color: rgb(112, 177, 242)!important;
+  border-color: rgb(112, 177, 242);
+  border-radius: 2px;
+  color: white;
+  font-size: 11pt;
+  font-weight: 100;
+  padding-top: 2.5%;
+  width: 99.5%;
+  left: 0%;
+}
+
+.bombon-wrapper.largebutton .install-button.ios-button {
+  height: 65%;
+  top: 8%;
+}
+.bombon-wrapper.largebutton .install-button.android-button{
+  height: 73%;
+  top: 5%;
+}
+
+.bombon-wrapper.largebutton .install-button span {
+  display:none;
+}
+
+.bombon-wrapper.largebutton .install-button:after {
+  content: 'INSTALL NOW';
+  font-size: 10pt!important;
+}
+
+.bombon-wrapper.largebutton .install-button.ios-button:hover,
+.bombon-wrapper.largebutton .install-button.android-button:hover{
+  background-color: #4797e7!important;
+  border-color: #4797e7;
+}
+
+/******************************************/
+
+/*************calculator*******************/
+
+.cscalculator-wrapper {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.cscalculator-wrapper .cstext {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  margin-left: -70px;
+  font-size: 10pt;
+  font-family: "pbRegular", Helvetica, Arial, sans-serifd;
+  color: #b8b8b8;
+  top: 40%;
+  margin-top: 55px;
+}
+
+.cscalculator-wrapper .cscalculating {
+  background-color: #4797e7;
+  width: 50px;
+  z-index: 1;
+  margin-left: -25px;
+  position: absolute;
+  height: 50px;
+  top: 40%;
+  border-radius: 50px;
+  animation: cs-calc-spin 0.5s steps(2) 0s infinite alternate;
+  -webkit-animation: cs-calc-spin 0.5s steps(2) 0s infinite alternate;
+  -moz-animation: cs-calc-spin 0.5s steps(2) 0s infinite alternate;
+  -o-animation: cs-calc-spin 0.5s steps(2) 0s infinite alternate;
+  -ms-animation: cs-calc-spin 0.5s steps(2) 0s infinite alternate;
+}
+
+.korto-wrapper .cscalculator-wrapper .cscalculating {
+  top: 15%;
+}
+.korto-wrapper .cscalculator-wrapper .cstext {
+  margin-top: 54px;
+  top: 15%;
+}
+
+@-webkit-keyframes cs-calc-spin {
+  0% {-webkit-transform: rotate(0deg) }
+  100% { -webkit-transform: rotate(180deg) }
+}
+
+@-moz-keyframes cs-calc-spin {
+  0% {-moz-transform: rotate(0deg) }
+  100% { -moz-transform: rotate(180deg) }
+}
+
+@-ms-keyframes cs-calc-spin {
+  0% {-ms-transform: rotate(0deg) }
+  100% { -ms-transform: rotate(180deg) }
+}
+
+@-o-keyframes cs-calc-spin {
+  0% {-o-transform: rotate(0deg) }
+  100% { -o-transform: rotate(180deg) }
+}
+
+@keyframes cs-calc-spin {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(180deg) }
+}
+
+.cscalculator-wrapper .cscalculating .first {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  margin-top: 14px;
+}
+
+.cscalculator-wrapper .cscalculating .sec {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: -11px;
+}
+
+/******************************************/
+
+.frappe-wrapper .video-overlay .install .text {
+  position:relative;
+  top:-16px;
+}
+
+.frappe-wrapper .video-overlay .install .text.with-users {
+  top:-21px;
+}
+
+.frappe-wrapper .video-overlay .users {
+  position: absolute;
+  color:white;
+  font-size: 10pt;
+  top:43%;
+  left: 0%;
+  margin-left: 35px;
+  width:86%;
+}
+
+.frappe-wrapper.dailyapp .video-overlay .users {
+  top: 37%;
+}
+
+.frappe-wrapper .video-overlay > div > .img {
+  display:inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.frappe-wrapper .video-overlay .replay > .img {
+  background: url(../images/replay_video.png) 0 0 no-repeat;
+  background-size: 100%;
+  width:30px;
+  height:30px;
+  margin-right: 9px;
+  display: none;
+}
+
+.frappe-wrapper .video-overlay .install > .img {
+  background: url(../images/install_now.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 45px;
+  height: 45px;
+}
+
+.frappe-wrapper .video .cover{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+.frappe-wrapper .video .jpg-animation{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+.frappe-wrapper .video .cover.hide{
+  display: none;
+}
+
+.frappe-wrapper .video .jpg-animation.hide {
+  display: none;
+}
+
+.frappe-wrapper .video .video-overlay.hide{
+  display: none;
+}
+
+.frappe-wrapper .details {
+  width:100%;
+  height:30%;
+  display:inline-block;
+  position: relative;
+  margin: auto;
+}
+
+.frappe-wrapper .app-image {
+  border-radius: 8px;
+  width:40px;
+  height:40px;
+  margin-top:2%;
+  margin-left:1%;
+}
+
+.frappe-wrapper .app-image > img {
+  border-radius: 8px;
+  width:40px;
+  height:40px;
+}
+
+.frappe-wrapper .app-name {
+  position: absolute;
+  top:9%;
+  left:48px;
+  font-size: 10pt;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  color: #333335;
+  margin-top: 0px;
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.frappe-wrapper .app-category {
+  position: absolute;
+  top:20%;
+  left:48px;
+  font-size: 8pt;
+  font-family: arial, sans-serif;
+  color: #333335;
+  margin-top: 10px;
+}
+
+.frappe-wrapper .app-description {
+  position: absolute;
+  top:45%;
+  left:48px;
+  font-size: 8pt;
+  font-family: arial, sans-serif;
+  color: #90909A;
+  height:20px;
+  margin-top: 10px;
+  white-space: nowrap;
+  max-width: 62%;
+  overflow: hidden;
+}
+
+.frappe-wrapper .very-small-text {
+  font-size: 6.5pt;
+  top: 50%;
+}
+
+.frappe-wrapper .small-text {
+  font-size: 7pt;
+  top: 48%;
+}
+
+.frappe-wrapper .app-rating {
+  position: absolute;
+  top:10%;
+  width:51px;
+  height:15px;
+  right:0%;
+}
+
+.frappe-wrapper .install-button {
+  position: absolute;
+  top:40%;
+  right:0%;
+  width:50px;
+  height:20px;
+  padding-top:3px;
+  font-family: arial!important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top:0px!important;
+}
+
+.frappe-wrapper .install-button.ios-button {
+  font-size: 8pt;
+}
+
+.frappe-wrapper .install-button.android-button {
+  background: -webkit-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, rgba(111, 105, 88, 0.10)); /* Standard syntax */
+  border: 1px solid rgba(111, 105, 88, 0.23);
+  color: #333335;
+  font-size: 8pt;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.frappe-wrapper .ribbon-text {
+  color:white;
+}
+
+.frappe-wrapper .ribbon {
+  top:0px;
+  z-index: 5;
+}
+
+.frappe-wrapper span.rating-star {
+  display: block;
+  float:left;
+  width: 10px;
+  height: 10px;
+  margin-right:0px;
+  background: url(../images/star_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.frappe-wrapper span.rating-star.half {
+  /*width: 6px;
+  height: 11px;*/
+  background: url(../images/star_half_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.frappe-wrapper span.rating-star.ghost {
+  background: url(../images/star_grey.png) 0 0 no-repeat;
+  background-size: 100%
+  /*position: absolute;
+  width: 0;
+  margin: 0;
+  background: 0*/
+}
+
+.frappe-wrapper .title.calcalist {
+  color : #C82027;
+  text-align: right;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 23px;
+  padding-right: 5px;
+  line-height: 0px;
+  top:6%;
+}
+
+.frappe-wrapper.thumbs .question:before {
+  content : "What do you think?";
+}
+
+.frappe-wrapper.thumbs.calcalist .question:before {
+  content : "מה דעתך?";
+}
+
+.frappe-wrapper.thumbs.calcalist .question {
+  direction: rtl;
+}
+
+.frappe-wrapper.thumbs .thumb-up {
+  background: url(../images/thumbsUp.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+  right: 30%;
+  left: auto;
+  top: 36%;
+  border-radius: 100px;
+  border: 3px solid rgb(54, 98, 54);
+}
+
+.frappe-wrapper.thumbs .thumb-down {
+  background: url(../images/thumbsDown.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+  left: 27%;
+  top: 30%;
+  border-radius: 100px;
+  border: 3px solid rgb(173, 21, 21);
+}
+
+.frappe-wrapper.thumbs .thumb-wrapper {
+  width: 35px;
+  height: 35px;
+  top: 33%;
+  padding: 3%;
+}
+
+.frappe-wrapper.thumbs .thumb-wrapper.down {
+  left: 27%;
+}
+
+.frappe-wrapper.thumbs .thumb-wrapper.up {
+  right: 27%;
+  left: auto;
+}
+
+.frappe-wrapper.thumbs p.thumb-text {
+  color: white;
+  position: absolute;
+  top: 60%;
+  width: 35px;
+  text-align: center;
+  margin-top: 16px!important;
+  padding: 0px!important;
+  font-size: 11.5pt;
+  white-space: nowrap;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.frappe-wrapper.thumbs p.thumb-text.up {
+  right: 30%;
+}
+
+.frappe-wrapper.thumbs p.thumb-text.down {
+  left: 30%;
+}
+
+.frappe-wrapper.thumbs.calcalist p.thumb-text.down,
+.frappe-wrapper.thumbs.calcalist .thumb-down {
+  left: 28%;
+}
+
+.frappe-wrapper.thumbs.calcalist p.thumb-text.up,
+.frappe-wrapper.thumbs.calcalist .thumb-up {
+  right: 28%;
+}
+
+.frappe-wrapper.thumbs p.up:before {
+  content: 'Fly';
+}
+
+.frappe-wrapper.thumbs p.down:before {
+  content: 'Die';
+}
+
+.frappe-wrapper.calcalist.thumbs p.up:before {
+  content: 'מעניין';
+}
+
+.frappe-wrapper.calcalist.thumbs p.down:before {
+  content: 'לא תודה';
+}
+
+.frappe-wrapper.thumbs .question {
+  top: 9%;
+  width: 90%;
+  overflow: hidden;
+  left: 5%;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 13.5pt;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.frappe-wrapper .title.dailyapp {
+  padding-right: 10px;
+}
+
+.frappe-wrapper .title > p:before {
+  content : "Apps You May Like"
+}
+
+.frappe-wrapper .title.dailyapp > p:before {
+  content : "Daily App"
+}
+
+.frappe-wrapper .title.calcalist > p {
+  display:none;
+}
+
+.frappe-wrapper .title.calcalist:after {
+  content : "אפליקציות מומלצות"
+}
+
+.frappe-wrapper .title.calcalist.dailyapp:after {
+  content : "אפליקציית היום"!important
+}
+
+.frappe-wrapper .title.calcalist .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat left 14px center;
+  background-size: 45%;
+  position: absolute;
+  left:0%;
+  top:-25%;
+}
+
+@media only screen and (min-width: 640px) and (orientation: portrait){
+
+  .frappe-wrapper {
+    height:408px;
+  }
+
+  .frappe-wrapper.dailyapp {
+    height: 475px!important;
+  }
+
+  .frappe-wrapper.g101.dailyapp {
+    height: 487px!important;
+  }
+
+  .frappe-wrapper.g101 {
+    height:420px;
+  }
+
+  .frappe-wrapper .suggest {
+    height:320px;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 8px;
+  }
+
+  .frappe-wrapper .suggest.dailyapp {
+    height: 388px!important;
+  }
+
+  .frappe-wrapper .suggest.g101 {
+    height:318px;
+    margin-top: 2px;
+  }
+
+  .frappe-wrapper .title > p {
+    font-size: 20pt;
+  }
+
+  .frappe-wrapper .title.g101 {
+    margin-bottom: 8px;
+    height: 58px;
+  }
+
+  .frappe-wrapper .title.g101 > p {
+    font-size: 42px;
+  }
+
+  .frappe-wrapper .title .logo {
+    width:160px;
+    height:34px;
+  }
+
+  .frappe-wrapper.dailyapp .video {
+    height:75%;
+  }
+
+  .frappe-wrapper .video-overlay > div {
+    font-size: 20pt;
+  }
+
+  .frappe-wrapper .video-overlay .replay .text {
+    top:-20px;
+  }
+
+  .frappe-wrapper .video-overlay .replay {
+    font-size: 18pt;
+  }
+
+  .frappe-wrapper .video-overlay .users {
+    font-size: 18pt;
+    margin-left: 70px;
+    left:2%;
+  }
+
+  .frappe-wrapper.dailyapp .video-overlay .users {
+    margin-left: 65px;
+  }
+
+  .frappe-wrapper .video-overlay > div > .img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .frappe-wrapper .video-overlay > .replay > .img {
+    width: 60px;
+    height: 60px;
+    margin-right: 18px;
+    display: none;
+  }
+
+  .frappe-wrapper .video-overlay > .install > .img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .frappe-wrapper.thumbs .thumb-up {
+    width: 70px;
+    height: 70px;
+    right: 27%;
+    border-width: 6px;
+  }
+
+  .frappe-wrapper.thumbs .thumb-down {
+    width: 70px;
+    height: 70px;
+    left: 27%;
+    border-width: 6px;
+  }
+
+  .frappe-wrapper.thumbs .question {
+    font-size: 27pt;
+  }
+
+  .frappe-wrapper.thumbs p.thumb-text {
+    width: 70px;
+    font-size: 23pt;
+    margin-top: 30px!important;
+  }
+
+  .frappe-wrapper.thumbs p.thumb-text.up {
+    right: 27%;
+    padding-right: 1.5%!important;
+  }
+
+  .frappe-wrapper.thumbs .thumb-wrapper {
+    width: 70px;
+    height: 70px;
+    padding: 3%;
+  }
+
+  .frappe-wrapper.thumbs .thumb-wrapper.down {
+    left: 24%;
+    padding-left: 1.5%!important;
+  }
+
+  .frappe-wrapper.thumbs p.thumb-text.down {
+    left: 27%;
+  }
+
+  .frappe-wrapper.thumbs.calcalist p.thumb-text.down {
+    left: 24%;
+  }
+
+  .frappe-wrapper.thumbs.calcalist .thumb-wrapper.down,
+  .frappe-wrapper.thumbs.calcalist p.thumb-text.down,
+  .frappe-wrapper.thumbs.calcalist .thumb-down {
+    left: 22%;
+  }
+
+  .frappe-wrapper.thumbs.calcalist .thumb-wrapper.up,
+  .frappe-wrapper.thumbs.calcalist p.thumb-text.up,
+  .frappe-wrapper.thumbs.calcalist .thumb-up {
+    right: 25%;
+  }
+
+  .frappe-wrapper .app-image {
+    border-radius: 16px;
+    width:80px;
+    height:80px;
+  }
+
+  .frappe-wrapper .app-image > img {
+    border-radius: 16px;
+    width:80px;
+    height:80px;
+  }
+
+  .frappe-wrapper .app-name {
+    left:96px;
+    font-size: 20pt;
+  }
+
+  .frappe-wrapper .app-category {
+    left:96px;
+    font-size: 16pt;
+    margin-top: 20px;
+  }
+
+  .frappe-wrapper .app-description {
+    left:96px;
+    font-size: 16pt;
+    height:40px;
+    margin-top: 20px;
+  }
+
+  .frappe-wrapper .app-rating {
+    width:102px;
+    height:30px;
+  }
+
+  .frappe-wrapper .install-button {
+    width:100px;
+    height:40px;
+    padding-top:6px;
+  }
+
+  .frappe-wrapper .install-button.ios-button {
+    border-width: 2px;
+    font-size: 16pt!important;
+    border-radius: 8px;
+  }
+
+  .frappe-wrapper .install-button.android-button {
+    font-size: 16pt!important;
+    border-radius: 4px;
+  }
+
+  .frappe-wrapper span.rating-star {
+    width: 20px;
+    height: 20px;
+  }
+
+  .frappe-wrapper .very-small-text {
+     font-size: 11.5pt;
+   }
+
+  .frappe-wrapper.dailyapp .very-small-text {
+    top:43%;
+  }
+
+  .frappe-wrapper .small-text {
+    font-size: 13pt;
+  }
+
+  .frappe-wrapper.dailyapp .small-text {
+    top:42%;
+  }
+
+  .frappe-wrapper .video-overlay .install {
+    font-size: 30pt;
+  }
+
+  .frappe-wrapper .video-overlay .install .text {
+    top:-32px;
+  }
+
+  .frappe-wrapper .video-overlay .install .text.with-users {
+    top:-42px;
+  }
+
+  .frappe-wrapper .title.calcalist {
+    padding-right: 16px;
+    font-size: 45px;
+    line-height: 0px;
+    height: 54px;
+  }
+
+  .frappe-wrapper.calcalist {
+    margin-top: 12px;
+  }
+}
+
+.frappe-wrapper .slick-slide {
+  float: left!important;
+}
+
+.frappe-wrapper .slick-track,
+.frappe-wrapper .slick-slider,
+.frappe-wrapper .slick-list,
+.frappe-wrapper .slick-slide {
+  opacity: 1!important;
+}
+
+.frappe-wrapper .slick-list {
+  direction: ltr;
+}
+/* end : frappe widget */
+
+
+/* begin : korto widget */
+
+.korto-wrapper {
+  background-color: #e5e6e1;
+  height:116px;
+ /* margin-bottom: 25px;*/
+  width:100%;
+  position: relative;
+  display: inline-block;
+}
+
+.korto-wrapper.g101 {
+  height:126px;
+}
+
+.korto-wrapper .suggest {
+  background-color: white;
+  height:71px;
+  width:90%;
+  margin-left:3%;
+  margin-right:3%;
+  margin-top: 0px;
+  align-content: center;
+  padding-top: 7px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 4px;
+ /* box-shadow: 10px 10px 5px #888888;
+  border: 1px solid #E5E6E1;*/
+}
+
+.korto-wrapper.g101 .suggest {
+  margin-top: 7px;
+}
+
+.korto-wrapper .title {
+  height: 25px;
+  position:relative;
+}
+
+.korto-wrapper .title > p {
+  position:absolute;
+  margin-top:0px;
+  top:53%;
+  left:4%;
+  color: rgb(70, 70, 72);
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 0px;
+}
+
+.korto-wrapper .title .logo {
+  position:absolute;
+  margin-top:0px;
+  top:16%;
+  right:0%;
+  width:80px;
+  height:17px;
+}
+
+.korto-wrapper .title .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat right 14px center;
+  background-size: 55%;
+}
+
+.korto-wrapper .title.g101 {
+  background-color: #3d7209;
+  margin-bottom: 4px;
+  height: 29px;
+}
+
+.korto-wrapper .title.g101 > p {
+  color: white;
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 21px;
+}
+
+.korto-wrapper .title.g101 .logo {
+  top:20%;
+}
+
+.korto-wrapper .title.g101 .widget-head {
+  background: transparent url(../images/logo_green.png) no-repeat right 14px center;
+  background-size: 55%;
+}
+
+.korto-wrapper .details {
+  width:100%;
+  height:100%;
+  position: relative;
+  margin: auto;
+}
+
+.korto-wrapper .app-image {
+  border-radius: 8px;
+  width:65px;
+  height:65px;
+  margin-top:0%;
+  margin-left:1%;
+  position: absolute;
+  top: 3%;
+}
+
+.korto-wrapper .app-image > img {
+  border-radius: 8px;
+  width:65px;
+  height:65px;
+}
+
+.korto-wrapper .app-name {
+  position: absolute;
+  top:0%;
+  left:75px;
+  font-size: 12pt;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  color: #444446;
+  margin-top: 0px;
+  max-width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.korto-wrapper .app-category {
+  position: absolute;
+  top:34%;
+  left:75px;
+  font-size: 10pt;
+  font-family: arial, sans-serif;
+  color: #444446;
+  margin-top: 10px;
+}
+
+.korto-wrapper .app-description {
+  position: absolute;
+  top:58%;
+  left:75px;
+  font-size: 8pt;
+  font-family: arial, sans-serif;
+  color: #90909A;
+  height:20px;
+  margin-top: 10px;
+  white-space: nowrap;
+  max-width: 62%;
+  overflow: hidden;
+}
+
+.korto-wrapper .very-small-text {
+  font-size: 7.5pt;
+  top: 58%;
+}
+
+.korto-wrapper .small-text {
+  font-size: 8pt;
+  top: 58%;
+}
+
+.korto-wrapper .app-rating {
+  position: absolute;
+  top:31%;
+  width:55px;
+  height:15px;
+  left:75px;
+}
+
+.korto-wrapper .install-button {
+  position: absolute;
+  top:56%;
+  right:0%;
+  width:48px;
+  height:22px;
+  padding-top:4px;
+  font-family: arial!important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top:0px!important;
+}
+
+.korto-wrapper .install-button.ios-button {
+  font-size: 10pt;
+}
+
+.korto-wrapper .install-button.android-button {
+  background: -webkit-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, rgba(111, 105, 88, 0.10)); /* Standard syntax */
+  border: 1px solid rgba(111, 105, 88, 0.23);
+  color: #333335;
+  font-size: 10pt;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.korto-wrapper span.rating-star {
+  float:left;
+  width: 11px;
+  height: 11px;
+  margin-right:0px;
+  background: url(../images/star_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.korto-wrapper span.rating-star.half {
+  /*width: 6px;
+  height: 11px;*/
+  background: url(../images/star_half_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.korto-wrapper span.rating-star.ghost {
+  background: url(../images/star_grey.png) 0 0 no-repeat;
+  background-size: 100%
+  /*position: absolute;
+  width: 0;
+  margin: 0;
+  background: 0*/
+}
+
+.korto-wrapper .change-btn {
+  position: absolute;
+  top:-9%;
+  padding-top: 5px;
+  right:-3%;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #90909A;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.korto-wrapper .title > p:before {
+  content : "App Of The Week"
+}
+
+@media only screen and (min-width: 640px) and (orientation: portrait){
+
+  .korto-wrapper {
+    height:225px;
+    margin-bottom: 20px;
+  }
+
+  .korto-wrapper.g101 {
+    height:245px;
+  }
+
+  .korto-wrapper .suggest {
+    height:138px;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 8px;
+  }
+
+  .korto-wrapper.g101 .suggest {
+    margin-top: 14px;
+  }
+
+  .korto-wrapper .title {
+    height: 50px;
+  }
+
+  .korto-wrapper .title > p {
+    font-size: 20pt;
+  }
+
+  .korto-wrapper .title .logo {
+    width:160px;
+    height:34px;
+  }
+
+  .korto-wrapper .title.g101 {
+    margin-bottom: 8px;
+    height: 58px;
+  }
+
+  .korto-wrapper .title.g101 > p {
+    font-size: 42px;
+  }
+
+  .korto-wrapper .app-image {
+    border-radius: 16px;
+    width:120px;
+    height:120px;
+    top: 5%;
+  }
+
+  .korto-wrapper .app-image > img {
+    border-radius: 16px;
+    width:120px;
+    height:120px;
+  }
+
+  .korto-wrapper .app-name {
+    left:140px;
+    font-size: 24pt;
+  }
+
+  .korto-wrapper .app-category {
+    left:140px;
+    font-size: 20pt;
+    margin-top: 20px;
+  }
+
+  .korto-wrapper .app-description {
+    left:140px;
+    font-size: 16pt;
+    height:40px;
+    margin-top: 20px;
+  }
+
+  .korto-wrapper .very-small-text {
+    font-size: 15pt;
+  }
+
+  .korto-wrapper .small-text {
+    font-size: 16pt;
+  }
+
+  .korto-wrapper .app-rating {
+    width:110px;
+    height:30px;
+    left:138px;
+  }
+
+  .korto-wrapper .install-button {
+    width:96px;
+    height:44px;
+    padding-top:8px;
+  }
+
+  .korto-wrapper .install-button.ios-button {
+    font-size: 20pt;
+    border-radius: 8px;
+  }
+
+  .korto-wrapper .install-button.android-button {
+    font-size: 20pt;
+    border-radius: 4px;
+  }
+
+  .korto-wrapper span.rating-star {
+    width: 22px;
+    height: 22px;
+  }
+
+  .korto-wrapper .change-btn {
+    padding-top: 10px;
+    font-size: 24pt;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/* end : korto widget */
+
+/* begin : linizio widget */
+
+.linizio-wrapper {
+  background-color: #e5e6e1;
+  height:116px;
+  /* margin-bottom: 25px;*/
+  width:100%;
+  position: relative;
+  display: inline-block;
+}
+
+.linizio-wrapper.g101 {
+  height:126px;
+}
+
+.linizio-wrapper .suggest {
+  background-color: white;
+  height:71px;
+  width:90%;
+  margin-left:3%;
+  margin-right:3%;
+  margin-top: 0px;
+  align-content: center;
+  padding-top: 7px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgb(229, 230, 225);
+  /* box-shadow: 10px 10px 5px #888888;
+   border: 1px solid #E5E6E1;*/
+}
+
+.linizio-wrapper.g101 .suggest[num='0'] {
+  margin-top: 7px;
+}
+
+.linizio-wrapper .title {
+  height: 25px;
+  position:relative;
+}
+
+.linizio-wrapper .title > p {
+  position:absolute;
+  margin-top:0px;
+  top:53%;
+  left:4%;
+  color: rgb(70, 70, 72);
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 0px;
+}
+
+.linizio-wrapper .title .logo {
+  position:absolute;
+  margin-top:0px;
+  top:16%;
+  right:0%;
+  width:80px;
+  height:17px;
+}
+
+.linizio-wrapper .title .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat right 14px center;
+  background-size: 55%;
+}
+
+.linizio-wrapper .title.g101 {
+  background-color: #3d7209;
+  margin-bottom: 4px;
+  height: 29px;
+}
+
+.linizio-wrapper .title.g101 > p {
+  color: white;
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 21px;
+}
+
+.linizio-wrapper .title.g101 .logo {
+  top: 20%;
+}
+
+.linizio-wrapper .title.g101 .widget-head {
+  background: transparent url(../images/logo_green.png) no-repeat right 14px center;
+  background-size: 55%;
+}
+
+.linizio-wrapper .title.calcalist {
+  line-height: 0px;
+}
+
+.linizio-wrapper .title.calcalist > p{
+  right: 4%;
+  left: auto;
+}
+
+.linizio-wrapper .title.calcalist p:before {
+  content : "אפליקציות מומלצות";
+  color : #C82027;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 23px;
+  top:6%;
+}
+
+.linizio-wrapper .title.calcalist .logo {
+  left: -2%;
+  right:auto;
+}
+
+.linizio-wrapper .details {
+  width:100%;
+  height:100%;
+  position: relative;
+  margin: auto;
+}
+
+.linizio-wrapper .app-image {
+  border-radius: 8px;
+  width:65px;
+  height:65px;
+  margin-top:0%;
+  margin-left:1%;
+  position: absolute;
+  top: 3%;
+}
+
+.linizio-wrapper .app-image > img {
+  border-radius: 8px;
+  width:65px;
+  height:65px;
+}
+
+.linizio-wrapper .app-name {
+  position: absolute;
+  top:0%;
+  left:75px;
+  font-size: 12pt;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  color: #444446;
+  margin-top: 0px;
+  max-width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linizio-wrapper .app-category {
+  position: absolute;
+  top:34%;
+  left:75px;
+  font-size: 10pt;
+  font-family: arial, sans-serif;
+  color: #444446;
+  margin-top: 10px;
+}
+
+.linizio-wrapper .app-description {
+  position: absolute;
+  top:58%;
+  left:75px;
+  font-size: 8pt;
+  font-family: arial, sans-serif;
+  color: #90909A;
+  height:20px;
+  margin-top: 10px;
+  white-space: nowrap;
+  max-width: 62%;
+  overflow: hidden;
+}
+
+.linizio-wrapper .very-small-text {
+  font-size: 7.5pt;
+  top: 58%;
+}
+
+.linizio-wrapper .small-text {
+  font-size: 8pt;
+  top: 58%;
+}
+
+.linizio-wrapper .app-rating {
+  position: absolute;
+  top:31%;
+  width:55px;
+  height:15px;
+  left:75px;
+}
+
+.linizio-wrapper .install-button {
+  position: absolute;
+  top:56%;
+  right:0%;
+  width:48px;
+  height:22px;
+  padding-top:4px;
+  font-family: arial!important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top:0px!important;
+}
+
+.linizio-wrapper .install-button.ios-button {
+  font-size: 10pt;
+}
+
+.linizio-wrapper .install-button.android-button {
+  background: -webkit-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, rgba(111, 105, 88, 0.10)); /* Standard syntax */
+  border: 1px solid rgba(111, 105, 88, 0.23);
+  color: #333335;
+  font-size: 10pt;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.linizio-wrapper span.rating-star {
+  float:left;
+  width: 11px;
+  height: 11px;
+  margin-right:0px;
+  background: url(../images/star_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.linizio-wrapper span.rating-star.half {
+  /*width: 6px;
+  height: 11px;*/
+  background: url(../images/star_half_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.linizio-wrapper span.rating-star.ghost {
+  background: url(../images/star_grey.png) 0 0 no-repeat;
+  background-size: 100%
+  /*position: absolute;
+  width: 0;
+  margin: 0;
+  background: 0*/
+}
+
+.linizio-wrapper .change-btn {
+  position: absolute;
+  top:-9%;
+  padding-top: 5px;
+  right:-3%;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #90909A;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.linizio-wrapper .title > p:before {
+  content : "Apps Of The Week"
+}
+
+@media only screen and (min-width: 640px) and (orientation: portrait){
+
+  .linizio-wrapper {
+    height:225px;
+    margin-bottom: 20px;
+  }
+
+  .linizio-wrapper.g101 {
+    height:245px;
+  }
+
+  .linizio-wrapper .suggest {
+    height:138px;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 8px;
+  }
+
+  .linizio-wrapper.g101 .suggest[num='0'] {
+    margin-top: 14px;
+  }
+
+  .linizio-wrapper .title {
+    height: 50px;
+  }
+
+  .linizio-wrapper .title > p {
+    font-size: 20pt;
+  }
+
+  .linizio-wrapper .title.calcalist > p {
+    top: 45%;
+  }
+
+  .linizio-wrapper .title.calcalist p:before {
+    font-size: 30pt;
+  }
+  .linizio-wrapper .title .logo {
+    width:160px;
+    height:34px;
+  }
+
+  .linizio-wrapper .title.g101 {
+    margin-bottom: 8px;
+    height: 58px;
+  }
+
+  .linizio-wrapper .title.g101 > p {
+    font-size: 42px;
+  }
+
+  .linizio-wrapper .app-image {
+    border-radius: 16px;
+    width:120px;
+    height:120px;
+    top: 5%;
+  }
+
+  .linizio-wrapper .app-image > img {
+    border-radius: 16px;
+    width:120px;
+    height:120px;
+  }
+
+  .linizio-wrapper .app-name {
+    left:140px;
+    font-size: 24pt;
+  }
+
+  .linizio-wrapper .app-category {
+    left:140px;
+    font-size: 20pt;
+    margin-top: 20px;
+  }
+
+  .linizio-wrapper .app-description {
+    left:140px;
+    font-size: 16pt;
+    height:40px;
+    margin-top: 20px;
+  }
+
+  .linizio-wrapper .very-small-text {
+    font-size: 15pt;
+  }
+
+  .linizio-wrapper .small-text {
+    font-size: 16pt;
+  }
+
+  .linizio-wrapper .app-rating {
+    width:110px;
+    height:30px;
+    left:138px;
+  }
+
+  .linizio-wrapper .install-button {
+    width:96px;
+    height:44px;
+    padding-top:8px;
+  }
+
+  .linizio-wrapper .install-button.ios-button {
+    font-size: 20pt;
+    border-radius: 8px;
+  }
+
+  .linizio-wrapper .install-button.android-button {
+    font-size: 20pt;
+    border-radius: 4px;
+  }
+
+  .linizio-wrapper span.rating-star {
+    width: 22px;
+    height: 22px;
+  }
+
+  .linizio-wrapper .change-btn {
+    padding-top: 10px;
+    font-size: 24pt;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/* end : linizio widget */
+
+/* begin : bombon widget */
+
+.bombon-wrapper {
+  background-color: white;
+  height:336px;
+  display:inline-block;
+  width:100%;
+  position:relative;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 6px solid #ededee;
+}
+
+.bombon-wrapper.calcalist {
+  margin-top: 6px;
+  height:342px;
+}
+
+.bombon-wrapper.g101 {
+  height:346px;
+}
+
+.bombon-wrapper .app-stamp {
+  background: transparent url(../images/app_stamp.png) no-repeat right 14px center;
+  background-size: 40%;
+  height: 50px;
+  width: 70px;
+  left: 78%;
+  position: absolute;
+  top:0%;
+}
+
+.share .bombon-wrapper .app-stamp {
+  display: none;
+}
+
+.bombon-wrapper .suggest {
+  background-color: white;
+  -webkit-transition: height 0.3s, margin-top 0.3s; /* Safari */
+  transition: height 0.3s, margin-top 0.3s;
+  height:305px;
+  width:97%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-top: 0px;
+  align-content: center;
+  border: 1px solid #DADADA;
+}
+
+.bombon-wrapper .slick-track {
+  margin-left: -1%;
+}
+
+.bombon-wrapper .first-suggest {
+  width:102%;
+  margin-left: -3%;
+}
+
+.bombon-wrapper .last-suggest {
+  width:102%;
+}
+
+.bombon-wrapper .title {
+  height: 6%;
+  position:relative;
+  background-color: #ededee;
+  margin-bottom: 8px;
+}
+
+.bombon-wrapper .title.g101 {
+  background-color: #3d7209;
+  height: 29px;
+}
+
+.bombon-wrapper .title.calcalist {
+  height: 8%;
+}
+
+.bombon-wrapper .title.calcalist .logo {
+  top: 18%;
+}
+
+.bombon-wrapper .title.g101:before {
+  content: 'Apps You May Like';
+  color:white;
+  font-size: 21px;
+  font-family: Tahoma;
+  font-weight: bold;
+  margin-left: 2%;
+  line-height: 125%;
+}
+
+.bombon-wrapper .title.g101 .logo {
+  top:20%;
+}
+
+.bombon-wrapper .title .logo {
+  position:absolute;
+  margin-top:0px;
+  top:12%;
+  left:-2%;
+  width:80px;
+  height:17px;
+}
+
+.bombon-wrapper.g101 .title .logo {
+  left:75%;
+}
+
+.bombon-wrapper .title .widget-head {
+  background: transparent url(../images/logo_small.png) no-repeat right 14px center;
+  background-size: 65%;
+}
+
+.bombon-wrapper.g101 .title .widget-head {
+  background: transparent url(../images/logo_green.png) no-repeat right 14px center;
+  background-size: 65%;
+}
+
+.bombon-wrapper .video {
+  width:100%;
+  height:50%;
+  position: relative;
+}
+
+.bombon-wrapper .video-overlay {
+  position:absolute;
+  z-index: 10;
+  background-color: rgba(44, 44, 44, 0.4);
+  width:100%;
+  height:100%;
+}
+
+.bombon-wrapper .video-overlay > div {
+  position:absolute;
+  color:white;
+  text-align: center;
+  font-size: 10pt;
+  font-family: arial, sans-serif!important;
+  font-weight: 500;
+  vertical-align: top;
+  margin-left: 0px;
+  left:23%;
+}
+
+.bombon-wrapper .video-overlay .replay {
+  top:80%;
+  left:39%;
+  font-weight: 100;
+  font-size: 9pt;
+}
+
+.bombon-wrapper .video-overlay .replay .text {
+  position:relative;
+  top:-10px;
+}
+
+.bombon-wrapper .video-overlay .install {
+  top:22%;
+  left:6%;
+  width:86%;
+  font-size: 18pt;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.bombon-wrapper.articlesbase .title>p {
+  top : 0%;
+}
+
+.bombon-wrapper.articlesbase .details p {
+  padding:0;
+}
+
+.bombon-wrapper .video-overlay .install .text {
+  position:relative;
+  top:-16px;
+}
+
+.bombon-wrapper .video-overlay .install .text.with-users {
+  top:-23px;
+}
+
+.bombon-wrapper .video-overlay .users {
+  position: absolute;
+  color:white;
+  font-size: 10pt;
+  top:40%;
+  left: 0%;
+  margin-left: 35px;
+  width:86%;
+}
+
+.bombon-wrapper .video-overlay > div > .img {
+  display:inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.bombon-wrapper .video-overlay .replay > .img {
+  background: url(../images/replay_video.png) 0 0 no-repeat;
+  background-size: 100%;
+  width:30px;
+  height:30px;
+  margin-right: 9px;
+  display: none;
+}
+
+.bombon-wrapper .video-overlay .install > .img {
+  background: url(../images/install_now.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 45px;
+  height: 45px;
+}
+
+.bombon-wrapper .video .cover{
+  width:100%;
+  height:100%;
+  position: absolute;
+  background-color: rgba(44,44,44,.4);
+}
+
+.bombon-wrapper .video .jpg-animation{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+.bombon-wrapper .video .cover.hide{
+  display: none;
+}
+
+.bombon-wrapper .video .jpg-animation.hide {
+  display: none;
+}
+
+.bombon-wrapper .video .video-overlay.hide{
+  display: none;
+}
+
+.bombon-wrapper .upper-details {
+  width:97%;
+  height:30%;
+  display:inline-block;
+  position: relative;
+  margin-right: auto;
+  margin-bottom: 1%;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.bombon-wrapper .details {
+  width:100%;
+  height:15%;
+  display:inline-block;
+  position: relative;
+  margin: auto;
+}
+
+.bombon-wrapper .app-image {
+  border-radius: 8px;
+  width:48px;
+  height:48px;
+  margin-top: 3px;
+}
+
+.bombon-wrapper .app-image > img {
+  border-radius: 8px;
+  width:48px;
+  height:48px;
+}
+
+.bombon-wrapper .app-name {
+  position: absolute;
+  top:0%;
+  left:3%;
+  margin-top: 0px;
+  margin-left: 48px;
+  font-size: 14pt;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  color: #333335;
+  max-width: 64%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bombon-wrapper .app-category {
+  position: absolute;
+  top:24%;
+  left:3%;
+  margin-top: 0px;
+  margin-left: 48px;
+  font-size: 9pt;
+  font-family: arial, sans-serif;
+  color: #333335;
+}
+
+.bombon-wrapper .app-description {
+  position: absolute;
+  top:59%;
+  line-height: 1.3!important;
+  font-size: 11pt;
+  font-family: arial, sans-serif;
+  color: #90909A;
+  height:50%;
+  margin-top: 0px;
+  width: 98%;
+  overflow: hidden;
+}
+
+.bombon-wrapper .app-call-to-action {
+  position: absolute;
+  top:16%;
+  left:3%;
+  line-height: 1.3!important;
+  font-size: 10pt;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  color: #333335;
+  height:50%;
+  margin-top: 0px;
+  width: 71%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bombon-wrapper .very-small-text {
+  font-size: 6.5pt;
+  top: 50%;
+}
+
+.bombon-wrapper .small-text {
+  font-size: 7pt;
+  top: 48%;
+}
+
+.bombon-wrapper .app-rating {
+  position: absolute;
+  top:62%;
+  width:40%;
+  height:15px;
+  left:3%;
+}
+
+.bombon-wrapper .app-users {
+  position: absolute;
+  color: #90909A;
+  font-size: 9pt;
+  top:55%;
+  left: 3%;
+  width:86%;
+}
+
+.bombon-wrapper .install-button {
+  position: absolute;
+  top:21%;
+  right:2%;
+  width:60px;
+  height:22px;
+  padding-top:4px;
+  font-family: arial!important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top:0px!important;
+}
+
+.bombon-wrapper .install-button.ios-button {
+  font-size: 9pt;
+}
+
+.bombon-wrapper .install-button.android-button {
+  background: -webkit-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, rgba(111, 105, 88, 0.10)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, rgba(111, 105, 88, 0.10)); /* Standard syntax */
+  border: 1px solid rgba(111, 105, 88, 0.23);
+  color: #333335;
+  font-size: 9pt;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.bombon-wrapper .ribbon-text {
+  color:white;
+}
+
+.bombon-wrapper .ribbon {
+  top:0px;
+  z-index: 5;
+}
+
+.bombon-wrapper span.rating-star {
+  display: block;
+  float:left;
+  width: 11px;
+  height: 10px;
+  margin-right:0px;
+  background: url(../images/star_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.bombon-wrapper span.rating-star.half {
+  /*width: 6px;
+  height: 11px;*/
+  background: url(../images/star_half_orange.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.bombon-wrapper span.rating-star.ghost {
+  background: url(../images/star_grey.png) 0 0 no-repeat;
+  background-size: 100%
+  /*position: absolute;
+  width: 0;
+  margin: 0;
+  background: 0*/
+}
+
+.bombon-wrapper .title.calcalist {
+  color : #C82027;
+  text-align: right;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 23px;
+  padding-right: 5px;
+  line-height: 0px;
+}
+
+.bombon-wrapper.thumbs .question:before {
+  content : "What do you think?";
+}
+
+.bombon-wrapper.thumbs.calcalist .question:before {
+  content : "מה דעתך?";
+}
+
+.bombon-wrapper.thumbs.calcalist .question {
+  direction: rtl;
+}
+
+.bombon-wrapper.thumbs .thumb-up {
+  background: url(../images/thumbsUp.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  right: 30%;
+  left: auto;
+  top: 46%;
+  border-radius: 100px;
+  border: 3px solid rgb(54, 98, 54);
+}
+
+.bombon-wrapper.thumbs .thumb-down {
+  background: url(../images/thumbsDown.png) 0 0 no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  left: 27%;
+  top: 40%;
+  border-radius: 100px;
+  border: 3px solid rgb(173, 21, 21);
+}
+
+.bombon-wrapper.thumbs .thumb-wrapper {
+  width: 40px;
+  height: 40px;
+  top: 43%;
+  padding: 3%;
+}
+
+.bombon-wrapper.thumbs .thumb-wrapper.down {
+  left: 26%;
+}
+
+.bombon-wrapper.thumbs .thumb-wrapper.up {
+  right: 26%;
+  left: auto;
+}
+
+.bombon-wrapper p {
+  padding: 0px!important;
+}
+
+.bombon-wrapper.thumbs p.thumb-text {
+  color: white;
+  position: absolute;
+  top: 70%;
+  width: 40px;
+  text-align: center;
+  margin-top: 16px!important;
+  padding: 0px!important;
+  font-size: 11.5pt;
+  white-space: nowrap;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.bombon-wrapper.thumbs p.thumb-text.up {
+  right: 28%;
+}
+
+.bombon-wrapper.thumbs p.thumb-text.down {
+  left: 30%;
+}
+
+.bombon-wrapper.thumbs.calcalist p.thumb-text.down {
+  left: 29%;
+}
+
+.bombon-wrapper.thumbs.calcalist .thumb-down {
+  left: 28%;
+}
+
+.bombon-wrapper.thumbs.calcalist p.thumb-text.up {
+  right: 28%;
+}
+
+.bombon-wrapper.thumbs.calcalist .thumb-up {
+  right: 27%;
+}
+
+.bombon-wrapper.thumbs p.up:before {
+  content: 'Fly';
+}
+
+.bombon-wrapper.thumbs p.down:before {
+  content: 'Die';
+}
+
+.bombon-wrapper.calcalist.thumbs p.up:before {
+  content: 'מעניין';
+}
+
+.bombon-wrapper.calcalist.thumbs p.down:before {
+  content: 'לא תודה';
+}
+
+.bombon-wrapper.thumbs .question {
+  top: 19%;
+  width: 90%;
+  overflow: hidden;
+  left: 5%;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 13.5pt;
+  background: -webkit-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(44,44,44,0.4), transparent 70%); /* Standard syntax */
+}
+
+.bombon-wrapper .title > p:before {
+  content : "Apps You May Like"
+}
+
+.bombon-wrapper .title.calcalist > p {
+  display:none;
+}
+
+.bombon-wrapper .title.calcalist:after {
+  content : "אפליקציות מומלצות";
+  line-height: 105%;
+}
+
+.bombon-wrapper.dailyapp .last-suggest {
+  width:97%;
+}
+
+.bombon-wrapper.dailyapp .first-suggest {
+  width: 97%;
+  margin-left: 2%;
+}
+
+
+@media only screen and (min-width: 640px) and (orientation: portrait){
+
+  .bombon-wrapper {
+    height:672px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 12px solid #ededee;
+  }
+
+  .bombon-wrapper.calcalist {
+    height: 684px;
+  }
+
+  .bombon-wrapper .suggest {
+    height:610px;
+    border-width: 2px;
+  }
+
+  .bombon-wrapper .title {
+    margin-bottom: 16px;
+  }
+
+  .bombon-wrapper .title .logo {
+    width:160px;
+    height:34px;
+  }
+
+  .bombon-wrapper .title.calcalist {
+    font-size: 46px;
+    padding-right: 10px;
+  }
+
+  .bombon-wrapper.g101 {
+    height:692px;
+  }
+
+  .bombon-wrapper .title.g101 {
+    background-color: #3d7209;
+    height: 58px;
+  }
+
+  .bombon-wrapper .title.g101:before {
+    font-size: 42px;
+  }
+
+  .bombon-wrapper.g101 .title .logo {
+    left: 72%;
+  }
+
+  .bombon-wrapper .video-overlay > div {
+    font-size: 20pt;
+  }
+
+  .bombon-wrapper .video-overlay .replay {
+    font-size: 18pt;
+  }
+
+  .bombon-wrapper .video-overlay .replay .text {
+    position:relative;
+    top:-20px;
+  }
+
+  .bombon-wrapper .video-overlay .install {
+    font-size: 36pt;
+  }
+
+  .bombon-wrapper .video-overlay .install .text {
+    top:-32px;
+  }
+
+  .bombon-wrapper .video-overlay .install .text.with-users {
+    top:-36px;
+  }
+
+  .bombon-wrapper .video-overlay .users {
+    font-size: 20pt;
+    margin-left: 70px;
+  }
+
+  .bombon-wrapper .video-overlay > div > .img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .bombon-wrapper .video-overlay .replay > .img {
+    width:60px;
+    height:60px;
+    margin-right: 18px;
+  }
+
+  .bombon-wrapper .video-overlay .install > .img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .bombon-wrapper .app-stamp {
+    height: 100px;
+    width: 140px;
+    left: 73%;
+  }
+
+  .bombon-wrapper .app-image {
+    border-radius: 16px;
+    width:96px;
+    height:96px;
+    margin-top: 6px;
+  }
+
+  .bombon-wrapper .app-image > img {
+    border-radius: 16px;
+    width:96px;
+    height:96px;
+  }
+
+  .bombon-wrapper .app-name {
+    margin-left: 96px;
+    font-size: 28pt;
+  }
+
+  .bombon-wrapper .app-category {
+    margin-left: 96px;
+    font-size: 18pt;
+  }
+
+  .bombon-wrapper .app-description {
+    line-height: 1.3!important;
+    font-size: 22pt;
+  }
+
+  .bombon-wrapper .app-call-to-action {
+    line-height: 1.3!important;
+    font-size: 19pt;
+    width: 71%;
+  }
+
+  .bombon-wrapper .app-rating {
+    height:30px;
+  }
+
+  .bombon-wrapper .app-users {
+    font-size: 18pt;
+  }
+
+  .bombon-wrapper .install-button {
+    width:120px;
+    height:44px;
+    border-width: 2px;
+    padding-top:8px;
+    top: 26%;
+  }
+
+  .bombon-wrapper .install-button.ios-button {
+    font-size: 18pt;
+    border-radius: 8px;
+  }
+
+  .bombon-wrapper .install-button.android-button {
+    font-size: 18pt;
+    border-radius: 4px;
+  }
+
+  .bombon-wrapper span.rating-star {
+    width: 22px;
+    height: 20px;
+  }
+
+  .bombon-wrapper.thumbs .thumb-up {
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+    border-width: 6px;
+  }
+
+  .bombon-wrapper.thumbs .thumb-down {
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+    border-width: 6px;
+  }
+
+  .bombon-wrapper.thumbs .thumb-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bombon-wrapper.thumbs p.thumb-text {
+    width: 80px;
+    margin-top: 32px!important;
+    font-size: 23pt;
+  }
+
+  .bombon-wrapper.thumbs .question {
+    font-size: 27pt;
+  }
+
+}
+
+.bombon-wrapper .slick-slide {
+  float: left!important;
+}
+
+.bombon-wrapper .slick-track,
+.bombon-wrapper .slick-slider,
+.bombon-wrapper .slick-list,
+.bombon-wrapper .slick-slide {
+  opacity: 1!important;
+}
+
+.bombon-wrapper .slick-list {
+  direction: ltr;
+}
+/* end : bombon widget */
+
+
+/* start : Classes related to all widget types */
+
+.cappsool-widget .red .title{
+  background-color: red;
+}
+
+.cappsool-widget.xsspace{
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+.cappsool-widget.smspace{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.cappsool-widget.mdspace{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cappsool-widget.lgspace{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+/* animation loading */
+.cover.loading {
+  background-color: rgba(44, 44, 44, 0.4);
+}
+
+ .cover.loading .loading-g{
+   width: 10%;
+   min-width: 28px;
+   margin-left: 45%;
+   margin-right: 45%;
+   height: 10%;
+   margin-top: 17%;
+   background-color: transparent;
+ }
+
+.loading-block-g{
+  background-color:#FFFFFF;
+  border:1px solid #000000;
+  float:left;
+  height:20px;
+  margin-left:1px;
+  width:5px;
+  opacity:0.1;
+  -moz-animation-name:bounceG;
+  -moz-animation-duration:1.3s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-direction:normal;
+  -moz-transform:scale(0.7);
+  -webkit-animation-name:bounceG;
+  -webkit-animation-duration:1.3s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-transform:scale(0.7);
+  -o-animation-name:bounceG;
+  -o-animation-duration:1.3s;
+  -o-animation-iteration-count:infinite;
+  -o-animation-direction:normal;
+  -o-transform:scale(0.7);
+  animation-name:bounceG;
+  animation-duration:1.3s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  transform:scale(0.7);
+}
+
+.cover.loading .blockG_1{
+  -moz-animation-delay:0.39s;
+  -webkit-animation-delay:0.39s;
+  -o-animation-delay:0.39s;
+  animation-delay:0.39s;
+}
+
+.cover.loading .blockG_2{
+  -moz-animation-delay:0.52s;
+  -webkit-animation-delay:0.52s;
+  -o-animation-delay:0.52s;
+  animation-delay:0.52s;
+}
+
+.cover.loading .blockG_3{
+  -moz-animation-delay:0.65s;
+  -webkit-animation-delay:0.65s;
+  -o-animation-delay:0.65s;
+  animation-delay:0.65s;
+}
+
+@-moz-keyframes bounceG{
+  0%{
+    -moz-transform:scale(1.2);
+    opacity:1}
+
+  100%{
+    -moz-transform:scale(0.7);
+    opacity:0.1}
+
+}
+
+@-webkit-keyframes bounceG{
+  0%{
+    -webkit-transform:scale(1.2);
+    opacity:1}
+
+  100%{
+    -webkit-transform:scale(0.7);
+    opacity:0.1}
+
+}
+
+@-o-keyframes bounceG{
+  0%{
+    -o-transform:scale(1.2);
+    opacity:1}
+
+  100%{
+    -o-transform:scale(0.7);
+    opacity:0.1}
+
+}
+
+@keyframes bounceG{
+  0%{
+    transform:scale(1.2);
+    opacity:1}
+
+  100%{
+    transform:scale(0.7);
+    opacity:0.1}
+
+}
+
+.app-description >img {
+  display: inline-block !important;
+  zoom:70%
+}
+
+.app-call-to-action >img {
+  display: inline-block !important;
+  zoom:65%
+}
+
+.app-description.small-text >img {
+  display: inline-block !important;
+  zoom:50%
+}
+
+.cappsool-wrapper img.emojione {
+  border-style: none!important;
+}
+
+/*
+.cappsool-widget .jpg-animation {
+  -webkit-transform: translateZ(0);
+}
+*/
+
+/* end : Classes related to all widget types */
