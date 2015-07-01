@@ -8,6 +8,6 @@ cp -r ./* $2/files/cappsool/$1
 pushd .
 cd $2
 git add  files/cappsool/$1/*
-git commit -m '$1'
+git commit -m ''$1''
 git push https://github.com/cappsool/jsdelivr.git
 popd
