@@ -1,0 +1,12 @@
+{
+    "packageManager": "github",
+    "name": "alertifyjs",
+    "repo": "alertifyjs/alertify.js",
+    "files": {
+        "basePath": "dist/",
+        "include": [
+            "**/*.js",
+            "**/*.css"
+        ]
+    }
+}
