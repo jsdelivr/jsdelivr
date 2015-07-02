@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "raphael",
+  "repo": "DmitryBaranovskiy/raphael",
+  "files": {
+    "include": ["raphael-min.js"]
+  }
+}
