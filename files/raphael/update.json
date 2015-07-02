@@ -3,6 +3,6 @@
   "name": "raphael",
   "repo": "DmitryBaranovskiy/raphael",
   "files": {
-    "include": ["raphael-min.js"]
+    "include": ["raphael.js", "raphael-min.js"]
   }
 }
