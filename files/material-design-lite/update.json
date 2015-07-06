@@ -3,6 +3,7 @@
 	"name": "material-design-lite",
 	"repo": "google/material-design-lite",
 	"files": {
-		"include": ["*.js*", "*.css*"]
+		"include": ["*.js*", "*.css*"],
+		"exclude": ["*.json"]
 	}
 }
