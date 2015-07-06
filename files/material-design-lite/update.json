@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "material-design-lite",
+	"repo": "google/material-design-lite",
+	"files": {
+		"include": ["*.js*", "*.css*"]
+	}
+}
