@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "riotjs",
-  "repo": "muut/riotjs",
+  "repo": "riot/riotjs",
   "files": {
     "basePath": "/",
     "include": ["riot.js", "riot.min.js"]
