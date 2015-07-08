@@ -3,6 +3,6 @@
   "name": "familysearch-javascript-sdk",
   "repo": "FamilySearch/familysearch-javascript-sdk",
   "files": {
-    "include": ["*.js"]
+    "include": ["familysearch-javascript-sdk.min.js"]
   }
 }
