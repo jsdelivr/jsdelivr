@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.esri.heatmap-feature-layer",
+  "repo": "esri/esri-leaflet-heatmap-feature-layer",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["README.md"]
+  }
+}
