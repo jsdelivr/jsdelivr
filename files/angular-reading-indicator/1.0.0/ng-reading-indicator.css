@@ -1,0 +1,131 @@
+.ng-reading-indicator {
+  position: fixed;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 0;
+  transition: height 0.15s ease-out;
+  top: 0;
+  left: 0;
+  background: rgba(19, 146, 176, 0.8);
+  box-shadow: 2px 2px 2px rgba(19, 146, 176, 0.5);
+}
+.ng-reading-indicator.ng-reading-indicator-expanded {
+  height: auto;
+  height: 52px;
+}
+.ng-reading-indicator.ng-reading-indicator-expanded .ng-reading-indicator-headline,
+.ng-reading-indicator.ng-reading-indicator-expanded .ng-reading-indicator-time {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  display: inline-block;
+}
+.ng-reading-indicator.ng-reading-indicator-shrink .ng-reading-indicator-headline,
+.ng-reading-indicator.ng-reading-indicator-shrink .ng-reading-indicator-time {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+  display: none;
+}
+.ng-reading-indicator .ng-reading-indicator-progress {
+  content: '';
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  background: rgba(19, 146, 176, 0.9);
+}
+.ng-reading-indicator .ng-reading-indicator-headline {
+  display: none;
+}
+.ng-reading-indicator .ng-reading-indicator-headline h2 {
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 5px 0;
+}
+.ng-reading-indicator .ng-reading-indicator-time {
+  display: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  float: right;
+  padding-right: 30px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.85);
+}
+.ng-reading-indicator .ng-reading-indicator-time:before {
+  content: '';
+  position: relative;
+  background-image: url(time-white.png);
+  display: inline-block;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  top: 1px;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: inline-block;
+    opacity: 0;
+  }
+  100% {
+    display: inline-block;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: inline-block;
+    opacity: 0;
+  }
+  100% {
+    display: inline-block;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    display: inline-block;
+    opacity: 1;
+  }
+  1% {
+    display: inline-block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    display: inline-block;
+    opacity: 1;
+  }
+  1% {
+    display: inline-block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
