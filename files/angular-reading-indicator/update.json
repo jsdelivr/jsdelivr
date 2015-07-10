@@ -3,6 +3,7 @@
   "name": "angular-reading-indicator",
   "repo": "dominicrico/angular-reading-indicator",
   "files": {
-    "include": ["src/ng-reading-indicator.js", "dist/ng-reading-indicator.min.js", "dist/ng-reading-indicator.min.js.map", "src/ng-reading-indicator.css", "dist/ng-reading-indicator.min.css"]
+    "basePath": "dist/"
+    "include": ["ng-reading-indicator.min.js", "ng-reading-indicator.min.js.map", "ng-reading-indicator.min.css"]
   }
 }
