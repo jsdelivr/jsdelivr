@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "moment-timezone",
+  "name": "moment.timezone",
   "repo": "moment/moment-timezone",
   "files": {
     "basePath": "builds",
