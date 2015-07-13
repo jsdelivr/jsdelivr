@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "autocomplete.js",
+  "repo": "algolia/autocomplete.js",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}
