@@ -3,6 +3,6 @@
   "name": "unify",
   "repo": "mike-feldmeier/unify",
   "files": {
-    "include": ["unify.js", "unify.min.js"]
+    "include": ["unify.min.js"]
   }
 }
