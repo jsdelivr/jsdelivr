@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "leaflet.esri.gp",
+  "repo": "jgravois/esri-leaflet-gp",
+  "files": {
+    "basepath": ["dist/"]
+  }
+}
