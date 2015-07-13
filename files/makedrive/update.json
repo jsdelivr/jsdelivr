@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "makedrive",
+  "repo": "mozilla/makedrive",
+  "files": {
+    "basePath": "client/dist/"
+  }
+}
