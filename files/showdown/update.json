@@ -3,6 +3,7 @@
   "name": "showdown",
   "repo": "showdownjs/showdown",
   "files": {
+	"basePath": "dist/",
     "include": ["showdown.min.js", "showdown.min.js.map"]
   }
 }

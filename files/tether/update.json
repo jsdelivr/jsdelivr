@@ -3,6 +3,6 @@
   "name": "tether",
   "repo": "HubSpot/tether",
   "files": {
-    "include": ["tether.min.js"]
+    "include": ["dist/js/tether.min.js"]
   }
 }

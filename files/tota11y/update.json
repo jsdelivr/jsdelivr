@@ -1,9 +1,9 @@
 {
-  "packageManager": "bower",
+  "packageManager": "github",
   "name": "tota11y",
   "repo": "Khan/tota11y",
   "files": {
-    "baseDir": "build",
+    "baseDir": "build/",
     "include": ["tota11y.min.js"]
   }
 }
