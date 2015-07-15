@@ -3,7 +3,7 @@
   "name": "leaflet.esri.gp",
   "repo": "jgravois/esri-leaflet-gp",
   "files": {
-    "basepath": "dist/",
+    "basePath": "dist/",
     "include": ["esri-leaflet-gp.js", "esri-leaflet-gp.js.map"],
     "exclude": ["README.md"]
   }
