@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "codemirror",
+  "repo": "codemirror/CodeMirror",
+  "files": {
+    "include": ["lib/*", "addon/*", "keymap/*", "mode/*", "theme/*"],
+    "exclude": ["mode/**/index.html"],
+  }
+}
