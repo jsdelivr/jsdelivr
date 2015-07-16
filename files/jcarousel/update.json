@@ -3,6 +3,7 @@
   "name": "jcarousel",
   "repo": "jsor/jcarousel",
   "files": {
-    "include": ["dist/jquery.jcarousel.min.js"]
+    "basePath": "dist",
+    "exclude": ["README.md"]
   }
 }
