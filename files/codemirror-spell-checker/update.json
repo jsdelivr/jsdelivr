@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "codemirror-spell-checker",
+  "repo": "NextStepWebs/codemirror-spell-checker",
+  "files": {
+    "include": ["spell-checker.min.js", "spell-checker.min.css", "en_US.aff", "en_US.dic"]
+  }
+}
