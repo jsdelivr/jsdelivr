@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ISO8601-Localizer",
+  "repo": "avielfedida/ISO8601-Localizer",
+  "files": {
+    "include": ["iso8601-localizer.min.js"]
+  }
+}
