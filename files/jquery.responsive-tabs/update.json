@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "responsive-tabs",
+  "repo": "jellekralt/Responsive-Tabs",
+  "files": {
+    "basePath": "js",
+    "include": ["jquery.responsiveTabs.min.js"]
+  }
+}
