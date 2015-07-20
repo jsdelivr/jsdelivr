@@ -3,6 +3,6 @@
   "name": "async",
   "repo": "caolan/async",
   "files": {
-    "basePath": "lib/"
+    "basePath": "dist/"
   }
 }
