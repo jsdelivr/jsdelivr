@@ -1,0 +1,12 @@
+
+    {
+        "packageManager": "github",
+        "name": "backbone.wreqr",
+        "repo": ["marionettejs", "backbone.wreqr"],
+        "files": {
+            "basePath": "lib/",
+            "include": ["**/*"],
+            "exclude": []
+        }
+    }
+    
