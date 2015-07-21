@@ -1,0 +1,10 @@
+{
+        "packageManager": "github",
+        "name": "backbone-metal",
+        "repo": "marionettejs/backbone-metal",
+        "files": {
+            "basePath": "dist/",
+            "include": ["**/*"],
+            "exclude": []
+        }
+    }
