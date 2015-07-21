@@ -5,6 +5,6 @@
     "files": {
         "basePath": "lib/",
         "include": ["**/*"],
-        "exclude": []
+        "exclude": ["backbone.syphon.js"]
     }
 }
