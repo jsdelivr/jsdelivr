@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jssor.slider",
+  "repo": "jssor/slider",
+  "files": {
+    "include": ["jssor.slider.mini.js"]
+  }
+}
