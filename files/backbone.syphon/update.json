@@ -1,0 +1,10 @@
+{
+    "packageManager": "github",
+    "name": "backbone.syphon",
+    "repo": "marionettejs/backbone.syphon",
+    "files": {
+        "basePath": "lib/",
+        "include": ["**/*"],
+        "exclude": []
+    }
+}
