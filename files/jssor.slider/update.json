@@ -3,6 +3,7 @@
   "name": "jssor.slider",
   "repo": "jssor/slider",
   "files": {
+    "basePath": "js/",
     "include": ["jssor.slider.mini.js"]
   }
 }
