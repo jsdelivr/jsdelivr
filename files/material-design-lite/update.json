@@ -4,6 +4,6 @@
 	"repo": "google/material-design-lite",
 	"files": {
 		"include": ["*.js*", "*.css*"],
-		"exclude": ["*.json"]
+		"exclude": ["*.json", "gulpfile.js"]
 	}
 }
