@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "font-notosans-kr",
+  "name": "NotoSansKr",
   "repo": "ajkj/NotoSansKR",
   "files": {
     "include": ["dist/**/*"]
