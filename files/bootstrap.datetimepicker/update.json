@@ -4,6 +4,6 @@
   "repo": "Eonasdan/bootstrap-datetimepicker",
   "files": {
     "basePath": "build/",
-    "include": ["css/bootstrap-datetimepicker.min.css", "js/bootstrap-datetimepicker.min.js"]
+    "include": ["./css/bootstrap-datetimepicker.min.css", "./js/bootstrap-datetimepicker.min.js"]
   }
 }
