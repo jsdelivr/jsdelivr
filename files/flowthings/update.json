@@ -4,6 +4,6 @@
   "repo": "flowthings/browser-client",
   "files": {
     "basePath": "dist/",
-    "include": ["flowthings-browser.js", "flowthings-browser.min.js"]
+    "include": ["flowthings-browser.min.js"]
   }
 }
