@@ -3,6 +3,6 @@
   "name": "jCider",
   "repo": "Pratinav/jCider",
   "files": {
-    "include": "jcider.min.js"
+    "include": ["jcider.min.js"]
   }
 }
