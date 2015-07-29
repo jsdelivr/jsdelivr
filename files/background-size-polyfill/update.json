@@ -3,6 +3,6 @@
   "name": "background-size-polyfill",
   "repo": "louisremi/background-size-polyfill",
   "files": {
-    "include": ["backgroundsize.htc", "backgroundsize.min.htc"]
+    "include": ["backgroundsize.min.htc"]
   }
 }
