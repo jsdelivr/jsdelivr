@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "drop",
+  "repo": "HubSpot/drop",
+  "files": {
+    "include": ["dist/js/drop.min.js"]
+  }
+}
