@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dush",
+  "repo": "tunnckoCore/dush",
+  "files": {
+    "include": ["dush.js", "dush.min.js", "dush.standalone.js", "dush.standalone.min.js"]
+  }
+}
