@@ -1,7 +1,7 @@
 {
 	"packageManager": "github",
 	"name": "ScrollMagic",
-	"repo": "janpaepke/ScrollMagic/",
+	"repo": "janpaepke/ScrollMagic",
 	"files": {
 		"basePath": "scrollmagic/minified/"
 	}
