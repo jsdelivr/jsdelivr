@@ -3,6 +3,6 @@
   "name": "dush",
   "repo": "tunnckoCore/dush",
   "files": {
-    "include": ["dush.js", "dush.min.js", "dush.standalone.js", "dush.standalone.min.js"]
+    "include": ["dist/dush.js", "dist/dush.min.js", "dist/dush.standalone.js", "dist/dush.standalone.min.js"]
   }
 }
