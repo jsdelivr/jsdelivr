@@ -3,6 +3,6 @@
   "name": "fingerprintjs2",
   "repo": "Valve/fingerprintjs2",
   "files": {
-    "include": ["fingerprint2.js", "dist/fingerprint2.min.js"]
+    "include": ["dist/fingerprint2.min.js"]
   }
 }
