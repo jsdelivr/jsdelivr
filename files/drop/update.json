@@ -3,6 +3,7 @@
   "name": "drop",
   "repo": "HubSpot/drop",
   "files": {
-    "include": ["dist/js/drop.min.js"]
+    "basePath": "dist/",
+    "include": ["./js/*.min.*", "./css/*.min.*"]
   }
 }
