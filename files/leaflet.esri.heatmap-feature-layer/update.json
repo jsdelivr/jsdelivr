@@ -4,6 +4,6 @@
   "repo": "esri/esri-leaflet-heatmap-feature-layer",
   "files": {
     "basePath": "dist/",
-    "exclude": ["README.md"]
+    "include": ["esri-leaflet-heatmap-feature-layer.js", "esri-leaflet-heatmap-feature-layer.js.map"]
   }
 }
