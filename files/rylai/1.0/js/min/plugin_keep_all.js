@@ -1,0 +1,6 @@
+/*
+	jQuery Word-break Keep-all 1.3
+	URL: https://github.com/mytory/jquery-word-break-keep-all
+	Copyright: 2012 Ahn Hyoung-woo under dual MIT/GPL2 license
+*/
+jQuery.fn.wordBreakKeepAll=function(b){var h=function(a){return a.lastIndexOf("<")<a.lastIndexOf(">")},k=function(a){return a.lastIndexOf(">")<a.lastIndexOf("<")},l=function(a){return a.lastIndexOf(">")==a.lastIndexOf("<")};b=$.extend({OffForIE:!1,useCSSonIE:!0},b);if(/MSIE/.test(navigator.userAgent)&&0==b.OffForIE&&1==b.useCSSonIE)var e=function(a){$(a).css({"word-break":"keep-all","word-wrap":"break-word"});"inline"==$(a).css("display")&&$(a).css("display","block")};else if(!/MSIE/.test(navigator.userAgent)||/MSIE/.test(navigator.userAgent)&&0==b.OffForIE&&0==b.useCSSonIE)e=function(a){var c=$(a).html(),c=c.replace(/(\r\n|\n|\r)/gm," ＃＆＊＠§ "),c=c.split(" "),c=c.filter(function(a){return a});$(a).text("");for(var b=!1,f="",g=0,e=c.length;g<e;g++){var d=c[g],f=0==b&&l(d)&&-1==d.indexOf("＃＆＊＠§")?f+('<span style="white-space: nowrap">'+d+"</span> "):f+(d+" ");k(d)&&(b=!0);h(d)&&(b=!1)}$(a).html(f.replace(/＃＆＊＠§/g,"\n"))};return this.each(function(){e(this)})};
