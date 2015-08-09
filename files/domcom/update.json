@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "domcom",
+  "repo": "taijiweb/domcom",
+  "basePath": "dist/",
+  "files": {
+    "include": ["domcom.js", "domcom.min.js"]
+  }
+}
