@@ -4,6 +4,6 @@
   "repo": "taijiweb/domcom",
   "basePath": "dist/",
   "files": {
-    "include": ["domcom.js", "domcom.min.js"]
+    "include": [domcom.min.js"]
   }
 }
