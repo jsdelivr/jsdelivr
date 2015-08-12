@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "tagtacular",
+  "name": "jquery.tagtacular",
   "repo": "burnsbert/tagtacular",
   "files": {
     "include": ["./js/tagtacular.min.js", "./css/tagtacular.css"]
