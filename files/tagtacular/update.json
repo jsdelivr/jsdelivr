@@ -3,6 +3,6 @@
   "name": "tagtacular",
   "repo": "burnsbert/tagtacular",
   "files": {
-    "include": ["tagtacular.js", "tagtacular.min.js", "tagtacular.css"]
+    "include": ["js/tagtacular.js", "js/tagtacular.min.js", "css/tagtacular.css"]
   }
 }
