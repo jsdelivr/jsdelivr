@@ -1,0 +1,17 @@
+{
+	"packageManager": "github",
+	"name": "rylai",
+	"repo": "kaniwari/rylai",
+	"files": {
+		"include": ["css/min/style.css",
+					"css/min/fonts.css",
+					"fonts/**/*",
+					"images/**/*",
+					"js/min/core_browser.js",
+					"js/min/core_fonts.js",
+					"js/min/core_html5shiv.js",
+					"js/min/core_modernizr.js",
+					"js/min/plugin_keep_all.js",
+					"js/min/plugin_linkify.js"]
+	}
+}
