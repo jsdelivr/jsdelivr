@@ -5,7 +5,8 @@
   "files": {
     "exclude": [
       "2/**", "api/**", "assets/**", "bower_components/**", "custom/**", "default/**", "global/**", "help/**", "tests/**",
-      "*(.gitignore|.travis.yml|CNAME|Gemfile|Gruntfile.js|LICENSE|README.md|_config.yml|bower.json|composer.json|favicon.ico|index.html|package.json)"
+      "**/*.less", "**/*.scss", "**/*.html", "**/*.yml", "**/*.md", "**/*.txt", "**/*.ico", "**/*.png", "**/*.jpg",
+      ".gitignore", "CNAME", "Gemfile", "Gruntfile.js", "LICENSE", "bower.json", "composer.json", "package.json"
     ]
   }
 }
