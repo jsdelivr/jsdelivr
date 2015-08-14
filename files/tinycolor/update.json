@@ -3,6 +3,6 @@
   "name": "tinycolor",
   "repo": "bgrins/tinycolor",
   "files": {
-    "basePath": "tinycolor.js"
+    "basePath": "dist/"
   }
 }
