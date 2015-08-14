@@ -3,7 +3,6 @@
   "name": "responsive-tabs",
   "repo": "jellekralt/Responsive-Tabs",
   "files": {
-    "basePath": "js",
-    "include": ["jquery.responsiveTabs.min.js"]
+    "include": ["js/jquery.responsiveTabs.min.js", "css/responsive-tabs.css"]
   }
 }
