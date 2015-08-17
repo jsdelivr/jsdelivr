@@ -3,6 +3,7 @@
   "name": "simplemde-markdown-editor",
   "repo": "NextStepWebs/simplemde-markdown-editor",
   "files": {
-    "include": ["dist/simplemde.min.js", "dist/simplemde.min.css"]
+    "basePath": "dist",
+    "include": ["simplemde.min.js", "simplemde.min.css"]
   }
 }
