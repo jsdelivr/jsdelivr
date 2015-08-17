@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "appenlight",
+  "repo": "AppEnlight/appenlight-client-js",
+  "files": {
+    "include": ["appenlight-client.js", "appenlight-client.min.js"]
+  }
+}
