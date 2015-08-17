@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "kudos",
+  "repo": "tunnckoCore/kudos",
+  "files": {
+    "include": ["dist/kudos.min.js", "dist/kudos.standalone.min.js"]
+  }
+}
