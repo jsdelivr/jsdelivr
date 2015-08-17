@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "canvg",
+  "repo": "gabelerner/canvg",
+  "files": {
+    "include": ["canvg.js"]
+  }
+}
