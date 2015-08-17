@@ -3,6 +3,7 @@
   "name": "codemirror-spell-checker",
   "repo": "NextStepWebs/codemirror-spell-checker",
   "files": {
-    "include": ["dist/spell-checker.min.js", "dist/spell-checker.min.css", "dist/en_US.aff", "dist/en_US.dic"]
+    "basePath": "dist",
+    "include": ["spell-checker.min.js", "spell-checker.min.css", "en_US.aff", "en_US.dic"]
   }
 }
