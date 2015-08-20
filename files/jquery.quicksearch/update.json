@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "github",
+  "name": "jquery.quciksearch",
+  "repo": "DeuxHuitHuit/quicksearch",
+  "files": {
+    "include": ["jquery.quicksearch.min.js", "jquery.quicksearch.min.js.map"]
+  }
+}
