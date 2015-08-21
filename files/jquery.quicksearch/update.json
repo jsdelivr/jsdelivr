@@ -3,7 +3,7 @@
   "packageManager": "github",
   "name": "jquery.quicksearch",
   "repo": "DeuxHuitHuit/quicksearch",
-  "basepath": "dist/"
+  "basepath": "dist/",
   "files": {
     "include": ["jquery.quicksearch.min.js", "jquery.quicksearch.min.js.map"]
   }
