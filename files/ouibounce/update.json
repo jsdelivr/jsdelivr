@@ -4,6 +4,6 @@
   "repo": "carlsednaoui/ouibounce",
   "files": {
     "basePath": "build",
-    "include": ["ouibounce.js", "ouibounce.min.js"]
+    "include": ["ouibounce.min.js"]
   }
 }
