@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "familysearch-javascript-sdk",
+  "repo": "FamilySearch/familysearch-javascript-sdk",
+  "files": {
+    "include": ["familysearch-javascript-sdk.min.js"]
+  }
+}

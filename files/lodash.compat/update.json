@@ -1,5 +1,5 @@
 {
-  "packageManager": "npm",
+  "packageManager": "bower",
   "name": "lodash-compat",
   "repo": "lodash/lodash",
   "files": {

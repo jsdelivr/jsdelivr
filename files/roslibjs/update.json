@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "roslib",
+	"repo": "RobotWebTools/roslibjs",
+	"files": {
+		"basePath": "build/"
+	}
+}

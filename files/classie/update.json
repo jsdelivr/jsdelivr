@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "classie",
+  "repo": "desandro/classie",
+  "files": {
+	"include": ["classie.js"]
+  }
+}

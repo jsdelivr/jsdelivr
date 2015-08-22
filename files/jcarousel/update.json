@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jcarousel",
+  "repo": "jsor/jcarousel",
+  "files": {
+    "basePath": "dist",
+    "exclude": ["README.md"]
+  }
+}

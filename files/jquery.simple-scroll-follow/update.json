@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "jquery.simple-scroll-follow",
+  "repo": "sutara79/jquery.simple-scroll-follow",
+  "files": {
+    "include": [
+      "jquery.simple-scroll-follow.min.js"
+    ]
+  }
+}

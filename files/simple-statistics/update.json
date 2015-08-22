@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "simple-statistics",
+  "repo": "simple-statistics/simple-statistics",
+  "files": {
+    "include": ["simple_statistics.min.js"],
+    "basePath": "dist/"
+  }
+}

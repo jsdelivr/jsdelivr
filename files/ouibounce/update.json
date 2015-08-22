@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "ouibounce",
+  "repo": "carlsednaoui/ouibounce",
+  "files": {
+    "basePath": "build",
+    "include": ["ouibounce.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery.countdown",
+  "repo": "hilios/jQuery.countdown",
+  "files": {
+    "basePath": "dist/",
+    "include": ["jquery.countdown.js", "jquery.countdown.min.js"]
+  }
+}
