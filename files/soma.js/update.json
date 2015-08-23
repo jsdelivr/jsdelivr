@@ -3,7 +3,7 @@
   "name": "somajs",
   "repo": "somajs/somajs",
   "files": {
-    "basePath": "build/"
+    "basePath": "build/",
     "include": ["*.js", "*.ts"]
   }
 }
