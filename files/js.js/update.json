@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "js.js",
+	"repo": "sty1iss/js.js",
+	"files": {
+	"include": ["dev.js", "load.min.js", "js.min.js", "./polyfill/*", "./extend/*"]
+  }
+}
