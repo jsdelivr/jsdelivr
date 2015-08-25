@@ -1,0 +1,162 @@
+.tabDot {
+	position:relative;
+}
+
+.tabDotButtons {
+	position:absolute;
+	width:100%;
+	bottom:30px;
+	left:0;
+	font-size:0;
+	text-align:center;
+}
+
+.tabDotSize1 .tabs,
+.tabDotButtons .dynamic{
+	display:none;
+}
+
+.tabDotButtons li{
+	display:inline;
+	margin:0 4px;
+}
+
+.tabDotButtons a {
+	display:inline-block;
+	*display:inline;
+	text-indent:100%;
+	overflow:hidden;
+	white-space:nowrap;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background-color:white;
+	opacity:0.3;
+	border:solid 1px white\9;
+	background-color:transparent\9;
+	box-shadow:0 0 5px rbga(0, 0, 0, 0.5);
+	transition:opacity 0.5s;
+}
+
+.tabDotButtons .here a {
+	opacity:1;
+	background-color:white\9;
+}
+
+.tabNormal {
+	position:relative;
+	padding-top:60px;
+}
+		
+.tabNormalButtons {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	padding-left:1px;
+	border-bottom:solid 1px black;
+}
+
+.tabNormalButtons .dynamic{
+	display:none;
+}
+
+.tabNormalButtons li {
+	display:inline;
+	float:left;
+	margin-left:-1px;
+}
+
+.tabNormalButtons a {
+	display:block;
+	border:solid 1px #f0f0f0;
+	border-bottom-width:0;
+	color:#999;
+	text-align:center;
+	min-width:100px;
+	padding:10px;
+}
+
+.tabNormalButtons a:hover {
+	color:black;
+}
+
+.tabNormalButtons .here a {
+	background-color:black;
+	border-color:black;
+	color:white;
+}
+
+.tabThumbButtons .dynamic{
+	display:none;
+}
+
+.tabThumb {
+	width:760px;
+	overflow:hidden;
+	font-size:0;
+}
+
+.tabThumb figure {
+	animation:opacity 1s;
+}
+
+.tabThumb img {
+	width:100%;
+}
+
+.tabThumbButtons {
+	overflow:auto;
+}
+
+.tabThumbButtons .dynamic{
+	display:none;
+}
+
+.tabThumbButtons li {
+	height:180px;
+	overflow:hidden;
+}
+
+.tabThumbButtons img {
+	width:240px;
+	opacity:0.5;
+	transition:opacity 0.5s;
+}
+
+.tabThumbButtons .here img {
+	opacity:1;
+}
+
+.tabThumbButtons a:hover img {
+	opacity:1;
+}
+
+.tabThumbButtons li {
+	float:left;
+	margin-right:20px;
+	margin-top:20px;
+}
+
+.tabThumbButtons .x3 {
+	margin-right:0;
+}
+
+.tabThumbSize4 .tabs li {
+	height:131px;
+}
+
+.tabThumbSize4 .x3,
+.tabThumbSize8 .x3 {
+	margin-right:20px;
+}
+
+.tabThumbSize4 .x4,
+.tabThumbSize8 .x4 {
+	margin-right:0;
+}
+
+.tabThumbSize4 .tabs img,
+.tabThumbSize8 .tabs img{
+	width:175px;
+}
