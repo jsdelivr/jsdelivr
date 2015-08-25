@@ -3,6 +3,6 @@
   "name": "gridlayout",
   "repo": "ghinda/gridlayout",
   "files": {
-    "include": ["gridlayout.css", "gridlayout.min.css", "gridlayout-ie.js", "gridlayout-ie.min.js"]
+    "include": ["gridlayout.min.css", "gridlayout-ie.min.js"]
   }
 }
