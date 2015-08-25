@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+.jsCal {
+	text-align:center;
+	position:relative;
+}
+
+.jsCal h1,
+.jsCal .drawer a
+ {
+	font-size:1.5em;
+	padding-top:0.5em;
+}
+
+.jsCal h2 {
+	font-size:1em;
+}
+
+.jsCal table {
+	box-sizing:content-box;
+	width:98%;
+	margin:0 1%;
+	border-collapse:collapse;
+}
+
+.jsCal th,
+.jsCal td {
+	width:14%;
+	text-align:center;
+	padding:0.5em 0;
+}
+
+.jsCal th {
+	font-size:0.75em;
+}
+
+.jsCal a {
+	color:black;
+}
+
+.jsCal .prev a,
+.jsCal .next a {
+	color:#999;
+}
+
+.jsCal .drawer a {
+	position:absolute;
+	top:0;
+	color:#999;
+}
+
+.jsCal .drawer .year,
+.jsCal .drawer .glue {
+	display:none;
+}
+
+.jsCal .drawer a.prev {
+	left:1em;
+}
+
+.jsCal .drawer a.next {
+	right:1em;
+}
+
+.jsCal .select a{
+	font-weight:bold;
+}
