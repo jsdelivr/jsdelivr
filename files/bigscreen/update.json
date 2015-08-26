@@ -3,6 +3,6 @@
   "name": "bigscreen",
   "repo": "bdougherty/BigScreen",
   "files": {
-    "include": ["bigscreen.js", "bigscreen.min.js", "bigscreen.min.js.map"]
+    "include": ["bigscreen.min.js", "bigscreen.min.js.map"]
   }
 }
