@@ -3,6 +3,6 @@
   "name": "jquery.floatthead",
   "repo": "mkoryak/floatThead",
   "files": {
-    "include": ["dist/*.js"]
+    "include": ["dist/*.min.js"]
   }
 }
