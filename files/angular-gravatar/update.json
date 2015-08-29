@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "angular-gravatar",
-  "repo": "wallin/angular-gravatar
+  "repo": "wallin/angular-gravatar",
   "files": {
     "include": ["build/angular-gravatar.js", "build/angular-gravatar.min.js"]
   }
