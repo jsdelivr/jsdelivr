@@ -3,6 +3,6 @@
   "name": "angular-gravatar",
   "repo": "wallin/angular-gravatar",
   "files": {
-    "include": ["angular-gravatar.js", "angular-gravatar.min.js"]
+    "include": ["build/angular-gravatar.min.js"]
   }
 }
