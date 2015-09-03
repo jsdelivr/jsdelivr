@@ -1,0 +1,7 @@
+{
+  "packageManager": "github",
+  "name": "ooovinia",
+  "files": {
+    "include": ["rtbid.min.js"]
+  }
+}
