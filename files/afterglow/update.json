@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "afterglow",
-  "repo": "afterglow/moay",
+  "repo": "moay/afterglow",
   "files": {
     "basePath": "dist/"
   }
