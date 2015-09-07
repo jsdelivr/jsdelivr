@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "rtbid",
+  "repo": "ooovinia/jsdelivr",
+  "files": {
+    "include": ["rtbid.min.js"]
+  }
+}
