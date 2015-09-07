@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "js",
+  "repo": "rtbid/js",
+  "files": {
+    "include": ["rtbid.min.js"]
+  }
+}
