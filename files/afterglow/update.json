@@ -3,6 +3,7 @@
   "name": "afterglow",
   "repo": "moay/afterglow",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "include": ["*.js"]
   }
 }
