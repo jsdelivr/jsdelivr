@@ -3,6 +3,6 @@
   "name": "jquery.drawsvg",
   "repo": "lcdsantos/jquery-drawsvg",
   "files": {
-    "include": ["public/jquery.drawsvg.js", "public/jquery.drawsvg.min.js"]
+    "include": ["public/jquery.drawsvg.min.js"]
   }
 }
