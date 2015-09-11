@@ -3,6 +3,7 @@
   "name": "riotgear",
   "repo": "RiotGear/rg",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "include": ["*.min.js"]
   }
 }
