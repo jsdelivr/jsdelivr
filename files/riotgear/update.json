@@ -3,7 +3,6 @@
   "name": "riotgear",
   "repo": "RiotGear/rg",
   "files": {
-    "basePath": "dist",
-    "include": ["*"]
+    "basePath": "dist/"
   }
 }
