@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "lovefield",
-  "repo": "google/lovefield",
-  "files": {
-    "basePath": "dist/",
-    "include": ["lovefield.min.js", "lovefield.min.js.map", "lovefield.es6.js", "lovefield.es6.js.map"]
-  }
-}
