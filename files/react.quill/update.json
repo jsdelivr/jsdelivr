@@ -3,6 +3,6 @@
   "name": "react-quill",
   "repo": "zenoamaro/react-quill",
   "files": {
-    "basePath": "dist/",
+    "basePath": "dist/"
   }
 }
