@@ -1,5 +1,5 @@
 {
-  "packageManager": "npm",
+  "packageManager": "github",
   "name": "react-quill",
   "repo": "zenoamaro/react-quill",
   "files": {
