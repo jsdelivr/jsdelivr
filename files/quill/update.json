@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "quill",
+  "repo": "quilljs/quill",
+  "files": {
+    "include": ["*.js", "*.css"]
+  }
+}
