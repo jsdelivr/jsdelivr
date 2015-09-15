@@ -3,6 +3,6 @@
   "name": "epub.js",
   "repo": "futurepress/epub.js",
   "files": {
-    "include": ["build/epub.min.js", "build/hooks.min.js", "build/reader.min.js", "build/libs/localforage.min.js", "build/libs/zip.min.js"]
+    "include": ["build/epub.min.js", "build/hooks.min.js", "build/reader.min.js"]
   }
 }
