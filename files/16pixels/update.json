@@ -3,7 +3,7 @@
 	"name": "16pixels",
 	"repo": "englishextra/16pixels",
 	"files": {
-		"basePath": "cdn/16pixels/latest/css/",
+		"basePath": "css/",
 		"include": ["16pixels.css", "16pixels.min.css"]
 	}
 }

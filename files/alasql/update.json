@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "alasql",
+  "repo": "agershun/alasql",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}

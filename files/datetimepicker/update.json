@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "datetimepicker",
+  "repo": "CuriousSolutions/DateTimePicker",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*"]
+  }
+}

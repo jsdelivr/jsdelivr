@@ -3,6 +3,7 @@
   "name": "tooltip.js",
   "repo": "HubSpot/tooltip",
   "files": {
-    "include": ["tooltip.min.js"]
+    "basePath": "dist/",
+    "include": ["js/tooltip.min.js", "css/tooltip-theme-arrows.css"]
   }
 }

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "photoset-grid",
+  "repo": "stylehatch/photoset-grid",
+  "files": {
+    "include": ["jquery.photoset-grid.min.js", "jquery.photoset-grid.js", "css/colorbox.css", "css/main.css"]
+  }
+}

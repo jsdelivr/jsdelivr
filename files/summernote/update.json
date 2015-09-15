@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "summernote",
+  "repo": "summernote/summernote",
+  "files": {
+	"basePath": "dist/"
+  }
+}

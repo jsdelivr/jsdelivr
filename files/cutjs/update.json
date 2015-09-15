@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "cutjs",
-  "repo": "piqnt/cutjs",
-  "files": {
-    "basePath": "dist/",
-    "include": ["*.min.js"]
-  }
-}

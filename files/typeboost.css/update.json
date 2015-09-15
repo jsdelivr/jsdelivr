@@ -3,7 +3,7 @@
 	"name": "typeboost.css",
 	"repo": "englishextra/typeboost.css",
 	"files": {
-		"basePath": "cdn/typeboost.css/latest/css/",
+		"basePath": "css/",
 		"include": ["typeboost.min.css"]
 	}
 }

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jCider",
+  "repo": "Pratinav/jCider",
+  "files": {
+    "include": ["jcider.min.js", "jcider.css"]
+  }
+}
