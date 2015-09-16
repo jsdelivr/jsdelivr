@@ -3,6 +3,6 @@
   "name": "ol3-geocoder",
   "repo": "jonataswalker/ol3-geocoder",
   "files": {
-    "include": ["ol3-geocoder.js", "ol3-geocoder-debug.js", "ol3-geocoder.css"]
+    "include": ["ol3-geocoder.js", "ol3-geocoder.min.css"]
   }
 }
