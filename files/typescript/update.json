@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "typescript.js",
+  "repo": "Microsoft/TypeScript",
+  "files": {
+    "basePath": "build/",
+    "include": ["*.js"]
+  }
+}
