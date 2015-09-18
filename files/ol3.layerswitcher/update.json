@@ -3,6 +3,6 @@
   "name": "ol3.layerswitcher",
   "repo": "walkermatt/ol3-layerswitcher",
   "files": {
-  "basePath": "src/"
+    "basePath": "src/"
   }
 }
