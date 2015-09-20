@@ -3,6 +3,6 @@
   "name": "jquery.smart-sidebar",
   "repo": "yaplas/smart-sidebar",
   "files": {
-    "include": ["smart-sidebar.js", "smart-sidebar.min.js"]
+    "include": ["jquery-smart-sidebar.js", "jquery-smart-sidebar.min.js"]
   }
 }
