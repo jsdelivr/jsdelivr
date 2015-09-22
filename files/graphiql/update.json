@@ -3,6 +3,6 @@
   "name": "graphiql",
   "repo": "graphql/graphiql",
   "files": {
-    "include": [ "graphiql.min.js", "graphiql.css" ]
+    "include": [ "graphiql.min.js", "graphiql.js", "graphiql.css" ]
   }
 }
