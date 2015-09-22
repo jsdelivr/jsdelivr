@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "cignium-hypermedia-client",
+  "repo": "cignium/hypermedia-client",
+  "files": {
+    "basePath": "dist/"
+  }
+}
