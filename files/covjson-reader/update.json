@@ -3,6 +3,6 @@
   "name": "covjson-reader",
   "repo": "Reading-eScience-Centre/covjson-reader",
   "files": {
-    "include": ["*.js"]
+    "include": ["*.min.js"]
   }
 }
