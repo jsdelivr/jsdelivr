@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "metadata.js",
+  "repo": "oknosoft/metadata.js",
+  "files": {
+    "include": ["lib/metadata.min.js", "lib/metadata.js"]
+  }
+}
