@@ -3,6 +3,6 @@
   "name": "rustic.js",
   "repo": "Pratinav/rustic.js",
   "files": {
-    "include": "rustic.min.js"
+    "include": ["rustic.min.js"]
   }
 }
