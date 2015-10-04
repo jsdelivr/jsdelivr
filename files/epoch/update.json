@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "epoch",
-  "repo": "fastly/epoch",
+  "repo": "epochjs/epoch",
   "files": {
 	"include": ["dist/css/epoch.min.css", "dist/js/epoch.min.js"]
   }
