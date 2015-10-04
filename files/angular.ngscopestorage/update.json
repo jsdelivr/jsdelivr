@@ -3,7 +3,7 @@
   "name": "ngscopestorage",
   "repo": "rannn505/ngscopestorage",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
     "include": ["ngscopestorage.min.js"]
   }
 }
