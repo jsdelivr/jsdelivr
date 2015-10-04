@@ -3,6 +3,6 @@
   "name": "epoch",
   "repo": "fastly/epoch",
   "files": {
-	"include": ["epoch.min.css", "epoch.min.js"]
+	"include": ["dist/css/epoch.min.css", "dist/js/epoch.min.js"]
   }
 }
