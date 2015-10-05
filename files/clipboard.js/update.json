@@ -4,6 +4,6 @@
   "repo": "zenorocha/clipboard.js",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js"]
+    "include": ["*.min.js"]
   }
 }
