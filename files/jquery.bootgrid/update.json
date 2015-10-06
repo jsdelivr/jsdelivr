@@ -4,6 +4,6 @@
   "repo": "rstaib/jquery-bootgrid",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js"]
+    "include": ["*.min.*"]
   }
 }
