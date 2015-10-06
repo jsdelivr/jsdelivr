@@ -1,0 +1,6 @@
+{
+  "packageManager": "github",
+  "name": "jatec",
+  "repo": "docjojo/jatec",
+  "files": {"include": ["**/*.js"] }
+}
