@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "matreshka",
-  "repo": "finom/matreshka",
+  "repo": "matreshkajs/matreshka",
   "files": {
     "include": ["matreshka.min.js", "matreshka.js", "matreshka.min.map"]
   }
