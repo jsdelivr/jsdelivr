@@ -3,6 +3,6 @@
   "name": "prismjs",
   "repo": "PrismJS/prism",
   "files": {
-    "include": ["prism.js", "./components/*.min.js", "./plugins/**/*.min.js", "./themes/*.css"]
+    "include": ["prism.js", "./components/*.min.js", "./plugins/**/*.min.js", "./plugins/**/*.css", "./themes/*.css"]
   }
 }
