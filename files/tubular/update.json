@@ -4,6 +4,6 @@
   "repo": "unosquare/tubular",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js","tubular-bundle.min.css"]
+    "include": ["*.min.js","tubular-bundle.min.css"]
   }
 }
