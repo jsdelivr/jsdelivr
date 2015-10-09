@@ -3,7 +3,6 @@
 	"name": "kule.lazy",
 	"repo": "keicheng/kule.lazy",
 	"files": {
-		"basePath": "/",
 		"include": ["kule-lazy-full.min.css", "kule-effects.min.css", "kule-animates.min.css", "kule-reset.min.css", "kule-grid.min.css"]
 	}
 }
