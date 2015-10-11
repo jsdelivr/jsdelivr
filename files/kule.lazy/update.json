@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "kule.lazy",
+	"repo": "keicheng/kule.lazy",
+	"files": {
+		"basePath": "css/",
+		"include": ["**/*"]
+	}
+}
