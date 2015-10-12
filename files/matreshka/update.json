@@ -3,6 +3,13 @@
   "name": "matreshka",
   "repo": "matreshkajs/matreshka",
   "files": {
-    "include": ["matreshka.min.js", "matreshka.js", "matreshka.min.map"]
+    "include": [
+		"./matreshka.min.js",
+		"./matreshka.js",
+		"./matreshka.min.map",
+		"./magic/matreshka-magic.min.js",
+		"./magic/matreshka-magic.js",
+		"./magic/matreshka-magic.min.map"
+	]
   }
 }
