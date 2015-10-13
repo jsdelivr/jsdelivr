@@ -1,8 +1,10 @@
 {
   "packageManager": "github",
   "name": "browJS",
-  "repo": "misterzik/browJS/tree/master/src",
+  "repo": "misterzik/browJS",
   "files": {
-    "include": ["js/brow.min.js", "css/brow.min.js", "index.html", "brow.html"]
+    "basePath": "src/",
+    "include": ["js/brow.min.js", "css/brow.min.js", "index.html", "brow.html"],
+    "exclude": ["debug/", ".gitignore", ".bowerrc"]
   }
 }
