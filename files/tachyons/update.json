@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tachyons",
+  "repo": "mrmrs/tachyons",
+  "files": {
+    "include": ["css/tachyons.min.css"]
+  }
+}
