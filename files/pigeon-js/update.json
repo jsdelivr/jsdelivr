@@ -1,6 +1,6 @@
 {
-  "packageManager": "bower",
-  "name": "Pigeon.js",
+  "packageManager": "github",
+  "name": "pigeon-js",
   "repo": "labsvisual/pigeon-js",
   "files": {
     "include": "dist/*.js"
