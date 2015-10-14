@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "request-frame",
-  "repo": "julienetie/request-frame",
-  "files": {
-    "include": ["request-frame.min.js"]
-  }
-}

@@ -3,7 +3,7 @@
   "name": "domcom",
   "repo": "taijiweb/domcom",
   "files": {
-     "basePath": "dist/",
+    "basePath": "dist/",
     "include": ["domcom.min.js"]
   }
 }
