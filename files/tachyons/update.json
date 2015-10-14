@@ -3,6 +3,6 @@
   "name": "tachyons",
   "repo": "mrmrs/tachyons",
   "files": {
-    "include": ["src/tachyons.css"]
+    "include": ["css/tachyons.css","css/tachyons.min.css"]
   }
 }
