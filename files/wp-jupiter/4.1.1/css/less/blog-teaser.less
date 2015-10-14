@@ -1,0 +1,183 @@
+/* *********************************************
+Blog Teaser Style
+********************************************* */
+
+.mk-blog-teaser {
+   .blog-meta {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin: 0;
+      width: 100%;
+      padding: 10px 30px 25px;
+   }
+   .blog-title {
+      position: relative;
+      font-size: 18px !important;
+      padding-bottom: 18px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 90%;
+      color: #fff !important;
+      &:after {
+         width: 70px;
+         height: 3px;
+         content: "";
+         background-color: #fff;
+         display: block;
+         position: absolute;
+         left: 0;
+         bottom: 1px;
+         -webkit-transform: scale(0.4,1);
+          -moz-transform: scale(0.4,1);
+          -o-transform: scale(0.4,1);
+          transform-origin: left center;
+         -webkit-transform-origin: left center;
+          .transition(all 0.25s ease-in-out);
+      }
+      a {
+         color: #fff;
+      }
+   }
+   .blog-categories, time {
+      display: inline-block;
+      font-size: 12px;
+      font-style: italic;
+      opacity: 0.7;
+      color: #ffffff;
+      font-weight: bold;
+      line-height: 14px;
+      a {
+         color: #ffffff;
+      }
+   }
+   .thumb-featured-image {
+      position: relative;
+   }
+   .image-hover-overlay {
+      opacity: 0.4;
+      background-color: #000 !important;
+   }
+
+   .blog-slider-item,
+   .blog-teaser-side-item {
+      &:hover {
+          .blog-title:after {
+            -webkit-transform: scale(1,1);
+           -moz-transform: scale(1,1);
+           -o-transform: scale(1,1);
+           transform: scale(1,1);
+          }
+      }
+   }
+   article:hover .image-hover-overlay {
+      opacity: 0.2;
+   }
+   .blog-teaser-side-item {
+      .blog-title {
+         font-size: 14px !important;
+      }
+      .blog-meta {
+         padding: 10px 30px 18px;
+      }
+   }
+   .blog-slider-item {
+
+      width: 60%;
+      float: left;
+
+
+      /* *********************************************
+      Slideshow Section
+      ********************************************* */
+      .blog-slideshow-entry {
+         position: relative;
+         .teaser-comment-love-wrapper {
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
+         }
+         .mk-love-holder,
+         .blog-teaser-comment {
+            color: #fff;
+            display: inline-block;
+            padding-left: 5px;
+            margin-left: 5px;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 12px;
+            i {
+               font-size: 16px;
+               color: #ffffff;
+            }
+            span {
+               color: #ffffff;
+               padding-left: 3px;
+            }
+         }
+ 
+      }
+   }
+   
+   /* *********************************************
+   Side Grids section
+   ********************************************* */
+   .blog-teaser-side-item {
+      overflow: hidden;
+      float: left;
+      position: relative;
+      .item-holder {
+         margin-left: 8px;
+      }
+      &.full-item {
+         width: 40%;
+      }
+      &.half-item {
+         width: 20%;
+         .item-holder {
+            margin-top: 8px;
+         }
+      }
+   }
+   @media handheld, only screen and (max-width:767px) {
+      .blog-slider-item {
+         width: 100%;
+         float: none;
+      }
+      .thumb-featured-image img{
+            width: 100%;
+         }
+      .blog-teaser-side-item {
+         &.full-item .item-holder {
+            margin-left: 0;
+         }
+         .item-holder {
+            margin-top: 8px;
+         }
+         
+         &.full-item {
+            width: 50%;
+         }
+         &.half-item {
+            width: 25%;
+         }
+      }
+   }
+   @media handheld, only screen and (max-width:600px) {
+      .blog-teaser-side-item {
+         .item-holder {
+            margin: 0 !important;
+         }
+         &.full-item {
+            width: 100%;
+            float: none;
+         }
+         &.half-item {
+            width: 50%;
+         }
+      }
+   }
+}

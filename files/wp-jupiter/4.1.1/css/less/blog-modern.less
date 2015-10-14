@@ -1,0 +1,136 @@
+.mk-blog-modern-item {
+	width: 100%;
+	margin-bottom: 50px;
+	.mk-blog-meta {
+		margin: 0 20px 20px 100px;
+		display: block;
+		padding: 0 !important;
+	}
+	.mk-audio-section,
+	.featured-image,
+	.mk-swipe-slideshow {
+		margin-bottom: 25px !important;
+	}
+	.blog-modern-btn {
+		letter-spacing: 1px;
+		font-weight:bold;
+		text-transform: uppercase;
+		display: inline-block;
+		.border-radius(2px);
+		padding: 14px 20px;
+		font-size: 11px;
+		line-height: 11px;
+		color: #fff;
+		&:hover {
+			background-color: #252525 !important;
+		}
+	}
+	.mk-audio-section {
+		height: 170px;
+		@media handheld, only screen and (max-width:780px) {
+			.audio-has-img {
+				margin: 0 !important;
+			}
+			.audio-thumb {
+				display: none;
+			}
+		}
+		.jp-audio {
+			&.audio-has-img {
+				margin-left: 170px;
+			}
+			div.jp-interface {
+				min-height: 160px !important;
+			}
+		}
+	}
+	.blog-modern-comment,
+	.blog-modern-share,
+	.mk-love-holder {
+		display: block;
+		padding: 12px 0;
+		color: #898989;
+		text-align: center;
+		line-height: 16px;
+
+		i {
+
+			font-size: 16px;
+		}
+		span {
+			margin-top:2px;
+		}
+	}
+	.blog-share-container {
+		display: block;
+		float: none;
+		border-bottom: 1px solid #efefef;
+	}
+	.blog-modern-comment {
+		line-height: 16px;
+		border-bottom: 1px solid #efefef;
+		span {
+			display: block;
+			font-size: 11px;
+		}
+	}
+	.blog-modern-share {
+		cursor: pointer;
+		padding: 20px 0;
+	}
+	.mk-love-holder {
+		i span {
+			position: absolute;
+		}
+		.mk-love-count {
+			display: block;
+		}
+	}
+	.blog-social-share {
+		position: absolute;
+		left: -6px;
+		bottom: 50px;
+		background-color: #252525;
+		margin: 0;
+		list-style: none;
+		width: 40px;
+		text-align: center;
+		padding: 10px;
+		text-transform: center;
+		&:before {
+			left: 25px;
+			bottom: -5px;
+			margin-top: -5px;
+		}
+		li {
+			margin: 16px 0;
+		}
+	}
+	&:first-of-type {
+		.blog-modern-social-section {
+			.blog-social-share {
+				top: 50px;
+				bottom: auto;
+				width: 215px;
+				&:before {
+					left: 25px;
+					bottom: auto;
+					top: 0;
+					margin-top: -5px;
+				}
+				li {
+					display: inline-block;
+					margin: 3px 2px;
+				}
+			}
+		}
+	}
+}
+.blog-modern-social-section {
+	float: left;
+	width: 50px;
+	min-height: 150px;
+	border-right: 1px solid #efefef;
+	text-transform: center;
+	margin-left: 20px;
+}

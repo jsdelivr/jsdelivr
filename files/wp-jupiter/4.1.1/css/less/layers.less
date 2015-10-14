@@ -1,0 +1,1101 @@
+/**********************************************
+blog-classic.less
+**********************************************/
+.mk-blog-classic-item {
+	.blog-social-share {
+		z-index: 30;
+	}
+}
+.post-type-badge {
+	z-index: 10;
+}
+
+/**********************************************
+blog-comments.less
+**********************************************/
+.mk-commentlist {
+	li {
+		.comment-content {
+			z-index: 10;
+		}
+	}
+}
+
+/**********************************************
+blog-grid.less
+**********************************************/
+.mk-blog-grid-item {
+	.blog-grid-hover-icon {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+blog-modern.less
+**********************************************/
+.mk-blog-modern-item {
+	.blog-social-share {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+edge-one-pager.less
+**********************************************/
+.mk-edge-one-pager {
+	.mk-grid {
+		z-index: 14;
+	}
+}
+.fullPage-slidesNav {
+	z-index: 4;
+}
+#fullPage-nav {
+	z-index: 300;
+}
+
+/**********************************************
+edge-slider.less
+**********************************************/
+.mk-edge-slider {
+	.mk-grid {
+		z-index: 14;
+	}
+	.edge-slider-holder {
+		z-index: 10;
+	}
+	.edge-slider-loading {
+		z-index: 20;
+	}
+	.edge-skip-slider {
+		z-index: 10;
+	}
+}
+.mk-swiper-container {
+	z-index: 1;
+}
+.swiper-pagination {
+	z-index: 10;
+}
+.mk-edge-nav {
+	a {
+		z-index: 1000;
+	}
+}
+
+/**********************************************
+flexslider-base.less
+**********************************************/
+.flex-direction-nav {
+	a {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+footer.less
+**********************************************/
+#mk-footer {
+	z-index: 10;
+	&.mk-footer-unfold {
+		z-index: 9;
+	}
+}
+
+/**********************************************
+header-toolbar.less
+**********************************************/
+.mk-header-toolbar {
+	z-index: 310;
+}
+.mk-language-nav-sub-wrapper {
+	z-index: 20;
+}
+.mk-fullscreen-search-overlay {
+	z-index: 999;
+}
+.mk-toolbar-resposnive-icon {
+	z-index: 80;
+}
+@media handheld, only screen and (max-width:780px) {
+	.mk-login-register, #mk-header-subscribe {
+		z-index: 50;
+	}
+}
+
+/**********************************************
+header.less
+**********************************************/
+#mk-header {
+	z-index: 301; // +1 higher than fullPage-nav
+	.mk-header-bg, .mk-classic-nav-bg {
+		z-index: 1;
+	}
+	.header-logo {
+		a {
+			z-index: 30;
+		}
+	}
+	.mk-header-inner {
+		z-index: 300;
+	}
+}
+.mk-header-holder {
+	z-index: 200;
+}
+.header-style-2.header-sticky-ready {
+	.mk-header-nav-container {
+		z-index: 210; 
+	}
+}
+.mk-header-right {
+	z-index: 20;
+}
+.mk-header-nav-container {
+	z-index: 30;
+}
+
+.header-style-2 {
+	&.header-align-center {
+		.header-logo {
+			z-index: 2;
+		}
+	}
+}
+.header-style-3 {
+	.mk-dashboard-trigger {
+		z-index: 11;
+	}
+}
+.header-style-4 {
+	z-index: auto !important;
+	.mk-header-inner {
+		z-index: 300 !important;
+	}
+}
+
+/**********************************************
+icarousel.less
+**********************************************/
+#iCarousel-preloader {
+	z-index: 1000; 
+}
+#iCarousel-timer {
+	z-index: 1000;
+}
+a.iCarouselNav {
+	z-index: 1000;
+}
+
+/**********************************************
+jplayer.less
+**********************************************/
+div.jp-volume-bar {
+	z-index: 20;
+}
+
+/**********************************************
+layout.less
+**********************************************/
+.mk-go-top {
+	z-index: 300; 
+}
+.mk-zindex-fix {
+	z-index: 60;
+}
+#theme-page {
+	z-index: 10;
+}
+
+/**********************************************
+lightbox.less
+**********************************************/
+.fancybox-wrap {
+	z-index: 8020; 
+}
+.fancybox-opened {
+    z-index: 8030;
+}
+#fancybox-loading {
+	z-index: 8060;
+}
+.fancybox-close {
+	z-index: 8040;
+}
+.fancybox-nav {
+	z-index: 8040;
+	span {
+		z-index: 8040;
+	}
+}
+.fancybox-overlay {
+	z-index: 8010;
+}
+.fancybox-title {
+	z-index: 8050;
+}
+.fancybox-title-float-wrap {
+	z-index: 8050;
+}
+
+/**********************************************
+nav.less
+**********************************************/
+.mk-classic-menu-wrapper {
+	z-index: 99;
+}
+.main-navigation-ul > li.menu-item ul.sub-menu:after {
+	z-index: 10;
+}
+.main-navigation-ul:not(.dropdownJavascript) li.menu-item:hover > ul.sub-menu {
+	z-index: 10;
+}
+.dropdownJavascript li.dropdownOpen > ul.sub-menu {
+	z-index: 10;
+}
+.has-mega-menu > ul.sub-menu > ul.sub-menu {
+	z-index: auto;
+}
+.mk-nav-responsive-link {
+	z-index: 12;
+}
+#mk-responsive-nav {
+	z-index: 20;
+}
+
+/**********************************************
+news-teaser.less
+**********************************************/
+.mk-news-tab {
+	.mk-tabs-tabs {
+		z-index: 10;
+	}
+	.mk-tabs-panes {
+		z-index: 1;
+		.mk-tabs-pane {
+			z-index: 8;
+		}
+	}
+}
+
+/**********************************************
+page-introduce.less
+**********************************************/
+#mk-page-introduce {
+	z-index: 8;
+}
+
+/**********************************************
+pagination.less
+**********************************************/
+.mk-post-nav {
+	z-index: 200;
+	&.post-nav-backward{
+		z-index: 199;
+	}
+}
+.pagnav-wrapper {
+	.pagenav-top {
+		z-index: 201;
+	}
+}
+
+/**********************************************
+portfolio-ajax.less
+**********************************************/
+.portfolio-loader {
+	z-index: 10000;
+}
+.portfolio-loader > div {
+	z-index: 10000;
+}
+
+/**********************************************
+portfolio-classic.less
+**********************************************/
+.mk-portfolio-classic-item {
+	.featured-image {
+		img {
+			z-index: 10;
+		}
+		.image-hover-overlay {
+			z-index: 11;
+		}
+	}
+	.permalink-badge, .mk-lightbox {
+		z-index: 20;
+	}
+}
+
+/**********************************************
+portfolio-hovers.less
+**********************************************/
+.mk-portfolio-item {
+	&.fadebox-hover {
+		.portfolio-meta {
+			z-index: 20;
+		}
+		.featured-image {
+			&:after {
+				z-index: 10;
+			}
+			.grid-hover-icons {
+				z-index: 13;
+			}
+		}
+	}
+	&.slidebox-hover {
+		.portfolio-meta {
+			z-index: 20;
+		}
+		.grid-hover-icons {
+			z-index: 21;
+		}
+		.image-hover-overlay {
+			z-index: 12;
+		}
+	}
+	&.zoomin-hover {
+		.portfolio-meta {
+			z-index: 20;
+		}
+		.grid-hover-icons {
+			z-index: 13;
+		}
+		.image-hover-overlay {
+			z-index: 11;
+		}
+	}
+	&.zoomout-hover {
+		.grid-hover-icons {
+			z-index: 10;
+		}
+		.portfolio-meta {
+			z-index: 10;
+		}
+		.grid-hover-icons {
+			z-index: 10;
+		}
+		.featured-image img {
+			z-index: 11;
+		}
+		.image-hover-overlay {
+			z-index: 4;
+		}
+		.featured-image:hover {
+			.portfolio-meta {
+				z-index: 12;
+			}
+			.grid-hover-icons {
+				z-index: 13;
+			}
+		}
+	}
+	&.cube-hover {
+		.portfolio-meta {
+			z-index: 10;
+		}
+		.grid-hover-icons {
+			z-index: 10;
+		}
+		.featured-image {
+			img {
+				z-index: 11;
+			}
+		}
+		.image-hover-overlay {
+			z-index: 4;
+		}
+		.featured-image:hover {
+			.portfolio-meta {
+				z-index: 12;
+			}
+			.grid-hover-icons {
+				z-index: 13;
+			}
+		}
+	}
+	&.light-zoomin-hover {
+		.portfolio-meta {
+			z-index: 20;
+		}
+		.grid-hover-icons {
+			z-index: 13;
+		}
+		.image-hover-overlay {
+			z-index: 11;
+		}
+	}
+
+	.fadebox-post-type-icon {
+		z-index: 20;
+	}
+	.featured-image {
+		img {
+			z-index: 10;
+		}
+		.hover-overlay {
+			z-index: 11;
+		}
+	}
+}
+
+/**********************************************
+portfolio-single.less
+**********************************************/
+.portfolio-similar-posts-image {
+	img {
+		z-index: 10;
+	}
+	.image-hover-overlay {
+		z-index: 11;
+	}
+}
+.portfolio-similar-meta {
+	z-index: 20;
+}
+
+/**********************************************
+preloader.less
+**********************************************/
+.mk-body-loader-overlay {
+	z-index: 2351;
+}
+
+/**********************************************
+pricing-tables.less
+**********************************************/
+.pricing-cols {
+	li {
+		&.pricing-col {
+			z-index: 10;
+		}
+		&.featured-plan {
+			z-index: 20;
+		}
+	}
+	.pricing-price {
+		span {
+			z-index: 20;
+		}
+	}
+	.pricing-features {
+		ul {
+			z-index: 20;
+		}
+	}
+	.pricing-button {
+		a {
+			z-index: 20;
+		}
+	}
+}
+
+/**********************************************
+reset.less
+**********************************************/
+.ls-jupiter .ls-nav-prev,
+.ls-jupiter .ls-nav-next {
+	z-index: 10 !important;
+}
+
+/**********************************************
+section-transition.less
+**********************************************/
+.intro-effect-fade, .intro-effect-zoom_out {
+	z-index: 999;
+}
+.intro-effect-shuffle {
+	z-index: 999;  
+}
+
+/**********************************************
+shortcodes-blog-showcase.less
+**********************************************/
+.showcase-blog-overlay {
+	z-index: 30; 
+}
+.mk-blog-showcase-thumb {
+	z-index: 20;
+	a {
+		z-index: 40;
+	}
+}
+.blog-showcase-extra-info {
+	z-index: 10; 
+}
+
+/**********************************************
+shortcodes-button.less
+**********************************************/
+.mk-button {
+	&.savvy-dimension {
+		span {
+			z-index: 2;
+		}
+		&:after {
+			z-index: 1;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-chart.less
+**********************************************/
+.mk-chart {
+	canvas {
+		z-index: 1;
+	}
+	.chart-percent {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+shortcodes-contact-form.less
+**********************************************/
+.mk-contact-form-wrapper {
+	&.classic-style {
+		.mk-form-row {
+			i {
+				z-index: 1;
+			}
+		}
+	}
+	
+	&.outline-style {
+		&.contact-light {
+			.text-input,
+			.mk-textarea {
+				z-index: auto;
+			}
+		}
+
+		.mk-invalid {
+			z-index: 10 !important;
+		}
+	}
+
+	&.corporate-style {
+		.mk-form-row {
+			.text-input,
+			.mk-textarea {
+				z-index: auto;
+			}
+		}
+		.mk-invalid {
+			z-index: 10 !important;
+		}
+	}
+}
+
+.mk-progress-button[data-style="move-up"] .mk-progress-button-content {
+	z-index: 10;
+}
+
+/**********************************************
+shortcodes-contact-seven.less
+**********************************************/
+span.wpcf7-not-valid-tip {
+	z-index: 30;
+}
+
+/**********************************************
+shortcodes-divider.less
+**********************************************/
+.mk-divider {
+	&[class*='go_top'] .divider-inner {
+		&:before {
+			z-index: 3;
+		}
+		.divider-go-top {
+			z-index: 4;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-edge-slideshow.less
+**********************************************/
+.mk-swipe-slideshow {
+	.swiper-arrows {
+		z-index: 10;
+	}
+}
+
+
+/**********************************************
+shortcodes-employees.less
+**********************************************/
+.mk-employees {
+	&.classic-style {
+		.mk-employeee-networks {
+			z-index: 1;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-flickr-feeds.less
+**********************************************/
+.mk-flickr-feeds-shortcode {
+	.flickr_badge_image {
+		a {
+			z-index: 5;	
+		}
+	}
+}
+
+/**********************************************
+shortcodes-flipbox.less
+**********************************************/
+.mk-flipbox-container {
+	&.flip-horizontal {
+		.mk-flipbox-front {
+			z-index: 2;
+		}
+		&:hover {
+			.mk-flipbox-back {
+				z-index: 3;
+			}
+		}
+	}
+	&.flip-vertical {
+		.mk-flipbox-front {
+			z-index: 2;
+		}
+		&:hover {
+			.mk-flipbox-back {
+				z-index: 3;
+			}
+		}
+	}
+}
+
+/**********************************************
+shortcodes-gallery.less
+**********************************************/
+.mk-gallery-shortcode {
+	article {
+		.image-hover-overlay {
+			z-index: 10;
+		}
+		.gallery-title {
+			z-index: 10;
+		}
+		&.hover-overlay_layer {
+			.gallery-desc {
+				z-index: 10;
+			}
+		}
+	}
+}
+
+/**********************************************
+shortcodes-icon-box.less
+**********************************************/
+.mk-box-icon {
+	&.boxed-style {
+		.icon-box-boxed {
+			z-index: 10; 
+		}
+		.mk-main-ico {
+			z-index: 20;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-image.less
+**********************************************/
+.mk-image-shortcode {
+	&.inside-image {
+		.mk-image-caption {
+			z-index: 10;
+		}
+	}
+}
+.mk-image-overlay {
+	z-index: 10;
+}
+.mk-image-shortcode-lightbox {
+	z-index: 30;
+}
+
+/**********************************************
+shortcodes-laptop-slideshow.less
+**********************************************/
+.mk-laptop-slideshow-shortcode {
+	.flex-direction-nav {
+		a {
+			z-index: 60;
+		}
+	}
+}
+.mk-laptop-image {
+	z-index: 50;
+}
+
+/**********************************************
+shortcodes-lcd-slideshow.less
+**********************************************/
+.mk-lcd-slideshow {
+	.flex-direction-nav {
+		a {
+			z-index: 60;
+		}
+	}
+}
+.mk-lcd-image {
+	z-index: 50;
+}
+
+/**********************************************
+shortcodes-page-section.less
+**********************************************/
+.mk-page-section {
+	.vc_row-fluid {
+		z-index: 10;
+	}
+}
+.mk-video-mask,
+.mk-video-color-mask {
+	z-index: 3;
+}
+.mk-video-preload {
+	z-index: 2;
+}
+.mk-section-video {
+	z-index: 1;
+	video {
+		z-index: 1;
+	}
+}
+.mk-section-image {
+	z-index: 1;
+}
+.mk-half-layout-container {
+	z-index: 5;
+}
+.mk-video-section-touch {
+	z-index: 2;
+}
+.mk-page-section-loader {
+	z-index: 20;
+}
+
+/**********************************************
+shortcodes-page-title-box.less
+**********************************************/
+.mk-page-title-box {
+	.mk-page-title-box-content {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+shortcodes-portfolio-carousel.less
+**********************************************/
+.mk-portfolio-carousel {
+	.flex-viewport {
+		ul {
+			li {
+				&:hover {
+					.portfolio-carousel-extra-info {
+						z-index: 30;
+					}
+				}
+			}
+		}
+	}
+}
+.portfolio-carousel-extra-info {
+	z-index: 8;
+}
+
+.mk-portfolio-carousel-modern {
+	.mk-portfolio-modern-image {
+		img {
+			z-index: 10;
+		}
+	}
+	.image-hover-overlay {
+		z-index: 11;
+	}
+	.portfolio-modern-meta {
+		z-index: 20;
+	}
+	.flex-direction-nav {
+		a {
+			z-index: 20;
+		}
+	}
+}
+.modern-post-type-icon {
+	z-index: 20;
+}
+
+/**********************************************
+shortcodes-skill-meter.less
+**********************************************/
+.mk-skill-meter {
+	.mk-progress-bar {
+		.progress-inner {
+			z-index: 1;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-slideshow.less
+**********************************************/
+.mk-slideshow-shortcode {
+	.mk-flex-caption {
+		span {
+			z-index: 10;
+		}
+	}
+	.color-mask {
+		z-index: 5;
+	}
+}
+
+.theatre-slider-container {
+	.laptop-theatre-slider, .computer-theatre-slider {
+		img {
+			z-index: 3;
+			.no-csstransforms & {
+		      z-index: 1;
+		    }
+		}
+	}
+	.laptop-theatre-slider, .computer-theatre-slider{
+		.player-container{
+			z-index: 2;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-tab-slider.less
+**********************************************/
+.mk-tab-slider {
+	z-index:1;
+}
+.mk-tab-slider-nav {
+	a {
+		z-index: 2;
+	}
+}
+
+/**********************************************
+shortcodes-tab.less
+**********************************************/
+.mk-tabs {
+	.mk-tabs-panes {
+		.mk-tabs-pane {
+			z-index: 8;
+		}
+	}
+	&.default-style {
+		.mk-tabs-tabs {
+			z-index: 10;
+		}
+		.mk-tabs-panes {
+			z-index: 1;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-testimonial-slider.less
+**********************************************/
+.mk-testimonial {
+	&.modern-style {
+		.flex-control-nav {
+			z-index: 10;
+		}
+	}
+}
+
+/**********************************************
+shortcodes-tooltip.less
+**********************************************/
+.mk-tooltip {
+	z-index: 30; 
+}
+
+/**********************************************
+side-dashboard.less
+**********************************************/
+#mk-theme-container {
+	z-index: 200;
+}
+.mk-side-dashboard {
+	z-index: 1;
+}
+.dashboard-opened .mk-side-dashboard{
+	z-index: 300;
+}
+.sidedash-navigation-ul {
+	z-index: 20;
+	li {
+		a {
+			z-index: 5;
+		}
+	}
+	.mk-nav-arrow {
+		z-index: 10;
+	}
+}
+
+/**********************************************
+transitions.less
+**********************************************/
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**********************************************
+vertical-menu.less
+**********************************************/
+.mk-vm-menuwrapper {
+	z-index: 30;
+}
+.mk-vm-menuwrapper .mk-vm-menu {
+	z-index: 30;
+}
+
+/**********************************************
+vertical-menu.less
+**********************************************/
+.flickr-widget-wrapper {
+	.flickr_badge_image {
+		z-index: 7;
+	}
+}
+.mk-instagram-feeds {
+	.featured-image {
+		img {
+			z-index: 6;
+		}
+	}
+	.image-hover-overlay {
+		z-index: 20;
+	}
+}
+.widget_recent_portfolio {
+	ul {
+		li {
+			&:hover {
+				.portfolio-widget-info {
+					z-index: 20;
+				}
+			}
+		}
+	}
+}
+.portfolio-widget-thumb {
+	z-index: 10;
+}
+.widget-portfolio-overlay {
+	z-index: 10;
+}
+.portfolio-widget-lightbox,
+.portfolio-widget-permalink {
+	z-index: 15;
+}
+.portfolio-widget-info {
+	z-index: 8;
+}
+.mk-quick-contact-wrapper {
+	z-index: 400;
+}
+#mk-quick-contact {
+	z-index: 100;
+}
+.portfolio-widget-thumb {
+	z-index: 10;
+}
+.widget-portfolio-overlay {
+	z-index: 10;
+}
+
+/**********************************************
+woocommerce-layout.less
+**********************************************/
+.woocommerce, .woocommerce-page {
+	.mk-product-holder {
+		z-index: 10;
+		.product-loop-image {
+			z-index: 3;
+		}
+		.product-hover-image {
+			z-index: 4;
+		}
+		.product-item-footer {
+			z-index: 6;
+		}
+		.product-loading-icon {
+			z-index: 5;
+		}
+	}
+}
+
+/**********************************************
+woocommerce.less
+**********************************************/
+p.demo_store {
+	z-index: 99998;
+}
+.woocommerce, .woocommerce-page {
+	.quantity, #content .quantity {
+		.plus, .minus {
+			z-index: 10;
+		}
+	}
+	.widget_price_filter {
+		.ui-slider .ui-slider-handle {
+			z-index: 2;
+		}
+		.ui-slider .ui-slider-range {
+			z-index: 1;
+		}
+	}
+}
+.mk-onsale, .mk-out-stock, .out-of-stock {
+	z-index: 30;
+}
+.mk-woocommerce-carousel {
+	&.modern-style {
+		.mk-lightbox {
+			i {
+				z-index: 14;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

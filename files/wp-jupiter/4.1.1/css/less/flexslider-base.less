@@ -1,0 +1,187 @@
+/* * jQuery FlexSlider v2.0
+* http://www.woothemes.com/flexslider/
+*
+* Copyright 2012 WooThemes
+* Free to use under the GPLv2 license.
+* http://www.gnu.org/licenses/gpl-2.0.html
+*
+* Contributing author:Tyler Smith (@mbmufffin) */
+
+ 
+/* Browser Resets */
+.flex-container a:active,
+.mk-flexslider a:active,
+.flex-container a:focus,
+.mk-flexslider a:focus {
+	outline: none;
+}
+.mk-flex-slides,
+.flex-control-nav,
+.flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* mk-flexslider Necessary Styles
+******************************** */
+.mk-flexslider {
+	margin: 0;
+	padding: 0;
+	direction: ltr;
+}
+.mk-flexslider .mk-flex-slides > li,
+.mk-flexslider .mk-banner-slides > li {
+	display: none;
+	margin: 0;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.mk-flexslider .mk-flex-slides img,
+.mk-flexslider .mk-banner-slides img {
+	width: 100%;
+	display: block;
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.mk-flex-slides:after,
+.mk-banner-slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .mk-flex-slides {
+	display: block;
+}
+* html .mk-flex-slides {
+	height: 1%;
+}
+.mk-flexslider .mk-banner-slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		margin: 0;
+	}
+}
+
+/* flexslider Default Theme
+******************************** */
+.mk-flexslider {
+	margin: 0;
+	position: relative;
+	zoom: 1;
+}
+.flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	transition: all 1s ease;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.loading .flex-viewport {
+	max-height: 100px;
+}
+.mk-flexslider .mk-flex-slides,
+.mk-flexslider .mk-banner-slides {
+	zoom: 1;
+}
+.carousel li {
+	margin-right: 5px
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+	*height: 0;
+}
+.flex-direction-nav a {
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.flex-direction-nav .flex-next {
+	.opacity(70);
+}
+.flex-direction-nav .flex-prev {
+	.opacity(70);
+}
+.flex-direction-nav .flex-next:hover {
+	.opacity(100);
+}
+.flex-direction-nav .flex-prev:hover {
+	.opacity(100);
+}
+.mk-flexslider:hover .flex-next:hover,
+.mk-flexslider:hover .flex-prev:hover {
+	opacity: 1;
+}
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	left: 0;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+.flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.flex-control-paging li a {
+	display: block;
+	cursor: pointer;
+}
+.flex-control-paging li a:hover {
+}
+.flex-control-paging li a.flex-active {
+	cursor: default;
+}
+.flex-control-thumbs {
+	margin: 20px 0 0;
+	position: static;
+	overflow: hidden;
+}
+.flex-control-thumbs li {
+	width: 100px;
+	height: 60px;
+	margin: 0 20px 0 0;
+	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+	.border-radius(4px);
+}
+.flex-control-thumbs img {
+	width: 100%;
+	display: block;
+	opacity: .7;
+	cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+	opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+	opacity: 1;
+	cursor: default;
+}

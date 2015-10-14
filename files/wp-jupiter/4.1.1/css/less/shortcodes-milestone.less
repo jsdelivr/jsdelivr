@@ -1,0 +1,110 @@
+/* Shortcode:Milestone
+-------------------------------------------------------------------- */
+.mk-milestone {
+	margin-bottom: 20px;
+	
+	.milestone-number,
+	.milestone-prefix,
+	.milestone-suffix {
+		line-height: 110%;
+		letter-spacing: 2px
+	}
+	&.left-align {
+		.milestone-top {
+			float: left;
+		}
+		i {
+			float: left;
+			margin-right: 10px;
+		}
+		.milestone-text:after {
+			left:0;
+			.translate(0, 0);
+		}
+	}
+
+	&.center-align {
+		text-align: center;	
+		.milestone-top {
+			display: block;
+		}
+		i {
+			display: block;
+			margin-bottom: 30px;
+		}
+		.milestone-text:after {
+			left:50%;
+			.translate(-50%, 0);
+		}
+	}
+
+	&.right-align {
+		.milestone-top {
+			float: right;
+			text-align: right;
+		}
+		i {
+			float: right;
+			margin-left: 10px;
+		}
+		.milestone-text:after {
+			right:0;
+			.translate(0, 0);
+		}
+	}
+
+	.milestone-text {
+		letter-spacing: 1px;
+		line-height: 100%;
+		position: relative;
+		margin: 16px 0;
+		padding: 16px 0;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 20px;
+			height: 3px;
+			background: #999;
+			top: 0;
+			
+
+		}
+	}
+	
+	&.milestone-small {
+		i{font-size: 32px;
+		}
+		.milestone-number,
+		.milestone-prefix,
+		.milestone-suffix {
+			font-size: 26px;
+		}
+	}
+	&.milestone-medium {
+		i {
+			font-size: 48px;
+		}
+		.milestone-number,
+		.milestone-prefix,
+		.milestone-suffix {
+			font-size: 40px;
+		}
+		.milestone-text {
+			//margin: 0 0 0 4px;
+		}
+	}
+	&.milestone-large {
+		i{font-size: 72px;
+		}
+		.milestone-number,
+		.milestone-prefix,
+		.milestone-suffix {
+			font-size: 50px;
+		}
+		.milestone-text {
+			//margin: -10px 0 0 4px;
+		}
+	}
+}

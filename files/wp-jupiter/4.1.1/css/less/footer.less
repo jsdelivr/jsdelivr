@@ -1,0 +1,160 @@
+#mk-footer {
+	width: 100%;
+	position: relative;
+	padding: 20px 0 0;
+	&.mk-footer-unfold {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		.gpu();
+	}
+	@media handheld, only screen and (max-width:767px) {
+		&.mk-footer-unfold {
+			position: relative;
+		}
+	}
+	&.mk-footer-disable {
+		padding-top: 0;
+	}
+	.footer-wrapper {
+		position: relative; 
+	}
+	.mk-padding-wrapper {
+		padding: 0 20px;
+	}
+	@media handheld, only screen and (max-width:767px) {
+		[class*='mk-col-'] {
+			width: 100% !important;
+		}
+	}
+}
+
+/* SUB FOOTER SECTION */
+.mk-footer-copyright {
+	line-height: 16px;
+	float: left;
+	padding: 25px 0 20px;
+	font-size: bold;
+	.opacity(80);
+}
+.mk-footer-logo {
+	float: left;
+	display: inline-block;
+	padding: 8px 20px 8px 0;
+}
+#mk-footer-navigation {
+	float: right;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: block;
+		li {
+			display: inline-block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			a {
+				margin: 25px 12px 20px;
+				display: block;
+				font-size: 12px;
+				line-height: 16px;
+				.opacity(80);
+				&:hover {
+					.opacity(100);
+				}
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
+}
+.fullwidth-footer {
+	.mk-footer-copyright {
+		padding-left: 20px;
+	}
+	#mk-footer-navigation {
+		margin-right: 20px;
+	}
+}
+@media handheld, only screen and (max-width:1140px) {
+	.mk-footer-copyright {
+		padding-left: 20px !important;
+	}
+}
+@media handheld, only screen and (max-width:767px) {
+	#mk-footer-navigation {
+		float: none;
+		width: auto;
+		text-align: center;
+		ul li {
+			display: block !important;
+		}
+	}
+	.mk-footer-copyright {
+		display: block;
+		float: none !important;
+		text-align: left;
+		clear: both;
+		padding: 10px 10px 5px !important;
+	}
+	#mk-footer-navigation ul li {
+		float: none !important;
+		width: 100% !important;
+		a {
+			margin: 5px auto;
+		}
+	}
+	.mk-footer-copyright {
+		text-align: center;
+	}
+}
+.mk-footer-tweets {
+	padding: 40px 0 20px;
+	text-align: center;
+	ul {
+		padding: 0;
+		margin: 0 auto;
+		width: 50%;
+		li {
+			.tweet-text {
+				font-size: 18px;
+				line-height: 26px;
+				margin-bottom: 15px;
+				display: block;
+			}
+			.tweet-username {
+				font-size: 38px;
+				display: block;
+				margin-bottom: 30px;
+				line-height: 32px;
+			}
+			.tweet-time {
+				font-size: 14px;
+				margin-bottom: 30px;
+				display: block;
+				color: #999999;
+			}
+		}
+	}
+	&.mk-light-skin {
+		.tweet-text {
+			color: #444444;
+			a {
+				color: #444444;
+			}
+		}
+	}
+	&.mk-dark-skin {
+		.tweet-text {
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+		.tweet-time {
+			color: #999999;
+		}
+	}
+}

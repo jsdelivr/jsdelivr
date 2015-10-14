@@ -1,0 +1,8 @@
+.mk-body-loader-overlay, #sw-main-box {
+  display: none !important;
+}
+
+.mk-section-color-mask {
+	display: none !important;
+}
+

@@ -1,0 +1,39 @@
+/* Shortcode:Edge Slideshow
+-------------------------------------------------------------------- */
+.mk-swipe-slideshow {
+	position: relative;
+	margin-bottom: 20px;
+	&:hover {
+		.swiper-arrows {
+			.opacity(60);
+		}
+	}
+	.swiper-arrows {
+		top: 50%;
+		width: 38px;
+		height: 38px;
+		.translate(0, -50%);
+		background-color: rgba(0, 0, 0, 0.4);
+		text-align: center;
+		position: absolute;
+		padding: 10px;
+		.border-radius(2px);
+		cursor: pointer;
+		color: #fff;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.6);
+			.opacity(100);
+		}
+		i {
+			line-height: 40px;
+			font-size: 16px;
+		}
+		.opacity(0);
+	}
+	.mk-swiper-prev {
+		left: 20px;
+	}
+	.mk-swiper-next {
+		right: 20px;
+	}
+}

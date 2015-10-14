@@ -1,0 +1,233 @@
+/* --------------------------------------------------------------
+   
+Basic WordPress Blog Styles
+     
+-------------------------------------------------------------- */
+
+
+/* Images
+-------------------------------------------------------------- */
+
+
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+.wp-caption {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+.wp-caption img {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding: 10px;
+}
+.wp-smiley {
+	max-height: 1em;
+	margin: 0 !important;
+}
+.gallery {
+	margin: 0 auto 18px;
+	text-align: center;
+}
+.gallery .gallery-item {
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+.gallery img {
+	border: 6px solid rgba(0, 0, 0, 0.1);
+}
+.gallery img:hover {
+	.opacity(70);
+}
+.gallery-columns-2 .attachment-medium {
+	max-width: 92%;
+	height: auto;
+}
+.gallery-columns-4 .attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+}
+.gallery .gallery-caption {
+	font-size: 11px;
+	padding: 6px 20px;
+}
+.gallery dl,
+.gallery dt {
+	margin: 0;
+}
+.gallery br+br {
+	display: none;
+}
+
+/* Pullquotes
+-------------------------------------------------------------- */
+blockquote {
+	position: relative;
+	background-color: #f6f6f6;
+	background-color: rgba(0,
+	0,
+	0,
+	0.05);
+	padding: 15px 15px 15px 70px;
+	&:before {
+		position: absolute;
+		content: "\f10d";
+		display: block;
+		color: #dddddd;
+		color: rgba(0, 0, 0, 0.1);
+		left: 20px;
+		top: 20px;
+		font-size: 32px;
+	}
+}
+blockquote.left {
+	float: left;
+	margin-left: 0;
+	margin-right: 20px;
+	text-align: right;
+	width: 33%;
+}
+blockquote.right {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+	text-align: left;
+	width: 33%;
+}
+
+/* Tables
+-------------------------------------------------------------- */
+table {
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+table th {
+	text-align: center;
+	padding: 18px 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+table tfoot td {
+	padding: 6px;
+}
+table {
+	tr:nth-child(odd) {
+	}
+	tfoot {
+	}
+	tr {
+	}
+	td {
+		text-align: center;
+		padding: 12px;
+	}
+}
+
+/* Gravity forms Styling
+-------------------------------------------------------------- */
+.gform_wrapper select {
+	padding: 12px 14px 12px 20px !important;
+}
+.gform_wrapper input[type=text],
+.gform_wrapper input[type=url],
+.gform_wrapper input[type=email],
+.gform_wrapper input[type=tel],
+.gform_wrapper input[type=number],
+.gform_wrapper input[type=password] {
+	font-size: 13px !important;
+	color: #767676 !important;
+	padding: 10px !important;
+	background-color: #fafafa !important;
+	border: 1px solid #e3e3e3 !important;
+	&:focus {
+		background-color: #fff !important;
+	}
+}
+.gform_wrapper .button {
+	margin-right: 10px !important;
+	border: none !important;
+	outline: none !important;
+	color: #fff !important;
+	font-size: 13px;
+	line-height: 13px !important;
+	padding: 12px 15px !important;
+	text-transform: uppercase;
+	.border-radius(2px);
+	vertical-align: top;
+	background-image: none !important;
+	letter-spacing: 1px;
+	display: inline-block;
+	&:hover {
+		background-color: #252525 !important;
+	}
+}
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio],
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input {
+	margin-left: 2px;
+}
+.gform_wrapper li,
+.gform_wrapper form li {
+	padding-bottom: 10px;
+}
+.gform_wrapper .top_label .gfield_label {
+	margin-bottom: 6px !important;
+}
+@media only screen and (max-width:550px) {
+	.gform_wrapper .top_label li.gfield.gf_left_half,
+	.gform_wrapper .top_label li.gfield.gf_right_half,
+	.gform_wrapper .top_label li.gfield.gf_left_third,
+	.gform_wrapper .top_label li.gfield.gf_middle_third,
+	.gform_wrapper .ginput_complex .ginput_left,
+	.gform_wrapper .ginput_complex .ginput_right,
+	.gform_wrapper .top_label input.medium,
+	.gform_wrapper .top_label select.medium {
+		width: 99% !important;
+		margin-top: 10px;
+		float: none !important;
+	}
+}
+
+/* WP3.8 temporary fix
+-------------------------------------------------------------- */
+@media screen and (max-width:600px) {
+	#wpadminbar {
+		position: fixed !important;
+	}
+}

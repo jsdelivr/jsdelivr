@@ -1,0 +1,570 @@
+/* Shortcode:Button
+-------------------------------------------------------------------- */
+.mk-button {
+	i span {
+		display: none!important;
+	}
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 0;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer; 
+	letter-spacing: 1px;
+	min-width: 0;
+	-webkit-transition: color .15s ease-in-out,
+	background .15s ease-in-out,
+	border .15s ease-in-out;
+	-moz-transition: color .15s ease-in-out,
+	background .15s ease-in-out,
+	border .15s ease-in-out;
+	-ms-transition: color .15s ease-in-out,
+	background .15s ease-in-out,
+	border .15s ease-in-out;
+	-o-transition: color .15s ease-in-out,
+	background .15s ease-in-out,
+	border .15s ease-in-out;
+	transition: color .15s ease-in-out,
+	background .15s ease-in-out,
+	border .15s ease-in-out;
+	.backface-visibility();
+
+	/* Corner Styles
+	   ========================================================================== */
+	&.full_rounded {
+		.border-radius(50px);
+	}
+	&.rounded {
+		.border-radius(3px);
+	}
+	&.pointed {
+		.border-radius(0px);
+	}
+
+	&.savvy-dimension.full_rounded {
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	}
+	
+	&.fullwidth-button {
+		display: block !important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+	}
+	&.two-dimension,
+	&.three-dimension {
+		color: #fff;
+		text-shadow: 0 1px rgba(0,
+		0,
+		0,
+		0.4);
+		&:hover {
+			color: #fff;
+		}
+	}
+	&:hover {
+		color: #fff;
+	}
+	&.two-dimension.dark-color,
+	&.three-dimension.dark-color {
+		color: #585858 !important;
+		text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+	}
+	&.two-dimension.light-color,
+	&.three-dimension.light-color {
+		color: #fff !important;
+		text-shadow: 0 1px rgba(0,
+		0,
+		0,
+		0.4);
+		&:hover, &:hover i {
+			color: #fff !important;
+		}
+	}
+	&.flat-dimension:hover {
+		background-color: #252525;
+	}
+	&.flat-dimension.dark-color {
+		color: #252525 !important;
+		&:hover, &:hover i {
+			color: #fff !important;
+		}
+	}
+	&.flat-dimension.light-color {
+		color: #fff !important;
+		&:hover, &:hover i  {
+			color: #fff !important;
+		}
+	}
+	&.outline-dimension {
+		border-width: 2px !important;
+		border-style: solid !important;
+
+	}
+	&.outline-dimension.outline-btn-light {
+		border-color: #fff !important;
+		color: #fff;
+		&:hover {
+			background-color: #fff;
+			color: #252525;	
+			&:hover i {
+				color: #252525;	
+			}
+		}
+	}
+	&.outline-dimension.outline-btn-dark {
+		border-color: #252525 !important;
+		color: #252525;
+		// .border-radius(0);
+
+		&:hover {
+			background-color: #252525;
+			color: #fff;
+			&:hover i  {
+				color: #fff;	
+			}
+		}
+	}
+
+
+	&.savvy-dimension {
+		border-width: 2px !important;
+		border-style: solid !important;
+		overflow: hidden;
+		
+		span {
+			position: relative;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			.transition(all 0.2s ease-out);
+			// transition: all 0.35s ease;
+			// -wekkit-transition: all 0.35s ease;
+			// -moz-transition: all 0.35s ease;
+			height: 0;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+			-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+			-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+			width: 100%;
+			// opacity: 0;
+		}
+		&:hover {} // workoround for IE < 11 that doesn't support pseudo elements on not declared hover
+		&:hover:after {
+			height: 550%;
+			opacity: 1;
+		}
+
+	}
+	&.savvy-dimension.outline-btn-light {
+		border-color: #fff !important;
+		color: #fff;
+		&:after {
+			background-color: #fff;
+		}
+		
+		&:hover {
+			color: #252525;
+		}
+	}
+	&.savvy-dimension.outline-btn-dark {
+		border-color: #252525 !important;
+		color: #252525;
+		&:after {
+			background-color: #252525;
+		}
+		&:hover {
+			color: #fff;
+		}
+		
+	}
+	&[type=submit],
+	&[type=button] {
+		outline: none;
+		border: none;
+		font-weight: 600;
+	}
+
+/* Animated icon
+   ========================================================================== */
+
+   /* Global animated icon style */
+   &.mk-btn-anim {
+	position: relative;
+   	overflow: hidden;
+   }
+   &.mk-btn-anim.large {
+   	padding: 20px 60px;
+   }
+   &.mk-btn-anim.medium {
+   	padding: 14px 50px;
+   }
+   &.mk-btn-anim.small {
+   	padding: 12px 40px;
+   }
+
+	/* Side animation styles */
+
+
+	&.mk-btn-anim.side i {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left:0;
+		.transition(opacity 0.2s ease-out);
+		.translate(-30px, -50%);
+		opacity: 0;
+
+	}
+	&.mk-btn-anim.side span {
+
+		width: 100%;
+		height: 100%;
+		display: block;
+		.translate(0, 0);
+		transition: transform 0.2s ease-out;
+		-webkit-transition: -webkit-transform 0.2s ease-out;
+		-o-transition: -o-transform 0.2s ease-out;
+		-moz-transition: -moz-transform 0.2s ease-out;
+		.backface-visibility();
+
+	}
+
+	&:hover.large.mk-btn-anim.side span,
+	&:hover.medium.mk-btn-anim.side span,
+	&:hover.small.mk-btn-anim.side span,
+	&:hover.x-large.mk-btn-anim.side span,
+	&:hover.xx-large.mk-btn-anim.side span {
+		.translate(15px, 0);
+
+	}
+
+
+
+	&:hover.large.mk-btn-anim.side i,
+	&:hover.medium.mk-btn-anim.side i,
+	&:hover.small.mk-btn-anim.side i,
+	&:hover.x-large.mk-btn-anim.side i,
+	&:hover.xx-large.mk-btn-anim.side i {
+		opacity: 1;
+
+	}
+
+
+	/* Vertical animation styles */
+
+	&.mk-btn-anim.vertical i {
+		position: absolute;
+		display: block;
+		.translate(-50%, -50%);
+		top:-30px;
+		left:50%;
+
+	}
+	&.x-large.mk-btn-anim.vertical i {
+		top:-35px;
+	}
+	&.xx-large.mk-btn-anim.vertical i {
+		top:-43px;
+	}
+	&.mk-btn-anim.vertical span {
+		width: 100%;
+		height: 100%;
+		display: block;
+		text-align: center;
+		.transition(all 0.2s ease-out);
+		.backface-visibility();
+		.translate(0, 0);
+		
+
+	}
+	&:hover.large.mk-btn-anim.vertical span {
+		.translate(0, 270%);
+	} 
+	&:hover.medium.mk-btn-anim.vertical span {
+		.translate(0, 310%);
+	}
+	&:hover.small.mk-btn-anim.vertical span {
+		.translate(0, 360%);
+	}
+	&:hover.x-large.mk-btn-anim.vertical span {
+		.translate(0, 280%);
+	}
+	&:hover.xx-large.mk-btn-anim.vertical span {
+		.translate(0, 285%);
+	}
+
+/* ==========================================================================
+     End of Animated icon */
+
+	i {
+		margin: -2px 15px 0 0;
+		line-height: 4px !important;
+		font-size: 16px;
+	}
+	&.xx-large {
+		padding: 38px 44px;
+		font-size: 18px;
+		line-height: 100%;
+		letter-spacing: 2px;
+	}
+	&.x-large {
+		padding: 28px 36px;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: 2px;
+	}
+	&.large {
+		padding: 20px 28px;
+		font-size: 14px;
+		line-height: 100%;
+		letter-spacing: 2px;
+	}
+	&.medium {
+		padding: 14px 24px;
+		font-size: 12px;
+		line-height: 100%;
+	}
+	&.small {
+		padding: 12px 18px;
+		font-size: 10px;
+		line-height: 100%;
+		i {
+			margin-top: -3px;
+			font-size: 12px;
+		}
+	}
+
+	&.savvy-dimension, &.outline-dimension {
+		&.xx-large {
+			padding-top: 36px;
+			padding-bottom: 36px;
+		}
+		&.x-large {
+			padding-top: 26px;
+			padding-bottom: 26px;
+		}
+		&.large {
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+		&.medium {
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		&.small {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	&.three-dimension {
+		box-shadow: inset 0px 1px 0px rgba(0,
+		0,
+		0,
+		0.3);
+		&:active {
+			top: 2px;
+		}
+	}
+	&.two-dimension {
+		background-image: -webkit-gradient(linear,
+		left top,
+		left bottom,
+		from(rgba(0,
+		0,
+		0,
+		0.07)),
+		to(rgba(0,
+		0,
+		0,
+		0.15)));
+		background-image: -webkit-linear-gradient(top,
+		rgba(0,
+		0,
+		0,
+		0.07),
+		rgba(0,
+		0,
+		0,
+		0.15));
+		background-image: -moz-linear-gradient(top,
+		rgba(0,
+		0,
+		0,
+		0.07),
+		rgba(0,
+		0,
+		0,
+		0.15));
+		background-image: -ms-linear-gradient(top,
+		rgba(0,
+		0,
+		0,
+		0.07),
+		rgba(0,
+		0,
+		0,
+		0.15));
+		background-image: -o-linear-gradient(top,
+		rgba(0,
+		0,
+		0,
+		0.07),
+		rgba(0,
+		0,
+		0,
+		0.15));
+		box-shadow: inset 0 0 1px rgba(0,
+		0,
+		0,
+		0.8);
+		&:active {
+			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.07)));
+			background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.07));
+			background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.07));
+			background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.07));
+			background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.07));
+		}
+	}
+}
+button.mk-button {
+	outline: none;
+	border: none !important;
+	background: none;
+	line-height: 100%;
+}
+button.mk-button::-moz-focus-inner {
+	border: none;
+}
+.mk-button-align {
+	display: inline-block;
+	&.right {
+		float: right;
+	}
+	&.center {
+		display: block !important;
+		text-align: center;
+		.mk-button{
+			margin-right: 0;
+		}
+	}
+	&.left {
+		text-align: left;
+	}
+	&.fullwidth-button {
+		display: block !important;
+	}
+}
+@media handheld, only screen and (max-width:767px) {
+	.mk-button-align.left,
+	.mk-button-align.center,
+	.mk-button-align.right {
+		width: 100%;
+		text-align: center !important;
+		float: none !important;
+	}
+}
+@media handheld, only screen and (max-width:960px) {
+	.ls-wp-container .mk-button {
+	}
+}
+@media handheld, only screen and (max-width:767px) {
+	.ls-wp-container .mk-button {
+		padding: 8px 10px;
+		font-size: 10px;
+		line-height: 100%;
+		i {
+			margin-top: -3px;
+			font-size: 10px;
+		}
+	}
+}
+@media handheld, only screen and (max-width:550px) {
+	.ls-wp-container .mk-button {
+		padding: 5px 8px;
+		font-size: 8px;
+		line-height: 100%;
+		i {
+			margin-top: -3px;
+			font-size: 10px;
+		}
+	}
+}
+.button,
+.shop-flat-btn,
+.mk-flat-button,
+#review_form_wrapper input[type=submit],
+.woocommerce-product-search input[type=submit] {
+	border: none !important;
+	outline: none !important;
+	color: #fff !important;
+	font-size: 13px;
+	line-height: 13px !important;
+	padding: 12px 15px !important;
+	text-transform: uppercase;
+	// .border-radius(2px);   //removed
+	vertical-align: top;
+	letter-spacing: 1px;
+	display: inline-block;
+	i {
+		color: #fff !important;
+		font-size: 16px;
+		line-height: 16px !important;
+		margin-right: 10px;
+	}
+	&.alt {
+		text-shadow: none !important;
+		&:hover {
+			background-color: #252525 !important;
+		}
+	}
+	&.shop-black-btn {
+		background-color: #252525;
+		&:hover {
+			background-color: #707070;
+		}
+	}
+	&:hover {
+		background-color: #323232 !important;
+	}
+}
+#review_form_wrapper input[type=submit]:hover {
+	background-color: #252525 !important;
+}
+a.shop-flat-btn,
+a.mk-flat-button {
+	font-weight: bold;
+	display: inline-block;
+	&:hover {
+		color: #fff;
+	}
+}
+
+.wp-core-ui .button, 
+.wp-core-ui .button-secondary {
+color: #555 !important;
+border-color: #ccc !important;
+height: 24px !important;
+line-height: 22px !important;
+padding: 0 8px 1px !important;
+font-size: 11px !important;
+border:1px solid #ccc!important;
+background: #f7f7f7!important;
+-webkit-box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08)!important;
+box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08)!important;
+&:hover {
+	background: #eee!important;
+}
+}
+
+
+// IE 9 fix for savvy button hover state 
+.IE9 .mk-button.savvy-dimension:after {
+	top: 0;
+	left: 0; 
+}

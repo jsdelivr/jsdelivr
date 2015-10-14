@@ -1,0 +1,104 @@
+/* Shortcode:LCD Slideshow
+-------------------------------------------------------------------- */
+.mk-lcd-slideshow {
+	margin: 0 auto 160px;
+	width: 100%;
+	text-align: center;
+	@media handheld, only screen and (max-width:767px) {
+		margin-bottom:100px !important;
+	}
+	@media handheld, only screen and (max-width:600px) {
+		margin-bottom:70px !important;
+	}
+	@media handheld, only screen and (max-width:500px) {
+		margin-bottom:50px !important;
+	}
+	@media handheld, only screen and (max-width:321px) {
+		margin-bottom:10px !important;
+	}
+	&:hover {
+		.flex-direction-nav a {
+			.opacity(70);
+		}
+		.flex-prev {
+			left: 60px !important;
+		}
+		.flex-next {
+			right: 60px !important;
+		}
+	}
+	.mk-flex-slides {
+	}
+	.flex-direction-nav a {
+		position: absolute;
+		top: 45%;
+		margin-top: -16px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background-color: rgba(0,
+		0,
+		0,
+		0.4);
+		.mk-jupiter-icon-arrow-left:before,
+		.mk-jupiter-icon-arrow-right:before {
+			line-height: inherit;
+			color: #fff;
+			font-size: 16px;
+			vertical-align: middle;
+		}
+		.border-radius(3px);
+		.opacity(0);
+	}
+	.flex-prev {
+		left: 70px !important;
+	}
+	.flex-next {
+		right: 70px !important;
+	}
+}
+.mk-lcd-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.vc_col-sm-8 .mk-lcd-slideshow {
+	margin: 0 auto 70px;
+	.flex-direction-nav a {
+		margin-top: -48px;
+	}
+}
+.vc_col-sm-6 .mk-lcd-slideshow {
+	margin: 0 auto 50px;
+	.flex-direction-nav a {
+		margin-top: -28px;
+	}
+}
+.vc_col-sm-4 .mk-lcd-slideshow {
+	margin: 0 auto 50px;
+	.flex-direction-nav a {
+		margin-top: -40px;
+	}
+}
+.vc_col-sm-3 .mk-lcd-slideshow {
+	margin: 0 auto 60px;
+	.flex-direction-nav a {
+		margin-top: -28px;
+	}
+}
+.vc_col-sm-2 .mk-lcd-slideshow {
+	margin: 0 auto 40px;
+	.flex-direction-nav a {
+		display: none;
+	}
+}
+.vc_col-sm-6 .vc_col-sm-8 .mk-lcd-slideshow {
+	margin: 0 auto 40px;
+}
+.vc_col-sm-6 .vc_col-sm-4 .mk-lcd-slideshow {
+	margin: 0 auto 40px;
+	.flex-direction-nav a {
+		display: none;
+	}
+}

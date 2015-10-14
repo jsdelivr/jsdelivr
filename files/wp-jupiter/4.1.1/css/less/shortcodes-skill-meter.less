@@ -1,0 +1,51 @@
+/* Skill Meter:Skill meter
+-------------------------------------------------------------------- */
+.mk-skill-meter {
+	margin-bottom: 15px;
+	.mk-skill-meter-title {
+		letter-spacing: 1px;
+		display: block;
+		margin-bottom: 6px;
+		font-weight: bold;
+		line-height: 14px;
+	}
+	.mk-progress-bar {
+		position: relative;
+		display: block;
+		text-align: right;
+
+		.progress-outer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			// background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), to(rgba(0, 0, 0, 0.1)));
+			// background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+			// background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+			// background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+			// background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+		}
+		.progress-inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+		.progress-percent {
+			position: absolute;
+			right: 10px;
+			font-weight: bold;
+			font-size: 12px;
+			letter-spacing: 1px;
+
+		}
+	}
+}
+.progress-outer,
+.progress-inner,
+.mk-progress-bar {
+	// .border-radius(20px);
+}

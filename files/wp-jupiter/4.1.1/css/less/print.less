@@ -1,0 +1,32 @@
+/* Makes the site print friendly... */
+@media print {
+    a {
+        text-decoration: underline;
+    }
+
+    a[href="#"],
+    a[href="javascript:"] {
+        content: "";
+    } 
+    #mk-header,
+    #mk-sidebar,
+    #mk-footer,
+    .news-post-heading,
+    .mk-quick-contact-wrapper,
+    .mk-go-top,
+    .mk-back-top,
+    .mk-loop-next-prev,
+    .single-social-section,
+    .single-post-tags,
+    .single-back-top,
+    .mk-about-author-wrapper,
+    .blog-similar-posts,
+    #comments,
+    .mk-post-nav {
+        display: none !important;
+    }
+    .theme-page-wrapper,
+    .theme-content {
+        width: 100% !important;
+    }
+}

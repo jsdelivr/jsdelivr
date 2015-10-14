@@ -1,0 +1,34 @@
+/* Shortcode:Google Maps
+-------------------------------------------------------------------- */
+.wpb_map_wraper {
+	margin-bottom: 20px;
+	line-height: 4px;
+	&.rounded-frame {
+		overflow: hidden;
+		border: 2px solid rgba(0, 0, 0, 0.06);
+		.border-radius(5px);
+	}
+	&.gray_border-frame {
+		border: 6px solid rgba(0, 0, 0, 0.06);
+	}
+	&.border_shadow-frame {
+		border: 6px solid #fff;
+		.box-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+	}
+	&.shadow_only-frame {
+		.box-shadow(0 0 4px 3px rgba(0, 0, 0, 0.1));
+	}
+}
+
+
+.mk-advanced-gmaps {
+	img {
+		max-width: none !important;
+	}
+}
+.mk-gmaps-parallax {
+	overflow: hidden;
+	> div {
+		margin-top: -100px;
+	}
+}

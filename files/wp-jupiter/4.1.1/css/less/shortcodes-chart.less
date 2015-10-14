@@ -1,0 +1,42 @@
+/* Charts
+-------------------------------------------------------------------- */
+.mk-chart {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	i,
+	.chart-custom-text,
+	.chart-percent {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		color: #444;
+		text-align: center;
+		height: 100%;
+	}
+	.chart-custom-text {
+		font-size: 18px;
+	} 
+	.chart-percent {
+		font-weight: bold;
+		font-size: 16px;
+	}
+}
+.mk-chart-desc {
+	display: block;
+	text-align: center;
+	letter-spacing: 1px;
+	line-height: 1.3em;
+}
+@media handheld, only screen and (max-width:600px) {
+	.mk-chart {
+		margin: 0 auto;
+	}
+}

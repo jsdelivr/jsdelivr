@@ -1,0 +1,123 @@
+.mk-flexsldier-slideshow {
+	background-image: url(../../images/flexslider-bg-gradient.png);
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	display: block;
+	margin: 0 auto;
+	padding: 40px 0 60px;
+	&.flexslider-thumbnail {
+		padding-bottom: 100px;
+	}
+	.mk-flexslider-wrapper {
+		margin: 0 auto;
+		position: relative;
+		.box-shadow(0 0px 20px rgba(0, 0, 0, 0.2));
+	}
+	.flex-viewport,
+	.flex-viewport li {
+	}
+	.mk-flex-caption {
+		padding: 20px;
+		display: block;
+		width: 600px;
+		position: absolute;
+		bottom: 0px;
+		left: 200px;
+		.opacity(0);
+		.flex-title {
+			font-size: 18px;
+			line-height: 42px;
+			display: inline;
+			background-color: #000 !important;
+			box-shadow: 8px 0 0 #000,
+			-8px 0 0 0 #000 !important;
+			padding: 8px 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			span {
+				color: #fff;
+			}
+		} 
+		.flex-desc {
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 28px;
+			display: inline;
+			padding: 8px 0;
+			margin-left: 0;
+			span {
+				color: #000;
+				text-transform: uppercase;
+				padding: 5px 0;
+			}
+		}
+	}
+	.flex-control-nav {
+		display: block;
+		bottom: -40px;
+		li {
+			a{width: 6px;
+				height: 14px;
+				display: block;
+				padding: 0;
+				i {
+					font-size: 12px;
+					color: #fff;
+				}
+				&.flex-active i:before {
+					content: "\f111" !important;
+				}
+			}
+		}
+	}
+	.flex-direction-nav {
+		a{
+			width: 42px;
+			height: 42px;
+			line-height: 42px;
+			top: 50%;
+			margin-top: -20px;
+			background-color: rgba(0,
+			0,
+			0,
+			0.3);
+			.border-radius(2px);
+			text-align: center;
+			opacity: 0;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+			i {
+				font-size: 16px;
+				color: #fff;
+			}
+		}
+	}
+	.flex-direction-nav .flex-next {
+		right:40px;
+	}
+	.flex-direction-nav .flex-prev {
+		left:40px;
+	}
+	&:hover {
+		.flex-direction-nav .flex-next {
+			right: 20px;
+			opacity: 1;
+		}
+		.flex-direction-nav .flex-prev {
+			left: 20px;
+			opacity: 1;
+		}
+	}
+	@media handheld, only screen and (max-width:960px) {
+		.mk-flex-caption {
+			top: 0 !important;
+			padding: 10px !important;
+		}
+	}
+	@media handheld, only screen and (max-width:480px) {
+		.mk-flex-caption {
+			display: none !important;
+		}
+	}
+}

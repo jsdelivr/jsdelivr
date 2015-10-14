@@ -1,0 +1,45 @@
+/* Shortcode:Blockquotes
+-------------------------------------------------------------------- */
+.mk-blockquote {
+	position: relative;
+	margin-bottom: 20px;
+	line-height: 150% !important;
+	p {
+		margin-bottom: 0px;
+	}
+	&.align-left {
+		float: left;
+	}
+	&.align-right {
+		float: right;
+	}
+	&.align-left {
+		float: none;
+		clear: both;
+	}
+	&.quote-style {
+		padding: 20px 20px 20px 70px;
+		background-color: #f6f6f6;
+		background-color: rgba(0,
+		0,
+		0,
+		0.05);
+		&:before { 
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			display: block;
+			color: #dddddd;
+			color: rgba(0, 0, 0, 0.1);
+			content: "\f10d";
+			font-size: 32px;
+		}
+	}
+	&.line-style {
+		padding: 10px 10px 10px 40px;
+		border-left: 2px solid;
+	}
+	@media handheld, only screen and (max-width:760px) {
+		font-size: 14px !important;
+	}
+}

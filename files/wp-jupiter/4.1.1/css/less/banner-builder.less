@@ -1,0 +1,41 @@
+#mk_banner_builder {
+	padding: 0 75px;
+	.flex-viewport {
+		margin: 0 auto !important;
+	}
+	> .flex-direction-nav {
+		a{
+			width: 42px;
+			height: 42px;
+			top: 50%;
+			margin-top: -21px;
+			text-align: center;
+			line-height: 42px;
+			background-color: rgba(0, 0, 0, 0.4);
+			.border-radius(4px);
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+			i {
+				line-height: 42px;
+				font-size: 16px;
+				color: #fff;
+			}
+		}
+		.flex-next {
+			right: 5px;
+		}
+		.flex-prev {
+			left: 5px;
+		}
+	}
+	
+	&:hover {
+		.flex-direction-nav .flex-next {
+			right: 20px;
+		}
+		.flex-direction-nav .flex-prev {
+			left: 20px;
+		}
+	}
+}

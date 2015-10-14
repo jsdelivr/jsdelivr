@@ -1,0 +1,149 @@
+/* Shortcode:Contact Form 7
+-------------------------------------------------------------------- */
+.wpcf7-form {
+	p{margin-bottom: 10px !important;
+	}
+	.wpcf7-text, .wpcf7-textarea {
+		-webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+	.wpcf7-textarea {
+		width:80%;
+	}
+
+	@media handheld, only screen and (max-width:767px) {
+
+		.wpcf7-text, .wpcf7-email,.wpcf7-textarea {
+			width: 100%;
+		}
+
+	}
+}
+div.wpcf7-response-output {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 15px 15px 15px 65px;
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	.border-radius(4px);
+}
+div.wpcf7-mail-sent-ok {
+	border: 2px solid #72dd9d;
+	background-color: #b8f4d0;
+	background-image: url(../../images/box-confirm-icon.png);
+}
+div.wpcf7-mail-sent-ng {
+	border: 2px solid #afe0ee;
+	background-color: #d1eff8;
+	background-image: url(../../images/box-info-icon.png);
+}
+div.wpcf7-spam-blocked {
+	border: 2px solid #fd8585;
+	background-color: #fac6bf;
+	background-image: url(../../images/box-error-icon.png);
+}
+div.wpcf7-validation-errors {
+	border: 2px solid #e0c069;
+	background-color: #fbf1c8;
+	background-image: url(../../images/box-warning-icon.png);
+}
+span.wpcf7-form-control-wrap {
+	position: relative;
+}
+span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: 7px;
+	right: 14px;
+	color: #f00;
+	font-size: 12px;
+}
+span.wpcf7-not-valid-tip-no-ajax {
+	display: block;
+	color: #f00;
+	font-size: 12px;
+}
+span.wpcf7-list-item {
+	margin-left: 0.5em;
+}
+.wpcf7-display-none {
+	display: none;
+}
+div.wpcf7 img.ajax-loader {
+	margin-bottom: 15px;
+	margin-left: 4px;
+	border: none;
+	vertical-align: middle;
+}
+div.wpcf7 .placeheld {
+	color: #888;
+}
+div.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+div.wpcf7-mail-sent-ok {
+	border: 2px solid #398f14;
+}
+
+div.wpcf7-mail-sent-ng {
+	border: 2px solid #ff0000;
+}
+
+div.wpcf7-spam-blocked {
+	border: 2px solid #ffa500;
+}
+
+div.wpcf7-validation-errors {
+	border: 2px solid #f7e700;
+}
+
+
+.wpcf7-submit {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	padding: 13px 35px;
+	letter-spacing: 1px;
+	outline: none;
+	color: #252525;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 100%;
+	cursor: pointer;
+	zoom: 1;
+	border:1px solid #252525;
+	background-color: transparent;
+	.border-radius(2px);
+	-webkit-transition: color .2s ease-in-out,
+	background .2s ease-in-out,
+	border .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out,
+	background .2s ease-in-out,
+	border .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out,
+	background .2s ease-in-out,
+	border .2s ease-in-out;
+	-o-transition: color .2s ease-in-out,
+	background .2s ease-in-out,
+	border .2s ease-in-out;
+	transition: color .2s ease-in-out,
+	background .2s ease-in-out,
+	border .2s ease-in-out;
+	&:hover {
+		background-color: #252525;
+		color: #fff;
+	}
+}

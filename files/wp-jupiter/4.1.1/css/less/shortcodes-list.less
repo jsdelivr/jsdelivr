@@ -1,0 +1,28 @@
+/* Shortcode:List Styles
+-------------------------------------------------------------------- */
+.mk-list-styles {
+	&.align-left {
+		float: left;
+	}
+	&.align-right {
+		float: right;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			position: relative;
+			margin: 0 0 6px 0;
+			padding: 0 0 0 21px;
+			line-height: 24px !important;
+			&:before {
+				position: absolute;
+				top: 2px;
+				left: 0;
+				font-size: 16px;
+				line-height: 24px !important;
+			}
+		}
+	}
+}
