@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "foundation-sites",
+  "repo": "zurb/foundation",
+  "files": {
+    "include": ["./css/foundation.min.css", "./css/foundation.css", "./css/normalize.css", "./js/foundation.min.js", "./js/foundation/*", "./js/vendor/*"]
+  }
+}
