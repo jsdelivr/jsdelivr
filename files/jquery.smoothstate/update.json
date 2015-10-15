@@ -3,6 +3,6 @@
   "name": "smoothstate",
   "repo": "miguel-perez/smoothState.js",
   "files": {
-    "include": ["jquery.smoothState.min.js", "src/jquery.smoothState.js"]
+    "include": ["jquery.smoothState.min.js"]
   }
 }
