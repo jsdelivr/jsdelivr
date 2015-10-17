@@ -4,6 +4,6 @@
 	"repo": "keicheng/kule.lazy",
 	"files": {
 		"basePath": "css/",
-		"include": ["**/*"]
+		"include": "**/*"
 	}
 }
