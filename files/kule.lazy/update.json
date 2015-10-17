@@ -3,7 +3,7 @@
 	"name": "kule.lazy",
 	"repo": "keicheng/kule.lazy",
 	"files": {
-		"basePath": "css/",
-		"include": "**/*"
+		"basePath": "/",
+		"exclude": ["css/**/*"]
 	}
 }
