@@ -1,7 +1,6 @@
 {
-  "packageManager": "github",
+  "packageManager": "bower",
   "name": "animate.css",
-  "repo": "daneden/animate.css",
   "files": {
     "include": ["animate.css", "animate.min.css"]
   }
