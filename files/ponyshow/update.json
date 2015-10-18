@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ponyshow-web-client",
+  "repo": "ponyshow/web-client",
+  "files": {
+    "basePath": "dist",
+    "include": ["js/main.js","css/main.css"]
+  }
+}
