@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "somajs",
+  "repo": "somajs/somajs",
+  "files": {
+    "basePath": "build/",
+    "include": ["*.js", "*.ts"]
+  }
+}
