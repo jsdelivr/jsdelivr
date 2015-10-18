@@ -1,0 +1,10 @@
+/*
+Moblify Print by Andrew Rodebaugh
+Add this code to the end of Moblify.css
+or
+After importing Moblify.css
+Moblify Print Hosting:
+http://cosmicsearch.org/Moblify/Moblify-Print/MoblifyPrint.css
+*/
+
+@media print{*{float:none;width:auto}body{font-family:"Times New Roman",Times,serif;font-size:12pt;background:#fff;color:#000;margin:0}a:link,a:visited{color:#520;background:0 0;font-weight:700;text-decoration:underline}#hide{display:none}h1,h2,h3,h4,h5,h6{page-break-after:avoid;page-break-inside:avoid}img{page-break-inside:avoid;page-break-after:avoid}blockquote,pre,table{page-break-inside:avoid}dl,ol,ul{page-break-before:avoid}}
