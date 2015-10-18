@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "jsrsasign",
+  "repo": "kjur/jsrsasign",
+  "files": {
+    "basePath": "lib/",
+    "include": ["jsrsasign.js"]
+  }
+}
