@@ -4,6 +4,6 @@
   "repo": "labsvisual/pigeon-js",
   "files": {
     "basePath": "dist/",
-    "include": "pigeon.min.js"
+    "include": [ "pigeon.min.js" ]
   }
 }
