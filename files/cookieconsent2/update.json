@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cookieconsent2",
+  "repo": "silktide/cookieconsent2",
+  "files": {
+    "basePath": "build/"
+  }
+}
