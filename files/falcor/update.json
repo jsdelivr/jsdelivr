@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "falcor",
+  "repo": "Netflix/falcor",
+  "files": {
+	"basePath": "dist/",
+	"include": ["*.min.*"]
+  }
+}
