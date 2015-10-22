@@ -3,6 +3,13 @@
   "name": "mermaid",
   "repo": "knsv/mermaid",
   "files": {
-    "include": ["dist/mermaid.min.js", "dist/mermaid.css", "dist/mermaidAPI.min.js"]
+    "include": [
+      "dist/mermaid.min.js",
+      "dist/mermaid.css",
+      "dist/mermaidAPI.min.js",
+      "dist/mermaid.forest.css",
+      "dist/mermaid.slim.min.js",
+      "dist/mermaidAPI.slim.min.js"
+    ]
   }
 }
