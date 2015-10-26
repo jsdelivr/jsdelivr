@@ -2,6 +2,6 @@
   "packageManager": "bower",
   "name": "appstax",
   "files": {
-    "include": ["appstax.js", "appstax.min.js"]
+    "include": ["appstax.min.js"]
   }
 }
