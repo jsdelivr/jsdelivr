@@ -3,9 +3,10 @@
   "name": "gmaps.js",
   "repo": "hpneo/gmaps",
   "files": {
+    "basePath": "/",
     "include": [
-      "./gmaps.min.js",
-      "./gmaps.js"
+      "gmaps.min.js",
+      "gmaps.js"
     ]
   }
 }
