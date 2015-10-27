@@ -6,7 +6,6 @@
         "basePath": "dist/",
         "include": [
             "ag-grid.css",
-            "ag-grid.d.ts",
             "ag-grid.js",
             "ag-grid.min.css",
             "ag-grid.min.js",
