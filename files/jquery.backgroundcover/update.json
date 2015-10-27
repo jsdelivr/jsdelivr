@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.backgroundcover",
+  "repo": "iwyg/jquery.backgroundcover",
+  "files": {
+    "basePath": "src/"
+  }
+}
