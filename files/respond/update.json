@@ -9,9 +9,9 @@
       "respond.src.js",
       "respond.matchmedia.addListener.min.js",
       "respond.matchmedia.addListener.src.js",
-      "./cross-domain/respond-proxy.html",
-      "./cross-domain/respond.proxy.gif",
-      "./cross-domain/respond.proxy.js"
+      "../cross-domain/respond-proxy.html",
+      "../cross-domain/respond.proxy.gif",
+      "../cross-domain/respond.proxy.js"
     ]
   }
 }
