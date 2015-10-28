@@ -3,6 +3,6 @@
   "name": "Less.js",
   "repo": "less/less.js",
   "files": {
-    "basePath": "dist/",
+    "basePath": "dist/"
   }
 }
