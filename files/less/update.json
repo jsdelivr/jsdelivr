@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Less.js",
+  "repo": "less/less.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
