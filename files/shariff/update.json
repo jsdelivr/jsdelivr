@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "shariff",
+  "repo": "heiseonline/shariff",
+  "files": {
+    "basePath": "build/"
+  }
+}
