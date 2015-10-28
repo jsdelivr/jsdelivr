@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "fullPage.js",
+  "repo": "alvarotrigo/fullPage.js",
+  "files": {
+    "include": [
+      "./jquery.fullpage.min.js",
+      "./jquery.fullpage.css",
+      "./vendors/*.min.js"
+    ]
+  }
+}
