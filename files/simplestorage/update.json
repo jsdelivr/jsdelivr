@@ -3,6 +3,6 @@
   "name": "simpleStorage",
   "repo": "andris9/simpleStorage",
   "files": {
-    "include": ["simpleStorage.js"]
+    "include": ["simpleStorage.min.js"]
   }
 }
