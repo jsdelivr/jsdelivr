@@ -7,7 +7,7 @@
     "include": [
       "jquery.fullpage.min.js",
       "jquery.fullpage.min.css",
-      "../vendors/*"
+      "../vendors/*.min.js"
     ]
   }
 }
