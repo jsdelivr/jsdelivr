@@ -5,7 +5,7 @@
   "files": {
     "basePath": "release/",
     "include": [
-      "*.js"
+      "*.min.js"
     ]
   }
 }
