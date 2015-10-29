@@ -3,6 +3,6 @@
   "name": "web-animations",
   "repo": "web-animations/web-animations-js",
   "files": {
-    "include": ["*.min.js"]
+    "include": ["*.min.js", "*.min.js.map"]
   }
 }
