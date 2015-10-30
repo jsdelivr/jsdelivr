@@ -1,0 +1,75 @@
+{
+    "lang": "sv", 
+    "date": {
+        "month_abbr": [
+            "jan", 
+            "febr", 
+            "mars", 
+            "april", 
+            "maj", 
+            "juni", 
+            "juli", 
+            "aug", 
+            "sept", 
+            "okt", 
+            "nov", 
+            "dec"
+        ], 
+        "day_abbr": [
+            "sön", 
+            "mån", 
+            "tis", 
+            "ons", 
+            "tors", 
+            "fre", 
+            "lör"
+        ], 
+        "day": [
+            "söndag", 
+            "måndag", 
+            "tisdag", 
+            "onsdag", 
+            "torsdag", 
+            "fredag", 
+            "lördag"
+        ], 
+        "month": [
+            "januari", 
+            "februari", 
+            "mars", 
+            "april", 
+            "maj", 
+            "juni", 
+            "juli", 
+            "augusti", 
+            "september", 
+            "oktober", 
+            "november", 
+            "december"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "sv"
+    }, 
+    "messages": {
+        "loading": "Laddar", 
+        "contract_timeline": "Förminska tidslinje", 
+        "return_to_title": "Tillbaka till start", 
+        "wikipedia": "Från Wikipedia, den fria encyklopedin", 
+        "loading_content": "Laddar innehåll", 
+        "expand_timeline": "Förstora tidslinje", 
+        "loading_timeline": "Laddar tidslinje... "
+    }, 
+    "dateformats": {
+        "full_long": "d mmm',' yyyy 'vid' H:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "H:MM'<br/><small>'d mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "H:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "H:MM'<br/><small>d mmm',' yyyy'</small>'"
+    }
+}
