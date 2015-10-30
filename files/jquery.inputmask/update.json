@@ -3,7 +3,6 @@
   "name": "jquery.inputmask",
   "repo": "RobinHerbots/jquery.inputmask",
   "files": {
-    "basePath": "dist/min/inputmask/",
-    "include": ["jquery.inputmask.min.js"]
+    "basePath": "dist/min/inputmask/"
   }
 }
