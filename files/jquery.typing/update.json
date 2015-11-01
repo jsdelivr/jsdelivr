@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-typing",
+  "repo": "narfdotpl/jquery-typing",
+  "files": {
+    "basePath": "plugin/",
+    "include": ["*.min.js"]
+  }
+}
