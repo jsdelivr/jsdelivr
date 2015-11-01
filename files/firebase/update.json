@@ -3,6 +3,6 @@
   "name": "firebase-bower",
   "repo": "firebase/firebase-bower",
   "files": {
-    "include": ["firebase.js"],
+    "include": ["firebase.js"]
   }
 }
