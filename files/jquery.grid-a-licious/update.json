@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Grid-A-Licious",
+  "repo": "suprb/Grid-A-Licious",
+  "files": {
+    "include": ["jquery.grid-a-licious.min.js"],
+  }
+}
