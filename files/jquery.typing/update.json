@@ -4,6 +4,6 @@
   "repo": "narfdotpl/jquery-typing",
   "files": {
     "basePath": "plugin/",
-    "include": ["*.min.js"],
+    "include": ["*.min.js"]
   }
 }
