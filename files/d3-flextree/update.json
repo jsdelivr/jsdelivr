@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "d3-flextree",
+  "repo": "Klortho/d3-flextree",
+  "files": {
+    "include": ["dist/d3-flextree.js", "dist/d3-flextree.min.js"]
+  }
+}
