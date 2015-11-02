@@ -3,6 +3,6 @@
   "name": "babel-core",
   "repo": "babel-core",
   "files": {
-    "include": ["browser.js", "browser-polyfill.js"]
+    "include": ["browser.js", "browser.min.js"]
   }
 }
