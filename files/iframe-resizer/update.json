@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "iframe-resizer",
+  "repo": "davidjbradshaw/iframe-resizer",
+  "files": {
+    "basePath": "js",
+    "include": ["*.min.*", "*.map"]
+  }
+}
