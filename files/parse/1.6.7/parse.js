@@ -1,4441 +1,9768 @@
 /**
  * Parse JavaScript SDK v1.6.7
  *
+ * The source tree of this library can be found at
+ *   https://github.com/ParsePlatform/Parse-SDK-JS
+ */
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Parse = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+/**
  * Copyright (c) 2015-present, Parse, LLC.
  * All rights reserved.
  *
- * The source tree of this library can be found at
- *   https://github.com/ParsePlatform/Parse-SDK-JS
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+/**
+ * Parse.Analytics provides an interface to Parse's logging and analytics
+ * backend.
+ *
+ * @class Parse.Analytics
+ * @static
+ */
+
+/**
+ * Tracks the occurrence of a custom event with additional dimensions.
+ * Parse will store a data point at the time of invocation with the given
+ * event name.
+ *
+ * Dimensions will allow segmentation of the occurrences of this custom
+ * event. Keys and values should be {@code String}s, and will throw
+ * otherwise.
+ *
+ * To track a user signup along with additional metadata, consider the
+ * following:
+ * <pre>
+ * var dimensions = {
+ *  gender: 'm',
+ *  source: 'web',
+ *  dayType: 'weekend'
+ * };
+ * Parse.Analytics.track('signup', dimensions);
+ * </pre>
+ *
+ * There is a default limit of 8 dimensions per event tracked.
+ *
+ * @method track
+ * @param {String} name The name of the custom event to report to Parse as
+ * having happened.
+ * @param {Object} dimensions The dictionary of information by which to
+ * segment this event.
+ * @param {Object} options A Backbone-style callback object.
+ * @return {Parse.Promise} A promise that is resolved when the round-trip
+ * to the server completes.
+ */
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.track = track;
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+function track(name, dimensions, options) {
+  name = name || '';
+  name = name.replace(/^\s*/, '');
+  name = name.replace(/\s*$/, '');
+  if (name.length === 0) {
+    throw new TypeError('A name for the custom event must be provided');
+  }
+
+  for (var key in dimensions) {
+    if (typeof key !== 'string' || typeof dimensions[key] !== 'string') {
+      throw new TypeError('track() dimensions expects keys and values of type "string".');
+    }
+  }
+
+  options = options || {};
+  return _CoreManager2['default'].getAnalyticsController().track(name, dimensions)._thenRunCallbacks(options);
+}
+
+_CoreManager2['default'].setAnalyticsController({
+  track: function track(name, dimensions) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    return RESTController.request('POST', 'events/' + name, { dimensions: dimensions });
+  }
+});
+},{"./CoreManager":3,"babel-runtime/helpers/interop-require-default":47}],2:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.run = run;
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _decode = _dereq_('./decode');
+
+var _decode2 = _interopRequireDefault(_decode);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+/**
+ * Contains functions for calling and declaring
+ * <a href="/docs/cloud_code_guide#functions">cloud functions</a>.
+ * <p><strong><em>
+ *   Some functions are only available from Cloud Code.
+ * </em></strong></p>
+ *
+ * @class Parse.Cloud
+ * @static
+ */
+
+/**
+ * Makes a call to a cloud function.
+ * @method run
+ * @param {String} name The function name.
+ * @param {Object} data The parameters to send to the cloud function.
+ * @param {Object} options A Backbone-style options object
+ * options.success, if set, should be a function to handle a successful
+ * call to a cloud function.  options.error should be a function that
+ * handles an error running the cloud function.  Both functions are
+ * optional.  Both functions take a single argument.
+ * @return {Parse.Promise} A promise that will be resolved with the result
+ * of the function.
+ */
+
+function run(name, data, options) {
+  options = options || {};
+
+  if (typeof name !== 'string' || name.length === 0) {
+    throw new TypeError('Cloud function name must be a string.');
+  }
+
+  return _CoreManager2['default'].getCloudController().run(name, data, {
+    useMasterKey: options.useMasterKey
+  })._thenRunCallbacks(options);
+}
+
+_CoreManager2['default'].setCloudController({
+  run: function run(name, data, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+
+    var payload = (0, _encode2['default'])(data, true);
+
+    var request = RESTController.request('POST', 'functions/' + name, payload, { useMasterKey: !!options.useMasterKey });
+
+    return request.then(function (res) {
+      var decoded = (0, _decode2['default'])(res);
+      if (decoded && decoded.hasOwnProperty('result')) {
+        return _ParsePromise2['default'].as(decoded.result);
+      }
+      return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].INVALID_JSON, 'The server returned an invalid response.'));
+    })._thenRunCallbacks(options);
+  }
+});
+},{"./CoreManager":3,"./ParseError":10,"./ParsePromise":16,"./decode":29,"./encode":30,"babel-runtime/helpers/interop-require-default":47}],3:[function(_dereq_,module,exports){
+(function (process){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var config = {
+  // Defaults
+  IS_NODE: typeof process !== 'undefined' && !!process.versions && !!process.versions.node,
+  REQUEST_ATTEMPT_LIMIT: 5,
+  SERVER_URL: 'https://api.parse.com',
+  VERSION: '1.6.7',
+  APPLICATION_ID: null,
+  JAVASCRIPT_KEY: null,
+  MASTER_KEY: null,
+  USE_MASTER_KEY: false,
+  PERFORM_USER_REWRITE: true,
+  FORCE_REVOCABLE_SESSION: false
+};
+
+module.exports = {
+  get: function get(key) {
+    if (config.hasOwnProperty(key)) {
+      return config[key];
+    }
+    throw new Error('Configuration key not found: ' + key);
+  },
+
+  set: function set(key, value) {
+    config[key] = value;
+  },
+
+  /* Specialized Controller Setters/Getters */
+
+  setAnalyticsController: function setAnalyticsController(controller) {
+    if (typeof controller.track !== 'function') {
+      throw new Error('AnalyticsController must implement track()');
+    }
+    config['AnalyticsController'] = controller;
+  },
+
+  getAnalyticsController: function getAnalyticsController() {
+    return config['AnalyticsController'];
+  },
+
+  setCloudController: function setCloudController(controller) {
+    if (typeof controller.run !== 'function') {
+      throw new Error('CloudController must implement run()');
+    }
+    config['CloudController'] = controller;
+  },
+
+  getCloudController: function getCloudController() {
+    return config['CloudController'];
+  },
+
+  setConfigController: function setConfigController(controller) {
+    if (typeof controller.current !== 'function') {
+      throw new Error('ConfigController must implement current()');
+    }
+    if (typeof controller.get !== 'function') {
+      throw new Error('ConfigController must implement get()');
+    }
+    config['ConfigController'] = controller;
+  },
+
+  getConfigController: function getConfigController() {
+    return config['ConfigController'];
+  },
+
+  setFileController: function setFileController(controller) {
+    if (typeof controller.saveFile !== 'function') {
+      throw new Error('FileController must implement saveFile()');
+    }
+    if (typeof controller.saveBase64 !== 'function') {
+      throw new Error('FileController must implement saveBase64()');
+    }
+    config['FileController'] = controller;
+  },
+
+  getFileController: function getFileController() {
+    return config['FileController'];
+  },
+
+  setInstallationController: function setInstallationController(controller) {
+    if (typeof controller.currentInstallationId !== 'function') {
+      throw new Error('InstallationController must implement currentInstallationId()');
+    }
+    config['InstallationController'] = controller;
+  },
+
+  getInstallationController: function getInstallationController() {
+    return config['InstallationController'];
+  },
+
+  setPushController: function setPushController(controller) {
+    if (typeof controller.send !== 'function') {
+      throw new Error('PushController must implement send()');
+    }
+    config['PushController'] = controller;
+  },
+
+  getPushController: function getPushController() {
+    return config['PushController'];
+  },
+
+  setObjectController: function setObjectController(controller) {
+    if (typeof controller.save !== 'function') {
+      throw new Error('ObjectController must implement save()');
+    }
+    if (typeof controller.fetch !== 'function') {
+      throw new Error('ObjectController must implement fetch()');
+    }
+    if (typeof controller.destroy !== 'function') {
+      throw new Error('ObjectController must implement destroy()');
+    }
+    config['ObjectController'] = controller;
+  },
+
+  getObjectController: function getObjectController() {
+    return config['ObjectController'];
+  },
+
+  setQueryController: function setQueryController(controller) {
+    if (typeof controller.find !== 'function') {
+      throw new Error('QueryController must implement find()');
+    }
+    config['QueryController'] = controller;
+  },
+
+  getQueryController: function getQueryController() {
+    return config['QueryController'];
+  },
+
+  setRESTController: function setRESTController(controller) {
+    if (typeof controller.request !== 'function') {
+      throw new Error('RESTController must implement request()');
+    }
+    if (typeof controller.ajax !== 'function') {
+      throw new Error('RESTController must implement ajax()');
+    }
+    config['RESTController'] = controller;
+  },
+
+  getRESTController: function getRESTController() {
+    return config['RESTController'];
+  },
+
+  setSessionController: function setSessionController(controller) {
+    if (typeof controller.getSession !== 'function') {
+      throw new Error('A SessionController must implement getSession()');
+    }
+    config['SessionController'] = controller;
+  },
+
+  getSessionController: function getSessionController() {
+    return config['SessionController'];
+  },
+
+  setStorageController: function setStorageController(controller) {
+    if (controller.async) {
+      if (typeof controller.getItemAsync !== 'function') {
+        throw new Error('An async StorageController must implement getItemAsync()');
+      }
+      if (typeof controller.setItemAsync !== 'function') {
+        throw new Error('An async StorageController must implement setItemAsync()');
+      }
+      if (typeof controller.removeItemAsync !== 'function') {
+        throw new Error('An async StorageController must implement removeItemAsync()');
+      }
+    } else {
+      if (typeof controller.getItem !== 'function') {
+        throw new Error('A synchronous StorageController must implement getItem()');
+      }
+      if (typeof controller.setItem !== 'function') {
+        throw new Error('A synchronous StorageController must implement setItem()');
+      }
+      if (typeof controller.removeItem !== 'function') {
+        throw new Error('A synchonous StorageController must implement removeItem()');
+      }
+    }
+    config['StorageController'] = controller;
+  },
+
+  getStorageController: function getStorageController() {
+    return config['StorageController'];
+  },
+
+  setUserController: function setUserController(controller) {
+    if (typeof controller.setCurrentUser !== 'function') {
+      throw new Error('A UserController must implement setCurrentUser()');
+    }
+    if (typeof controller.currentUser !== 'function') {
+      throw new Error('A UserController must implement currentUser()');
+    }
+    if (typeof controller.currentUserAsync !== 'function') {
+      throw new Error('A UserController must implement currentUserAsync()');
+    }
+    if (typeof controller.signUp !== 'function') {
+      throw new Error('A UserController must implement signUp()');
+    }
+    if (typeof controller.logIn !== 'function') {
+      throw new Error('A UserController must implement logIn()');
+    }
+    if (typeof controller.become !== 'function') {
+      throw new Error('A UserController must implement become()');
+    }
+    if (typeof controller.logOut !== 'function') {
+      throw new Error('A UserController must implement logOut()');
+    }
+    if (typeof controller.requestPasswordReset !== 'function') {
+      throw new Error('A UserController must implement requestPasswordReset()');
+    }
+    if (typeof controller.upgradeToRevocableSession !== 'function') {
+      throw new Error('A UserController must implement upgradeToRevocableSession()');
+    }
+    if (typeof controller.linkWith !== 'function') {
+      throw new Error('A UserController must implement linkWith()');
+    }
+    config['UserController'] = controller;
+  },
+
+  getUserController: function getUserController() {
+    return config['UserController'];
+  }
+};
+}).call(this,_dereq_('_process'))
+},{"_process":49}],4:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * -weak
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _parseDate = _dereq_('./parseDate');
+
+var _parseDate2 = _interopRequireDefault(_parseDate);
+
+var _ParseUser = _dereq_('./ParseUser');
+
+var _ParseUser2 = _interopRequireDefault(_ParseUser);
+
+var initialized = false;
+var requestedPermissions;
+var initOptions;
+
+/**
+ * Provides a set of utilities for using Parse with Facebook.
+ * @class Parse.FacebookUtils
+ * @static
+ */
+exports['default'] = {
+  /**
+   * Initializes Parse Facebook integration.  Call this function after you
+   * have loaded the Facebook Javascript SDK with the same parameters
+   * as you would pass to<code>
+   * <a href=
+   * "https://developers.facebook.com/docs/reference/javascript/FB.init/">
+   * FB.init()</a></code>.  Parse.FacebookUtils will invoke FB.init() for you
+   * with these arguments.
+   *
+   * @method init
+   * @param {Object} options Facebook options argument as described here:
+   *   <a href=
+   *   "https://developers.facebook.com/docs/reference/javascript/FB.init/">
+   *   FB.init()</a>. The status flag will be coerced to 'false' because it
+   *   interferes with Parse Facebook integration. Call FB.getLoginStatus()
+   *   explicitly if this behavior is required by your application.
+   */
+  init: function init(options) {
+    if (typeof FB === 'undefined') {
+      throw new Error('The Facebook JavaScript SDK must be loaded before calling init.');
+    }
+    initOptions = {};
+    if (options) {
+      for (var key in options) {
+        initOptions[key] = options[key];
+      }
+    }
+    if (initOptions.status && typeof console !== 'undefined') {
+      var warn = console.warn || console.log || function () {};
+      warn.call(console, 'The "status" flag passed into' + ' FB.init, when set to true, can interfere with Parse Facebook' + ' integration, so it has been suppressed. Please call' + ' FB.getLoginStatus() explicitly if you require this behavior.');
+    }
+    initOptions.status = false;
+    FB.init(initOptions);
+    _ParseUser2['default']._registerAuthenticationProvider({
+      authenticate: function authenticate(options) {
+        var _this = this;
+
+        if (typeof FB === 'undefined') {
+          options.error(this, 'Facebook SDK not found.');
+        }
+        FB.login(function (response) {
+          if (response.authResponse) {
+            if (options.success) {
+              options.success(_this, {
+                id: response.authResponse.userID,
+                access_token: response.authResponse.accessToken,
+                expiration_date: new Date(response.authResponse.expiresIn * 1000 + new Date().getTime()).toJSON()
+              });
+            }
+          } else {
+            if (options.error) {
+              options.error(_this, response);
+            }
+          }
+        }, {
+          scope: requestedPermissions
+        });
+      },
+
+      restoreAuthentication: function restoreAuthentication(authData) {
+        if (authData) {
+          var expiration = (0, _parseDate2['default'])(authData.expiration_date);
+          var expiresIn = expiration ? (expiration.getTime() - new Date().getTime()) / 1000 : 0;
+
+          var authResponse = {
+            userID: authData.id,
+            accessToken: authData.access_token,
+            expiresIn: expiresIn
+          };
+          var newOptions = {};
+          if (initOptions) {
+            for (var key in initOptions) {
+              newOptions[key] = initOptions[key];
+            }
+          }
+          newOptions.authResponse = authResponse;
+
+          // Suppress checks for login status from the browser.
+          newOptions.status = false;
+
+          // If the user doesn't match the one known by the FB SDK, log out.
+          // Most of the time, the users will match -- it's only in cases where
+          // the FB SDK knows of a different user than the one being restored
+          // from a Parse User that logged in with username/password.
+          var existingResponse = FB.getAuthResponse();
+          if (existingResponse && existingResponse.userID !== authResponse.userID) {
+            FB.logout();
+          }
+
+          FB.init(newOptions);
+        }
+        return true;
+      },
+
+      getAuthType: function getAuthType() {
+        return 'facebook';
+      },
+
+      deauthenticate: function deauthenticate() {
+        this.restoreAuthentication(null);
+      }
+    });
+    initialized = true;
+  },
+
+  /**
+   * Gets whether the user has their account linked to Facebook.
+   *
+   * @method isLinked
+   * @param {Parse.User} user User to check for a facebook link.
+   *     The user must be logged in on this device.
+   * @return {Boolean} <code>true</code> if the user has their account
+   *     linked to Facebook.
+   */
+  isLinked: function isLinked(user) {
+    return user._isLinked('facebook');
+  },
+
+  /**
+   * Logs in a user using Facebook. This method delegates to the Facebook
+   * SDK to authenticate the user, and then automatically logs in (or
+   * creates, in the case where it is a new user) a Parse.User.
+   *
+   * @method logIn
+   * @param {String, Object} permissions The permissions required for Facebook
+   *    log in.  This is a comma-separated string of permissions.
+   *    Alternatively, supply a Facebook authData object as described in our
+   *    REST API docs if you want to handle getting facebook auth tokens
+   *    yourself.
+   * @param {Object} options Standard options object with success and error
+   *    callbacks.
+   */
+  logIn: function logIn(permissions, options) {
+    if (!permissions || typeof permissions === 'string') {
+      if (!initialized) {
+        throw new Error('You must initialize FacebookUtils before calling logIn.');
+      }
+      requestedPermissions = permissions;
+      return _ParseUser2['default']._logInWith('facebook', options);
+    } else {
+      var newOptions = {};
+      if (options) {
+        for (var key in options) {
+          newOptions[key] = options[key];
+        }
+      }
+      newOptions.authData = permissions;
+      return _ParseUser2['default']._logInWith('facebook', newOptions);
+    }
+  },
+
+  /**
+   * Links Facebook to an existing PFUser. This method delegates to the
+   * Facebook SDK to authenticate the user, and then automatically links
+   * the account to the Parse.User.
+   *
+   * @method link
+   * @param {Parse.User} user User to link to Facebook. This must be the
+   *     current user.
+   * @param {String, Object} permissions The permissions required for Facebook
+   *    log in.  This is a comma-separated string of permissions.
+   *    Alternatively, supply a Facebook authData object as described in our
+   *    REST API docs if you want to handle getting facebook auth tokens
+   *    yourself.
+   * @param {Object} options Standard options object with success and error
+   *    callbacks.
+   */
+  link: function link(user, permissions, options) {
+    if (!permissions || typeof permissions === 'string') {
+      if (!initialized) {
+        throw new Error('You must initialize FacebookUtils before calling link.');
+      }
+      requestedPermissions = permissions;
+      return user._linkWith('facebook', options);
+    } else {
+      var newOptions = {};
+      if (options) {
+        for (var key in options) {
+          newOptions[key] = options[key];
+        }
+      }
+      newOptions.authData = permissions;
+      return user._linkWith('facebook', newOptions);
+    }
+  },
+
+  /**
+   * Unlinks the Parse.User from a Facebook account.
+   *
+   * @method unlink
+   * @param {Parse.User} user User to unlink from Facebook. This must be the
+   *     current user.
+   * @param {Object} options Standard options object with success and error
+   *    callbacks.
+   */
+  unlink: function unlink(user, options) {
+    if (!initialized) {
+      throw new Error('You must initialize FacebookUtils before calling unlink.');
+    }
+    return user._unlinkFrom('facebook', options);
+  }
+};
+module.exports = exports['default'];
+},{"./ParseUser":21,"./parseDate":34,"babel-runtime/helpers/interop-require-default":47}],5:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _Storage = _dereq_('./Storage');
+
+var _Storage2 = _interopRequireDefault(_Storage);
+
+var iidCache = null;
+
+function hexOctet() {
+  return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+};
+
+function generateId() {
+  return hexOctet() + hexOctet() + '-' + hexOctet() + '-' + hexOctet() + '-' + hexOctet() + '-' + hexOctet() + hexOctet() + hexOctet();
+}
+
+module.exports = {
+  currentInstallationId: function currentInstallationId() {
+    if (typeof iidCache === 'string') {
+      return _ParsePromise2['default'].as(iidCache);
+    }
+    var path = _Storage2['default'].generatePath('installationId');
+    return _Storage2['default'].getItemAsync(path).then(function (iid) {
+      if (!iid) {
+        iid = generateId();
+        return _Storage2['default'].setItemAsync(path, iid).then(function () {
+          iidCache = iid;
+          return iid;
+        });
+      }
+      iidCache = iid;
+      return iid;
+    });
+  },
+
+  _clearCache: function _clearCache() {
+    iidCache = null;
+  },
+
+  _setInstallationIdCache: function _setInstallationIdCache(iid) {
+    iidCache = iid;
+  }
+};
+},{"./CoreManager":3,"./ParsePromise":16,"./Storage":24,"babel-runtime/helpers/interop-require-default":47}],6:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.getState = getState;
+exports.initializeState = initializeState;
+exports.removeState = removeState;
+exports.getServerData = getServerData;
+exports.setServerData = setServerData;
+exports.getPendingOps = getPendingOps;
+exports.setPendingOp = setPendingOp;
+exports.pushPendingState = pushPendingState;
+exports.popPendingState = popPendingState;
+exports.mergeFirstPendingState = mergeFirstPendingState;
+exports.getObjectCache = getObjectCache;
+exports.estimateAttribute = estimateAttribute;
+exports.estimateAttributes = estimateAttributes;
+exports.commitServerChanges = commitServerChanges;
+exports.enqueueTask = enqueueTask;
+exports._clearAllState = _clearAllState;
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+var _TaskQueue = _dereq_('./TaskQueue');
+
+var _TaskQueue2 = _interopRequireDefault(_TaskQueue);
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var objectState = {};
+
+function getState(className, id) {
+  var classData = objectState[className];
+  if (classData) {
+    return classData[id] || null;
+  }
+  return null;
+}
+
+function initializeState(className, id, initial) {
+  var state = getState(className, id);
+  if (state) {
+    return state;
+  }
+  if (!objectState[className]) {
+    objectState[className] = {};
+  }
+  if (!initial) {
+    initial = {
+      serverData: {},
+      pendingOps: [{}],
+      objectCache: {},
+      tasks: new _TaskQueue2['default'](),
+      existed: false
+    };
+  }
+  state = objectState[className][id] = initial;
+  return state;
+}
+
+function removeState(className, id) {
+  var state = getState(className, id);
+  if (state === null) {
+    return null;
+  }
+  delete objectState[className][id];
+  return state;
+}
+
+function getServerData(className, id) {
+  var state = getState(className, id);
+  if (state) {
+    return state.serverData;
+  }
+  return {};
+}
+
+function setServerData(className, id, attributes) {
+  var data = initializeState(className, id).serverData;
+  for (var attr in attributes) {
+    if (typeof attributes[attr] !== 'undefined') {
+      data[attr] = attributes[attr];
+    } else {
+      delete data[attr];
+    }
+  }
+}
+
+function getPendingOps(className, id) {
+  var state = getState(className, id);
+  if (state) {
+    return state.pendingOps;
+  }
+  return [{}];
+}
+
+function setPendingOp(className, id, attr, op) {
+  var pending = initializeState(className, id).pendingOps;
+  var last = pending.length - 1;
+  if (op) {
+    pending[last][attr] = op;
+  } else {
+    delete pending[last][attr];
+  }
+}
+
+function pushPendingState(className, id) {
+  var pending = initializeState(className, id).pendingOps;
+  pending.push({});
+}
+
+function popPendingState(className, id) {
+  var pending = initializeState(className, id).pendingOps;
+  var first = pending.shift();
+  if (!pending.length) {
+    pending[0] = {};
+  }
+  return first;
+}
+
+function mergeFirstPendingState(className, id) {
+  var first = popPendingState(className, id);
+  var pending = getPendingOps(className, id);
+  var next = pending[0];
+  for (var attr in first) {
+    if (next[attr] && first[attr]) {
+      var merged = next[attr].mergeWith(first[attr]);
+      if (merged) {
+        next[attr] = merged;
+      }
+    } else {
+      next[attr] = first[attr];
+    }
+  }
+}
+
+function getObjectCache(className, id) {
+  var state = getState(className, id);
+  if (state) {
+    return state.objectCache;
+  }
+  return {};
+}
+
+function estimateAttribute(className, id, attr) {
+  var serverData = getServerData(className, id);
+  var value = serverData[attr];
+  var pending = getPendingOps(className, id);
+  for (var i = 0; i < pending.length; i++) {
+    if (pending[i][attr]) {
+      if (pending[i][attr] instanceof _ParseOp.RelationOp) {
+        value = pending[i][attr].applyTo(value, { className: className, id: id }, attr);
+      } else {
+        value = pending[i][attr].applyTo(value);
+      }
+    }
+  }
+  return value;
+}
+
+function estimateAttributes(className, id) {
+  var data = {};
+  var attr;
+  var serverData = getServerData(className, id);
+  for (attr in serverData) {
+    data[attr] = serverData[attr];
+  }
+  var pending = getPendingOps(className, id);
+  for (var i = 0; i < pending.length; i++) {
+    for (attr in pending[i]) {
+      if (pending[i][attr] instanceof _ParseOp.RelationOp) {
+        data[attr] = pending[i][attr].applyTo(data[attr], { className: className, id: id }, attr);
+      } else {
+        data[attr] = pending[i][attr].applyTo(data[attr]);
+      }
+    }
+  }
+  return data;
+}
+
+function commitServerChanges(className, id, changes) {
+  var state = initializeState(className, id);
+  for (var attr in changes) {
+    var val = changes[attr];
+    state.serverData[attr] = val;
+    if (val && typeof val === 'object' && !(val instanceof _ParseObject2['default']) && !(val instanceof _ParseFile2['default']) && !(val instanceof _ParseRelation2['default'])) {
+      var json = (0, _encode2['default'])(val, false, true);
+      state.objectCache[attr] = JSON.stringify(json);
+    }
+  }
+}
+
+function enqueueTask(className, id, task) {
+  var state = initializeState(className, id);
+  return state.tasks.enqueue(task);
+}
+
+function _clearAllState() {
+  objectState = {};
+}
+},{"./ParseFile":11,"./ParseObject":14,"./ParseOp":15,"./ParsePromise":16,"./ParseRelation":18,"./TaskQueue":26,"./encode":30,"babel-runtime/helpers/interop-require-default":47}],7:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-! function(e) {
-    if ("object" == typeof exports && "undefined" != typeof module) module.exports = e();
-    else if ("function" == typeof define && define.amd) define([], e);
-    else {
-        var t;
-        t = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : this, t.Parse = e()
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _interopRequireWildcard = _dereq_('babel-runtime/helpers/interop-require-wildcard')['default'];
+
+var _decode = _dereq_('./decode');
+
+var _decode2 = _interopRequireDefault(_decode);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _InstallationController = _dereq_('./InstallationController');
+
+var _InstallationController2 = _interopRequireDefault(_InstallationController);
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var ParseOp = _interopRequireWildcard(_ParseOp);
+
+var _RESTController = _dereq_('./RESTController');
+
+var _RESTController2 = _interopRequireDefault(_RESTController);
+
+/**
+ * Contains all Parse API classes and functions.
+ * @class Parse
+ * @static
+ */
+var Parse = {
+  /**
+   * Call this method first to set up your authentication tokens for Parse.
+   * You can get your keys from the Data Browser on parse.com.
+   * @method initialize
+   * @param {String} applicationId Your Parse Application ID.
+   * @param {String} javaScriptKey Your Parse JavaScript Key.
+   * @param {String} masterKey (optional) Your Parse Master Key. (Node.js only!)
+   * @static
+   */
+  initialize: function initialize(applicationId, javaScriptKey) {
+    if ('browser' === 'browser' && _CoreManager2['default'].get('IS_NODE')) {
+      console.log('It looks like you\'re using the browser version of the SDK in a ' + 'node.js environment. You should require(\'parse/node\') instead.');
     }
-}(function() {
-    return function e(t, r, n) {
-        function a(o, i) {
-            if (!r[o]) {
-                if (!t[o]) {
-                    var u = "function" == typeof require && require;
-                    if (!i && u) return u(o, !0);
-                    if (s) return s(o, !0);
-                    var l = new Error("Cannot find module '" + o + "'");
-                    throw l.code = "MODULE_NOT_FOUND", l
-                }
-                var c = r[o] = {
-                    exports: {}
-                };
-                t[o][0].call(c.exports, function(e) {
-                    var r = t[o][1][e];
-                    return a(r ? r : e)
-                }, c, c.exports, e, t, r, n)
+    Parse._initialize(applicationId, javaScriptKey);
+  },
+
+  _initialize: function _initialize(applicationId, javaScriptKey, masterKey) {
+    _CoreManager2['default'].set('APPLICATION_ID', applicationId);
+    _CoreManager2['default'].set('JAVASCRIPT_KEY', javaScriptKey);
+    _CoreManager2['default'].set('MASTER_KEY', masterKey);
+    _CoreManager2['default'].set('USE_MASTER_KEY', false);
+  }
+};
+
+/** These legacy setters may eventually be deprecated **/
+Object.defineProperty(Parse, 'applicationId', {
+  get: function get() {
+    return _CoreManager2['default'].get('APPLICATION_ID');
+  },
+  set: function set(value) {
+    _CoreManager2['default'].set('APPLICATION_ID', value);
+  }
+});
+Object.defineProperty(Parse, 'javaScriptKey', {
+  get: function get() {
+    return _CoreManager2['default'].get('JAVASCRIPT_KEY');
+  },
+  set: function set(value) {
+    _CoreManager2['default'].set('JAVASCRIPT_KEY', value);
+  }
+});
+Object.defineProperty(Parse, 'masterKey', {
+  get: function get() {
+    return _CoreManager2['default'].get('MASTER_KEY');
+  },
+  set: function set(value) {
+    _CoreManager2['default'].set('MASTER_KEY', value);
+  }
+});
+Object.defineProperty(Parse, 'serverURL', {
+  get: function get() {
+    return _CoreManager2['default'].get('SERVER_URL');
+  },
+  set: function set(value) {
+    _CoreManager2['default'].set('SERVER_URL', value);
+  }
+});
+/** End setters **/
+
+Parse.ACL = _dereq_('./ParseACL');
+Parse.Analytics = _dereq_('./Analytics');
+Parse.Cloud = _dereq_('./Cloud');
+Parse.CoreManager = _dereq_('./CoreManager');
+Parse.Config = _dereq_('./ParseConfig');
+Parse.Error = _dereq_('./ParseError');
+Parse.FacebookUtils = _dereq_('./FacebookUtils');
+Parse.File = _dereq_('./ParseFile');
+Parse.GeoPoint = _dereq_('./ParseGeoPoint');
+Parse.Installation = _dereq_('./ParseInstallation');
+Parse.Object = _dereq_('./ParseObject');
+Parse.Op = {
+  Set: ParseOp.SetOp,
+  Unset: ParseOp.UnsetOp,
+  Increment: ParseOp.IncrementOp,
+  Add: ParseOp.AddOp,
+  Remove: ParseOp.RemoveOp,
+  AddUnique: ParseOp.AddUniqueOp,
+  Relation: ParseOp.RelationOp
+};
+Parse.Promise = _dereq_('./ParsePromise');
+Parse.Push = _dereq_('./Push');
+Parse.Query = _dereq_('./ParseQuery');
+Parse.Relation = _dereq_('./ParseRelation');
+Parse.Role = _dereq_('./ParseRole');
+Parse.Session = _dereq_('./ParseSession');
+Parse.Storage = _dereq_('./Storage');
+Parse.User = _dereq_('./ParseUser');
+
+Parse._request = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return _CoreManager2['default'].getRESTController().request.apply(null, args);
+};
+Parse._ajax = function () {
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  return _CoreManager2['default'].getRESTController().ajax.apply(null, args);
+};
+// We attempt to match the signatures of the legacy versions of these methods
+Parse._decode = function (_, value) {
+  return (0, _decode2['default'])(value);
+};
+Parse._encode = function (value, _, disallowObjects) {
+  return (0, _encode2['default'])(value, disallowObjects);
+};
+Parse._getInstallationId = function () {
+  return _CoreManager2['default'].getInstallationController().currentInstallationId();
+};
+
+_CoreManager2['default'].setInstallationController(_InstallationController2['default']);
+_CoreManager2['default'].setRESTController(_RESTController2['default']);
+
+// For legacy requires, of the form `var Parse = require('parse').Parse`
+Parse.Parse = Parse;
+
+module.exports = Parse;
+},{"./Analytics":1,"./Cloud":2,"./CoreManager":3,"./FacebookUtils":4,"./InstallationController":5,"./ParseACL":8,"./ParseConfig":9,"./ParseError":10,"./ParseFile":11,"./ParseGeoPoint":12,"./ParseInstallation":13,"./ParseObject":14,"./ParseOp":15,"./ParsePromise":16,"./ParseQuery":17,"./ParseRelation":18,"./ParseRole":19,"./ParseSession":20,"./ParseUser":21,"./Push":22,"./RESTController":23,"./Storage":24,"./decode":29,"./encode":30,"babel-runtime/helpers/interop-require-default":47,"babel-runtime/helpers/interop-require-wildcard":48}],8:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _Object$keys = _dereq_('babel-runtime/core-js/object/keys')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParseRole = _dereq_('./ParseRole');
+
+var _ParseRole2 = _interopRequireDefault(_ParseRole);
+
+var _ParseUser = _dereq_('./ParseUser');
+
+var _ParseUser2 = _interopRequireDefault(_ParseUser);
+
+var PUBLIC_KEY = '*';
+
+/**
+ * Creates a new ACL.
+ * If no argument is given, the ACL has no permissions for anyone.
+ * If the argument is a Parse.User, the ACL will have read and write
+ *   permission for only that user.
+ * If the argument is any other JSON object, that object will be interpretted
+ *   as a serialized ACL created with toJSON().
+ * @class Parse.ACL
+ * @constructor
+ *
+ * <p>An ACL, or Access Control List can be added to any
+ * <code>Parse.Object</code> to restrict access to only a subset of users
+ * of your application.</p>
+ */
+
+var ParseACL = (function () {
+  function ParseACL(arg1) {
+    _classCallCheck(this, ParseACL);
+
+    this.permissionsById = {};
+    if (arg1 && typeof arg1 === 'object') {
+      if (arg1 instanceof _ParseUser2['default']) {
+        this.setReadAccess(arg1, true);
+        this.setWriteAccess(arg1, true);
+      } else {
+        for (var userId in arg1) {
+          var accessList = arg1[userId];
+          if (typeof userId !== 'string') {
+            throw new TypeError('Tried to create an ACL with an invalid user id.');
+          }
+          this.permissionsById[userId] = {};
+          for (var permission in accessList) {
+            var allowed = accessList[permission];
+            if (permission !== 'read' && permission !== 'write') {
+              throw new TypeError('Tried to create an ACL with an invalid permission type.');
             }
-            return r[o].exports
+            if (typeof allowed !== 'boolean') {
+              throw new TypeError('Tried to create an ACL with an invalid permission value.');
+            }
+            this.permissionsById[userId][permission] = allowed;
+          }
         }
-        for (var s = "function" == typeof require && require, o = 0; o < n.length; o++) a(n[o]);
-        return a
-    }({
-        1: [function(e, t, r) {
-            "use strict";
+      }
+    } else if (typeof arg1 === 'function') {
+      throw new TypeError('ParseACL constructed with a function. Did you forget ()?');
+    }
+  }
 
-            function n(e, t, r) {
-                if (e = e || "", e = e.replace(/^\s*/, ""), e = e.replace(/\s*$/, ""), 0 === e.length) throw new TypeError("A name for the custom event must be provided");
-                for (var n in t)
-                    if ("string" != typeof n || "string" != typeof t[n]) throw new TypeError('track() dimensions expects keys and values of type "string".');
-                return r = r || {}, o["default"].getAnalyticsController().track(e, t)._thenRunCallbacks(r)
+  /**
+   * Returns a JSON-encoded version of the ACL.
+   * @method toJSON
+   * @return {Object}
+   */
+
+  _createClass(ParseACL, [{
+    key: 'toJSON',
+    value: function toJSON() {
+      var permissions = {};
+      for (var p in this.permissionsById) {
+        permissions[p] = this.permissionsById[p];
+      }
+      return permissions;
+    }
+
+    /**
+     * Returns whether this ACL is equal to another object
+     * @method equals
+     * @param other The other object to compare to
+     * @return {Boolean}
+     */
+  }, {
+    key: 'equals',
+    value: function equals(other) {
+      if (!(other instanceof ParseACL)) {
+        return false;
+      }
+      var users = _Object$keys(this.permissionsById);
+      var otherUsers = _Object$keys(other.permissionsById);
+      if (users.length !== otherUsers.length) {
+        return false;
+      }
+      for (var u in this.permissionsById) {
+        if (!other.permissionsById[u]) {
+          return false;
+        }
+        if (this.permissionsById[u].read !== other.permissionsById[u].read) {
+          return false;
+        }
+        if (this.permissionsById[u].write !== other.permissionsById[u].write) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }, {
+    key: '_setAccess',
+    value: function _setAccess(accessType, userId, allowed) {
+      if (userId instanceof _ParseUser2['default']) {
+        userId = userId.id;
+      } else if (userId instanceof _ParseRole2['default']) {
+        userId = 'role:' + userId.getName();
+      }
+      if (typeof userId !== 'string') {
+        throw new TypeError('userId must be a string.');
+      }
+      if (typeof allowed !== 'boolean') {
+        throw new TypeError('allowed must be either true or false.');
+      }
+      var permissions = this.permissionsById[userId];
+      if (!permissions) {
+        if (!allowed) {
+          // The user already doesn't have this permission, so no action is needed
+          return;
+        } else {
+          permissions = {};
+          this.permissionsById[userId] = permissions;
+        }
+      }
+
+      if (allowed) {
+        this.permissionsById[userId][accessType] = true;
+      } else {
+        delete permissions[accessType];
+        if (_Object$keys(permissions).length === 0) {
+          delete this.permissionsById[userId];
+        }
+      }
+    }
+  }, {
+    key: '_getAccess',
+    value: function _getAccess(accessType, userId) {
+      if (userId instanceof _ParseUser2['default']) {
+        userId = userId.id;
+      } else if (userId instanceof _ParseRole2['default']) {
+        userId = 'role:' + userId.getName();
+      }
+      var permissions = this.permissionsById[userId];
+      if (!permissions) {
+        return false;
+      }
+      return !!permissions[accessType];
+    }
+
+    /**
+     * Sets whether the given user is allowed to read this object.
+     * @method setReadAccess
+     * @param userId An instance of Parse.User or its objectId.
+     * @param {Boolean} allowed Whether that user should have read access.
+     */
+  }, {
+    key: 'setReadAccess',
+    value: function setReadAccess(userId, allowed) {
+      this._setAccess('read', userId, allowed);
+    }
+
+    /**
+     * Get whether the given user id is *explicitly* allowed to read this object.
+     * Even if this returns false, the user may still be able to access it if
+     * getPublicReadAccess returns true or a role that the user belongs to has
+     * write access.
+     * @method getReadAccess
+     * @param userId An instance of Parse.User or its objectId, or a Parse.Role.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'getReadAccess',
+    value: function getReadAccess(userId) {
+      return this._getAccess('read', userId);
+    }
+
+    /**
+     * Sets whether the given user id is allowed to write this object.
+     * @method setWriteAccess
+     * @param userId An instance of Parse.User or its objectId, or a Parse.Role..
+     * @param {Boolean} allowed Whether that user should have write access.
+     */
+  }, {
+    key: 'setWriteAccess',
+    value: function setWriteAccess(userId, allowed) {
+      this._setAccess('write', userId, allowed);
+    }
+
+    /**
+     * Gets whether the given user id is *explicitly* allowed to write this object.
+     * Even if this returns false, the user may still be able to write it if
+     * getPublicWriteAccess returns true or a role that the user belongs to has
+     * write access.
+     * @method getWriteAccess
+     * @param userId An instance of Parse.User or its objectId, or a Parse.Role.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'getWriteAccess',
+    value: function getWriteAccess(userId) {
+      return this._getAccess('write', userId);
+    }
+
+    /**
+     * Sets whether the public is allowed to read this object.
+     * @method setPublicReadAccess
+     * @param {Boolean} allowed
+     */
+  }, {
+    key: 'setPublicReadAccess',
+    value: function setPublicReadAccess(allowed) {
+      this.setReadAccess(PUBLIC_KEY, allowed);
+    }
+
+    /**
+     * Gets whether the public is allowed to read this object.
+     * @method getPublicReadAccess
+     * @return {Boolean}
+     */
+  }, {
+    key: 'getPublicReadAccess',
+    value: function getPublicReadAccess() {
+      return this.getReadAccess(PUBLIC_KEY);
+    }
+
+    /**
+     * Sets whether the public is allowed to write this object.
+     * @method setPublicWriteAccess
+     * @param {Boolean} allowed
+     */
+  }, {
+    key: 'setPublicWriteAccess',
+    value: function setPublicWriteAccess(allowed) {
+      this.setWriteAccess(PUBLIC_KEY, allowed);
+    }
+
+    /**
+     * Gets whether the public is allowed to write this object.
+     * @method getPublicWriteAccess
+     * @return {Boolean}
+     */
+  }, {
+    key: 'getPublicWriteAccess',
+    value: function getPublicWriteAccess() {
+      return this.getWriteAccess(PUBLIC_KEY);
+    }
+
+    /**
+     * Gets whether users belonging to the given role are allowed
+     * to read this object. Even if this returns false, the role may
+     * still be able to write it if a parent role has read access.
+     *
+     * @method getRoleReadAccess
+     * @param role The name of the role, or a Parse.Role object.
+     * @return {Boolean} true if the role has read access. false otherwise.
+     * @throws {TypeError} If role is neither a Parse.Role nor a String.
+     */
+  }, {
+    key: 'getRoleReadAccess',
+    value: function getRoleReadAccess(role) {
+      if (role instanceof _ParseRole2['default']) {
+        // Normalize to the String name
+        role = role.getName();
+      }
+      if (typeof role !== 'string') {
+        throw new TypeError('role must be a ParseRole or a String');
+      }
+      return this.getReadAccess('role:' + role);
+    }
+
+    /**
+     * Gets whether users belonging to the given role are allowed
+     * to write this object. Even if this returns false, the role may
+     * still be able to write it if a parent role has write access.
+     *
+     * @method getRoleWriteAccess
+     * @param role The name of the role, or a Parse.Role object.
+     * @return {Boolean} true if the role has write access. false otherwise.
+     * @throws {TypeError} If role is neither a Parse.Role nor a String.
+     */
+  }, {
+    key: 'getRoleWriteAccess',
+    value: function getRoleWriteAccess(role) {
+      if (role instanceof _ParseRole2['default']) {
+        // Normalize to the String name
+        role = role.getName();
+      }
+      if (typeof role !== 'string') {
+        throw new TypeError('role must be a ParseRole or a String');
+      }
+      return this.getWriteAccess('role:' + role);
+    }
+
+    /**
+     * Sets whether users belonging to the given role are allowed
+     * to read this object.
+     *
+     * @method setRoleReadAccess
+     * @param role The name of the role, or a Parse.Role object.
+     * @param {Boolean} allowed Whether the given role can read this object.
+     * @throws {TypeError} If role is neither a Parse.Role nor a String.
+     */
+  }, {
+    key: 'setRoleReadAccess',
+    value: function setRoleReadAccess(role, allowed) {
+      if (role instanceof _ParseRole2['default']) {
+        // Normalize to the String name
+        role = role.getName();
+      }
+      if (typeof role !== 'string') {
+        throw new TypeError('role must be a ParseRole or a String');
+      }
+      this.setReadAccess('role:' + role, allowed);
+    }
+
+    /**
+     * Sets whether users belonging to the given role are allowed
+     * to write this object.
+     *
+     * @method setRoleWriteAccess
+     * @param role The name of the role, or a Parse.Role object.
+     * @param {Boolean} allowed Whether the given role can write this object.
+     * @throws {TypeError} If role is neither a Parse.Role nor a String.
+     */
+  }, {
+    key: 'setRoleWriteAccess',
+    value: function setRoleWriteAccess(role, allowed) {
+      if (role instanceof _ParseRole2['default']) {
+        // Normalize to the String name
+        role = role.getName();
+      }
+      if (typeof role !== 'string') {
+        throw new TypeError('role must be a ParseRole or a String');
+      }
+      this.setWriteAccess('role:' + role, allowed);
+    }
+  }]);
+
+  return ParseACL;
+})();
+
+exports['default'] = ParseACL;
+module.exports = exports['default'];
+},{"./ParseRole":19,"./ParseUser":21,"babel-runtime/core-js/object/keys":41,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],9:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _decode = _dereq_('./decode');
+
+var _decode2 = _interopRequireDefault(_decode);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _escape2 = _dereq_('./escape');
+
+var _escape3 = _interopRequireDefault(_escape2);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _Storage = _dereq_('./Storage');
+
+var _Storage2 = _interopRequireDefault(_Storage);
+
+/**
+ * Parse.Config is a local representation of configuration data that
+ * can be set from the Parse dashboard.
+ *
+ * @class Parse.Config
+ * @constructor
+ */
+
+var ParseConfig = (function () {
+  function ParseConfig() {
+    _classCallCheck(this, ParseConfig);
+
+    this.attributes = {};
+    this._escapedAttributes = {};
+  }
+
+  /**
+   * Gets the value of an attribute.
+   * @method get
+   * @param {String} attr The name of an attribute.
+   */
+
+  _createClass(ParseConfig, [{
+    key: 'get',
+    value: function get(attr) {
+      return this.attributes[attr];
+    }
+
+    /**
+     * Gets the HTML-escaped value of an attribute.
+     * @method escape
+     * @param {String} attr The name of an attribute.
+     */
+  }, {
+    key: 'escape',
+    value: function escape(attr) {
+      var html = this._escapedAttributes[attr];
+      if (html) {
+        return html;
+      }
+      var val = this.attributes[attr];
+      var escaped = '';
+      if (val != null) {
+        escaped = (0, _escape3['default'])(val.toString());
+      }
+      this._escapedAttributes[attr] = escaped;
+      return escaped;
+    }
+
+    /**
+     * Retrieves the most recently-fetched configuration object, either from
+     * memory or from local storage if necessary.
+     *
+     * @method current
+     * @static
+     * @return {Config} The most recently-fetched Parse.Config if it
+     *     exists, else an empty Parse.Config.
+     */
+  }], [{
+    key: 'current',
+    value: function current() {
+      var controller = _CoreManager2['default'].getConfigController();
+      return controller.current();
+    }
+
+    /**
+     * Gets a new configuration object from the server.
+     * @method get
+     * @static
+     * @param {Object} options A Backbone-style options object.
+     * Valid options are:<ul>
+     *   <li>success: Function to call when the get completes successfully.
+     *   <li>error: Function to call when the get fails.
+     * </ul>
+     * @return {Parse.Promise} A promise that is resolved with a newly-created
+     *     configuration object when the get completes.
+     */
+  }, {
+    key: 'get',
+    value: function get(options) {
+      options = options || {};
+
+      var controller = _CoreManager2['default'].getConfigController();
+      return controller.get()._thenRunCallbacks(options);
+    }
+  }]);
+
+  return ParseConfig;
+})();
+
+exports['default'] = ParseConfig;
+
+var currentConfig = null;
+
+var CURRENT_CONFIG_KEY = 'currentConfig';
+
+function decodePayload(data) {
+  try {
+    var json = JSON.parse(data);
+    if (json && typeof json === 'object') {
+      return (0, _decode2['default'])(json);
+    }
+  } catch (e) {
+    return null;
+  }
+}
+
+_CoreManager2['default'].setConfigController({
+  current: function current() {
+    if (currentConfig) {
+      return currentConfig;
+    }
+
+    var config = new ParseConfig();
+    var storagePath = _Storage2['default'].generatePath(CURRENT_CONFIG_KEY);
+    var configData;
+    if (!_Storage2['default'].async()) {
+      configData = _Storage2['default'].getItem(storagePath);
+
+      if (configData) {
+        var attributes = decodePayload(configData);
+        if (attributes) {
+          config.attributes = attributes;
+          currentConfig = config;
+        }
+      }
+      return config;
+    }
+    // Return a promise for async storage controllers
+    return _Storage2['default'].getItemAsync(storagePath).then(function (configData) {
+      if (configData) {
+        var attributes = decodePayload(configData);
+        if (attributes) {
+          config.attributes = attributes;
+          currentConfig = config;
+        }
+      }
+      return config;
+    });
+  },
+
+  get: function get() {
+    var RESTController = _CoreManager2['default'].getRESTController();
+
+    return RESTController.request('GET', 'config', {}, {}).then(function (response) {
+      if (!response || !response.params) {
+        var error = new _ParseError2['default'](_ParseError2['default'].INVALID_JSON, 'Config JSON response invalid.');
+        return _ParsePromise2['default'].error(error);
+      }
+
+      var config = new ParseConfig();
+      config.attributes = {};
+      for (var attr in response.params) {
+        config.attributes[attr] = (0, _decode2['default'])(response.params[attr]);
+      }
+      currentConfig = config;
+      return _Storage2['default'].setItemAsync(_Storage2['default'].generatePath(CURRENT_CONFIG_KEY), JSON.stringify(response.params)).then(function () {
+        return config;
+      });
+    });
+  }
+});
+module.exports = exports['default'];
+},{"./CoreManager":3,"./ParseError":10,"./ParsePromise":16,"./Storage":24,"./decode":29,"./encode":30,"./escape":32,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],10:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+/**
+ * Constructs a new Parse.Error object with the given code and message.
+ * @class Parse.Error
+ * @constructor
+ * @param {Number} code An error code constant from <code>Parse.Error</code>.
+ * @param {String} message A detailed description of the error.
+ */
+"use strict";
+
+var _classCallCheck = _dereq_("babel-runtime/helpers/class-call-check")["default"];
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var ParseError = function ParseError(code, message) {
+  _classCallCheck(this, ParseError);
+
+  this.code = code;
+  this.message = message;
+}
+
+/**
+ * Error code indicating some error other than those enumerated here.
+ * @property OTHER_CAUSE
+ * @static
+ * @final
+ */
+;
+
+exports["default"] = ParseError;
+ParseError.OTHER_CAUSE = -1;
+
+/**
+ * Error code indicating that something has gone wrong with the server.
+ * If you get this error code, it is Parse's fault. Contact us at
+ * https://parse.com/help
+ * @property INTERNAL_SERVER_ERROR
+ * @static
+ * @final
+ */
+ParseError.INTERNAL_SERVER_ERROR = 1;
+
+/**
+ * Error code indicating the connection to the Parse servers failed.
+ * @property CONNECTION_FAILED
+ * @static
+ * @final
+ */
+ParseError.CONNECTION_FAILED = 100;
+
+/**
+ * Error code indicating the specified object doesn't exist.
+ * @property OBJECT_NOT_FOUND
+ * @static
+ * @final
+ */
+ParseError.OBJECT_NOT_FOUND = 101;
+
+/**
+ * Error code indicating you tried to query with a datatype that doesn't
+ * support it, like exact matching an array or object.
+ * @property INVALID_QUERY
+ * @static
+ * @final
+ */
+ParseError.INVALID_QUERY = 102;
+
+/**
+ * Error code indicating a missing or invalid classname. Classnames are
+ * case-sensitive. They must start with a letter, and a-zA-Z0-9_ are the
+ * only valid characters.
+ * @property INVALID_CLASS_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_CLASS_NAME = 103;
+
+/**
+ * Error code indicating an unspecified object id.
+ * @property MISSING_OBJECT_ID
+ * @static
+ * @final
+ */
+ParseError.MISSING_OBJECT_ID = 104;
+
+/**
+ * Error code indicating an invalid key name. Keys are case-sensitive. They
+ * must start with a letter, and a-zA-Z0-9_ are the only valid characters.
+ * @property INVALID_KEY_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_KEY_NAME = 105;
+
+/**
+ * Error code indicating a malformed pointer. You should not see this unless
+ * you have been mucking about changing internal Parse code.
+ * @property INVALID_POINTER
+ * @static
+ * @final
+ */
+ParseError.INVALID_POINTER = 106;
+
+/**
+ * Error code indicating that badly formed JSON was received upstream. This
+ * either indicates you have done something unusual with modifying how
+ * things encode to JSON, or the network is failing badly.
+ * @property INVALID_JSON
+ * @static
+ * @final
+ */
+ParseError.INVALID_JSON = 107;
+
+/**
+ * Error code indicating that the feature you tried to access is only
+ * available internally for testing purposes.
+ * @property COMMAND_UNAVAILABLE
+ * @static
+ * @final
+ */
+ParseError.COMMAND_UNAVAILABLE = 108;
+
+/**
+ * You must call Parse.initialize before using the Parse library.
+ * @property NOT_INITIALIZED
+ * @static
+ * @final
+ */
+ParseError.NOT_INITIALIZED = 109;
+
+/**
+ * Error code indicating that a field was set to an inconsistent type.
+ * @property INCORRECT_TYPE
+ * @static
+ * @final
+ */
+ParseError.INCORRECT_TYPE = 111;
+
+/**
+ * Error code indicating an invalid channel name. A channel name is either
+ * an empty string (the broadcast channel) or contains only a-zA-Z0-9_
+ * characters and starts with a letter.
+ * @property INVALID_CHANNEL_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_CHANNEL_NAME = 112;
+
+/**
+ * Error code indicating that push is misconfigured.
+ * @property PUSH_MISCONFIGURED
+ * @static
+ * @final
+ */
+ParseError.PUSH_MISCONFIGURED = 115;
+
+/**
+ * Error code indicating that the object is too large.
+ * @property OBJECT_TOO_LARGE
+ * @static
+ * @final
+ */
+ParseError.OBJECT_TOO_LARGE = 116;
+
+/**
+ * Error code indicating that the operation isn't allowed for clients.
+ * @property OPERATION_FORBIDDEN
+ * @static
+ * @final
+ */
+ParseError.OPERATION_FORBIDDEN = 119;
+
+/**
+ * Error code indicating the result was not found in the cache.
+ * @property CACHE_MISS
+ * @static
+ * @final
+ */
+ParseError.CACHE_MISS = 120;
+
+/**
+ * Error code indicating that an invalid key was used in a nested
+ * JSONObject.
+ * @property INVALID_NESTED_KEY
+ * @static
+ * @final
+ */
+ParseError.INVALID_NESTED_KEY = 121;
+
+/**
+ * Error code indicating that an invalid filename was used for ParseFile.
+ * A valid file name contains only a-zA-Z0-9_. characters and is between 1
+ * and 128 characters.
+ * @property INVALID_FILE_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_FILE_NAME = 122;
+
+/**
+ * Error code indicating an invalid ACL was provided.
+ * @property INVALID_ACL
+ * @static
+ * @final
+ */
+ParseError.INVALID_ACL = 123;
+
+/**
+ * Error code indicating that the request timed out on the server. Typically
+ * this indicates that the request is too expensive to run.
+ * @property TIMEOUT
+ * @static
+ * @final
+ */
+ParseError.TIMEOUT = 124;
+
+/**
+ * Error code indicating that the email address was invalid.
+ * @property INVALID_EMAIL_ADDRESS
+ * @static
+ * @final
+ */
+ParseError.INVALID_EMAIL_ADDRESS = 125;
+
+/**
+ * Error code indicating a missing content type.
+ * @property MISSING_CONTENT_TYPE
+ * @static
+ * @final
+ */
+ParseError.MISSING_CONTENT_TYPE = 126;
+
+/**
+ * Error code indicating a missing content length.
+ * @property MISSING_CONTENT_LENGTH
+ * @static
+ * @final
+ */
+ParseError.MISSING_CONTENT_LENGTH = 127;
+
+/**
+ * Error code indicating an invalid content length.
+ * @property INVALID_CONTENT_LENGTH
+ * @static
+ * @final
+ */
+ParseError.INVALID_CONTENT_LENGTH = 128;
+
+/**
+ * Error code indicating a file that was too large.
+ * @property FILE_TOO_LARGE
+ * @static
+ * @final
+ */
+ParseError.FILE_TOO_LARGE = 129;
+
+/**
+ * Error code indicating an error saving a file.
+ * @property FILE_SAVE_ERROR
+ * @static
+ * @final
+ */
+ParseError.FILE_SAVE_ERROR = 130;
+
+/**
+ * Error code indicating that a unique field was given a value that is
+ * already taken.
+ * @property DUPLICATE_VALUE
+ * @static
+ * @final
+ */
+ParseError.DUPLICATE_VALUE = 137;
+
+/**
+ * Error code indicating that a role's name is invalid.
+ * @property INVALID_ROLE_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_ROLE_NAME = 139;
+
+/**
+ * Error code indicating that an application quota was exceeded.  Upgrade to
+ * resolve.
+ * @property EXCEEDED_QUOTA
+ * @static
+ * @final
+ */
+ParseError.EXCEEDED_QUOTA = 140;
+
+/**
+ * Error code indicating that a Cloud Code script failed.
+ * @property SCRIPT_FAILED
+ * @static
+ * @final
+ */
+ParseError.SCRIPT_FAILED = 141;
+
+/**
+ * Error code indicating that a Cloud Code validation failed.
+ * @property VALIDATION_ERROR
+ * @static
+ * @final
+ */
+ParseError.VALIDATION_ERROR = 142;
+
+/**
+ * Error code indicating that invalid image data was provided.
+ * @property INVALID_IMAGE_DATA
+ * @static
+ * @final
+ */
+ParseError.INVALID_IMAGE_DATA = 143;
+
+/**
+ * Error code indicating an unsaved file.
+ * @property UNSAVED_FILE_ERROR
+ * @static
+ * @final
+ */
+ParseError.UNSAVED_FILE_ERROR = 151;
+
+/**
+ * Error code indicating an invalid push time.
+ * @property INVALID_PUSH_TIME_ERROR
+ * @static
+ * @final
+ */
+ParseError.INVALID_PUSH_TIME_ERROR = 152;
+
+/**
+ * Error code indicating an error deleting a file.
+ * @property FILE_DELETE_ERROR
+ * @static
+ * @final
+ */
+ParseError.FILE_DELETE_ERROR = 153;
+
+/**
+ * Error code indicating that the application has exceeded its request
+ * limit.
+ * @property REQUEST_LIMIT_EXCEEDED
+ * @static
+ * @final
+ */
+ParseError.REQUEST_LIMIT_EXCEEDED = 155;
+
+/**
+ * Error code indicating an invalid event name.
+ * @property INVALID_EVENT_NAME
+ * @static
+ * @final
+ */
+ParseError.INVALID_EVENT_NAME = 160;
+
+/**
+ * Error code indicating that the username is missing or empty.
+ * @property USERNAME_MISSING
+ * @static
+ * @final
+ */
+ParseError.USERNAME_MISSING = 200;
+
+/**
+ * Error code indicating that the password is missing or empty.
+ * @property PASSWORD_MISSING
+ * @static
+ * @final
+ */
+ParseError.PASSWORD_MISSING = 201;
+
+/**
+ * Error code indicating that the username has already been taken.
+ * @property USERNAME_TAKEN
+ * @static
+ * @final
+ */
+ParseError.USERNAME_TAKEN = 202;
+
+/**
+ * Error code indicating that the email has already been taken.
+ * @property EMAIL_TAKEN
+ * @static
+ * @final
+ */
+ParseError.EMAIL_TAKEN = 203;
+
+/**
+ * Error code indicating that the email is missing, but must be specified.
+ * @property EMAIL_MISSING
+ * @static
+ * @final
+ */
+ParseError.EMAIL_MISSING = 204;
+
+/**
+ * Error code indicating that a user with the specified email was not found.
+ * @property EMAIL_NOT_FOUND
+ * @static
+ * @final
+ */
+ParseError.EMAIL_NOT_FOUND = 205;
+
+/**
+ * Error code indicating that a user object without a valid session could
+ * not be altered.
+ * @property SESSION_MISSING
+ * @static
+ * @final
+ */
+ParseError.SESSION_MISSING = 206;
+
+/**
+ * Error code indicating that a user can only be created through signup.
+ * @property MUST_CREATE_USER_THROUGH_SIGNUP
+ * @static
+ * @final
+ */
+ParseError.MUST_CREATE_USER_THROUGH_SIGNUP = 207;
+
+/**
+ * Error code indicating that an an account being linked is already linked
+ * to another user.
+ * @property ACCOUNT_ALREADY_LINKED
+ * @static
+ * @final
+ */
+ParseError.ACCOUNT_ALREADY_LINKED = 208;
+
+/**
+ * Error code indicating that the current session token is invalid.
+ * @property INVALID_SESSION_TOKEN
+ * @static
+ * @final
+ */
+ParseError.INVALID_SESSION_TOKEN = 209;
+
+/**
+ * Error code indicating that a user cannot be linked to an account because
+ * that account's id could not be found.
+ * @property LINKED_ID_MISSING
+ * @static
+ * @final
+ */
+ParseError.LINKED_ID_MISSING = 250;
+
+/**
+ * Error code indicating that a user with a linked (e.g. Facebook) account
+ * has an invalid session.
+ * @property INVALID_LINKED_SESSION
+ * @static
+ * @final
+ */
+ParseError.INVALID_LINKED_SESSION = 251;
+
+/**
+ * Error code indicating that a service being linked (e.g. Facebook or
+ * Twitter) is unsupported.
+ * @property UNSUPPORTED_SERVICE
+ * @static
+ * @final
+ */
+ParseError.UNSUPPORTED_SERVICE = 252;
+
+/**
+ * Error code indicating that there were multiple errors. Aggregate errors
+ * have an "errors" property, which is an array of error objects with more
+ * detail about each error that occurred.
+ * @property AGGREGATE_ERROR
+ * @static
+ * @final
+ */
+ParseError.AGGREGATE_ERROR = 600;
+
+/**
+ * Error code indicating the client was unable to read an input file.
+ * @property FILE_READ_ERROR
+ * @static
+ * @final
+ */
+ParseError.FILE_READ_ERROR = 601;
+
+/**
+ * Error code indicating a real error code is unavailable because
+ * we had to use an XDomainRequest object to allow CORS requests in
+ * Internet Explorer, which strips the body from HTTP responses that have
+ * a non-2XX status code.
+ * @property X_DOMAIN_REQUEST
+ * @static
+ * @final
+ */
+ParseError.X_DOMAIN_REQUEST = 602;
+module.exports = exports["default"];
+},{"babel-runtime/helpers/class-call-check":43}],11:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+function b64Digit(number) {
+  if (number < 26) {
+    return String.fromCharCode(65 + number);
+  }
+  if (number < 52) {
+    return String.fromCharCode(97 + (number - 26));
+  }
+  if (number < 62) {
+    return String.fromCharCode(48 + (number - 52));
+  }
+  if (number === 62) {
+    return '+';
+  }
+  if (number === 63) {
+    return '/';
+  }
+  throw new TypeError('Tried to encode large digit ' + number + ' in base64.');
+}
+
+/**
+ * A Parse.File is a local representation of a file that is saved to the Parse
+ * cloud.
+ * @class Parse.File
+ * @constructor
+ * @param name {String} The file's name. This will be prefixed by a unique
+ *     value once the file has finished saving. The file name must begin with
+ *     an alphanumeric character, and consist of alphanumeric characters,
+ *     periods, spaces, underscores, or dashes.
+ * @param data {Array} The data for the file, as either:
+ *     1. an Array of byte value Numbers, or
+ *     2. an Object like { base64: "..." } with a base64-encoded String.
+ *     3. a File object selected with a file upload control. (3) only works
+ *        in Firefox 3.6+, Safari 6.0.2+, Chrome 7+, and IE 10+.
+ *        For example:<pre>
+ * var fileUploadControl = $("#profilePhotoFileUpload")[0];
+ * if (fileUploadControl.files.length > 0) {
+ *   var file = fileUploadControl.files[0];
+ *   var name = "photo.jpg";
+ *   var parseFile = new Parse.File(name, file);
+ *   parseFile.save().then(function() {
+ *     // The file has been saved to Parse.
+ *   }, function(error) {
+ *     // The file either could not be read, or could not be saved to Parse.
+ *   });
+ * }</pre>
+ * @param type {String} Optional Content-Type header to use for the file. If
+ *     this is omitted, the content type will be inferred from the name's
+ *     extension.
+ */
+
+var ParseFile = (function () {
+  function ParseFile(name, data, type) {
+    _classCallCheck(this, ParseFile);
+
+    var specifiedType = type || '';
+
+    this._name = name;
+
+    if (Array.isArray(data)) {
+      this._source = {
+        format: 'base64',
+        base64: ParseFile.encodeBase64(data),
+        type: specifiedType
+      };
+    } else if (typeof File !== 'undefined' && data instanceof File) {
+      this._source = {
+        format: 'file',
+        file: data,
+        type: specifiedType
+      };
+    } else if (data && data.hasOwnProperty('base64')) {
+      var matches = /^data:([a-zA-Z]*\/[a-zA-Z+.-]*);(charset=[a-zA-Z0-9\-\/\s]*,)?base64,(\S+)/.exec(data.base64);
+      if (matches && matches.length > 0) {
+        // if data URI with type and charset, there will be 4 matches.
+        this._source = {
+          format: 'base64',
+          base64: matches.length === 4 ? matches[3] : matches[2],
+          type: matches[1]
+        };
+      } else {
+        this._source = {
+          format: 'base64',
+          base64: data.base64,
+          type: specifiedType
+        };
+      }
+    } else if (typeof data !== 'undefined') {
+      throw new TypeError('Cannot create a Parse.File with that data.');
+    }
+  }
+
+  /**
+   * Gets the name of the file. Before save is called, this is the filename
+   * given by the user. After save is called, that name gets prefixed with a
+   * unique identifier.
+   * @method name
+   * @return {String}
+   */
+
+  _createClass(ParseFile, [{
+    key: 'name',
+    value: function name() {
+      return this._name;
+    }
+
+    /**
+     * Gets the url of the file. It is only available after you save the file or
+     * after you get the file from a Parse.Object.
+     * @method url
+     * @return {String}
+     */
+  }, {
+    key: 'url',
+    value: function url() {
+      return this._url;
+    }
+
+    /**
+     * Saves the file to the Parse cloud.
+     * @method save
+     * @param {Object} options A Backbone-style options object.
+     * @return {Parse.Promise} Promise that is resolved when the save finishes.
+     */
+  }, {
+    key: 'save',
+    value: function save(options) {
+      var _this = this;
+
+      options = options || {};
+      var controller = _CoreManager2['default'].getFileController();
+      if (!this._previousSave) {
+        if (this._source.format === 'file') {
+          this._previousSave = controller.saveFile(this._name, this._source).then(function (res) {
+            _this._name = res.name;
+            _this._url = res.url;
+            return _this;
+          });
+        } else {
+          this._previousSave = controller.saveBase64(this._name, this._source).then(function (res) {
+            _this._name = res.name;
+            _this._url = res.url;
+            return _this;
+          });
+        }
+      }
+      if (this._previousSave) {
+        return this._previousSave._thenRunCallbacks(options);
+      }
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return {
+        __type: 'File',
+        name: this._name,
+        url: this._url
+      };
+    }
+  }, {
+    key: 'equals',
+    value: function equals(other) {
+      if (this === other) {
+        return true;
+      }
+      // Unsaved Files are never equal, since they will be saved to different URLs
+      return other instanceof ParseFile && this.name() === other.name() && this.url() === other.url() && typeof this.url() !== 'undefined';
+    }
+  }], [{
+    key: 'fromJSON',
+    value: function fromJSON(obj) {
+      if (obj.__type !== 'File') {
+        throw new TypeError('JSON object does not represent a ParseFile');
+      }
+      var file = new ParseFile(obj.name);
+      file._url = obj.url;
+      return file;
+    }
+  }, {
+    key: 'encodeBase64',
+    value: function encodeBase64(bytes) {
+      var chunks = [];
+      chunks.length = Math.ceil(bytes.length / 3);
+      for (var i = 0; i < chunks.length; i++) {
+        var b1 = bytes[i * 3];
+        var b2 = bytes[i * 3 + 1] || 0;
+        var b3 = bytes[i * 3 + 2] || 0;
+
+        var has2 = i * 3 + 1 < bytes.length;
+        var has3 = i * 3 + 2 < bytes.length;
+
+        chunks[i] = [b64Digit(b1 >> 2 & 0x3F), b64Digit(b1 << 4 & 0x30 | b2 >> 4 & 0x0F), has2 ? b64Digit(b2 << 2 & 0x3C | b3 >> 6 & 0x03) : '=', has3 ? b64Digit(b3 & 0x3F) : '='].join('');
+      }
+
+      return chunks.join('');
+    }
+  }]);
+
+  return ParseFile;
+})();
+
+exports['default'] = ParseFile;
+
+_CoreManager2['default'].setFileController({
+  saveFile: function saveFile(name, source) {
+    if (source.format !== 'file') {
+      throw new Error('saveFile can only be used with File-type sources.');
+    }
+    // To directly upload a File, we use a REST-style AJAX request
+    var headers = {
+      'X-Parse-Application-ID': _CoreManager2['default'].get('APPLICATION_ID'),
+      'X-Parse-JavaScript-Key': _CoreManager2['default'].get('JAVASCRIPT_KEY')
+    };
+    var url = _CoreManager2['default'].get('SERVER_URL');
+    url += '/1/files/' + name;
+    return _CoreManager2['default'].getRESTController().ajax('POST', url, source.file, headers);
+  },
+
+  saveBase64: function saveBase64(name, source) {
+    if (source.format !== 'base64') {
+      throw new Error('saveBase64 can only be used with Base64-type sources.');
+    }
+    var data = {
+      base64: source.base64
+    };
+    if (source.type) {
+      data._ContentType = source.type;
+    }
+
+    return _CoreManager2['default'].getRESTController().request('POST', 'files/' + name, data);
+  }
+});
+module.exports = exports['default'];
+},{"./CoreManager":3,"./ParsePromise":16,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],12:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+/**
+ * Creates a new GeoPoint with any of the following forms:<br>
+ *   <pre>
+ *   new GeoPoint(otherGeoPoint)
+ *   new GeoPoint(30, 30)
+ *   new GeoPoint([30, 30])
+ *   new GeoPoint({latitude: 30, longitude: 30})
+ *   new GeoPoint()  // defaults to (0, 0)
+ *   </pre>
+ * @class Parse.GeoPoint
+ * @constructor
+ *
+ * <p>Represents a latitude / longitude point that may be associated
+ * with a key in a ParseObject or used as a reference point for geo queries.
+ * This allows proximity-based queries on the key.</p>
+ *
+ * <p>Only one key in a class may contain a GeoPoint.</p>
+ *
+ * <p>Example:<pre>
+ *   var point = new Parse.GeoPoint(30.0, -20.0);
+ *   var object = new Parse.Object("PlaceObject");
+ *   object.set("location", point);
+ *   object.save();</pre></p>
+ */
+
+var ParseGeoPoint = (function () {
+  function ParseGeoPoint(arg1, arg2) {
+    _classCallCheck(this, ParseGeoPoint);
+
+    if (Array.isArray(arg1)) {
+      ParseGeoPoint._validate(arg1[0], arg1[1]);
+      this._latitude = arg1[0];
+      this._longitude = arg1[1];
+    } else if (typeof arg1 === 'object') {
+      ParseGeoPoint._validate(arg1.latitude, arg1.longitude);
+      this._latitude = arg1.latitude;
+      this._longitude = arg1.longitude;
+    } else if (typeof arg1 === 'number' && typeof arg2 === 'number') {
+      ParseGeoPoint._validate(arg1, arg2);
+      this._latitude = arg1;
+      this._longitude = arg2;
+    } else {
+      this._latitude = 0;
+      this._longitude = 0;
+    }
+  }
+
+  /**
+   * North-south portion of the coordinate, in range [-90, 90].
+   * Throws an exception if set out of range in a modern browser.
+   * @property latitude
+   * @type Number
+   */
+
+  _createClass(ParseGeoPoint, [{
+    key: 'toJSON',
+
+    /**
+     * Returns a JSON representation of the GeoPoint, suitable for Parse.
+     * @method toJSON
+     * @return {Object}
+     */
+    value: function toJSON() {
+      ParseGeoPoint._validate(this._latitude, this._longitude);
+      return {
+        __type: 'GeoPoint',
+        latitude: this._latitude,
+        longitude: this._longitude
+      };
+    }
+  }, {
+    key: 'equals',
+    value: function equals(other) {
+      return other instanceof ParseGeoPoint && this.latitude === other.latitude && this.longitude === other.longitude;
+    }
+
+    /**
+     * Returns the distance from this GeoPoint to another in radians.
+     * @method radiansTo
+     * @param {Parse.GeoPoint} point the other Parse.GeoPoint.
+     * @return {Number}
+     */
+  }, {
+    key: 'radiansTo',
+    value: function radiansTo(point) {
+      var d2r = Math.PI / 180.0;
+      var lat1rad = this.latitude * d2r;
+      var long1rad = this.longitude * d2r;
+      var lat2rad = point.latitude * d2r;
+      var long2rad = point.longitude * d2r;
+
+      var sinDeltaLatDiv2 = Math.sin((lat1rad - lat2rad) / 2);
+      var sinDeltaLongDiv2 = Math.sin((long1rad - long2rad) / 2);
+      // Square of half the straight line chord distance between both points.
+      var a = sinDeltaLatDiv2 * sinDeltaLatDiv2 + Math.cos(lat1rad) * Math.cos(lat2rad) * sinDeltaLongDiv2 * sinDeltaLongDiv2;
+      a = Math.min(1.0, a);
+      return 2 * Math.asin(Math.sqrt(a));
+    }
+
+    /**
+     * Returns the distance from this GeoPoint to another in kilometers.
+     * @method kilometersTo
+     * @param {Parse.GeoPoint} point the other Parse.GeoPoint.
+     * @return {Number}
+     */
+  }, {
+    key: 'kilometersTo',
+    value: function kilometersTo(point) {
+      return this.radiansTo(point) * 6371.0;
+    }
+
+    /**
+     * Returns the distance from this GeoPoint to another in miles.
+     * @method milesTo
+     * @param {Parse.GeoPoint} point the other Parse.GeoPoint.
+     * @return {Number}
+     */
+  }, {
+    key: 'milesTo',
+    value: function milesTo(point) {
+      return this.radiansTo(point) * 3958.8;
+    }
+
+    /**
+     * Throws an exception if the given lat-long is out of bounds.
+     */
+  }, {
+    key: 'latitude',
+    get: function get() {
+      return this._latitude;
+    },
+    set: function set(val) {
+      ParseGeoPoint._validate(val, this.longitude);
+      this._latitude = val;
+    }
+
+    /**
+     * East-west portion of the coordinate, in range [-180, 180].
+     * Throws if set out of range in a modern browser.
+     * @property longitude
+     * @type Number
+     */
+  }, {
+    key: 'longitude',
+    get: function get() {
+      return this._longitude;
+    },
+    set: function set(val) {
+      ParseGeoPoint._validate(this.latitude, val);
+      this._longitude = val;
+    }
+  }], [{
+    key: '_validate',
+    value: function _validate(latitude, longitude) {
+      if (latitude !== latitude || longitude !== longitude) {
+        throw new TypeError('GeoPoint latitude and longitude must be valid numbers');
+      }
+      if (latitude < -90.0) {
+        throw new TypeError('GeoPoint latitude out of bounds: ' + latitude + ' < -90.0.');
+      }
+      if (latitude > 90.0) {
+        throw new TypeError('GeoPoint latitude out of bounds: ' + latitude + ' > 90.0.');
+      }
+      if (longitude < -180.0) {
+        throw new TypeError('GeoPoint longitude out of bounds: ' + longitude + ' < -180.0.');
+      }
+      if (longitude > 180.0) {
+        throw new TypeError('GeoPoint longitude out of bounds: ' + longitude + ' > 180.0.');
+      }
+    }
+
+    /**
+     * Creates a GeoPoint with the user's current location, if available.
+     * Calls options.success with a new GeoPoint instance or calls options.error.
+     * @method current
+     * @param {Object} options An object with success and error callbacks.
+     * @static
+     */
+  }, {
+    key: 'current',
+    value: function current(options) {
+      var promise = new _ParsePromise2['default']();
+      navigator.geolocation.getCurrentPosition(function (location) {
+        promise.resolve(new ParseGeoPoint(location.coords.latitude, location.coords.longitude));
+      }, function (error) {
+        promise.reject(error);
+      });
+
+      return promise._thenRunCallbacks(options);
+    }
+  }]);
+
+  return ParseGeoPoint;
+})();
+
+exports['default'] = ParseGeoPoint;
+module.exports = exports['default'];
+},{"./ParsePromise":16,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],13:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _get = _dereq_('babel-runtime/helpers/get')['default'];
+
+var _inherits = _dereq_('babel-runtime/helpers/inherits')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParseObject2 = _dereq_('./ParseObject');
+
+var _ParseObject3 = _interopRequireDefault(_ParseObject2);
+
+var Installation = (function (_ParseObject) {
+  _inherits(Installation, _ParseObject);
+
+  function Installation(attributes) {
+    _classCallCheck(this, Installation);
+
+    _get(Object.getPrototypeOf(Installation.prototype), 'constructor', this).call(this, '_Installation');
+    if (attributes && typeof attributes === 'object') {
+      if (!this.set(attributes || {})) {
+        throw new Error('Can\'t create an invalid Session');
+      }
+    }
+  }
+
+  return Installation;
+})(_ParseObject3['default']);
+
+exports['default'] = Installation;
+
+_ParseObject3['default'].registerSubclass('_Installation', Installation);
+module.exports = exports['default'];
+},{"./ParseObject":14,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/get":45,"babel-runtime/helpers/inherits":46,"babel-runtime/helpers/interop-require-default":47}],14:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _Object$keys = _dereq_('babel-runtime/core-js/object/keys')['default'];
+
+var _Object$freeze = _dereq_('babel-runtime/core-js/object/freeze')['default'];
+
+var _Object$create = _dereq_('babel-runtime/core-js/object/create')['default'];
+
+var _Object$defineProperty = _dereq_('babel-runtime/core-js/object/define-property')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _interopRequireWildcard = _dereq_('babel-runtime/helpers/interop-require-wildcard')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _canBeSerialized = _dereq_('./canBeSerialized');
+
+var _canBeSerialized2 = _interopRequireDefault(_canBeSerialized);
+
+var _decode = _dereq_('./decode');
+
+var _decode2 = _interopRequireDefault(_decode);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _equals = _dereq_('./equals');
+
+var _equals2 = _interopRequireDefault(_equals);
+
+var _escape2 = _dereq_('./escape');
+
+var _escape3 = _interopRequireDefault(_escape2);
+
+var _ObjectState = _dereq_('./ObjectState');
+
+var ObjectState = _interopRequireWildcard(_ObjectState);
+
+var _ParseACL = _dereq_('./ParseACL');
+
+var _ParseACL2 = _interopRequireDefault(_ParseACL);
+
+var _parseDate = _dereq_('./parseDate');
+
+var _parseDate2 = _interopRequireDefault(_parseDate);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _ParseQuery = _dereq_('./ParseQuery');
+
+var _ParseQuery2 = _interopRequireDefault(_ParseQuery);
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+var _unique = _dereq_('./unique');
+
+var _unique2 = _interopRequireDefault(_unique);
+
+var _unsavedChildren = _dereq_('./unsavedChildren');
+
+var _unsavedChildren2 = _interopRequireDefault(_unsavedChildren);
+
+// Mapping of class names to constructors, so we can populate objects from the
+// server with appropriate subclasses of ParseObject
+var classMap = {};
+
+// Global counter for generating unique local Ids
+var localCount = 0;
+// Global counter for generating unique Ids for non-single-instance objects
+var objectCount = 0;
+// On web clients, objects are single-instance: any two objects with the same Id
+// will have the same attributes. However, this may be dangerous default
+// behavior in a server scenario
+var singleInstance = !_CoreManager2['default'].get('IS_NODE');
+
+/**
+ * Creates a new model with defined attributes.
+ *
+ * <p>You won't normally call this method directly.  It is recommended that
+ * you use a subclass of <code>Parse.Object</code> instead, created by calling
+ * <code>extend</code>.</p>
+ *
+ * <p>However, if you don't want to use a subclass, or aren't sure which
+ * subclass is appropriate, you can use this form:<pre>
+ *     var object = new Parse.Object("ClassName");
+ * </pre>
+ * That is basically equivalent to:<pre>
+ *     var MyClass = Parse.Object.extend("ClassName");
+ *     var object = new MyClass();
+ * </pre></p>
+ *
+ * @class Parse.Object
+ * @constructor
+ * @param {String} className The class name for the object
+ * @param {Object} attributes The initial set of data to store in the object.
+ */
+
+var ParseObject = (function () {
+  function ParseObject(className, attributes) {
+    _classCallCheck(this, ParseObject);
+
+    var toSet = null;
+    this._objCount = objectCount++;
+    if (typeof className === 'string') {
+      this.className = className;
+      if (attributes && typeof attributes === 'object') {
+        toSet = attributes;
+      }
+    } else if (className && typeof className === 'object') {
+      this.className = className.className;
+      toSet = {};
+      for (var attr in className) {
+        if (attr !== 'className') {
+          toSet[attr] = className[attr];
+        }
+      }
+    }
+    if (toSet && !this.set(toSet)) {
+      throw new Error('Can\'t create an invalid Parse Object');
+    }
+    // Enable legacy initializers
+    if (typeof this.initialize === 'function') {
+      this.initialize.apply(this, arguments);
+    }
+  }
+
+  /** Prototype getters / setters **/
+
+  _createClass(ParseObject, [{
+    key: '_getId',
+
+    /** Private methods **/
+
+    /**
+     * Returns a local or server Id used uniquely identify this object
+     */
+    value: function _getId() {
+      if (typeof this.id === 'string') {
+        return this.id;
+      }
+      if (typeof this._localId === 'string') {
+        return this._localId;
+      }
+      var localId = 'local' + String(localCount++);
+      this._localId = localId;
+      return localId;
+    }
+
+    /**
+     * Returns a local or server Id used to pull data from the Object State store
+     * If single instance objects are disabled, it will use the object's unique
+     * count to separate its data from other objects with the same server Id.
+     */
+  }, {
+    key: '_getStateIdentifier',
+    value: function _getStateIdentifier() {
+      if (typeof this.id === 'string') {
+        if (singleInstance) {
+          return this.id;
+        }
+        return this.id + '_' + String(this._objCount);
+      }
+      return this._getId();
+    }
+  }, {
+    key: '_getServerData',
+    value: function _getServerData() {
+      return ObjectState.getServerData(this.className, this._getStateIdentifier());
+    }
+  }, {
+    key: '_clearServerData',
+    value: function _clearServerData() {
+      var serverData = this._getServerData();
+      var unset = {};
+      for (var attr in serverData) {
+        unset[attr] = undefined;
+      }
+      ObjectState.setServerData(this.className, this._getStateIdentifier(), unset);
+    }
+  }, {
+    key: '_getPendingOps',
+    value: function _getPendingOps() {
+      return ObjectState.getPendingOps(this.className, this._getStateIdentifier());
+    }
+  }, {
+    key: '_clearPendingOps',
+    value: function _clearPendingOps() {
+      var pending = this._getPendingOps();
+      var latest = pending[pending.length - 1];
+      var keys = _Object$keys(latest);
+      keys.forEach(function (key) {
+        delete latest[key];
+      });
+    }
+  }, {
+    key: '_getDirtyObjectAttributes',
+    value: function _getDirtyObjectAttributes() {
+      var attributes = this.attributes;
+      var objectCache = ObjectState.getObjectCache(this.className, this._getStateIdentifier());
+      var dirty = {};
+      for (var attr in attributes) {
+        var val = attributes[attr];
+        if (val && typeof val === 'object' && !(val instanceof ParseObject) && !(val instanceof _ParseFile2['default']) && !(val instanceof _ParseRelation2['default'])) {
+          // Due to the way browsers construct maps, the key order will not change
+          // unless the object is changed
+          var json = (0, _encode2['default'])(val, false, true);
+          var stringified = JSON.stringify(json);
+          if (objectCache[attr] !== stringified) {
+            dirty[attr] = val;
+          }
+        }
+      }
+      return dirty;
+    }
+  }, {
+    key: '_toFullJSON',
+    value: function _toFullJSON() {
+      var json = this.toJSON();
+      json.__type = 'Object';
+      json.className = this.className;
+      return json;
+    }
+  }, {
+    key: '_getSaveJSON',
+    value: function _getSaveJSON() {
+      var pending = this._getPendingOps();
+      var dirtyObjects = this._getDirtyObjectAttributes();
+      var json = {};
+      var attr;
+      for (attr in dirtyObjects) {
+        json[attr] = new _ParseOp.SetOp(dirtyObjects[attr]).toJSON();
+      }
+      for (attr in pending[0]) {
+        json[attr] = pending[0][attr].toJSON();
+      }
+      return json;
+    }
+  }, {
+    key: '_getSaveParams',
+    value: function _getSaveParams() {
+      var method = this.id ? 'PUT' : 'POST';
+      var body = this._getSaveJSON();
+      var path = 'classes/' + this.className;
+      if (this.id) {
+        path += '/' + this.id;
+      } else if (this.className === '_User') {
+        path = 'users';
+      }
+      return {
+        method: method,
+        body: body,
+        path: path
+      };
+    }
+  }, {
+    key: '_finishFetch',
+    value: function _finishFetch(serverData) {
+      if (!this.id && serverData.objectId) {
+        this.id = serverData.objectId;
+      }
+      ObjectState.initializeState(this.className, this._getStateIdentifier());
+      var decoded = {};
+      for (var attr in serverData) {
+        if (attr === 'ACL') {
+          decoded[attr] = new _ParseACL2['default'](serverData[attr]);
+        } else if (attr !== 'objectId') {
+          decoded[attr] = (0, _decode2['default'])(serverData[attr]);
+          if (decoded[attr] instanceof _ParseRelation2['default']) {
+            decoded[attr]._ensureParentAndKey(this, attr);
+          }
+        }
+      }
+      if (decoded.createdAt && typeof decoded.createdAt === 'string') {
+        decoded.createdAt = (0, _parseDate2['default'])(decoded.createdAt);
+      }
+      if (decoded.updatedAt && typeof decoded.updatedAt === 'string') {
+        decoded.updatedAt = (0, _parseDate2['default'])(decoded.updatedAt);
+      }
+      if (!decoded.updatedAt && decoded.createdAt) {
+        decoded.updatedAt = decoded.createdAt;
+      }
+      ObjectState.commitServerChanges(this.className, this._getStateIdentifier(), decoded);
+    }
+  }, {
+    key: '_setExisted',
+    value: function _setExisted(existed) {
+      var state = ObjectState.getState(this.className, this._getStateIdentifier());
+      if (state) {
+        state.existed = existed;
+      }
+    }
+  }, {
+    key: '_migrateId',
+    value: function _migrateId(serverId) {
+      if (this._localId && serverId) {
+        var oldState = ObjectState.removeState(this.className, this._getStateIdentifier());
+        this.id = serverId;
+        delete this._localId;
+        if (oldState) {
+          ObjectState.initializeState(this.className, this._getStateIdentifier(), oldState);
+        }
+      }
+    }
+  }, {
+    key: '_handleSaveResponse',
+    value: function _handleSaveResponse(response, status) {
+      var changes = {};
+      var attr;
+      var pending = ObjectState.popPendingState(this.className, this._getStateIdentifier());
+      for (attr in pending) {
+        if (pending[attr] instanceof _ParseOp.RelationOp) {
+          changes[attr] = pending[attr].applyTo(undefined, this, attr);
+        } else if (!(attr in response)) {
+          // Only SetOps and UnsetOps should not come back with results
+          changes[attr] = pending[attr].applyTo(undefined);
+        }
+      }
+      for (attr in response) {
+        if ((attr === 'createdAt' || attr === 'updatedAt') && typeof response[attr] === 'string') {
+          changes[attr] = (0, _parseDate2['default'])(response[attr]);
+        } else if (attr !== 'objectId') {
+          changes[attr] = (0, _decode2['default'])(response[attr]);
+        }
+      }
+      if (changes.createdAt && !changes.updatedAt) {
+        changes.updatedAt = changes.createdAt;
+      }
+
+      this._migrateId(response.objectId);
+
+      if (status !== 201) {
+        this._setExisted(true);
+      }
+
+      ObjectState.commitServerChanges(this.className, this._getStateIdentifier(), changes);
+    }
+  }, {
+    key: '_handleSaveError',
+    value: function _handleSaveError() {
+      var pending = this._getPendingOps();
+      if (pending.length > 2) {
+        // There are more saves on the queue
+        ObjectState.mergeFirstPendingState(this.className, this._getStateIdentifier());
+      }
+    }
+
+    /** Public methods **/
+
+  }, {
+    key: 'initialize',
+    value: function initialize() {}
+    // NOOP
+
+    /**
+     * Returns a JSON version of the object suitable for saving to Parse.
+     * @method toJSON
+     * @return {Object}
+     */
+
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      var seenEntry = this.id ? this.className + ':' + this.id : this;
+      var json = {};
+      var attrs = this.attributes;
+      for (var attr in attrs) {
+        if ((attr === 'createdAt' || attr === 'updatedAt') && attrs[attr].toJSON) {
+          json[attr] = attrs[attr].toJSON();
+        } else {
+          json[attr] = (0, _encode2['default'])(attrs[attr], false, false, [seenEntry]);
+        }
+      }
+      var pending = this._getPendingOps();
+      for (var attr in pending[0]) {
+        json[attr] = pending[0][attr].toJSON();
+      }
+
+      if (this.id) {
+        json.objectId = this.id;
+      }
+      return json;
+    }
+
+    /**
+     * Determines whether this ParseObject is equal to another ParseObject
+     * @method equals
+     * @return {Boolean}
+     */
+  }, {
+    key: 'equals',
+    value: function equals(other) {
+      if (this === other) {
+        return true;
+      }
+      return other instanceof ParseObject && this.className === other.className && this.id === other.id && typeof this.id !== 'undefined';
+    }
+
+    /**
+     * Returns true if this object has been modified since its last
+     * save/refresh.  If an attribute is specified, it returns true only if that
+     * particular attribute has been modified since the last save/refresh.
+     * @method dirty
+     * @param {String} attr An attribute name (optional).
+     * @return {Boolean}
+     */
+  }, {
+    key: 'dirty',
+    value: function dirty(attr) {
+      if (!this.id) {
+        return true;
+      }
+      var pendingOps = this._getPendingOps();
+      var dirtyObjects = this._getDirtyObjectAttributes();
+      if (attr) {
+        if (dirtyObjects.hasOwnProperty(attr)) {
+          return true;
+        }
+        for (var i = 0; i < pendingOps.length; i++) {
+          if (pendingOps[i].hasOwnProperty(attr)) {
+            return true;
+          }
+        }
+        return false;
+      }
+      if (_Object$keys(pendingOps[0]).length !== 0) {
+        return true;
+      }
+      if (_Object$keys(dirtyObjects).length !== 0) {
+        return true;
+      }
+      return false;
+    }
+
+    /**
+     * Returns an array of keys that have been modified since last save/refresh
+     * @method dirtyKeys
+     * @return {Array of string}
+     */
+  }, {
+    key: 'dirtyKeys',
+    value: function dirtyKeys() {
+      var pendingOps = this._getPendingOps();
+      var keys = {};
+      for (var i = 0; i < pendingOps.length; i++) {
+        for (var attr in pendingOps[i]) {
+          keys[attr] = true;
+        }
+      }
+      var dirtyObjects = this._getDirtyObjectAttributes();
+      for (var attr in dirtyObjects) {
+        keys[attr] = true;
+      }
+      return _Object$keys(keys);
+    }
+
+    /**
+     * Gets a Pointer referencing this Object.
+     * @method toPointer
+     * @return {Object}
+     */
+  }, {
+    key: 'toPointer',
+    value: function toPointer() {
+      if (!this.id) {
+        throw new Error('Cannot create a pointer to an unsaved ParseObject');
+      }
+      return {
+        __type: 'Pointer',
+        className: this.className,
+        objectId: this.id
+      };
+    }
+
+    /**
+     * Gets the value of an attribute.
+     * @method get
+     * @param {String} attr The string name of an attribute.
+     */
+  }, {
+    key: 'get',
+    value: function get(attr) {
+      return this.attributes[attr];
+    }
+
+    /**
+     * Gets a relation on the given class for the attribute.
+     * @method relation
+     * @param String attr The attribute to get the relation for.
+     */
+  }, {
+    key: 'relation',
+    value: function relation(attr) {
+      var value = this.get(attr);
+      if (value) {
+        if (!(value instanceof _ParseRelation2['default'])) {
+          throw new Error('Called relation() on non-relation field ' + attr);
+        }
+        value._ensureParentAndKey(this, attr);
+        return value;
+      }
+      return new _ParseRelation2['default'](this, attr);
+    }
+
+    /**
+     * Gets the HTML-escaped value of an attribute.
+     * @method escape
+     * @param {String} attr The string name of an attribute.
+     */
+  }, {
+    key: 'escape',
+    value: function escape(attr) {
+      var val = this.attributes[attr];
+      if (val == null) {
+        return '';
+      }
+      var str = val;
+      if (typeof val !== 'string') {
+        if (typeof val.toString !== 'function') {
+          return '';
+        }
+        val = val.toString();
+      }
+      return (0, _escape3['default'])(val);
+    }
+
+    /**
+     * Returns <code>true</code> if the attribute contains a value that is not
+     * null or undefined.
+     * @method has
+     * @param {String} attr The string name of the attribute.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'has',
+    value: function has(attr) {
+      var attributes = this.attributes;
+      if (attributes.hasOwnProperty(attr)) {
+        return attributes[attr] != null;
+      }
+      return false;
+    }
+
+    /**
+     * Sets a hash of model attributes on the object.
+     *
+     * <p>You can call it with an object containing keys and values, or with one
+     * key and value.  For example:<pre>
+     *   gameTurn.set({
+     *     player: player1,
+     *     diceRoll: 2
+     *   }, {
+     *     error: function(gameTurnAgain, error) {
+     *       // The set failed validation.
+     *     }
+     *   });
+     *
+     *   game.set("currentPlayer", player2, {
+     *     error: function(gameTurnAgain, error) {
+     *       // The set failed validation.
+     *     }
+     *   });
+     *
+     *   game.set("finished", true);</pre></p>
+     *
+     * @method set
+     * @param {String} key The key to set.
+     * @param {} value The value to give it.
+     * @param {Object} options A set of options for the set.
+     *     The only supported option is <code>error</code>.
+     * @return {Boolean} true if the set succeeded.
+     */
+  }, {
+    key: 'set',
+    value: function set(key, value, options) {
+      var changes = {};
+      var newOps = {};
+      if (key && typeof key === 'object') {
+        changes = key;
+        options = value;
+      } else if (typeof key === 'string') {
+        changes[key] = value;
+      } else {
+        return this;
+      }
+
+      options = options || {};
+      var readonly = [];
+      if (typeof this.constructor.readOnlyAttributes === 'function') {
+        readonly = readonly.concat(this.constructor.readOnlyAttributes());
+      }
+      for (var k in changes) {
+        if (k === 'createdAt' || k === 'updatedAt') {
+          // This property is read-only, but for legacy reasons we silently
+          // ignore it
+          continue;
+        }
+        if (readonly.indexOf(k) > -1) {
+          throw new Error('Cannot modify readonly attribute: ' + k);
+        }
+        if (options.unset) {
+          newOps[k] = new _ParseOp.UnsetOp();
+        } else if (changes[k] instanceof _ParseOp.Op) {
+          newOps[k] = changes[k];
+        } else if (changes[k] && typeof changes[k] === 'object' && typeof changes[k].__op === 'string') {
+          newOps[k] = (0, _ParseOp.opFromJSON)(changes[k]);
+        } else if (k === 'objectId' || k === 'id') {
+          this.id = changes[k];
+        } else if (k === 'ACL' && typeof changes[k] === 'object' && !(changes[k] instanceof _ParseACL2['default'])) {
+          newOps[k] = new _ParseOp.SetOp(new _ParseACL2['default'](changes[k]));
+        } else {
+          newOps[k] = new _ParseOp.SetOp(changes[k]);
+        }
+      }
+
+      // Calculate new values
+      var currentAttributes = this.attributes;
+      var newValues = {};
+      for (var attr in newOps) {
+        if (newOps[attr] instanceof _ParseOp.RelationOp) {
+          newValues[attr] = newOps[attr].applyTo(currentAttributes[attr], this, attr);
+        } else if (!(newOps[attr] instanceof _ParseOp.UnsetOp)) {
+          newValues[attr] = newOps[attr].applyTo(currentAttributes[attr]);
+        }
+      }
+
+      // Validate changes
+      var validation = this.validate(newValues);
+      if (validation) {
+        if (typeof options.error === 'function') {
+          options.error(this, validation);
+        }
+        return false;
+      }
+
+      // Consolidate Ops
+      var pendingOps = this._getPendingOps();
+      var last = pendingOps.length - 1;
+      for (var attr in newOps) {
+        var nextOp = newOps[attr].mergeWith(pendingOps[last][attr]);
+        ObjectState.setPendingOp(this.className, this._getStateIdentifier(), attr, nextOp);
+      }
+
+      return this;
+    }
+
+    /**
+     * Remove an attribute from the model. This is a noop if the attribute doesn't
+     * exist.
+     * @method unset
+     * @param {String} attr The string name of an attribute.
+     */
+  }, {
+    key: 'unset',
+    value: function unset(attr, options) {
+      options = options || {};
+      options.unset = true;
+      return this.set(attr, null, options);
+    }
+
+    /**
+     * Atomically increments the value of the given attribute the next time the
+     * object is saved. If no amount is specified, 1 is used by default.
+     *
+     * @method increment
+     * @param attr {String} The key.
+     * @param amount {Number} The amount to increment by (optional).
+     */
+  }, {
+    key: 'increment',
+    value: function increment(attr, amount) {
+      if (typeof amount === 'undefined') {
+        amount = 1;
+      }
+      if (typeof amount !== 'number') {
+        throw new Error('Cannot increment by a non-numeric amount.');
+      }
+      return this.set(attr, new _ParseOp.IncrementOp(amount));
+    }
+
+    /**
+     * Atomically add an object to the end of the array associated with a given
+     * key.
+     * @method add
+     * @param attr {String} The key.
+     * @param item {} The item to add.
+     */
+  }, {
+    key: 'add',
+    value: function add(attr, item) {
+      return this.set(attr, new _ParseOp.AddOp([item]));
+    }
+
+    /**
+     * Atomically add an object to the array associated with a given key, only
+     * if it is not already present in the array. The position of the insert is
+     * not guaranteed.
+     *
+     * @method addUnique
+     * @param attr {String} The key.
+     * @param item {} The object to add.
+     */
+  }, {
+    key: 'addUnique',
+    value: function addUnique(attr, item) {
+      return this.set(attr, new _ParseOp.AddUniqueOp([item]));
+    }
+
+    /**
+     * Atomically remove all instances of an object from the array associated
+     * with a given key.
+     *
+     * @method remove
+     * @param attr {String} The key.
+     * @param item {} The object to remove.
+     */
+  }, {
+    key: 'remove',
+    value: function remove(attr, item) {
+      return this.set(attr, new _ParseOp.RemoveOp([item]));
+    }
+
+    /**
+     * Returns an instance of a subclass of Parse.Op describing what kind of
+     * modification has been performed on this field since the last time it was
+     * saved. For example, after calling object.increment("x"), calling
+     * object.op("x") would return an instance of Parse.Op.Increment.
+     *
+     * @method op
+     * @param attr {String} The key.
+     * @returns {Parse.Op} The operation, or undefined if none.
+     */
+  }, {
+    key: 'op',
+    value: function op(attr) {
+      var pending = this._getPendingOps();
+      for (var i = pending.length; i--;) {
+        if (pending[i][attr]) {
+          return pending[i][attr];
+        }
+      }
+    }
+
+    /**
+     * Creates a new model with identical attributes to this one.
+     * @method clone
+     * @return {Parse.Object}
+     */
+  }, {
+    key: 'clone',
+    value: function clone() {
+      var clone = new this.constructor();
+      if (clone.set) {
+        clone.set(this.attributes);
+      }
+      if (!clone.className) {
+        clone.className = this.className;
+      }
+      return clone;
+    }
+
+    /**
+     * Returns true if this object has never been saved to Parse.
+     * @method isNew
+     * @return {Boolean}
+     */
+  }, {
+    key: 'isNew',
+    value: function isNew() {
+      return !this.id;
+    }
+
+    /**
+     * Returns true if this object was created by the Parse server when the
+     * object might have already been there (e.g. in the case of a Facebook
+     * login)
+     * @method existed
+     * @return {Boolean}
+     */
+  }, {
+    key: 'existed',
+    value: function existed() {
+      if (!this.id) {
+        return false;
+      }
+      var state = ObjectState.getState(this.className, this._getStateIdentifier());
+      if (state) {
+        return state.existed;
+      }
+      return false;
+    }
+
+    /**
+     * Checks if the model is currently in a valid state.
+     * @method isValid
+     * @return {Boolean}
+     */
+  }, {
+    key: 'isValid',
+    value: function isValid() {
+      return !this.validate(this.attributes);
+    }
+
+    /**
+     * You should not call this function directly unless you subclass
+     * <code>Parse.Object</code>, in which case you can override this method
+     * to provide additional validation on <code>set</code> and
+     * <code>save</code>.  Your implementation should return
+     *
+     * @method validate
+     * @param {Object} attrs The current data to validate.
+     * @return {} False if the data is valid.  An error object otherwise.
+     * @see Parse.Object#set
+     */
+  }, {
+    key: 'validate',
+    value: function validate(attrs) {
+      if (attrs.hasOwnProperty('ACL') && !(attrs.ACL instanceof _ParseACL2['default'])) {
+        return new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'ACL must be a Parse ACL.');
+      }
+      for (var key in attrs) {
+        if (!/^[A-Za-z][0-9A-Za-z_]*$/.test(key)) {
+          return new _ParseError2['default'](_ParseError2['default'].INVALID_KEY_NAME);
+        }
+      }
+      return false;
+    }
+
+    /**
+     * Returns the ACL for this object.
+     * @method getACL
+     * @returns {Parse.ACL} An instance of Parse.ACL.
+     * @see Parse.Object#get
+     */
+  }, {
+    key: 'getACL',
+    value: function getACL() {
+      var acl = this.get('ACL');
+      if (acl instanceof _ParseACL2['default']) {
+        return acl;
+      }
+      return null;
+    }
+
+    /**
+     * Sets the ACL to be used for this object.
+     * @method setACL
+     * @param {Parse.ACL} acl An instance of Parse.ACL.
+     * @param {Object} options Optional Backbone-like options object to be
+     *     passed in to set.
+     * @return {Boolean} Whether the set passed validation.
+     * @see Parse.Object#set
+     */
+  }, {
+    key: 'setACL',
+    value: function setACL(acl, options) {
+      return this.set('ACL', acl, options);
+    }
+
+    /**
+     * Clears all attributes on a model
+     * @method clear
+     */
+  }, {
+    key: 'clear',
+    value: function clear() {
+      var attributes = this.attributes;
+      var erasable = {};
+      var readonly = ['createdAt', 'updatedAt'];
+      if (typeof this.constructor.readOnlyAttributes === 'function') {
+        readonly = readonly.concat(this.constructor.readOnlyAttributes());
+      }
+      for (var attr in attributes) {
+        if (readonly.indexOf(attr) < 0) {
+          erasable[attr] = true;
+        }
+      }
+      return this.set(erasable, { unset: true });
+    }
+
+    /**
+     * Fetch the model from the server. If the server's representation of the
+     * model differs from its current attributes, they will be overriden.
+     *
+     * @method fetch
+     * @param {Object} options A Backbone-style callback object.
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback.
+     *   <li>error: An Backbone-style error callback.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     * @return {Parse.Promise} A promise that is fulfilled when the fetch
+     *     completes.
+     */
+  }, {
+    key: 'fetch',
+    value: function fetch(options) {
+      options = options || {};
+      var fetchOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        fetchOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        fetchOptions.sessionToken = options.sessionToken;
+      }
+      var controller = _CoreManager2['default'].getObjectController();
+      return controller.fetch(this, true, fetchOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Set a hash of model attributes, and save the model to the server.
+     * updatedAt will be updated when the request returns.
+     * You can either call it as:<pre>
+     *   object.save();</pre>
+     * or<pre>
+     *   object.save(null, options);</pre>
+     * or<pre>
+     *   object.save(attrs, options);</pre>
+     * or<pre>
+     *   object.save(key, value, options);</pre>
+     *
+     * For example, <pre>
+     *   gameTurn.save({
+     *     player: "Jake Cutter",
+     *     diceRoll: 2
+     *   }, {
+     *     success: function(gameTurnAgain) {
+     *       // The save was successful.
+     *     },
+     *     error: function(gameTurnAgain, error) {
+     *       // The save failed.  Error is an instance of Parse.Error.
+     *     }
+     *   });</pre>
+     * or with promises:<pre>
+     *   gameTurn.save({
+     *     player: "Jake Cutter",
+     *     diceRoll: 2
+     *   }).then(function(gameTurnAgain) {
+     *     // The save was successful.
+     *   }, function(error) {
+     *     // The save failed.  Error is an instance of Parse.Error.
+     *   });</pre>
+     *
+     * @method save
+     * @param {Object} options A Backbone-style callback object.
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback.
+     *   <li>error: An Backbone-style error callback.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     * @return {Parse.Promise} A promise that is fulfilled when the save
+     *     completes.
+     */
+  }, {
+    key: 'save',
+    value: function save(arg1, arg2, arg3) {
+      var _this = this;
+
+      var attrs;
+      var options;
+      if (typeof arg1 === 'object' || typeof arg1 === 'undefined') {
+        attrs = arg1;
+        options = arg2;
+      } else {
+        attrs = {};
+        attrs[arg1] = arg2;
+        options = arg3;
+      }
+
+      // Support save({ success: function() {}, error: function() {} })
+      if (!options && attrs) {
+        options = {};
+        if (typeof attrs.success === 'function') {
+          options.success = attrs.success;
+          delete attrs.success;
+        }
+        if (typeof attrs.error === 'function') {
+          options.error = attrs.error;
+          delete attrs.error;
+        }
+      }
+
+      if (attrs) {
+        var validation = this.validate(attrs);
+        if (validation) {
+          if (options && typeof options.error === 'function') {
+            options.error(this, validation);
+          }
+          return _ParsePromise2['default'].error(validation);
+        }
+        this.set(attrs, options);
+      }
+
+      options = options || {};
+      var saveOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        saveOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        saveOptions.sessionToken = options.sessionToken;
+      }
+
+      var controller = _CoreManager2['default'].getObjectController();
+      var unsaved = (0, _unsavedChildren2['default'])(this);
+      return controller.save(unsaved, saveOptions).then(function () {
+        return controller.save(_this, saveOptions);
+      })._thenRunCallbacks(options, this);
+    }
+
+    /**
+     * Destroy this model on the server if it was already persisted.
+     * If `wait: true` is passed, waits for the server to respond
+     * before removal.
+     *
+     * @method destroy
+     * @param {Object} options A Backbone-style callback object.
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback
+     *   <li>error: An Backbone-style error callback.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     * @return {Parse.Promise} A promise that is fulfilled when the destroy
+     *     completes.
+     */
+  }, {
+    key: 'destroy',
+    value: function destroy(options) {
+      options = options || {};
+      var destroyOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        destroyOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        destroyOptions.sessionToken = options.sessionToken;
+      }
+      if (!this.id) {
+        return _ParsePromise2['default'].as()._thenRunCallbacks(options);
+      }
+      return _CoreManager2['default'].getObjectController().destroy(this, destroyOptions)._thenRunCallbacks(options);
+    }
+
+    /** Static methods **/
+
+  }, {
+    key: 'attributes',
+    get: function get() {
+      return _Object$freeze(ObjectState.estimateAttributes(this.className, this._getStateIdentifier()));
+    }
+
+    /**
+     * The first time this object was saved on the server.
+     * @property createdAt
+     * @type Date
+     */
+  }, {
+    key: 'createdAt',
+    get: function get() {
+      return this._getServerData().createdAt;
+    }
+
+    /**
+     * The last time this object was updated on the server.
+     * @property updatedAt
+     * @type Date
+     */
+  }, {
+    key: 'updatedAt',
+    get: function get() {
+      return this._getServerData().updatedAt;
+    }
+  }], [{
+    key: '_clearAllState',
+    value: function _clearAllState() {
+      ObjectState._clearAllState();
+    }
+
+    /**
+     * Fetches the given list of Parse.Object.
+     * If any error is encountered, stops and calls the error handler.
+     *
+     * <pre>
+     *   Parse.Object.fetchAll([object1, object2, ...], {
+     *     success: function(list) {
+     *       // All the objects were fetched.
+     *     },
+     *     error: function(error) {
+     *       // An error occurred while fetching one of the objects.
+     *     },
+     *   });
+     * </pre>
+     *
+     * @method fetchAll
+     * @param {Array} list A list of <code>Parse.Object</code>.
+     * @param {Object} options A Backbone-style callback object.
+     * @static
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback.
+     *   <li>error: An Backbone-style error callback.
+     * </ul>
+     */
+  }, {
+    key: 'fetchAll',
+    value: function fetchAll(list, options) {
+      var options = options || {};
+
+      var queryOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        queryOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        queryOptions.sessionToken = options.sessionToken;
+      }
+      return _CoreManager2['default'].getObjectController().fetch(list, true, queryOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Fetches the given list of Parse.Object if needed.
+     * If any error is encountered, stops and calls the error handler.
+     *
+     * <pre>
+     *   Parse.Object.fetchAllIfNeeded([object1, ...], {
+     *     success: function(list) {
+     *       // Objects were fetched and updated.
+     *     },
+     *     error: function(error) {
+     *       // An error occurred while fetching one of the objects.
+     *     },
+     *   });
+     * </pre>
+     *
+     * @method fetchAllIfNeeded
+     * @param {Array} list A list of <code>Parse.Object</code>.
+     * @param {Object} options A Backbone-style callback object.
+     * @static
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback.
+     *   <li>error: An Backbone-style error callback.
+     * </ul>
+     */
+  }, {
+    key: 'fetchAllIfNeeded',
+    value: function fetchAllIfNeeded(list, options) {
+      var options = options || {};
+
+      var queryOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        queryOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        queryOptions.sessionToken = options.sessionToken;
+      }
+      return _CoreManager2['default'].getObjectController().fetch(list, false, queryOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Destroy the given list of models on the server if it was already persisted.
+     *
+     * <p>Unlike saveAll, if an error occurs while deleting an individual model,
+     * this method will continue trying to delete the rest of the models if
+     * possible, except in the case of a fatal error like a connection error.
+     *
+     * <p>In particular, the Parse.Error object returned in the case of error may
+     * be one of two types:
+     *
+     * <ul>
+     *   <li>A Parse.Error.AGGREGATE_ERROR. This object's "errors" property is an
+     *       array of other Parse.Error objects. Each error object in this array
+     *       has an "object" property that references the object that could not be
+     *       deleted (for instance, because that object could not be found).</li>
+     *   <li>A non-aggregate Parse.Error. This indicates a serious error that
+     *       caused the delete operation to be aborted partway through (for
+     *       instance, a connection failure in the middle of the delete).</li>
+     * </ul>
+     *
+     * <pre>
+     *   Parse.Object.destroyAll([object1, object2, ...], {
+     *     success: function() {
+     *       // All the objects were deleted.
+     *     },
+     *     error: function(error) {
+     *       // An error occurred while deleting one or more of the objects.
+     *       // If this is an aggregate error, then we can inspect each error
+     *       // object individually to determine the reason why a particular
+     *       // object was not deleted.
+     *       if (error.code === Parse.Error.AGGREGATE_ERROR) {
+     *         for (var i = 0; i < error.errors.length; i++) {
+     *           console.log("Couldn't delete " + error.errors[i].object.id +
+     *             "due to " + error.errors[i].message);
+     *         }
+     *       } else {
+     *         console.log("Delete aborted because of " + error.message);
+     *       }
+     *     },
+     *   });
+     * </pre>
+     *
+     * @method destroyAll
+     * @param {Array} list A list of <code>Parse.Object</code>.
+     * @param {Object} options A Backbone-style callback object.
+     * @static
+     * Valid options are:<ul>
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     * @return {Parse.Promise} A promise that is fulfilled when the destroyAll
+     *     completes.
+     */
+  }, {
+    key: 'destroyAll',
+    value: function destroyAll(list, options) {
+      var options = options || {};
+
+      var destroyOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        destroyOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        destroyOptions.sessionToken = options.sessionToken;
+      }
+      return _CoreManager2['default'].getObjectController().destroy(list, destroyOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Saves the given list of Parse.Object.
+     * If any error is encountered, stops and calls the error handler.
+     *
+     * <pre>
+     *   Parse.Object.saveAll([object1, object2, ...], {
+     *     success: function(list) {
+     *       // All the objects were saved.
+     *     },
+     *     error: function(error) {
+     *       // An error occurred while saving one of the objects.
+     *     },
+     *   });
+     * </pre>
+     *
+     * @method saveAll
+     * @param {Array} list A list of <code>Parse.Object</code>.
+     * @param {Object} options A Backbone-style callback object.
+     * @static
+     * Valid options are:<ul>
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     */
+  }, {
+    key: 'saveAll',
+    value: function saveAll(list, options) {
+      var options = options || {};
+
+      var saveOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        saveOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        saveOptions.sessionToken = options.sessionToken;
+      }
+      return _CoreManager2['default'].getObjectController().save(list, saveOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Creates a reference to a subclass of Parse.Object with the given id. This
+     * does not exist on Parse.Object, only on subclasses.
+     *
+     * <p>A shortcut for: <pre>
+     *  var Foo = Parse.Object.extend("Foo");
+     *  var pointerToFoo = new Foo();
+     *  pointerToFoo.id = "myObjectId";
+     * </pre>
+     *
+     * @method createWithoutData
+     * @param {String} id The ID of the object to create a reference to.
+     * @static
+     * @return {Parse.Object} A Parse.Object reference.
+     */
+  }, {
+    key: 'createWithoutData',
+    value: function createWithoutData(id) {
+      var obj = new this();
+      obj.id = id;
+      return obj;
+    }
+
+    /**
+     * Creates a new instance of a Parse Object from a JSON representation.
+     * @method fromJSON
+     * @param {Object} json The JSON map of the Object's data
+     * @static
+     * @return {Parse.Object} A Parse.Object reference
+     */
+  }, {
+    key: 'fromJSON',
+    value: function fromJSON(json) {
+      if (!json.className) {
+        throw new Error('Cannot create an object without a className');
+      }
+      var constructor = classMap[json.className];
+      var o = constructor ? new constructor() : new ParseObject(json.className);
+      var otherAttributes = {};
+      for (var attr in json) {
+        if (attr !== 'className' && attr !== '__type') {
+          otherAttributes[attr] = json[attr];
+        }
+      }
+      o._finishFetch(otherAttributes);
+      if (json.objectId) {
+        o._setExisted(true);
+      }
+      return o;
+    }
+
+    /**
+     * Registers a subclass of Parse.Object with a specific class name.
+     * When objects of that class are retrieved from a query, they will be
+     * instantiated with this subclass.
+     * This is only necessary when using ES6 subclassing.
+     * @method registerSubclass
+     * @param {String} className The class name of the subclass
+     * @param {Class} constructor The subclass
+     */
+  }, {
+    key: 'registerSubclass',
+    value: function registerSubclass(className, constructor) {
+      if (typeof className !== 'string') {
+        throw new TypeError('The first argument must be a valid class name.');
+      }
+      if (typeof constructor === 'undefined') {
+        throw new TypeError('You must supply a subclass constructor.');
+      }
+      if (typeof constructor !== 'function') {
+        throw new TypeError('You must register the subclass constructor. ' + 'Did you attempt to register an instance of the subclass?');
+      }
+      classMap[className] = constructor;
+      if (!constructor.className) {
+        constructor.className = className;
+      }
+    }
+
+    /**
+     * Creates a new subclass of Parse.Object for the given Parse class name.
+     *
+     * <p>Every extension of a Parse class will inherit from the most recent
+     * previous extension of that class. When a Parse.Object is automatically
+     * created by parsing JSON, it will use the most recent extension of that
+     * class.</p>
+     *
+     * <p>You should call either:<pre>
+     *     var MyClass = Parse.Object.extend("MyClass", {
+     *         <i>Instance methods</i>,
+     *         initialize: function(attrs, options) {
+     *             this.someInstanceProperty = [],
+     *             <i>Other instance properties</i>
+     *         }
+     *     }, {
+     *         <i>Class properties</i>
+     *     });</pre>
+     * or, for Backbone compatibility:<pre>
+     *     var MyClass = Parse.Object.extend({
+     *         className: "MyClass",
+     *         <i>Instance methods</i>,
+     *         initialize: function(attrs, options) {
+     *             this.someInstanceProperty = [],
+     *             <i>Other instance properties</i>
+     *         }
+     *     }, {
+     *         <i>Class properties</i>
+     *     });</pre></p>
+     *
+     * @method extend
+     * @param {String} className The name of the Parse class backing this model.
+     * @param {Object} protoProps Instance properties to add to instances of the
+     *     class returned from this method.
+     * @param {Object} classProps Class properties to add the class returned from
+     *     this method.
+     * @return {Class} A new subclass of Parse.Object.
+     */
+  }, {
+    key: 'extend',
+    value: function extend(className, protoProps, classProps) {
+      if (typeof className !== 'string') {
+        if (className && typeof className.className === 'string') {
+          return ParseObject.extend(className.className, className, protoProps);
+        } else {
+          throw new Error('Parse.Object.extend\'s first argument should be the className.');
+        }
+      }
+      var adjustedClassName = className;
+
+      if (adjustedClassName === 'User' && _CoreManager2['default'].get('PERFORM_USER_REWRITE')) {
+        adjustedClassName = '_User';
+      }
+
+      var parentProto = ParseObject.prototype;
+      if (this.hasOwnProperty('__super__') && this.__super__) {
+        parentProto = this.prototype;
+      } else if (classMap[adjustedClassName]) {
+        parentProto = classMap[adjustedClassName].prototype;
+      }
+      var ParseObjectSubclass = function ParseObjectSubclass(attributes) {
+        this.className = adjustedClassName;
+        this._objCount = objectCount++;
+        if (attributes && typeof attributes === 'object') {
+          if (!this.set(attributes || {})) {
+            throw new Error('Can\'t create an invalid Parse Object');
+          }
+        }
+        // Enable legacy initializers
+        if (typeof this.initialize === 'function') {
+          this.initialize.apply(this, arguments);
+        }
+      };
+      ParseObjectSubclass.className = adjustedClassName;
+      ParseObjectSubclass.__super__ = parentProto;
+
+      ParseObjectSubclass.prototype = _Object$create(parentProto, {
+        constructor: {
+          value: ParseObjectSubclass,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      });
+
+      if (protoProps) {
+        for (var prop in protoProps) {
+          if (prop !== 'className') {
+            _Object$defineProperty(ParseObjectSubclass.prototype, prop, {
+              value: protoProps[prop],
+              enumerable: false,
+              writable: true,
+              configurable: true
+            });
+          }
+        }
+      }
+
+      if (classProps) {
+        for (var prop in classProps) {
+          if (prop !== 'className') {
+            _Object$defineProperty(ParseObjectSubclass, prop, {
+              value: classProps[prop],
+              enumerable: false,
+              writable: true,
+              configurable: true
+            });
+          }
+        }
+      }
+
+      ParseObjectSubclass.extend = function (name, protoProps, classProps) {
+        if (typeof name === 'string') {
+          return ParseObject.extend.call(ParseObjectSubclass, name, protoProps, classProps);
+        }
+        return ParseObject.extend.call(ParseObjectSubclass, adjustedClassName, name, protoProps);
+      };
+      ParseObjectSubclass.createWithoutData = ParseObject.createWithoutData;
+
+      classMap[adjustedClassName] = ParseObjectSubclass;
+      return ParseObjectSubclass;
+    }
+
+    /**
+     * Enable single instance objects, where any local objects with the same Id
+     * share the same attributes, and stay synchronized with each other.
+     * This is disabled by default in server environments, since it can lead to
+     * security issues.
+     * @method enableSingleInstance
+     */
+  }, {
+    key: 'enableSingleInstance',
+    value: function enableSingleInstance() {
+      singleInstance = true;
+    }
+
+    /**
+     * Disable single instance objects, where any local objects with the same Id
+     * share the same attributes, and stay synchronized with each other.
+     * When disabled, you can have two instances of the same object in memory
+     * without them sharing attributes.
+     * @method disableSingleInstance
+     */
+  }, {
+    key: 'disableSingleInstance',
+    value: function disableSingleInstance() {
+      singleInstance = false;
+    }
+  }]);
+
+  return ParseObject;
+})();
+
+exports['default'] = ParseObject;
+
+_CoreManager2['default'].setObjectController({
+  fetch: function fetch(target, forceFetch, options) {
+    if (Array.isArray(target)) {
+      if (target.length < 1) {
+        return _ParsePromise2['default'].as([]);
+      }
+      var objs = [];
+      var ids = [];
+      var className = null;
+      var results = [];
+      var error = null;
+      target.forEach(function (el, i) {
+        if (error) {
+          return;
+        }
+        if (!className) {
+          className = el.className;
+        }
+        if (className !== el.className) {
+          error = new _ParseError2['default'](_ParseError2['default'].INVALID_CLASS_NAME, 'All objects should be of the same class');
+        }
+        if (!el.id) {
+          error = new _ParseError2['default'](_ParseError2['default'].MISSING_OBJECT_ID, 'All objects must have an ID');
+        }
+        if (forceFetch || _Object$keys(el._getServerData()).length === 0) {
+          ids.push(el.id);
+          objs.push(el);
+        }
+        results.push(el);
+      });
+      if (error) {
+        return _ParsePromise2['default'].error(error);
+      }
+      var query = new _ParseQuery2['default'](className);
+      query.containedIn('objectId', ids);
+      query._limit = ids.length;
+      return query.find(options).then(function (objects) {
+        var idMap = {};
+        objects.forEach(function (o) {
+          idMap[o.id] = o;
+        });
+        for (var i = 0; i < objs.length; i++) {
+          var obj = objs[i];
+          if (!obj || !obj.id || !idMap[obj.id]) {
+            if (forceFetch) {
+              return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].OBJECT_NOT_FOUND, 'All objects must exist on the server.'));
             }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r.track = n;
-            var s = e("./CoreManager"),
-                o = a(s);
-            o["default"].setAnalyticsController({
-                track: function(e, t) {
-                    var r = o["default"].getRESTController();
-                    return r.request("POST", "events/" + e, {
-                        dimensions: t
-                    })
-                }
+          }
+        }
+        if (!singleInstance) {
+          // If single instance objects are disabled, we need to replace the
+          for (var i = 0; i < results.length; i++) {
+            var obj = results[i];
+            if (obj && obj.id && idMap[obj.id]) {
+              var id = obj.id;
+              obj._finishFetch(idMap[id].toJSON());
+              results[i] = idMap[id];
+            }
+          }
+        }
+        return _ParsePromise2['default'].as(results);
+      });
+    } else {
+      var RESTController = _CoreManager2['default'].getRESTController();
+      return RESTController.request('GET', 'classes/' + target.className + '/' + target._getId(), {}, options).then(function (response, status, xhr) {
+        if (target instanceof ParseObject) {
+          target._clearPendingOps();
+          target._finishFetch(response);
+        }
+        return target;
+      });
+    }
+  },
+
+  destroy: function destroy(target, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    if (Array.isArray(target)) {
+      if (target.length < 1) {
+        return _ParsePromise2['default'].as([]);
+      }
+      var batches = [[]];
+      target.forEach(function (obj) {
+        if (!obj.id) {
+          return;
+        }
+        batches[batches.length - 1].push(obj);
+        if (batches[batches.length - 1].length >= 20) {
+          batches.push([]);
+        }
+      });
+      if (batches[batches.length - 1].length === 0) {
+        // If the last batch is empty, remove it
+        batches.pop();
+      }
+      var deleteCompleted = _ParsePromise2['default'].as();
+      var errors = [];
+      batches.forEach(function (batch) {
+        deleteCompleted = deleteCompleted.then(function () {
+          return RESTController.request('POST', 'batch', {
+            requests: batch.map(function (obj) {
+              return {
+                method: 'DELETE',
+                path: '/1/classes/' + obj.className + '/' + obj._getId(),
+                body: {}
+              };
             })
-        }, {
-            "./CoreManager": 3,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        2: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t, r) {
-                if (r = r || {}, "string" != typeof e || 0 === e.length) throw new TypeError("Cloud function name must be a string.");
-                return o["default"].getCloudController().run(e, t, {
-                    useMasterKey: r.useMasterKey
-                })._thenRunCallbacks(r)
+          }, options).then(function (results) {
+            for (var i = 0; i < results.length; i++) {
+              if (results[i] && results[i].hasOwnProperty('error')) {
+                var err = new _ParseError2['default'](results[i].error.code, results[i].error.error);
+                err.object = batch[i];
+                errors.push(err);
+              }
             }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r.run = n;
-            var s = e("./CoreManager"),
-                o = a(s),
-                i = e("./decode"),
-                u = a(i),
-                l = e("./encode"),
-                c = a(l),
-                f = e("./ParseError"),
-                d = a(f),
-                h = e("./ParsePromise"),
-                p = a(h);
-            o["default"].setCloudController({
-                run: function(e, t, r) {
-                    var n = o["default"].getRESTController(),
-                        a = (0, c["default"])(t, !0),
-                        s = n.request("POST", "functions/" + e, a, {
-                            useMasterKey: !!r.useMasterKey
-                        });
-                    return s.then(function(e) {
-                        var t = (0, u["default"])(e);
-                        return t && t.hasOwnProperty("result") ? p["default"].as(t.result) : p["default"].error(new d["default"](d["default"].INVALID_JSON, "The server returned an invalid response."))
-                    })._thenRunCallbacks(r)
-                }
-            })
-        }, {
-            "./CoreManager": 3,
-            "./ParseError": 10,
-            "./ParsePromise": 16,
-            "./decode": 29,
-            "./encode": 30,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        3: [function(e, t, r) {
-            (function(e) {
-                "use strict";
-                var r = {
-                    IS_NODE: "undefined" != typeof e && !!e.versions && !!e.versions.node,
-                    REQUEST_ATTEMPT_LIMIT: 5,
-                    SERVER_URL: "https://api.parse.com",
-                    VERSION: "1.6.7",
-                    APPLICATION_ID: null,
-                    JAVASCRIPT_KEY: null,
-                    MASTER_KEY: null,
-                    USE_MASTER_KEY: !1,
-                    PERFORM_USER_REWRITE: !0,
-                    FORCE_REVOCABLE_SESSION: !1
-                };
-                t.exports = {
-                    get: function(e) {
-                        if (r.hasOwnProperty(e)) return r[e];
-                        throw new Error("Configuration key not found: " + e)
-                    },
-                    set: function(e, t) {
-                        r[e] = t
-                    },
-                    setAnalyticsController: function(e) {
-                        if ("function" != typeof e.track) throw new Error("AnalyticsController must implement track()");
-                        r.AnalyticsController = e
-                    },
-                    getAnalyticsController: function() {
-                        return r.AnalyticsController
-                    },
-                    setCloudController: function(e) {
-                        if ("function" != typeof e.run) throw new Error("CloudController must implement run()");
-                        r.CloudController = e
-                    },
-                    getCloudController: function() {
-                        return r.CloudController
-                    },
-                    setConfigController: function(e) {
-                        if ("function" != typeof e.current) throw new Error("ConfigController must implement current()");
-                        if ("function" != typeof e.get) throw new Error("ConfigController must implement get()");
-                        r.ConfigController = e
-                    },
-                    getConfigController: function() {
-                        return r.ConfigController
-                    },
-                    setFileController: function(e) {
-                        if ("function" != typeof e.saveFile) throw new Error("FileController must implement saveFile()");
-                        if ("function" != typeof e.saveBase64) throw new Error("FileController must implement saveBase64()");
-                        r.FileController = e
-                    },
-                    getFileController: function() {
-                        return r.FileController
-                    },
-                    setInstallationController: function(e) {
-                        if ("function" != typeof e.currentInstallationId) throw new Error("InstallationController must implement currentInstallationId()");
-                        r.InstallationController = e
-                    },
-                    getInstallationController: function() {
-                        return r.InstallationController
-                    },
-                    setPushController: function(e) {
-                        if ("function" != typeof e.send) throw new Error("PushController must implement send()");
-                        r.PushController = e
-                    },
-                    getPushController: function() {
-                        return r.PushController
-                    },
-                    setObjectController: function(e) {
-                        if ("function" != typeof e.save) throw new Error("ObjectController must implement save()");
-                        if ("function" != typeof e.fetch) throw new Error("ObjectController must implement fetch()");
-                        if ("function" != typeof e.destroy) throw new Error("ObjectController must implement destroy()");
-                        r.ObjectController = e
-                    },
-                    getObjectController: function() {
-                        return r.ObjectController
-                    },
-                    setQueryController: function(e) {
-                        if ("function" != typeof e.find) throw new Error("QueryController must implement find()");
-                        r.QueryController = e
-                    },
-                    getQueryController: function() {
-                        return r.QueryController
-                    },
-                    setRESTController: function(e) {
-                        if ("function" != typeof e.request) throw new Error("RESTController must implement request()");
-                        if ("function" != typeof e.ajax) throw new Error("RESTController must implement ajax()");
-                        r.RESTController = e
-                    },
-                    getRESTController: function() {
-                        return r.RESTController
-                    },
-                    setSessionController: function(e) {
-                        if ("function" != typeof e.getSession) throw new Error("A SessionController must implement getSession()");
-                        r.SessionController = e
-                    },
-                    getSessionController: function() {
-                        return r.SessionController
-                    },
-                    setStorageController: function(e) {
-                        if (e.async) {
-                            if ("function" != typeof e.getItemAsync) throw new Error("An async StorageController must implement getItemAsync()");
-                            if ("function" != typeof e.setItemAsync) throw new Error("An async StorageController must implement setItemAsync()");
-                            if ("function" != typeof e.removeItemAsync) throw new Error("An async StorageController must implement removeItemAsync()")
-                        } else {
-                            if ("function" != typeof e.getItem) throw new Error("A synchronous StorageController must implement getItem()");
-                            if ("function" != typeof e.setItem) throw new Error("A synchronous StorageController must implement setItem()");
-                            if ("function" != typeof e.removeItem) throw new Error("A synchonous StorageController must implement removeItem()")
-                        }
-                        r.StorageController = e
-                    },
-                    getStorageController: function() {
-                        return r.StorageController
-                    },
-                    setUserController: function(e) {
-                        if ("function" != typeof e.setCurrentUser) throw new Error("A UserController must implement setCurrentUser()");
-                        if ("function" != typeof e.currentUser) throw new Error("A UserController must implement currentUser()");
-                        if ("function" != typeof e.currentUserAsync) throw new Error("A UserController must implement currentUserAsync()");
-                        if ("function" != typeof e.signUp) throw new Error("A UserController must implement signUp()");
-                        if ("function" != typeof e.logIn) throw new Error("A UserController must implement logIn()");
-                        if ("function" != typeof e.become) throw new Error("A UserController must implement become()");
-                        if ("function" != typeof e.logOut) throw new Error("A UserController must implement logOut()");
-                        if ("function" != typeof e.requestPasswordReset) throw new Error("A UserController must implement requestPasswordReset()");
-                        if ("function" != typeof e.upgradeToRevocableSession) throw new Error("A UserController must implement upgradeToRevocableSession()");
-                        if ("function" != typeof e.linkWith) throw new Error("A UserController must implement linkWith()");
-                        r.UserController = e
-                    },
-                    getUserController: function() {
-                        return r.UserController
-                    }
-                }
-            }).call(this, e("_process"))
-        }, {
-            _process: 49
-        }],
-        4: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var a, s, o = e("./parseDate"),
-                i = n(o),
-                u = e("./ParseUser"),
-                l = n(u),
-                c = !1;
-            r["default"] = {
-                init: function(e) {
-                    if ("undefined" == typeof FB) throw new Error("The Facebook JavaScript SDK must be loaded before calling init.");
-                    if (s = {}, e)
-                        for (var t in e) s[t] = e[t];
-                    if (s.status && "undefined" != typeof console) {
-                        var r = console.warn || console.log || function() {};
-                        r.call(console, 'The "status" flag passed into FB.init, when set to true, can interfere with Parse Facebook integration, so it has been suppressed. Please call FB.getLoginStatus() explicitly if you require this behavior.')
-                    }
-                    s.status = !1, FB.init(s), l["default"]._registerAuthenticationProvider({
-                        authenticate: function(e) {
-                            var t = this;
-                            "undefined" == typeof FB && e.error(this, "Facebook SDK not found."), FB.login(function(r) {
-                                r.authResponse ? e.success && e.success(t, {
-                                    id: r.authResponse.userID,
-                                    access_token: r.authResponse.accessToken,
-                                    expiration_date: new Date(1e3 * r.authResponse.expiresIn + (new Date).getTime()).toJSON()
-                                }) : e.error && e.error(t, r)
-                            }, {
-                                scope: a
-                            })
-                        },
-                        restoreAuthentication: function(e) {
-                            if (e) {
-                                var t = (0, i["default"])(e.expiration_date),
-                                    r = t ? (t.getTime() - (new Date).getTime()) / 1e3 : 0,
-                                    n = {
-                                        userID: e.id,
-                                        accessToken: e.access_token,
-                                        expiresIn: r
-                                    },
-                                    a = {};
-                                if (s)
-                                    for (var o in s) a[o] = s[o];
-                                a.authResponse = n, a.status = !1;
-                                var u = FB.getAuthResponse();
-                                u && u.userID !== n.userID && FB.logout(), FB.init(a)
-                            }
-                            return !0
-                        },
-                        getAuthType: function() {
-                            return "facebook"
-                        },
-                        deauthenticate: function() {
-                            this.restoreAuthentication(null)
-                        }
-                    }), c = !0
-                },
-                isLinked: function(e) {
-                    return e._isLinked("facebook")
-                },
-                logIn: function(e, t) {
-                    if (e && "string" != typeof e) {
-                        var r = {};
-                        if (t)
-                            for (var n in t) r[n] = t[n];
-                        return r.authData = e, l["default"]._logInWith("facebook", r)
-                    }
-                    if (!c) throw new Error("You must initialize FacebookUtils before calling logIn.");
-                    return a = e, l["default"]._logInWith("facebook", t)
-                },
-                link: function(e, t, r) {
-                    if (t && "string" != typeof t) {
-                        var n = {};
-                        if (r)
-                            for (var s in r) n[s] = r[s];
-                        return n.authData = t, e._linkWith("facebook", n)
-                    }
-                    if (!c) throw new Error("You must initialize FacebookUtils before calling link.");
-                    return a = t, e._linkWith("facebook", r)
-                },
-                unlink: function(e, t) {
-                    if (!c) throw new Error("You must initialize FacebookUtils before calling unlink.");
-                    return e._unlinkFrom("facebook", t)
-                }
-            }, t.exports = r["default"]
-        }, {
-            "./ParseUser": 21,
-            "./parseDate": 34,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        5: [function(e, t, r) {
-            "use strict";
+          });
+        });
+      });
+      return deleteCompleted.then(function () {
+        if (errors.length) {
+          var aggregate = new _ParseError2['default'](_ParseError2['default'].AGGREGATE_ERROR);
+          aggregate.errors = errors;
+          return _ParsePromise2['default'].error(aggregate);
+        }
+        return _ParsePromise2['default'].as(target);
+      });
+    } else if (target instanceof ParseObject) {
+      return RESTController.request('DELETE', 'classes/' + target.className + '/' + target._getId(), {}, options).then(function () {
+        return _ParsePromise2['default'].as(target);
+      });
+    }
+    return _ParsePromise2['default'].as(target);
+  },
 
-            function n() {
-                return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1)
-            }
+  save: function save(target, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    if (Array.isArray(target)) {
+      if (target.length < 1) {
+        return _ParsePromise2['default'].as([]);
+      }
 
-            function a() {
-                return n() + n() + "-" + n() + "-" + n() + "-" + n() + "-" + n() + n() + n()
-            }
-            var s = e("babel-runtime/helpers/interop-require-default")["default"],
-                o = e("./CoreManager"),
-                i = (s(o), e("./ParsePromise")),
-                u = s(i),
-                l = e("./Storage"),
-                c = s(l),
-                f = null;
-            t.exports = {
-                currentInstallationId: function() {
-                    if ("string" == typeof f) return u["default"].as(f);
-                    var e = c["default"].generatePath("installationId");
-                    return c["default"].getItemAsync(e).then(function(t) {
-                        return t ? (f = t, t) : (t = a(), c["default"].setItemAsync(e, t).then(function() {
-                            return f = t, t
-                        }))
-                    })
-                },
-                _clearCache: function() {
-                    f = null
-                },
-                _setInstallationIdCache: function(e) {
-                    f = e
-                }
-            }
-        }, {
-            "./CoreManager": 3,
-            "./ParsePromise": 16,
-            "./Storage": 24,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        6: [function(e, t, r) {
-            "use strict";
+      var unsaved = target.concat();
+      for (var i = 0; i < target.length; i++) {
+        if (target[i] instanceof ParseObject) {
+          unsaved = unsaved.concat((0, _unsavedChildren2['default'])(target[i], true));
+        }
+      }
+      unsaved = (0, _unique2['default'])(unsaved);
 
-            function n(e, t) {
-                var r = T[e];
-                return r ? r[t] || null : null
-            }
+      var filesSaved = _ParsePromise2['default'].as();
+      var pending = [];
+      unsaved.forEach(function (el) {
+        if (el instanceof _ParseFile2['default']) {
+          filesSaved = filesSaved.then(function () {
+            return el.save();
+          });
+        } else if (el instanceof ParseObject) {
+          pending.push(el);
+        }
+      });
 
-            function a(e, t, r) {
-                var a = n(e, t);
-                return a ? a : (T[e] || (T[e] = {}), r || (r = {
-                    serverData: {},
-                    pendingOps: [{}],
-                    objectCache: {},
-                    tasks: new I["default"],
-                    existed: !1
-                }), a = T[e][t] = r)
+      return filesSaved.then(function () {
+        var objectError = null;
+        return _ParsePromise2['default']._continueWhile(function () {
+          return pending.length > 0;
+        }, function () {
+          var batch = [];
+          var nextPending = [];
+          pending.forEach(function (el) {
+            if (batch.length < 20 && (0, _canBeSerialized2['default'])(el)) {
+              batch.push(el);
+            } else {
+              nextPending.push(el);
             }
+          });
+          pending = nextPending;
+          if (batch.length < 1) {
+            return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'Tried to save a batch with a cycle.'));
+          }
 
-            function s(e, t) {
-                var r = n(e, t);
-                return null === r ? null : (delete T[e][t], r)
-            }
-
-            function o(e, t) {
-                var r = n(e, t);
-                return r ? r.serverData : {}
-            }
-
-            function i(e, t, r) {
-                var n = a(e, t).serverData;
-                for (var s in r) "undefined" != typeof r[s] ? n[s] = r[s] : delete n[s]
-            }
-
-            function u(e, t) {
-                var r = n(e, t);
-                return r ? r.pendingOps : [{}]
-            }
-
-            function l(e, t, r, n) {
-                var s = a(e, t).pendingOps,
-                    o = s.length - 1;
-                n ? s[o][r] = n : delete s[o][r]
-            }
-
-            function c(e, t) {
-                var r = a(e, t).pendingOps;
-                r.push({})
-            }
-
-            function f(e, t) {
-                var r = a(e, t).pendingOps,
-                    n = r.shift();
-                return r.length || (r[0] = {}), n
-            }
-
-            function d(e, t) {
-                var r = f(e, t),
-                    n = u(e, t),
-                    a = n[0];
-                for (var s in r)
-                    if (a[s] && r[s]) {
-                        var o = a[s].mergeWith(r[s]);
-                        o && (a[s] = o)
-                    } else a[s] = r[s]
-            }
-
-            function h(e, t) {
-                var r = n(e, t);
-                return r ? r.objectCache : {}
-            }
-
-            function p(e, t, r) {
-                for (var n = o(e, t), a = n[r], s = u(e, t), i = 0; i < s.length; i++) s[i][r] && (a = s[i][r] instanceof N.RelationOp ? s[i][r].applyTo(a, {
-                    className: e,
-                    id: t
-                }, r) : s[i][r].applyTo(a));
-                return a
-            }
-
-            function y(e, t) {
-                var r, n = {},
-                    a = o(e, t);
-                for (r in a) n[r] = a[r];
-                for (var s = u(e, t), i = 0; i < s.length; i++)
-                    for (r in s[i]) s[i][r] instanceof N.RelationOp ? n[r] = s[i][r].applyTo(n[r], {
-                        className: e,
-                        id: t
-                    }, r) : n[r] = s[i][r].applyTo(n[r]);
-                return n
-            }
-
-            function v(e, t, r) {
-                var n = a(e, t);
-                for (var s in r) {
-                    var o = r[s];
-                    if (n.serverData[s] = o, o && "object" == typeof o && !(o instanceof k["default"]) && !(o instanceof C["default"]) && !(o instanceof S["default"])) {
-                        var i = (0, w["default"])(o, !1, !0);
-                        n.objectCache[s] = JSON.stringify(i)
-                    }
-                }
-            }
-
-            function b(e, t, r) {
-                var n = a(e, t);
-                return n.tasks.enqueue(r)
-            }
-
-            function m() {
-                T = {}
-            }
-            var _ = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r.getState = n, r.initializeState = a, r.removeState = s, r.getServerData = o, r.setServerData = i, r.getPendingOps = u, r.setPendingOp = l, r.pushPendingState = c, r.popPendingState = f, r.mergeFirstPendingState = d, r.getObjectCache = h, r.estimateAttribute = p, r.estimateAttributes = y, r.commitServerChanges = v, r.enqueueTask = b, r._clearAllState = m;
-            var g = e("./encode"),
-                w = _(g),
-                O = e("./ParseFile"),
-                C = _(O),
-                P = e("./ParseObject"),
-                k = _(P),
-                A = e("./ParsePromise"),
-                E = (_(A), e("./ParseRelation")),
-                S = _(E),
-                j = e("./TaskQueue"),
-                I = _(j),
-                N = e("./ParseOp"),
-                T = {}
-        }, {
-            "./ParseFile": 11,
-            "./ParseObject": 14,
-            "./ParseOp": 15,
-            "./ParsePromise": 16,
-            "./ParseRelation": 18,
-            "./TaskQueue": 26,
-            "./encode": 30,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        7: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/interop-require-default")["default"],
-                a = e("babel-runtime/helpers/interop-require-wildcard")["default"],
-                s = e("./decode"),
-                o = n(s),
-                i = e("./encode"),
-                u = n(i),
-                l = e("./CoreManager"),
-                c = n(l),
-                f = e("./InstallationController"),
-                d = n(f),
-                h = e("./ParseOp"),
-                p = a(h),
-                y = e("./RESTController"),
-                v = n(y),
-                b = {
-                    initialize: function(e, t) {
-                        c["default"].get("IS_NODE") && console.log("It looks like you're using the browser version of the SDK in a node.js environment. You should require('parse/node') instead."), b._initialize(e, t)
-                    },
-                    _initialize: function(e, t, r) {
-                        c["default"].set("APPLICATION_ID", e), c["default"].set("JAVASCRIPT_KEY", t), c["default"].set("MASTER_KEY", r), c["default"].set("USE_MASTER_KEY", !1)
-                    }
-                };
-            Object.defineProperty(b, "applicationId", {
-                get: function() {
-                    return c["default"].get("APPLICATION_ID")
-                },
-                set: function(e) {
-                    c["default"].set("APPLICATION_ID", e)
-                }
-            }), Object.defineProperty(b, "javaScriptKey", {
-                get: function() {
-                    return c["default"].get("JAVASCRIPT_KEY")
-                },
-                set: function(e) {
-                    c["default"].set("JAVASCRIPT_KEY", e)
-                }
-            }), Object.defineProperty(b, "masterKey", {
-                get: function() {
-                    return c["default"].get("MASTER_KEY")
-                },
-                set: function(e) {
-                    c["default"].set("MASTER_KEY", e)
-                }
-            }), Object.defineProperty(b, "serverURL", {
-                get: function() {
-                    return c["default"].get("SERVER_URL")
-                },
-                set: function(e) {
-                    c["default"].set("SERVER_URL", e)
-                }
-            }), b.ACL = e("./ParseACL"), b.Analytics = e("./Analytics"), b.Cloud = e("./Cloud"), b.CoreManager = e("./CoreManager"), b.Config = e("./ParseConfig"), b.Error = e("./ParseError"), b.FacebookUtils = e("./FacebookUtils"), b.File = e("./ParseFile"), b.GeoPoint = e("./ParseGeoPoint"), b.Installation = e("./ParseInstallation"), b.Object = e("./ParseObject"), b.Op = {
-                Set: p.SetOp,
-                Unset: p.UnsetOp,
-                Increment: p.IncrementOp,
-                Add: p.AddOp,
-                Remove: p.RemoveOp,
-                AddUnique: p.AddUniqueOp,
-                Relation: p.RelationOp
-            }, b.Promise = e("./ParsePromise"), b.Push = e("./Push"), b.Query = e("./ParseQuery"), b.Relation = e("./ParseRelation"), b.Role = e("./ParseRole"), b.Session = e("./ParseSession"), b.Storage = e("./Storage"), b.User = e("./ParseUser"), b._request = function() {
-                for (var e = arguments.length, t = Array(e), r = 0; e > r; r++) t[r] = arguments[r];
-                return c["default"].getRESTController().request.apply(null, t)
-            }, b._ajax = function() {
-                for (var e = arguments.length, t = Array(e), r = 0; e > r; r++) t[r] = arguments[r];
-                return c["default"].getRESTController().ajax.apply(null, t)
-            }, b._decode = function(e, t) {
-                return (0, o["default"])(t)
-            }, b._encode = function(e, t, r) {
-                return (0, u["default"])(e, r)
-            }, b._getInstallationId = function() {
-                return c["default"].getInstallationController().currentInstallationId()
-            }, c["default"].setInstallationController(d["default"]), c["default"].setRESTController(v["default"]), b.Parse = b, t.exports = b
-        }, {
-            "./Analytics": 1,
-            "./Cloud": 2,
-            "./CoreManager": 3,
-            "./FacebookUtils": 4,
-            "./InstallationController": 5,
-            "./ParseACL": 8,
-            "./ParseConfig": 9,
-            "./ParseError": 10,
-            "./ParseFile": 11,
-            "./ParseGeoPoint": 12,
-            "./ParseInstallation": 13,
-            "./ParseObject": 14,
-            "./ParseOp": 15,
-            "./ParsePromise": 16,
-            "./ParseQuery": 17,
-            "./ParseRelation": 18,
-            "./ParseRole": 19,
-            "./ParseSession": 20,
-            "./ParseUser": 21,
-            "./Push": 22,
-            "./RESTController": 23,
-            "./Storage": 24,
-            "./decode": 29,
-            "./encode": 30,
-            "babel-runtime/helpers/interop-require-default": 47,
-            "babel-runtime/helpers/interop-require-wildcard": 48
-        }],
-        8: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"],
-                s = e("babel-runtime/core-js/object/keys")["default"],
-                o = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var i = e("./ParseRole"),
-                u = o(i),
-                l = e("./ParseUser"),
-                c = o(l),
-                f = "*",
-                d = function() {
-                    function e(t) {
-                        if (a(this, e), this.permissionsById = {}, t && "object" == typeof t)
-                            if (t instanceof c["default"]) this.setReadAccess(t, !0), this.setWriteAccess(t, !0);
-                            else
-                                for (var r in t) {
-                                    var n = t[r];
-                                    if ("string" != typeof r) throw new TypeError("Tried to create an ACL with an invalid user id.");
-                                    this.permissionsById[r] = {};
-                                    for (var s in n) {
-                                        var o = n[s];
-                                        if ("read" !== s && "write" !== s) throw new TypeError("Tried to create an ACL with an invalid permission type.");
-                                        if ("boolean" != typeof o) throw new TypeError("Tried to create an ACL with an invalid permission value.");
-                                        this.permissionsById[r][s] = o
-                                    }
-                                } else if ("function" == typeof t) throw new TypeError("ParseACL constructed with a function. Did you forget ()?")
-                    }
-                    return n(e, [{
-                        key: "toJSON",
-                        value: function() {
-                            var e = {};
-                            for (var t in this.permissionsById) e[t] = this.permissionsById[t];
-                            return e
-                        }
-                    }, {
-                        key: "equals",
-                        value: function(t) {
-                            if (!(t instanceof e)) return !1;
-                            var r = s(this.permissionsById),
-                                n = s(t.permissionsById);
-                            if (r.length !== n.length) return !1;
-                            for (var a in this.permissionsById) {
-                                if (!t.permissionsById[a]) return !1;
-                                if (this.permissionsById[a].read !== t.permissionsById[a].read) return !1;
-                                if (this.permissionsById[a].write !== t.permissionsById[a].write) return !1
-                            }
-                            return !0
-                        }
-                    }, {
-                        key: "_setAccess",
-                        value: function(e, t, r) {
-                            if (t instanceof c["default"] ? t = t.id : t instanceof u["default"] && (t = "role:" + t.getName()), "string" != typeof t) throw new TypeError("userId must be a string.");
-                            if ("boolean" != typeof r) throw new TypeError("allowed must be either true or false.");
-                            var n = this.permissionsById[t];
-                            if (!n) {
-                                if (!r) return;
-                                n = {}, this.permissionsById[t] = n
-                            }
-                            r ? this.permissionsById[t][e] = !0 : (delete n[e], 0 === s(n).length && delete this.permissionsById[t])
-                        }
-                    }, {
-                        key: "_getAccess",
-                        value: function(e, t) {
-                            t instanceof c["default"] ? t = t.id : t instanceof u["default"] && (t = "role:" + t.getName());
-                            var r = this.permissionsById[t];
-                            return r ? !!r[e] : !1
-                        }
-                    }, {
-                        key: "setReadAccess",
-                        value: function(e, t) {
-                            this._setAccess("read", e, t)
-                        }
-                    }, {
-                        key: "getReadAccess",
-                        value: function(e) {
-                            return this._getAccess("read", e)
-                        }
-                    }, {
-                        key: "setWriteAccess",
-                        value: function(e, t) {
-                            this._setAccess("write", e, t)
-                        }
-                    }, {
-                        key: "getWriteAccess",
-                        value: function(e) {
-                            return this._getAccess("write", e)
-                        }
-                    }, {
-                        key: "setPublicReadAccess",
-                        value: function(e) {
-                            this.setReadAccess(f, e)
-                        }
-                    }, {
-                        key: "getPublicReadAccess",
-                        value: function() {
-                            return this.getReadAccess(f)
-                        }
-                    }, {
-                        key: "setPublicWriteAccess",
-                        value: function(e) {
-                            this.setWriteAccess(f, e)
-                        }
-                    }, {
-                        key: "getPublicWriteAccess",
-                        value: function() {
-                            return this.getWriteAccess(f)
-                        }
-                    }, {
-                        key: "getRoleReadAccess",
-                        value: function(e) {
-                            if (e instanceof u["default"] && (e = e.getName()), "string" != typeof e) throw new TypeError("role must be a ParseRole or a String");
-                            return this.getReadAccess("role:" + e)
-                        }
-                    }, {
-                        key: "getRoleWriteAccess",
-                        value: function(e) {
-                            if (e instanceof u["default"] && (e = e.getName()), "string" != typeof e) throw new TypeError("role must be a ParseRole or a String");
-                            return this.getWriteAccess("role:" + e)
-                        }
-                    }, {
-                        key: "setRoleReadAccess",
-                        value: function(e, t) {
-                            if (e instanceof u["default"] && (e = e.getName()), "string" != typeof e) throw new TypeError("role must be a ParseRole or a String");
-                            this.setReadAccess("role:" + e, t)
-                        }
-                    }, {
-                        key: "setRoleWriteAccess",
-                        value: function(e, t) {
-                            if (e instanceof u["default"] && (e = e.getName()), "string" != typeof e) throw new TypeError("role must be a ParseRole or a String");
-                            this.setWriteAccess("role:" + e, t)
-                        }
-                    }]), e
-                }();
-            r["default"] = d, t.exports = r["default"]
-        }, {
-            "./ParseRole": 19,
-            "./ParseUser": 21,
-            "babel-runtime/core-js/object/keys": 41,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        9: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                try {
-                    var t = JSON.parse(e);
-                    if (t && "object" == typeof t) return (0, c["default"])(t)
-                } catch (r) {
-                    return null
-                }
-            }
-            var a = e("babel-runtime/helpers/create-class")["default"],
-                s = e("babel-runtime/helpers/class-call-check")["default"],
-                o = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var i = e("./CoreManager"),
-                u = o(i),
-                l = e("./decode"),
-                c = o(l),
-                f = e("./encode"),
-                d = (o(f), e("./escape")),
-                h = o(d),
-                p = e("./ParseError"),
-                y = o(p),
-                v = e("./ParsePromise"),
-                b = o(v),
-                m = e("./Storage"),
-                _ = o(m),
-                g = function() {
-                    function e() {
-                        s(this, e), this.attributes = {}, this._escapedAttributes = {}
-                    }
-                    return a(e, [{
-                        key: "get",
-                        value: function(e) {
-                            return this.attributes[e]
-                        }
-                    }, {
-                        key: "escape",
-                        value: function(e) {
-                            var t = this._escapedAttributes[e];
-                            if (t) return t;
-                            var r = this.attributes[e],
-                                n = "";
-                            return null != r && (n = (0, h["default"])(r.toString())), this._escapedAttributes[e] = n, n
-                        }
-                    }], [{
-                        key: "current",
-                        value: function() {
-                            var e = u["default"].getConfigController();
-                            return e.current()
-                        }
-                    }, {
-                        key: "get",
-                        value: function(e) {
-                            e = e || {};
-                            var t = u["default"].getConfigController();
-                            return t.get()._thenRunCallbacks(e)
-                        }
-                    }]), e
-                }();
-            r["default"] = g;
-            var w = null,
-                O = "currentConfig";
-            u["default"].setConfigController({
-                current: function() {
-                    if (w) return w;
-                    var e, t = new g,
-                        r = _["default"].generatePath(O);
-                    if (!_["default"].async()) {
-                        if (e = _["default"].getItem(r)) {
-                            var a = n(e);
-                            a && (t.attributes = a, w = t)
-                        }
-                        return t
-                    }
-                    return _["default"].getItemAsync(r).then(function(e) {
-                        if (e) {
-                            var r = n(e);
-                            r && (t.attributes = r, w = t)
-                        }
-                        return t
-                    })
-                },
-                get: function() {
-                    var e = u["default"].getRESTController();
-                    return e.request("GET", "config", {}, {}).then(function(e) {
-                        if (!e || !e.params) {
-                            var t = new y["default"](y["default"].INVALID_JSON, "Config JSON response invalid.");
-                            return b["default"].error(t)
-                        }
-                        var r = new g;
-                        r.attributes = {};
-                        for (var n in e.params) r.attributes[n] = (0, c["default"])(e.params[n]);
-                        return w = r, _["default"].setItemAsync(_["default"].generatePath(O), JSON.stringify(e.params)).then(function() {
-                            return r
-                        })
-                    })
-                }
-            }), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ParseError": 10,
-            "./ParsePromise": 16,
-            "./Storage": 24,
-            "./decode": 29,
-            "./encode": 30,
-            "./escape": 32,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        10: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/class-call-check")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var a = function s(e, t) {
-                n(this, s), this.code = e, this.message = t
-            };
-            r["default"] = a, a.OTHER_CAUSE = -1, a.INTERNAL_SERVER_ERROR = 1, a.CONNECTION_FAILED = 100, a.OBJECT_NOT_FOUND = 101, a.INVALID_QUERY = 102, a.INVALID_CLASS_NAME = 103, a.MISSING_OBJECT_ID = 104, a.INVALID_KEY_NAME = 105, a.INVALID_POINTER = 106, a.INVALID_JSON = 107, a.COMMAND_UNAVAILABLE = 108, a.NOT_INITIALIZED = 109, a.INCORRECT_TYPE = 111, a.INVALID_CHANNEL_NAME = 112, a.PUSH_MISCONFIGURED = 115, a.OBJECT_TOO_LARGE = 116, a.OPERATION_FORBIDDEN = 119, a.CACHE_MISS = 120, a.INVALID_NESTED_KEY = 121, a.INVALID_FILE_NAME = 122, a.INVALID_ACL = 123, a.TIMEOUT = 124, a.INVALID_EMAIL_ADDRESS = 125, a.MISSING_CONTENT_TYPE = 126, a.MISSING_CONTENT_LENGTH = 127, a.INVALID_CONTENT_LENGTH = 128, a.FILE_TOO_LARGE = 129, a.FILE_SAVE_ERROR = 130, a.DUPLICATE_VALUE = 137, a.INVALID_ROLE_NAME = 139, a.EXCEEDED_QUOTA = 140, a.SCRIPT_FAILED = 141, a.VALIDATION_ERROR = 142, a.INVALID_IMAGE_DATA = 143, a.UNSAVED_FILE_ERROR = 151, a.INVALID_PUSH_TIME_ERROR = 152, a.FILE_DELETE_ERROR = 153, a.REQUEST_LIMIT_EXCEEDED = 155, a.INVALID_EVENT_NAME = 160, a.USERNAME_MISSING = 200, a.PASSWORD_MISSING = 201, a.USERNAME_TAKEN = 202, a.EMAIL_TAKEN = 203, a.EMAIL_MISSING = 204, a.EMAIL_NOT_FOUND = 205, a.SESSION_MISSING = 206, a.MUST_CREATE_USER_THROUGH_SIGNUP = 207, a.ACCOUNT_ALREADY_LINKED = 208, a.INVALID_SESSION_TOKEN = 209, a.LINKED_ID_MISSING = 250, a.INVALID_LINKED_SESSION = 251, a.UNSUPPORTED_SERVICE = 252, a.AGGREGATE_ERROR = 600, a.FILE_READ_ERROR = 601, a.X_DOMAIN_REQUEST = 602, t.exports = r["default"]
-        }, {
-            "babel-runtime/helpers/class-call-check": 43
-        }],
-        11: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                if (26 > e) return String.fromCharCode(65 + e);
-                if (52 > e) return String.fromCharCode(97 + (e - 26));
-                if (62 > e) return String.fromCharCode(48 + (e - 52));
-                if (62 === e) return "+";
-                if (63 === e) return "/";
-                throw new TypeError("Tried to encode large digit " + e + " in base64.")
-            }
-            var a = e("babel-runtime/helpers/create-class")["default"],
-                s = e("babel-runtime/helpers/class-call-check")["default"],
-                o = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var i = e("./CoreManager"),
-                u = o(i),
-                l = e("./ParsePromise"),
-                c = (o(l), function() {
-                    function e(t, r, n) {
-                        s(this, e);
-                        var a = n || "";
-                        if (this._name = t, Array.isArray(r)) this._source = {
-                            format: "base64",
-                            base64: e.encodeBase64(r),
-                            type: a
-                        };
-                        else if ("undefined" != typeof File && r instanceof File) this._source = {
-                            format: "file",
-                            file: r,
-                            type: a
-                        };
-                        else if (r && r.hasOwnProperty("base64")) {
-                            var o = /^data:([a-zA-Z]*\/[a-zA-Z+.-]*);(charset=[a-zA-Z0-9\-\/\s]*,)?base64,(\S+)/.exec(r.base64);
-                            o && o.length > 0 ? this._source = {
-                                format: "base64",
-                                base64: 4 === o.length ? o[3] : o[2],
-                                type: o[1]
-                            } : this._source = {
-                                format: "base64",
-                                base64: r.base64,
-                                type: a
-                            }
-                        } else if ("undefined" != typeof r) throw new TypeError("Cannot create a Parse.File with that data.")
-                    }
-                    return a(e, [{
-                        key: "name",
-                        value: function() {
-                            return this._name
-                        }
-                    }, {
-                        key: "url",
-                        value: function() {
-                            return this._url
-                        }
-                    }, {
-                        key: "save",
-                        value: function(e) {
-                            var t = this;
-                            e = e || {};
-                            var r = u["default"].getFileController();
-                            return this._previousSave || ("file" === this._source.format ? this._previousSave = r.saveFile(this._name, this._source).then(function(e) {
-                                return t._name = e.name, t._url = e.url, t
-                            }) : this._previousSave = r.saveBase64(this._name, this._source).then(function(e) {
-                                return t._name = e.name, t._url = e.url, t
-                            })), this._previousSave ? this._previousSave._thenRunCallbacks(e) : void 0
-                        }
-                    }, {
-                        key: "toJSON",
-                        value: function() {
-                            return {
-                                __type: "File",
-                                name: this._name,
-                                url: this._url
-                            }
-                        }
-                    }, {
-                        key: "equals",
-                        value: function(t) {
-                            return this === t ? !0 : t instanceof e && this.name() === t.name() && this.url() === t.url() && "undefined" != typeof this.url()
-                        }
-                    }], [{
-                        key: "fromJSON",
-                        value: function(t) {
-                            if ("File" !== t.__type) throw new TypeError("JSON object does not represent a ParseFile");
-                            var r = new e(t.name);
-                            return r._url = t.url, r
-                        }
-                    }, {
-                        key: "encodeBase64",
-                        value: function(e) {
-                            var t = [];
-                            t.length = Math.ceil(e.length / 3);
-                            for (var r = 0; r < t.length; r++) {
-                                var a = e[3 * r],
-                                    s = e[3 * r + 1] || 0,
-                                    o = e[3 * r + 2] || 0,
-                                    i = 3 * r + 1 < e.length,
-                                    u = 3 * r + 2 < e.length;
-                                t[r] = [n(a >> 2 & 63), n(a << 4 & 48 | s >> 4 & 15), i ? n(s << 2 & 60 | o >> 6 & 3) : "=", u ? n(63 & o) : "="].join("")
-                            }
-                            return t.join("")
-                        }
-                    }]), e
-                }());
-            r["default"] = c, u["default"].setFileController({
-                saveFile: function(e, t) {
-                    if ("file" !== t.format) throw new Error("saveFile can only be used with File-type sources.");
-                    var r = {
-                            "X-Parse-Application-ID": u["default"].get("APPLICATION_ID"),
-                            "X-Parse-JavaScript-Key": u["default"].get("JAVASCRIPT_KEY")
-                        },
-                        n = u["default"].get("SERVER_URL");
-                    return n += "/1/files/" + e, u["default"].getRESTController().ajax("POST", n, t.file, r)
-                },
-                saveBase64: function(e, t) {
-                    if ("base64" !== t.format) throw new Error("saveBase64 can only be used with Base64-type sources.");
-                    var r = {
-                        base64: t.base64
-                    };
-                    return t.type && (r._ContentType = t.type), u["default"].getRESTController().request("POST", "files/" + e, r)
-                }
-            }), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ParsePromise": 16,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        12: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"],
-                s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var o = e("./ParsePromise"),
-                i = s(o),
-                u = function() {
-                    function e(t, r) {
-                        a(this, e), Array.isArray(t) ? (e._validate(t[0], t[1]), this._latitude = t[0], this._longitude = t[1]) : "object" == typeof t ? (e._validate(t.latitude, t.longitude), this._latitude = t.latitude, this._longitude = t.longitude) : "number" == typeof t && "number" == typeof r ? (e._validate(t, r), this._latitude = t, this._longitude = r) : (this._latitude = 0, this._longitude = 0)
-                    }
-                    return n(e, [{
-                        key: "toJSON",
-                        value: function() {
-                            return e._validate(this._latitude, this._longitude), {
-                                __type: "GeoPoint",
-                                latitude: this._latitude,
-                                longitude: this._longitude
-                            }
-                        }
-                    }, {
-                        key: "equals",
-                        value: function(t) {
-                            return t instanceof e && this.latitude === t.latitude && this.longitude === t.longitude
-                        }
-                    }, {
-                        key: "radiansTo",
-                        value: function(e) {
-                            var t = Math.PI / 180,
-                                r = this.latitude * t,
-                                n = this.longitude * t,
-                                a = e.latitude * t,
-                                s = e.longitude * t,
-                                o = Math.sin((r - a) / 2),
-                                i = Math.sin((n - s) / 2),
-                                u = o * o + Math.cos(r) * Math.cos(a) * i * i;
-                            return u = Math.min(1, u), 2 * Math.asin(Math.sqrt(u))
-                        }
-                    }, {
-                        key: "kilometersTo",
-                        value: function(e) {
-                            return 6371 * this.radiansTo(e)
-                        }
-                    }, {
-                        key: "milesTo",
-                        value: function(e) {
-                            return 3958.8 * this.radiansTo(e)
-                        }
-                    }, {
-                        key: "latitude",
-                        get: function() {
-                            return this._latitude
-                        },
-                        set: function(t) {
-                            e._validate(t, this.longitude), this._latitude = t
-                        }
-                    }, {
-                        key: "longitude",
-                        get: function() {
-                            return this._longitude
-                        },
-                        set: function(t) {
-                            e._validate(this.latitude, t), this._longitude = t
-                        }
-                    }], [{
-                        key: "_validate",
-                        value: function(e, t) {
-                            if (e !== e || t !== t) throw new TypeError("GeoPoint latitude and longitude must be valid numbers");
-                            if (-90 > e) throw new TypeError("GeoPoint latitude out of bounds: " + e + " < -90.0.");
-                            if (e > 90) throw new TypeError("GeoPoint latitude out of bounds: " + e + " > 90.0.");
-                            if (-180 > t) throw new TypeError("GeoPoint longitude out of bounds: " + t + " < -180.0.");
-                            if (t > 180) throw new TypeError("GeoPoint longitude out of bounds: " + t + " > 180.0.")
-                        }
-                    }, {
-                        key: "current",
-                        value: function(t) {
-                            var r = new i["default"];
-                            return navigator.geolocation.getCurrentPosition(function(t) {
-                                r.resolve(new e(t.coords.latitude, t.coords.longitude))
-                            }, function(e) {
-                                r.reject(e)
-                            }), r._thenRunCallbacks(t)
-                        }
-                    }]), e
-                }();
-            r["default"] = u, t.exports = r["default"]
-        }, {
-            "./ParsePromise": 16,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        13: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/get")["default"],
-                a = e("babel-runtime/helpers/inherits")["default"],
-                s = e("babel-runtime/helpers/class-call-check")["default"],
-                o = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var i = e("./ParseObject"),
-                u = o(i),
-                l = function(e) {
-                    function t(e) {
-                        if (s(this, t), n(Object.getPrototypeOf(t.prototype), "constructor", this).call(this, "_Installation"), e && "object" == typeof e && !this.set(e || {})) throw new Error("Can't create an invalid Session")
-                    }
-                    return a(t, e), t
-                }(u["default"]);
-            r["default"] = l, u["default"].registerSubclass("_Installation", l), t.exports = r["default"]
-        }, {
-            "./ParseObject": 14,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/get": 45,
-            "babel-runtime/helpers/inherits": 46,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        14: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"],
-                s = e("babel-runtime/core-js/object/keys")["default"],
-                o = e("babel-runtime/core-js/object/freeze")["default"],
-                i = e("babel-runtime/core-js/object/create")["default"],
-                u = e("babel-runtime/core-js/object/define-property")["default"],
-                l = e("babel-runtime/helpers/interop-require-default")["default"],
-                c = e("babel-runtime/helpers/interop-require-wildcard")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var f = e("./CoreManager"),
-                d = l(f),
-                h = e("./canBeSerialized"),
-                p = l(h),
-                y = e("./decode"),
-                v = l(y),
-                b = e("./encode"),
-                m = l(b),
-                _ = e("./equals"),
-                g = (l(_), e("./escape")),
-                w = l(g),
-                O = e("./ObjectState"),
-                C = c(O),
-                P = e("./ParseACL"),
-                k = l(P),
-                A = e("./parseDate"),
-                E = l(A),
-                S = e("./ParseError"),
-                j = l(S),
-                I = e("./ParseFile"),
-                N = l(I),
-                T = e("./ParseOp"),
-                R = e("./ParsePromise"),
-                M = l(R),
-                D = e("./ParseQuery"),
-                q = l(D),
-                x = e("./ParseRelation"),
-                U = l(x),
-                L = e("./unique"),
-                F = l(L),
-                K = e("./unsavedChildren"),
-                J = l(K),
-                $ = {},
-                W = 0,
-                B = 0,
-                G = !d["default"].get("IS_NODE"),
-                V = function() {
-                    function e(t, r) {
-                        a(this, e);
-                        var n = null;
-                        if (this._objCount = B++, "string" == typeof t) this.className = t, r && "object" == typeof r && (n = r);
-                        else if (t && "object" == typeof t) {
-                            this.className = t.className, n = {};
-                            for (var s in t) "className" !== s && (n[s] = t[s])
-                        }
-                        if (n && !this.set(n)) throw new Error("Can't create an invalid Parse Object");
-                        "function" == typeof this.initialize && this.initialize.apply(this, arguments);
-                    }
-                    return n(e, [{
-                        key: "_getId",
-                        value: function() {
-                            if ("string" == typeof this.id) return this.id;
-                            if ("string" == typeof this._localId) return this._localId;
-                            var e = "local" + String(W++);
-                            return this._localId = e, e
-                        }
-                    }, {
-                        key: "_getStateIdentifier",
-                        value: function() {
-                            return "string" == typeof this.id ? G ? this.id : this.id + "_" + String(this._objCount) : this._getId()
-                        }
-                    }, {
-                        key: "_getServerData",
-                        value: function() {
-                            return C.getServerData(this.className, this._getStateIdentifier())
-                        }
-                    }, {
-                        key: "_clearServerData",
-                        value: function() {
-                            var e = this._getServerData(),
-                                t = {};
-                            for (var r in e) t[r] = void 0;
-                            C.setServerData(this.className, this._getStateIdentifier(), t)
-                        }
-                    }, {
-                        key: "_getPendingOps",
-                        value: function() {
-                            return C.getPendingOps(this.className, this._getStateIdentifier())
-                        }
-                    }, {
-                        key: "_clearPendingOps",
-                        value: function() {
-                            var e = this._getPendingOps(),
-                                t = e[e.length - 1],
-                                r = s(t);
-                            r.forEach(function(e) {
-                                delete t[e]
-                            })
-                        }
-                    }, {
-                        key: "_getDirtyObjectAttributes",
-                        value: function() {
-                            var t = this.attributes,
-                                r = C.getObjectCache(this.className, this._getStateIdentifier()),
-                                n = {};
-                            for (var a in t) {
-                                var s = t[a];
-                                if (s && "object" == typeof s && !(s instanceof e) && !(s instanceof N["default"]) && !(s instanceof U["default"])) {
-                                    var o = (0, m["default"])(s, !1, !0),
-                                        i = JSON.stringify(o);
-                                    r[a] !== i && (n[a] = s)
-                                }
-                            }
-                            return n
-                        }
-                    }, {
-                        key: "_toFullJSON",
-                        value: function() {
-                            var e = this.toJSON();
-                            return e.__type = "Object", e.className = this.className, e
-                        }
-                    }, {
-                        key: "_getSaveJSON",
-                        value: function() {
-                            var e, t = this._getPendingOps(),
-                                r = this._getDirtyObjectAttributes(),
-                                n = {};
-                            for (e in r) n[e] = new T.SetOp(r[e]).toJSON();
-                            for (e in t[0]) n[e] = t[0][e].toJSON();
-                            return n
-                        }
-                    }, {
-                        key: "_getSaveParams",
-                        value: function() {
-                            var e = this.id ? "PUT" : "POST",
-                                t = this._getSaveJSON(),
-                                r = "classes/" + this.className;
-                            return this.id ? r += "/" + this.id : "_User" === this.className && (r = "users"), {
-                                method: e,
-                                body: t,
-                                path: r
-                            }
-                        }
-                    }, {
-                        key: "_finishFetch",
-                        value: function(e) {
-                            !this.id && e.objectId && (this.id = e.objectId), C.initializeState(this.className, this._getStateIdentifier());
-                            var t = {};
-                            for (var r in e) "ACL" === r ? t[r] = new k["default"](e[r]) : "objectId" !== r && (t[r] = (0, v["default"])(e[r]), t[r] instanceof U["default"] && t[r]._ensureParentAndKey(this, r));
-                            t.createdAt && "string" == typeof t.createdAt && (t.createdAt = (0, E["default"])(t.createdAt)), t.updatedAt && "string" == typeof t.updatedAt && (t.updatedAt = (0, E["default"])(t.updatedAt)), !t.updatedAt && t.createdAt && (t.updatedAt = t.createdAt), C.commitServerChanges(this.className, this._getStateIdentifier(), t)
-                        }
-                    }, {
-                        key: "_setExisted",
-                        value: function(e) {
-                            var t = C.getState(this.className, this._getStateIdentifier());
-                            t && (t.existed = e)
-                        }
-                    }, {
-                        key: "_migrateId",
-                        value: function(e) {
-                            if (this._localId && e) {
-                                var t = C.removeState(this.className, this._getStateIdentifier());
-                                this.id = e, delete this._localId, t && C.initializeState(this.className, this._getStateIdentifier(), t)
-                            }
-                        }
-                    }, {
-                        key: "_handleSaveResponse",
-                        value: function(e, t) {
-                            var r, n = {},
-                                a = C.popPendingState(this.className, this._getStateIdentifier());
-                            for (r in a) a[r] instanceof T.RelationOp ? n[r] = a[r].applyTo(void 0, this, r) : r in e || (n[r] = a[r].applyTo(void 0));
-                            for (r in e) "createdAt" !== r && "updatedAt" !== r || "string" != typeof e[r] ? "objectId" !== r && (n[r] = (0, v["default"])(e[r])) : n[r] = (0, E["default"])(e[r]);
-                            n.createdAt && !n.updatedAt && (n.updatedAt = n.createdAt), this._migrateId(e.objectId), 201 !== t && this._setExisted(!0), C.commitServerChanges(this.className, this._getStateIdentifier(), n)
-                        }
-                    }, {
-                        key: "_handleSaveError",
-                        value: function() {
-                            var e = this._getPendingOps();
-                            e.length > 2 && C.mergeFirstPendingState(this.className, this._getStateIdentifier())
-                        }
-                    }, {
-                        key: "initialize",
-                        value: function() {}
-                    }, {
-                        key: "toJSON",
-                        value: function() {
-                            var e = this.id ? this.className + ":" + this.id : this,
-                                t = {},
-                                r = this.attributes;
-                            for (var n in r) "createdAt" !== n && "updatedAt" !== n || !r[n].toJSON ? t[n] = (0, m["default"])(r[n], !1, !1, [e]) : t[n] = r[n].toJSON();
-                            var a = this._getPendingOps();
-                            for (var n in a[0]) t[n] = a[0][n].toJSON();
-                            return this.id && (t.objectId = this.id), t
-                        }
-                    }, {
-                        key: "equals",
-                        value: function(t) {
-                            return this === t ? !0 : t instanceof e && this.className === t.className && this.id === t.id && "undefined" != typeof this.id
-                        }
-                    }, {
-                        key: "dirty",
-                        value: function(e) {
-                            if (!this.id) return !0;
-                            var t = this._getPendingOps(),
-                                r = this._getDirtyObjectAttributes();
-                            if (e) {
-                                if (r.hasOwnProperty(e)) return !0;
-                                for (var n = 0; n < t.length; n++)
-                                    if (t[n].hasOwnProperty(e)) return !0;
-                                return !1
-                            }
-                            return 0 !== s(t[0]).length ? !0 : 0 !== s(r).length ? !0 : !1
-                        }
-                    }, {
-                        key: "dirtyKeys",
-                        value: function() {
-                            for (var e = this._getPendingOps(), t = {}, r = 0; r < e.length; r++)
-                                for (var n in e[r]) t[n] = !0;
-                            var a = this._getDirtyObjectAttributes();
-                            for (var n in a) t[n] = !0;
-                            return s(t)
-                        }
-                    }, {
-                        key: "toPointer",
-                        value: function() {
-                            if (!this.id) throw new Error("Cannot create a pointer to an unsaved ParseObject");
-                            return {
-                                __type: "Pointer",
-                                className: this.className,
-                                objectId: this.id
-                            }
-                        }
-                    }, {
-                        key: "get",
-                        value: function(e) {
-                            return this.attributes[e]
-                        }
-                    }, {
-                        key: "relation",
-                        value: function(e) {
-                            var t = this.get(e);
-                            if (t) {
-                                if (!(t instanceof U["default"])) throw new Error("Called relation() on non-relation field " + e);
-                                return t._ensureParentAndKey(this, e), t
-                            }
-                            return new U["default"](this, e)
-                        }
-                    }, {
-                        key: "escape",
-                        value: function(e) {
-                            var t = this.attributes[e];
-                            if (null == t) return "";
-                            if ("string" != typeof t) {
-                                if ("function" != typeof t.toString) return "";
-                                t = t.toString()
-                            }
-                            return (0, w["default"])(t)
-                        }
-                    }, {
-                        key: "has",
-                        value: function(e) {
-                            var t = this.attributes;
-                            return t.hasOwnProperty(e) ? null != t[e] : !1
-                        }
-                    }, {
-                        key: "set",
-                        value: function(e, t, r) {
-                            var n = {},
-                                a = {};
-                            if (e && "object" == typeof e) n = e, r = t;
-                            else {
-                                if ("string" != typeof e) return this;
-                                n[e] = t
-                            }
-                            r = r || {};
-                            var s = [];
-                            "function" == typeof this.constructor.readOnlyAttributes && (s = s.concat(this.constructor.readOnlyAttributes()));
-                            for (var o in n)
-                                if ("createdAt" !== o && "updatedAt" !== o) {
-                                    if (s.indexOf(o) > -1) throw new Error("Cannot modify readonly attribute: " + o);
-                                    r.unset ? a[o] = new T.UnsetOp : n[o] instanceof T.Op ? a[o] = n[o] : n[o] && "object" == typeof n[o] && "string" == typeof n[o].__op ? a[o] = (0, T.opFromJSON)(n[o]) : "objectId" === o || "id" === o ? this.id = n[o] : "ACL" !== o || "object" != typeof n[o] || n[o] instanceof k["default"] ? a[o] = new T.SetOp(n[o]) : a[o] = new T.SetOp(new k["default"](n[o]))
-                                }
-                            var i = this.attributes,
-                                u = {};
-                            for (var l in a) a[l] instanceof T.RelationOp ? u[l] = a[l].applyTo(i[l], this, l) : a[l] instanceof T.UnsetOp || (u[l] = a[l].applyTo(i[l]));
-                            var c = this.validate(u);
-                            if (c) return "function" == typeof r.error && r.error(this, c), !1;
-                            var f = this._getPendingOps(),
-                                d = f.length - 1;
-                            for (var l in a) {
-                                var h = a[l].mergeWith(f[d][l]);
-                                C.setPendingOp(this.className, this._getStateIdentifier(), l, h)
-                            }
-                            return this
-                        }
-                    }, {
-                        key: "unset",
-                        value: function(e, t) {
-                            return t = t || {}, t.unset = !0, this.set(e, null, t)
-                        }
-                    }, {
-                        key: "increment",
-                        value: function(e, t) {
-                            if ("undefined" == typeof t && (t = 1), "number" != typeof t) throw new Error("Cannot increment by a non-numeric amount.");
-                            return this.set(e, new T.IncrementOp(t))
-                        }
-                    }, {
-                        key: "add",
-                        value: function(e, t) {
-                            return this.set(e, new T.AddOp([t]))
-                        }
-                    }, {
-                        key: "addUnique",
-                        value: function(e, t) {
-                            return this.set(e, new T.AddUniqueOp([t]))
-                        }
-                    }, {
-                        key: "remove",
-                        value: function(e, t) {
-                            return this.set(e, new T.RemoveOp([t]))
-                        }
-                    }, {
-                        key: "op",
-                        value: function(e) {
-                            for (var t = this._getPendingOps(), r = t.length; r--;)
-                                if (t[r][e]) return t[r][e]
-                        }
-                    }, {
-                        key: "clone",
-                        value: function t() {
-                            var t = new this.constructor;
-                            return t.set && t.set(this.attributes), t.className || (t.className = this.className), t
-                        }
-                    }, {
-                        key: "isNew",
-                        value: function() {
-                            return !this.id
-                        }
-                    }, {
-                        key: "existed",
-                        value: function() {
-                            if (!this.id) return !1;
-                            var e = C.getState(this.className, this._getStateIdentifier());
-                            return e ? e.existed : !1
-                        }
-                    }, {
-                        key: "isValid",
-                        value: function() {
-                            return !this.validate(this.attributes)
-                        }
-                    }, {
-                        key: "validate",
-                        value: function(e) {
-                            if (e.hasOwnProperty("ACL") && !(e.ACL instanceof k["default"])) return new j["default"](j["default"].OTHER_CAUSE, "ACL must be a Parse ACL.");
-                            for (var t in e)
-                                if (!/^[A-Za-z][0-9A-Za-z_]*$/.test(t)) return new j["default"](j["default"].INVALID_KEY_NAME);
-                            return !1
-                        }
-                    }, {
-                        key: "getACL",
-                        value: function() {
-                            var e = this.get("ACL");
-                            return e instanceof k["default"] ? e : null
-                        }
-                    }, {
-                        key: "setACL",
-                        value: function(e, t) {
-                            return this.set("ACL", e, t)
-                        }
-                    }, {
-                        key: "clear",
-                        value: function() {
-                            var e = this.attributes,
-                                t = {},
-                                r = ["createdAt", "updatedAt"];
-                            "function" == typeof this.constructor.readOnlyAttributes && (r = r.concat(this.constructor.readOnlyAttributes()));
-                            for (var n in e) r.indexOf(n) < 0 && (t[n] = !0);
-                            return this.set(t, {
-                                unset: !0
-                            })
-                        }
-                    }, {
-                        key: "fetch",
-                        value: function(e) {
-                            e = e || {};
-                            var t = {};
-                            e.hasOwnProperty("useMasterKey") && (t.useMasterKey = e.useMasterKey), e.hasOwnProperty("sessionToken") && (t.sessionToken = e.sessionToken);
-                            var r = d["default"].getObjectController();
-                            return r.fetch(this, !0, t)._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "save",
-                        value: function(e, t, r) {
-                            var n, a, s = this;
-                            if ("object" == typeof e || "undefined" == typeof e ? (n = e, a = t) : (n = {}, n[e] = t, a = r), !a && n && (a = {}, "function" == typeof n.success && (a.success = n.success, delete n.success), "function" == typeof n.error && (a.error = n.error, delete n.error)), n) {
-                                var o = this.validate(n);
-                                if (o) return a && "function" == typeof a.error && a.error(this, o), M["default"].error(o);
-                                this.set(n, a)
-                            }
-                            a = a || {};
-                            var i = {};
-                            a.hasOwnProperty("useMasterKey") && (i.useMasterKey = a.useMasterKey), a.hasOwnProperty("sessionToken") && (i.sessionToken = a.sessionToken);
-                            var u = d["default"].getObjectController(),
-                                l = (0, J["default"])(this);
-                            return u.save(l, i).then(function() {
-                                return u.save(s, i)
-                            })._thenRunCallbacks(a, this)
-                        }
-                    }, {
-                        key: "destroy",
-                        value: function(e) {
-                            e = e || {};
-                            var t = {};
-                            return e.hasOwnProperty("useMasterKey") && (t.useMasterKey = e.useMasterKey), e.hasOwnProperty("sessionToken") && (t.sessionToken = e.sessionToken), this.id ? d["default"].getObjectController().destroy(this, t)._thenRunCallbacks(e) : M["default"].as()._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "attributes",
-                        get: function() {
-                            return o(C.estimateAttributes(this.className, this._getStateIdentifier()))
-                        }
-                    }, {
-                        key: "createdAt",
-                        get: function() {
-                            return this._getServerData().createdAt
-                        }
-                    }, {
-                        key: "updatedAt",
-                        get: function() {
-                            return this._getServerData().updatedAt
-                        }
-                    }], [{
-                        key: "_clearAllState",
-                        value: function() {
-                            C._clearAllState()
-                        }
-                    }, {
-                        key: "fetchAll",
-                        value: function(e, t) {
-                            var t = t || {},
-                                r = {};
-                            return t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey), t.hasOwnProperty("sessionToken") && (r.sessionToken = t.sessionToken), d["default"].getObjectController().fetch(e, !0, r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "fetchAllIfNeeded",
-                        value: function(e, t) {
-                            var t = t || {},
-                                r = {};
-                            return t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey), t.hasOwnProperty("sessionToken") && (r.sessionToken = t.sessionToken), d["default"].getObjectController().fetch(e, !1, r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "destroyAll",
-                        value: function(e, t) {
-                            var t = t || {},
-                                r = {};
-                            return t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey), t.hasOwnProperty("sessionToken") && (r.sessionToken = t.sessionToken), d["default"].getObjectController().destroy(e, r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "saveAll",
-                        value: function(e, t) {
-                            var t = t || {},
-                                r = {};
-                            return t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey), t.hasOwnProperty("sessionToken") && (r.sessionToken = t.sessionToken), d["default"].getObjectController().save(e, r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "createWithoutData",
-                        value: function(e) {
-                            var t = new this;
-                            return t.id = e, t
-                        }
-                    }, {
-                        key: "fromJSON",
-                        value: function(t) {
-                            if (!t.className) throw new Error("Cannot create an object without a className");
-                            var r = $[t.className],
-                                n = r ? new r : new e(t.className),
-                                a = {};
-                            for (var s in t) "className" !== s && "__type" !== s && (a[s] = t[s]);
-                            return n._finishFetch(a), t.objectId && n._setExisted(!0), n
-                        }
-                    }, {
-                        key: "registerSubclass",
-                        value: function(e, t) {
-                            if ("string" != typeof e) throw new TypeError("The first argument must be a valid class name.");
-                            if ("undefined" == typeof t) throw new TypeError("You must supply a subclass constructor.");
-                            if ("function" != typeof t) throw new TypeError("You must register the subclass constructor. Did you attempt to register an instance of the subclass?");
-                            $[e] = t, t.className || (t.className = e)
-                        }
-                    }, {
-                        key: "extend",
-                        value: function(t, r, n) {
-                            if ("string" != typeof t) {
-                                if (t && "string" == typeof t.className) return e.extend(t.className, t, r);
-                                throw new Error("Parse.Object.extend's first argument should be the className.")
-                            }
-                            var a = t;
-                            "User" === a && d["default"].get("PERFORM_USER_REWRITE") && (a = "_User");
-                            var s = e.prototype;
-                            this.hasOwnProperty("__super__") && this.__super__ ? s = this.prototype : $[a] && (s = $[a].prototype);
-                            var o = function(e) {
-                                if (this.className = a, this._objCount = B++, e && "object" == typeof e && !this.set(e || {})) throw new Error("Can't create an invalid Parse Object");
-                                "function" == typeof this.initialize && this.initialize.apply(this, arguments)
-                            };
-                            if (o.className = a, o.__super__ = s, o.prototype = i(s, {
-                                    constructor: {
-                                        value: o,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                }), r)
-                                for (var l in r) "className" !== l && u(o.prototype, l, {
-                                    value: r[l],
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                });
-                            if (n)
-                                for (var l in n) "className" !== l && u(o, l, {
-                                    value: n[l],
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                });
-                            return o.extend = function(t, r, n) {
-                                return "string" == typeof t ? e.extend.call(o, t, r, n) : e.extend.call(o, a, t, r)
-                            }, o.createWithoutData = e.createWithoutData, $[a] = o, o
-                        }
-                    }, {
-                        key: "enableSingleInstance",
-                        value: function() {
-                            G = !0
-                        }
-                    }, {
-                        key: "disableSingleInstance",
-                        value: function() {
-                            G = !1
-                        }
-                    }]), e
-                }();
-            r["default"] = V, d["default"].setObjectController({
-                fetch: function(e, t, r) {
-                    if (Array.isArray(e)) {
-                        if (e.length < 1) return M["default"].as([]);
-                        var n = [],
-                            a = [],
-                            o = null,
-                            i = [],
-                            u = null;
-                        if (e.forEach(function(e, r) {
-                                u || (o || (o = e.className), o !== e.className && (u = new j["default"](j["default"].INVALID_CLASS_NAME, "All objects should be of the same class")), e.id || (u = new j["default"](j["default"].MISSING_OBJECT_ID, "All objects must have an ID")), (t || 0 === s(e._getServerData()).length) && (a.push(e.id), n.push(e)), i.push(e))
-                            }), u) return M["default"].error(u);
-                        var l = new q["default"](o);
-                        return l.containedIn("objectId", a), l._limit = a.length, l.find(r).then(function(e) {
-                            var r = {};
-                            e.forEach(function(e) {
-                                r[e.id] = e
-                            });
-                            for (var a = 0; a < n.length; a++) {
-                                var s = n[a];
-                                if ((!s || !s.id || !r[s.id]) && t) return M["default"].error(new j["default"](j["default"].OBJECT_NOT_FOUND, "All objects must exist on the server."))
-                            }
-                            if (!G)
-                                for (var a = 0; a < i.length; a++) {
-                                    var s = i[a];
-                                    if (s && s.id && r[s.id]) {
-                                        var o = s.id;
-                                        s._finishFetch(r[o].toJSON()), i[a] = r[o]
-                                    }
-                                }
-                            return M["default"].as(i)
-                        })
-                    }
-                    var c = d["default"].getRESTController();
-                    return c.request("GET", "classes/" + e.className + "/" + e._getId(), {}, r).then(function(t, r, n) {
-                        return e instanceof V && (e._clearPendingOps(), e._finishFetch(t)), e
-                    })
-                },
-                destroy: function(e, t) {
-                    var r = d["default"].getRESTController();
-                    if (Array.isArray(e)) {
-                        if (e.length < 1) return M["default"].as([]);
-                        var n = [
-                            []
-                        ];
-                        e.forEach(function(e) {
-                            e.id && (n[n.length - 1].push(e), n[n.length - 1].length >= 20 && n.push([]))
-                        }), 0 === n[n.length - 1].length && n.pop();
-                        var a = M["default"].as(),
-                            s = [];
-                        return n.forEach(function(e) {
-                            a = a.then(function() {
-                                return r.request("POST", "batch", {
-                                    requests: e.map(function(e) {
-                                        return {
-                                            method: "DELETE",
-                                            path: "/1/classes/" + e.className + "/" + e._getId(),
-                                            body: {}
-                                        }
-                                    })
-                                }, t).then(function(t) {
-                                    for (var r = 0; r < t.length; r++)
-                                        if (t[r] && t[r].hasOwnProperty("error")) {
-                                            var n = new j["default"](t[r].error.code, t[r].error.error);
-                                            n.object = e[r], s.push(n)
-                                        }
-                                })
-                            })
-                        }), a.then(function() {
-                            if (s.length) {
-                                var t = new j["default"](j["default"].AGGREGATE_ERROR);
-                                return t.errors = s, M["default"].error(t)
-                            }
-                            return M["default"].as(e)
-                        })
-                    }
-                    return e instanceof V ? r.request("DELETE", "classes/" + e.className + "/" + e._getId(), {}, t).then(function() {
-                        return M["default"].as(e)
-                    }) : M["default"].as(e)
-                },
-                save: function(e, t) {
-                    var r = d["default"].getRESTController();
-                    if (Array.isArray(e)) {
-                        if (e.length < 1) return M["default"].as([]);
-                        for (var n = e.concat(), a = 0; a < e.length; a++) e[a] instanceof V && (n = n.concat((0, J["default"])(e[a], !0)));
-                        n = (0, F["default"])(n);
-                        var s = M["default"].as(),
-                            o = [];
-                        return n.forEach(function(e) {
-                            e instanceof N["default"] ? s = s.then(function() {
-                                return e.save()
-                            }) : e instanceof V && o.push(e)
-                        }), s.then(function() {
-                            var n = null;
-                            return M["default"]._continueWhile(function() {
-                                return o.length > 0
-                            }, function() {
-                                var e = [],
-                                    a = [];
-                                if (o.forEach(function(t) {
-                                        e.length < 20 && (0, p["default"])(t) ? e.push(t) : a.push(t)
-                                    }), o = a, e.length < 1) return M["default"].error(new j["default"](j["default"].OTHER_CAUSE, "Tried to save a batch with a cycle."));
-                                var s = new M["default"],
-                                    i = [],
-                                    u = [];
-                                return e.forEach(function(e, t) {
-                                    var r = new M["default"];
-                                    i.push(r);
-                                    var a = function() {
-                                        return r.resolve(), s.then(function(r, a) {
-                                            if (r[t].hasOwnProperty("success")) e._handleSaveResponse(r[t].success, a);
-                                            else {
-                                                if (!n && r[t].hasOwnProperty("error")) {
-                                                    var s = r[t].error;
-                                                    n = new j["default"](s.code, s.error), o = []
-                                                }
-                                                e._handleSaveError()
-                                            }
-                                        })
-                                    };
-                                    C.pushPendingState(e.className, e._getStateIdentifier()), u.push(C.enqueueTask(e.className, e._getStateIdentifier(), a))
-                                }), M["default"].when(i).then(function() {
-                                    return r.request("POST", "batch", {
-                                        requests: e.map(function(e) {
-                                            var t = e._getSaveParams();
-                                            return t.path = "/1/" + t.path, t
-                                        })
-                                    }, t)
-                                }).then(function(e, t, r) {
-                                    s.resolve(e, t)
-                                }), M["default"].when(u)
-                            }).then(function() {
-                                return n ? M["default"].error(n) : M["default"].as(e)
-                            })
-                        })
-                    }
-                    if (e instanceof V) {
-                        var i = e,
-                            u = function() {
-                                var e = i._getSaveParams();
-                                return r.request(e.method, e.path, e.body, t).then(function(e, t) {
-                                    i._handleSaveResponse(e, t)
-                                }, function(e) {
-                                    return i._handleSaveError(), M["default"].error(e)
-                                })
-                            };
-                        return C.pushPendingState(e.className, e._getStateIdentifier()), C.enqueueTask(e.className, e._getStateIdentifier(), u).then(function() {
-                            return e
-                        }, function(e) {
-                            return e
-                        })
-                    }
-                    return M["default"].as()
-                }
-            }), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ObjectState": 6,
-            "./ParseACL": 8,
-            "./ParseError": 10,
-            "./ParseFile": 11,
-            "./ParseOp": 15,
-            "./ParsePromise": 16,
-            "./ParseQuery": 17,
-            "./ParseRelation": 18,
-            "./canBeSerialized": 28,
-            "./decode": 29,
-            "./encode": 30,
-            "./equals": 31,
-            "./escape": 32,
-            "./parseDate": 34,
-            "./unique": 35,
-            "./unsavedChildren": 36,
-            "babel-runtime/core-js/object/create": 37,
-            "babel-runtime/core-js/object/define-property": 38,
-            "babel-runtime/core-js/object/freeze": 39,
-            "babel-runtime/core-js/object/keys": 41,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47,
-            "babel-runtime/helpers/interop-require-wildcard": 48
-        }],
-        15: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                if (!e || !e.__op) return null;
-                switch (e.__op) {
-                    case "Delete":
-                        return new C;
-                    case "Increment":
-                        return new P(e.amount);
-                    case "Add":
-                        return new k((0, d["default"])(e.objects));
-                    case "AddUnique":
-                        return new A((0, d["default"])(e.objects));
-                    case "Remove":
-                        return new E((0, d["default"])(e.objects));
-                    case "AddRelation":
-                        var t = (0, d["default"])(e.objects);
-                        return Array.isArray(t) ? new S(t, []) : new S([], []);
-                    case "RemoveRelation":
-                        var r = (0, d["default"])(e.objects);
-                        return Array.isArray(r) ? new S([], r) : new S([], []);
-                    case "Batch":
-                        for (var t = [], r = [], n = 0; n < e.ops.length; n++) "AddRelation" === e.ops[n].__op ? t = t.concat((0, d["default"])(e.ops[n].objects)) : "RemoveRelation" === e.ops[n].__op && (r = r.concat((0, d["default"])(e.ops[n].objects)));
-                        return new S(t, r)
-                }
-                return null
-            }
-            var a = e("babel-runtime/helpers/create-class")["default"],
-                s = e("babel-runtime/helpers/class-call-check")["default"],
-                o = e("babel-runtime/helpers/get")["default"],
-                i = e("babel-runtime/helpers/inherits")["default"],
-                u = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r.opFromJSON = n;
-            var l = e("./arrayContainsObject"),
-                c = u(l),
-                f = e("./decode"),
-                d = u(f),
-                h = e("./encode"),
-                p = u(h),
-                y = e("./ParseObject"),
-                v = u(y),
-                b = e("./ParseRelation"),
-                m = u(b),
-                _ = e("./unique"),
-                g = u(_),
-                w = function() {
-                    function e() {
-                        s(this, e)
-                    }
-                    return a(e, [{
-                        key: "applyTo",
-                        value: function(e) {}
-                    }, {
-                        key: "mergeWith",
-                        value: function(e) {}
-                    }, {
-                        key: "toJSON",
-                        value: function() {}
-                    }]), e
-                }();
-            r.Op = w;
-            var O = function(e) {
-                function t(e) {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), this._value = e
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        return this._value
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        return new t(this._value)
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return (0, p["default"])(this._value, !1, !0)
-                    }
-                }]), t
-            }(w);
-            r.SetOp = O;
-            var C = function(e) {
-                function t() {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).apply(this, arguments)
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        return void 0
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        return new t
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return {
-                            __op: "Delete"
-                        }
-                    }
-                }]), t
-            }(w);
-            r.UnsetOp = C;
-            var P = function(e) {
-                function t(e) {
-                    if (s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), "number" != typeof e) throw new TypeError("Increment Op must be initialized with a numeric amount.");
-                    this._amount = e
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        if ("undefined" == typeof e) return this._amount;
-                        if ("number" != typeof e) throw new TypeError("Cannot increment a non-numeric value.");
-                        return this._amount + e
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        if (!e) return this;
-                        if (e instanceof O) return new O(this.applyTo(e._value));
-                        if (e instanceof C) return new O(this._amount);
-                        if (e instanceof t) return new t(this.applyTo(e._amount));
-                        throw new Error("Cannot merge Increment Op with the previous Op")
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return {
-                            __op: "Increment",
-                            amount: this._amount
-                        }
-                    }
-                }]), t
-            }(w);
-            r.IncrementOp = P;
-            var k = function(e) {
-                function t(e) {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), this._value = Array.isArray(e) ? e : [e]
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        if (null == e) return this._value;
-                        if (Array.isArray(e)) return e.concat(this._value);
-                        throw new Error("Cannot add elements to a non-array value")
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        if (!e) return this;
-                        if (e instanceof O) return new O(this.applyTo(e._value));
-                        if (e instanceof C) return new O(this._value);
-                        if (e instanceof t) return new t(this.applyTo(e._value));
-                        throw new Error("Cannot merge Add Op with the previous Op")
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return {
-                            __op: "Add",
-                            objects: (0, p["default"])(this._value, !1, !0)
-                        }
-                    }
-                }]), t
-            }(w);
-            r.AddOp = k;
-            var A = function(e) {
-                function t(e) {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), this._value = (0, g["default"])(Array.isArray(e) ? e : [e])
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        if (null == e) return this._value || [];
-                        if (Array.isArray(e)) {
-                            var t = e,
-                                r = [];
-                            return this._value.forEach(function(e) {
-                                e instanceof v["default"] ? (0, c["default"])(t, e) || r.push(e) : t.indexOf(e) < 0 && r.push(e)
-                            }), e.concat(r)
-                        }
-                        throw new Error("Cannot add elements to a non-array value")
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        if (!e) return this;
-                        if (e instanceof O) return new O(this.applyTo(e._value));
-                        if (e instanceof C) return new O(this._value);
-                        if (e instanceof t) return new t(this.applyTo(e._value));
-                        throw new Error("Cannot merge AddUnique Op with the previous Op")
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return {
-                            __op: "AddUnique",
-                            objects: (0, p["default"])(this._value, !1, !0)
-                        }
-                    }
-                }]), t
-            }(w);
-            r.AddUniqueOp = A;
-            var E = function(e) {
-                function t(e) {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), this._value = (0, g["default"])(Array.isArray(e) ? e : [e])
-                }
-                return i(t, e), a(t, [{
-                    key: "applyTo",
-                    value: function(e) {
-                        if (null == e) return [];
-                        if (Array.isArray(e)) {
-                            for (var t = e.indexOf(this._value), r = e.concat([]), t = 0; t < this._value.length; t++) {
-                                for (var n = r.indexOf(this._value[t]); n > -1;) r.splice(n, 1), n = r.indexOf(this._value[t]);
-                                if (this._value[t] instanceof v["default"] && this._value[t].id)
-                                    for (var a = 0; a < r.length; a++) r[a] instanceof v["default"] && this._value[t].id === r[a].id && (r.splice(a, 1), a--)
-                            }
-                            return r
-                        }
-                        throw new Error("Cannot remove elements from a non-array value")
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        if (!e) return this;
-                        if (e instanceof O) return new O(this.applyTo(e._value));
-                        if (e instanceof C) return new C;
-                        if (e instanceof t) {
-                            for (var r = e._value.concat([]), n = 0; n < this._value.length; n++) this._value[n] instanceof v["default"] ? (0, c["default"])(r, this._value[n]) || r.push(this._value[n]) : r.indexOf(this._value[n]) < 0 && r.push(this._value[n]);
-                            return new t(r)
-                        }
-                        throw new Error("Cannot merge Remove Op with the previous Op")
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        return {
-                            __op: "Remove",
-                            objects: (0, p["default"])(this._value, !1, !0)
-                        }
-                    }
-                }]), t
-            }(w);
-            r.RemoveOp = E;
-            var S = function(e) {
-                function t(e, r) {
-                    s(this, t), o(Object.getPrototypeOf(t.prototype), "constructor", this).call(this), this._targetClassName = null, Array.isArray(e) && (this.relationsToAdd = (0, g["default"])(e.map(this._extractId, this))), Array.isArray(r) && (this.relationsToRemove = (0, g["default"])(r.map(this._extractId, this)))
-                }
-                return i(t, e), a(t, [{
-                    key: "_extractId",
-                    value: function(e) {
-                        if ("string" == typeof e) return e;
-                        if (!e.id) throw new Error("You cannot add or remove an unsaved Parse Object from a relation");
-                        if (this._targetClassName || (this._targetClassName = e.className), this._targetClassName !== e.className) throw new Error("Tried to create a Relation with 2 different object types: " + this._targetClassName + " and " + e.className + ".");
-                        return e.id
-                    }
-                }, {
-                    key: "applyTo",
-                    value: function(e, t, r) {
-                        if (!e) {
-                            var n = new v["default"](t.className);
-                            t.id && 0 === t.id.indexOf("local") ? n._localId = t.id : t.id && (n.id = t.id);
-                            var a = new m["default"](n, r);
-                            return a.targetClassName = this._targetClassName, a
-                        }
-                        if (e instanceof m["default"]) {
-                            if (this._targetClassName)
-                                if (e.targetClassName) {
-                                    if (this._targetClassName !== e.targetClassName) throw new Error("Related object must be a " + e.targetClassName + ", but a " + this._targetClassName + " was passed in.")
-                                } else e.targetClassName = this._targetClassName;
-                            return e
-                        }
-                        throw new Error("Relation cannot be applied to a non-relation field")
-                    }
-                }, {
-                    key: "mergeWith",
-                    value: function(e) {
-                        if (!e) return this;
-                        if (e instanceof C) throw new Error("You cannot modify a relation after deleting it.");
-                        if (e instanceof t) {
-                            if (e._targetClassName && e._targetClassName !== this._targetClassName) throw new Error("Related object must be of class " + e._targetClassName + ", but " + (this._targetClassName || "null") + " was passed in.");
-                            var r = e.relationsToAdd.concat([]);
-                            this.relationsToRemove.forEach(function(e) {
-                                var t = r.indexOf(e);
-                                t > -1 && r.splice(t, 1)
-                            }), this.relationsToAdd.forEach(function(e) {
-                                var t = r.indexOf(e);
-                                0 > t && r.push(e)
-                            });
-                            var n = e.relationsToRemove.concat([]);
-                            this.relationsToAdd.forEach(function(e) {
-                                var t = n.indexOf(e);
-                                t > -1 && n.splice(t, 1)
-                            }), this.relationsToRemove.forEach(function(e) {
-                                var t = n.indexOf(e);
-                                0 > t && n.push(e)
-                            });
-                            var a = new t(r, n);
-                            return a._targetClassName = this._targetClassName, a
-                        }
-                        throw new Error("Cannot merge Relation Op with the previous Op")
-                    }
-                }, {
-                    key: "toJSON",
-                    value: function() {
-                        var e = this,
-                            t = function(t) {
-                                return {
-                                    __type: "Pointer",
-                                    className: e._targetClassName,
-                                    objectId: t
-                                }
-                            },
-                            r = null,
-                            n = null,
-                            a = null;
-                        return this.relationsToAdd.length > 0 && (a = this.relationsToAdd.map(t), r = {
-                            __op: "AddRelation",
-                            objects: a
-                        }), this.relationsToRemove.length > 0 && (a = this.relationsToRemove.map(t), n = {
-                            __op: "RemoveRelation",
-                            objects: a
-                        }), r && n ? {
-                            __op: "Batch",
-                            ops: [r, n]
-                        } : r || n || {}
-                    }
-                }]), t
-            }(w);
-            r.RelationOp = S
-        }, {
-            "./ParseObject": 14,
-            "./ParseRelation": 18,
-            "./arrayContainsObject": 27,
-            "./decode": 29,
-            "./encode": 30,
-            "./unique": 35,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/get": 45,
-            "babel-runtime/helpers/inherits": 46,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        16: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var s = !1,
-                o = function() {
-                    function e() {
-                        a(this, e), this._resolved = !1, this._rejected = !1, this._resolvedCallbacks = [], this._rejectedCallbacks = []
-                    }
-                    return n(e, [{
-                        key: "resolve",
-                        value: function() {
-                            if (this._resolved || this._rejected) throw new Error("A promise was resolved even though it had already been " + (this._resolved ? "resolved" : "rejected") + ".");
-                            this._resolved = !0;
-                            for (var e = arguments.length, t = Array(e), r = 0; e > r; r++) t[r] = arguments[r];
-                            this._result = t;
-                            for (var n = 0; n < this._resolvedCallbacks.length; n++) this._resolvedCallbacks[n].apply(this, t);
-                            this._resolvedCallbacks = [], this._rejectedCallbacks = []
-                        }
-                    }, {
-                        key: "reject",
-                        value: function(e) {
-                            if (this._resolved || this._rejected) throw new Error("A promise was resolved even though it had already been " + (this._resolved ? "resolved" : "rejected") + ".");
-                            this._rejected = !0, this._error = e;
-                            for (var t = 0; t < this._rejectedCallbacks.length; t++) this._rejectedCallbacks[t](e);
-                            this._resolvedCallbacks = [], this._rejectedCallbacks = []
-                        }
-                    }, {
-                        key: "then",
-                        value: function(t, r) {
-                            var n = this,
-                                a = new e,
-                                s = function() {
-                                    for (var r = arguments.length, n = Array(r), s = 0; r > s; s++) n[s] = arguments[s];
-                                    "function" == typeof t && (n = [t.apply(this, n)]), 1 === n.length && e.is(n[0]) ? n[0].then(function() {
-                                        a.resolve.apply(a, arguments)
-                                    }, function(e) {
-                                        a.reject(e)
-                                    }) : a.resolve.apply(a, n)
-                                },
-                                o = function(t) {
-                                    var n = [];
-                                    "function" == typeof r ? (n = [r(t)], 1 === n.length && e.is(n[0]) ? n[0].then(function() {
-                                        a.resolve.apply(a, arguments)
-                                    }, function(e) {
-                                        a.reject(e)
-                                    }) : a.reject(n[0])) : a.reject(t)
-                                },
-                                i = function(e) {
-                                    e.call()
-                                };
-                            return this._resolved ? i(function() {
-                                s.apply(n, n._result)
-                            }) : this._rejected ? i(function() {
-                                o(n._error)
-                            }) : (this._resolvedCallbacks.push(s), this._rejectedCallbacks.push(o)), a
-                        }
-                    }, {
-                        key: "always",
-                        value: function(e) {
-                            return this.then(e, e)
-                        }
-                    }, {
-                        key: "done",
-                        value: function(e) {
-                            return this.then(e)
-                        }
-                    }, {
-                        key: "fail",
-                        value: function(e) {
-                            return this.then(null, e)
-                        }
-                    }, {
-                        key: "_thenRunCallbacks",
-                        value: function(t, r) {
-                            var n = {};
-                            return "function" == typeof t ? (n.success = function(e) {
-                                t(e, null)
-                            }, n.error = function(e) {
-                                t(null, e)
-                            }) : "object" == typeof t && ("function" == typeof t.success && (n.success = t.success), "function" == typeof t.error && (n.error = t.error)), this.then(function() {
-                                for (var t = arguments.length, r = Array(t), a = 0; t > a; a++) r[a] = arguments[a];
-                                return n.success && n.success.apply(this, r), e.as.apply(e, arguments)
-                            }, function(t) {
-                                return n.error && ("undefined" != typeof r ? n.error(r, t) : n.error(t)), e.error(t)
-                            })
-                        }
-                    }, {
-                        key: "_continueWith",
-                        value: function(e) {
-                            return this.then(function() {
-                                return e(arguments, null)
-                            }, function(t) {
-                                return e(null, t)
-                            })
-                        }
-                    }], [{
-                        key: "is",
-                        value: function(e) {
-                            return "undefined" != typeof e && "function" == typeof e.then
-                        }
-                    }, {
-                        key: "as",
-                        value: function() {
-                            for (var t = new e, r = arguments.length, n = Array(r), a = 0; r > a; a++) n[a] = arguments[a];
-                            return t.resolve.apply(t, n), t
-                        }
-                    }, {
-                        key: "error",
-                        value: function() {
-                            for (var t = new e, r = arguments.length, n = Array(r), a = 0; r > a; a++) n[a] = arguments[a];
-                            return t.reject.apply(t, n), t
-                        }
-                    }, {
-                        key: "when",
-                        value: function(t) {
-                            var r;
-                            r = Array.isArray(t) ? t : arguments;
-                            var n = r.length,
-                                a = !1,
-                                s = [],
-                                o = [];
-                            if (s.length = r.length, o.length = r.length, 0 === n) return e.as.apply(this, s);
-                            for (var i = new e, u = function() {
-                                    n--, 0 >= n && (a ? i.reject(o) : i.resolve.apply(i, s))
-                                }, l = function(t, r) {
-                                    e.is(t) ? t.then(function(e) {
-                                        s[r] = e, u()
-                                    }, function(e) {
-                                        o[r] = e, a = !0, u()
-                                    }) : (s[c] = t, u())
-                                }, c = 0; c < r.length; c++) l(r[c], c);
-                            return i
-                        }
-                    }, {
-                        key: "_continueWhile",
-                        value: function(t, r) {
-                            return t() ? r().then(function() {
-                                return e._continueWhile(t, r)
-                            }) : e.as()
-                        }
-                    }, {
-                        key: "isPromisesAPlusCompliant",
-                        value: function() {
-                            return s
-                        }
-                    }]), e
-                }();
-            r["default"] = o, t.exports = r["default"]
-        }, {
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44
-        }],
-        17: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                return "\\Q" + e.replace("\\E", "\\E\\\\E\\Q") + "\\E"
-            }
-            var a = e("babel-runtime/helpers/create-class")["default"],
-                s = e("babel-runtime/helpers/class-call-check")["default"],
-                o = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var i = e("./CoreManager"),
-                u = o(i),
-                l = e("./encode"),
-                c = o(l),
-                f = e("./ParseError"),
-                d = o(f),
-                h = e("./ParseGeoPoint"),
-                p = o(h),
-                y = e("./ParseObject"),
-                v = o(y),
-                b = e("./ParsePromise"),
-                m = o(b),
-                _ = function() {
-                    function e(t) {
-                        if (s(this, e), "string" == typeof t) "User" === t && u["default"].get("PERFORM_USER_REWRITE") ? this.className = "_User" : this.className = t;
-                        else if (t instanceof v["default"]) this.className = t.className;
-                        else {
-                            if ("function" != typeof t) throw new TypeError("A ParseQuery must be constructed with a ParseObject or class name.");
-                            if ("string" == typeof t.className) this.className = t.className;
-                            else {
-                                var r = new t;
-                                this.className = r.className
-                            }
-                        }
-                        this._where = {}, this._include = [], this._limit = -1, this._skip = 0, this._extraOptions = {}
-                    }
-                    return a(e, [{
-                        key: "_orQuery",
-                        value: function(e) {
-                            var t = e.map(function(e) {
-                                return e.toJSON().where
-                            });
-                            return this._where.$or = t, this
-                        }
-                    }, {
-                        key: "_addCondition",
-                        value: function(e, t, r) {
-                            return this._where[e] && "string" != typeof this._where[e] || (this._where[e] = {}), this._where[e][t] = (0, c["default"])(r, !1, !0), this
-                        }
-                    }, {
-                        key: "toJSON",
-                        value: function() {
-                            var e = {
-                                where: this._where
-                            };
-                            this._include.length && (e.include = this._include.join(",")), this._select && (e.keys = this._select.join(",")), this._limit >= 0 && (e.limit = this._limit), this._skip > 0 && (e.skip = this._skip), this._order && (e.order = this._order.join(","));
-                            for (var t in this._extraOptions) e[t] = this._extraOptions[t];
-                            return e
-                        }
-                    }, {
-                        key: "get",
-                        value: function(e, t) {
-                            this.equalTo("objectId", e);
-                            var r = {};
-                            return t && t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey), t && t.hasOwnProperty("sessionToken") && (r.sessionToken = t.sessionToken), this.first(r).then(function(e) {
-                                if (e) return e;
-                                var t = new d["default"](d["default"].OBJECT_NOT_FOUND, "Object not found.");
-                                return m["default"].error(t)
-                            })._thenRunCallbacks(t, null)
-                        }
-                    }, {
-                        key: "find",
-                        value: function(e) {
-                            var t = this;
-                            e = e || {};
-                            var r = {};
-                            e.hasOwnProperty("useMasterKey") && (r.useMasterKey = e.useMasterKey), e.hasOwnProperty("sessionToken") && (r.sessionToken = e.sessionToken);
-                            var n = u["default"].getQueryController();
-                            return n.find(this.className, this.toJSON(), r).then(function(e) {
-                                return e.results.map(function(e) {
-                                    return e.className = t.className, v["default"].fromJSON(e)
-                                })
-                            })._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "count",
-                        value: function(e) {
-                            e = e || {};
-                            var t = {};
-                            e.hasOwnProperty("useMasterKey") && (t.useMasterKey = e.useMasterKey), e.hasOwnProperty("sessionToken") && (t.sessionToken = e.sessionToken);
-                            var r = u["default"].getQueryController(),
-                                n = this.toJSON();
-                            return n.limit = 0, n.count = 1, r.find(this.className, n, t).then(function(e) {
-                                return e.count
-                            })._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "first",
-                        value: function(e) {
-                            var t = this;
-                            e = e || {};
-                            var r = {};
-                            e.hasOwnProperty("useMasterKey") && (r.useMasterKey = e.useMasterKey), e.hasOwnProperty("sessionToken") && (r.sessionToken = e.sessionToken);
-                            var n = u["default"].getQueryController(),
-                                a = this.toJSON();
-                            return a.limit = 1, n.find(this.className, a, r).then(function(e) {
-                                var r = e.results;
-                                return r[0] ? (r[0].className = t.className, v["default"].fromJSON(r[0])) : void 0
-                            })._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "each",
-                        value: function(t, r) {
-                            if (r = r || {}, this._order || this._skip || this._limit >= 0) return m["default"].error("Cannot iterate on a query with sort, skip, or limit.")._thenRunCallbacks(r);
-                            var n = (new m["default"], new e(this.className));
-                            n._limit = r.batchSize || 100, n._include = this._include.map(function(e) {
-                                return e
-                            }), this._select && (n._select = this._select.map(function(e) {
-                                return e
-                            })), n._where = {};
-                            for (var a in this._where) {
-                                var s = this._where[a];
-                                if (Array.isArray(s)) n._where[a] = s.map(function(e) {
-                                    return e
-                                });
-                                else if (s && "object" == typeof s) {
-                                    var o = {};
-                                    n._where[a] = o;
-                                    for (var i in s) o[i] = s[i]
-                                } else n._where[a] = s
-                            }
-                            n.ascending("objectId");
-                            var u = {};
-                            r.hasOwnProperty("useMasterKey") && (u.useMasterKey = r.useMasterKey), r.hasOwnProperty("sessionToken") && (u.sessionToken = r.sessionToken);
-                            var l = !1;
-                            return m["default"]._continueWhile(function() {
-                                return !l
-                            }, function() {
-                                return n.find(u).then(function(e) {
-                                    var r = m["default"].as();
-                                    return e.forEach(function(e) {
-                                        r = r.then(function() {
-                                            return t(e)
-                                        })
-                                    }), r.then(function() {
-                                        e.length >= n._limit ? n.greaterThan("objectId", e[e.length - 1].id) : l = !0
-                                    })
-                                })
-                            })._thenRunCallbacks(r)
-                        }
-                    }, {
-                        key: "equalTo",
-                        value: function(e, t) {
-                            return "undefined" == typeof t ? this.doesNotExist(e) : (this._where[e] = (0, c["default"])(t, !1, !0), this)
-                        }
-                    }, {
-                        key: "notEqualTo",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$ne", t)
-                        }
-                    }, {
-                        key: "lessThan",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$lt", t)
-                        }
-                    }, {
-                        key: "greaterThan",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$gt", t)
-                        }
-                    }, {
-                        key: "lessThanOrEqualTo",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$lte", t)
-                        }
-                    }, {
-                        key: "greaterThanOrEqualTo",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$gte", t)
-                        }
-                    }, {
-                        key: "containedIn",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$in", t)
-                        }
-                    }, {
-                        key: "notContainedIn",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$nin", t)
-                        }
-                    }, {
-                        key: "containsAll",
-                        value: function(e, t) {
-                            return this._addCondition(e, "$all", t)
-                        }
-                    }, {
-                        key: "exists",
-                        value: function(e) {
-                            return this._addCondition(e, "$exists", !0)
-                        }
-                    }, {
-                        key: "doesNotExist",
-                        value: function(e) {
-                            return this._addCondition(e, "$exists", !1)
-                        }
-                    }, {
-                        key: "matches",
-                        value: function(e, t, r) {
-                            return this._addCondition(e, "$regex", t), r || (r = ""), t.ignoreCase && (r += "i"), t.multiline && (r += "m"), r.length && this._addCondition(e, "$options", r), this
-                        }
-                    }, {
-                        key: "matchesQuery",
-                        value: function(e, t) {
-                            var r = t.toJSON();
-                            return r.className = t.className, this._addCondition(e, "$inQuery", r)
-                        }
-                    }, {
-                        key: "doesNotMatchQuery",
-                        value: function(e, t) {
-                            var r = t.toJSON();
-                            return r.className = t.className, this._addCondition(e, "$notInQuery", r)
-                        }
-                    }, {
-                        key: "matchesKeyInQuery",
-                        value: function(e, t, r) {
-                            var n = r.toJSON();
-                            return n.className = r.className, this._addCondition(e, "$select", {
-                                key: t,
-                                query: n
-                            })
-                        }
-                    }, {
-                        key: "doesNotMatchKeyInQuery",
-                        value: function(e, t, r) {
-                            var n = r.toJSON();
-                            return n.className = r.className, this._addCondition(e, "$dontSelect", {
-                                key: t,
-                                query: n
-                            })
-                        }
-                    }, {
-                        key: "contains",
-                        value: function(e, t) {
-                            if ("string" != typeof t) throw new Error("The value being searched for must be a string.");
-                            return this._addCondition(e, "$regex", n(t))
-                        }
-                    }, {
-                        key: "startsWith",
-                        value: function(e, t) {
-                            if ("string" != typeof t) throw new Error("The value being searched for must be a string.");
-                            return this._addCondition(e, "$regex", "^" + n(t))
-                        }
-                    }, {
-                        key: "endsWith",
-                        value: function(e, t) {
-                            if ("string" != typeof t) throw new Error("The value being searched for must be a string.");
-                            return this._addCondition(e, "$regex", n(t) + "$")
-                        }
-                    }, {
-                        key: "near",
-                        value: function(e, t) {
-                            return t instanceof p["default"] || (t = new p["default"](t)), this._addCondition(e, "$nearSphere", t)
-                        }
-                    }, {
-                        key: "withinRadians",
-                        value: function(e, t, r) {
-                            return this.near(e, t), this._addCondition(e, "$maxDistance", r)
-                        }
-                    }, {
-                        key: "withinMiles",
-                        value: function(e, t, r) {
-                            return this.withinRadians(e, t, r / 3958.8)
-                        }
-                    }, {
-                        key: "withinKilometers",
-                        value: function(e, t, r) {
-                            return this.withinRadians(e, t, r / 6371)
-                        }
-                    }, {
-                        key: "withinGeoBox",
-                        value: function(e, t, r) {
-                            return t instanceof p["default"] || (t = new p["default"](t)), r instanceof p["default"] || (r = new p["default"](r)), this._addCondition(e, "$within", {
-                                $box: [t, r]
-                            }), this
-                        }
-                    }, {
-                        key: "ascending",
-                        value: function() {
-                            this._order = [];
-                            for (var e = arguments.length, t = Array(e), r = 0; e > r; r++) t[r] = arguments[r];
-                            return this.addAscending.apply(this, t)
-                        }
-                    }, {
-                        key: "addAscending",
-                        value: function() {
-                            var e = this;
-                            this._order || (this._order = []);
-                            for (var t = arguments.length, r = Array(t), n = 0; t > n; n++) r[n] = arguments[n];
-                            return r.forEach(function(t) {
-                                Array.isArray(t) && (t = t.join()), e._order = e._order.concat(t.replace(/\s/g, "").split(","))
-                            }), this
-                        }
-                    }, {
-                        key: "descending",
-                        value: function() {
-                            this._order = [];
-                            for (var e = arguments.length, t = Array(e), r = 0; e > r; r++) t[r] = arguments[r];
-                            return this.addDescending.apply(this, t)
-                        }
-                    }, {
-                        key: "addDescending",
-                        value: function() {
-                            var e = this;
-                            this._order || (this._order = []);
-                            for (var t = arguments.length, r = Array(t), n = 0; t > n; n++) r[n] = arguments[n];
-                            return r.forEach(function(t) {
-                                Array.isArray(t) && (t = t.join()), e._order = e._order.concat(t.replace(/\s/g, "").split(",").map(function(e) {
-                                    return "-" + e
-                                }))
-                            }), this
-                        }
-                    }, {
-                        key: "skip",
-                        value: function(e) {
-                            if ("number" != typeof e || 0 > e) throw new Error("You can only skip by a positive number");
-                            return this._skip = e, this
-                        }
-                    }, {
-                        key: "limit",
-                        value: function(e) {
-                            if ("number" != typeof e) throw new Error("You can only set the limit to a numeric value");
-                            return this._limit = e, this
-                        }
-                    }, {
-                        key: "include",
-                        value: function() {
-                            for (var e = this, t = arguments.length, r = Array(t), n = 0; t > n; n++) r[n] = arguments[n];
-                            return r.forEach(function(t) {
-                                Array.isArray(t) ? e._include = e._include.concat(t) : e._include.push(t)
-                            }), this
-                        }
-                    }, {
-                        key: "select",
-                        value: function() {
-                            var e = this;
-                            this._select || (this._select = []);
-                            for (var t = arguments.length, r = Array(t), n = 0; t > n; n++) r[n] = arguments[n];
-                            return r.forEach(function(t) {
-                                Array.isArray(t) ? e._select = e._select.concat(t) : e._select.push(t)
-                            }), this
-                        }
-                    }], [{
-                        key: "or",
-                        value: function() {
-                            for (var t = null, r = arguments.length, n = Array(r), a = 0; r > a; a++) n[a] = arguments[a];
-                            n.forEach(function(e) {
-                                if (t || (t = e.className), t !== e.className) throw new Error("All queries must be for the same class.")
-                            });
-                            var s = new e(t);
-                            return s._orQuery(n), s
-                        }
-                    }]), e
-                }();
-            r["default"] = _, u["default"].setQueryController({
-                find: function(e, t, r) {
-                    var n = u["default"].getRESTController();
-                    return n.request("GET", "classes/" + e, t, r)
-                }
-            }), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ParseError": 10,
-            "./ParseGeoPoint": 12,
-            "./ParseObject": 14,
-            "./ParsePromise": 16,
-            "./encode": 30,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        18: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"],
-                s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var o = e("./ParseOp"),
-                i = e("./ParseObject"),
-                u = (s(i), e("./ParseQuery")),
-                l = s(u),
-                c = function() {
-                    function e(t, r) {
-                        a(this, e), this.parent = t, this.key = r, this.targetClassName = null
-                    }
-                    return n(e, [{
-                        key: "_ensureParentAndKey",
-                        value: function(e, t) {
-                            if (this.key = this.key || t, this.key !== t) throw new Error("Internal Error. Relation retrieved from two different keys.");
-                            if (this.parent) {
-                                if (this.parent.className !== e.className) throw new Error("Internal Error. Relation retrieved from two different Objects.");
-                                if (this.parent.id) {
-                                    if (this.parent.id !== e.id) throw new Error("Internal Error. Relation retrieved from two different Objects.")
-                                } else e.id && (this.parent = e)
-                            } else this.parent = e
-                        }
-                    }, {
-                        key: "add",
-                        value: function(e) {
-                            Array.isArray(e) || (e = [e]);
-                            var t = new o.RelationOp(e, []);
-                            return this.parent.set(this.key, t), this.targetClassName = t._targetClassName, this.parent
-                        }
-                    }, {
-                        key: "remove",
-                        value: function(e) {
-                            Array.isArray(e) || (e = [e]);
-                            var t = new o.RelationOp([], e);
-                            this.parent.set(this.key, t), this.targetClassName = t._targetClassName
-                        }
-                    }, {
-                        key: "toJSON",
-                        value: function() {
-                            return {
-                                __type: "Relation",
-                                className: this.targetClassName
-                            }
-                        }
-                    }, {
-                        key: "query",
-                        value: function t() {
-                            var t;
-                            return this.targetClassName ? t = new l["default"](this.targetClassName) : (t = new l["default"](this.parent.className), t._extraOptions.redirectClassNameForKey = this.key), t._addCondition("$relatedTo", "object", {
-                                __type: "Pointer",
-                                className: this.parent.className,
-                                objectId: this.parent.id
-                            }), t._addCondition("$relatedTo", "key", this.key), t
-                        }
-                    }]), e
-                }();
-            r["default"] = c, t.exports = r["default"]
-        }, {
-            "./ParseObject": 14,
-            "./ParseOp": 15,
-            "./ParseQuery": 17,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        19: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/get")["default"],
-                a = e("babel-runtime/helpers/inherits")["default"],
-                s = e("babel-runtime/helpers/create-class")["default"],
-                o = e("babel-runtime/helpers/class-call-check")["default"],
-                i = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var u = e("./ParseACL"),
-                l = i(u),
-                c = e("./ParseError"),
-                f = i(c),
-                d = e("./ParseObject"),
-                h = i(d),
-                p = function(e) {
-                    function t(e, r) {
-                        o(this, t), n(Object.getPrototypeOf(t.prototype), "constructor", this).call(this, "_Role"), "string" == typeof e && r instanceof l["default"] && (this.setName(e), this.setACL(r))
-                    }
-                    return a(t, e), s(t, [{
-                        key: "getName",
-                        value: function() {
-                            return this.get("name")
-                        }
-                    }, {
-                        key: "setName",
-                        value: function(e, t) {
-                            return this.set("name", e, t)
-                        }
-                    }, {
-                        key: "getUsers",
-                        value: function() {
-                            return this.relation("users")
-                        }
-                    }, {
-                        key: "getRoles",
-                        value: function() {
-                            return this.relation("roles")
-                        }
-                    }, {
-                        key: "validate",
-                        value: function(e, r) {
-                            var a = n(Object.getPrototypeOf(t.prototype), "validate", this).call(this, e, r);
-                            if (a) return a;
-                            if ("name" in e && e.name !== this.getName()) {
-                                var s = e.name;
-                                if (this.id && this.id !== e.objectId) return new f["default"](f["default"].OTHER_CAUSE, "A role's name can only be set before it has been saved.");
-                                if ("string" != typeof s) return new f["default"](f["default"].OTHER_CAUSE, "A role's name must be a String.");
-                                if (!/^[0-9a-zA-Z\-_ ]+$/.test(s)) return new f["default"](f["default"].OTHER_CAUSE, "A role's name can be only contain alphanumeric characters, _, -, and spaces.")
-                            }
-                            return !1
-                        }
-                    }]), t
-                }(h["default"]);
-            r["default"] = p, h["default"].registerSubclass("_Role", p), t.exports = r["default"]
-        }, {
-            "./ParseACL": 8,
-            "./ParseError": 10,
-            "./ParseObject": 14,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/get": 45,
-            "babel-runtime/helpers/inherits": 46,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        20: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/get")["default"],
-                a = e("babel-runtime/helpers/inherits")["default"],
-                s = e("babel-runtime/helpers/create-class")["default"],
-                o = e("babel-runtime/helpers/class-call-check")["default"],
-                i = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var u = e("./CoreManager"),
-                l = i(u),
-                c = e("./isRevocableSession"),
-                f = i(c),
-                d = e("./ParseObject"),
-                h = i(d),
-                p = e("./ParsePromise"),
-                y = i(p),
-                v = e("./ParseUser"),
-                b = i(v),
-                m = function(e) {
-                    function t(e) {
-                        if (o(this, t), n(Object.getPrototypeOf(t.prototype), "constructor", this).call(this, "_Session"), e && "object" == typeof e && !this.set(e || {})) throw new Error("Can't create an invalid Session")
-                    }
-                    return a(t, e), s(t, [{
-                        key: "getSessionToken",
-                        value: function() {
-                            return this.get("sessionToken")
-                        }
-                    }], [{
-                        key: "readOnlyAttributes",
-                        value: function() {
-                            return ["createdWith", "expiresAt", "installationId", "restricted", "sessionToken", "user"]
-                        }
-                    }, {
-                        key: "current",
-                        value: function(e) {
-                            e = e || {};
-                            var t = l["default"].getSessionController(),
-                                r = {};
-                            return e.hasOwnProperty("useMasterKey") && (r.useMasterKey = e.useMasterKey), b["default"].currentAsync().then(function(e) {
-                                if (!e) return y["default"].error("There is no current user.");
-                                e.getSessionToken();
-                                return r.sessionToken = e.getSessionToken(), t.getSession(r)
-                            })
-                        }
-                    }, {
-                        key: "isCurrentSessionRevocable",
-                        value: function() {
-                            var e = b["default"].current();
-                            return e ? (0, f["default"])(e.getSessionToken() || "") : !1
-                        }
-                    }]), t
-                }(h["default"]);
-            r["default"] = m, h["default"].registerSubclass("_Session", m), l["default"].setSessionController({
-                getSession: function(e) {
-                    var t = l["default"].getRESTController(),
-                        r = new m;
-                    return t.request("GET", "sessions/me", {}, e).then(function(e) {
-                        return r._finishFetch(e), r._setExisted(!0), r
-                    })
-                }
-            }), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ParseObject": 14,
-            "./ParsePromise": 16,
-            "./ParseUser": 21,
-            "./isRevocableSession": 33,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/get": 45,
-            "babel-runtime/helpers/inherits": 46,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        21: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/get")["default"],
-                a = e("babel-runtime/helpers/inherits")["default"],
-                s = e("babel-runtime/helpers/create-class")["default"],
-                o = e("babel-runtime/helpers/class-call-check")["default"],
-                i = e("babel-runtime/core-js/object/define-property")["default"],
-                u = e("babel-runtime/helpers/interop-require-default")["default"],
-                l = e("babel-runtime/helpers/interop-require-wildcard")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var c = e("./CoreManager"),
-                f = u(c),
-                d = e("./isRevocableSession"),
-                h = u(d),
-                p = e("./ObjectState"),
-                y = l(p),
-                v = e("./ParseError"),
-                b = u(v),
-                m = e("./ParseObject"),
-                _ = u(m),
-                g = e("./ParsePromise"),
-                w = u(g),
-                O = e("./ParseSession"),
-                C = u(O),
-                P = e("./Storage"),
-                k = u(P),
-                A = "currentUser",
-                E = !f["default"].get("IS_NODE"),
-                S = !1,
-                j = null,
-                I = {},
-                N = function(e) {
-                    function t(e) {
-                        if (o(this, t), n(Object.getPrototypeOf(t.prototype), "constructor", this).call(this, "_User"), e && "object" == typeof e && !this.set(e || {})) throw new Error("Can't create an invalid Parse User")
-                    }
-                    return a(t, e), s(t, [{
-                        key: "_upgradeToRevocableSession",
-                        value: function(e) {
-                            e = e || {};
-                            var t = {};
-                            e.hasOwnProperty("useMasterKey") && (t.useMasterKey = e.useMasterKey);
-                            var r = f["default"].getUserController();
-                            return r.upgradeToRevocableSession(this, t)._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "_linkWith",
-                        value: function(e, t) {
-                            var r, n = this;
-                            if ("string" == typeof e ? (r = e, e = I[e]) : r = e.getAuthType(), t && t.hasOwnProperty("authData")) {
-                                var a = this.get("authData") || {};
-                                a[r] = t.authData;
-                                var s = f["default"].getUserController();
-                                return s.linkWith(this, a)._thenRunCallbacks(t, this)
-                            }
-                            var o = new w["default"];
-                            return e.authenticate({
-                                success: function(e, r) {
-                                    var a = {};
-                                    a.authData = r, t.success && (a.success = t.success), t.error && (a.error = t.error), n._linkWith(e, a).then(function() {
-                                        o.resolve(n)
-                                    }, function(e) {
-                                        o.reject(e)
-                                    })
-                                },
-                                error: function(e, r) {
-                                    t.error && t.error(n, r), o.reject(r)
-                                }
-                            }), o
-                        }
-                    }, {
-                        key: "_synchronizeAuthData",
-                        value: function(e) {
-                            if (this.isCurrent() && e) {
-                                var t;
-                                "string" == typeof e ? (t = e, e = I[t]) : t = e.getAuthType();
-                                var r = this.get("authData");
-                                if (e && "object" == typeof r) {
-                                    var n = e.restoreAuthentication(r[t]);
-                                    n || this._unlinkFrom(e)
-                                }
-                            }
-                        }
-                    }, {
-                        key: "_synchronizeAllAuthData",
-                        value: function() {
-                            var e = this.get("authData");
-                            if ("object" == typeof e)
-                                for (var t in e) this._synchronizeAuthData(t)
-                        }
-                    }, {
-                        key: "_cleanupAuthData",
-                        value: function() {
-                            if (this.isCurrent()) {
-                                var e = this.get("authData");
-                                if ("object" == typeof e)
-                                    for (var t in e) e[t] || delete e[t]
-                            }
-                        }
-                    }, {
-                        key: "_unlinkFrom",
-                        value: function(e, t) {
-                            var r, n = this;
-                            return "string" == typeof e ? (r = e, e = I[e]) : r = e.getAuthType(), this._linkWith(e, {
-                                authData: null
-                            }).then(function() {
-                                return n._synchronizeAuthData(e), w["default"].as(n)
-                            })._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "_isLinked",
-                        value: function(e) {
-                            var t;
-                            t = "string" == typeof e ? e : e.getAuthType();
-                            var r = this.get("authData") || {};
-                            return !!r[t]
-                        }
-                    }, {
-                        key: "_logOutWithAll",
-                        value: function() {
-                            var e = this.get("authData");
-                            if ("object" == typeof e)
-                                for (var t in e) this._logOutWith(t)
-                        }
-                    }, {
-                        key: "_logOutWith",
-                        value: function(e) {
-                            this.isCurrent() && ("string" == typeof e && (e = I[e]), e && e.deauthenticate && e.deauthenticate())
-                        }
-                    }, {
-                        key: "isCurrent",
-                        value: function() {
-                            var e = t.current();
-                            return !!e && e.id === this.id
-                        }
-                    }, {
-                        key: "getUsername",
-                        value: function() {
-                            return this.get("username")
-                        }
-                    }, {
-                        key: "setUsername",
-                        value: function(e) {
-                            this.set("username", e)
-                        }
-                    }, {
-                        key: "setPassword",
-                        value: function(e) {
-                            this.set("password", e)
-                        }
-                    }, {
-                        key: "getEmail",
-                        value: function() {
-                            return this.get("email")
-                        }
-                    }, {
-                        key: "setEmail",
-                        value: function(e) {
-                            this.set("email", e)
-                        }
-                    }, {
-                        key: "getSessionToken",
-                        value: function() {
-                            return this.get("sessionToken")
-                        }
-                    }, {
-                        key: "authenticated",
-                        value: function() {
-                            var e = t.current();
-                            return !!this.get("sessionToken") && !!e && e.id === this.id
-                        }
-                    }, {
-                        key: "signUp",
-                        value: function(e, t) {
-                            t = t || {};
-                            var r = {};
-                            t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey);
-                            var n = f["default"].getUserController();
-                            return n.signUp(this, e, r)._thenRunCallbacks(t, this)
-                        }
-                    }, {
-                        key: "logIn",
-                        value: function(e) {
-                            e = e || {};
-                            var t = {};
-                            e.hasOwnProperty("useMasterKey") && (t.useMasterKey = e.useMasterKey);
-                            var r = f["default"].getUserController();
-                            return r.logIn(this, t)._thenRunCallbacks(e, this)
-                        }
-                    }], [{
-                        key: "readOnlyAttributes",
-                        value: function() {
-                            return ["sessionToken"]
-                        }
-                    }, {
-                        key: "extend",
-                        value: function(e, r) {
-                            if (e)
-                                for (var n in e) "className" !== n && i(t.prototype, n, {
-                                    value: e[n],
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                });
-                            if (r)
-                                for (var n in r) "className" !== n && i(t, n, {
-                                    value: r[n],
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0
-                                });
-                            return t
-                        }
-                    }, {
-                        key: "current",
-                        value: function() {
-                            if (!E) return null;
-                            var e = f["default"].getUserController();
-                            return e.currentUser()
-                        }
-                    }, {
-                        key: "currentAsync",
-                        value: function() {
-                            if (!E) return w["default"].as(null);
-                            var e = f["default"].getUserController();
-                            return e.currentUserAsync()
-                        }
-                    }, {
-                        key: "signUp",
-                        value: function(e, r, n, a) {
-                            n = n || {}, n.username = e, n.password = r;
-                            var s = new t(n);
-                            return s.signUp({}, a)
-                        }
-                    }, {
-                        key: "logIn",
-                        value: function(e, r, n) {
-                            var a = new t;
-                            return a._finishFetch({
-                                username: e,
-                                password: r
-                            }), a.logIn(n)
-                        }
-                    }, {
-                        key: "become",
-                        value: function(e, t) {
-                            if (!E) throw new Error("It is not memory-safe to become a user in a server environment");
-                            t = t || {};
-                            var r = {
-                                sessionToken: e
-                            };
-                            t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey);
-                            var n = f["default"].getUserController();
-                            return n.become(r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "logInWith",
-                        value: function(e, r) {
-                            return t._logInWith(e, r)
-                        }
-                    }, {
-                        key: "logOut",
-                        value: function() {
-                            if (!E) throw new Error("There is no current user user on a node.js server environment.");
-                            var e = f["default"].getUserController();
-                            return e.logOut()
-                        }
-                    }, {
-                        key: "requestPasswordReset",
-                        value: function(e, t) {
-                            t = t || {};
-                            var r = {};
-                            t.hasOwnProperty("useMasterKey") && (r.useMasterKey = t.useMasterKey);
-                            var n = f["default"].getUserController();
-                            return n.requestPasswordReset(e, r)._thenRunCallbacks(t)
-                        }
-                    }, {
-                        key: "allowCustomUserClass",
-                        value: function(e) {
-                            f["default"].set("PERFORM_USER_REWRITE", !e)
-                        }
-                    }, {
-                        key: "enableRevocableSession",
-                        value: function(e) {
-                            if (e = e || {}, f["default"].set("FORCE_REVOCABLE_SESSION", !0), E) {
-                                var r = t.current();
-                                if (r) return r._upgradeToRevocableSession(e)
-                            }
-                            return w["default"].as()._thenRunCallbacks(e)
-                        }
-                    }, {
-                        key: "enableUnsafeCurrentUser",
-                        value: function() {
-                            E = !0
-                        }
-                    }, {
-                        key: "disableUnsafeCurrentUser",
-                        value: function() {
-                            E = !1
-                        }
-                    }, {
-                        key: "_registerAuthenticationProvider",
-                        value: function(e) {
-                            I[e.getAuthType()] = e;
-                            var r = t.current();
-                            r && r._synchronizeAuthData(e.getAuthType())
-                        }
-                    }, {
-                        key: "_logInWith",
-                        value: function(e, r) {
-                            var n = new t;
-                            return n._linkWith(e, r)
-                        }
-                    }, {
-                        key: "_clearCache",
-                        value: function() {
-                            j = null, S = !1
-                        }
-                    }, {
-                        key: "_setCurrentUserCache",
-                        value: function(e) {
-                            j = e
-                        }
-                    }]), t
-                }(_["default"]);
-            r["default"] = N, _["default"].registerSubclass("_User", N);
-            var T = {
-                setCurrentUser: function(e) {
-                    j = e, e._cleanupAuthData(), e._synchronizeAllAuthData();
-                    var t = k["default"].generatePath(A),
-                        r = e.toJSON();
-                    return r.className = "_User", k["default"].setItemAsync(t, JSON.stringify(r)).then(function() {
-                        return e
-                    })
-                },
-                currentUser: function() {
-                    if (j) return j;
-                    if (S) return null;
-                    if (k["default"].async()) throw new Error("Cannot call currentUser() when using a platform with an async storage system. Call currentUserAsync() instead.");
-                    var e = k["default"].generatePath(A),
-                        t = k["default"].getItem(e);
-                    if (S = !0, !t) return j = null, null;
-                    t = JSON.parse(t), t.className || (t.className = "_User"), t._id && (t.objectId !== t._id && (t.objectId = t._id), delete t._id), t._sessionToken && (t.sessionToken = t._sessionToken, delete t._sessionToken);
-                    var r = N.fromJSON(t);
-                    return j = r, r._synchronizeAllAuthData(), r
-                },
-                currentUserAsync: function() {
-                    if (j) return w["default"].as(j);
-                    if (S) return w["default"].as(null);
-                    var e = k["default"].generatePath(A);
-                    return k["default"].getItemAsync(e).then(function(e) {
-                        if (S = !0, !e) return j = null, w["default"].as(null);
-                        e = JSON.parse(e), e.className || (e.className = "_User"), e._id && (e.objectId !== e._id && (e.objectId = e._id), delete e._id), e._sessionToken && (e.sessionToken = e._sessionToken, delete e._sessionToken);
-                        var t = N.fromJSON(e);
-                        return j = t, t._synchronizeAllAuthData(), w["default"].as(t)
-                    })
-                },
-                signUp: function(e, t, r) {
-                    var n = t && t.username || e.get("username"),
-                        a = t && t.password || e.get("password");
-                    return n && n.length ? a && a.length ? e.save(t, r).then(function() {
-                        return e._finishFetch({
-                            password: void 0
-                        }), E ? T.setCurrentUser(e) : e
-                    }) : w["default"].error(new b["default"](b["default"].OTHER_CAUSE, "Cannot sign up user with an empty password.")) : w["default"].error(new b["default"](b["default"].OTHER_CAUSE, "Cannot sign up user with an empty name."))
-                },
-                logIn: function(e, t) {
-                    var r = f["default"].getRESTController(),
-                        n = {
-                            username: e.get("username"),
-                            password: e.get("password")
-                        };
-                    return r.request("GET", "login", n, t).then(function(t, r) {
-                        return e._migrateId(t.objectId), e._setExisted(!0), y.setPendingOp(e.className, e._getId(), "username", void 0), y.setPendingOp(e.className, e._getId(), "password", void 0), t.password = void 0, e._finishFetch(t), E ? T.setCurrentUser(e) : w["default"].as(e)
-                    })
-                },
-                become: function(e) {
-                    var t = new N,
-                        r = f["default"].getRESTController();
-                    return r.request("GET", "users/me", {}, e).then(function(e, r) {
-                        return t._finishFetch(e), t._setExisted(!0), T.setCurrentUser(t)
-                    })
-                },
-                logOut: function() {
-                    return T.currentUserAsync().then(function(e) {
-                        var t = k["default"].generatePath(A),
-                            r = k["default"].removeItemAsync(t),
-                            n = f["default"].getRESTController();
-                        if (null !== e) {
-                            var a = e.getSessionToken();
-                            a && (0, h["default"])(a) && r.then(function() {
-                                return n.request("POST", "logout", {}, {
-                                    sessionToken: a
-                                })
-                            }), e._logOutWithAll(), e._finishFetch({
-                                sessionToken: void 0
-                            })
-                        }
-                        return S = !0, j = null, r
-                    })
-                },
-                requestPasswordReset: function(e, t) {
-                    var r = f["default"].getRESTController();
-                    return r.request("POST", "requestPasswordReset", {
-                        email: e
-                    }, t)
-                },
-                upgradeToRevocableSession: function(e, t) {
-                    var r = e.getSessionToken();
-                    if (!r) return w["default"].error(new b["default"](b["default"].SESSION_MISSING, "Cannot upgrade a user with no session token"));
-                    t.sessionToken = r;
-                    var n = f["default"].getRESTController();
-                    return n.request("POST", "upgradeToRevocableSession", {}, t).then(function(t) {
-                        var r = new C["default"];
-                        return r._finishFetch(t), e._finishFetch({
-                            sessionToken: r.getSessionToken()
-                        }), e.isCurrent() ? T.setCurrentUser(e) : w["default"].as(e)
-                    })
-                },
-                linkWith: function(e, t) {
-                    return e.save({
-                        authData: t
-                    }).then(function() {
-                        return E ? T.setCurrentUser(e) : e
-                    })
-                }
-            };
-            f["default"].setUserController(T), t.exports = r["default"]
-        }, {
-            "./CoreManager": 3,
-            "./ObjectState": 6,
-            "./ParseError": 10,
-            "./ParseObject": 14,
-            "./ParsePromise": 16,
-            "./ParseSession": 20,
-            "./Storage": 24,
-            "./isRevocableSession": 33,
-            "babel-runtime/core-js/object/define-property": 38,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/get": 45,
-            "babel-runtime/helpers/inherits": 46,
-            "babel-runtime/helpers/interop-require-default": 47,
-            "babel-runtime/helpers/interop-require-wildcard": 48
-        }],
-        22: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t) {
-                if (t = t || {}, e.where && e.where instanceof u["default"] && (e.where = e.where.toJSON().where), e.push_time && "object" == typeof e.push_time && (e.push_time = e.push_time.toJSON()), e.expiration_time && "object" == typeof e.expiration_time && (e.expiration_time = e.expiration_time.toJSON()), e.expiration_time && e.expiration_interval) throw new Error("expiration_time and expiration_interval cannot both be set.");
-                return o["default"].getPushController().send(e, {
-                    useMasterKey: t.useMasterKey
-                })._thenRunCallbacks(t)
-            }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r.send = n;
-            var s = e("./CoreManager"),
-                o = a(s),
-                i = e("./ParseQuery"),
-                u = a(i);
-            o["default"].setPushController({
-                send: function(e, t) {
-                    var r = o["default"].getRESTController(),
-                        n = r.request("POST", "push", e, {
-                            useMasterKey: !!t.useMasterKey
-                        });
-                    return n._thenRunCallbacks(t)
-                }
-            })
-        }, {
-            "./CoreManager": 3,
-            "./ParseQuery": 17,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        23: [function(e, t, r) {
-            (function(n) {
-                "use strict";
-
-                function a(e, t, r) {
-                    var n = new f["default"],
-                        a = new XDomainRequest;
-                    return a.onload = function() {
-                        var e;
-                        try {
-                            e = JSON.parse(a.responseText)
-                        } catch (t) {
-                            n.reject(t)
-                        }
-                        n.resolve(e)
-                    }, a.onerror = a.ontimeout = function() {
-                        var e = {
-                            responseText: JSON.stringify({
-                                code: l["default"].X_DOMAIN_REQUEST,
-                                error: "IE's XDomainRequest does not supply error info."
-                            })
-                        };
-                        n.reject(e)
-                    }, a.onprogress = function() {}, a.open(e, t), a.send(r), n
-                }
-                var s = e("babel-runtime/helpers/interop-require-default")["default"];
-                Object.defineProperty(r, "__esModule", {
-                    value: !0
-                });
-                var o = e("./CoreManager"),
-                    i = s(o),
-                    u = e("./ParseError"),
-                    l = s(u),
-                    c = e("./ParsePromise"),
-                    f = s(c),
-                    d = e("./Storage"),
-                    h = (s(d), null);
-                "undefined" != typeof XMLHttpRequest && (h = XMLHttpRequest);
-                var p = !1;
-                "undefined" == typeof XDomainRequest || "withCredentials" in new XMLHttpRequest || (p = !0);
-                var y = {
-                    ajax: function(e, t, r, s) {
-                        if (p) return a(e, t, r, s);
-                        var o = new f["default"],
-                            u = 0,
-                            l = function c() {
-                                if (null == h) throw new Error("Cannot make a request: No definition of XMLHttpRequest was found.");
-                                var a = !1,
-                                    l = new h;
-                                l.onreadystatechange = function() {
-                                    if (4 === l.readyState && !a)
-                                        if (a = !0, l.status >= 200 && l.status < 300) {
-                                            var e;
-                                            try {
-                                                e = JSON.parse(l.responseText)
-                                            } catch (t) {
-                                                o.reject(t)
-                                            }
-                                            o.resolve(e, l.status, l)
-                                        } else if (l.status >= 500)
-                                        if (++u < i["default"].get("REQUEST_ATTEMPT_LIMIT")) {
-                                            var r = Math.round(125 * Math.random() * Math.pow(2, u));
-                                            setTimeout(c, r)
-                                        } else o.reject(l);
-                                    else o.reject(l)
-                                }, s = s || {}, s["Content-Type"] = "text/plain", i["default"].get("IS_NODE") && (s["User-Agent"] = "Parse/" + i["default"].get("VERSION") + " (NodeJS " + n.versions.node + ")"), l.open(e, t, !0);
-                                for (var f in s) l.setRequestHeader(f, s[f]);
-                                l.send(r)
-                            };
-                        return l(), o
-                    },
-                    request: function(e, t, r, n) {
-                        n = n || {};
-                        var a = i["default"].get("SERVER_URL");
-                        a += "/1/" + t;
-                        var s = {};
-                        if (r && "object" == typeof r)
-                            for (var o in r) s[o] = r[o];
-                        "POST" !== e && (s._method = e, e = "POST"), s._ApplicationId = i["default"].get("APPLICATION_ID"), s._JavaScriptKey = i["default"].get("JAVASCRIPT_KEY"), s._ClientVersion = "js" + i["default"].get("VERSION");
-                        var u = n.useMasterKey;
-                        if ("undefined" == typeof u && (u = i["default"].get("USE_MASTER_KEY")), u) {
-                            if (!i["default"].get("MASTER_KEY")) throw new Error("Cannot use the Master Key, it has not been provided.");
-                            delete s._JavaScriptKey, s._MasterKey = i["default"].get("MASTER_KEY")
-                        }
-                        i["default"].get("FORCE_REVOCABLE_SESSION") && (s._RevocableSession = "1");
-                        var c = i["default"].getInstallationController();
-                        return c.currentInstallationId().then(function(e) {
-                            s._InstallationId = e;
-                            var t = i["default"].getUserController();
-                            return n && "string" == typeof n.sessionToken ? f["default"].as(n.sessionToken) : t ? t.currentUserAsync().then(function(e) {
-                                return e ? f["default"].as(e.getSessionToken()) : f["default"].as(null)
-                            }) : f["default"].as(null)
-                        }).then(function(t) {
-                            t && (s._SessionToken = t);
-                            var r = JSON.stringify(s);
-                            return y.ajax(e, a, r)
-                        }).then(null, function(e) {
-                            var t;
-                            if (e && e.responseText) try {
-                                var r = JSON.parse(e.responseText);
-                                t = new l["default"](r.code, r.error)
-                            } catch (n) {
-                                t = new l["default"](l["default"].INVALID_JSON, "Received an error with invalid JSON from Parse: " + e.responseText)
-                            } else t = new l["default"](l["default"].CONNECTION_FAILED, "XMLHttpRequest failed: " + JSON.stringify(e));
-                            return f["default"].error(t)
-                        })
-                    },
-                    _setXHR: function(e) {
-                        h = e
-                    }
-                };
-                t.exports = y
-            }).call(this, e("_process"))
-        }, {
-            "./CoreManager": 3,
-            "./ParseError": 10,
-            "./ParsePromise": 16,
-            "./Storage": 24,
-            _process: 49,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        24: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/interop-require-default")["default"],
-                a = e("./CoreManager"),
-                s = n(a),
-                o = e("./ParsePromise"),
-                i = n(o);
-            t.exports = {
-                async: function() {
-                    var e = s["default"].getStorageController();
-                    return !!e.async
-                },
-                getItem: function(e) {
-                    var t = s["default"].getStorageController();
-                    if (1 === t.async) throw new Error("Synchronous storage is not supported by the current storage controller");
-                    return t.getItem(e)
-                },
-                getItemAsync: function(e) {
-                    var t = s["default"].getStorageController();
-                    return 1 === t.async ? t.getItemAsync(e) : i["default"].as(t.getItem(e))
-                },
-                setItem: function(e, t) {
-                    var r = s["default"].getStorageController();
-                    if (1 === r.async) throw new Error("Synchronous storage is not supported by the current storage controller");
-                    return r.setItem(e, t)
-                },
-                setItemAsync: function(e, t) {
-                    var r = s["default"].getStorageController();
-                    return 1 === r.async ? r.setItemAsync(e, t) : i["default"].as(r.setItem(e, t))
-                },
-                removeItem: function(e) {
-                    var t = s["default"].getStorageController();
-                    if (1 === t.async) throw new Error("Synchronous storage is not supported by the current storage controller");
-                    return t.removeItem(e)
-                },
-                removeItemAsync: function(e) {
-                    var t = s["default"].getStorageController();
-                    return 1 === t.async ? t.removeItemAsync(e) : i["default"].as(t.removeItem(e))
-                },
-                generatePath: function(e) {
-                    if (!s["default"].get("APPLICATION_ID")) throw new Error("You need to call Parse.initialize before using Parse.");
-                    if ("string" != typeof e) throw new Error("Tried to get a Storage path that was not a String.");
-                    return "/" === e[0] && (e = e.substr(1)), "Parse/" + s["default"].get("APPLICATION_ID") + "/" + e
-                },
-                _clear: function() {
-                    var e = s["default"].getStorageController();
-                    e.hasOwnProperty("clear") && e.clear()
-                }
-            }, s["default"].setStorageController(e("./StorageController.browser"))
-        }, {
-            "./CoreManager": 3,
-            "./ParsePromise": 16,
-            "./StorageController.browser": 25,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        25: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/interop-require-default")["default"],
-                a = e("./ParsePromise");
-            n(a);
-            t.exports = {
-                async: 0,
-                getItem: function(e) {
-                    return localStorage.getItem(e)
-                },
-                setItem: function(e, t) {
-                    localStorage.setItem(e, t)
-                },
-                removeItem: function(e) {
-                    localStorage.removeItem(e)
-                },
-                clear: function() {
-                    localStorage.clear()
-                }
-            }
-        }, {
-            "./ParsePromise": 16,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        26: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/helpers/create-class")["default"],
-                a = e("babel-runtime/helpers/class-call-check")["default"],
-                s = e("babel-runtime/helpers/interop-require-default")["default"],
-                o = e("./ParsePromise"),
-                i = s(o);
-            t.exports = function() {
-                function e() {
-                    a(this, e), this.queue = []
-                }
-                return n(e, [{
-                    key: "enqueue",
-                    value: function(e) {
-                        var t = this,
-                            r = new i["default"];
-                        return this.queue.push({
-                            task: e,
-                            _completion: r
-                        }), 1 === this.queue.length && e().then(function() {
-                            t._dequeue(), r.resolve()
-                        }, function(e) {
-                            t._dequeue(), r.reject(e)
-                        }), r
-                    }
-                }, {
-                    key: "_dequeue",
-                    value: function() {
-                        var e = this;
-                        if (this.queue.shift(), this.queue.length) {
-                            var t = this.queue[0];
-                            t.task().then(function() {
-                                e._dequeue(), t._completion.resolve()
-                            }, function(r) {
-                                e._dequeue(), t._completion.reject(r)
-                            })
-                        }
-                    }
-                }]), e
-            }()
-        }, {
-            "./ParsePromise": 16,
-            "babel-runtime/helpers/class-call-check": 43,
-            "babel-runtime/helpers/create-class": 44,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        27: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t) {
-                if (e.indexOf(t) > -1) return !0;
-                for (var r = 0; r < e.length; r++)
-                    if (e[r] instanceof o["default"] && e[r].className === t.className && e[r]._getId() === t._getId()) return !0;
-                return !1
-            }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var s = e("./ParseObject"),
-                o = a(s);
-            t.exports = r["default"]
-        }, {
-            "./ParseObject": 14,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        28: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                if (!(e instanceof l["default"])) return !0;
-                var t = e.attributes;
-                for (var r in t) {
-                    var n = t[r];
-                    if (!a(n)) return !1
-                }
-                return !0
-            }
-
-            function a(e) {
-                if ("object" != typeof e) return !0;
-                if (e instanceof f["default"]) return !0;
-                if (e instanceof l["default"]) return !!e.id;
-                if (e instanceof i["default"]) return e.url() ? !0 : !1;
-                if (Array.isArray(e)) {
-                    for (var t = 0; t < e.length; t++)
-                        if (!a(e[t])) return !1;
-                    return !0
-                }
-                for (var r in e)
-                    if (!a(e[r])) return !1;
-                return !0
-            }
-            var s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var o = e("./ParseFile"),
-                i = s(o),
-                u = e("./ParseObject"),
-                l = s(u),
-                c = e("./ParseRelation"),
-                f = s(c);
-            t.exports = r["default"]
-        }, {
-            "./ParseFile": 11,
-            "./ParseObject": 14,
-            "./ParseRelation": 18,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        29: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                if (null === e || "object" != typeof e) return e;
-                if (Array.isArray(e)) {
-                    var t = [];
-                    return e.forEach(function(e, r) {
-                        t[r] = n(e)
-                    }), t
-                }
-                if ("string" == typeof e.__op) return (0,
-                    d.opFromJSON)(e);
-                if ("Pointer" === e.__type && e.className) return f["default"].fromJSON(e);
-                if ("Object" === e.__type && e.className) return f["default"].fromJSON(e);
-                if ("Relation" === e.__type) {
-                    var r = new p["default"](null, null);
-                    return r.targetClassName = e.className, r
-                }
-                if ("Date" === e.__type) return new Date(e.iso);
-                if ("File" === e.__type) return i["default"].fromJSON(e);
-                if ("GeoPoint" === e.__type) return new l["default"]({
-                    latitude: e.latitude,
-                    longitude: e.longitude
-                });
-                var a = {};
-                for (var s in e) a[s] = n(e[s]);
-                return a
-            }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var s = e("./ParseACL"),
-                o = (a(s), e("./ParseFile")),
-                i = a(o),
-                u = e("./ParseGeoPoint"),
-                l = a(u),
-                c = e("./ParseObject"),
-                f = a(c),
-                d = e("./ParseOp"),
-                h = e("./ParseRelation"),
-                p = a(h);
-            t.exports = r["default"]
-        }, {
-            "./ParseACL": 8,
-            "./ParseFile": 11,
-            "./ParseGeoPoint": 12,
-            "./ParseObject": 14,
-            "./ParseOp": 15,
-            "./ParseRelation": 18,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        30: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t, r, s) {
-                if (e instanceof h["default"]) {
-                    if (t) throw new Error("Parse Objects not allowed here");
-                    var o = e.id ? e.className + ":" + e.id : e;
-                    if (r || !s || s.indexOf(o) > -1 || e.dirty() || a(e._getServerData()).length < 1) return e.toPointer();
-                    s = s.concat(o);
-                    var u = n(e.attributes, t, r, s);
-                    return u.createdAt && (u.createdAt = u.createdAt.iso), u.updatedAt && (u.updatedAt = u.updatedAt.iso), u.className = e.className, u.__type = "Object", e.id && (u.objectId = e.id), u
-                }
-                if (e instanceof p.Op || e instanceof i["default"] || e instanceof f["default"] || e instanceof v["default"]) return e.toJSON();
-                if (e instanceof l["default"]) {
-                    if (!e.url()) throw new Error("Tried to encode an unsaved file.");
-                    return e.toJSON()
-                }
-                if ("[object Date]" === b.call(e)) {
-                    if (isNaN(e)) throw new Error("Tried to encode an invalid date.");
-                    return {
-                        __type: "Date",
-                        iso: e.toJSON()
-                    }
-                }
-                if ("[object RegExp]" === b.call(e) && "string" == typeof e.source) return e.source;
-                if (Array.isArray(e)) return e.map(function(e) {
-                    return n(e, t, r, s)
-                });
-                if (e && "object" == typeof e) {
-                    var c = {};
-                    for (var d in e) c[d] = n(e[d], t, r, s);
-                    return c
-                }
-                return e
-            }
-            var a = e("babel-runtime/core-js/object/keys")["default"],
-                s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            });
-            var o = e("./ParseACL"),
-                i = s(o),
-                u = e("./ParseFile"),
-                l = s(u),
-                c = e("./ParseGeoPoint"),
-                f = s(c),
-                d = e("./ParseObject"),
-                h = s(d),
-                p = e("./ParseOp"),
-                y = e("./ParseRelation"),
-                v = s(y),
-                b = Object.prototype.toString;
-            r["default"] = function(e, t, r, a) {
-                return n(e, !!t, !!r, a || [])
-            }, t.exports = r["default"]
-        }, {
-            "./ParseACL": 8,
-            "./ParseFile": 11,
-            "./ParseGeoPoint": 12,
-            "./ParseObject": 14,
-            "./ParseOp": 15,
-            "./ParseRelation": 18,
-            "babel-runtime/core-js/object/keys": 41,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        31: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t) {
-                if (typeof e != typeof t) return !1;
-                if (!e || "object" != typeof e) return e === t;
-                if (Array.isArray(e) || Array.isArray(t)) {
-                    if (!Array.isArray(e) || !Array.isArray(t)) return !1;
-                    if (e.length !== t.length) return !1;
-                    for (var r = e.length; r--;)
-                        if (!n(e[r], t[r])) return !1;
-                    return !0
-                }
-                if (e instanceof i["default"] || e instanceof l["default"] || e instanceof f["default"] || e instanceof h["default"]) return e.equals(t);
-                if (a(e).length !== a(t).length) return !1;
-                for (var s in e)
-                    if (!n(e[s], t[s])) return !1;
-                return !0
-            }
-            var a = e("babel-runtime/core-js/object/keys")["default"],
-                s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var o = e("./ParseACL"),
-                i = s(o),
-                u = e("./ParseFile"),
-                l = s(u),
-                c = e("./ParseGeoPoint"),
-                f = s(c),
-                d = e("./ParseObject"),
-                h = s(d);
-            t.exports = r["default"]
-        }, {
-            "./ParseACL": 8,
-            "./ParseFile": 11,
-            "./ParseGeoPoint": 12,
-            "./ParseObject": 14,
-            "babel-runtime/core-js/object/keys": 41,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        32: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                return e.replace(/[&<>\/'"]/g, function(e) {
-                    return {
-                        "&": "&amp;",
-                        "<": "&lt;",
-                        ">": "&gt;",
-                        "/": "&#x2F;",
-                        "'": "&#x27;",
-                        '"': "&quot;"
-                    }[e]
-                })
-            }
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n, t.exports = r["default"]
-        }, {}],
-        33: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                return e.indexOf("r:") > -1
-            }
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n, t.exports = r["default"]
-        }, {}],
-        34: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                var t = new RegExp("^([0-9]{1,4})-([0-9]{1,2})-([0-9]{1,2})T([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})(.([0-9]+))?Z$"),
-                    r = t.exec(e);
-                if (!r) return null;
-                var n = r[1] || 0,
-                    a = (r[2] || 1) - 1,
-                    s = r[3] || 0,
-                    o = r[4] || 0,
-                    i = r[5] || 0,
-                    u = r[6] || 0,
-                    l = r[8] || 0;
-                return new Date(Date.UTC(n, a, s, o, i, u, l))
-            }
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n, t.exports = r["default"]
-        }, {}],
-        35: [function(e, t, r) {
-            "use strict";
-
-            function n(e) {
-                var t = [];
-                return e.forEach(function(e) {
-                    e instanceof u["default"] ? (0, o["default"])(t, e) || t.push(e) : t.indexOf(e) < 0 && t.push(e)
-                }), t
-            }
-            var a = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var s = e("./arrayContainsObject"),
-                o = a(s),
-                i = e("./ParseObject"),
-                u = a(i);
-            t.exports = r["default"]
-        }, {
-            "./ParseObject": 14,
-            "./arrayContainsObject": 27,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        36: [function(e, t, r) {
-            "use strict";
-
-            function n(e, t) {
-                var r = {
-                        objects: {},
-                        files: []
-                    },
-                    n = e.className + ":" + e._getId();
-                r.objects[n] = e.dirty() ? e : !0;
-                var s = e.attributes;
-                for (var o in s) "object" == typeof s[o] && a(s[o], r, !1, !!t);
-                var i = [];
-                for (var u in r.objects) u !== n && r.objects[u] !== !0 && i.push(r.objects[u]);
-                return i.concat(r.files)
-            }
-
-            function a(e, t, r, n) {
-                if (e instanceof l["default"]) {
-                    if (!e.id && r) throw new Error("Cannot create a pointer to an unsaved Object.");
-                    var s = e.className + ":" + e._getId();
-                    if (!t.objects[s]) {
-                        t.objects[s] = e.dirty() ? e : !0;
-                        var o = e.attributes;
-                        for (var u in o) "object" == typeof o[u] && a(o[u], t, !n, n)
-                    }
+          // Queue up tasks for each object in the batch.
+          // When every task is ready, the API request will execute
+          var batchReturned = new _ParsePromise2['default']();
+          var batchReady = [];
+          var batchTasks = [];
+          batch.forEach(function (obj, index) {
+            var ready = new _ParsePromise2['default']();
+            batchReady.push(ready);
+            var task = function task() {
+              ready.resolve();
+              return batchReturned.then(function (responses, status) {
+                if (responses[index].hasOwnProperty('success')) {
+                  obj._handleSaveResponse(responses[index].success, status);
                 } else {
-                    if (e instanceof i["default"]) return void(!e.url() && t.files.indexOf(e) < 0 && t.files.push(e));
-                    if (!(e instanceof f["default"])) {
-                        Array.isArray(e) && e.forEach(function(e) {
-                            a(e, t, r, n)
-                        });
-                        for (var c in e) "object" == typeof e[c] && a(e[c], t, r, n)
-                    }
+                  if (!objectError && responses[index].hasOwnProperty('error')) {
+                    var serverError = responses[index].error;
+                    objectError = new _ParseError2['default'](serverError.code, serverError.error);
+                    // Cancel the rest of the save
+                    pending = [];
+                  }
+                  obj._handleSaveError();
                 }
-            }
-            var s = e("babel-runtime/helpers/interop-require-default")["default"];
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), r["default"] = n;
-            var o = e("./ParseFile"),
-                i = s(o),
-                u = e("./ParseObject"),
-                l = s(u),
-                c = e("./ParseRelation"),
-                f = s(c);
-            t.exports = r["default"]
-        }, {
-            "./ParseFile": 11,
-            "./ParseObject": 14,
-            "./ParseRelation": 18,
-            "babel-runtime/helpers/interop-require-default": 47
-        }],
-        37: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/create"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/create": 50
-        }],
-        38: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/define-property"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/define-property": 51
-        }],
-        39: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/freeze"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/freeze": 52
-        }],
-        40: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/get-own-property-descriptor"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/get-own-property-descriptor": 53
-        }],
-        41: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/keys"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/keys": 54
-        }],
-        42: [function(e, t, r) {
-            t.exports = {
-                "default": e("core-js/library/fn/object/set-prototype-of"),
-                __esModule: !0
-            }
-        }, {
-            "core-js/library/fn/object/set-prototype-of": 55
-        }],
-        43: [function(e, t, r) {
-            "use strict";
-            r["default"] = function(e, t) {
-                if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-            }, r.__esModule = !0
-        }, {}],
-        44: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/core-js/object/define-property")["default"];
-            r["default"] = function() {
-                function e(e, t) {
-                    for (var r = 0; r < t.length; r++) {
-                        var a = t[r];
-                        a.enumerable = a.enumerable || !1, a.configurable = !0, "value" in a && (a.writable = !0), n(e, a.key, a)
-                    }
-                }
-                return function(t, r, n) {
-                    return r && e(t.prototype, r), n && e(t, n), t
-                }
-            }(), r.__esModule = !0
-        }, {
-            "babel-runtime/core-js/object/define-property": 38
-        }],
-        45: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/core-js/object/get-own-property-descriptor")["default"];
-            r["default"] = function(e, t, r) {
-                for (var a = !0; a;) {
-                    var s = e,
-                        o = t,
-                        i = r;
-                    u = c = l = void 0, a = !1, null === s && (s = Function.prototype);
-                    var u = n(s, o);
-                    if (void 0 !== u) {
-                        if ("value" in u) return u.value;
-                        var l = u.get;
-                        return void 0 === l ? void 0 : l.call(i)
-                    }
-                    var c = Object.getPrototypeOf(s);
-                    if (null === c) return void 0;
-                    e = c, t = o, r = i, a = !0
-                }
-            }, r.__esModule = !0
-        }, {
-            "babel-runtime/core-js/object/get-own-property-descriptor": 40
-        }],
-        46: [function(e, t, r) {
-            "use strict";
-            var n = e("babel-runtime/core-js/object/create")["default"],
-                a = e("babel-runtime/core-js/object/set-prototype-of")["default"];
-            r["default"] = function(e, t) {
-                if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-                e.prototype = n(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                }), t && (a ? a(e, t) : e.__proto__ = t)
-            }, r.__esModule = !0
-        }, {
-            "babel-runtime/core-js/object/create": 37,
-            "babel-runtime/core-js/object/set-prototype-of": 42
-        }],
-        47: [function(e, t, r) {
-            "use strict";
-            r["default"] = function(e) {
-                return e && e.__esModule ? e : {
-                    "default": e
-                }
-            }, r.__esModule = !0
-        }, {}],
-        48: [function(e, t, r) {
-            "use strict";
-            r["default"] = function(e) {
-                if (e && e.__esModule) return e;
-                var t = {};
-                if (null != e)
-                    for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
-                return t["default"] = e, t
-            }, r.__esModule = !0
-        }, {}],
-        49: [function(e, t, r) {}, {}],
-        50: [function(e, t, r) {
-            var n = e("../../modules/$");
-            t.exports = function(e, t) {
-                return n.create(e, t)
-            }
-        }, {
-            "../../modules/$": 67
-        }],
-        51: [function(e, t, r) {
-            var n = e("../../modules/$");
-            t.exports = function(e, t, r) {
-                return n.setDesc(e, t, r)
-            }
-        }, {
-            "../../modules/$": 67
-        }],
-        52: [function(e, t, r) {
-            e("../../modules/es6.object.freeze"), t.exports = e("../../modules/$.core").Object.freeze
-        }, {
-            "../../modules/$.core": 59,
-            "../../modules/es6.object.freeze": 72
-        }],
-        53: [function(e, t, r) {
-            var n = e("../../modules/$");
-            e("../../modules/es6.object.get-own-property-descriptor"), t.exports = function(e, t) {
-                return n.getDesc(e, t)
-            }
-        }, {
-            "../../modules/$": 67,
-            "../../modules/es6.object.get-own-property-descriptor": 73
-        }],
-        54: [function(e, t, r) {
-            e("../../modules/es6.object.keys"), t.exports = e("../../modules/$.core").Object.keys
-        }, {
-            "../../modules/$.core": 59,
-            "../../modules/es6.object.keys": 74
-        }],
-        55: [function(e, t, r) {
-            e("../../modules/es6.object.set-prototype-of"), t.exports = e("../../modules/$.core").Object.setPrototypeOf
-        }, {
-            "../../modules/$.core": 59,
-            "../../modules/es6.object.set-prototype-of": 75
-        }],
-        56: [function(e, t, r) {
-            t.exports = function(e) {
-                if ("function" != typeof e) throw TypeError(e + " is not a function!");
-                return e
-            }
-        }, {}],
-        57: [function(e, t, r) {
-            var n = e("./$.is-object");
-            t.exports = function(e) {
-                if (!n(e)) throw TypeError(e + " is not an object!");
-                return e
-            }
-        }, {
-            "./$.is-object": 66
-        }],
-        58: [function(e, t, r) {
-            var n = {}.toString;
-            t.exports = function(e) {
-                return n.call(e).slice(8, -1)
-            }
-        }, {}],
-        59: [function(e, t, r) {
-            var n = t.exports = {
-                version: "1.2.1"
+              });
             };
-            "number" == typeof __e && (__e = n)
-        }, {}],
-        60: [function(e, t, r) {
-            var n = e("./$.a-function");
-            t.exports = function(e, t, r) {
-                if (n(e), void 0 === t) return e;
-                switch (r) {
-                    case 1:
-                        return function(r) {
-                            return e.call(t, r)
-                        };
-                    case 2:
-                        return function(r, n) {
-                            return e.call(t, r, n)
-                        };
-                    case 3:
-                        return function(r, n, a) {
-                            return e.call(t, r, n, a)
-                        }
-                }
-                return function() {
-                    return e.apply(t, arguments)
-                }
+            ObjectState.pushPendingState(obj.className, obj._getStateIdentifier());
+            batchTasks.push(ObjectState.enqueueTask(obj.className, obj._getStateIdentifier(), task));
+          });
+
+          _ParsePromise2['default'].when(batchReady).then(function () {
+            // Kick off the batch request
+            return RESTController.request('POST', 'batch', {
+              requests: batch.map(function (obj) {
+                var params = obj._getSaveParams();
+                params.path = '/1/' + params.path;
+                return params;
+              })
+            }, options);
+          }).then(function (response, status, xhr) {
+            batchReturned.resolve(response, status);
+          });
+
+          return _ParsePromise2['default'].when(batchTasks);
+        }).then(function () {
+          if (objectError) {
+            return _ParsePromise2['default'].error(objectError);
+          }
+          return _ParsePromise2['default'].as(target);
+        });
+      });
+    } else if (target instanceof ParseObject) {
+      // copying target lets Flow guarantee the pointer isn't modified elsewhere
+      var targetCopy = target;
+      var task = function task() {
+        var params = targetCopy._getSaveParams();
+        return RESTController.request(params.method, params.path, params.body, options).then(function (response, status) {
+          targetCopy._handleSaveResponse(response, status);
+        }, function (error) {
+          targetCopy._handleSaveError();
+          return _ParsePromise2['default'].error(error);
+        });
+      };
+      ObjectState.pushPendingState(target.className, target._getStateIdentifier());
+      return ObjectState.enqueueTask(target.className, target._getStateIdentifier(), task).then(function () {
+        return target;
+      }, function (error) {
+        return error;
+      });
+    }
+    return _ParsePromise2['default'].as();
+  }
+});
+module.exports = exports['default'];
+
+/**
+ * The ID of this object, unique within its class.
+ * @property id
+ * @type String
+ */
+},{"./CoreManager":3,"./ObjectState":6,"./ParseACL":8,"./ParseError":10,"./ParseFile":11,"./ParseOp":15,"./ParsePromise":16,"./ParseQuery":17,"./ParseRelation":18,"./canBeSerialized":28,"./decode":29,"./encode":30,"./equals":31,"./escape":32,"./parseDate":34,"./unique":35,"./unsavedChildren":36,"babel-runtime/core-js/object/create":37,"babel-runtime/core-js/object/define-property":38,"babel-runtime/core-js/object/freeze":39,"babel-runtime/core-js/object/keys":41,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47,"babel-runtime/helpers/interop-require-wildcard":48}],15:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _get = _dereq_('babel-runtime/helpers/get')['default'];
+
+var _inherits = _dereq_('babel-runtime/helpers/inherits')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.opFromJSON = opFromJSON;
+
+var _arrayContainsObject = _dereq_('./arrayContainsObject');
+
+var _arrayContainsObject2 = _interopRequireDefault(_arrayContainsObject);
+
+var _decode = _dereq_('./decode');
+
+var _decode2 = _interopRequireDefault(_decode);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+var _unique = _dereq_('./unique');
+
+var _unique2 = _interopRequireDefault(_unique);
+
+function opFromJSON(json) {
+  if (!json || !json.__op) {
+    return null;
+  }
+  switch (json.__op) {
+    case 'Delete':
+      return new UnsetOp();
+    case 'Increment':
+      return new IncrementOp(json.amount);
+    case 'Add':
+      return new AddOp((0, _decode2['default'])(json.objects));
+    case 'AddUnique':
+      return new AddUniqueOp((0, _decode2['default'])(json.objects));
+    case 'Remove':
+      return new RemoveOp((0, _decode2['default'])(json.objects));
+    case 'AddRelation':
+      var toAdd = (0, _decode2['default'])(json.objects);
+      if (!Array.isArray(toAdd)) {
+        return new RelationOp([], []);
+      }
+      return new RelationOp(toAdd, []);
+    case 'RemoveRelation':
+      var toRemove = (0, _decode2['default'])(json.objects);
+      if (!Array.isArray(toRemove)) {
+        return new RelationOp([], []);
+      }
+      return new RelationOp([], toRemove);
+    case 'Batch':
+      var toAdd = [];
+      var toRemove = [];
+      for (var i = 0; i < json.ops.length; i++) {
+        if (json.ops[i].__op === 'AddRelation') {
+          toAdd = toAdd.concat((0, _decode2['default'])(json.ops[i].objects));
+        } else if (json.ops[i].__op === 'RemoveRelation') {
+          toRemove = toRemove.concat((0, _decode2['default'])(json.ops[i].objects));
+        }
+      }
+      return new RelationOp(toAdd, toRemove);
+  }
+  return null;
+}
+
+var Op = (function () {
+  function Op() {
+    _classCallCheck(this, Op);
+  }
+
+  _createClass(Op, [{
+    key: 'applyTo',
+
+    // Empty parent class
+    value: function applyTo(value) {}
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {}
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {}
+  }]);
+
+  return Op;
+})();
+
+exports.Op = Op;
+
+var SetOp = (function (_Op) {
+  _inherits(SetOp, _Op);
+
+  function SetOp(value) {
+    _classCallCheck(this, SetOp);
+
+    _get(Object.getPrototypeOf(SetOp.prototype), 'constructor', this).call(this);
+    this._value = value;
+  }
+
+  _createClass(SetOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      return this._value;
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      return new SetOp(this._value);
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return (0, _encode2['default'])(this._value, false, true);
+    }
+  }]);
+
+  return SetOp;
+})(Op);
+
+exports.SetOp = SetOp;
+
+var UnsetOp = (function (_Op2) {
+  _inherits(UnsetOp, _Op2);
+
+  function UnsetOp() {
+    _classCallCheck(this, UnsetOp);
+
+    _get(Object.getPrototypeOf(UnsetOp.prototype), 'constructor', this).apply(this, arguments);
+  }
+
+  _createClass(UnsetOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      return undefined;
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      return new UnsetOp();
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return { __op: 'Delete' };
+    }
+  }]);
+
+  return UnsetOp;
+})(Op);
+
+exports.UnsetOp = UnsetOp;
+
+var IncrementOp = (function (_Op3) {
+  _inherits(IncrementOp, _Op3);
+
+  function IncrementOp(amount) {
+    _classCallCheck(this, IncrementOp);
+
+    _get(Object.getPrototypeOf(IncrementOp.prototype), 'constructor', this).call(this);
+    if (typeof amount !== 'number') {
+      throw new TypeError('Increment Op must be initialized with a numeric amount.');
+    }
+    this._amount = amount;
+  }
+
+  _createClass(IncrementOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      if (typeof value === 'undefined') {
+        return this._amount;
+      }
+      if (typeof value !== 'number') {
+        throw new TypeError('Cannot increment a non-numeric value.');
+      }
+      return this._amount + value;
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      if (!previous) {
+        return this;
+      }
+      if (previous instanceof SetOp) {
+        return new SetOp(this.applyTo(previous._value));
+      }
+      if (previous instanceof UnsetOp) {
+        return new SetOp(this._amount);
+      }
+      if (previous instanceof IncrementOp) {
+        return new IncrementOp(this.applyTo(previous._amount));
+      }
+      throw new Error('Cannot merge Increment Op with the previous Op');
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return { __op: 'Increment', amount: this._amount };
+    }
+  }]);
+
+  return IncrementOp;
+})(Op);
+
+exports.IncrementOp = IncrementOp;
+
+var AddOp = (function (_Op4) {
+  _inherits(AddOp, _Op4);
+
+  function AddOp(value) {
+    _classCallCheck(this, AddOp);
+
+    _get(Object.getPrototypeOf(AddOp.prototype), 'constructor', this).call(this);
+    this._value = Array.isArray(value) ? value : [value];
+  }
+
+  _createClass(AddOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      if (value == null) {
+        return this._value;
+      }
+      if (Array.isArray(value)) {
+        return value.concat(this._value);
+      }
+      throw new Error('Cannot add elements to a non-array value');
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      if (!previous) {
+        return this;
+      }
+      if (previous instanceof SetOp) {
+        return new SetOp(this.applyTo(previous._value));
+      }
+      if (previous instanceof UnsetOp) {
+        return new SetOp(this._value);
+      }
+      if (previous instanceof AddOp) {
+        return new AddOp(this.applyTo(previous._value));
+      }
+      throw new Error('Cannot merge Add Op with the previous Op');
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return { __op: 'Add', objects: (0, _encode2['default'])(this._value, false, true) };
+    }
+  }]);
+
+  return AddOp;
+})(Op);
+
+exports.AddOp = AddOp;
+
+var AddUniqueOp = (function (_Op5) {
+  _inherits(AddUniqueOp, _Op5);
+
+  function AddUniqueOp(value) {
+    _classCallCheck(this, AddUniqueOp);
+
+    _get(Object.getPrototypeOf(AddUniqueOp.prototype), 'constructor', this).call(this);
+    this._value = (0, _unique2['default'])(Array.isArray(value) ? value : [value]);
+  }
+
+  _createClass(AddUniqueOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      if (value == null) {
+        return this._value || [];
+      }
+      if (Array.isArray(value)) {
+        // copying value lets Flow guarantee the pointer isn't modified elsewhere
+        var valueCopy = value;
+        var toAdd = [];
+        this._value.forEach(function (v) {
+          if (v instanceof _ParseObject2['default']) {
+            if (!(0, _arrayContainsObject2['default'])(valueCopy, v)) {
+              toAdd.push(v);
             }
-        }, {
-            "./$.a-function": 56
-        }],
-        61: [function(e, t, r) {
-            var n = e("./$.global"),
-                a = e("./$.core"),
-                s = "prototype",
-                o = function(e, t) {
-                    return function() {
-                        return e.apply(t, arguments)
-                    }
-                },
-                i = function(e, t, r) {
-                    var u, l, c, f, d = e & i.G,
-                        h = e & i.P,
-                        p = d ? n : e & i.S ? n[t] : (n[t] || {})[s],
-                        y = d ? a : a[t] || (a[t] = {});
-                    d && (r = t);
-                    for (u in r) l = !(e & i.F) && p && u in p, l && u in y || (c = l ? p[u] : r[u], d && "function" != typeof p[u] ? f = r[u] : e & i.B && l ? f = o(c, n) : e & i.W && p[u] == c ? ! function(e) {
-                        f = function(t) {
-                            return this instanceof e ? new e(t) : e(t)
-                        }, f[s] = e[s]
-                    }(c) : f = h && "function" == typeof c ? o(Function.call, c) : c, y[u] = f, h && ((y[s] || (y[s] = {}))[u] = c))
-                };
-            i.F = 1, i.G = 2, i.S = 4, i.P = 8, i.B = 16, i.W = 32, t.exports = i
-        }, {
-            "./$.core": 59,
-            "./$.global": 64
-        }],
-        62: [function(e, t, r) {
-            t.exports = function(e) {
-                if (void 0 == e) throw TypeError("Can't call method on  " + e);
-                return e
+          } else {
+            if (valueCopy.indexOf(v) < 0) {
+              toAdd.push(v);
             }
-        }, {}],
-        63: [function(e, t, r) {
-            t.exports = function(e) {
-                try {
-                    return !!e()
-                } catch (t) {
-                    return !0
-                }
+          }
+        });
+        return value.concat(toAdd);
+      }
+      throw new Error('Cannot add elements to a non-array value');
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      if (!previous) {
+        return this;
+      }
+      if (previous instanceof SetOp) {
+        return new SetOp(this.applyTo(previous._value));
+      }
+      if (previous instanceof UnsetOp) {
+        return new SetOp(this._value);
+      }
+      if (previous instanceof AddUniqueOp) {
+        return new AddUniqueOp(this.applyTo(previous._value));
+      }
+      throw new Error('Cannot merge AddUnique Op with the previous Op');
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return { __op: 'AddUnique', objects: (0, _encode2['default'])(this._value, false, true) };
+    }
+  }]);
+
+  return AddUniqueOp;
+})(Op);
+
+exports.AddUniqueOp = AddUniqueOp;
+
+var RemoveOp = (function (_Op6) {
+  _inherits(RemoveOp, _Op6);
+
+  function RemoveOp(value) {
+    _classCallCheck(this, RemoveOp);
+
+    _get(Object.getPrototypeOf(RemoveOp.prototype), 'constructor', this).call(this);
+    this._value = (0, _unique2['default'])(Array.isArray(value) ? value : [value]);
+  }
+
+  _createClass(RemoveOp, [{
+    key: 'applyTo',
+    value: function applyTo(value) {
+      if (value == null) {
+        return [];
+      }
+      if (Array.isArray(value)) {
+        var i = value.indexOf(this._value);
+        var removed = value.concat([]);
+        for (var i = 0; i < this._value.length; i++) {
+          var index = removed.indexOf(this._value[i]);
+          while (index > -1) {
+            removed.splice(index, 1);
+            index = removed.indexOf(this._value[i]);
+          }
+          if (this._value[i] instanceof _ParseObject2['default'] && this._value[i].id) {
+            for (var j = 0; j < removed.length; j++) {
+              if (removed[j] instanceof _ParseObject2['default'] && this._value[i].id === removed[j].id) {
+                removed.splice(j, 1);
+                j--;
+              }
             }
-        }, {}],
-        64: [function(e, t, r) {
-            var n = "undefined",
-                a = t.exports = typeof window != n && window.Math == Math ? window : typeof self != n && self.Math == Math ? self : Function("return this")();
-            "number" == typeof __g && (__g = a)
-        }, {}],
-        65: [function(e, t, r) {
-            var n = e("./$.cof");
-            t.exports = 0 in Object("z") ? Object : function(e) {
-                return "String" == n(e) ? e.split("") : Object(e)
+          }
+        }
+        return removed;
+      }
+      throw new Error('Cannot remove elements from a non-array value');
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      if (!previous) {
+        return this;
+      }
+      if (previous instanceof SetOp) {
+        return new SetOp(this.applyTo(previous._value));
+      }
+      if (previous instanceof UnsetOp) {
+        return new UnsetOp();
+      }
+      if (previous instanceof RemoveOp) {
+        var uniques = previous._value.concat([]);
+        for (var i = 0; i < this._value.length; i++) {
+          if (this._value[i] instanceof _ParseObject2['default']) {
+            if (!(0, _arrayContainsObject2['default'])(uniques, this._value[i])) {
+              uniques.push(this._value[i]);
             }
-        }, {
-            "./$.cof": 58
-        }],
-        66: [function(e, t, r) {
-            t.exports = function(e) {
-                return "object" == typeof e ? null !== e : "function" == typeof e
+          } else {
+            if (uniques.indexOf(this._value[i]) < 0) {
+              uniques.push(this._value[i]);
             }
-        }, {}],
-        67: [function(e, t, r) {
-            var n = Object;
-            t.exports = {
-                create: n.create,
-                getProto: n.getPrototypeOf,
-                isEnum: {}.propertyIsEnumerable,
-                getDesc: n.getOwnPropertyDescriptor,
-                setDesc: n.defineProperty,
-                setDescs: n.defineProperties,
-                getKeys: n.keys,
-                getNames: n.getOwnPropertyNames,
-                getSymbols: n.getOwnPropertySymbols,
-                each: [].forEach
+          }
+        }
+        return new RemoveOp(uniques);
+      }
+      throw new Error('Cannot merge Remove Op with the previous Op');
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return { __op: 'Remove', objects: (0, _encode2['default'])(this._value, false, true) };
+    }
+  }]);
+
+  return RemoveOp;
+})(Op);
+
+exports.RemoveOp = RemoveOp;
+
+var RelationOp = (function (_Op7) {
+  _inherits(RelationOp, _Op7);
+
+  function RelationOp(adds, removes) {
+    _classCallCheck(this, RelationOp);
+
+    _get(Object.getPrototypeOf(RelationOp.prototype), 'constructor', this).call(this);
+    this._targetClassName = null;
+
+    if (Array.isArray(adds)) {
+      this.relationsToAdd = (0, _unique2['default'])(adds.map(this._extractId, this));
+    }
+
+    if (Array.isArray(removes)) {
+      this.relationsToRemove = (0, _unique2['default'])(removes.map(this._extractId, this));
+    }
+  }
+
+  _createClass(RelationOp, [{
+    key: '_extractId',
+    value: function _extractId(obj) {
+      if (typeof obj === 'string') {
+        return obj;
+      }
+      if (!obj.id) {
+        throw new Error('You cannot add or remove an unsaved Parse Object from a relation');
+      }
+      if (!this._targetClassName) {
+        this._targetClassName = obj.className;
+      }
+      if (this._targetClassName !== obj.className) {
+        throw new Error('Tried to create a Relation with 2 different object types: ' + this._targetClassName + ' and ' + obj.className + '.');
+      }
+      return obj.id;
+    }
+  }, {
+    key: 'applyTo',
+    value: function applyTo(value, object, key) {
+      if (!value) {
+        var parent = new _ParseObject2['default'](object.className);
+        if (object.id && object.id.indexOf('local') === 0) {
+          parent._localId = object.id;
+        } else if (object.id) {
+          parent.id = object.id;
+        }
+        var relation = new _ParseRelation2['default'](parent, key);
+        relation.targetClassName = this._targetClassName;
+        return relation;
+      }
+      if (value instanceof _ParseRelation2['default']) {
+        if (this._targetClassName) {
+          if (value.targetClassName) {
+            if (this._targetClassName !== value.targetClassName) {
+              throw new Error('Related object must be a ' + value.targetClassName + ', but a ' + this._targetClassName + ' was passed in.');
             }
-        }, {}],
-        68: [function(e, t, r) {
-            t.exports = function(t, r) {
-                var n = e("./$.def"),
-                    a = (e("./$.core").Object || {})[t] || Object[t],
-                    s = {};
-                s[t] = r(a), n(n.S + n.F * e("./$.fails")(function() {
-                    a(1)
-                }), "Object", s)
+          } else {
+            value.targetClassName = this._targetClassName;
+          }
+        }
+        return value;
+      } else {
+        throw new Error('Relation cannot be applied to a non-relation field');
+      }
+    }
+  }, {
+    key: 'mergeWith',
+    value: function mergeWith(previous) {
+      if (!previous) {
+        return this;
+      } else if (previous instanceof UnsetOp) {
+        throw new Error('You cannot modify a relation after deleting it.');
+      } else if (previous instanceof RelationOp) {
+        if (previous._targetClassName && previous._targetClassName !== this._targetClassName) {
+          throw new Error('Related object must be of class ' + previous._targetClassName + ', but ' + (this._targetClassName || 'null') + ' was passed in.');
+        }
+        var newAdd = previous.relationsToAdd.concat([]);
+        this.relationsToRemove.forEach(function (r) {
+          var index = newAdd.indexOf(r);
+          if (index > -1) {
+            newAdd.splice(index, 1);
+          }
+        });
+        this.relationsToAdd.forEach(function (r) {
+          var index = newAdd.indexOf(r);
+          if (index < 0) {
+            newAdd.push(r);
+          }
+        });
+
+        var newRemove = previous.relationsToRemove.concat([]);
+        this.relationsToAdd.forEach(function (r) {
+          var index = newRemove.indexOf(r);
+          if (index > -1) {
+            newRemove.splice(index, 1);
+          }
+        });
+        this.relationsToRemove.forEach(function (r) {
+          var index = newRemove.indexOf(r);
+          if (index < 0) {
+            newRemove.push(r);
+          }
+        });
+
+        var newRelation = new RelationOp(newAdd, newRemove);
+        newRelation._targetClassName = this._targetClassName;
+        return newRelation;
+      }
+      throw new Error('Cannot merge Relation Op with the previous Op');
+    }
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      var _this = this;
+
+      var idToPointer = function idToPointer(id) {
+        return {
+          __type: 'Pointer',
+          className: _this._targetClassName,
+          objectId: id
+        };
+      };
+
+      var adds = null;
+      var removes = null;
+      var pointers = null;
+
+      if (this.relationsToAdd.length > 0) {
+        pointers = this.relationsToAdd.map(idToPointer);
+        adds = { __op: 'AddRelation', objects: pointers };
+      }
+      if (this.relationsToRemove.length > 0) {
+        pointers = this.relationsToRemove.map(idToPointer);
+        removes = { __op: 'RemoveRelation', objects: pointers };
+      }
+
+      if (adds && removes) {
+        return { __op: 'Batch', ops: [adds, removes] };
+      }
+
+      return adds || removes || {};
+    }
+  }]);
+
+  return RelationOp;
+})(Op);
+
+exports.RelationOp = RelationOp;
+},{"./ParseObject":14,"./ParseRelation":18,"./arrayContainsObject":27,"./decode":29,"./encode":30,"./unique":35,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/get":45,"babel-runtime/helpers/inherits":46,"babel-runtime/helpers/interop-require-default":47}],16:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+// We may want to expose this value at a later time, so that Promises/A+ style
+// can be employed instead
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+var _isPromisesAPlusCompliant = false;
+
+/**
+ * A Promise is returned by async methods as a hook to provide callbacks to be
+ * called when the async task is fulfilled.
+ *
+ * <p>Typical usage would be like:<pre>
+ *    query.find().then(function(results) {
+ *      results[0].set("foo", "bar");
+ *      return results[0].saveAsync();
+ *    }).then(function(result) {
+ *      console.log("Updated " + result.id);
+ *    });
+ * </pre></p>
+ *
+ * @class Parse.Promise
+ * @constructor
+ */
+
+var ParsePromise = (function () {
+  function ParsePromise() {
+    _classCallCheck(this, ParsePromise);
+
+    this._resolved = false;
+    this._rejected = false;
+    this._resolvedCallbacks = [];
+    this._rejectedCallbacks = [];
+  }
+
+  /**
+   * Marks this promise as fulfilled, firing any callbacks waiting on it.
+   * @method resolve
+   * @param {Object} result the result to pass to the callbacks.
+   */
+
+  _createClass(ParsePromise, [{
+    key: 'resolve',
+    value: function resolve() {
+      if (this._resolved || this._rejected) {
+        throw new Error('A promise was resolved even though it had already been ' + (this._resolved ? 'resolved' : 'rejected') + '.');
+      }
+      this._resolved = true;
+
+      for (var _len = arguments.length, results = Array(_len), _key = 0; _key < _len; _key++) {
+        results[_key] = arguments[_key];
+      }
+
+      this._result = results;
+      for (var i = 0; i < this._resolvedCallbacks.length; i++) {
+        this._resolvedCallbacks[i].apply(this, results);
+      }
+
+      this._resolvedCallbacks = [];
+      this._rejectedCallbacks = [];
+    }
+
+    /**
+     * Marks this promise as fulfilled, firing any callbacks waiting on it.
+     * @method reject
+     * @param {Object} error the error to pass to the callbacks.
+     */
+  }, {
+    key: 'reject',
+    value: function reject(error) {
+      if (this._resolved || this._rejected) {
+        throw new Error('A promise was resolved even though it had already been ' + (this._resolved ? 'resolved' : 'rejected') + '.');
+      }
+      this._rejected = true;
+      this._error = error;
+      for (var i = 0; i < this._rejectedCallbacks.length; i++) {
+        this._rejectedCallbacks[i](error);
+      }
+      this._resolvedCallbacks = [];
+      this._rejectedCallbacks = [];
+    }
+
+    /**
+     * Adds callbacks to be called when this promise is fulfilled. Returns a new
+     * Promise that will be fulfilled when the callback is complete. It allows
+     * chaining. If the callback itself returns a Promise, then the one returned
+     * by "then" will not be fulfilled until that one returned by the callback
+     * is fulfilled.
+     * @method then
+     * @param {Function} resolvedCallback Function that is called when this
+     * Promise is resolved. Once the callback is complete, then the Promise
+     * returned by "then" will also be fulfilled.
+     * @param {Function} rejectedCallback Function that is called when this
+     * Promise is rejected with an error. Once the callback is complete, then
+     * the promise returned by "then" with be resolved successfully. If
+     * rejectedCallback is null, or it returns a rejected Promise, then the
+     * Promise returned by "then" will be rejected with that error.
+     * @return {Parse.Promise} A new Promise that will be fulfilled after this
+     * Promise is fulfilled and either callback has completed. If the callback
+     * returned a Promise, then this Promise will not be fulfilled until that
+     * one is.
+     */
+  }, {
+    key: 'then',
+    value: function then(resolvedCallback, rejectedCallback) {
+      var _this = this;
+
+      var promise = new ParsePromise();
+
+      var wrappedResolvedCallback = function wrappedResolvedCallback() {
+        for (var _len2 = arguments.length, results = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+          results[_key2] = arguments[_key2];
+        }
+
+        if (typeof resolvedCallback === 'function') {
+          results = [resolvedCallback.apply(this, results)];
+        }
+        if (results.length === 1 && ParsePromise.is(results[0])) {
+          results[0].then(function () {
+            promise.resolve.apply(promise, arguments);
+          }, function (error) {
+            promise.reject(error);
+          });
+        } else {
+          promise.resolve.apply(promise, results);
+        }
+      };
+
+      var wrappedRejectedCallback = function wrappedRejectedCallback(error) {
+        var result = [];
+        if (typeof rejectedCallback === 'function') {
+          result = [rejectedCallback(error)];
+
+          if (result.length === 1 && ParsePromise.is(result[0])) {
+            result[0].then(function () {
+              promise.resolve.apply(promise, arguments);
+            }, function (error) {
+              promise.reject(error);
+            });
+          } else {
+            promise.reject(result[0]);
+          }
+        } else {
+          promise.reject(error);
+        }
+      };
+
+      var runLater = function runLater(fn) {
+        fn.call();
+      };
+
+      if (this._resolved) {
+        runLater(function () {
+          wrappedResolvedCallback.apply(_this, _this._result);
+        });
+      } else if (this._rejected) {
+        runLater(function () {
+          wrappedRejectedCallback(_this._error);
+        });
+      } else {
+        this._resolvedCallbacks.push(wrappedResolvedCallback);
+        this._rejectedCallbacks.push(wrappedRejectedCallback);
+      }
+
+      return promise;
+    }
+
+    /**
+     * Add handlers to be called when the promise
+     * is either resolved or rejected
+     * @method always
+     */
+  }, {
+    key: 'always',
+    value: function always(callback) {
+      return this.then(callback, callback);
+    }
+
+    /**
+     * Add handlers to be called when the Promise object is resolved
+     * @method done
+     */
+  }, {
+    key: 'done',
+    value: function done(callback) {
+      return this.then(callback);
+    }
+
+    /**
+     * Add handlers to be called when the Promise object is rejected
+     * @method fail
+     */
+  }, {
+    key: 'fail',
+    value: function fail(callback) {
+      return this.then(null, callback);
+    }
+
+    /**
+     * Run the given callbacks after this promise is fulfilled.
+     * @method _thenRunCallbacks
+     * @param optionsOrCallback {} A Backbone-style options callback, or a
+     * callback function. If this is an options object and contains a "model"
+     * attributes, that will be passed to error callbacks as the first argument.
+     * @param model {} If truthy, this will be passed as the first result of
+     * error callbacks. This is for Backbone-compatability.
+     * @return {Parse.Promise} A promise that will be resolved after the
+     * callbacks are run, with the same result as this.
+     */
+  }, {
+    key: '_thenRunCallbacks',
+    value: function _thenRunCallbacks(optionsOrCallback, model) {
+      var options = {};
+      if (typeof optionsOrCallback === 'function') {
+        options.success = function (result) {
+          optionsOrCallback(result, null);
+        };
+        options.error = function (error) {
+          optionsOrCallback(null, error);
+        };
+      } else if (typeof optionsOrCallback === 'object') {
+        if (typeof optionsOrCallback.success === 'function') {
+          options.success = optionsOrCallback.success;
+        }
+        if (typeof optionsOrCallback.error === 'function') {
+          options.error = optionsOrCallback.error;
+        }
+      }
+
+      return this.then(function () {
+        for (var _len3 = arguments.length, results = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          results[_key3] = arguments[_key3];
+        }
+
+        if (options.success) {
+          options.success.apply(this, results);
+        }
+        return ParsePromise.as.apply(ParsePromise, arguments);
+      }, function (error) {
+        if (options.error) {
+          if (typeof model !== 'undefined') {
+            options.error(model, error);
+          } else {
+            options.error(error);
+          }
+        }
+        // By explicitly returning a rejected Promise, this will work with
+        // either jQuery or Promises/A+ semantics.
+        return ParsePromise.error(error);
+      });
+    }
+
+    /**
+     * Adds a callback function that should be called regardless of whether
+     * this promise failed or succeeded. The callback will be given either the
+     * array of results for its first argument, or the error as its second,
+     * depending on whether this Promise was rejected or resolved. Returns a
+     * new Promise, like "then" would.
+     * @method _continueWith
+     * @param {Function} continuation the callback.
+     */
+  }, {
+    key: '_continueWith',
+    value: function _continueWith(continuation) {
+      return this.then(function () {
+        return continuation(arguments, null);
+      }, function (error) {
+        return continuation(null, error);
+      });
+    }
+
+    /**
+     * Returns true iff the given object fulfils the Promise interface.
+     * @method is
+     * @param {Object} promise The object to test
+     * @static
+     * @return {Boolean}
+     */
+  }], [{
+    key: 'is',
+    value: function is(promise) {
+      return typeof promise !== 'undefined' && typeof promise.then === 'function';
+    }
+
+    /**
+     * Returns a new promise that is resolved with a given value.
+     * @method as
+     * @param value The value to resolve the promise with
+     * @static
+     * @return {Parse.Promise} the new promise.
+     */
+  }, {
+    key: 'as',
+    value: function as() {
+      var promise = new ParsePromise();
+
+      for (var _len4 = arguments.length, values = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+        values[_key4] = arguments[_key4];
+      }
+
+      promise.resolve.apply(promise, values);
+      return promise;
+    }
+
+    /**
+     * Returns a new promise that is rejected with a given error.
+     * @method error
+     * @param error The error to reject the promise with
+     * @static
+     * @return {Parse.Promise} the new promise.
+     */
+  }, {
+    key: 'error',
+    value: function error() {
+      var promise = new ParsePromise();
+
+      for (var _len5 = arguments.length, errors = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+        errors[_key5] = arguments[_key5];
+      }
+
+      promise.reject.apply(promise, errors);
+      return promise;
+    }
+
+    /**
+     * Returns a new promise that is fulfilled when all of the input promises
+     * are resolved. If any promise in the list fails, then the returned promise
+     * will fail with the last error. If they all succeed, then the returned
+     * promise will succeed, with the results being the results of all the input
+     * promises. For example: <pre>
+     *   var p1 = Parse.Promise.as(1);
+     *   var p2 = Parse.Promise.as(2);
+     *   var p3 = Parse.Promise.as(3);
+     *
+     *   Parse.Promise.when(p1, p2, p3).then(function(r1, r2, r3) {
+     *     console.log(r1);  // prints 1
+     *     console.log(r2);  // prints 2
+     *     console.log(r3);  // prints 3
+     *   });</pre>
+     *
+     * The input promises can also be specified as an array: <pre>
+     *   var promises = [p1, p2, p3];
+     *   Parse.Promise.when(promises).then(function(r1, r2, r3) {
+     *     console.log(r1);  // prints 1
+     *     console.log(r2);  // prints 2
+     *     console.log(r3);  // prints 3
+     *   });
+     * </pre>
+     * @method when
+     * @param {Array} promises a list of promises to wait for.
+     * @static
+     * @return {Parse.Promise} the new promise.
+     */
+  }, {
+    key: 'when',
+    value: function when(promises) {
+      var objects;
+      if (Array.isArray(promises)) {
+        objects = promises;
+      } else {
+        objects = arguments;
+      }
+
+      var total = objects.length;
+      var hadError = false;
+      var results = [];
+      var errors = [];
+      results.length = objects.length;
+      errors.length = objects.length;
+
+      if (total === 0) {
+        return ParsePromise.as.apply(this, results);
+      }
+
+      var promise = new ParsePromise();
+
+      var resolveOne = function resolveOne() {
+        total--;
+        if (total <= 0) {
+          if (hadError) {
+            promise.reject(errors);
+          } else {
+            promise.resolve.apply(promise, results);
+          }
+        }
+      };
+
+      var chain = function chain(object, index) {
+        if (ParsePromise.is(object)) {
+          object.then(function (result) {
+            results[index] = result;
+            resolveOne();
+          }, function (error) {
+            errors[index] = error;
+            hadError = true;
+            resolveOne();
+          });
+        } else {
+          results[i] = object;
+          resolveOne();
+        }
+      };
+      for (var i = 0; i < objects.length; i++) {
+        chain(objects[i], i);
+      }
+
+      return promise;
+    }
+
+    /**
+     * Runs the given asyncFunction repeatedly, as long as the predicate
+     * function returns a truthy value. Stops repeating if asyncFunction returns
+     * a rejected promise.
+     * @method _continueWhile
+     * @param {Function} predicate should return false when ready to stop.
+     * @param {Function} asyncFunction should return a Promise.
+     * @static
+     */
+  }, {
+    key: '_continueWhile',
+    value: function _continueWhile(predicate, asyncFunction) {
+      if (predicate()) {
+        return asyncFunction().then(function () {
+          return ParsePromise._continueWhile(predicate, asyncFunction);
+        });
+      }
+      return ParsePromise.as();
+    }
+  }, {
+    key: 'isPromisesAPlusCompliant',
+    value: function isPromisesAPlusCompliant() {
+      return _isPromisesAPlusCompliant;
+    }
+  }]);
+
+  return ParsePromise;
+})();
+
+exports['default'] = ParsePromise;
+module.exports = exports['default'];
+},{"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44}],17:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _encode = _dereq_('./encode');
+
+var _encode2 = _interopRequireDefault(_encode);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParseGeoPoint = _dereq_('./ParseGeoPoint');
+
+var _ParseGeoPoint2 = _interopRequireDefault(_ParseGeoPoint);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+/**
+ * Converts a string into a regex that matches it.
+ * Surrounding with \Q .. \E does this, we just need to escape any \E's in
+ * the text separately.
+ */
+function quote(s) {
+  return '\\Q' + s.replace('\\E', '\\E\\\\E\\Q') + '\\E';
+}
+
+/**
+ * Creates a new parse Parse.Query for the given Parse.Object subclass.
+ * @class Parse.Query
+ * @constructor
+ * @param objectClass -
+ *   An instance of a subclass of Parse.Object, or a Parse className string.
+ *
+ * <p>Parse.Query defines a query that is used to fetch Parse.Objects. The
+ * most common use case is finding all objects that match a query through the
+ * <code>find</code> method. For example, this sample code fetches all objects
+ * of class <code>MyClass</code>. It calls a different function depending on
+ * whether the fetch succeeded or not.
+ *
+ * <pre>
+ * var query = new Parse.Query(MyClass);
+ * query.find({
+ *   success: function(results) {
+ *     // results is an array of Parse.Object.
+ *   },
+ *
+ *   error: function(error) {
+ *     // error is an instance of Parse.Error.
+ *   }
+ * });</pre></p>
+ *
+ * <p>A Parse.Query can also be used to retrieve a single object whose id is
+ * known, through the get method. For example, this sample code fetches an
+ * object of class <code>MyClass</code> and id <code>myId</code>. It calls a
+ * different function depending on whether the fetch succeeded or not.
+ *
+ * <pre>
+ * var query = new Parse.Query(MyClass);
+ * query.get(myId, {
+ *   success: function(object) {
+ *     // object is an instance of Parse.Object.
+ *   },
+ *
+ *   error: function(object, error) {
+ *     // error is an instance of Parse.Error.
+ *   }
+ * });</pre></p>
+ *
+ * <p>A Parse.Query can also be used to count the number of objects that match
+ * the query without retrieving all of those objects. For example, this
+ * sample code counts the number of objects of the class <code>MyClass</code>
+ * <pre>
+ * var query = new Parse.Query(MyClass);
+ * query.count({
+ *   success: function(number) {
+ *     // There are number instances of MyClass.
+ *   },
+ *
+ *   error: function(error) {
+ *     // error is an instance of Parse.Error.
+ *   }
+ * });</pre></p>
+ */
+
+var ParseQuery = (function () {
+  function ParseQuery(objectClass) {
+    _classCallCheck(this, ParseQuery);
+
+    if (typeof objectClass === 'string') {
+      if (objectClass === 'User' && _CoreManager2['default'].get('PERFORM_USER_REWRITE')) {
+        this.className = '_User';
+      } else {
+        this.className = objectClass;
+      }
+    } else if (objectClass instanceof _ParseObject2['default']) {
+      this.className = objectClass.className;
+    } else if (typeof objectClass === 'function') {
+      if (typeof objectClass.className === 'string') {
+        this.className = objectClass.className;
+      } else {
+        var obj = new objectClass();
+        this.className = obj.className;
+      }
+    } else {
+      throw new TypeError('A ParseQuery must be constructed with a ParseObject or class name.');
+    }
+
+    this._where = {};
+    this._include = [];
+    this._limit = -1; // negative limit is not sent in the server request
+    this._skip = 0;
+    this._extraOptions = {};
+  }
+
+  /**
+   * Adds constraint that at least one of the passed in queries matches.
+   * @method _orQuery
+   * @param {Array} queries
+   * @return {Parse.Query} Returns the query, so you can chain this call.
+   */
+
+  _createClass(ParseQuery, [{
+    key: '_orQuery',
+    value: function _orQuery(queries) {
+      var queryJSON = queries.map(function (q) {
+        return q.toJSON().where;
+      });
+
+      this._where.$or = queryJSON;
+      return this;
+    }
+
+    /**
+     * Helper for condition queries
+     */
+  }, {
+    key: '_addCondition',
+    value: function _addCondition(key, condition, value) {
+      if (!this._where[key] || typeof this._where[key] === 'string') {
+        this._where[key] = {};
+      }
+      this._where[key][condition] = (0, _encode2['default'])(value, false, true);
+      return this;
+    }
+
+    /**
+     * Returns a JSON representation of this query.
+     * @method toJSON
+     * @return {Object} The JSON representation of the query.
+     */
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      var params = {
+        where: this._where
+      };
+
+      if (this._include.length) {
+        params.include = this._include.join(',');
+      }
+      if (this._select) {
+        params.keys = this._select.join(',');
+      }
+      if (this._limit >= 0) {
+        params.limit = this._limit;
+      }
+      if (this._skip > 0) {
+        params.skip = this._skip;
+      }
+      if (this._order) {
+        params.order = this._order.join(',');
+      }
+      for (var key in this._extraOptions) {
+        params[key] = this._extraOptions[key];
+      }
+
+      return params;
+    }
+
+    /**
+     * Constructs a Parse.Object whose id is already known by fetching data from
+     * the server.  Either options.success or options.error is called when the
+     * find completes.
+     *
+     * @method get
+     * @param {String} objectId The id of the object to be fetched.
+     * @param {Object} options A Backbone-style options object.
+     * Valid options are:<ul>
+     *   <li>success: A Backbone-style success callback
+     *   <li>error: An Backbone-style error callback.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     *
+     * @return {Parse.Promise} A promise that is resolved with the result when
+     * the query completes.
+     */
+  }, {
+    key: 'get',
+    value: function get(objectId, options) {
+      this.equalTo('objectId', objectId);
+
+      var firstOptions = {};
+      if (options && options.hasOwnProperty('useMasterKey')) {
+        firstOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options && options.hasOwnProperty('sessionToken')) {
+        firstOptions.sessionToken = options.sessionToken;
+      }
+
+      return this.first(firstOptions).then(function (response) {
+        if (response) {
+          return response;
+        }
+
+        var errorObject = new _ParseError2['default'](_ParseError2['default'].OBJECT_NOT_FOUND, 'Object not found.');
+        return _ParsePromise2['default'].error(errorObject);
+      })._thenRunCallbacks(options, null);
+    }
+
+    /**
+     * Retrieves a list of ParseObjects that satisfy this query.
+     * Either options.success or options.error is called when the find
+     * completes.
+     *
+     * @method find
+     * @param {Object} options A Backbone-style options object. Valid options
+     * are:<ul>
+     *   <li>success: Function to call when the find completes successfully.
+     *   <li>error: Function to call when the find fails.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     *
+     * @return {Parse.Promise} A promise that is resolved with the results when
+     * the query completes.
+     */
+  }, {
+    key: 'find',
+    value: function find(options) {
+      var _this = this;
+
+      options = options || {};
+
+      var findOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        findOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        findOptions.sessionToken = options.sessionToken;
+      }
+
+      var controller = _CoreManager2['default'].getQueryController();
+
+      return controller.find(this.className, this.toJSON(), findOptions).then(function (response) {
+        return response.results.map(function (data) {
+          data.className = _this.className;
+          return _ParseObject2['default'].fromJSON(data);
+        });
+      })._thenRunCallbacks(options);
+    }
+
+    /**
+     * Counts the number of objects that match this query.
+     * Either options.success or options.error is called when the count
+     * completes.
+     *
+     * @method count
+     * @param {Object} options A Backbone-style options object. Valid options
+     * are:<ul>
+     *   <li>success: Function to call when the count completes successfully.
+     *   <li>error: Function to call when the find fails.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     *
+     * @return {Parse.Promise} A promise that is resolved with the count when
+     * the query completes.
+     */
+  }, {
+    key: 'count',
+    value: function count(options) {
+      options = options || {};
+
+      var findOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        findOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        findOptions.sessionToken = options.sessionToken;
+      }
+
+      var controller = _CoreManager2['default'].getQueryController();
+
+      var params = this.toJSON();
+      params.limit = 0;
+      params.count = 1;
+
+      return controller.find(this.className, params, findOptions).then(function (result) {
+        return result.count;
+      })._thenRunCallbacks(options);
+    }
+
+    /**
+     * Retrieves at most one Parse.Object that satisfies this query.
+     *
+     * Either options.success or options.error is called when it completes.
+     * success is passed the object if there is one. otherwise, undefined.
+     *
+     * @method first
+     * @param {Object} options A Backbone-style options object. Valid options
+     * are:<ul>
+     *   <li>success: Function to call when the find completes successfully.
+     *   <li>error: Function to call when the find fails.
+     *   <li>useMasterKey: In Cloud Code and Node only, causes the Master Key to
+     *     be used for this request.
+     *   <li>sessionToken: A valid session token, used for making a request on
+     *       behalf of a specific user.
+     * </ul>
+     *
+     * @return {Parse.Promise} A promise that is resolved with the object when
+     * the query completes.
+     */
+  }, {
+    key: 'first',
+    value: function first(options) {
+      var _this2 = this;
+
+      options = options || {};
+
+      var findOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        findOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        findOptions.sessionToken = options.sessionToken;
+      }
+
+      var controller = _CoreManager2['default'].getQueryController();
+
+      var params = this.toJSON();
+      params.limit = 1;
+
+      return controller.find(this.className, params, findOptions).then(function (response) {
+        var objects = response.results;
+        if (!objects[0]) {
+          return undefined;
+        }
+        objects[0].className = _this2.className;
+        return _ParseObject2['default'].fromJSON(objects[0]);
+      })._thenRunCallbacks(options);
+    }
+
+    /**
+     * Iterates over each result of a query, calling a callback for each one. If
+     * the callback returns a promise, the iteration will not continue until
+     * that promise has been fulfilled. If the callback returns a rejected
+     * promise, then iteration will stop with that error. The items are
+     * processed in an unspecified order. The query may not have any sort order,
+     * and may not use limit or skip.
+     * @method each
+     * @param {Function} callback Callback that will be called with each result
+     *     of the query.
+     * @param {Object} options An optional Backbone-like options object with
+     *     success and error callbacks that will be invoked once the iteration
+     *     has finished.
+     * @return {Parse.Promise} A promise that will be fulfilled once the
+     *     iteration has completed.
+     */
+  }, {
+    key: 'each',
+    value: function each(callback, options) {
+      options = options || {};
+
+      if (this._order || this._skip || this._limit >= 0) {
+        return _ParsePromise2['default'].error('Cannot iterate on a query with sort, skip, or limit.')._thenRunCallbacks(options);
+      }
+
+      var promise = new _ParsePromise2['default']();
+
+      var query = new ParseQuery(this.className);
+      // We can override the batch size from the options.
+      // This is undocumented, but useful for testing.
+      query._limit = options.batchSize || 100;
+      query._include = this._include.map(function (i) {
+        return i;
+      });
+      if (this._select) {
+        query._select = this._select.map(function (s) {
+          return s;
+        });
+      }
+
+      query._where = {};
+      for (var attr in this._where) {
+        var val = this._where[attr];
+        if (Array.isArray(val)) {
+          query._where[attr] = val.map(function (v) {
+            return v;
+          });
+        } else if (val && typeof val === 'object') {
+          var conditionMap = {};
+          query._where[attr] = conditionMap;
+          for (var cond in val) {
+            conditionMap[cond] = val[cond];
+          }
+        } else {
+          query._where[attr] = val;
+        }
+      }
+
+      query.ascending('objectId');
+
+      var findOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        findOptions.useMasterKey = options.useMasterKey;
+      }
+      if (options.hasOwnProperty('sessionToken')) {
+        findOptions.sessionToken = options.sessionToken;
+      }
+
+      var finished = false;
+      return _ParsePromise2['default']._continueWhile(function () {
+        return !finished;
+      }, function () {
+        return query.find(findOptions).then(function (results) {
+          var callbacksDone = _ParsePromise2['default'].as();
+          results.forEach(function (result) {
+            callbacksDone = callbacksDone.then(function () {
+              return callback(result);
+            });
+          });
+
+          return callbacksDone.then(function () {
+            if (results.length >= query._limit) {
+              query.greaterThan('objectId', results[results.length - 1].id);
+            } else {
+              finished = true;
             }
-        }, {
-            "./$.core": 59,
-            "./$.def": 61,
-            "./$.fails": 63
-        }],
-        69: [function(e, t, r) {
-            var n = e("./$").getDesc,
-                a = e("./$.is-object"),
-                s = e("./$.an-object"),
-                o = function(e, t) {
-                    if (s(e), !a(t) && null !== t) throw TypeError(t + ": can't set as prototype!")
-                };
-            t.exports = {
-                set: Object.setPrototypeOf || ("__proto__" in {} ? function(t, r, a) {
-                    try {
-                        a = e("./$.ctx")(Function.call, n(Object.prototype, "__proto__").set, 2), a(t, []), r = !(t instanceof Array)
-                    } catch (s) {
-                        r = !0
-                    }
-                    return function(e, t) {
-                        return o(e, t), r ? e.__proto__ = t : a(e, t), e
-                    }
-                }({}, !1) : void 0),
-                check: o
+          });
+        });
+      })._thenRunCallbacks(options);
+    }
+
+    /** Query Conditions **/
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be equal to the provided value.
+     * @method equalTo
+     * @param {String} key The key to check.
+     * @param value The value that the Parse.Object must contain.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'equalTo',
+    value: function equalTo(key, value) {
+      if (typeof value === 'undefined') {
+        return this.doesNotExist(key);
+      }
+
+      this._where[key] = (0, _encode2['default'])(value, false, true);
+      return this;
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be not equal to the provided value.
+     * @method notEqualTo
+     * @param {String} key The key to check.
+     * @param value The value that must not be equalled.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'notEqualTo',
+    value: function notEqualTo(key, value) {
+      return this._addCondition(key, '$ne', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be less than the provided value.
+     * @method lessThan
+     * @param {String} key The key to check.
+     * @param value The value that provides an upper bound.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'lessThan',
+    value: function lessThan(key, value) {
+      return this._addCondition(key, '$lt', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be greater than the provided value.
+     * @method greaterThan
+     * @param {String} key The key to check.
+     * @param value The value that provides an lower bound.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'greaterThan',
+    value: function greaterThan(key, value) {
+      return this._addCondition(key, '$gt', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be less than or equal to the provided value.
+     * @method lessThanOrEqualTo
+     * @param {String} key The key to check.
+     * @param value The value that provides an upper bound.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'lessThanOrEqualTo',
+    value: function lessThanOrEqualTo(key, value) {
+      return this._addCondition(key, '$lte', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be greater than or equal to the provided value.
+     * @method greaterThanOrEqualTo
+     * @param {String} key The key to check.
+     * @param value The value that provides an lower bound.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'greaterThanOrEqualTo',
+    value: function greaterThanOrEqualTo(key, value) {
+      return this._addCondition(key, '$gte', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * be contained in the provided list of values.
+     * @method containedIn
+     * @param {String} key The key to check.
+     * @param {Array} values The values that will match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'containedIn',
+    value: function containedIn(key, value) {
+      return this._addCondition(key, '$in', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * not be contained in the provided list of values.
+     * @method notContainedIn
+     * @param {String} key The key to check.
+     * @param {Array} values The values that will not match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'notContainedIn',
+    value: function notContainedIn(key, value) {
+      return this._addCondition(key, '$nin', value);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's value to
+     * contain each one of the provided list of values.
+     * @method containsAll
+     * @param {String} key The key to check.  This key's value must be an array.
+     * @param {Array} values The values that will match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'containsAll',
+    value: function containsAll(key, values) {
+      return this._addCondition(key, '$all', values);
+    }
+
+    /**
+     * Adds a constraint for finding objects that contain the given key.
+     * @method exists
+     * @param {String} key The key that should exist.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'exists',
+    value: function exists(key) {
+      return this._addCondition(key, '$exists', true);
+    }
+
+    /**
+     * Adds a constraint for finding objects that do not contain a given key.
+     * @method doesNotExist
+     * @param {String} key The key that should not exist
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'doesNotExist',
+    value: function doesNotExist(key) {
+      return this._addCondition(key, '$exists', false);
+    }
+
+    /**
+     * Adds a regular expression constraint for finding string values that match
+     * the provided regular expression.
+     * This may be slow for large datasets.
+     * @method matches
+     * @param {String} key The key that the string to match is stored in.
+     * @param {RegExp} regex The regular expression pattern to match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'matches',
+    value: function matches(key, regex, modifiers) {
+      this._addCondition(key, '$regex', regex);
+      if (!modifiers) {
+        modifiers = '';
+      }
+      if (regex.ignoreCase) {
+        modifiers += 'i';
+      }
+      if (regex.multiline) {
+        modifiers += 'm';
+      }
+      if (modifiers.length) {
+        this._addCondition(key, '$options', modifiers);
+      }
+      return this;
+    }
+
+    /**
+     * Adds a constraint that requires that a key's value matches a Parse.Query
+     * constraint.
+     * @method matchesQuery
+     * @param {String} key The key that the contains the object to match the
+     *                     query.
+     * @param {Parse.Query} query The query that should match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'matchesQuery',
+    value: function matchesQuery(key, query) {
+      var queryJSON = query.toJSON();
+      queryJSON.className = query.className;
+      return this._addCondition(key, '$inQuery', queryJSON);
+    }
+
+    /**
+     * Adds a constraint that requires that a key's value not matches a
+     * Parse.Query constraint.
+     * @method doesNotMatchQuery
+     * @param {String} key The key that the contains the object to match the
+     *                     query.
+     * @param {Parse.Query} query The query that should not match.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'doesNotMatchQuery',
+    value: function doesNotMatchQuery(key, query) {
+      var queryJSON = query.toJSON();
+      queryJSON.className = query.className;
+      return this._addCondition(key, '$notInQuery', queryJSON);
+    }
+
+    /**
+     * Adds a constraint that requires that a key's value matches a value in
+     * an object returned by a different Parse.Query.
+     * @method matchesKeyInQuery
+     * @param {String} key The key that contains the value that is being
+     *                     matched.
+     * @param {String} queryKey The key in the objects returned by the query to
+     *                          match against.
+     * @param {Parse.Query} query The query to run.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'matchesKeyInQuery',
+    value: function matchesKeyInQuery(key, queryKey, query) {
+      var queryJSON = query.toJSON();
+      queryJSON.className = query.className;
+      return this._addCondition(key, '$select', {
+        key: queryKey,
+        query: queryJSON
+      });
+    }
+
+    /**
+     * Adds a constraint that requires that a key's value not match a value in
+     * an object returned by a different Parse.Query.
+     * @method doesNotMatchKeyInQuery
+     * @param {String} key The key that contains the value that is being
+     *                     excluded.
+     * @param {String} queryKey The key in the objects returned by the query to
+     *                          match against.
+     * @param {Parse.Query} query The query to run.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'doesNotMatchKeyInQuery',
+    value: function doesNotMatchKeyInQuery(key, queryKey, query) {
+      var queryJSON = query.toJSON();
+      queryJSON.className = query.className;
+      return this._addCondition(key, '$dontSelect', {
+        key: queryKey,
+        query: queryJSON
+      });
+    }
+
+    /**
+     * Adds a constraint for finding string values that contain a provided
+     * string.  This may be slow for large datasets.
+     * @method contains
+     * @param {String} key The key that the string to match is stored in.
+     * @param {String} substring The substring that the value must contain.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'contains',
+    value: function contains(key, value) {
+      if (typeof value !== 'string') {
+        throw new Error('The value being searched for must be a string.');
+      }
+      return this._addCondition(key, '$regex', quote(value));
+    }
+
+    /**
+     * Adds a constraint for finding string values that start with a provided
+     * string.  This query will use the backend index, so it will be fast even
+     * for large datasets.
+     * @method startsWith
+     * @param {String} key The key that the string to match is stored in.
+     * @param {String} prefix The substring that the value must start with.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'startsWith',
+    value: function startsWith(key, value) {
+      if (typeof value !== 'string') {
+        throw new Error('The value being searched for must be a string.');
+      }
+      return this._addCondition(key, '$regex', '^' + quote(value));
+    }
+
+    /**
+     * Adds a constraint for finding string values that end with a provided
+     * string.  This will be slow for large datasets.
+     * @method endsWith
+     * @param {String} key The key that the string to match is stored in.
+     * @param {String} suffix The substring that the value must end with.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'endsWith',
+    value: function endsWith(key, value) {
+      if (typeof value !== 'string') {
+        throw new Error('The value being searched for must be a string.');
+      }
+      return this._addCondition(key, '$regex', quote(value) + '$');
+    }
+
+    /**
+     * Adds a proximity based constraint for finding objects with key point
+     * values near the point given.
+     * @method near
+     * @param {String} key The key that the Parse.GeoPoint is stored in.
+     * @param {Parse.GeoPoint} point The reference Parse.GeoPoint that is used.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'near',
+    value: function near(key, point) {
+      if (!(point instanceof _ParseGeoPoint2['default'])) {
+        // Try to cast it as a GeoPoint
+        point = new _ParseGeoPoint2['default'](point);
+      }
+      return this._addCondition(key, '$nearSphere', point);
+    }
+
+    /**
+     * Adds a proximity based constraint for finding objects with key point
+     * values near the point given and within the maximum distance given.
+     * @method withinRadians
+     * @param {String} key The key that the Parse.GeoPoint is stored in.
+     * @param {Parse.GeoPoint} point The reference Parse.GeoPoint that is used.
+     * @param {Number} maxDistance Maximum distance (in radians) of results to
+     *   return.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'withinRadians',
+    value: function withinRadians(key, point, distance) {
+      this.near(key, point);
+      return this._addCondition(key, '$maxDistance', distance);
+    }
+
+    /**
+     * Adds a proximity based constraint for finding objects with key point
+     * values near the point given and within the maximum distance given.
+     * Radius of earth used is 3958.8 miles.
+     * @method withinMiles
+     * @param {String} key The key that the Parse.GeoPoint is stored in.
+     * @param {Parse.GeoPoint} point The reference Parse.GeoPoint that is used.
+     * @param {Number} maxDistance Maximum distance (in miles) of results to
+     *     return.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'withinMiles',
+    value: function withinMiles(key, point, distance) {
+      return this.withinRadians(key, point, distance / 3958.8);
+    }
+
+    /**
+     * Adds a proximity based constraint for finding objects with key point
+     * values near the point given and within the maximum distance given.
+     * Radius of earth used is 6371.0 kilometers.
+     * @method withinKilometers
+     * @param {String} key The key that the Parse.GeoPoint is stored in.
+     * @param {Parse.GeoPoint} point The reference Parse.GeoPoint that is used.
+     * @param {Number} maxDistance Maximum distance (in kilometers) of results
+     *     to return.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'withinKilometers',
+    value: function withinKilometers(key, point, distance) {
+      return this.withinRadians(key, point, distance / 6371.0);
+    }
+
+    /**
+     * Adds a constraint to the query that requires a particular key's
+     * coordinates be contained within a given rectangular geographic bounding
+     * box.
+     * @method withinGeoBox
+     * @param {String} key The key to be constrained.
+     * @param {Parse.GeoPoint} southwest
+     *     The lower-left inclusive corner of the box.
+     * @param {Parse.GeoPoint} northeast
+     *     The upper-right inclusive corner of the box.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'withinGeoBox',
+    value: function withinGeoBox(key, southwest, northeast) {
+      if (!(southwest instanceof _ParseGeoPoint2['default'])) {
+        southwest = new _ParseGeoPoint2['default'](southwest);
+      }
+      if (!(northeast instanceof _ParseGeoPoint2['default'])) {
+        northeast = new _ParseGeoPoint2['default'](northeast);
+      }
+      this._addCondition(key, '$within', { '$box': [southwest, northeast] });
+      return this;
+    }
+
+    /** Query Orderings **/
+
+    /**
+     * Sorts the results in ascending order by the given key.
+     *
+     * @method ascending
+     * @param {(String|String[]|...String} key The key to order by, which is a
+     * string of comma separated values, or an Array of keys, or multiple keys.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'ascending',
+    value: function ascending() {
+      this._order = [];
+
+      for (var _len = arguments.length, keys = Array(_len), _key = 0; _key < _len; _key++) {
+        keys[_key] = arguments[_key];
+      }
+
+      return this.addAscending.apply(this, keys);
+    }
+
+    /**
+     * Sorts the results in ascending order by the given key,
+     * but can also add secondary sort descriptors without overwriting _order.
+     *
+     * @method addAscending
+     * @param {(String|String[]|...String} key The key to order by, which is a
+     * string of comma separated values, or an Array of keys, or multiple keys.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'addAscending',
+    value: function addAscending() {
+      var _this3 = this;
+
+      if (!this._order) {
+        this._order = [];
+      }
+
+      for (var _len2 = arguments.length, keys = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        keys[_key2] = arguments[_key2];
+      }
+
+      keys.forEach(function (key) {
+        if (Array.isArray(key)) {
+          key = key.join();
+        }
+        _this3._order = _this3._order.concat(key.replace(/\s/g, '').split(','));
+      });
+
+      return this;
+    }
+
+    /**
+     * Sorts the results in descending order by the given key.
+     *
+     * @method descending
+     * @param {(String|String[]|...String} key The key to order by, which is a
+     * string of comma separated values, or an Array of keys, or multiple keys.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'descending',
+    value: function descending() {
+      this._order = [];
+
+      for (var _len3 = arguments.length, keys = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+        keys[_key3] = arguments[_key3];
+      }
+
+      return this.addDescending.apply(this, keys);
+    }
+
+    /**
+     * Sorts the results in descending order by the given key,
+     * but can also add secondary sort descriptors without overwriting _order.
+     *
+     * @method addDescending
+     * @param {(String|String[]|...String} key The key to order by, which is a
+     * string of comma separated values, or an Array of keys, or multiple keys.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'addDescending',
+    value: function addDescending() {
+      var _this4 = this;
+
+      if (!this._order) {
+        this._order = [];
+      }
+
+      for (var _len4 = arguments.length, keys = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+        keys[_key4] = arguments[_key4];
+      }
+
+      keys.forEach(function (key) {
+        if (Array.isArray(key)) {
+          key = key.join();
+        }
+        _this4._order = _this4._order.concat(key.replace(/\s/g, '').split(',').map(function (k) {
+          return '-' + k;
+        }));
+      });
+
+      return this;
+    }
+
+    /** Query Options **/
+
+    /**
+     * Sets the number of results to skip before returning any results.
+     * This is useful for pagination.
+     * Default is to skip zero results.
+     * @method skip
+     * @param {Number} n the number of results to skip.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'skip',
+    value: function skip(n) {
+      if (typeof n !== 'number' || n < 0) {
+        throw new Error('You can only skip by a positive number');
+      }
+      this._skip = n;
+      return this;
+    }
+
+    /**
+     * Sets the limit of the number of results to return. The default limit is
+     * 100, with a maximum of 1000 results being returned at a time.
+     * @method limit
+     * @param {Number} n the number of results to limit to.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'limit',
+    value: function limit(n) {
+      if (typeof n !== 'number') {
+        throw new Error('You can only set the limit to a numeric value');
+      }
+      this._limit = n;
+      return this;
+    }
+
+    /**
+     * Includes nested Parse.Objects for the provided key.  You can use dot
+     * notation to specify which fields in the included object are also fetched.
+     * @method include
+     * @param {String} key The name of the key to include.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'include',
+    value: function include() {
+      var _this5 = this;
+
+      for (var _len5 = arguments.length, keys = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+        keys[_key5] = arguments[_key5];
+      }
+
+      keys.forEach(function (key) {
+        if (Array.isArray(key)) {
+          _this5._include = _this5._include.concat(key);
+        } else {
+          _this5._include.push(key);
+        }
+      });
+      return this;
+    }
+
+    /**
+     * Restricts the fields of the returned Parse.Objects to include only the
+     * provided keys.  If this is called multiple times, then all of the keys
+     * specified in each of the calls will be included.
+     * @method select
+     * @param {Array} keys The names of the keys to include.
+     * @return {Parse.Query} Returns the query, so you can chain this call.
+     */
+  }, {
+    key: 'select',
+    value: function select() {
+      var _this6 = this;
+
+      if (!this._select) {
+        this._select = [];
+      }
+
+      for (var _len6 = arguments.length, keys = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+        keys[_key6] = arguments[_key6];
+      }
+
+      keys.forEach(function (key) {
+        if (Array.isArray(key)) {
+          _this6._select = _this6._select.concat(key);
+        } else {
+          _this6._select.push(key);
+        }
+      });
+      return this;
+    }
+
+    /**
+     * Constructs a Parse.Query that is the OR of the passed in queries.  For
+     * example:
+     * <pre>var compoundQuery = Parse.Query.or(query1, query2, query3);</pre>
+     *
+     * will create a compoundQuery that is an or of the query1, query2, and
+     * query3.
+     * @method or
+     * @param {...Parse.Query} var_args The list of queries to OR.
+     * @static
+     * @return {Parse.Query} The query that is the OR of the passed in queries.
+     */
+  }], [{
+    key: 'or',
+    value: function or() {
+      var className = null;
+
+      for (var _len7 = arguments.length, queries = Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
+        queries[_key7] = arguments[_key7];
+      }
+
+      queries.forEach(function (q) {
+        if (!className) {
+          className = q.className;
+        }
+
+        if (className !== q.className) {
+          throw new Error('All queries must be for the same class.');
+        }
+      });
+
+      var query = new ParseQuery(className);
+      query._orQuery(queries);
+      return query;
+    }
+  }]);
+
+  return ParseQuery;
+})();
+
+exports['default'] = ParseQuery;
+
+_CoreManager2['default'].setQueryController({
+  find: function find(className, params, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+
+    return RESTController.request('GET', 'classes/' + className, params, options);
+  }
+});
+module.exports = exports['default'];
+},{"./CoreManager":3,"./ParseError":10,"./ParseGeoPoint":12,"./ParseObject":14,"./ParsePromise":16,"./encode":30,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],18:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseQuery = _dereq_('./ParseQuery');
+
+var _ParseQuery2 = _interopRequireDefault(_ParseQuery);
+
+/**
+ * Creates a new Relation for the given parent object and key. This
+ * constructor should rarely be used directly, but rather created by
+ * Parse.Object.relation.
+ * @class Parse.Relation
+ * @constructor
+ * @param {Parse.Object} parent The parent of this relation.
+ * @param {String} key The key for this relation on the parent.
+ *
+ * <p>
+ * A class that is used to access all of the children of a many-to-many
+ * relationship.  Each instance of Parse.Relation is associated with a
+ * particular parent object and key.
+ * </p>
+ */
+
+var ParseRelation = (function () {
+  function ParseRelation(parent, key) {
+    _classCallCheck(this, ParseRelation);
+
+    this.parent = parent;
+    this.key = key;
+    this.targetClassName = null;
+  }
+
+  /**
+   * Makes sure that this relation has the right parent and key.
+   */
+
+  _createClass(ParseRelation, [{
+    key: '_ensureParentAndKey',
+    value: function _ensureParentAndKey(parent, key) {
+      this.key = this.key || key;
+      if (this.key !== key) {
+        throw new Error('Internal Error. Relation retrieved from two different keys.');
+      }
+      if (this.parent) {
+        if (this.parent.className !== parent.className) {
+          throw new Error('Internal Error. Relation retrieved from two different Objects.');
+        }
+        if (this.parent.id) {
+          if (this.parent.id !== parent.id) {
+            throw new Error('Internal Error. Relation retrieved from two different Objects.');
+          }
+        } else if (parent.id) {
+          this.parent = parent;
+        }
+      } else {
+        this.parent = parent;
+      }
+    }
+
+    /**
+     * Adds a Parse.Object or an array of Parse.Objects to the relation.
+     * @method add
+     * @param {} objects The item or items to add.
+     */
+  }, {
+    key: 'add',
+    value: function add(objects) {
+      if (!Array.isArray(objects)) {
+        objects = [objects];
+      }
+
+      var change = new _ParseOp.RelationOp(objects, []);
+      this.parent.set(this.key, change);
+      this.targetClassName = change._targetClassName;
+      return this.parent;
+    }
+
+    /**
+     * Removes a Parse.Object or an array of Parse.Objects from this relation.
+     * @method remove
+     * @param {} objects The item or items to remove.
+     */
+  }, {
+    key: 'remove',
+    value: function remove(objects) {
+      if (!Array.isArray(objects)) {
+        objects = [objects];
+      }
+
+      var change = new _ParseOp.RelationOp([], objects);
+      this.parent.set(this.key, change);
+      this.targetClassName = change._targetClassName;
+    }
+
+    /**
+     * Returns a JSON version of the object suitable for saving to disk.
+     * @method toJSON
+     * @return {Object}
+     */
+  }, {
+    key: 'toJSON',
+    value: function toJSON() {
+      return {
+        __type: 'Relation',
+        className: this.targetClassName
+      };
+    }
+
+    /**
+     * Returns a Parse.Query that is limited to objects in this
+     * relation.
+     * @method query
+     * @return {Parse.Query}
+     */
+  }, {
+    key: 'query',
+    value: function query() {
+      var query;
+      if (!this.targetClassName) {
+        query = new _ParseQuery2['default'](this.parent.className);
+        query._extraOptions.redirectClassNameForKey = this.key;
+      } else {
+        query = new _ParseQuery2['default'](this.targetClassName);
+      }
+      query._addCondition('$relatedTo', 'object', {
+        __type: 'Pointer',
+        className: this.parent.className,
+        objectId: this.parent.id
+      });
+      query._addCondition('$relatedTo', 'key', this.key);
+
+      return query;
+    }
+  }]);
+
+  return ParseRelation;
+})();
+
+exports['default'] = ParseRelation;
+module.exports = exports['default'];
+},{"./ParseObject":14,"./ParseOp":15,"./ParseQuery":17,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],19:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+/**
+ * Represents a Role on the Parse server. Roles represent groupings of
+ * Users for the purposes of granting permissions (e.g. specifying an ACL
+ * for an Object). Roles are specified by their sets of child users and
+ * child roles, all of which are granted any permissions that the parent
+ * role has.
+ *
+ * <p>Roles must have a name (which cannot be changed after creation of the
+ * role), and must specify an ACL.</p>
+ * @class Parse.Role
+ * @constructor
+ * @param {String} name The name of the Role to create.
+ * @param {Parse.ACL} acl The ACL for this role. Roles must have an ACL.
+ * A Parse.Role is a local representation of a role persisted to the Parse
+ * cloud.
+ */
+'use strict';
+
+var _get = _dereq_('babel-runtime/helpers/get')['default'];
+
+var _inherits = _dereq_('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParseACL = _dereq_('./ParseACL');
+
+var _ParseACL2 = _interopRequireDefault(_ParseACL);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParseObject2 = _dereq_('./ParseObject');
+
+var _ParseObject3 = _interopRequireDefault(_ParseObject2);
+
+var ParseRole = (function (_ParseObject) {
+  _inherits(ParseRole, _ParseObject);
+
+  function ParseRole(name, acl) {
+    _classCallCheck(this, ParseRole);
+
+    _get(Object.getPrototypeOf(ParseRole.prototype), 'constructor', this).call(this, '_Role');
+    if (typeof name === 'string' && acl instanceof _ParseACL2['default']) {
+      this.setName(name);
+      this.setACL(acl);
+    }
+  }
+
+  /**
+   * Gets the name of the role.  You can alternatively call role.get("name")
+   *
+   * @method getName
+   * @return {String} the name of the role.
+   */
+
+  _createClass(ParseRole, [{
+    key: 'getName',
+    value: function getName() {
+      return this.get('name');
+    }
+
+    /**
+     * Sets the name for a role. This value must be set before the role has
+     * been saved to the server, and cannot be set once the role has been
+     * saved.
+     *
+     * <p>
+     *   A role's name can only contain alphanumeric characters, _, -, and
+     *   spaces.
+     * </p>
+     *
+     * <p>This is equivalent to calling role.set("name", name)</p>
+     *
+     * @method setName
+     * @param {String} name The name of the role.
+     * @param {Object} options Standard options object with success and error
+     *     callbacks.
+     */
+  }, {
+    key: 'setName',
+    value: function setName(name, options) {
+      return this.set('name', name, options);
+    }
+
+    /**
+     * Gets the Parse.Relation for the Parse.Users that are direct
+     * children of this role. These users are granted any privileges that this
+     * role has been granted (e.g. read or write access through ACLs). You can
+     * add or remove users from the role through this relation.
+     *
+     * <p>This is equivalent to calling role.relation("users")</p>
+     *
+     * @method getUsers
+     * @return {Parse.Relation} the relation for the users belonging to this
+     *     role.
+     */
+  }, {
+    key: 'getUsers',
+    value: function getUsers() {
+      return this.relation('users');
+    }
+
+    /**
+     * Gets the Parse.Relation for the Parse.Roles that are direct
+     * children of this role. These roles' users are granted any privileges that
+     * this role has been granted (e.g. read or write access through ACLs). You
+     * can add or remove child roles from this role through this relation.
+     *
+     * <p>This is equivalent to calling role.relation("roles")</p>
+     *
+     * @method getRoles
+     * @return {Parse.Relation} the relation for the roles belonging to this
+     *     role.
+     */
+  }, {
+    key: 'getRoles',
+    value: function getRoles() {
+      return this.relation('roles');
+    }
+  }, {
+    key: 'validate',
+    value: function validate(attrs, options) {
+      var isInvalid = _get(Object.getPrototypeOf(ParseRole.prototype), 'validate', this).call(this, attrs, options);
+      if (isInvalid) {
+        return isInvalid;
+      }
+
+      if ('name' in attrs && attrs.name !== this.getName()) {
+        var newName = attrs.name;
+        if (this.id && this.id !== attrs.objectId) {
+          // Check to see if the objectId being set matches this.id
+          // This happens during a fetch -- the id is set before calling fetch
+          // Let the name be set in this case
+          return new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'A role\'s name can only be set before it has been saved.');
+        }
+        if (typeof newName !== 'string') {
+          return new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'A role\'s name must be a String.');
+        }
+        if (!/^[0-9a-zA-Z\-_ ]+$/.test(newName)) {
+          return new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'A role\'s name can be only contain alphanumeric characters, _, ' + '-, and spaces.');
+        }
+      }
+      return false;
+    }
+  }]);
+
+  return ParseRole;
+})(_ParseObject3['default']);
+
+exports['default'] = ParseRole;
+
+_ParseObject3['default'].registerSubclass('_Role', ParseRole);
+module.exports = exports['default'];
+},{"./ParseACL":8,"./ParseError":10,"./ParseObject":14,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/get":45,"babel-runtime/helpers/inherits":46,"babel-runtime/helpers/interop-require-default":47}],20:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+/**
+ * @class Parse.Session
+ * @constructor
+ *
+ * <p>A Parse.Session object is a local representation of a revocable session.
+ * This class is a subclass of a Parse.Object, and retains the same
+ * functionality of a Parse.Object.</p>
+ */
+'use strict';
+
+var _get = _dereq_('babel-runtime/helpers/get')['default'];
+
+var _inherits = _dereq_('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _isRevocableSession = _dereq_('./isRevocableSession');
+
+var _isRevocableSession2 = _interopRequireDefault(_isRevocableSession);
+
+var _ParseObject2 = _dereq_('./ParseObject');
+
+var _ParseObject3 = _interopRequireDefault(_ParseObject2);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _ParseUser = _dereq_('./ParseUser');
+
+var _ParseUser2 = _interopRequireDefault(_ParseUser);
+
+var ParseSession = (function (_ParseObject) {
+  _inherits(ParseSession, _ParseObject);
+
+  function ParseSession(attributes) {
+    _classCallCheck(this, ParseSession);
+
+    _get(Object.getPrototypeOf(ParseSession.prototype), 'constructor', this).call(this, '_Session');
+    if (attributes && typeof attributes === 'object') {
+      if (!this.set(attributes || {})) {
+        throw new Error('Can\'t create an invalid Session');
+      }
+    }
+  }
+
+  /**
+   * Returns the session token string.
+   * @method getSessionToken
+   * @return {String}
+   */
+
+  _createClass(ParseSession, [{
+    key: 'getSessionToken',
+    value: function getSessionToken() {
+      return this.get('sessionToken');
+    }
+  }], [{
+    key: 'readOnlyAttributes',
+    value: function readOnlyAttributes() {
+      return ['createdWith', 'expiresAt', 'installationId', 'restricted', 'sessionToken', 'user'];
+    }
+
+    /**
+     * Retrieves the Session object for the currently logged in session.
+     * @method current
+     * @static
+     * @return {Parse.Promise} A promise that is resolved with the Parse.Session
+     *   object after it has been fetched. If there is no current user, the
+     *   promise will be rejected.
+     */
+  }, {
+    key: 'current',
+    value: function current(options) {
+      options = options || {};
+      var controller = _CoreManager2['default'].getSessionController();
+
+      var sessionOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        sessionOptions.useMasterKey = options.useMasterKey;
+      }
+      return _ParseUser2['default'].currentAsync().then(function (user) {
+        if (!user) {
+          return _ParsePromise2['default'].error('There is no current user.');
+        }
+        var token = user.getSessionToken();
+        sessionOptions.sessionToken = user.getSessionToken();
+        return controller.getSession(sessionOptions);
+      });
+    }
+
+    /**
+     * Determines whether the current session token is revocable.
+     * This method is useful for migrating Express.js or Node.js web apps to
+     * use revocable sessions. If you are migrating an app that uses the Parse
+     * SDK in the browser only, please use Parse.User.enableRevocableSession()
+     * instead, so that sessions can be automatically upgraded.
+     * @method isCurrentSessionRevocable
+     * @static
+     * @return {Boolean}
+     */
+  }, {
+    key: 'isCurrentSessionRevocable',
+    value: function isCurrentSessionRevocable() {
+      var currentUser = _ParseUser2['default'].current();
+      if (currentUser) {
+        return (0, _isRevocableSession2['default'])(currentUser.getSessionToken() || '');
+      }
+      return false;
+    }
+  }]);
+
+  return ParseSession;
+})(_ParseObject3['default']);
+
+exports['default'] = ParseSession;
+
+_ParseObject3['default'].registerSubclass('_Session', ParseSession);
+
+_CoreManager2['default'].setSessionController({
+  getSession: function getSession(options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    var session = new ParseSession();
+
+    return RESTController.request('GET', 'sessions/me', {}, options).then(function (sessionData) {
+      session._finishFetch(sessionData);
+      session._setExisted(true);
+      return session;
+    });
+  }
+});
+module.exports = exports['default'];
+},{"./CoreManager":3,"./ParseObject":14,"./ParsePromise":16,"./ParseUser":21,"./isRevocableSession":33,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/get":45,"babel-runtime/helpers/inherits":46,"babel-runtime/helpers/interop-require-default":47}],21:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _get = _dereq_('babel-runtime/helpers/get')['default'];
+
+var _inherits = _dereq_('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _Object$defineProperty = _dereq_('babel-runtime/core-js/object/define-property')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _interopRequireWildcard = _dereq_('babel-runtime/helpers/interop-require-wildcard')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _isRevocableSession = _dereq_('./isRevocableSession');
+
+var _isRevocableSession2 = _interopRequireDefault(_isRevocableSession);
+
+var _ObjectState = _dereq_('./ObjectState');
+
+var ObjectState = _interopRequireWildcard(_ObjectState);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParseObject2 = _dereq_('./ParseObject');
+
+var _ParseObject3 = _interopRequireDefault(_ParseObject2);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _ParseSession = _dereq_('./ParseSession');
+
+var _ParseSession2 = _interopRequireDefault(_ParseSession);
+
+var _Storage = _dereq_('./Storage');
+
+var _Storage2 = _interopRequireDefault(_Storage);
+
+var CURRENT_USER_KEY = 'currentUser';
+var canUseCurrentUser = !_CoreManager2['default'].get('IS_NODE');
+var currentUserCacheMatchesDisk = false;
+var currentUserCache = null;
+
+var authProviders = {};
+
+/**
+ * @class Parse.User
+ * @constructor
+ *
+ * <p>A Parse.User object is a local representation of a user persisted to the
+ * Parse cloud. This class is a subclass of a Parse.Object, and retains the
+ * same functionality of a Parse.Object, but also extends it with various
+ * user specific methods, like authentication, signing up, and validation of
+ * uniqueness.</p>
+ */
+
+var ParseUser = (function (_ParseObject) {
+  _inherits(ParseUser, _ParseObject);
+
+  function ParseUser(attributes) {
+    _classCallCheck(this, ParseUser);
+
+    _get(Object.getPrototypeOf(ParseUser.prototype), 'constructor', this).call(this, '_User');
+    if (attributes && typeof attributes === 'object') {
+      if (!this.set(attributes || {})) {
+        throw new Error('Can\'t create an invalid Parse User');
+      }
+    }
+  }
+
+  /**
+   * Request a revocable session token to replace the older style of token.
+   * @method _upgradeToRevocableSession
+   * @param {Object} options A Backbone-style options object.
+   * @return {Parse.Promise} A promise that is resolved when the replacement
+   *   token has been fetched.
+   */
+
+  _createClass(ParseUser, [{
+    key: '_upgradeToRevocableSession',
+    value: function _upgradeToRevocableSession(options) {
+      options = options || {};
+
+      var upgradeOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        upgradeOptions.useMasterKey = options.useMasterKey;
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.upgradeToRevocableSession(this, upgradeOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Unlike in the Android/iOS SDKs, logInWith is unnecessary, since you can
+     * call linkWith on the user (even if it doesn't exist yet on the server).
+     * @method _linkWith
+     */
+  }, {
+    key: '_linkWith',
+    value: function _linkWith(provider, options) {
+      var _this = this;
+
+      var authType;
+      if (typeof provider === 'string') {
+        authType = provider;
+        provider = authProviders[provider];
+      } else {
+        authType = provider.getAuthType();
+      }
+      if (options && options.hasOwnProperty('authData')) {
+        var authData = this.get('authData') || {};
+        authData[authType] = options.authData;
+
+        var controller = _CoreManager2['default'].getUserController();
+        return controller.linkWith(this, authData)._thenRunCallbacks(options, this);
+      } else {
+        var promise = new _ParsePromise2['default']();
+        provider.authenticate({
+          success: function success(provider, result) {
+            var opts = {};
+            opts.authData = result;
+            if (options.success) {
+              opts.success = options.success;
             }
-        }, {
-            "./$": 67,
-            "./$.an-object": 57,
-            "./$.ctx": 60,
-            "./$.is-object": 66
-        }],
-        70: [function(e, t, r) {
-            var n = e("./$.iobject"),
-                a = e("./$.defined");
-            t.exports = function(e) {
-                return n(a(e))
+            if (options.error) {
+              opts.error = options.error;
             }
-        }, {
-            "./$.defined": 62,
-            "./$.iobject": 65
-        }],
-        71: [function(e, t, r) {
-            var n = e("./$.defined");
-            t.exports = function(e) {
-                return Object(n(e))
+            _this._linkWith(provider, opts).then(function () {
+              promise.resolve(_this);
+            }, function (error) {
+              promise.reject(error);
+            });
+          },
+          error: function error(provider, _error) {
+            if (options.error) {
+              options.error(_this, _error);
             }
-        }, {
-            "./$.defined": 62
-        }],
-        72: [function(e, t, r) {
-            var n = e("./$.is-object");
-            e("./$.object-sap")("freeze", function(e) {
-                return function(t) {
-                    return e && n(t) ? e(t) : t
-                }
-            })
-        }, {
-            "./$.is-object": 66,
-            "./$.object-sap": 68
-        }],
-        73: [function(e, t, r) {
-            var n = e("./$.to-iobject");
-            e("./$.object-sap")("getOwnPropertyDescriptor", function(e) {
-                return function(t, r) {
-                    return e(n(t), r)
-                }
-            })
-        }, {
-            "./$.object-sap": 68,
-            "./$.to-iobject": 70
-        }],
-        74: [function(e, t, r) {
-            var n = e("./$.to-object");
-            e("./$.object-sap")("keys", function(e) {
-                return function(t) {
-                    return e(n(t))
-                }
-            })
-        }, {
-            "./$.object-sap": 68,
-            "./$.to-object": 71
-        }],
-        75: [function(e, t, r) {
-            var n = e("./$.def");
-            n(n.S, "Object", {
-                setPrototypeOf: e("./$.set-proto").set
-            })
-        }, {
-            "./$.def": 61,
-            "./$.set-proto": 69
-        }]
-    }, {}, [7])(7)
+            promise.reject(_error);
+          }
+        });
+        return promise;
+      }
+    }
+
+    /**
+     * Synchronizes auth data for a provider (e.g. puts the access token in the
+     * right place to be used by the Facebook SDK).
+     * @method _synchronizeAuthData
+     */
+  }, {
+    key: '_synchronizeAuthData',
+    value: function _synchronizeAuthData(provider) {
+      if (!this.isCurrent() || !provider) {
+        return;
+      }
+      var authType;
+      if (typeof provider === 'string') {
+        authType = provider;
+        provider = authProviders[authType];
+      } else {
+        authType = provider.getAuthType();
+      }
+      var authData = this.get('authData');
+      if (!provider || typeof authData !== 'object') {
+        return;
+      }
+      var success = provider.restoreAuthentication(authData[authType]);
+      if (!success) {
+        this._unlinkFrom(provider);
+      }
+    }
+
+    /**
+     * Synchronizes authData for all providers.
+     * @method _synchronizeAllAuthData
+     */
+  }, {
+    key: '_synchronizeAllAuthData',
+    value: function _synchronizeAllAuthData() {
+      var authData = this.get('authData');
+      if (typeof authData !== 'object') {
+        return;
+      }
+
+      for (var key in authData) {
+        this._synchronizeAuthData(key);
+      }
+    }
+
+    /**
+     * Removes null values from authData (which exist temporarily for
+     * unlinking)
+     * @method _cleanupAuthData
+     */
+  }, {
+    key: '_cleanupAuthData',
+    value: function _cleanupAuthData() {
+      if (!this.isCurrent()) {
+        return;
+      }
+      var authData = this.get('authData');
+      if (typeof authData !== 'object') {
+        return;
+      }
+
+      for (var key in authData) {
+        if (!authData[key]) {
+          delete authData[key];
+        }
+      }
+    }
+
+    /**
+     * Unlinks a user from a service.
+     * @method _unlinkFrom
+     */
+  }, {
+    key: '_unlinkFrom',
+    value: function _unlinkFrom(provider, options) {
+      var _this2 = this;
+
+      var authType;
+      if (typeof provider === 'string') {
+        authType = provider;
+        provider = authProviders[provider];
+      } else {
+        authType = provider.getAuthType();
+      }
+      return this._linkWith(provider, { authData: null }).then(function () {
+        _this2._synchronizeAuthData(provider);
+        return _ParsePromise2['default'].as(_this2);
+      })._thenRunCallbacks(options);
+    }
+
+    /**
+     * Checks whether a user is linked to a service.
+     * @method _isLinked
+     */
+  }, {
+    key: '_isLinked',
+    value: function _isLinked(provider) {
+      var authType;
+      if (typeof provider === 'string') {
+        authType = provider;
+      } else {
+        authType = provider.getAuthType();
+      }
+      var authData = this.get('authData') || {};
+      return !!authData[authType];
+    }
+
+    /**
+     * Deauthenticates all providers.
+     * @method _logOutWithAll
+     */
+  }, {
+    key: '_logOutWithAll',
+    value: function _logOutWithAll() {
+      var authData = this.get('authData');
+      if (typeof authData !== 'object') {
+        return;
+      }
+
+      for (var key in authData) {
+        this._logOutWith(key);
+      }
+    }
+
+    /**
+     * Deauthenticates a single provider (e.g. removing access tokens from the
+     * Facebook SDK).
+     * @method _logOutWith
+     */
+  }, {
+    key: '_logOutWith',
+    value: function _logOutWith(provider) {
+      if (!this.isCurrent()) {
+        return;
+      }
+      if (typeof provider === 'string') {
+        provider = authProviders[provider];
+      }
+      if (provider && provider.deauthenticate) {
+        provider.deauthenticate();
+      }
+    }
+
+    /**
+     * Returns true if <code>current</code> would return this user.
+     * @method isCurrent
+     * @return {Boolean}
+     */
+  }, {
+    key: 'isCurrent',
+    value: function isCurrent() {
+      var current = ParseUser.current();
+      return !!current && current.id === this.id;
+    }
+
+    /**
+     * Returns get("username").
+     * @method getUsername
+     * @return {String}
+     */
+  }, {
+    key: 'getUsername',
+    value: function getUsername() {
+      return this.get('username');
+    }
+
+    /**
+     * Calls set("username", username, options) and returns the result.
+     * @method setUsername
+     * @param {String} username
+     * @param {Object} options A Backbone-style options object.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'setUsername',
+    value: function setUsername(username) {
+      this.set('username', username);
+    }
+
+    /**
+     * Calls set("password", password, options) and returns the result.
+     * @method setPassword
+     * @param {String} password
+     * @param {Object} options A Backbone-style options object.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'setPassword',
+    value: function setPassword(password) {
+      this.set('password', password);
+    }
+
+    /**
+     * Returns get("email").
+     * @method getEmail
+     * @return {String}
+     */
+  }, {
+    key: 'getEmail',
+    value: function getEmail() {
+      return this.get('email');
+    }
+
+    /**
+     * Calls set("email", email, options) and returns the result.
+     * @method setEmail
+     * @param {String} email
+     * @param {Object} options A Backbone-style options object.
+     * @return {Boolean}
+     */
+  }, {
+    key: 'setEmail',
+    value: function setEmail(email) {
+      this.set('email', email);
+    }
+
+    /**
+     * Returns the session token for this user, if the user has been logged in,
+     * or if it is the result of a query with the master key. Otherwise, returns
+     * undefined.
+     * @method getSessionToken
+     * @return {String} the session token, or undefined
+     */
+  }, {
+    key: 'getSessionToken',
+    value: function getSessionToken() {
+      return this.get('sessionToken');
+    }
+
+    /**
+     * Checks whether this user is the current user and has been authenticated.
+     * @method authenticated
+     * @return (Boolean) whether this user is the current user and is logged in.
+     */
+  }, {
+    key: 'authenticated',
+    value: function authenticated() {
+      var current = ParseUser.current();
+      return !!this.get('sessionToken') && !!current && current.id === this.id;
+    }
+
+    /**
+     * Signs up a new user. You should call this instead of save for
+     * new Parse.Users. This will create a new Parse.User on the server, and
+     * also persist the session on disk so that you can access the user using
+     * <code>current</code>.
+     *
+     * <p>A username and password must be set before calling signUp.</p>
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method signUp
+     * @param {Object} attrs Extra fields to set on the new user, or null.
+     * @param {Object} options A Backbone-style options object.
+     * @return {Parse.Promise} A promise that is fulfilled when the signup
+     *     finishes.
+     */
+  }, {
+    key: 'signUp',
+    value: function signUp(attrs, options) {
+      options = options || {};
+
+      var signupOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        signupOptions.useMasterKey = options.useMasterKey;
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.signUp(this, attrs, signupOptions)._thenRunCallbacks(options, this);
+    }
+
+    /**
+     * Logs in a Parse.User. On success, this saves the session to disk,
+     * so you can retrieve the currently logged in user using
+     * <code>current</code>.
+     *
+     * <p>A username and password must be set before calling logIn.</p>
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method logIn
+     * @param {Object} options A Backbone-style options object.
+     * @return {Parse.Promise} A promise that is fulfilled with the user when
+     *     the login is complete.
+     */
+  }, {
+    key: 'logIn',
+    value: function logIn(options) {
+      options = options || {};
+
+      var loginOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        loginOptions.useMasterKey = options.useMasterKey;
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.logIn(this, loginOptions)._thenRunCallbacks(options, this);
+    }
+  }], [{
+    key: 'readOnlyAttributes',
+    value: function readOnlyAttributes() {
+      return ['sessionToken'];
+    }
+
+    /**
+     * Adds functionality to the existing Parse.User class
+     * @method extend
+     * @param {Object} protoProps A set of properties to add to the prototype
+     * @param {Object} classProps A set of static properties to add to the class
+     * @static
+     * @return {Class} The newly extended Parse.User class
+     */
+  }, {
+    key: 'extend',
+    value: function extend(protoProps, classProps) {
+      if (protoProps) {
+        for (var prop in protoProps) {
+          if (prop !== 'className') {
+            _Object$defineProperty(ParseUser.prototype, prop, {
+              value: protoProps[prop],
+              enumerable: false,
+              writable: true,
+              configurable: true
+            });
+          }
+        }
+      }
+
+      if (classProps) {
+        for (var prop in classProps) {
+          if (prop !== 'className') {
+            _Object$defineProperty(ParseUser, prop, {
+              value: classProps[prop],
+              enumerable: false,
+              writable: true,
+              configurable: true
+            });
+          }
+        }
+      }
+
+      return ParseUser;
+    }
+
+    /**
+     * Retrieves the currently logged in ParseUser with a valid session,
+     * either from memory or localStorage, if necessary.
+     * @method current
+     * @static
+     * @return {Parse.Object} The currently logged in Parse.User.
+     */
+  }, {
+    key: 'current',
+    value: function current() {
+      if (!canUseCurrentUser) {
+        return null;
+      }
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.currentUser();
+    }
+
+    /**
+     * Retrieves the currently logged in ParseUser from asynchronous Storage.
+     * @method currentAsync
+     * @static
+     * @return {Parse.Promise} A Promise that is resolved with the currently
+     *   logged in Parse User
+     */
+  }, {
+    key: 'currentAsync',
+    value: function currentAsync() {
+      if (!canUseCurrentUser) {
+        return _ParsePromise2['default'].as(null);
+      }
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.currentUserAsync();
+    }
+
+    /**
+     * Signs up a new user with a username (or email) and password.
+     * This will create a new Parse.User on the server, and also persist the
+     * session in localStorage so that you can access the user using
+     * {@link #current}.
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method signUp
+     * @param {String} username The username (or email) to sign up with.
+     * @param {String} password The password to sign up with.
+     * @param {Object} attrs Extra fields to set on the new user.
+     * @param {Object} options A Backbone-style options object.
+     * @static
+     * @return {Parse.Promise} A promise that is fulfilled with the user when
+     *     the signup completes.
+     */
+  }, {
+    key: 'signUp',
+    value: function signUp(username, password, attrs, options) {
+      attrs = attrs || {};
+      attrs.username = username;
+      attrs.password = password;
+      var user = new ParseUser(attrs);
+      return user.signUp({}, options);
+    }
+
+    /**
+     * Logs in a user with a username (or email) and password. On success, this
+     * saves the session to disk, so you can retrieve the currently logged in
+     * user using <code>current</code>.
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method logIn
+     * @param {String} username The username (or email) to log in with.
+     * @param {String} password The password to log in with.
+     * @param {Object} options A Backbone-style options object.
+     * @static
+     * @return {Parse.Promise} A promise that is fulfilled with the user when
+     *     the login completes.
+     */
+  }, {
+    key: 'logIn',
+    value: function logIn(username, password, options) {
+      var user = new ParseUser();
+      user._finishFetch({ username: username, password: password });
+      return user.logIn(options);
+    }
+
+    /**
+     * Logs in a user with a session token. On success, this saves the session
+     * to disk, so you can retrieve the currently logged in user using
+     * <code>current</code>.
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method become
+     * @param {String} sessionToken The sessionToken to log in with.
+     * @param {Object} options A Backbone-style options object.
+     * @static
+     * @return {Parse.Promise} A promise that is fulfilled with the user when
+     *     the login completes.
+     */
+  }, {
+    key: 'become',
+    value: function become(sessionToken, options) {
+      if (!canUseCurrentUser) {
+        throw new Error('It is not memory-safe to become a user in a server environment');
+      }
+      options = options || {};
+
+      var becomeOptions = {
+        sessionToken: sessionToken
+      };
+      if (options.hasOwnProperty('useMasterKey')) {
+        becomeOptions.useMasterKey = options.useMasterKey;
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.become(becomeOptions)._thenRunCallbacks(options);
+    }
+  }, {
+    key: 'logInWith',
+    value: function logInWith(provider, options) {
+      return ParseUser._logInWith(provider, options);
+    }
+
+    /**
+     * Logs out the currently logged in user session. This will remove the
+     * session from disk, log out of linked services, and future calls to
+     * <code>current</code> will return <code>null</code>.
+     * @method logOut
+     * @static
+     * @return {Parse.Promise} A promise that is resolved when the session is
+     *   destroyed on the server.
+     */
+  }, {
+    key: 'logOut',
+    value: function logOut() {
+      if (!canUseCurrentUser) {
+        throw new Error('There is no current user user on a node.js server environment.');
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.logOut();
+    }
+
+    /**
+     * Requests a password reset email to be sent to the specified email address
+     * associated with the user account. This email allows the user to securely
+     * reset their password on the Parse site.
+     *
+     * <p>Calls options.success or options.error on completion.</p>
+     *
+     * @method requestPasswordReset
+     * @param {String} email The email address associated with the user that
+     *     forgot their password.
+     * @param {Object} options A Backbone-style options object.
+     * @static
+     */
+  }, {
+    key: 'requestPasswordReset',
+    value: function requestPasswordReset(email, options) {
+      options = options || {};
+
+      var requestOptions = {};
+      if (options.hasOwnProperty('useMasterKey')) {
+        requestOptions.useMasterKey = options.useMasterKey;
+      }
+
+      var controller = _CoreManager2['default'].getUserController();
+      return controller.requestPasswordReset(email, requestOptions)._thenRunCallbacks(options);
+    }
+
+    /**
+     * Allow someone to define a custom User class without className
+     * being rewritten to _User. The default behavior is to rewrite
+     * User to _User for legacy reasons. This allows developers to
+     * override that behavior.
+     *
+     * @method allowCustomUserClass
+     * @param {Boolean} isAllowed Whether or not to allow custom User class
+     * @static
+     */
+  }, {
+    key: 'allowCustomUserClass',
+    value: function allowCustomUserClass(isAllowed) {
+      _CoreManager2['default'].set('PERFORM_USER_REWRITE', !isAllowed);
+    }
+
+    /**
+     * Allows a legacy application to start using revocable sessions. If the
+     * current session token is not revocable, a request will be made for a new,
+     * revocable session.
+     * It is not necessary to call this method from cloud code unless you are
+     * handling user signup or login from the server side. In a cloud code call,
+     * this function will not attempt to upgrade the current token.
+     * @method enableRevocableSession
+     * @param {Object} options A Backbone-style options object.
+     * @static
+     * @return {Parse.Promise} A promise that is resolved when the process has
+     *   completed. If a replacement session token is requested, the promise
+     *   will be resolved after a new token has been fetched.
+     */
+  }, {
+    key: 'enableRevocableSession',
+    value: function enableRevocableSession(options) {
+      options = options || {};
+      _CoreManager2['default'].set('FORCE_REVOCABLE_SESSION', true);
+      if (canUseCurrentUser) {
+        var current = ParseUser.current();
+        if (current) {
+          return current._upgradeToRevocableSession(options);
+        }
+      }
+      return _ParsePromise2['default'].as()._thenRunCallbacks(options);
+    }
+
+    /**
+     * Enables the use of become or the current user in a server
+     * environment. These features are disabled by default, since they depend on
+     * global objects that are not memory-safe for most servers.
+     * @method enableUnsafeCurrentUser
+     * @static
+     */
+  }, {
+    key: 'enableUnsafeCurrentUser',
+    value: function enableUnsafeCurrentUser() {
+      canUseCurrentUser = true;
+    }
+
+    /**
+     * Disables the use of become or the current user in any environment.
+     * These features are disabled on servers by default, since they depend on
+     * global objects that are not memory-safe for most servers.
+     * @method disableUnsafeCurrentUser
+     * @static
+     */
+  }, {
+    key: 'disableUnsafeCurrentUser',
+    value: function disableUnsafeCurrentUser() {
+      canUseCurrentUser = false;
+    }
+  }, {
+    key: '_registerAuthenticationProvider',
+    value: function _registerAuthenticationProvider(provider) {
+      authProviders[provider.getAuthType()] = provider;
+      // Synchronize the current user with the auth provider.
+      var current = ParseUser.current();
+      if (current) {
+        current._synchronizeAuthData(provider.getAuthType());
+      }
+    }
+  }, {
+    key: '_logInWith',
+    value: function _logInWith(provider, options) {
+      var user = new ParseUser();
+      return user._linkWith(provider, options);
+    }
+  }, {
+    key: '_clearCache',
+    value: function _clearCache() {
+      currentUserCache = null;
+      currentUserCacheMatchesDisk = false;
+    }
+  }, {
+    key: '_setCurrentUserCache',
+    value: function _setCurrentUserCache(user) {
+      currentUserCache = user;
+    }
+  }]);
+
+  return ParseUser;
+})(_ParseObject3['default']);
+
+exports['default'] = ParseUser;
+
+_ParseObject3['default'].registerSubclass('_User', ParseUser);
+
+var DefaultController = {
+  setCurrentUser: function setCurrentUser(user) {
+    currentUserCache = user;
+    user._cleanupAuthData();
+    user._synchronizeAllAuthData();
+    var path = _Storage2['default'].generatePath(CURRENT_USER_KEY);
+    var json = user.toJSON();
+    json.className = '_User';
+    return _Storage2['default'].setItemAsync(path, JSON.stringify(json)).then(function () {
+      return user;
+    });
+  },
+
+  currentUser: function currentUser() {
+    if (currentUserCache) {
+      return currentUserCache;
+    }
+    if (currentUserCacheMatchesDisk) {
+      return null;
+    }
+    if (_Storage2['default'].async()) {
+      throw new Error('Cannot call currentUser() when using a platform with an async ' + 'storage system. Call currentUserAsync() instead.');
+    }
+    var path = _Storage2['default'].generatePath(CURRENT_USER_KEY);
+    var userData = _Storage2['default'].getItem(path);
+    currentUserCacheMatchesDisk = true;
+    if (!userData) {
+      currentUserCache = null;
+      return null;
+    }
+    userData = JSON.parse(userData);
+    if (!userData.className) {
+      userData.className = '_User';
+    }
+    if (userData._id) {
+      if (userData.objectId !== userData._id) {
+        userData.objectId = userData._id;
+      }
+      delete userData._id;
+    }
+    if (userData._sessionToken) {
+      userData.sessionToken = userData._sessionToken;
+      delete userData._sessionToken;
+    }
+    var current = ParseUser.fromJSON(userData);
+    currentUserCache = current;
+    current._synchronizeAllAuthData();
+    return current;
+  },
+
+  currentUserAsync: function currentUserAsync() {
+    if (currentUserCache) {
+      return _ParsePromise2['default'].as(currentUserCache);
+    }
+    if (currentUserCacheMatchesDisk) {
+      return _ParsePromise2['default'].as(null);
+    }
+    var path = _Storage2['default'].generatePath(CURRENT_USER_KEY);
+    return _Storage2['default'].getItemAsync(path).then(function (userData) {
+      currentUserCacheMatchesDisk = true;
+      if (!userData) {
+        currentUserCache = null;
+        return _ParsePromise2['default'].as(null);
+      }
+      userData = JSON.parse(userData);
+      if (!userData.className) {
+        userData.className = '_User';
+      }
+      if (userData._id) {
+        if (userData.objectId !== userData._id) {
+          userData.objectId = userData._id;
+        }
+        delete userData._id;
+      }
+      if (userData._sessionToken) {
+        userData.sessionToken = userData._sessionToken;
+        delete userData._sessionToken;
+      }
+      var current = ParseUser.fromJSON(userData);
+      currentUserCache = current;
+      current._synchronizeAllAuthData();
+      return _ParsePromise2['default'].as(current);
+    });
+  },
+
+  signUp: function signUp(user, attrs, options) {
+    var username = attrs && attrs.username || user.get('username');
+    var password = attrs && attrs.password || user.get('password');
+
+    if (!username || !username.length) {
+      return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'Cannot sign up user with an empty name.'));
+    }
+    if (!password || !password.length) {
+      return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].OTHER_CAUSE, 'Cannot sign up user with an empty password.'));
+    }
+
+    return user.save(attrs, options).then(function () {
+      // Clear the password field
+      user._finishFetch({ password: undefined });
+
+      if (canUseCurrentUser) {
+        return DefaultController.setCurrentUser(user);
+      }
+      return user;
+    });
+  },
+
+  logIn: function logIn(user, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    var auth = {
+      username: user.get('username'),
+      password: user.get('password')
+    };
+    return RESTController.request('GET', 'login', auth, options).then(function (response, status) {
+      user._migrateId(response.objectId);
+      user._setExisted(true);
+      ObjectState.setPendingOp(user.className, user._getId(), 'username', undefined);
+      ObjectState.setPendingOp(user.className, user._getId(), 'password', undefined);
+      response.password = undefined;
+      user._finishFetch(response);
+      if (!canUseCurrentUser) {
+        // We can't set the current user, so just return the one we logged in
+        return _ParsePromise2['default'].as(user);
+      }
+      return DefaultController.setCurrentUser(user);
+    });
+  },
+
+  become: function become(options) {
+    var user = new ParseUser();
+    var RESTController = _CoreManager2['default'].getRESTController();
+    return RESTController.request('GET', 'users/me', {}, options).then(function (response, status) {
+      user._finishFetch(response);
+      user._setExisted(true);
+      return DefaultController.setCurrentUser(user);
+    });
+  },
+
+  logOut: function logOut() {
+    return DefaultController.currentUserAsync().then(function (currentUser) {
+      var path = _Storage2['default'].generatePath(CURRENT_USER_KEY);
+      var promise = _Storage2['default'].removeItemAsync(path);
+      var RESTController = _CoreManager2['default'].getRESTController();
+      if (currentUser !== null) {
+        var currentSession = currentUser.getSessionToken();
+        if (currentSession && (0, _isRevocableSession2['default'])(currentSession)) {
+          promise.then(function () {
+            return RESTController.request('POST', 'logout', {}, { sessionToken: currentSession });
+          });
+        }
+        currentUser._logOutWithAll();
+        currentUser._finishFetch({ sessionToken: undefined });
+      }
+      currentUserCacheMatchesDisk = true;
+      currentUserCache = null;
+
+      return promise;
+    });
+  },
+
+  requestPasswordReset: function requestPasswordReset(email, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+    return RESTController.request('POST', 'requestPasswordReset', { email: email }, options);
+  },
+
+  upgradeToRevocableSession: function upgradeToRevocableSession(user, options) {
+    var token = user.getSessionToken();
+    if (!token) {
+      return _ParsePromise2['default'].error(new _ParseError2['default'](_ParseError2['default'].SESSION_MISSING, 'Cannot upgrade a user with no session token'));
+    }
+
+    options.sessionToken = token;
+
+    var RESTController = _CoreManager2['default'].getRESTController();
+    return RESTController.request('POST', 'upgradeToRevocableSession', {}, options).then(function (result) {
+      var session = new _ParseSession2['default']();
+      session._finishFetch(result);
+      user._finishFetch({ sessionToken: session.getSessionToken() });
+      if (user.isCurrent()) {
+        return DefaultController.setCurrentUser(user);
+      }
+      return _ParsePromise2['default'].as(user);
+    });
+  },
+
+  linkWith: function linkWith(user, authData) {
+    return user.save({ authData: authData }).then(function () {
+      if (canUseCurrentUser) {
+        return DefaultController.setCurrentUser(user);
+      }
+      return user;
+    });
+  }
+};
+
+_CoreManager2['default'].setUserController(DefaultController);
+module.exports = exports['default'];
+},{"./CoreManager":3,"./ObjectState":6,"./ParseError":10,"./ParseObject":14,"./ParsePromise":16,"./ParseSession":20,"./Storage":24,"./isRevocableSession":33,"babel-runtime/core-js/object/define-property":38,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/get":45,"babel-runtime/helpers/inherits":46,"babel-runtime/helpers/interop-require-default":47,"babel-runtime/helpers/interop-require-wildcard":48}],22:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.send = send;
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _ParseQuery = _dereq_('./ParseQuery');
+
+var _ParseQuery2 = _interopRequireDefault(_ParseQuery);
+
+/**
+ * Contains functions to deal with Push in Parse.
+ * @class Parse.Push
+ * @static
+ */
+
+/**
+ * Sends a push notification.
+ * @method send
+ * @param {Object} data -  The data of the push notification.  Valid fields
+ * are:
+ *   <ol>
+ *     <li>channels - An Array of channels to push to.</li>
+ *     <li>push_time - A Date object for when to send the push.</li>
+ *     <li>expiration_time -  A Date object for when to expire
+ *         the push.</li>
+ *     <li>expiration_interval - The seconds from now to expire the push.</li>
+ *     <li>where - A Parse.Query over Parse.Installation that is used to match
+ *         a set of installations to push to.</li>
+ *     <li>data - The data to send as part of the push</li>
+ *   <ol>
+ * @param {Object} options An object that has an optional success function,
+ * that takes no arguments and will be called on a successful push, and
+ * an error function that takes a Parse.Error and will be called if the push
+ * failed.
+ * @return {Parse.Promise} A promise that is fulfilled when the push request
+ *     completes.
+ */
+
+function send(data, options) {
+  options = options || {};
+
+  if (data.where && data.where instanceof _ParseQuery2['default']) {
+    data.where = data.where.toJSON().where;
+  }
+
+  if (data.push_time && typeof data.push_time === 'object') {
+    data.push_time = data.push_time.toJSON();
+  }
+
+  if (data.expiration_time && typeof data.expiration_time === 'object') {
+    data.expiration_time = data.expiration_time.toJSON();
+  }
+
+  if (data.expiration_time && data.expiration_interval) {
+    throw new Error('expiration_time and expiration_interval cannot both be set.');
+  }
+
+  return _CoreManager2['default'].getPushController().send(data, {
+    useMasterKey: options.useMasterKey
+  })._thenRunCallbacks(options);
+}
+
+_CoreManager2['default'].setPushController({
+  send: function send(data, options) {
+    var RESTController = _CoreManager2['default'].getRESTController();
+
+    var request = RESTController.request('POST', 'push', data, { useMasterKey: !!options.useMasterKey });
+
+    return request._thenRunCallbacks(options);
+  }
+});
+},{"./CoreManager":3,"./ParseQuery":17,"babel-runtime/helpers/interop-require-default":47}],23:[function(_dereq_,module,exports){
+(function (process){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _ParseError = _dereq_('./ParseError');
+
+var _ParseError2 = _interopRequireDefault(_ParseError);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+var _Storage = _dereq_('./Storage');
+
+var _Storage2 = _interopRequireDefault(_Storage);
+
+var XHR = null;
+if (typeof XMLHttpRequest !== 'undefined') {
+  XHR = XMLHttpRequest;
+}
+
+var useXDomainRequest = false;
+if (typeof XDomainRequest !== 'undefined' && !('withCredentials' in new XMLHttpRequest())) {
+  useXDomainRequest = true;
+}
+
+function ajaxIE9(method, url, data) {
+  var promise = new _ParsePromise2['default']();
+  var xdr = new XDomainRequest();
+  xdr.onload = function () {
+    var response;
+    try {
+      response = JSON.parse(xdr.responseText);
+    } catch (e) {
+      promise.reject(e);
+    }
+    promise.resolve(response);
+  };
+  xdr.onerror = xdr.ontimeout = function () {
+    // Let's fake a real error message.
+    var fakeResponse = {
+      responseText: JSON.stringify({
+        code: _ParseError2['default'].X_DOMAIN_REQUEST,
+        error: 'IE\'s XDomainRequest does not supply error info.'
+      })
+    };
+    promise.reject(fakeResponse);
+  };
+  xdr.onprogress = function () {};
+  xdr.open(method, url);
+  xdr.send(data);
+  return promise;
+}
+
+var RESTController = {
+  ajax: function ajax(method, url, data, headers) {
+    if (useXDomainRequest) {
+      return ajaxIE9(method, url, data, headers);
+    }
+
+    var promise = new _ParsePromise2['default']();
+    var attempts = 0;
+
+    var dispatch = function dispatch() {
+      if (XHR == null) {
+        throw new Error('Cannot make a request: No definition of XMLHttpRequest was found.');
+      }
+      var handled = false;
+      var xhr = new XHR();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== 4 || handled) {
+          return;
+        }
+        handled = true;
+
+        if (xhr.status >= 200 && xhr.status < 300) {
+          var response;
+          try {
+            response = JSON.parse(xhr.responseText);
+          } catch (e) {
+            promise.reject(e);
+          }
+          promise.resolve(response, xhr.status, xhr);
+        } else if (xhr.status >= 500) {
+          // retry on 5XX
+          if (++attempts < _CoreManager2['default'].get('REQUEST_ATTEMPT_LIMIT')) {
+            // Exponentially-growing random delay
+            var delay = Math.round(Math.random() * 125 * Math.pow(2, attempts));
+            setTimeout(dispatch, delay);
+          } else {
+            // After the retry limit is reached, fail
+            promise.reject(xhr);
+          }
+        } else {
+          promise.reject(xhr);
+        }
+      };
+
+      headers = headers || {};
+      headers['Content-Type'] = 'text/plain'; // Avoid pre-flight
+      if (_CoreManager2['default'].get('IS_NODE')) {
+        headers['User-Agent'] = 'Parse/' + _CoreManager2['default'].get('VERSION') + ' (NodeJS ' + process.versions.node + ')';
+      }
+
+      xhr.open(method, url, true);
+      for (var h in headers) {
+        xhr.setRequestHeader(h, headers[h]);
+      }
+      xhr.send(data);
+    };
+    dispatch();
+
+    return promise;
+  },
+
+  request: function request(method, path, data, options) {
+    options = options || {};
+    var url = _CoreManager2['default'].get('SERVER_URL');
+    url += '/1/' + path;
+
+    var payload = {};
+    if (data && typeof data === 'object') {
+      for (var k in data) {
+        payload[k] = data[k];
+      }
+    }
+
+    if (method !== 'POST') {
+      payload._method = method;
+      method = 'POST';
+    }
+
+    payload._ApplicationId = _CoreManager2['default'].get('APPLICATION_ID');
+    payload._JavaScriptKey = _CoreManager2['default'].get('JAVASCRIPT_KEY');
+    payload._ClientVersion = 'js' + _CoreManager2['default'].get('VERSION');
+
+    var useMasterKey = options.useMasterKey;
+    if (typeof useMasterKey === 'undefined') {
+      useMasterKey = _CoreManager2['default'].get('USE_MASTER_KEY');
+    }
+    if (useMasterKey) {
+      if (_CoreManager2['default'].get('MASTER_KEY')) {
+        delete payload._JavaScriptKey;
+        payload._MasterKey = _CoreManager2['default'].get('MASTER_KEY');
+      } else {
+        throw new Error('Cannot use the Master Key, it has not been provided.');
+      }
+    }
+
+    if (_CoreManager2['default'].get('FORCE_REVOCABLE_SESSION')) {
+      payload._RevocableSession = '1';
+    }
+
+    var installationController = _CoreManager2['default'].getInstallationController();
+
+    return installationController.currentInstallationId().then(function (iid) {
+      payload._InstallationId = iid;
+      var userController = _CoreManager2['default'].getUserController();
+      if (options && typeof options.sessionToken === 'string') {
+        return _ParsePromise2['default'].as(options.sessionToken);
+      } else if (userController) {
+        return userController.currentUserAsync().then(function (user) {
+          if (user) {
+            return _ParsePromise2['default'].as(user.getSessionToken());
+          }
+          return _ParsePromise2['default'].as(null);
+        });
+      }
+      return _ParsePromise2['default'].as(null);
+    }).then(function (token) {
+      if (token) {
+        payload._SessionToken = token;
+      }
+
+      var payloadString = JSON.stringify(payload);
+
+      return RESTController.ajax(method, url, payloadString);
+    }).then(null, function (response) {
+      // Transform the error into an instance of ParseError by trying to parse
+      // the error string as JSON
+      var error;
+      if (response && response.responseText) {
+        try {
+          var errorJSON = JSON.parse(response.responseText);
+          error = new _ParseError2['default'](errorJSON.code, errorJSON.error);
+        } catch (e) {
+          // If we fail to parse the error text, that's okay.
+          error = new _ParseError2['default'](_ParseError2['default'].INVALID_JSON, 'Received an error with invalid JSON from Parse: ' + response.responseText);
+        }
+      } else {
+        error = new _ParseError2['default'](_ParseError2['default'].CONNECTION_FAILED, 'XMLHttpRequest failed: ' + JSON.stringify(response));
+      }
+
+      return _ParsePromise2['default'].error(error);
+    });
+  },
+
+  _setXHR: function _setXHR(xhr) {
+    XHR = xhr;
+  }
+};
+
+module.exports = RESTController;
+}).call(this,_dereq_('_process'))
+},{"./CoreManager":3,"./ParseError":10,"./ParsePromise":16,"./Storage":24,"_process":49,"babel-runtime/helpers/interop-require-default":47}],24:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _CoreManager = _dereq_('./CoreManager');
+
+var _CoreManager2 = _interopRequireDefault(_CoreManager);
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+module.exports = {
+  async: function async() {
+    var controller = _CoreManager2['default'].getStorageController();
+    return !!controller.async;
+  },
+
+  getItem: function getItem(path) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      throw new Error('Synchronous storage is not supported by the current storage controller');
+    }
+    return controller.getItem(path);
+  },
+
+  getItemAsync: function getItemAsync(path) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      return controller.getItemAsync(path);
+    }
+    return _ParsePromise2['default'].as(controller.getItem(path));
+  },
+
+  setItem: function setItem(path, value) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      throw new Error('Synchronous storage is not supported by the current storage controller');
+    }
+    return controller.setItem(path, value);
+  },
+
+  setItemAsync: function setItemAsync(path, value) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      return controller.setItemAsync(path, value);
+    }
+    return _ParsePromise2['default'].as(controller.setItem(path, value));
+  },
+
+  removeItem: function removeItem(path) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      throw new Error('Synchronous storage is not supported by the current storage controller');
+    }
+    return controller.removeItem(path);
+  },
+
+  removeItemAsync: function removeItemAsync(path) {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.async === 1) {
+      return controller.removeItemAsync(path);
+    }
+    return _ParsePromise2['default'].as(controller.removeItem(path));
+  },
+
+  generatePath: function generatePath(path) {
+    if (!_CoreManager2['default'].get('APPLICATION_ID')) {
+      throw new Error('You need to call Parse.initialize before using Parse.');
+    }
+    if (typeof path !== 'string') {
+      throw new Error('Tried to get a Storage path that was not a String.');
+    }
+    if (path[0] === '/') {
+      path = path.substr(1);
+    }
+    return 'Parse/' + _CoreManager2['default'].get('APPLICATION_ID') + '/' + path;
+  },
+
+  _clear: function _clear() {
+    var controller = _CoreManager2['default'].getStorageController();
+    if (controller.hasOwnProperty('clear')) {
+      controller.clear();
+    }
+  }
+};
+
+_CoreManager2['default'].setStorageController(_dereq_('./StorageController.browser'));
+},{"./CoreManager":3,"./ParsePromise":16,"./StorageController.browser":25,"babel-runtime/helpers/interop-require-default":47}],25:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+module.exports = {
+  async: 0,
+
+  getItem: function getItem(path) {
+    return localStorage.getItem(path);
+  },
+
+  setItem: function setItem(path, value) {
+    localStorage.setItem(path, value);
+  },
+
+  removeItem: function removeItem(path) {
+    localStorage.removeItem(path);
+  },
+
+  clear: function clear() {
+    localStorage.clear();
+  }
+};
+},{"./ParsePromise":16,"babel-runtime/helpers/interop-require-default":47}],26:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _createClass = _dereq_('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = _dereq_('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+var _ParsePromise = _dereq_('./ParsePromise');
+
+var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
+
+module.exports = (function () {
+  function TaskQueue() {
+    _classCallCheck(this, TaskQueue);
+
+    this.queue = [];
+  }
+
+  _createClass(TaskQueue, [{
+    key: 'enqueue',
+    value: function enqueue(task) {
+      var _this = this;
+
+      var taskComplete = new _ParsePromise2['default']();
+      this.queue.push({
+        task: task,
+        _completion: taskComplete
+      });
+      if (this.queue.length === 1) {
+        task().then(function () {
+          _this._dequeue();
+          taskComplete.resolve();
+        }, function (error) {
+          _this._dequeue();
+          taskComplete.reject(error);
+        });
+      }
+      return taskComplete;
+    }
+  }, {
+    key: '_dequeue',
+    value: function _dequeue() {
+      var _this2 = this;
+
+      this.queue.shift();
+      if (this.queue.length) {
+        var next = this.queue[0];
+        next.task().then(function () {
+          _this2._dequeue();
+          next._completion.resolve();
+        }, function (error) {
+          _this2._dequeue();
+          next._completion.reject(error);
+        });
+      }
+    }
+  }]);
+
+  return TaskQueue;
+})();
+},{"./ParsePromise":16,"babel-runtime/helpers/class-call-check":43,"babel-runtime/helpers/create-class":44,"babel-runtime/helpers/interop-require-default":47}],27:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = arrayContainsObject;
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+function arrayContainsObject(array, object) {
+  if (array.indexOf(object) > -1) {
+    return true;
+  }
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] instanceof _ParseObject2['default'] && array[i].className === object.className && array[i]._getId() === object._getId()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+module.exports = exports['default'];
+},{"./ParseObject":14,"babel-runtime/helpers/interop-require-default":47}],28:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = canBeSerialized;
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+function canBeSerialized(obj) {
+  if (!(obj instanceof _ParseObject2['default'])) {
+    return true;
+  }
+  var attributes = obj.attributes;
+  for (var attr in attributes) {
+    var val = attributes[attr];
+    if (!canBeSerializedHelper(val)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function canBeSerializedHelper(value) {
+  if (typeof value !== 'object') {
+    return true;
+  }
+  if (value instanceof _ParseRelation2['default']) {
+    return true;
+  }
+  if (value instanceof _ParseObject2['default']) {
+    return !!value.id;
+  }
+  if (value instanceof _ParseFile2['default']) {
+    if (value.url()) {
+      return true;
+    }
+    return false;
+  }
+  if (Array.isArray(value)) {
+    for (var i = 0; i < value.length; i++) {
+      if (!canBeSerializedHelper(value[i])) {
+        return false;
+      }
+    }
+    return true;
+  }
+  for (var k in value) {
+    if (!canBeSerializedHelper(value[k])) {
+      return false;
+    }
+  }
+  return true;
+}
+module.exports = exports['default'];
+},{"./ParseFile":11,"./ParseObject":14,"./ParseRelation":18,"babel-runtime/helpers/interop-require-default":47}],29:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = decode;
+
+var _ParseACL = _dereq_('./ParseACL');
+
+var _ParseACL2 = _interopRequireDefault(_ParseACL);
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseGeoPoint = _dereq_('./ParseGeoPoint');
+
+var _ParseGeoPoint2 = _interopRequireDefault(_ParseGeoPoint);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+function decode(value) {
+  if (value === null || typeof value !== 'object') {
+    return value;
+  }
+  if (Array.isArray(value)) {
+    var dup = [];
+    value.forEach(function (v, i) {
+      dup[i] = decode(v);
+    });
+    return dup;
+  }
+  if (typeof value.__op === 'string') {
+    return (0, _ParseOp.opFromJSON)(value);
+  }
+  if (value.__type === 'Pointer' && value.className) {
+    return _ParseObject2['default'].fromJSON(value);
+  }
+  if (value.__type === 'Object' && value.className) {
+    return _ParseObject2['default'].fromJSON(value);
+  }
+  if (value.__type === 'Relation') {
+    // The parent and key fields will be populated by the parent
+    var relation = new _ParseRelation2['default'](null, null);
+    relation.targetClassName = value.className;
+    return relation;
+  }
+  if (value.__type === 'Date') {
+    return new Date(value.iso);
+  }
+  if (value.__type === 'File') {
+    return _ParseFile2['default'].fromJSON(value);
+  }
+  if (value.__type === 'GeoPoint') {
+    return new _ParseGeoPoint2['default']({
+      latitude: value.latitude,
+      longitude: value.longitude
+    });
+  }
+  var copy = {};
+  for (var k in value) {
+    copy[k] = decode(value[k]);
+  }
+  return copy;
+}
+
+module.exports = exports['default'];
+},{"./ParseACL":8,"./ParseFile":11,"./ParseGeoPoint":12,"./ParseObject":14,"./ParseOp":15,"./ParseRelation":18,"babel-runtime/helpers/interop-require-default":47}],30:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _Object$keys = _dereq_('babel-runtime/core-js/object/keys')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _ParseACL = _dereq_('./ParseACL');
+
+var _ParseACL2 = _interopRequireDefault(_ParseACL);
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseGeoPoint = _dereq_('./ParseGeoPoint');
+
+var _ParseGeoPoint2 = _interopRequireDefault(_ParseGeoPoint);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseOp = _dereq_('./ParseOp');
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+var toString = Object.prototype.toString;
+
+function encode(value, disallowObjects, forcePointers, seen) {
+  if (value instanceof _ParseObject2['default']) {
+    if (disallowObjects) {
+      throw new Error('Parse Objects not allowed here');
+    }
+    var seenEntry = value.id ? value.className + ':' + value.id : value;
+    if (forcePointers || !seen || seen.indexOf(seenEntry) > -1 || value.dirty() || _Object$keys(value._getServerData()).length < 1) {
+      return value.toPointer();
+    }
+    seen = seen.concat(seenEntry);
+    var json = encode(value.attributes, disallowObjects, forcePointers, seen);
+    if (json.createdAt) {
+      json.createdAt = json.createdAt.iso;
+    }
+    if (json.updatedAt) {
+      json.updatedAt = json.updatedAt.iso;
+    }
+    json.className = value.className;
+    json.__type = 'Object';
+    if (value.id) {
+      json.objectId = value.id;
+    }
+    return json;
+  }
+  if (value instanceof _ParseOp.Op || value instanceof _ParseACL2['default'] || value instanceof _ParseGeoPoint2['default'] || value instanceof _ParseRelation2['default']) {
+    return value.toJSON();
+  }
+  if (value instanceof _ParseFile2['default']) {
+    if (!value.url()) {
+      throw new Error('Tried to encode an unsaved file.');
+    }
+    return value.toJSON();
+  }
+  if (toString.call(value) === '[object Date]') {
+    if (isNaN(value)) {
+      throw new Error('Tried to encode an invalid date.');
+    }
+    return { __type: 'Date', iso: value.toJSON() };
+  }
+  if (toString.call(value) === '[object RegExp]' && typeof value.source === 'string') {
+    return value.source;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(function (v) {
+      return encode(v, disallowObjects, forcePointers, seen);
+    });
+  }
+
+  if (value && typeof value === 'object') {
+    var output = {};
+    for (var k in value) {
+      output[k] = encode(value[k], disallowObjects, forcePointers, seen);
+    }
+    return output;
+  }
+
+  return value;
+}
+
+exports['default'] = function (value, disallowObjects, forcePointers, seen) {
+  return encode(value, !!disallowObjects, !!forcePointers, seen || []);
+};
+
+module.exports = exports['default'];
+},{"./ParseACL":8,"./ParseFile":11,"./ParseGeoPoint":12,"./ParseObject":14,"./ParseOp":15,"./ParseRelation":18,"babel-runtime/core-js/object/keys":41,"babel-runtime/helpers/interop-require-default":47}],31:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+'use strict';
+
+var _Object$keys = _dereq_('babel-runtime/core-js/object/keys')['default'];
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = equals;
+
+var _ParseACL = _dereq_('./ParseACL');
+
+var _ParseACL2 = _interopRequireDefault(_ParseACL);
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseGeoPoint = _dereq_('./ParseGeoPoint');
+
+var _ParseGeoPoint2 = _interopRequireDefault(_ParseGeoPoint);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+function equals(a, b) {
+  if (typeof a !== typeof b) {
+    return false;
+  }
+
+  if (!a || typeof a !== 'object') {
+    // a is a primitive
+    return a === b;
+  }
+
+  if (Array.isArray(a) || Array.isArray(b)) {
+    if (!Array.isArray(a) || !Array.isArray(b)) {
+      return false;
+    }
+    if (a.length !== b.length) {
+      return false;
+    }
+    for (var i = a.length; i--;) {
+      if (!equals(a[i], b[i])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  if (a instanceof _ParseACL2['default'] || a instanceof _ParseFile2['default'] || a instanceof _ParseGeoPoint2['default'] || a instanceof _ParseObject2['default']) {
+    return a.equals(b);
+  }
+
+  if (_Object$keys(a).length !== _Object$keys(b).length) {
+    return false;
+  }
+  for (var k in a) {
+    if (!equals(a[k], b[k])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+module.exports = exports['default'];
+},{"./ParseACL":8,"./ParseFile":11,"./ParseGeoPoint":12,"./ParseObject":14,"babel-runtime/core-js/object/keys":41,"babel-runtime/helpers/interop-require-default":47}],32:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = escape;
+
+function escape(str) {
+  return str.replace(/[&<>\/'"]/g, function (char) {
+    return ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '/': '&#x2F;',
+      '\'': '&#x27;',
+      '"': '&quot;'
+    })[char];
+  });
+}
+
+module.exports = exports['default'];
+},{}],33:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = isRevocableSession;
+
+function isRevocableSession(token) {
+  return token.indexOf('r:') > -1;
+}
+
+module.exports = exports['default'];
+},{}],34:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = parseDate;
+
+function parseDate(iso8601) {
+  var regexp = new RegExp('^([0-9]{1,4})-([0-9]{1,2})-([0-9]{1,2})' + 'T' + '([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})' + '(.([0-9]+))?' + 'Z$');
+  var match = regexp.exec(iso8601);
+  if (!match) {
+    return null;
+  }
+
+  var year = match[1] || 0;
+  var month = (match[2] || 1) - 1;
+  var day = match[3] || 0;
+  var hour = match[4] || 0;
+  var minute = match[5] || 0;
+  var second = match[6] || 0;
+  var milli = match[8] || 0;
+
+  return new Date(Date.UTC(year, month, day, hour, minute, second, milli));
+}
+
+module.exports = exports['default'];
+},{}],35:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = unique;
+
+var _arrayContainsObject = _dereq_('./arrayContainsObject');
+
+var _arrayContainsObject2 = _interopRequireDefault(_arrayContainsObject);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+function unique(arr) {
+  var uniques = [];
+  arr.forEach(function (value) {
+    if (value instanceof _ParseObject2['default']) {
+      if (!(0, _arrayContainsObject2['default'])(uniques, value)) {
+        uniques.push(value);
+      }
+    } else {
+      if (uniques.indexOf(value) < 0) {
+        uniques.push(value);
+      }
+    }
+  });
+  return uniques;
+}
+
+module.exports = exports['default'];
+},{"./ParseObject":14,"./arrayContainsObject":27,"babel-runtime/helpers/interop-require-default":47}],36:[function(_dereq_,module,exports){
+/**
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+'use strict';
+
+var _interopRequireDefault = _dereq_('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = unsavedChildren;
+
+var _ParseFile = _dereq_('./ParseFile');
+
+var _ParseFile2 = _interopRequireDefault(_ParseFile);
+
+var _ParseObject = _dereq_('./ParseObject');
+
+var _ParseObject2 = _interopRequireDefault(_ParseObject);
+
+var _ParseRelation = _dereq_('./ParseRelation');
+
+var _ParseRelation2 = _interopRequireDefault(_ParseRelation);
+
+/**
+ * Return an array of unsaved children, which are either Parse Objects or Files.
+ * If it encounters any dirty Objects without Ids, it will throw an exception.
+ */
+
+function unsavedChildren(obj, allowDeepUnsaved) {
+  var encountered = {
+    objects: {},
+    files: []
+  };
+  var identifier = obj.className + ':' + obj._getId();
+  encountered.objects[identifier] = obj.dirty() ? obj : true;
+  var attributes = obj.attributes;
+  for (var attr in attributes) {
+    if (typeof attributes[attr] === 'object') {
+      traverse(attributes[attr], encountered, false, !!allowDeepUnsaved);
+    }
+  }
+  var unsaved = [];
+  for (var id in encountered.objects) {
+    if (id !== identifier && encountered.objects[id] !== true) {
+      unsaved.push(encountered.objects[id]);
+    }
+  }
+  return unsaved.concat(encountered.files);
+}
+
+function traverse(obj, encountered, shouldThrow, allowDeepUnsaved) {
+  if (obj instanceof _ParseObject2['default']) {
+    if (!obj.id && shouldThrow) {
+      throw new Error('Cannot create a pointer to an unsaved Object.');
+    }
+    var identifier = obj.className + ':' + obj._getId();
+    if (!encountered.objects[identifier]) {
+      encountered.objects[identifier] = obj.dirty() ? obj : true;
+      var attributes = obj.attributes;
+      for (var attr in attributes) {
+        if (typeof attributes[attr] === 'object') {
+          traverse(attributes[attr], encountered, !allowDeepUnsaved, allowDeepUnsaved);
+        }
+      }
+    }
+    return;
+  }
+  if (obj instanceof _ParseFile2['default']) {
+    if (!obj.url() && encountered.files.indexOf(obj) < 0) {
+      encountered.files.push(obj);
+    }
+    return;
+  }
+  if (obj instanceof _ParseRelation2['default']) {
+    return;
+  }
+  if (Array.isArray(obj)) {
+    obj.forEach(function (el) {
+      traverse(el, encountered, shouldThrow, allowDeepUnsaved);
+    });
+  }
+  for (var k in obj) {
+    if (typeof obj[k] === 'object') {
+      traverse(obj[k], encountered, shouldThrow, allowDeepUnsaved);
+    }
+  }
+}
+module.exports = exports['default'];
+},{"./ParseFile":11,"./ParseObject":14,"./ParseRelation":18,"babel-runtime/helpers/interop-require-default":47}],37:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/create"), __esModule: true };
+},{"core-js/library/fn/object/create":50}],38:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/define-property"), __esModule: true };
+},{"core-js/library/fn/object/define-property":51}],39:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/freeze"), __esModule: true };
+},{"core-js/library/fn/object/freeze":52}],40:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/get-own-property-descriptor"), __esModule: true };
+},{"core-js/library/fn/object/get-own-property-descriptor":53}],41:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/keys"), __esModule: true };
+},{"core-js/library/fn/object/keys":54}],42:[function(_dereq_,module,exports){
+module.exports = { "default": _dereq_("core-js/library/fn/object/set-prototype-of"), __esModule: true };
+},{"core-js/library/fn/object/set-prototype-of":55}],43:[function(_dereq_,module,exports){
+"use strict";
+
+exports["default"] = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+exports.__esModule = true;
+},{}],44:[function(_dereq_,module,exports){
+"use strict";
+
+var _Object$defineProperty = _dereq_("babel-runtime/core-js/object/define-property")["default"];
+
+exports["default"] = (function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+
+      _Object$defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+})();
+
+exports.__esModule = true;
+},{"babel-runtime/core-js/object/define-property":38}],45:[function(_dereq_,module,exports){
+"use strict";
+
+var _Object$getOwnPropertyDescriptor = _dereq_("babel-runtime/core-js/object/get-own-property-descriptor")["default"];
+
+exports["default"] = function get(_x, _x2, _x3) {
+  var _again = true;
+
+  _function: while (_again) {
+    var object = _x,
+        property = _x2,
+        receiver = _x3;
+    desc = parent = getter = undefined;
+    _again = false;
+    if (object === null) object = Function.prototype;
+
+    var desc = _Object$getOwnPropertyDescriptor(object, property);
+
+    if (desc === undefined) {
+      var parent = Object.getPrototypeOf(object);
+
+      if (parent === null) {
+        return undefined;
+      } else {
+        _x = parent;
+        _x2 = property;
+        _x3 = receiver;
+        _again = true;
+        continue _function;
+      }
+    } else if ("value" in desc) {
+      return desc.value;
+    } else {
+      var getter = desc.get;
+
+      if (getter === undefined) {
+        return undefined;
+      }
+
+      return getter.call(receiver);
+    }
+  }
+};
+
+exports.__esModule = true;
+},{"babel-runtime/core-js/object/get-own-property-descriptor":40}],46:[function(_dereq_,module,exports){
+"use strict";
+
+var _Object$create = _dereq_("babel-runtime/core-js/object/create")["default"];
+
+var _Object$setPrototypeOf = _dereq_("babel-runtime/core-js/object/set-prototype-of")["default"];
+
+exports["default"] = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = _Object$create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+exports.__esModule = true;
+},{"babel-runtime/core-js/object/create":37,"babel-runtime/core-js/object/set-prototype-of":42}],47:[function(_dereq_,module,exports){
+"use strict";
+
+exports["default"] = function (obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+};
+
+exports.__esModule = true;
+},{}],48:[function(_dereq_,module,exports){
+"use strict";
+
+exports["default"] = function (obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+      }
+    }
+
+    newObj["default"] = obj;
+    return newObj;
+  }
+};
+
+exports.__esModule = true;
+},{}],49:[function(_dereq_,module,exports){
+
+},{}],50:[function(_dereq_,module,exports){
+var $ = _dereq_('../../modules/$');
+module.exports = function create(P, D){
+  return $.create(P, D);
+};
+},{"../../modules/$":67}],51:[function(_dereq_,module,exports){
+var $ = _dereq_('../../modules/$');
+module.exports = function defineProperty(it, key, desc){
+  return $.setDesc(it, key, desc);
+};
+},{"../../modules/$":67}],52:[function(_dereq_,module,exports){
+_dereq_('../../modules/es6.object.freeze');
+module.exports = _dereq_('../../modules/$.core').Object.freeze;
+},{"../../modules/$.core":59,"../../modules/es6.object.freeze":72}],53:[function(_dereq_,module,exports){
+var $ = _dereq_('../../modules/$');
+_dereq_('../../modules/es6.object.get-own-property-descriptor');
+module.exports = function getOwnPropertyDescriptor(it, key){
+  return $.getDesc(it, key);
+};
+},{"../../modules/$":67,"../../modules/es6.object.get-own-property-descriptor":73}],54:[function(_dereq_,module,exports){
+_dereq_('../../modules/es6.object.keys');
+module.exports = _dereq_('../../modules/$.core').Object.keys;
+},{"../../modules/$.core":59,"../../modules/es6.object.keys":74}],55:[function(_dereq_,module,exports){
+_dereq_('../../modules/es6.object.set-prototype-of');
+module.exports = _dereq_('../../modules/$.core').Object.setPrototypeOf;
+},{"../../modules/$.core":59,"../../modules/es6.object.set-prototype-of":75}],56:[function(_dereq_,module,exports){
+module.exports = function(it){
+  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
+  return it;
+};
+},{}],57:[function(_dereq_,module,exports){
+var isObject = _dereq_('./$.is-object');
+module.exports = function(it){
+  if(!isObject(it))throw TypeError(it + ' is not an object!');
+  return it;
+};
+},{"./$.is-object":66}],58:[function(_dereq_,module,exports){
+var toString = {}.toString;
+
+module.exports = function(it){
+  return toString.call(it).slice(8, -1);
+};
+},{}],59:[function(_dereq_,module,exports){
+var core = module.exports = {version: '1.2.1'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+},{}],60:[function(_dereq_,module,exports){
+// optional / simple context binding
+var aFunction = _dereq_('./$.a-function');
+module.exports = function(fn, that, length){
+  aFunction(fn);
+  if(that === undefined)return fn;
+  switch(length){
+    case 1: return function(a){
+      return fn.call(that, a);
+    };
+    case 2: return function(a, b){
+      return fn.call(that, a, b);
+    };
+    case 3: return function(a, b, c){
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function(/* ...args */){
+    return fn.apply(that, arguments);
+  };
+};
+},{"./$.a-function":56}],61:[function(_dereq_,module,exports){
+var global    = _dereq_('./$.global')
+  , core      = _dereq_('./$.core')
+  , PROTOTYPE = 'prototype';
+var ctx = function(fn, that){
+  return function(){
+    return fn.apply(that, arguments);
+  };
+};
+var $def = function(type, name, source){
+  var key, own, out, exp
+    , isGlobal = type & $def.G
+    , isProto  = type & $def.P
+    , target   = isGlobal ? global : type & $def.S
+        ? global[name] : (global[name] || {})[PROTOTYPE]
+    , exports  = isGlobal ? core : core[name] || (core[name] = {});
+  if(isGlobal)source = name;
+  for(key in source){
+    // contains in native
+    own = !(type & $def.F) && target && key in target;
+    if(own && key in exports)continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    if(isGlobal && typeof target[key] != 'function')exp = source[key];
+    // bind timers to global for call from export context
+    else if(type & $def.B && own)exp = ctx(out, global);
+    // wrap global constructors for prevent change them in library
+    else if(type & $def.W && target[key] == out)!function(C){
+      exp = function(param){
+        return this instanceof C ? new C(param) : C(param);
+      };
+      exp[PROTOTYPE] = C[PROTOTYPE];
+    }(out);
+    else exp = isProto && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // export
+    exports[key] = exp;
+    if(isProto)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
+  }
+};
+// type bitmap
+$def.F = 1;  // forced
+$def.G = 2;  // global
+$def.S = 4;  // static
+$def.P = 8;  // proto
+$def.B = 16; // bind
+$def.W = 32; // wrap
+module.exports = $def;
+},{"./$.core":59,"./$.global":64}],62:[function(_dereq_,module,exports){
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function(it){
+  if(it == undefined)throw TypeError("Can't call method on  " + it);
+  return it;
+};
+},{}],63:[function(_dereq_,module,exports){
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
+};
+},{}],64:[function(_dereq_,module,exports){
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var UNDEFINED = 'undefined';
+var global = module.exports = typeof window != UNDEFINED && window.Math == Math
+  ? window : typeof self != UNDEFINED && self.Math == Math ? self : Function('return this')();
+if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+},{}],65:[function(_dereq_,module,exports){
+// indexed object, fallback for non-array-like ES3 strings
+var cof = _dereq_('./$.cof');
+module.exports = 0 in Object('z') ? Object : function(it){
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+},{"./$.cof":58}],66:[function(_dereq_,module,exports){
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+},{}],67:[function(_dereq_,module,exports){
+var $Object = Object;
+module.exports = {
+  create:     $Object.create,
+  getProto:   $Object.getPrototypeOf,
+  isEnum:     {}.propertyIsEnumerable,
+  getDesc:    $Object.getOwnPropertyDescriptor,
+  setDesc:    $Object.defineProperty,
+  setDescs:   $Object.defineProperties,
+  getKeys:    $Object.keys,
+  getNames:   $Object.getOwnPropertyNames,
+  getSymbols: $Object.getOwnPropertySymbols,
+  each:       [].forEach
+};
+},{}],68:[function(_dereq_,module,exports){
+// most Object methods by ES6 should accept primitives
+module.exports = function(KEY, exec){
+  var $def = _dereq_('./$.def')
+    , fn   = (_dereq_('./$.core').Object || {})[KEY] || Object[KEY]
+    , exp  = {};
+  exp[KEY] = exec(fn);
+  $def($def.S + $def.F * _dereq_('./$.fails')(function(){ fn(1); }), 'Object', exp);
+};
+},{"./$.core":59,"./$.def":61,"./$.fails":63}],69:[function(_dereq_,module,exports){
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+/* eslint-disable no-proto */
+var getDesc  = _dereq_('./$').getDesc
+  , isObject = _dereq_('./$.is-object')
+  , anObject = _dereq_('./$.an-object');
+var check = function(O, proto){
+  anObject(O);
+  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
+};
+module.exports = {
+  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line no-proto
+    function(test, buggy, set){
+      try {
+        set = _dereq_('./$.ctx')(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+        set(test, []);
+        buggy = !(test instanceof Array);
+      } catch(e){ buggy = true; }
+      return function setPrototypeOf(O, proto){
+        check(O, proto);
+        if(buggy)O.__proto__ = proto;
+        else set(O, proto);
+        return O;
+      };
+    }({}, false) : undefined),
+  check: check
+};
+},{"./$":67,"./$.an-object":57,"./$.ctx":60,"./$.is-object":66}],70:[function(_dereq_,module,exports){
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = _dereq_('./$.iobject')
+  , defined = _dereq_('./$.defined');
+module.exports = function(it){
+  return IObject(defined(it));
+};
+},{"./$.defined":62,"./$.iobject":65}],71:[function(_dereq_,module,exports){
+// 7.1.13 ToObject(argument)
+var defined = _dereq_('./$.defined');
+module.exports = function(it){
+  return Object(defined(it));
+};
+},{"./$.defined":62}],72:[function(_dereq_,module,exports){
+// 19.1.2.5 Object.freeze(O)
+var isObject = _dereq_('./$.is-object');
+
+_dereq_('./$.object-sap')('freeze', function($freeze){
+  return function freeze(it){
+    return $freeze && isObject(it) ? $freeze(it) : it;
+  };
+});
+},{"./$.is-object":66,"./$.object-sap":68}],73:[function(_dereq_,module,exports){
+// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+var toIObject = _dereq_('./$.to-iobject');
+
+_dereq_('./$.object-sap')('getOwnPropertyDescriptor', function($getOwnPropertyDescriptor){
+  return function getOwnPropertyDescriptor(it, key){
+    return $getOwnPropertyDescriptor(toIObject(it), key);
+  };
+});
+},{"./$.object-sap":68,"./$.to-iobject":70}],74:[function(_dereq_,module,exports){
+// 19.1.2.14 Object.keys(O)
+var toObject = _dereq_('./$.to-object');
+
+_dereq_('./$.object-sap')('keys', function($keys){
+  return function keys(it){
+    return $keys(toObject(it));
+  };
+});
+},{"./$.object-sap":68,"./$.to-object":71}],75:[function(_dereq_,module,exports){
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+var $def = _dereq_('./$.def');
+$def($def.S, 'Object', {setPrototypeOf: _dereq_('./$.set-proto').set});
+},{"./$.def":61,"./$.set-proto":69}]},{},[7])(7)
 });
