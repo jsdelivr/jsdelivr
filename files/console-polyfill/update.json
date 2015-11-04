@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "consle-polyfill",
+  "repo": "paulmillr/console-polyfill",
+  "files": {
+    "include": ["index.js"]
+  }
+}
