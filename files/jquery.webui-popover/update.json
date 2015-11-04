@@ -3,7 +3,7 @@
   "name": "webui-popover",
   "repo": "sandywalker/webui-popover",
   "files": {
-    "basePath":"dist"
+    "basePath":"dist",
     "include": ["jquery.webui-popover.js", "jquery.webui-popover.min.js", "jquery.webui-popover.css","jquery.webui-popover.min.css"]
   }
 }
