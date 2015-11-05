@@ -3,6 +3,6 @@
   "name": "Remodal",
   "repo": "VodkaBears/Remodal",
   "files": {
-	"basePath": ["dist/"]
+	"basePath": "dist/"
   }
 }
