@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "instantsearch-googlemaps",
+  "repo": "instantsearch/instantsearch-googlemaps",
+  "files": {
+    "basePath": "dist/"
+  }
+}
