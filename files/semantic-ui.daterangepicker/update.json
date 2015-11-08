@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "semantic-ui.daterangepicker",
+  "repo": "BreadMaker/semantic-ui-daterangepicker",
+  "files": {
+    "include": ["daterangepicker.css", "daterangepicker.js", "daterangepicker.min.css", "daterangepicker.min.js"]
+  }
+}
