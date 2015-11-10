@@ -3,7 +3,6 @@
   "name": "instantsearch.js",
   "repo": "algolia/instantsearch.js",
   "files": {
-    "basePath": "dist/",
-    "exclude": ["debug.css"]
+    "basePath": "dist/"
   }
 }
