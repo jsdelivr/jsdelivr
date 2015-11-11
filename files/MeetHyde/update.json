@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "CDN",
+  "repo": "MeetHyde/CDN",
+  "files": {
+    "include": ["*.js", "*.css", "*.png"]
+  }
+}
