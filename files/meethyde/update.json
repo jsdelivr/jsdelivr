@@ -3,6 +3,7 @@
   "name": "cdn",
   "repo": "meethyde/cdn",
   "files": {
-    "include": ["meethyde.min.js", "meethyde.min.css", "meethyde.png"]
-  }
+		"basePath": "release/",
+		"include": ["meethyde.min.js", "meethyde.min.css", "meethyde.png"]
+	}
 }
