@@ -3,7 +3,7 @@
   "name": "metadata.js",
   "repo": "oknosoft/metadata.js",
   "files": {
-    "basePath": "lib"
+    "basePath": "lib",
     "include": [
       "metadata.min.js",
       "metadata.js",
