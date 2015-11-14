@@ -3,6 +3,13 @@
   "name": "metadata.js",
   "repo": "oknosoft/metadata.js",
   "files": {
-    "include": ["lib/metadata.min.js", "lib/metadata.js"]
+    "include": [
+      "lib/metadata.min.js",
+      "lib/metadata.js",
+      "lib/metadata.core.js",
+      "lib/metadata.css",
+      "lib/dhtmlx.min.js",
+      "lib/dhtmlx_web.css",
+      "lib/dhtmlx_terrace.css"]
   }
 }
