@@ -3,6 +3,6 @@
   "name": "riot",
   "repo": "riot/riot",
   "files": {
-    "include": ["riot.js", "riot.min.js", "compiler.js", "compiler.min.js"]
+    "include": ["riot.js", "riot.min.js", "riot+compiler.js", "riot+compiler.min.js"]
   }
 }
