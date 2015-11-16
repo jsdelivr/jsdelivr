@@ -4,16 +4,6 @@
   "repo": "oknosoft/metadata.js",
   "files": {
     "basePath": "lib/",
-    "include": [
-      "metadata.min.js",
-      "metadata.js",
-      "metadata.core.js",
-      "metadata.css",
-      "dhtmlx.min.js",
-      "dhtmlx_web.css",
-      "dhtmlx_terrace.css",
-      "**/*.png",
-      "**/*.gif"
-      ]
+    "include": ["**/*"]
   }
 }
