@@ -4,6 +4,6 @@
   "repo": "ngnjs/chassis-lib",
   "files": {
     "basePath": "dist/",
-    "include": ["chassis.min.js"]
+    "include": ["*.min.js"]
   }
 }
