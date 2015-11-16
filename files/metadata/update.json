@@ -4,6 +4,6 @@
   "repo": "oknosoft/metadata.js",
   "files": {
     "basePath": "lib/",
-+    "include": ["**/*"]
+    "include": ["**/*"]
   }
 }
