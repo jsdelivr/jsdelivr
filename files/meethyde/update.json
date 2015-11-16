@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "cdn",
+  "repo": "meethyde/meethyde",
+  "files": {
+		"basePath": "release/",
+		"include": ["meethyde.min.js", "meethyde.min.css", "meethyde.png"]
+	}
+}
