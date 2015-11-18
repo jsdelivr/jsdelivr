@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tinysory",
+  "repo": "Sjeiti/TinySort",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}
