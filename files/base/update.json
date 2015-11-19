@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "base",
+  "repo": "matthewhartman/base",
+  "files": {
+    "include": ["*.css"]
+  }
+}
