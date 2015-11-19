@@ -3,6 +3,6 @@
   "name": "base",
   "repo": "matthewhartman/base",
   "files": {
-    "include": ["*.css"]
+    "include": ["*.css", "*.js"]
   }
 }
