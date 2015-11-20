@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "tadaboard-embed",
+  "repo": "visup/tadaboard-embed",
+  "files": {
+    "basePath": "dist/",
+    "include": ["tadaboard-embed.js", "tadaboard-embed.js.map", "tadaboard-embed.min.js", "tadaboard-embed.min.js.map"]
+  }
+}
