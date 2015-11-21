@@ -3,6 +3,6 @@
   "name": "css3polyfill",
   "repo": "marcofugaro/css3polyfill",
   "files": {
-    "include": ["css3polyfill.js", "css3polyfill.min.js"]
+    "include": ["css3polyfill.min.js"]
   }
 }
