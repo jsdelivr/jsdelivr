@@ -4,6 +4,6 @@
   "repo": "sakib11/arewevalid",
   "files": {
     "basePath": "dist/",
-    "include": "arewevalid.min.js"
+    "include": ["arewevalid.min.js"]
   }
 }
