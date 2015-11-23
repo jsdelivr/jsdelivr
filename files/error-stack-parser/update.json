@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "error-stack-parser",
+  "repo": "stacktracejs/error-stack-parser",
+  "files": {
+    "basePath": "dist/",
+    "exclude": "error-stack-parser.js"
+  }
+}
