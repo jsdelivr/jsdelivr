@@ -3,6 +3,6 @@
   "name": "placeholders",
   "repo": "jamesallardice/Placeholders.js",
   "files": {
-    "include": ["dist/*"]
+    "include": ["dist/*.min.js"]
   }
 }
