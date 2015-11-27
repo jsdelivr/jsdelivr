@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "oneMapToRuleThemAll",
+  "repo": "dpellier/oneMapToRuleThemAll",
+  "files": {
+    "basePath": "dist/"
+  }
+}
