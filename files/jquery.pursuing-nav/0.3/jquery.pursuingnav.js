@@ -1,0 +1,6 @@
+/*!
+ * Pursuing Nav v0.3 (http://akurganow.github.io/pursuing-nav)
+ * Copyright 2013-2015 Alexander Kurganov.
+ * Licensed under GPL License (http://www.gnu.org/licenses/gpl.html)
+ */
+!function($){$.fn.pursuingNav=function(options){var element,height,is_pursuing,offsetTop,preSTop,stick,userAgent;return null==options&&(options={}),userAgent=navigator.userAgent,is_pursuing=!/android|iphone|ipad/i.test(userAgent),element=this,height=options.height||element.outerHeight(),offsetTop=element.offset().top,stick=height+offsetTop,preSTop=$(document).scrollTop(),is_pursuing?(element.css({position:"absolute",top:offsetTop}),$(window).on("scroll",function(){var invisibleHeight,sTop;return sTop=$(document).scrollTop(),options.height||(height=element.outerHeight()),offsetTop=element.offset().top,stick=height+offsetTop,sTop>=0&&(sTop>preSTop?sTop===offsetTop?(invisibleHeight=stick-preSTop-height,invisibleHeight>height&&(invisibleHeight=height),element.css({position:"absolute",top:sTop-invisibleHeight})):sTop>stick&&element.css({position:"absolute",top:sTop-height}):preSTop>sTop&&offsetTop>=sTop&&element.css({position:"fixed",top:0})),preSTop=sTop})):element.css({position:"fixed",top:offsetTop})}}(jQuery);
