@@ -3,6 +3,6 @@
   "name": "CSS-Mint",
   "repo": "ArunMichaelDsouza/CSS-Mint",
   "files": {
-    "include": ["./build/css-mint.min.css"]
+    "include": ["build/css-mint.min.css"]
   }
 }
