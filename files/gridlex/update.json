@@ -3,6 +3,6 @@
   "name": "Gridlex",
   "repo": "devlint/gridlex",
   "files": {
-    "include": ["dist/gridlex.min.css", "dist/gridlex.css"]
+    "include": ["dist/gridlex.min.css"]
   }
 }
