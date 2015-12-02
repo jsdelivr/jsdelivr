@@ -1,0 +1,75 @@
+{
+    "lang": "bg", 
+    "date": {
+        "month_abbr": [
+            "Ян.", 
+            "Фев.", 
+            "Март", 
+            "Апр.", 
+            "Май", 
+            "Юни", 
+            "Юли", 
+            "Авг.", 
+            "Септ.", 
+            "Окт.", 
+            "Ноем.", 
+            "Дек."
+        ], 
+        "day_abbr": [
+            "Нед.", 
+            "Пон.", 
+            "Вт.", 
+            "Ср.", 
+            "Четв.", 
+            "Пет.", 
+            "Съб."
+        ], 
+        "day": [
+            "Неделя", 
+            "Понеделник", 
+            "Вторник", 
+            "Сряда", 
+            "Четвъртък", 
+            "Петък", 
+            "Събота"
+        ], 
+        "month": [
+            "Януари", 
+            "Февруари", 
+            "Март", 
+            "Април", 
+            "Май", 
+            "Юни", 
+            "Юли", 
+            "Август", 
+            "Септември", 
+            "Октомври", 
+            "Ноември", 
+            "Декември"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "bg"
+    }, 
+    "messages": {
+        "loading": "Зарежда се", 
+        "contract_timeline": "Свиване", 
+        "return_to_title": "В началото", 
+        "wikipedia": "От Уикипедия, свободната енциклопедия", 
+        "loading_content": "Съдържанието се зарежда", 
+        "expand_timeline": "Разширяване", 
+        "loading_timeline": "Зареждане... "
+    }, 
+    "dateformats": {
+        "full_long": "d mmm yyyy 'at' h:MM TT", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>d mmm yyyy'</small>'"
+    }
+}
