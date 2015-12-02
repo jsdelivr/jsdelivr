@@ -1,6 +1,6 @@
 {
     "packageManager": "github",
-    "name": "geniuslink",
+    "name": "mindtouch-geniuslink",
     "repo": "MindTouch/geniuslink",
     "files": {
         "basePath": "dist/"
