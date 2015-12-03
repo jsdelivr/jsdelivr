@@ -3,6 +3,7 @@
     "name": "geniuslink",
     "repo": "MindTouch/geniuslink",
     "files": {
-        "basePath": "dist/"
+        "basePath": "dist/",
+        "include": ["geniuslink.min.js"]
     }
 }
