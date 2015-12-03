@@ -1,0 +1,75 @@
+{
+    "lang": "tr", 
+    "date": {
+        "month_abbr": [
+            "Oca.", 
+            "Şub.", 
+            "Mar.", 
+            "Nis.", 
+            "May.", 
+            "Haz.", 
+            "Tem.", 
+            "Ağu.", 
+            "Eyl.", 
+            "Eki.", 
+            "Kas.", 
+            "Ara."
+        ], 
+        "day_abbr": [
+            "Paz.", 
+            "Pzt.", 
+            "Sal.", 
+            "Çar.", 
+            "Per.", 
+            "Cum.", 
+            "Cts."
+        ], 
+        "day": [
+            "Pazar", 
+            "Pazartesi", 
+            "Salı", 
+            "Çarşamba", 
+            "Perşembe", 
+            "Cuma", 
+            "Cumartesi"
+        ], 
+        "month": [
+            "Ocak", 
+            "Şubat", 
+            "Mart", 
+            "Nisan", 
+            "Mayıs", 
+            "Haziran", 
+            "Temmuz", 
+            "Ağustos", 
+            "Eylül", 
+            "Ekim", 
+            "Kasım", 
+            "Aralık"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "tr"
+    }, 
+    "messages": {
+        "loading": "Yükleniyor", 
+        "contract_timeline": "Zaman Çizelgesini Daralt", 
+        "return_to_title": "Başlığa Dön", 
+        "wikipedia": "Wikipedia'dan, özgür ansiklopedi", 
+        "loading_content": "İçerik Yükleniyor", 
+        "expand_timeline": "Zaman Çizelgesini Genişlet", 
+        "loading_timeline": "Zaman Çizelgesi Yükleniyor... "
+    }, 
+    "dateformats": {
+        "full_long": "d mmm',' yyyy 'at' H:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "H:MM'<br/><small>'d mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "H:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "H:MM '<br/><small>d mmm',' yyyy'</small>'"
+    }
+}
