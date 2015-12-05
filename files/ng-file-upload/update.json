@@ -3,6 +3,6 @@
   "name": "ng-file-upload",
   "repo": "danialfarid/ng-file-upload",
   "files": {
-    "include": ["dist/*.js"]
+    "include": ["ng-file-upload-shim.min.js", "ng-file-upload-all.min.js", "ng-file-upload.min.js", "FileAPI.min.js"]
   }
 }
