@@ -3,6 +3,6 @@
   "name": "chrono",
   "repo": "wanasit/chrono",
   "files": {
-    "include": ["chrono.js", "chrono.min.js", "chrono.map.json"]
+    "include": ["chrono.js", "chrono.min.js"]
   }
 }
