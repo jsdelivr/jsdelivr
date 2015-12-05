@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ng-file-upload",
+  "repo": "danialfarid/ng-file-upload",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}
