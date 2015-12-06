@@ -3,6 +3,7 @@
   "name": "summernote",
   "repo": "summernote/summernote",
   "files": {
-	"basePath": "dist/"
+	"basePath": "dist/",
+	"include": ["*.js", "*.css"]
   }
 }
