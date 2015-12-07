@@ -7,7 +7,7 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  *
  * Based upon the plugin by Tzury Bar Yochay:
- * http://github.com/tzuryby/hotkeys
+ * https://github.com/tzuryby/jquery.hotkeys
  *
  * Original idea by:
  * Binny V A, http://www.openjs.com/scripts/events/keyboard_shortcuts/
@@ -21,7 +21,7 @@
 (function(jQuery) {
 
   jQuery.hotkeys = {
-    version: "0.8",
+    version: "0.2.0",
 
     specialKeys: {
       8: "backspace",
@@ -117,8 +117,13 @@
       "text", "password", "number", "email", "url", "range", "date", "month", "week", "time", "datetime",
       "datetime-local", "search", "color", "tel"],
 
+    // default input types not to bind to unless bound directly
+    textInputTypes: /textarea|input|select/i,
+
     options: {
-      filterTextInputs: true
+      filterInputAcceptingElements: true,
+      filterTextInputs: true,
+      filterContentEditable: true
     }
   };
 
@@ -139,7 +144,10 @@
 
     handleObj.handler = function(event) {
       //      Don't fire in text-accepting inputs that we didn't directly bind to
-      if (this !== event.target && (/textarea|select/i.test(event.target.nodeName) ||
+      if (this !== event.target &&
+        (jQuery.hotkeys.options.filterInputAcceptingElements &&
+          jQuery.hotkeys.textInputTypes.test(event.target.nodeName) ||
+          (jQuery.hotkeys.options.filterContentEditable && jQuery(event.target).attr('contenteditable')) ||
           (jQuery.hotkeys.options.filterTextInputs &&
             jQuery.inArray(event.target.type, jQuery.hotkeys.textAcceptingInputTypes) > -1))) {
         return;
