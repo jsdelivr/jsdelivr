@@ -3,6 +3,6 @@
   "name": "qtip2",
   "repo": "qtip2/qtip2",
   "files": {
-    "include": ["*.js", "*.css", "*.map", "./basic/**/*"]
+    "include": ["dist/**/*.js", "dist/**/*.css", "dist/**/*.map"]
   }
 }
