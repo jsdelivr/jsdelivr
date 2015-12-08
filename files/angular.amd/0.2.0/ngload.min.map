@@ -1,0 +1,1 @@
+{"version":3,"file":"ngload.min.js","sources":["../src/ngload.js"],"names":["define","load","name","req","onload","angularAMD","value","processQueue"],"mappings":";;;;;;AAMA,YACAA,SACIC,KAAM,SAAUC,EAAMC,EAAKC,GAEvBD,GAAK,aAAcD,GAAO,SAAUG,EAAYC,GAE5CD,EAAWE,eACXH,EAAOE"}

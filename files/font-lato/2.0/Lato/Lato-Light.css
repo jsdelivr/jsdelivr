@@ -1,0 +1,11 @@
+/* Webfont: Lato-Light */@font-face {
+    font-family: 'LatoLight';
+    src: url('Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Light.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Light.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jssavior",
+  "repo": "AlexBeauchemin/jssavior",
+  "files": {
+    "include": ["jssavior.min.js"]
+  }
+}

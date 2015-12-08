@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "MutationObserver.js",
+  "repo": "megawac/MutationObserver.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["mutationobserver.min.js"]
+  }
+}

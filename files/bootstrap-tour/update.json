@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-tour",
+  "repo": "sorich87/bootstrap-tour",
+  "files": {
+	"basePath": "build/",
+    "include": ["./css/**/*", "./js/**/*"]
+  }
+}

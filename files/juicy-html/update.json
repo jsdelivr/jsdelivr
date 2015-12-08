@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "juicy-html",
+  "repo": "Juicy/juicy-html",
+  "files": {
+    "include": [
+    	"juicy-html.html"
+    ]
+  }
+}

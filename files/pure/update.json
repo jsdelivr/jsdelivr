@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "pure",
+  "repo": "yahoo/pure",
+  "files": {
+    "include": ["*.css"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lazy.js",
+  "repo": "dtao/lazy.js",
+  "files": {
+    "include": ["lazy.min.js"]
+  }
+}

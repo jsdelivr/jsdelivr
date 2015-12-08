@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* Widget Counter */
+.widgetCounter{font-size:12px;margin:0;line-height:1.4;color:#333}
+.widgetCounter:after{content:"";display:block;clear:both}
+.widgetCounter dt{float:left;clear:left;margin:0 4px 0 0}
+.widgetCounter dd{margin:0}

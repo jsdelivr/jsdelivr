@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "katex",
+  "repo": "Khan/KaTeX",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["README.md"]
+  }
+}

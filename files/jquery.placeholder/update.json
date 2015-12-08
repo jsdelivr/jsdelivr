@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.placeholder",
+  "repo": "mathiasbynens/jquery-placeholder",
+  "files": {
+    "include": ["jquery.placeholder.min.js", "jquery.placeholder.js"]
+  }
+}

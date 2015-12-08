@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fingerprintjs2",
+  "repo": "Valve/fingerprintjs2",
+  "files": {
+    "include": ["dist/fingerprint2.min.js"]
+  }
+}

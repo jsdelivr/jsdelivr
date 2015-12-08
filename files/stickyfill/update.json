@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "stickyfill",
+  "repo": "wilddeer/stickyfill",
+  "files": {
+    "basePath": "dist/",
+    "include": ["stickyfill.min.js"]
+  }
+}

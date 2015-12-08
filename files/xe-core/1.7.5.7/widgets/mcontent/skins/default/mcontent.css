@@ -1,0 +1,24 @@
+@charset "utf-8"; 
+/* Mobile XE (/widgets/mcontent/skins/default/) */
+/* Hx */
+.hx{position:relative;border-bottom:1px solid #ccc8be;padding:8px 10px;margin:0}
+.hx:after{content:"";margin:0 -10px;position:relative;top:10px;display:block;clear:both;height:1px;background:#fff}
+.hx.h2{background:#e5e5e5}
+.hx.h2 em{font-size:12px;color:#6352d2}
+.hx.h3{background:#868686;color:#fff}
+.hx.h3 em{font-size:12px}
+.hx h2, .hx h3{margin:0 10px 0 0;display:inline}
+.hx h2{font-size:16px;line-height:1.4}
+.hx h3{font-size:14px}
+/* List */
+.lt{margin:0;padding:0;list-style:none;background:#f8f8f8;font-size:14px}
+.lt li{border-bottom:1px solid #ccc8be}
+.lt a{display:block;text-decoration:none;color:#000;padding:10px;*zoom:1}
+.lt a:after{content:"";display:block;clear:both}
+.lt .th{float:left;margin:0 10px 5px 0;border:1px solid #ccc;background:#666;color:#fff;text-align:center;line-height:80px;width:80px;height:80px;font-size:14px}
+.lt .title{display:block;margin:0 0 5px 0}
+.lt .title strong{font-size:14px;font-weight:bold}
+.lt .title em{font-size:12px;color:#333;color:#6352d2}
+.lt .text{display:block; color:#666;margin:0 0 5px 0}
+.lt .auth{display:block;font-size:12px}
+.lt .auth .time{padding:0 5px;border-left:1px solid #bfbfbf}

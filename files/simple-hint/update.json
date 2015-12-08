@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "simple-hint",
+  "repo": "catc/simple-hint",
+  "files": {
+	"basePath": "dist/",
+	"include": ["*.min.*"]
+  }
+}

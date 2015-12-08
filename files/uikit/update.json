@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "uikit",
+  "repo": "uikit/bower-uikit",
+  "files": {
+    "include": ["./css/**/*.min.css", "./fonts/**/*", "./js/**/*.min.js"]
+  }
+}

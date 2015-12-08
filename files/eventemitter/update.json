@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "EventEmitter",
+  "repo": "Olical/EventEmitter",
+  "files": {
+    "include": ["EventEmitter.min.js"]
+  }
+}

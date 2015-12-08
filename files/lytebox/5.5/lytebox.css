@@ -1,0 +1,192 @@
+#lbOverlay { position: fixed; top: 0; left: 0; z-index: 99997; width: 100%; height: 100%; }
+	#lbOverlay.black { background-color: #000000; }
+	#lbOverlay.grey { background-color: #000000; }
+	#lbOverlay.red { background-color: #330000; }
+	#lbOverlay.green { background-color: #003300; }
+	#lbOverlay.blue { background-color: #011D50; }
+	#lbOverlay.gold { background-color: #666600; }
+	#lbOverlay.orange { background-color: #FFBB48; }
+
+#lbMain { position: absolute; left: 0; width: 100%; z-index: 99998; text-align: center; line-height: 0; display:-moz-inline-stack; }
+#lbMain a img { border: 1px solid #ffffff; }
+
+#lbOuterContainer {	position: relative; background-color: #fff; width: 200px; height: 200px; margin: 0 auto; }
+	#lbOuterContainer.black { border: 2px solid #CCCCCC; background-color: #000000; }
+	#lbOuterContainer.grey { border: 2px solid #888888; }
+	#lbOuterContainer.red { border: 2px solid #DD0000; }
+	#lbOuterContainer.green { border: 2px solid #00B000; }
+	#lbOuterContainer.blue { border: 2px solid #5F89D8; }
+	#lbOuterContainer.gold { border: 2px solid #B0B000; }
+	#lbOuterContainer.orange { border: 2px solid #D15211; }
+
+#lbTopContainer, #lbBottomContainer { 
+	font: 0.85em Verdana, Helvetica, sans-serif; background-color: #fff; width: 100%; line-height: 1.4em; font-size: 0.9em;
+	overflow: hidden; margin: 0 auto; padding: 0; position: relative; z-index: 14; display: none;
+}
+#lbTopContainer { overflow: hidden; margin-top: 5px; }
+#lbTopContainer.black, #lbBottomContainer.black { background-color: #000000; }
+#lbTopContainer.grey, #lbTopContainer.red, #lbTopContainer.green, #lbTopContainer.blue, #lbTopContainer.gold, #lbTopContainer.orange,
+#lbBottomContainer.grey, #lbBottomContainer.red, #lbBottomContainer.green, #lbBottomContainer.blue, #lbBottomContainer.gold, #lbBottomContainer.orange {
+	background-color: #ffffff;
+}
+	
+#lbImage, #lbIframe { border: none; }
+#lbImage.black, #lbIframe.black { border: 1px solid #CCCCCC; }
+	#lbImage.grey, #lbIframe.grey { border: 1px solid #888888; }
+	#lbImage.red, #lbIframe.red { border: 1px solid #DD0000; }
+	#lbImage.green, #lbIframe.green { border: 1px solid #00B000; }
+	#lbImage.blue, #lbIframe.blue { border: 1px solid #5F89D8; }
+	#lbImage.gold, #lbIframe.gold { border: 1px solid #B0B000; }
+	#lbImage.orange, #lbIframe.orange { border: 1px solid #D15211; }
+#lbImageContainer, #lbIframeContainer { padding: 10px; z-index: 12; }
+#lbLoading {
+	height: 100%; width: 100%; margin-top: -10px;
+	background: url('images/loading_white.gif') center no-repeat;
+}
+#lbLoading.black { background: url('images/loading_black.gif') center no-repeat; }
+
+#lbHoverNav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#lbImageContainer>#lbHoverNav { left: 0; }
+#lbHoverNav a { outline: none; }
+
+#lbPrevHov { width: 48%; height: 100%; background: transparent url('images/blank.gif') no-repeat; display: block; left: 0; float: left; margin-left: 3px; border: none !important; }
+	#lbPrevHov.black:hover, #lbPrevHov.black:visited { background: url('images/prev_black_t.png') left 30% no-repeat; }
+	#lbPrevHov.grey:hover, #lbPrevHov.grey:visited { background: url('images/prev_grey_t.png') left 30% no-repeat; }
+	#lbPrevHov.red:hover, #lbPrevHov.red:visited { background: url('images/prev_red_t.png') left 30% no-repeat; }
+	#lbPrevHov.green:hover, #lbPrevHov.green:visited { background: url('images/prev_green_t.png') left 30% no-repeat; }
+	#lbPrevHov.blue:hover, #lbPrevHov.blue:visited { background: url('images/prev_blue_t.png') left 30% no-repeat; }
+	#lbPrevHov.gold:hover, #lbPrevHov.gold:visited { background: url('images/prev_gold_t.png') left 30% no-repeat; }
+	#lbPrevHov.orange:hover, #lbPrevHov.orange:visited { background: url('images/prev_orange_t.png') left 30% no-repeat; }
+	
+#lbNextHov { width: 48%; height: 100%; background: transparent url('images/blank.gif') no-repeat; display: block; right: 0; float: right; margin-right: 3px; border: none !important; }
+	#lbNextHov.black:hover, #lbNextHov.black:visited { background: url('images/next_black_t.png') right 30% no-repeat; }
+	#lbNextHov.grey:hover, #lbNextHov.grey:visited { background: url('images/next_grey_t.png') right 30% no-repeat; }
+	#lbNextHov.red:hover, #lbNextHov.red:visited { background: url('images/next_red_t.png') right 30% no-repeat; }
+	#lbNextHov.green:hover, #lbNextHov.green:visited { background: url('images/next_green_t.png') right 30% no-repeat; }
+	#lbNextHov.blue:hover, #lbNextHov.blue:visited { background: url('images/next_blue_t.png') right 30% no-repeat; }
+	#lbNextHov.gold:hover, #lbNextHov.gold:visited { background: url('images/next_gold_t.png') right 30% no-repeat; }
+	#lbNextHov.orange:hover, #lbNextHov.orange:visited { background: url('images/next_orange_t.png') right 30% no-repeat; }
+	
+#lbPrev, #lbPrevTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbPrev.black, #lbPrevTop.black { background: url('images/prev_black.png') no-repeat; }
+	#lbPrev.blackOff, #lbPrevTop.blackOff { background: url('images/prev_black_off.png') no-repeat; cursor: default; }
+	#lbPrev.grey, #lbPrevTop.grey { background: url('images/prev_grey.png') no-repeat; }
+	#lbPrev.greyOff, #lbPrevTop.greyOff { background: url('images/prev_grey_off.png') no-repeat; cursor: default; }
+	#lbPrev.red, #lbPrevTop.red { background: url('images/prev_red.png') no-repeat; }
+	#lbPrev.redOff, #lbPrevTop.redOff { background: url('images/prev_red_off.png') no-repeat; cursor: default; }
+	#lbPrev.green, #lbPrevTop.green { background: url('images/prev_green.png') no-repeat; }
+	#lbPrev.greenOff, #lbPrevTop.greenOff { background: url('images/prev_green_off.png') no-repeat; cursor: default; }
+	#lbPrev.blue, #lbPrevTop.blue { background: url('images/prev_blue.png') no-repeat; }
+	#lbPrev.blueOff, #lbPrevTop.blueOff { background: url('images/prev_blue_off.png') no-repeat; cursor: default; }
+	#lbPrev.gold, #lbPrevTop.gold { background: url('images/prev_gold.png') no-repeat; }
+	#lbPrev.goldOff, #lbPrevTop.goldOff { background: url('images/prev_gold_off.png') no-repeat; cursor: default; }
+	#lbPrev.orange, #lbPrevTop.orange { background: url('images/prev_orange.png') no-repeat; }
+	#lbPrev.orangeOff, #lbPrevTop.orangeOff { background: url('images/prev_orange_off.png') no-repeat; cursor: default; }
+	
+#lbNext, #lbNextTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbNext.black, #lbNextTop.black { background: url('images/next_black.png') no-repeat; }
+	#lbNext.blackOff, #lbNextTop.blackOff { background: url('images/next_black_off.png') no-repeat; cursor: default; }
+	#lbNext.grey, #lbNextTop.grey { background: url('images/next_grey.png') no-repeat; }
+	#lbNext.greyOff, #lbNextTop.greyOff { background: url('images/next_grey_off.png') no-repeat; cursor: default; }
+	#lbNext.red, #lbNextTop.red { background: url('images/next_red.png') no-repeat; }
+	#lbNext.redOff, #lbNextTop.redOff { background: url('images/next_red_off.png') no-repeat; cursor: default; }
+	#lbNext.green, #lbNextTop.green { background: url('images/next_green.png') no-repeat; }
+	#lbNext.greenOff, #lbNextTop.greenOff { background: url('images/next_green_off.png') no-repeat; cursor: default; }
+	#lbNext.blue, #lbNextTop.blue { background: url('images/next_blue.png') no-repeat; }
+	#lbNext.blueOff, #lbNextTop.blueOff { background: url('images/next_blue_off.png') no-repeat; cursor: default; }
+	#lbNext.gold, #lbNextTop.gold { background: url('images/next_gold.png') no-repeat; }
+	#lbNext.goldOff, #lbNextTop.goldOff { background: url('images/next_gold_off.png') no-repeat; cursor: default; }
+	#lbNext.orange, #lbNextTop.orange { background: url('images/next_orange.png') no-repeat; }
+	#lbNext.orangeOff, #lbNextTop.orangeOff { background: url('images/next_orange_off.png') no-repeat; cursor: default; }
+	
+#lbTopData, #lbBottomData { float: left; text-align: left; padding-left: 10px; }
+#lbBottomData { padding-bottom: 0.5em; }
+	#lbBottomData.black, #lbTopData.black { color: #ffffff; }
+	#lbBottomData.grey, #lbTopData.grey { color: #333333; }
+	#lbBottomData.red, #lbTopData.red { color: #620000; }
+	#lbBottomData.green, #lbTopData.green { color: #003300; }
+	#lbBottomData.blue, #lbTopData.blue { color: #01379E; }
+	#lbBottomData.gold, #lbTopData.gold { color: #666600; }
+	#lbBottomData.orange, #lbTopData.orange { color: #D15211; }
+
+#lbTopNav, #lbBottomNav { float: right; text-align: right; padding-right: 10px; }
+#lbNumTop, #lbNumBottom { font-style: italic; }
+#lbDescBottom { display: block; }
+#lbTitleTop, #lbTopNav { margin-top: 0.3em; }
+#lbTitleTop, #lbTitleBottom { display: block; font-weight: bold; }
+
+#lbClose, #lbCloseTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbClose.black, #lbCloseTop.black { background: url('images/close_black.png') no-repeat; }
+	#lbClose.grey, #lbCloseTop.grey { background: url('images/close_grey.png') no-repeat; }
+	#lbClose.red, #lbCloseTop.red { background: url('images/close_red.png') no-repeat; }
+	#lbClose.green, #lbCloseTop.green { background: url('images/close_green.png') no-repeat; }
+	#lbClose.blue, #lbCloseTop.blue { background: url('images/close_blue.png') no-repeat; }
+	#lbClose.gold, #lbCloseTop.gold { background: url('images/close_gold.png') no-repeat; }
+	#lbClose.orange, #lbCloseTop.orange { background: url('images/close_orange.png') no-repeat; }
+	
+#lbPrint, #lbPrintTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbPrint.black, #lbPrintTop.black { background: url('images/print_black.png') no-repeat; }
+	#lbPrint.grey, #lbPrintTop.grey { background: url('images/print_grey.png') no-repeat; }
+	#lbPrint.red, #lbPrintTop.red { background: url('images/print_red.png') no-repeat; }
+	#lbPrint.green, #lbPrintTop.green { background: url('images/print_green.png') no-repeat; }
+	#lbPrint.blue, #lbPrintTop.blue { background: url('images/print_blue.png') no-repeat; }
+	#lbPrint.gold, #lbPrintTop.gold { background: url('images/print_gold.png') no-repeat; }
+	#lbPrint.orange, #lbPrintTop.orange { background: url('images/print_orange.png') no-repeat; }
+
+#lbPlay, #lbPlayTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbPlay.black, #lbPlayTop.black { background: url('images/play_black.png') no-repeat; }
+	#lbPlay.grey, #lbPlayTop.grey { background: url('images/play_grey.png') no-repeat; }
+	#lbPlay.red, #lbPlayTop.red { background: url('images/play_red.png') no-repeat; }
+	#lbPlay.green, #lbPlayTop.green { background: url('images/play_green.png') no-repeat; }
+	#lbPlay.blue, #lbPlayTop.blue { background: url('images/play_blue.png') no-repeat; }
+	#lbPlay.gold, #lbPlayTop.gold { background: url('images/play_gold.png') no-repeat; }
+	#lbPlay.orange, #lbPlayTop.orange { background: url('images/play_orange.png') no-repeat; }
+	
+#lbPause, #lbPauseTop { width: 26px; height: 28px; float: right; margin: 0 0 1px 8px; border: none !important; }
+	#lbPause.black, #lbPauseTop.black { background: url('images/pause_black.png') no-repeat; }
+	#lbPause.grey, #lbPauseTop.grey { background: url('images/pause_grey.png') no-repeat; }
+	#lbPause.red, #lbPauseTop.red { background: url('images/pause_red.png') no-repeat; }
+	#lbPause.green, #lbPauseTop.green { background: url('images/pause_green.png') no-repeat; }
+	#lbPause.blue, #lbPauseTop.blue { background: url('images/pause_blue.png') no-repeat; }
+	#lbPause.gold, #lbPauseTop.gold { background: url('images/pause_gold.png') no-repeat; }
+	#lbPause.orange, #lbPauseTop.orange { background: url('images/pause_orange.png') no-repeat; }
+	
+/* Some extra padding on the bottom buttons so it's not too close to the border. */
+#lbClose, #lbPrint, #lbPlay, #lbPause { margin: 0 0 6px 8px; }
+
+/* Lytetip */
+* html a:hover { background: transparent; }
+
+.lytetip { outline: none; border-bottom: 1px dotted; z-index:24; text-decoration:none; }
+.lytetip span {
+	color: #000000;
+	position: absolute;
+	top: 2em; left:0;
+	padding: 0.5em 0.8em;
+	font: 10pt "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+	background: #F4F5FB; 
+	border: 1px solid #888888;	
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	-webkit-box-shadow: 1px 2px 3px 0px #949494;-moz-box-shadow: 1px 2px 3px 0px #949494;box-shadow: 1px 2px 3px 0px #949494;
+	width: 240px;
+	filter: alpha(opacity:95);
+	KHTMLOpacity: 0.95;
+	MozOpacity: 0.95;
+	opacity: 0.95;
+	text-align: left;
+	display: none;
+}
+
+.lytetip:hover { z-index:25; color: #aaaaff; background:; text-decoration: none; }
+.lytetip:hover span { display: block; }
+.lytetip:hover em {	font-size: 1.2em; font-weight: bold; display: block; padding: 0 0 0.6em 0; }
+.lytetip:hover .lbTipImg { border: 0; margin: -20px 0 0 -36px; float: left; position: absolute; height: 32px; width: 32px; }
+.lbErrorImg { background: url('images/error.png'); }
+.lbInfoImg { background: url('images/info.png'); }
+.lbHelpImg { background: url('images/help.png'); }
+.lbWarningImg { background: url('images/warning.png'); }
+span.lbCustom { padding: 0.5em 0.8em 0.5em 1.5em !important; }
+span.lbIEFix { padding: 0.5em 0.8em !important; }
+.lytetip .lbError { background: #FFE7D7; border: 1px solid #FF3334; }
+.lytetip .lbInfo, .lytetip .lbHelp { background: #D2EEF7; border: 1px solid #2BB0D7; }
+.lytetip .lbWarning { background: #FFFFAA; border: 1px solid #FFAD33; }

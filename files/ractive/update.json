@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ractive",
+  "repo": "ractivejs/ractive",
+  "files": {
+    "include": ["ractive-legacy.min.js", "ractive-legacy.runtime.min.js", "ractive.min.js", "ractive.runtime.min.js"]
+  }
+}

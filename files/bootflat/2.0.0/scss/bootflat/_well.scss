@@ -1,0 +1,43 @@
+// Variables
+//------------------------------------------------------
+$well-font-color:            $darkgray-dark !default;
+$well-background-color:      $white !default;
+
+$well-blockquote-color:      $mediumgray-light !default; 
+
+$well-radius:                4px;
+$well-shadow:                0 1px 2px rgba(0, 0, 0, .2) !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("well") {
+
+  /**
+   * well
+   * --------------------------------------------------
+   */
+
+  .well {
+    padding: 10px;
+    border: none;
+    @include radius($type: border-radius, $value: $well-radius);
+    color: $modal-font-color; 
+    background-color: $well-background-color; 
+    @include box-shadow($value: $well-shadow);
+
+    & blockquote {
+      border-color: $well-blockquote-color;
+    }
+    @at-root #{&}-lg {
+      padding: 20px;
+    }
+    @at-root #{&}-sm {
+      padding: 5px;
+    }
+  }
+
+}
+
+

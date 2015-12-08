@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinLight-Regular */@font-face {
+    font-family: 'LatoLatinLight';
+    src: url('LatoLatinLight-Regular.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinLight-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinLight-Regular.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinLight-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

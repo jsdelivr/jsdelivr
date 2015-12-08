@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fontawesome",
+  "repo": "FortAwesome/Font-Awesome",
+  "files": {
+    "include": ["./css/font-awesome.css", "./css/font-awesome.min.css", "./fonts/*"]
+  }
+}

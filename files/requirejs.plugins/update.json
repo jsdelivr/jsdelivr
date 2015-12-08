@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "requirejs-plugins",
+  "repo": "millermedeiros/requirejs-plugins",
+  "files": {
+    "basePath": "src/",
+    "include": ["*.js"]
+  }
+}

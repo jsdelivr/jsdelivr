@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "flexgrid",
+  "repo": "codingfriend1/flexgrid",
+  "files": {
+    "basePath": "CDN/",
+    "include": ["flexgrid.min.css", "flexgrid.min.js"]
+  }
+}

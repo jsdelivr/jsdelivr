@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "d3js",
+  "repo": "mbostock/d3",
+  "files": {
+    "include": ["d3.js", "d3.min.js"]
+  }
+}

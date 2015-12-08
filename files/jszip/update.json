@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jszip",
+  "repo": "Stuk/jszip",
+  "files": {
+    "basePath": "dist/",
+    "include": ["jszip.min.js"]
+  }
+}

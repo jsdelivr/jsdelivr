@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "waffle",
+  "repo": "LandonSchropp/waffle",
+  "files": {
+    "basePath": "build/",
+    "include": [ "waffle.min.css" ]
+  }
+}

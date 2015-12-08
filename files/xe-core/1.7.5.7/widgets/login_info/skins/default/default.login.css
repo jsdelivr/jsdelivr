@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+.account {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+.account>a,
+.account>.info .logout {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	background: #f7f7f7;
+	border: 1px solid #d4d8db;
+	border-radius: 2px;
+	box-shadow: 1px 1px 0 #f3f3f3;
+	color: #666;
+	text-decoration: none;
+	padding: 0 10px;
+	line-height: 21px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.account>fieldset {
+	position: absolute;
+	z-index: 2;
+	width: 229px;
+	top: 30px;
+	right: 0;
+	display: none;
+	border: 0;
+	background: #fff;
+	border: 1px solid #d7d7d7;
+	border-radius: 3px;
+	margin: 0;
+	padding: 20px 16px 18px 16px;
+	box-shadow: 0 1px 0 #aaa;
+}
+.account h2 {
+	font-size: 13px;
+	color: #666;
+	margin: 0 0 18px 0;
+	line-height: 1;
+}
+.account label {
+	display: block;
+	margin: 0 0 5px 0;
+	color: #666;
+	font-size: 12px;
+}
+.account input[type="text"],
+.account input[type="email"],
+.account input[type="password"] {
+	height: 21px;
+	line-height: 21px;
+	padding: 0 4px;
+	margin: 0 0 10px 0;
+	width: 219px;
+	background: #f6f6f6;
+	border: 1px solid #d6d6d6;
+	border-top: 2px solid #bfbebe;
+	border-bottom: 0;
+	box-shadow: 0 1px 0 #eae9e9 inset;
+}
+.account input[type="checkbox"] {
+	width: 13px;
+	height: 13px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+.account input[type="checkbox"]+label {
+	display: inline;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.account input[type="submit"] {
+	background: #484d51;
+	border: 1px solid #272b30;
+	color: #fff;
+	height: 27px;
+	line-height: 27px;
+	padding: 0 20px;
+	margin: 0;
+	vertical-align: top;
+	border-radius: 2px;
+	cursor: pointer;
+	box-shadow: 0 1px 0 #6d7174 inset;
+}
+.account .warning {
+	display: none;
+	color: #666;
+	line-height: 1.4;
+}
+.account .close {
+	background: none;
+	border: 0;
+	color: #ccc;
+	font-size: 22px;
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	font-weight: normal;
+}
+.account .close:hover,
+.account .close:focus {
+	color: #666;
+}
+.account .help {
+	list-style: none;
+	margin: 15px 0 0 0;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #e5e5e5;
+}
+.account .help li {
+	margin: 0 0 3px 0;
+}
+.account .help a {
+	position: relative;
+	background: #f5f5f5;
+	border: 1px solid #d0d0d0;
+	border-bottom-color: #b7b7b7;
+	border-radius: 2px;
+	text-decoration: none;
+	color: #666;
+	display: block;
+	line-height: 24px;
+	padding: 0 11px;
+	font-size: 12px;
+}
+.account .help a:after {
+	content: "";
+	position: absolute;
+	right: 4px;
+	top: 7px;
+	border: 4px solid transparent;
+	border-left-color: #b2b2b2;
+}
+.account .info {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.account .info>li {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+.account .info .user {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	margin: 0 10px 0 0;
+}
+.account .info .user:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin: 0 2px 0 0;
+	background: url(data: image/png;
+		base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKNJREFUeNpijI2NZcAC2IA4EIg5gXgrEL9GV8CCRZMQEJ8EYhUo/x0QpwPxGmRFTFg0+iFpghlUga4Im0ZmHE4nqJGBXI3vsIi9IEYjKBQvo4k1EaPxFxDPReLfB+J9xGiURgtFRSAuxafRA4iXAvFtIJZAU9cFxJeAuAhqMDgBcEIjXJdAyILke6GG+INsFCVCE3o8e4Ns/ALEsxhIA0cAAgwAuLwYvH6hEcQAAAAASUVORK5CYII=) no-repeat;
+}
+.account .info .admin {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	margin: 0 10px 0 0;
+}
+.account .info .admin:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin: 0 2px 0 0;
+	background: url() no-repeat;
+}
+.account .info .admin:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin: 0 2px 0 0;
+	background:  url(../../../../common/img/glyphicons-halflings.png) no-repeat -433px -2px;
+}

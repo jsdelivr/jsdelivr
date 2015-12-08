@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clappr-playback-name-plugin",
+  "repo": "clappr/clappr-playback-name-plugin",
+  "files": {
+    "basePath": "dist/",
+    "include": ["playbackname.min.js"]
+  }
+}

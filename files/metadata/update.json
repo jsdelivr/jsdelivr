@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "metadata.js",
+  "repo": "oknosoft/metadata.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*"]
+  }
+}

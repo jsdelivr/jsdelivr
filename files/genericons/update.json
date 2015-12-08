@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "genericons",
+  "repo": "Automattic/Genericons",
+  "files": {
+    "include": ["Genericons-Regular.otf", "genericons.css", "./font/**/*"]
+  }
+}

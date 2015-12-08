@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "steno.js",
+  "repo": "kenshinthebattosai/steno.js",
+  "files": {
+    "include": ["steno.min.js"]
+  }
+}

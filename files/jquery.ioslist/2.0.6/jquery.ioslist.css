@@ -1,0 +1,84 @@
+.ioslist-wrapper{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+}
+
+
+.ioslist-group-container {
+	margin: 0;
+	min-height: 1px;
+	overflow: hidden;
+	padding: 24px 0 0 0;
+	position: relative;
+}
+.ioslist-group-header, .ioslist-fake-header {
+	background: #B8C1C8;
+	border-bottom: 1px solid #989EA4;
+	border-top: 1px solid #717D85;
+	color: #FFF;
+	font: normal 18px/21px Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 2px 0 0 12px;
+	position: absolute;
+	text-shadow: 0 1px #646A6E;
+	-moz-text-shadow: 0 1px #646A6E;
+	-webkit-text-shadow: 0 1px #646A6E;
+}
+.ioslist-group-header {
+	bottom: auto;
+	min-height: 1px;
+	top: 0;
+	width: 273px;
+}
+.ioslist-fake-header {
+	width: 273px;
+	z-index: 1000;
+}
+
+.ioslist-fake-header.ioslist-hidden {
+	visibility: hidden;
+}
+.ioslist-group-container.ioslist-animated .ioslist-group-header {
+	bottom: 0;
+	top: auto;
+}
+
+/* Demo Styling */
+body {
+	font: normal 20px Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+#list1 {
+	height: 300px;
+	margin: 100px;
+	overflow: visible;
+	position: relative;
+	width: 300px;
+	zoom: 1;
+}
+
+.ioslist ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ioslist li {
+	font: normal 20px/45px Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0 0 0 12px;
+	white-space: nowrap;
+}
+
+.ioslist li + li {
+	border-top: 1px solid #CCC;
+}
+
+[data-ios="true"] .ioslist-group-header,
+[data-ios="true"] .ioslist-fake-header {
+	width: 288px; /*scrollbars aren't visible in iOS devices, so make the headers wider */
+}

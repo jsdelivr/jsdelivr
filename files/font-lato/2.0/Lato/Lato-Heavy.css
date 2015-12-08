@@ -1,0 +1,11 @@
+/* Webfont: Lato-Heavy */@font-face {
+    font-family: 'LatoHeavy';
+    src: url('Lato-Heavy.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Heavy.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Heavy.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "js-md5",
+  "repo": "emn178/js-md5",
+  "files": {
+    "basePath": "build/"
+  }
+}

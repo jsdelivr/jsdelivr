@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* widgetLanguage */
+.widgetLanguage p{ float:right; margin:0;}
+.widgetLanguage .langList { display:none; position:absolute; margin:0; padding:0; z-index:999;}
+.widgetLanguage .langList  li{ list-style:none;}
+.widgetLanguage .langList  li a{ font-size:12px; display:block; padding:2px 5px;}
+.widgetLanguage p a{ color:#b3b3b3;}
+.widgetLanguage .langList { background:#fff; border:1px solid #ccc;}
+.widgetLanguage .langList  a{ color:#333;}
+
+.widgetContainer.black .widgetLanguage p{ float:right; margin:0;}
+.widgetContainer.black .widgetLanguage .langList { display:none; position:absolute; margin:0; padding:0; z-index:999;}
+.widgetContainer.black .widgetLanguage .langList  li{ list-style:none;}
+.widgetContainer.black .widgetLanguage .langList  li a{ font-size:12px; display:block; padding:2px 5px;}
+.widgetContainer.black .widgetLanguage p a{ color:#b3b3b3;}
+.widgetContainer.black .widgetLanguage .langList { background:#fff; border:1px solid #ccc;}
+.widgetContainer.black .widgetLanguage .langList  a{ color:#333;}

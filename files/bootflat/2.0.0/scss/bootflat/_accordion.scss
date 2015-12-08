@@ -1,0 +1,104 @@
+// Variables
+//------------------------------------------------------
+$accordion-header-border-color:                $lightgray-dark !default;
+
+$accordion-panel-header-color:                 $lightgray-dark !default;
+$accordion-panel-background-color:             $white !default;
+$accordion-panel-font-color:                   $darkgray-dark !default;
+$accordion-panel-font-color-hover:             $mediumgray-dark !default;
+$accordion-panel-radius:                       4px !default;
+$accordion-panel-shadow:                       0 1px 2px rgba(0, 0, 0, .2) !default;
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("accordion") {
+
+  /**
+   * accordion
+   * --------------------------------------------------
+   */
+
+  .accordion {
+    & #{&}-header {
+      margin-top: 0;
+      font-size: 16px;
+      display: block;
+        & a {
+          font-weight: normal;
+          font-size: 15px;
+          color: $accordion-panel-font-color-hover
+        }
+        & a:hover,
+        & a:focus,
+        & a:active {
+          color: $accordion-panel-font-color;
+          text-decoration: none;
+        }
+        & .glyphicon {
+          position: relative;
+          top: -1px;
+          font-size: 10px;
+        }
+        & + div {
+          display: block !important;
+          @include transition (all 0.3s ease);
+          height: 0;
+          overflow: hidden;
+        }
+        &.open + div {
+          height: auto;
+        }
+        &.open a,
+        &.open a:hover,
+        &.open a:focus,
+        &.open a:active {
+          color: $accordion-panel-font-color;
+          text-decoration: none;
+        }
+        &.open .glyphicon {
+          @include transform($value: rotate(-30deg));
+        }
+    }
+    & .accordion-body {
+      padding: 10px 0;
+    }
+  }
+
+  .accordion-panel {
+    background-color: $accordion-panel-background-color;
+    @include radius($type: border-radius, $value: $accordion-panel-radius);
+    @include box-shadow($value: $accordion-panel-shadow);
+
+    & .accordion-header {
+      margin-bottom: 0;
+      border-top: 1px solid $accordion-header-border-color;
+      &:first-child {
+        border-top: none;
+        @include radius($type: border-radius, $value: $accordion-panel-radius $accordion-panel-radius 0 0);
+      }
+      &:last-child {
+        @include radius($type: border-radius, $value: 0 0 $accordion-panel-radius $accordion-panel-radius);
+      }
+      & a,
+      & a:hover,
+      & a:active,
+      & a:focus {
+        padding: 10px 15px;
+        display: block;
+        color: $accordion-panel-font-color;
+      }
+      &.open {
+        background-color: $accordion-panel-header-color;
+      }
+    }
+    & .accordion-body {
+      padding: 10px;
+    }
+  }
+
+}
+
+

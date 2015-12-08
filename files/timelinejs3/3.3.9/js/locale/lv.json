@@ -1,0 +1,75 @@
+{
+    "lang": "lv", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Mar.", 
+            "Apr.", 
+            "Mai.", 
+            "Jūn.", 
+            "Jūl.", 
+            "Aug.", 
+            "Sep.", 
+            "Okt.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Sun.", 
+            "Mon.", 
+            "Tues.", 
+            "Wed.", 
+            "Thurs.", 
+            "Fri.", 
+            "Sat."
+        ], 
+        "day": [
+            "Svētdiena", 
+            "Pirmdiena", 
+            "Otrdiena", 
+            "Trešdiena", 
+            "Ceturtdiena", 
+            "Piektdiena", 
+            "Sestdiena"
+        ], 
+        "month": [
+            "Janvāris", 
+            "Februāris", 
+            "Marts", 
+            "Aprīlis", 
+            "Maijs", 
+            "Jūnijs", 
+            "Jūlijs", 
+            "Augusts", 
+            "Septembris", 
+            "Oktobris", 
+            "Novembris", 
+            "Decembris"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "lv"
+    }, 
+    "messages": {
+        "loading": "Ielādējas", 
+        "contract_timeline": "Sašaurināt grafiku", 
+        "return_to_title": "Atgriezties uz sākumu", 
+        "wikipedia": "No Wikipedia, brīvās enciklopēdijas", 
+        "loading_content": "Ielādējas saturs", 
+        "expand_timeline": "Izvērst grafiku", 
+        "loading_timeline": "Ielādējas grafiks... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' hh:MM TT", 
+        "full_short": "mmm d", 
+        "full": "d. mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "hh:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

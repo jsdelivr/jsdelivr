@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.knob",
+  "repo": "aterrien/jQuery-Knob",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

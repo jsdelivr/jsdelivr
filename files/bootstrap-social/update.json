@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-social",
+  "repo": "lipis/bootstrap-social",
+  "files": {
+    "include": ["bootstrap-social.css"]
+  }
+}

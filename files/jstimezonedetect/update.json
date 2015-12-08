@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "jstimezonedetect",
+  "files": {
+    "basePath": "dist/",
+    "include": ["jstz.js", "jstz.min.js"]
+  }
+}

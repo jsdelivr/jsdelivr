@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "thymol.js",
+  "repo": "thymol/thymol.js",
+  "files": {
+    "basePath": "jsdelivr/",
+    "include": ["thymol.min.js", "thymol-lite.min.js", "thymol-full.min.js"]
+  }
+}

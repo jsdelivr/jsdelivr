@@ -1,0 +1,223 @@
+/*
+ *  Part of Tipped - The jQuery Tooltip
+ *  http://projects.nickstakenburg.com/tipped
+ *
+ *  Documentation:
+ *  http://projects.nickstakenburg.com/tipped/documentation/skins
+ *
+ *  IMPORTANT!:
+ *  It's recommended to add CSS for custom skins in a separate file,
+ *  that way this file can be updated without losing your own skins.
+ */
+ 
+/* Font styling for all skins */
+.t_ContentContainer {
+  color: #333;
+  font-size: 11px;
+  line-height: 17px;
+  padding: 10px;
+}
+
+/* Skins with a different font color */
+.t_Content_black,
+.t_Content_dark,
+.t_Content_gray {
+  color: #efefef;
+}
+
+/* Styling links so they are visible no matter is defined on the page behind */
+.t_ContentContainer a,
+.t_ContentContainer a:hover {
+  color: #8e8e8e;
+  text-decoration: none;
+  background: none;
+  border: 0;
+}
+.t_ContentContainer a:hover {
+  text-decoration: underline;
+}
+
+/* Some skins need different link colors for visibility */
+.t_Content_dark a, .t_Content_dark a:hover,
+.t_Content_black a, .t_Content_black a:hover {
+  color: #ccc;
+}
+.t_Content_gray a, .t_Content_gray a:hover { color: #232323; }
+
+
+
+/* RGB */
+.t_Content_red,
+.t_Content_green,
+.t_Content_blue {
+  color: #efefef;
+  font-size: 11px;
+  line-height: 17px;
+  padding: 10px;
+}
+
+.t_Content_red a,
+.t_Content_red a:hover,
+.t_Content_green a,
+.t_Content_green a:hover,
+.t_Content_blue a,
+.t_Content_blue a:hover {
+  text-decoration: none;
+  background: none;
+  border: 0;
+  color: #ccc;
+}
+.t_Content_red a:hover,
+.t_Content_green a:hover,
+.t_Content_blue a:hover {
+  text-decoration: underline;
+}
+
+
+/* tiny */
+.t_Content_tiny {
+  color: #efefef;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 6px 9px;
+}
+.t_Content_tiny a,
+.t_Content_tiny a:hover {
+  color: #b3b3b3;
+  text-decoration: none;
+  background: none;
+  border: 0;
+}
+
+
+/*
+ * Layout (DON'T MODIFY BELOW!)
+ */
+.t_Tooltip {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  background-color: transparent;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.t_Tooltip.t_hidden { opacity: 0; }
+.t_Tooltip.t_visible { opacity: 1; }
+
+.t_Skin {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.t_Skin * { zoom: 1; } /* IE7 */
+
+.t_Bubble {
+  position: relative;
+}
+
+.t_Background,
+.t_Stem { position: absolute; }
+
+.t_Close {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+}
+
+.t_CloseButtonShift {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.t_CloseState {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+}
+
+.t_Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.t_iframeShim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/*
+ * Shadow
+ */
+.t_Shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.t_Shadow .t_ShadowInnerWrapper{
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.t_ShadowBubble {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.t_ShadowBackground,
+.t_ShadowStem { position: absolute; }
+.t_ShadowBackground *, .t_ShadowStem * { float: left; }
+
+ 
+.t_CloseButtonShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+.t_UpdateQueue {
+  position: absolute;
+  top: -15000px;
+  left: -15000px;
+  width: 5000px;
+  height: 5000px;
+  visibility: hidden;
+}
+.t_UpdateQueue .t_Tooltip,
+.t_UpdateQueue .t_Content {
+  position: relative;
+  overflow: visible;
+  float: left;
+  top: auto;
+  left: auto;
+  width: 100%;
+}
+.t_Tooltip .t_ContentContainer {
+  float: left;
+  clear: both;
+  position: relative;  
+}
+.t_UpdateQueue .t_ContentContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

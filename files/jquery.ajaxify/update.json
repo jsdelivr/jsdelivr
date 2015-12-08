@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.ajaxify",
+  "repo": "arvgta/ajaxify",
+  "files": {
+    "basePath": "/",
+    "include": ["ajaxify.js", "ajaxify.min.js"]
+  }
+}

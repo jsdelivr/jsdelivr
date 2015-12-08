@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "scrollReveal",
+  "repo": "jlmakes/scrollReveal.js",
+  "files": {
+	"basePath": "dist/"
+  }
+}

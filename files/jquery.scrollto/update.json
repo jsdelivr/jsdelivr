@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.scrollTo",
+  "repo": "flesler/jquery.scrollTo",
+  "files": {
+      "include": ["jquery.scrollTo.min.js", "jquery.scrollTo.js"]
+  }
+}

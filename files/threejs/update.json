@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "threejs",
+  "repo": "mrdoob/three.js",
+  "files": {
+    "basePath": "build/"
+  }
+}

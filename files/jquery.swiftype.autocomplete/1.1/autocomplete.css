@@ -1,0 +1,138 @@
+form input.st-search-input {
+  font-size: 12px;
+  padding: 5px 9px 5px 27px;
+  height: 18px;
+  width: 200px;
+  color: #666;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fcfcfc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUFJREFUeNqU0j0oRWEcx/Hj3ifvlMHL7C1lY7mDwUBKkoksBjKJxWIQu7xlOybDLVGukhhMZDFbxGBS8nIjKR3E96nf0dPjuuVfn+6tc35P//P8/yYMw8CpbgygGQlcYw8H+Ai8MvotxQImgt81hk1M4cEPF2IV43jCGo7wjk5MYhhlGMKbG+7BKO4wiGPn8DO1vIN+jGA9fpjQaUksecG4zjGPL3VQ5IZb9OAw+LtO1FkjatxwUuEoTzjSbRu9/xO+0W97nnArqvXuoxve1/9p1OUIlmNGU7EX9+KGt3GKNuyiC5WoQAe2NJFP3PpzzmoR0khpxle6h3pnkeKJPCPjbtglerVFfWhSVxfqJtK4qrChTMY4XdjVm9O21aIA92LrFcv6HHtAsclxQVnxa0WfsqgDUib4X9muStCA2W8BBgDJ0EeGeFZ8WAAAAABJRU5ErkJggg==) no-repeat 7px 7px;
+}
+
+.swiftype-widget .autocomplete {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #fff;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+.swiftype-widget .autocomplete ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #fff;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+.swiftype-widget .autocomplete li {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  padding: 10px 8px;
+  font-size: 13px;
+  list-style-type: none;
+  background-image: none;
+  margin: 0;
+}
+
+.swiftype-widget .autocomplete li:first-child {
+  border-top: 1px solid #fff;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.swiftype-widget .autocomplete li:last-child {
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  -ms-border-radius: 0 0 3px 3px;
+  -o-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+.swiftype-widget .autocomplete li.active {
+  border-top: 1px solid #145A93;
+  border-bottom: 1px solid #086aa8;
+  background-color: #1285d5;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37a3e9), color-stop(100%, #1285d5));
+  background: -webkit-linear-gradient(#37a3e9, #1285d5);
+  background: -moz-linear-gradient(#37a3e9, #1285d5);
+  background: -o-linear-gradient(#37a3e9, #1285d5);
+  background: linear-gradient(#37a3e9, #1285d5);
+  -webkit-box-shadow: 0 1px 0 #69bdf3 inset;
+  -moz-box-shadow: 0 1px 0 #69bdf3 inset;
+  box-shadow: 0 1px 0 #69bdf3 inset;
+}
+
+.swiftype-widget .autocomplete li p {
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.swiftype-widget .autocomplete li p.title {
+  font-weight: bold;
+  color: #1c6cb5;
+}
+
+.swiftype-widget .autocomplete li p.title em {
+  color: #0b2644;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.swiftype-widget .autocomplete li.active p.title {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.swiftype-widget .autocomplete li.active p.title em {
+  color: #fff;
+  font-style: normal;
+}
+
+.swiftype-widget .autocomplete li .sections {
+  color: #999;
+  font-size: 11px;
+}
+
+.swiftype-widget .autocomplete li .sections em {
+  color: #666;
+  font-style: normal;
+}
+
+.swiftype-widget .autocomplete li .sections .section {
+  display: inline;
+}
+
+.swiftype-widget .autocomplete li.active .sections {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #a9d7f1;
+}
+
+.swiftype-widget .autocomplete li.active .sections em {
+  color: #a9d7f1;
+  font-style: normal;
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "picturefill",
+  "repo": "scottjehl/picturefill",
+  "files": {
+    "basePath": "dist/",
+	"include": ["picturefill.min.js"]
+  }
+}

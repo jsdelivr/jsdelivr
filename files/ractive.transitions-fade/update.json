@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ractive-transitions-fade",
+  "repo": "ractivejs/ractive-transitions-fade",
+  "files": {
+		"basePath": "dist/",
+		"include": ["*.min.*"]
+  }
+}

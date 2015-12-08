@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "simpleStorage",
+  "repo": "andris9/simpleStorage",
+  "files": {
+    "include": ["simpleStorage.min.js"]
+  }
+}

@@ -1,0 +1,133 @@
+// Exports
+//------------------------------------------------------
+
+@include exports("button-group") {
+
+  /**
+   * button-group
+   * --------------------------------------------------
+   */
+  .btn-group {
+    @at-root #{&}.open .dropdown-toggle {
+        @include box-shadow($value: inset 0 1px 2px rgba(0, 0, 0, .125));
+    }     
+
+    & .btn {
+      border-left-color: darken($button-normal, 7%);
+    } 
+ 
+    @at-root #{&}.open .btn-default.dropdown-toggle,
+    & .btn-default:focus,
+    & .btn-default:active,
+    & .btn-default.active {
+      color: $button-default;
+    }
+
+    & .btn-primary,
+    & .btn-primary:focus,
+    & .btn-primary:active,
+    & .btn-primary.active {
+      border-left-color: darken($button-primary, 7%);
+    } 
+
+    & .btn-success,
+    & .btn-success:focus,
+    & .btn-success:active,
+    & .btn-success.active {
+      border-left-color: darken($button-success, 7%);
+    } 
+
+    & .btn-warning,
+    & .btn-warning:focus,
+    & .btn-warning:active,
+    & .btn-warning.active {
+      border-left-color: darken($button-warning, 12%);
+    } 
+
+    & .btn-danger,
+    & .btn-danger:focus,
+    & .btn-danger:active,
+    & .btn-danger.active {
+      border-left-color: darken($button-danger, 7%);
+    } 
+
+    & .btn-info,
+    & .btn-info:focus,
+    & .btn-info:active,
+    & .btn-info.active {
+      border-left-color: darken($button-info, 7%);
+    } 
+
+    & .btn:first-child,
+    & .btn-primary:first-child,
+    & .btn-success:first-child,
+    & .btn-warning:first-child, 
+    & .btn-danger:first-child,
+    & .btn-info:first-child {
+      border-left-color: transparent;
+    }   
+  }
+
+  .btn-group-vertical {
+    & .btn,
+    & .btn-group .btn-primary {
+      border-top-color: darken($button-normal, 7%) !important;
+    } 
+
+    & .btn-primary,
+    & .btn-primary:focus,
+    & .btn-primary:active,
+    & .btn-primary.active,
+    & .btn-group .btn-primary {
+      border-top-color: darken($button-primary, 7%) !important;
+    } 
+
+    & .btn-success,
+    & .btn-success:focus,
+    & .btn-success:active,
+    & .btn-success.active,
+    & .btn-group .btn-success {
+      border-top-color: darken($button-success, 7%) !important;
+    } 
+
+    & .btn-warning,
+    & .btn-warning:focus,
+    & .btn-warning:active,
+    & .btn-warning.active,
+    & .btn-group .btn-warning {
+      border-top-color: darken($button-warning, 12%) !important;
+    } 
+
+    & .btn-danger,
+    & .btn-danger:focus,
+    & .btn-danger:active,
+    & .btn-danger.active,
+    & .btn-group .btn-danger {
+      border-top-color: darken($button-danger, 7%) !important;
+    } 
+
+    & .btn-info,
+    & .btn-info:focus,
+    & .btn-info:active,
+    & .btn-info.active,
+    & .btn-group .btn-info {
+      border-top-color: darken($button-info, 7%) !important;
+    } 
+
+    & .btn:not(.btn-default):first-child,
+    & .btn-primary:first-child,
+    & .btn-success:first-child,
+    & .btn-warning:first-child, 
+    & .btn-danger:first-child,
+    & .btn-info:first-child {
+      border-top: none;
+    }     
+  }
+
+}
+
+
+
+
+
+

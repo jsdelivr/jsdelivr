@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "localStorage",
+  "repo": "mortzdk/localStorage",
+  "files": {
+  	"basePath": "dist/",
+    "include": ["*.min.js", "*.swf"]
+  }
+}

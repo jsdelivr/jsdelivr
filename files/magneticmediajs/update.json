@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "magneticmediajs",
+  "repo": "arnaudleyder/magneticmediajs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

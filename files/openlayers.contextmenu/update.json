@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ol3-contextmenu",
+  "repo": "jonataswalker/ol3-contextmenu",
+  "files": {
+    "basePath": "build/",
+    "include": ["ol3-contextmenu.js", "ol3-contextmenu.css", "ol3-contextmenu.min.css"]
+  }
+}

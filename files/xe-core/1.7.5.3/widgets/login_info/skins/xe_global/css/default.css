@@ -1,0 +1,54 @@
+.login_default { margin:0; padding:0; border:none; position:relative; _padding-top:2px; display:block;}
+*:first-child+html body .login_default { padding-top:2px;}
+.login_default legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+form .login_default { position:relative;  padding:25px 0 24px 0; width:161px; margin:0 auto}
+.login_default h2{ margin:0; font-size:14px; margin-bottom:8px;}
+form .login_default .idpwWrap { overflow:hidden; clear:both;}
+form .login_default .idpw { float:left;}
+form .login_default .idpw input { border:1px solid #c9c9c9; color:#282828; width:149px; background:#fbfbfb; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma; margin-bottom:6px;}
+form .login_default .login_mod{margin:14px 0 6px 0; padding:0}
+
+form .login_default p.securitySignIn { clear:both; padding:0 0 0 18px; margin:4px 0 0 0; }
+form .login_default p.noneSSL { background:url("../images/none_ssl.png") no-repeat left top; }
+form .login_default p.SSL { background:url("../images/ssl.png") no-repeat left top; }
+form .login_default p.noneSSL a { color:#BF6801; text-decoration:none; }
+form .login_default p.SSL a { color:#9CAC74; text-decoration:none; }
+
+form .login_default p.save { margin:0; clear:both; padding:0;}
+form .login_default p.save input { vertical-align:middle; margin:0;_margin:-3px;}
+*:first-child+html body form .login_default p input { margin:-3px; }
+form .login_default p.save label { font:.9em; color:#999999;}
+form .login_default ul.help { margin:0;overflow:hidden; padding:.5em 0 0 0; white-space:nowrap; list-style:none; }
+form .login_default ul.help li { display:block; padding:0 3px 0 0; background:url(../images/default/bu_v1.gif) no-repeat 0 50%;  }
+form .login_default ul.help li.first-child { padding-left:0; margin-bottom:3px; }
+form .login_default ul.help li a {color:#54564b; font:.9em; white-space:nowrap; text-decoration:none; padding-left:9px; }
+form .login_default ul.help li.first-child a { color:#54564b; text-decoration:none;}
+form .login_default ul.help li a:hover { text-decoration:underline; }
+form .login_default .userName { position:relative;overflow:hidden; padding:0 0 6px 0; margin-top:-5px; *zoom:1}
+form .login_default .userName strong { color:#282828; margin:7px 0 0 2px; font:bold .9em Tahoma; display:inline-block}
+form .login_default .userName a { position:relative; right:0px;}
+form .login_default .userName img { border:none; }
+form .login_default .userName .u_name{display:inline-block;width:100px;float:left;}
+form .login_default .userName .u_name div{display:inline-block;}
+form .login_default .userName .sign_btn{float:right;}
+form .login_default ul.userMenu { margin:0; position:relative; padding:0 0 6px 4px; margin-top:10px;}
+form .login_default ul.userMenu li { list-style:none; padding-left:10px; background:url(../images/default/bu_v1.gif) no-repeat left 7px;margin-bottom:5px;}
+form .login_default ul.userMenu li a { color:#54564b; text-decoration:none;}
+form .login_default ul.userMenu li a:hover { text-decoration:underline;}
+form .login_default p.latestLogin { margin:0; color:#999999; font:.9em;}
+form .login_default p.latestLogin span { font:1em Tahoma;}
+
+img.login_mask { width:201px; height:5px; background:#ffffff; display:block;}
+.openid_login_default { margin:0; padding:0; border:2px solid #d9d9d9; width:196px; position:relative; _padding-top:2px; display:block; }
+*:first-child+html body .openid_login_default { padding-top:2px;}
+.openid_login_default legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+form .openid_login_default { position:relative; border:1px solid #cacaca; padding:11px 11px 7px 11px; width:172px; }
+form .openid_login_default .idpwWrap { overflow:hidden; clear:both; width:172px;}
+form .openid_login_default .idpw { float:left;}
+form .openid_login_default .idpw p { margin:0; padding:0; margin-bottom:5px; background: url(../images/openid_login_bg.gif) left no-repeat; padding-left:18px; font-size:.9em Tahoma;color:#999999}
+form .openid_login_default .idpw input { border:1px solid #c9c9c9; color:#282828; width:105px; background:#fbfbfb; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma; }
+form .openid_login_default .login { float:right;}
+form .openid_login_default p.save { margin:0; padding:0; clear:both; padding:.3em 0;}
+form .openid_login_default p.save input { vertical-align:middle; _margin:-3px;}
+*:first-child+html body form .openid_login_default p input { margin:-3px; }
+form .openid_login_default p.save label { font:.9em; color:#999999;}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "skrollr",
+  "repo": "Prinzhorn/skrollr",
+  "files": {
+    "basePath": "dist/",
+    "include": ["skrollr.min.js"]
+  }
+}

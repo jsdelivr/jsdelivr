@@ -1,0 +1,16 @@
+@font-face{
+    font-family: 'zero-width';
+    src: url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'zero-width';
+    src: url(http://:/) format("No-IE-404"),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.woff') format('woff'),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.svg') format('svg'),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

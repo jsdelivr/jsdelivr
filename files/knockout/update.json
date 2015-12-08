@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "knockout",
+  "repo": "knockout/knockout",
+  "files": {
+    "basePath": "dist/",
+    "include": ["knockout.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.ui-router",
+  "repo": "angular-ui/ui-router",
+  "files": {
+    "basePath": "release/"
+  }
+}

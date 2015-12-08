@@ -1,0 +1,18 @@
+{  
+   "packageManager":"github",
+   "name":"handlebarsjs",
+   "repo":"components/handlebars.js",
+   "note":"Seems to be official build repo; see github.com/wycats/handlebars.js#installing",
+   "files":{  
+      "include":[  
+         "handlebars.amd.js",
+         "handlebars.amd.min.js",
+         "handlebars.js",
+         "handlebars.min.js",
+         "handlebars.runtime.amd.js",
+         "handlebars.runtime.amd.min.js",
+         "handlebars.runtime.js",
+         "handlebars.runtime.min.js"
+      ]
+   }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.ngtable",
+  "repo": "esvit/ng-table",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ng-table.js", "ng-table.css", "ng-table.min.js", "ng-table.min.css", "ng-table.min.js.map" ]
+  }
+}

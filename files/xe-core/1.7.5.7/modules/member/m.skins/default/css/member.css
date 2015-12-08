@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* Element Reset */
+.xm,
+.xm table,
+.xm input,
+.xm textarea,
+.xm select,
+.xm button{font-family:Tahoma,Geneva,sans-serif;font-size:12px;color:#333}
+.xm button,
+.xm input[type=submit],
+.xm input[type=reset],
+.xm input[type=button]{cursor:pointer;overflow:visible}
+.xm img{border:0}
+.xm p{line-height:1.5}
+/* Heading */
+.xm .hx{position:relative;border-bottom:1px solid #ccc8be;padding:8px 10px;margin:0}
+.xm .hx:after{content:"";margin:0 -10px;position:relative;top:10px;display:block;clear:both;height:1px;background:#fff}
+.xm .hx.h2{background:#e5e5e5;text-shadow:1px 1px 0 #fff;position:relative;zoom:1}
+.xm .hx>h2{margin:0 10px 0 0;display:inline;font-size:16px;line-height:1.4}
+.xm .hx a{color:#000}
+/* Content */
+.xm .co{margin: 10px;line-height: 1.4;font-size: 14px;color:#333}
+/* DL */
+.xm .dl{margin:15px 0}
+.xm .dl>dt{font-weight:bold;margin-top:10px}
+.xm .dl>dt>em{font-style:normal;color:#e00}
+.xm .dl>dd{margin-left:20px}
+/* Button Area */
+.xm .ba{margin:15px 0;padding:0;list-style:none;border:1px solid #ddd;border-radius:4px}
+.xm .ba li{border-top:1px solid #ddd}
+.xm .ba li:first-child{border:0}
+.xm .ba li>a,
+.xm .ba li>button,
+.xm .ba li>input{display:block;white-space:nowrap;padding:7px 10px;text-decoration:none;color:#000;background:#f4f4f4;text-shadow:0 1px 0 #fff;overflow:hidden;text-overflow:ellipsis}

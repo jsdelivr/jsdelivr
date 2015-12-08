@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "placeholders",
+  "repo": "jamesallardice/Placeholders.js",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}

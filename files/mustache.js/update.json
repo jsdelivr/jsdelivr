@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mustache.js",
+  "repo": "janl/mustache.js",
+  "files": {
+    "include": ["mustache.js", "mustache.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.slicknav",
+  "repo": "ComputerWolf/SlickNav",
+  "files": {
+ 		"basePath": "dist/",
+		"include": ["*.min.*", "slicknav.css"]
+  }
+}

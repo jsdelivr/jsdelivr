@@ -1,0 +1,10 @@
+{
+  "packageManager": "bower",
+  "name": "transportapi.js",
+  "repo": "transportapi/transportapi.js",
+  "files": {
+    "basePath": "dist/scripts",
+    "exclude": ["transportapi.js"]
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pako",
+  "repo": "nodeca/pako",
+  "files": {
+  	"basePath": "dist/",
+    "include": ["pako.min.js", "pako_inflate.min.js", "pako_deflate.min.js"]
+  }
+}

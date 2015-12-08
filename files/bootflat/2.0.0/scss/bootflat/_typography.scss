@@ -1,0 +1,126 @@
+// Variables
+//------------------------------------------------------
+$body-font-color:            $darkgray-dark !default;
+$body-background-color:      $white !default;
+
+$link-font-color:            $aqua-dark !default; 
+$link-font-color-hover:      $aqua-light !default; 
+
+$blockquote-border-color:    $mediumgray-light !default;
+
+$image-radius:               4px !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("typography") {
+
+  /**
+   * typography
+   * --------------------------------------------------
+   */
+
+  body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $body-font-color;
+    background-color: $body-background-color;
+  }
+  a {
+    color: $link-font-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $link-font-color-hover;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+  }
+  h1 small,
+  h2 small,
+  h3 small,
+  h4 small,
+  h5 small,
+  h6 small,
+  .h1 small,
+  .h2 small,
+  .h3 small,
+  .h4 small,
+  .h5 small,
+  .h6 small {
+    color: #e7e9ec;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  h6 {
+    font-weight: normal;
+  }
+  h1,
+  .h1 {
+    font-size: 51px;
+  }
+  h2,
+  .h2 {
+    font-size: 43px;
+  }
+  h3,
+  .h3 {
+    font-size: 30px;
+  }
+  h4,
+  .h4 {
+    font-size: 19px;
+  }
+  h5,
+  .h5 {
+    font-size: 18px;
+  }
+  h6,
+  .h6 {
+    font-size: 14px;
+  }
+  blockquote {
+    border-left: 3px solid $blockquote-border-color;
+  }
+  .img-rounded {
+    @include radius($type: border-radius, $value: $image-radius);
+  }
+  .img-comment {
+    font-size: 15px;
+    line-height: 1.2;
+    font-style: italic;
+    margin: 24px 0;
+  }
+
+}
+
+

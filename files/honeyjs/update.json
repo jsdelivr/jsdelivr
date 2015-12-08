@@ -1,0 +1,10 @@
+{
+    "packageManager": "github",
+    "name": "honeyjs",
+    "repo": "zudd/honeyjs",
+    "files": {
+        "include": [
+            "honey.min.js"
+        ]
+    }
+}

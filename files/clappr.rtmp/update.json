@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clappr-rtmp-plugin",
+  "repo": "clappr/clappr-rtmp-plugin",
+  "files": {
+    "basePath": "dist/",
+    "include": ["rtmp.min.js", "./assets/**/*"]
+  }
+}

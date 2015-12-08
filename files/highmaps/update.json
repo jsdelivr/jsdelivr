@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "highmaps",
+  "repo": "highslide-software/highmaps-release",
+  "files": {
+    "include": ["highmaps.js", "./modules/exporting.js", "./modules/heatmap.js", "./modules/map.js"]
+  }
+}

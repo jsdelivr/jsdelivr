@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.formstyler",
+  "repo": "Dimox/jQueryFormStyler",
+  "files": {
+    "include": ["jquery.formstyler.min.js", "jquery.formstyler.css"]
+  }
+}

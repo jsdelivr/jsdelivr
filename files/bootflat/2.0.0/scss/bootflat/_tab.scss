@@ -1,0 +1,179 @@
+// Variables
+//------------------------------------------------------
+$tab-background-color:                 $lightgray-dark !default;
+$tab-background-color-hover:           $lightgray-light !default;
+$tab-radius:                           4px !default;
+
+$tab-font-color:                       $darkgray-dark !default;
+$tab-font-color-acitve:                $white !default;
+
+$tab-aside-width:                      74px !default;
+
+$tab-border-color:                     $mediumgray-light !default;
+// Exports
+//------------------------------------------------------
+
+@include exports("tab") {
+
+  /**
+   * tab
+   * --------------------------------------------------
+   */
+  .nav-tabs {
+      border-bottom: none;
+      background-color: $tab-background-color;
+      @include radius($type: border-radius, $value: $tab-radius $tab-radius 0 0);
+
+      & > li {
+        margin-bottom: 0;
+        border-left: 1px solid $tab-border-color;
+      }
+      & > li:first-child {
+        border-left: none;
+      }
+      & > li > a {
+          margin-right: 0;
+          border: none;
+          @include radius($type: border-radius, $value: 0);
+          color: $tab-font-color;
+      }
+      & > li:first-child > a {
+        @include radius($type: border-radius, $value: $tab-radius 0 0 0);
+      }
+      & > li > a:focus,
+      & > li > a:hover {
+          border: none;
+          background-color: $tab-background-color-hover; 
+      }
+      & > li.active > a, 
+      & > li.active > a:focus, 
+      & > li.active > a:hover {
+          border: none;
+          background-color: $tab-font-color-acitve !important;
+      }
+
+      & .dropdown-toggle,
+      & .dropdown-toggle:hover,
+      & .dropdown-toggle:focus {
+          color: $tab-font-color;
+      }
+
+      & li.dropdown.open .dropdown-toggle {
+          color: $tab-font-color;
+          background-color: $tab-background-color-hover;          
+      } 
+      & li.dropdown.active.open .dropdown-toggle {
+          color: $tab-font-color;
+      }
+      & li.dropdown.active.open .dropdown-toggle .caret,
+      & li.dropdown.active .dropdown-toggle .caret {
+          border-top-color: $tab-font-color;
+          border-bottom-color: $tab-font-color;
+      }
+      & li.dropdown.open .caret,
+      & li.dropdown.open.active .caret,
+      & li.dropdown.open a:hover .caret,
+      & li.dropdown.open a:focus .caret,
+      & .dropdown-toggle .caret,
+      & .dropdown-toggle:hover .caret,
+      & .dropdown-toggle:focus .caret {
+          border-top-color: $tab-font-color;
+          border-bottom-color: $tab-font-color;
+      }
+
+      &.nav-justified > li > a {
+          margin-bottom: 0;
+          text-align: center;
+      }
+      &.nav-justified > .dropdown .dropdown-menu {
+          top: auto;
+          left: auto;
+      }
+      &.nav-justified > li > a {
+          @include radius($type: border-radius, $value: 0);
+      }
+      &.nav-justified > li:first-child > a {
+          @include radius($type: border-radius, $value: $tab-radius 0 0 0);        
+      }
+      &.nav-justified > li:last-child > a {
+          @include radius($type: border-radius, $value: 0 $tab-radius 0 0);        
+      }
+      &.nav-justified > .active > a,
+      &.nav-justified > .active > a:hover,
+      &.nav-justified > .active > a:focus {
+          border: none;
+      }
+      @media (min-width: 768px) {
+        &.nav-justified > li > a {
+            border-bottom: none;
+            @include radius($type: border-radius, $value: 0);
+        }
+        &.nav-justified > .active > a,
+        &.nav-justified > .active > a:hover,
+        &.nav-justified > .active > a:focus {
+            border-bottom: none;
+        }
+      }
+
+      @at-root .tab-content {
+          padding: 10px;
+      }
+  }
+
+  .tabs-below {
+      & .nav-tabs {
+          @include radius($type: border-radius, $value: 0 0 $tab-radius $tab-radius);
+      }
+      & .nav-tabs > li:first-child > a {
+          @include radius($type: border-radius, $value: 0 0 0 $tab-radius);
+      }
+      & .nav-tabs.nav-justified > li:last-child > a {
+          @include radius($type: border-radius, $value: 0 0 $tab-radius 0);        
+      }
+  }
+
+  .tabs-left .nav-tabs > li,
+  .tabs-right .nav-tabs > li {
+      float: none;
+      border-left: none;
+      border-top: 1px solid $tab-border-color; 
+  }
+  .tabs-left .nav-tabs > li:first-child,
+  .tabs-right .nav-tabs > li:first-child {
+      border-top: none;
+  }
+  .tabs-left .nav-tabs > li > a,
+  .tabs-right .nav-tabs > li > a {
+      min-width: $tab-aside-width;
+      margin-right: 0;
+  }
+  .tabs-left {
+    & .nav-tabs {
+        float: left;
+        margin-right: 19px;
+        @include radius($type: border-radius, $value: $tab-radius 0 0 $tab-radius);
+    }
+    & .nav-tabs > li:first-child > a {
+        @include radius($type: border-radius, $value: $tab-radius 0 0 0);      
+    }
+    & .nav-tabs > li:last-child > a {
+        @include radius($type: border-radius, $value: 0 0 0 $tab-radius);      
+    }
+  }
+  .tabs-right {
+    & .nav-tabs {
+        float: right;
+        margin-left: 19px;
+        @include radius($type: border-radius, $value: 0 $tab-radius $tab-radius 0);
+    }
+    & .nav-tabs > li:first-child > a {
+        @include radius($type: border-radius, $value: 0 $tab-radius 0 0);      
+    }
+    & .nav-tabs > li:last-child > a {
+        @include radius($type: border-radius, $value: 0 0 $tab-radius 0);      
+    }
+  }
+
+}
+
+

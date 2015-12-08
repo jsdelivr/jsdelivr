@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "riotgear",
+  "repo": "RiotGear/rg",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

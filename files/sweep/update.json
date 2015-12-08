@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "sweep",
+  "repo": "rileyjshaw/sweep",
+  "files": {
+    "basePath": "bin/",
+    "include": ["sweep.min.js"]
+  }
+}

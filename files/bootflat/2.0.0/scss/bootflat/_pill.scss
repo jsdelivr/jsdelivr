@@ -1,0 +1,45 @@
+// Variables
+//------------------------------------------------------
+$pill-background-color:               $aqua-dark !default;
+$pill-background-color-hover:         $lightgray-dark !default;
+$pill-font-color:                     $darkgray-dark !default;
+$pill-font-color-active:              $white !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("pill") {
+
+  /**
+   * pill
+   * --------------------------------------------------
+   */
+  .nav-pills {
+      & > li.active > a,
+      & > li.active > a:hover,
+      & > li.active > a:focus {
+          color: $pill-font-color-active;
+          background-color: $pill-background-color;
+      }
+      & > li > a {
+          color: $pill-background-color;
+      }
+      & > li > a:hover {
+          color: $pill-font-color;    
+          background-color: $pill-background-color-hover;
+      }
+      & > .active > a > .badge {
+          color: $pill-background-color;    
+      }
+      & .open > a, 
+      & .open > a:focus, 
+      & .open > a:hover {
+          color: $pill-font-color;
+          background-color: $pill-background-color-hover;        
+      }
+  }
+
+}
+
+

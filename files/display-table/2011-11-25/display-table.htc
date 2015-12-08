@@ -1,0 +1,272 @@
+<!DOCTYPE html><!-- DOCTYPE is needed to make IE version detection possible. -->
+<public:component lightweight="true"><public:attach event="ondocumentready" onevent="_(element)" />
+<script>
+/**
+ * display-table.htc by Marat Tanalin
+ * http://tanalin.com/en/projects/display-table-htc/
+ * @version 2011-11-25
+ */
+function _(element) {
+	var d = element.document;
+
+	// Exit if {display: table} is natively supported (IE8+).
+	// See http://tanalin.com/en/articles/ie-version-js/
+	if (d.querySelector) {
+		return;
+	}
+
+	var rspace = /\s+/g,
+	    prefix = 'dt-';
+
+	// If IE7+. See http://tanalin.com/en/articles/ie-version-js/
+	if (window.XMLHttpRequest) {
+		// IE6 can't read properties with leading dash, but can without,
+		// so using full prefix in IE7, and no-leading-dash one in IE6.
+		prefix = '-' + prefix;
+	}
+
+	var getCssValue = function(el, property) {
+	    return el.currentStyle.getAttribute(prefix + property);
+	};
+
+	var inArray = function(needle, haystack) {
+		var i = haystack.length;
+
+		while (i--) {
+			if (needle === haystack[i]) {
+				return true;
+			}
+		}
+
+		return false;
+	};
+
+	var trim = function(str) {
+		return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+	};
+
+	var hasClass = function(elem, className) {
+		return (' ' + elem.className.replace(rspace, ' ') + ' ').indexOf(' ' + className + ' ') != -1;
+	};
+
+	var addClass = function(elem, className) {
+		className = trim(className);
+
+		if (!className.length) {
+			return;
+		}
+
+		if (rspace.test(className)) {
+			var classes = className.split(rspace),
+			    i = classes.length;
+
+			while (i--) {
+				addClass(elem, classes[i]);
+			}
+
+			return;
+		}
+
+		if (elem.className.length) {
+			if (!hasClass(elem, className)) {
+				elem.className += ' ' + className;
+			}
+		}
+		else {
+			elem.className = className;
+		}
+	};
+
+	var getChildren = function(elem) {
+		var node  = elem.firstChild,
+			elems = [];
+
+		while (node) {
+			if (1 === node.nodeType) {
+				elems.push(node);
+			}
+
+			node = node.nextSibling;
+		}
+
+		return elems;
+	};
+
+	var getFirstChildElement = function(elem) {
+		var node = elem.firstChild;
+
+		while (node) {
+			if (1 === node.nodeType) {
+				return node;
+			}
+
+			node = node.nextSibling;
+		}
+
+		return null;
+	};
+
+	var moveChildNodes = function(src, dst) {
+		while (src.firstChild) {
+			dst.appendChild(src.firstChild);
+		}
+	};
+
+	var addFirstLastClass = function(outElem, inElem, className) {
+		addClass(outElem, inElem.nodeName + '-' + className + ' ' + className);
+	};
+
+	var copyClasses = function(src, dst) {
+		addClass(dst, src.nodeName + ' ' + src.className);
+	};
+
+	// Filters elements that can be converted to table elements.
+	var filterElements = function(elems) {
+		var filtered = [],
+		    count    = elems.length;
+
+		for (var i = 0; i < count; i++) {
+			var elem = elems[i];
+
+			if ('HR' !== elem.nodeName) {
+				filtered.push(elem);
+			}
+		}
+
+		return filtered;
+	};
+
+	var generateElements = function(inContainer, outElemNodeName, action, outContainer) {
+		var inElems = filterElements(getChildren(inContainer)),
+		    count   = inElems.length;
+
+		if (!count) {
+			return;
+		}
+
+		var outElems  = [],
+		    lastIndex = count - 1;
+
+		for (var i = 0; i < count; i++) {
+			var inElem  = inElems[i],
+			    outElem = d.createElement(outElemNodeName);
+
+			outElem.id = inElem.id;
+			copyClasses(inElem, outElem);
+			action(inElem, outElem);
+			outContainer.appendChild(outElem);
+			outElems.push(outElem);
+		}
+
+		addFirstLastClass(outElems[0], inElems[0], 'first');
+		addFirstLastClass(outElems[lastIndex], inElems[lastIndex], 'last');
+
+		if (!lastIndex) {
+			addClass(outElems[0], inElems[0].nodeName + '-first-last');
+		}
+	};
+
+	var generateRowCells = function(inRow, outRow) {
+		generateElements(inRow, 'td', moveChildNodes, outRow);
+	};
+
+	var generateRows = function(inTable, outTbody) {
+		var firstChildEl = getFirstChildElement(inTable);
+
+		// If cells are direct children of table.
+		if ( firstChildEl && ('table-cell' === getCssValue(firstChildEl, 'display')) ) {
+			var outRow = d.createElement('tr');
+			outTbody.appendChild(outRow);
+			generateRowCells(inTable, outRow);
+		}
+		else {
+			generateElements(inTable, 'tr', generateRowCells, outTbody);
+		}
+	};
+
+	var getTablyElements = function() {
+		var elems  = d.body.getElementsByTagName('*'),
+		    i      = elems.length,
+		    tables = [];
+
+		while (i--) {
+			var elem = elems[i];
+
+			if ('table' === getCssValue(elem, 'display')) {
+				tables.push(elem);
+			}
+		}
+
+		return tables;
+	};
+
+	var processTable = function(inTable) {
+		var inNodeName = inTable.nodeName;
+
+		// Exit if element to process is already a table element.
+		if (inArray(inNodeName, ['TABLE', 'TR', 'TD', 'TH', 'TBODY', 'THEAD', 'TFOOT'])) {
+			return;
+		}
+
+		var outTable = d.createElement('table'),
+		    outTbody = d.createElement('tbody');
+
+		var borderSpacing = getCssValue(inTable, 'border-spacing');
+
+		outTable.cellSpacing = null === borderSpacing
+		                     ? 0
+		                     : parseInt(borderSpacing, 10);
+
+		outTable.cellPadding = 0;
+
+		// Unlike HTML-tables, default vertical align for CSS-table cells
+		// is 'baseline' (as for normal text elements).
+		outTbody.vAlign = 'baseline';
+
+		copyClasses(inTable, outTable);
+		generateRows(inTable, outTbody);
+		outTable.appendChild(outTbody);
+
+		// If element cannot be replaced with table due to its semantics/functioning,
+		// then we insert table inside the element, replacing its contents.
+		if (inArray(inNodeName, ['DT', 'DD', 'LI', 'FORM', 'A'])) {
+			inTable.innerHTML = '';
+			inTable.appendChild(outTable);
+
+			if ('A' === inNodeName) {
+				// Default link cursor is displayed unstably for link that contains
+				// table, so we set it explicitly.
+				if ('auto' === inTable.currentStyle.cursor) {
+					inTable.style.cursor = 'pointer';
+				}
+
+				// Table inside link is unclickable in IE, so we generate click
+				// event for link manually when generated table iself is clicked.
+				outTable.onclick = function() {
+					this.parentNode.click();
+				}
+			}
+		}
+		else {
+			outTable.id = inTable.id;
+			inTable.replaceNode(outTable);
+		}
+	};
+
+	// If display-table.htc is attached to HTML or BODY element,
+	// process all elements that have {-dt-display: table}.
+	if (inArray(element.nodeName, ['HTML', 'BODY'])) {
+		var tables = getTablyElements(),
+		    i = tables.length;
+
+		while (i--) {
+			processTable(tables[i]);
+		}
+	}
+	// Process single element that display-table.htc is attached to.
+	else {
+		processTable(element);
+	}
+}
+</script>
+</public:component>
