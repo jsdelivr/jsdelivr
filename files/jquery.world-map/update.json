@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.world-map",
+  "repo": "kevalbhatt/WorldMapGenerator",
+  "files": {
+    "include": ["WorldMapGenerator.min.js", "WorldMapGenerator.js", "example.html"]
+  }
+}
