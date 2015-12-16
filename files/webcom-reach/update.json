@@ -4,6 +4,6 @@
   "repo": "webcom-components/reach",
   "files": {
     "basePath": "dist/",
-    "include": ["reach.js", "reach-debug.js"]
+    "include": ["reach.js"]
   }
 }
