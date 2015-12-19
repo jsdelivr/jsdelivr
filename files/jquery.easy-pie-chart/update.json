@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.easy-pie-chart",
+  "repo": "rendro/easy-pie-chart",
+  "files": {
+    "basePath": "dist/",
+    "include": ["angular.easypiechart.min.js", "easypiechart.min.js", "jquery.easypiechart.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "rome",
+  "repo": "bevacqua/rome",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js", "*.min.css"]
+  }
+}

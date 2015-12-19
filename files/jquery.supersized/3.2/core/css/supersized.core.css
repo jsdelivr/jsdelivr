@@ -1,0 +1,21 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : Core 3.2.0
+	
+	Site	: www.buildinternet.com/project/supersized
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+* { margin:0; padding:0; }
+body { background:#111; }
+	img{ border:none; }
+	
+	#supersized { position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+		#supersized img{ width:auto; height:auto; position:relative; outline:none; border:none; }
+		
+		#supersized a { z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; display:block; }
+			#supersized a.image-loading { background:#111 url(../img/progress.gif) no-repeat center center; width:100%; height:100%; }

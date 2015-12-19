@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery",
+  "repo": "jquery/jquery",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "detectizr",
+  "repo": "barisaydinoglu/detectizr",
+  "files": {
+    "include": ["dist/detectizr.min.js"]
+  }
+}

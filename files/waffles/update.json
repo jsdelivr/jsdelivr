@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "waffles",
+	"repo": "the-simian/Waffles",
+	"files": {
+		"basePath": "dist/",
+		"include": ["waffles.min.css"]
+	}
+}

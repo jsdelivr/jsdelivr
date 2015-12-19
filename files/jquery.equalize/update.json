@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jQuery.equalize",
+  "repo": "eustasy/jquery.equalize",
+  "files": {
+    "include": ["jquery.equalize.min.js", "jquery.equalize.js"]
+  }
+}

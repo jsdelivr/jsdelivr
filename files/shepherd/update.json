@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "shepherd",
+  "repo": "HubSpot/shepherd",
+  "files": {
+    "include": ["dist/js/shepherd.min.js"]
+  }
+}

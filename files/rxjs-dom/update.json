@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "rxjs-dom",
+  "repo": "Reactive-Extensions/RxJS-DOM",
+  "files": {
+		"basePath": "dist/",
+		"include": ["rx.dom.js","*.min.*"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-data-angular",
+  "repo": "js-data/js-data-angular",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js-data-angular.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "reqwest",
+  "repo": "ded/reqwest",
+  "files": {
+    "include": ["reqwest.min.js", "reqwest.js"]
+  }
+}

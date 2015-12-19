@@ -1,0 +1,530 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Happy Monkey';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Happy Monkey'), local('HappyMonkey-Regular'), url(c2o0ps8nkBmaOYctqBq1rXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+html, body, div, span, applet, object, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background: rgb(32, 27, 27);
+	line-height: 1.125em;
+	color: white;
+	position: relative;
+	font-family: 'Happy Monkey', Helvetica, Arial, Tahoma;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+ol, ul {
+	padding: 0 10px;
+	margin: 0 10px;
+	line-height: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+	font-family: 'Happy Monkey', Georgia, "MS Sans Serif", Helvetica, Arial, verdana;
+	margin: 20px 0;
+	font-weight: normal;
+}
+h1 {
+	font-size: 1.875em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.25em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: 1em;
+}
+h6 {
+	font-size: 0.875em;
+}
+a {
+	text-decoration: none;
+	color: #FFFFDE;
+}
+a:hover {
+	color: #FFFFFF;
+	opacity: 0.9;
+}
+a:visited {
+	color: #FFFFDE;
+}
+h2 {
+	cursor: pointer;
+}
+pre {
+	color: #FFFFFF;
+	margin-left: -600px;
+	font-size: 1.2em;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.header {
+	padding: 14px 0;
+	background-color: rgb(19, 17, 17);
+	background-image:	
+					radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%), 
+					radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+	background-image:	
+					-webkit-radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					-webkit-radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					-webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%), 
+					-webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+    background-position: 0 0px, 4px 4px, 0 1px, 4px 5px;
+    background-size: 8px 8px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid rgb(41, 41, 41);
+}
+.header:after {
+	background: rgb(19, 17, 17);
+	background: 
+				linear-gradient(115deg, transparent 75%, rgba(32, 27, 27,1) 75%) 0 0,
+				linear-gradient(245deg, transparent 75%, rgba(32, 27, 27,1) 75%) 0 0,
+				linear-gradient(115deg, transparent 75%, rgba(32, 27, 27,1) 75%) 7px -15px,
+				linear-gradient(245deg, transparent 75%, rgba(32, 27, 27,1) 75%) 7px -15px, transparent;
+	background: 
+				-webkit-linear-gradient(25deg, transparent 75%, rgba(32, 27, 27,1) 75%) 0 0,
+				-webkit-linear-gradient(150deg, transparent 75%, rgba(32, 27, 27,1) 75%) 0 0,
+				-webkit-linear-gradient(25deg, transparent 75%, rgba(32, 27, 27,1) 75%) 7px -15px,
+				-webkit-linear-gradient(150deg, transparent 75%, rgba(32, 27, 27,1) 75%) 7px -15px, transparent;
+
+	background-size: 60px 2px;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 15px;
+	margin: 0 -20px;
+}
+
+.header div.float-left {
+	padding-left: 2%;
+}
+
+.header a {
+	font-size: 35px;
+	color: white;
+	display: block;
+}
+.header a:first-letter {
+	font-size: 60px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.header .target {
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+
+.header .reponsive-block {
+	list-style: none;
+	margin: 0px;
+	padding: 50px 2% 0 0;
+}
+
+.header .reponsive-block li {
+	display: inline-block;
+	float:left;
+}
+
+.header .reponsive-block a {
+	display: inline-block;
+	background: url(../i/reponsive.png) no-repeat;
+	margin: 0 5px;
+}	
+
+.header .reponsive-block a.desktop {
+	background-position: 3px 0;
+	width: 34px; height: 26px;
+}	
+
+.header .reponsive-block a.tablet-landscape {
+	background-position: -49px 0;
+	width: 22px; height: 22px;
+}	
+
+.header .reponsive-block a.tablet-portrait {
+	background-position: -90px 0;
+	width: 18px; height: 24px;
+}	
+
+.header .reponsive-block a.iphone-landscape {
+	background-position: -129px 0;
+	width: 20px; height: 20px;
+}	
+
+.header .reponsive-block a.iphone-portrait {
+	background-position: -166px 0;
+	width: 16px; height: 26px;
+}	
+
+.header .reponsive-block a.desktop:hover,
+.header .reponsive-block a.desktop.active {
+	background-position: 3px -34px;
+}	
+
+.header .reponsive-block a.tablet-landscape:hover,
+.header .reponsive-block a.tablet-landscape.active {
+	background-position: -49px -34px;
+}	
+
+.header .reponsive-block a.tablet-portrait:hover,
+.header .reponsive-block a.tablet-portrait.active {
+	background-position: -91px -33px;
+}	
+
+.header .reponsive-block a.iphone-landscape:hover,
+.header .reponsive-block a.iphone-landscape.active {
+	background-position: -128px -33px;
+}	
+
+.header .reponsive-block a.iphone-portrait:hover,
+.header .reponsive-block a.iphone-portrait.active {
+	background-position: -166px -33px;
+}	
+.free-wall {
+	margin: auto;
+}
+
+.size11 {
+	height: 160px;
+	width: 160px;
+}
+
+.size12 {
+	width: 160px;
+	height: 320px;
+}
+
+.size21 {
+	width: 320px;
+	height: 160px;
+}
+
+.size22 {
+	height: 320px;
+	width: 320px;
+}
+
+.size13 {
+	width: 160px;
+	height: 480px;
+}
+
+.size23 {
+	width: 320px;
+	height: 480px;
+}
+.size32 {
+	width: 480px;
+	height: 320px;
+}
+
+.size33 {
+	width: 480px;
+	height: 480px;
+}
+
+.size34 {
+	width: 480px;
+	height: 640px;
+}
+
+.size35 {
+	width: 480px;
+	height: 800px;
+}
+
+.img-demo {
+	vertical-align: bottom;
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+.img-demo li {
+	float: left;
+	width: 100px;
+	margin: 4px;
+	text-align: center;
+}	
+
+.img-demo li img {
+	border: 1px solid #FFFFDE;
+	width: 98px;
+	height: 98px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.rest-left {
+	margin-left: 244px;
+}
+
+.desc h1,
+.desc h2,
+.desc h3,
+.desc h4,
+.desc h5,
+.desc h6 {
+	font-weight: bold;
+}
+
+.desc h2 {
+	border-bottom: 2px dotted rgb(255,255,222);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 50px;
+}
+
+.desc h2 span {float: left;display: block;line-height: 50px;}
+
+.brick {
+	background-color: #282828;
+	background-image:
+					radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%), 
+					radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+	background-image:
+					-webkit-radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					-webkit-radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%), 
+					-webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%), 
+					-webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+	background-position: 0 0px, 4px 4px, 0 1px, 4px 5px;
+	background-repeat: repeat, repeat, repeat, repeat;
+	background-size: 8px 8px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	float: left;
+	color: #FFFFDE;
+	cursor: default;
+	overflow: hidden;
+}
+
+.brick .cover {
+	overflow: hidden;
+	margin: 20px;
+}
+
+.brick .cover .read-more {
+	position: absolute;
+	display: none;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 12px;
+	border-radius: 2px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.45);
+}
+
+.brick:hover .cover .read-more {
+	display: block;
+	cursor: pointer;
+}
+
+.brick .desc {
+	display: none;
+}
+
+.full-width .float-left {
+	display: none;
+}
+
+.full-width .desc {
+	display: block;
+}
+
+.full-width.brick {
+	box-shadow: none;
+	overflow: visible;
+	border: none !important;
+	background: none !important;
+}
+
+.full-width.brick .cover { 
+	margin: 0px 20px;
+}
+
+.open .float-left {
+	display: none;
+}
+
+.open .desc {
+	display: block;
+}
+
+.example {
+	width: 0px;
+	height: 0px;
+	overflow: visible !important; /* for ie7 */
+}
+
+.example .cell {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+}
+
+[class*="-share"] {
+	cursor: pointer;
+	padding-left: 30px;
+	line-height: 30px;
+	margin: 20px 0;
+}
+
+.facebook-share {
+	background: url(../i/fb.png) no-repeat left center;
+}
+
+.twitter-share {
+	background: url(../i/tw.png) no-repeat left center;
+}
+
+.google-share {
+	background: url(../i/gp.png) no-repeat left center;
+}
+
+.githud {
+	background: url(../i/git.png) no-repeat left center;
+	padding-left: 30px;
+	line-height: 30px;
+	display: inline-block;
+}
+
+.download-icon {
+	background: url(../i/download.png) no-repeat left center;
+	padding-left: 30px;
+	line-height: 30px;
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.js-icon {
+	background: url(../i/js.png) no-repeat left center;
+	padding-left: 30px;
+	line-height: 30px;
+	display: block;
+}
+
+.back-button {
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+	position: fixed;
+	z-index: 9999;
+	padding: 1%;
+	bottom: 2%;
+	right: 2%;
+	display: none;
+	background: black;
+	margin-right: 4px;
+	border-radius: 2px;
+}
+
+.back-button .back-icon {
+	background: url(../i/back.png) no-repeat top center;
+	width: 45px;
+	height: 27px;
+	display: block;
+}
+
+.back-button .back-icon:hover {
+	background: url(../i/back.png) no-repeat bottom center;
+}
+
+/*
+@-webkit-keyframes start {
+	from {
+		-webkit-transform:rotate(360deg) scale(6);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform:rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes start {
+	from {
+		-moz-transform:rotate(360deg) scale(6);
+		opacity: 0;
+	}
+	to {
+		-moz-transform:rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes start {
+	from {
+		-ms-transform:rotate(360deg) scale(12);
+		opacity: 0;
+	}
+	to {
+		-ms-transform:rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+.free-wall .brick[data-state="start"]  {
+	-webkit-animation: start 0.8s;
+	-moz-animation: start 0.8s;
+	-ms-animation: start 0.8s;
+}
+*/

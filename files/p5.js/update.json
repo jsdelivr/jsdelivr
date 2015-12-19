@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "p5",
+  "repo": "processing/p5.js",
+  "files": {
+    "basePath": "lib/",
+    "include": ["p5.min.js", "./addons/**/*"]
+  }
+}

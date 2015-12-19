@@ -1,0 +1,46 @@
+.scrolls { cursor: move }
+.dragscroll-scroller { overflow: hidden !important }
+.dragscroll-container { overflow: visible !important }
+.dragscroll-container,
+.dragscroll-scroller { position: relative }
+.dragscroll-scroller { height: 100% }
+.dragscroll-inner { display : block }
+.dragscroll-scrollbar-container {
+    cursor : pointer;
+    position: absolute;
+    background: rgb(220,220,220);
+    background: rgba(0,0,0,.2);
+    -webkit-border-radius : 5px;
+    -moz-border-radius : 5px;
+    border-radius : 5px;
+}
+.dragscroll-scrollbar-container.autohide { display: none }
+.dragscroll-scrollbar-container.h {
+    width : 100%;
+    height : 4px;
+    left : 0;
+    bottom : -8px;
+}
+.dragscroll-scrollbar-container.v {
+    height : 100%;
+    width : 4px;
+    top : 0;
+    right : -8px;
+}
+.dragscroll-scrollbar.v {
+    width : 4px;
+    top : 0;
+}
+.dragscroll-scrollbar.h {
+    height : 4px;
+    left : 0;
+}
+.dragscroll-scrollbar {
+    position: absolute;
+    cursor : pointer;
+    background: rgb(160,160,160);
+    background: rgba(0,0,0,.4);
+    -webkit-border-radius : 5px;
+    -moz-border-radius : 5px;
+    border-radius : 5px;
+}

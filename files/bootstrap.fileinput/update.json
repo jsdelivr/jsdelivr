@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "bootstrap-fileinput",
+  "repo": "kartik-v/bootstrap-fileinput",
+  "files": {
+    "include": [ "./css/fileinput.min.css", "./js/fileinput.min.js", "./img/loading.gif", "./img/loading-sm.gif" ]
+  }
+}

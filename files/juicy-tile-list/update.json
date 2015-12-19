@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "juicy-tile-list",
+  "repo": "Juicy/juicy-tile-list",
+  "files": {
+    "include": [
+    	"dist/juicy-tile-list.html",
+    	"dist/package.js",
+    	"dist/package.js.map",
+    	"dist/packer.js",
+    	"dist/packer.js.map",
+    	"dist/rectangle.js",
+    	"dist/rectangle.js.map"
+    ]
+  }
+}

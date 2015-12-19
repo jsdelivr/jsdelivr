@@ -1,0 +1,11 @@
+/* Webfont: Lato-SemiboldItalic */@font-face {
+    font-family: 'LatoSemibold';
+    src: url('Lato-SemiboldItalic.eot'); /* IE9 Compat Modes */
+    src: url('Lato-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+         url('Lato-SemiboldItalic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

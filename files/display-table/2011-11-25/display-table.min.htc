@@ -1,0 +1,11 @@
+<!DOCTYPE html><public:component lightweight="true"><public:attach event="ondocumentready" onevent="_(element)" /><script>
+/**
+ * display-table.htc by Marat Tanalin
+ * http://tanalin.com/en/projects/display-table-htc/
+ * @version 2011-11-25
+ */
+function _(d){var h=d.document;if(!h.querySelector){var n=/\s+/g,e="dt-";window.XMLHttpRequest&&(e="-"+e);var o=function(a,c){for(var b=c.length;b--;)if(a===c[b])return!0;return!1},i=function(a,c){c=c.replace(/^\s\s*/,"").replace(/\s\s*$/,"");if(c.length)if(n.test(c))for(var b=c.split(n),l=b.length;l--;)i(a,b[l]);else a.className.length?-1==(" "+a.className.replace(n," ")+" ").indexOf(" "+c+" ")&&(a.className+=" "+c):a.className=c},s=function(a,c){for(;a.firstChild;)c.appendChild(a.firstChild)},p=
+function(a,c,b,l){for(var a=a.firstChild,f=[];a;)1===a.nodeType&&f.push(a),a=a.nextSibling;for(var a=[],d=f.length,g=0;g<d;g++){var j=f[g];"HR"!==j.nodeName&&a.push(j)}if(f=a.length){d=[];g=f-1;for(j=0;j<f;j++){var e=a[j],k=h.createElement(c);k.id=e.id;i(k,e.nodeName+" "+e.className);b(e,k);l.appendChild(k);d.push(k)}i(d[0],a[0].nodeName+"-first first");i(d[g],a[g].nodeName+"-last last");g||i(d[0],a[0].nodeName+"-first-last")}},q=function(a,c){p(a,"td",s,c)},t=function(a,c){var b;a:{for(b=a.firstChild;b;){if(1===
+b.nodeType)break a;b=b.nextSibling}b=null}b&&"table-cell"===b.currentStyle.getAttribute(e+"display")?(b=h.createElement("tr"),c.appendChild(b),q(a,b)):p(a,"tr",q,c)},m=function(){for(var a=h.body.getElementsByTagName("*"),c=a.length,b=[];c--;){var d=a[c];"table"===d.currentStyle.getAttribute(e+"display")&&b.push(d)}return b},r=function(a){var c=a.nodeName;if(!o(c,"TABLE,TR,TD,TH,TBODY,THEAD,TFOOT".split(","))){var b=h.createElement("table"),d=h.createElement("tbody"),f=a.currentStyle.getAttribute(e+
+"border-spacing");b.cellSpacing=null===f?0:parseInt(f,10);b.cellPadding=0;d.vAlign="baseline";i(b,a.nodeName+" "+a.className);t(a,d);b.appendChild(d);if(o(c,["DT","DD","LI","FORM","A"])){if(a.innerHTML="",a.appendChild(b),"A"===c){if("auto"===a.currentStyle.cursor)a.style.cursor="pointer";b.onclick=function(){this.parentNode.click()}}}else b.id=a.id,a.replaceNode(b)}};if(o(d.nodeName,["HTML","BODY"])){d=m();for(m=d.length;m--;)r(d[m])}else r(d)}}
+</script></public:component>

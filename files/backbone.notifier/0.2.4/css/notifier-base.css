@@ -1,0 +1,101 @@
+/*!
+ * Backbone.Notifier v0.2.4 - Base Styles
+ * Copyright 2012, Eyal Weiss
+ */
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/*!
+ * Backbone.Notifier v0.2.4 - Variables Config
+ * Copyright 2012, Eyal Weiss
+ */
+.notifier-screen {
+  background-color: #000;
+  z-index: 90000022;
+}
+.notifier {
+  z-index: 90000025;
+  position: fixed;
+  top: -32px;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 0;
+  overflow: visible;
+}
+.notifier > div {
+  cursor: default;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.notifier > div em {
+  font-weight: bold;
+  font-style: italic;
+}
+.notifier button.default {
+  font-weight: bold;
+}
+.notifier button.link {
+  border-width: 0 0 1px 0!important;
+  background-color: transparent!important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  -moz-background-clip: padding !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  padding-right: 0!important;
+  padding-left: 0!important;
+  padding-bottom: 0!important;
+}
+.notifier-with-loader .notifier-message {
+  display: inline;
+}
+.notifier-loader {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.notifier-close {
+  position: absolute;
+  border: 0 none;
+  top: 13px;
+  right: 13px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  /*background: white;*/
+
+  text-align: center;
+  font-size: 11px;
+  line-height: 11px;
+  font-family: Arial, Helvetica, "sans-serif";
+  color: rgba(102, 102, 102, 0.39);
+  background: transparent;
+}
+.notifier-close:hover {
+  background: rgba(109, 109, 109, 0.2) !important;
+  color: white;
+  text-shadow: -1px -1px 0 rgba(68, 68, 68, 0.2);
+}

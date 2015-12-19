@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "w2ui",
+  "repo": "vitmalina/w2ui",
+  "files": {
+    "basePath": "dist/",
+    "include": ["kickstart.css", "kickstart.js", "kickstart.min.css", "kickstart.min.js", "w2ui-dark.css", "w2ui-dark.min.css", "w2ui.css", "w2ui.js", "w2ui.min.css", "w2ui.min.js"]
+  }
+}

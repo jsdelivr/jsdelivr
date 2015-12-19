@@ -1,0 +1,71 @@
+// Variables
+//------------------------------------------------------
+$footer-background-color:            $darkgray-dark !default;
+$footer-menu-title-color:            $lightgray-dark !default;
+$footer-menu-item-color:             $mediumgray-dark !default;
+$footer-menu-item-color-hover:       $mediumgray-light !default;
+$footer-logo-color:                  $white !default;
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("footer") {
+
+  /**
+   * footer
+   * --------------------------------------------------
+   */
+
+  .footer {
+    padding: 40px 0;
+    background-color: $footer-background-color;
+
+    #{&}-logo,
+    #{&}-nav {
+      float: left;
+      padding: 0 20px;
+      width: 20%;
+    }
+    #{&}-logo {
+      margin-top: -5px;
+      height: 32px;
+      line-height: 32px;
+
+      & img {
+        margin-right: 10px;
+      }
+      & a {
+        font-size: 20px;
+        font-weight: bold;
+        color: $footer-logo-color;
+      }
+      & a:hover,
+      & a:active {
+        text-decoration: none;
+      }
+    }
+    #{&}-nav .nav-title {
+      margin-bottom: 15px;
+      color: $footer-menu-title-color;
+    }
+    #{&}-nav .nav-item {
+      line-height: 28px;
+      & > a {
+        color: $footer-menu-item-color;
+      }
+      & > a:hover,
+      & > a:active {
+        color: $footer-menu-item-color-hover;
+        text-decoration: none;
+      }
+    }
+    #{&}-copyright {
+      color: $footer-menu-item-color;
+    }
+  }
+
+}
+
+

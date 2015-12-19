@@ -1,0 +1,1066 @@
+#jp-header {
+	min-width: 741px;
+	z-index: 0;
+	margin: 30px 0 -30px 0;
+}
+	#jp-header.small {
+		margin-bottom: 50px;
+	}
+
+	#jp-header #jp-clouds {
+		position: relative;
+		background: transparent url( images/header-clouds.png ) -315px 100% repeat-x;
+		padding-top: 110px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+		#jp-header.small #jp-clouds {
+			background: transparent url( images/header-clouds-small.png ) -120px 100% repeat-x;
+			padding: 50px 0 0 0;
+			height: 70px;
+		}
+
+
+		#jp-header #jp-clouds #jp-disconnectors {
+			font-size: 12px;
+			color: #fff;
+			float: right;
+			margin-top: -35px;
+			text-align: left;
+			position: relative;
+			left: -45px;
+		}
+
+		#jp-header #jp-clouds .jp-disconnect a {
+			background: #8caa46 url( images/status-light.png ) 3px 85% no-repeat;
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			height: 1.7em;
+			overflow: hidden;
+			padding: 4px 0 3px 30px;
+			margin: 0 -20px 3px 0;
+			color: #fff;
+			text-decoration: none;
+			border: 1px solid #7a943d;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			-moz-box-shadow: inset 0 0 2px rgba( 255, 255, 255, 0.4 );
+			-webkit-box-shadow: inset 0 0 2px rgba( 255, 255, 255, 0.4 );
+			box-shadow: inset 0 0 2px rgba( 255, 255, 255, 0.4 );
+			text-shadow: 0px -1px 0px rgba( 0,0,0,0.3 );
+		}
+			#jp-header #jp-clouds .jp-disconnect a:hover {
+				background: #8caa46 url( images/status-light.png ) 3px -2% no-repeat;
+				background-color: #839f40;
+				border-color: #6a8037;
+			}
+
+			#jp-header #jp-clouds .jp-disconnect div {
+				position: relative;
+				line-height: 1.7em;
+				height: 1.7em;
+			}
+
+			#jp-header #jp-clouds .jp-disconnect a:hover div,
+			#jp-header #jp-clouds .jp-disconnect a.clicked div {
+				top: -1.7em;
+			}
+
+	/* Retina Header Clouds & Status Light */
+	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	    #jp-header #jp-clouds {
+	    	background: transparent url( images/header-clouds-2x.png ) -315px 100% repeat-x;
+			background-size:1600px 400px;
+	    }
+	    	#jp-header.small #jp-clouds {
+	    		background: transparent url( images/header-clouds-small-2x.png ) -120px 100% repeat-x;
+	    		background-size:980px 140px;
+	    	}
+
+	    #jp-header #jp-clouds .jp-disconnect a {
+	    	background: #8caa46 url( images/status-light-2x.png ) 3px 85% no-repeat;
+	    	background-size:25px 57px;
+	    }
+	    	#jp-header #jp-clouds .jp-disconnect a:hover {
+	    		background: #8caa46 url( images/status-light-2x.png ) 3px -2% no-repeat;
+	    		background-size:25px 57px;
+	    	}
+	}
+
+
+	#jp-header h3 {
+		position: relative;
+		background: transparent url( images/logo.png ) top left no-repeat;
+		width: 252px;
+		height: 200px;
+		overflow: hidden;
+		text-indent: -999em;
+		top: -95px;
+		left: 25px;
+		margin: 0;
+		padding: 0;
+	}
+		#jp-header.small h3 {
+			background: transparent url( images/logo-small.png ) top left no-repeat;
+			width: 149px;
+			height: 120px;
+			top: -35px;
+		}
+
+	/* Retina Logo */
+	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	    #jp-header h3 {
+	    	background: transparent url( images/logo-2x.png ) top left no-repeat;
+			background-size:250px 200px;
+	    }
+	    	#jp-header.small h3 {
+	    		background: transparent url( images/logo-small-2x.png ) top left no-repeat;
+				background-size:150px 120px;
+	    	}
+	}
+
+
+
+	#jp-header p {
+		position: absolute;
+		left: 390px;
+		text-align: left;
+		top: 30px;
+		width: 48%;
+		color: #fff;
+		font-size: 25px;
+		line-height: 130%;
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	#jp-info {
+		position: relative;
+		overflow: visible;
+		z-index: 50;
+		margin: 0 12px 0 28px;
+		min-width: 780px;
+	}
+
+		#jp-info p {
+			font-size: 17px;
+			line-height: 150%;
+			text-shadow: 0px 1px 0px #fff;
+			font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+			color: #666;
+			margin: 0 0 40px;
+			float:left;
+			width: 58%;
+		}
+			#jp-info p.small {
+				font-size: 14px;
+			}
+
+		#jp-info a.jp-button {
+			font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+			float: right;
+			margin: 8px 0 0 20px;
+			display: inline-block;
+			background: #69acce;
+			-moz-box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+			-webkit-box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+			box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+			padding: 12px 20px;
+			border: 1px solid #2a8cba;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			line-height: 100%;
+			color: #fff;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: none;
+			text-shadow: 0px 1px 2px rgba( 0,0,0,0.5);
+			-webkit-transition-duration: .3s;
+			-moz-transition-duration: .3s;
+			cursor: pointer;
+		}
+			#jp-info a.jp-button:hover, #jp-info a.jp-button:active {
+				background-color: #f0a000;
+				border-color: #c87800;
+				-webkit-transition-duration: .3s;
+				outline: none;
+				-moz-box-shadow: inset 0 0 2px #fff, 0 1px 7px rgba(240,160,0,0.5);
+				-webkit-box-shadow: inset 0 0 2px #fff, 0 1px 7px rgba(240,160,0,0.5);
+				box-shadow: inset 0 0 2px #fff, 0 1px 7spx rgba(240,160,0,0.5);
+			}
+
+.jetpack-message {
+	position: relative;
+	z-index: 100;
+	border: 1px solid #2a8cba !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: url( images/alertbox-clouds.png ) 100% 100% no-repeat;
+	background-color: #6aafcf !important;
+	-webkit-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	-moz-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	padding: 18px 90px 8px 15px !important;
+	overflow: hidden;
+	line-height: 180%;
+}
+
+/* Retina alertbox clouds */
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .jetpack-message {
+    	background: url( images/alertbox-clouds-2x.png ) 100% 100% no-repeat;
+		background-size:95px 55px;
+    }
+}
+
+	.jp-connect { padding: 10px 0 5px !important; }
+
+	#jetpack-settings > .jetpack-message { margin: 10px 13px 10px 15px }
+
+	.jetpack-message .squeezer {
+		max-width: 940px;
+		margin: 0 0 2px;
+		padding: 0 10px;
+		text-align: left;
+		overflow: hidden;
+	}
+	.jetpack-message h4 {
+		margin: 0 10px 10px 0;
+		font-size: 18px;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		font-weight: normal;
+		color: #fff;
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		display: inline-block;
+	}
+
+	.jetpack-message h5 {
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		margin: 0;
+	}
+
+	.jetpack-message .squeezer a, .jetpack-message .squeezer a:visited {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.jetpack-message .squeezer a:hover {
+		color: #f0a000;
+	}
+
+	.jetpack-message code, .jetpack-err p {
+		background: rgba( 0,0,0,0.2 );
+		font-size: 14px;
+		padding: 3px 5px !important;
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+		color: #fff;
+	}
+
+	.jetpack-message p {
+		margin: -1px 0 0 0 !important;
+		padding: 0;
+		display: inline-block;
+	}
+		.jetpack-err p {
+			overflow: hidden;
+			margin-bottom: 10px !important;
+		}
+
+		.jetpack-message p a.button-primary {
+			font-size: 16px !important;
+			display: inline-block;
+			padding: 8px 15px;
+			color: #fff;
+			text-align: center;
+			font-size: 20px;
+			text-decoration: none;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			border: 1px solid #8caa46;
+			background: #b4d278;
+			-moz-box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+			-webkit-box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+			box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+			text-shadow: 0px -1px 0px rgba( 0,0,0,0.3);
+			-webkit-transition-duration: .3s;
+			-moz-transition-duration: .3s;
+			cursor: pointer;
+			font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		}
+			.jetpack-message p a.button-primary:hover, .jetpack-message p a.button-primary:active {
+				background-color: #f0a000;
+				border-color: #c87800;
+				-webkit-transition-duration: .3s;
+				outline: none;
+			}
+
+		.inline-message p strong { display: block; }
+
+	.more-info {
+		position: relative;
+		top: -5px;
+		margin: 0 15px 5px 15px;
+		height: 230px; /* Have to set height otherwise slideDown() doesn't work. */
+		padding-right: 15px !important;
+		padding-bottom: 15px;
+		clear: both;
+		overflow: visible !important;
+		color: #666 !important;
+		background: transparent url( images/module-clouds.png ) bottom left repeat-x;
+		background-color: #f0f0f0 !important;
+		border-color: #dcdcdc !important;
+		text-shadow: 0px 1px 0px #fff;
+		-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+		-moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+		box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+	}
+
+	/* Retina moreinfo bg clouds */
+	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	    .more-info {
+	    	background: transparent url( images/module-clouds-2x.png ) bottom left repeat-x;
+			background-size:980px 140px;
+	    }
+	}
+
+
+		.more-info h4 {
+			padding: 0;
+			background: none;
+			font-weight: normal;
+			color: #000;
+			font-size: 19px;
+			text-shadow: 0px 1px 0px #fff;
+		}
+
+		.more-info h5 {
+			margin-left: 0;
+			font-size: 12px !important;
+		}
+		.more-info .arrow {
+			position: absolute;
+			width: 29px;
+			height: 18px;
+			top: -16px;
+			left: 0;
+			background: url( images/arrow.png ) top left no-repeat;
+		}
+
+		/* Retina module more info arrow */
+		@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		    .more-info .arrow {
+		    	background: url( images/arrow-2x.png ) top left no-repeat;
+				background-size:29px 16px;
+		    }
+		}
+
+		.more-info p {
+			margin: 0 0 10px 0 !important;
+			font-size: 14px;
+			font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+			line-height: 150%;
+			display: block;
+		}
+
+		.more-info ul {
+			font-size: 14px;
+			font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+			line-height: 150%;
+		}
+
+		.more-info li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+
+		.more-info code {
+			background: rgba( 0,0,0,0.05 );
+			font-size: 12px;
+			padding: 1px;
+			text-shadow: none;
+			color: #555;
+		}
+
+		.more-info .jp-close {
+			position: absolute;
+			top: 18px;
+			right: 0;
+			background: #888;
+			background: rgba(0,0,0,0.4);
+			color: #fff;
+			font-size: 14px !important;
+			height: 22px;
+			line-height: 20px;
+			padding: 0 6px 0 6px;
+			font-weight: bold !important;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			-moz-border-radius-topright: 0;
+			-moz-border-radius-bottomright: 0;
+			-webkit-border-top-right-radius: 0;
+			-webkit-border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			cursor: pointer;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+		}
+			.more-info .jp-close:hover {
+				background: #69acce;
+			}
+
+		.more-info div.jp-info-img {
+			float: right;
+			width: 320px;
+			margin: 0 30px 0 20px;
+		}
+
+		.more-info img.jp-info-img {
+			padding: 3px;
+			background: rgba( 255, 255, 255, 0.65 );
+			border: 5px solid #ddd;
+		}
+
+.jetpack-activated {
+	background: #fffff5 url( images/jp-enabled-bg.jpg ) top left repeat-x !important;
+	height: 154px;
+	padding: 60px 0 0 200px !important;
+	position: relative;
+	min-width: 650px;
+	top: 15px;
+	z-index: 5;
+	position: relative;
+}
+	.jetpack-activated h3 {
+		position: relative;
+		z-index: 5;
+		color: #444;
+		font-size: 42px;
+		font-weight: bold;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		margin: 0;
+		padding: 0;
+		background: none;
+		display: block;
+		text-transform: uppercase;
+	}
+	.jetpack-activated p {
+		position: relative;
+		z-index: 3;
+		top: 3px;
+		left: 10px;
+		font-size: 16px;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		font-weight: normal;
+		color: #666;
+		background: rgba( 255, 255, 255, 0.75 );
+		padding: 7px 10px 6px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		display: inline-block;
+	}
+	.jetpack-activated .jetpack {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 238px;
+		height: 214px;
+		background: url( images/jp-enabled-jetpack.jpg ) top left no-repeat;
+		z-index: 2;
+	}
+	.jetpack-activated .clouds {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 566px;
+		height: 214px;
+		background: url( images/jp-enabled-clouds.png ) bottom left no-repeat;
+		z-index: 0;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-bottom-right-radius: 5px;
+		-webkit-box-shadow: inset -7px -7px 10px rgba( 0,0,0,0.05 );
+		-moz-box-shadow: inset -7px -7px 10px rgba( 0,0,0,0.05 );
+		box-shadow: inset -7px -7px 10px rgba( 0,0,0,0.05 );
+	}
+
+p.jp-help {
+	padding: 10px 0 15px;
+}
+
+.module-container {
+	overflow: hidden;
+	min-width: 740px;
+	margin: 25px 0;
+	width: 100%;
+}
+
+.jetpack-module {
+	position: relative;
+	float: left;
+	width: 210px;
+	min-height: 160px;
+	max-height: 220px;
+	margin: 0 0 15px 15px;
+	border: 1px solid #dedede;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #fff;
+	padding: 15px 0 35px 15px;
+	-webkit-box-shadow: inset 0 1px 0 #fff, inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+	-moz-box-shadow: inset 0 1px 0 #fff, inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+	box-shadow: inset 0 1px 0 #fff, inset 0 0 20px rgba(0,0,0,0.05), 0 1px 2px rgba( 0,0,0,0.1 );
+	-webkit-transition-duration: .4s;
+	-moz-transition-duration: .4s
+}
+/*
+	.jetpack-module:hover {
+		border-color: #bbb;
+		-webkit-box-shadow: 0 1px 2px rgba( 0,0,0,0.2 );
+		-moz-box-shadow: 0 1px 2px rgba( 0,0,0,0.2 );
+		box-shadow: 0 1px 2px rgba( 0,0,0,0.2 );
+		-webkit-transition-duration: .4s;
+		-moz-transition-duration: .4s
+	}
+*/
+	.jetpack-module div.module-image {
+		float: right;
+		margin: 0 0 5px 10px;
+		padding: 60px 0 0;
+		background: #cbe0a1;
+		width: 80px;
+		-webkit-border-top-left-radius: 3px;
+		-moz-border-radius-topleft: 3px;
+		border-top-left-radius: 3px;
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-bottomleft: 3px;
+		border-bottom-left-radius: 3px;
+		background-repeat: no-repeat;
+		background-image: url( images/module-icons-sprite.png );
+		background-size: 2500px 50px; /* remember to update this every time a new module is added! */
+	}
+
+
+	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		.jetpack-module div.module-image {
+			background-image: url( images/module-icons-sprite-2x.png );
+		}
+	}
+
+		#stats.jetpack-module div.module-image {
+			background-position: -510px 5px;
+		}
+		#comments.jetpack-module div.module-image {
+			background-position: -1210px 5px;
+		}
+		#subscriptions.jetpack-module div.module-image {
+			background-position: -1009px 5px;
+		}
+		#sharedaddy.jetpack-module div.module-image {
+			background-position: -710px 5px;
+		}
+		#after-the-deadline.jetpack-module div.module-image {
+			background-position: -308px 5px;
+		}
+		#vaultpress.jetpack-module div.module-image {
+			background-position: -910px 5px;
+		}
+		#gravatar-hovercards.jetpack-module div.module-image {
+			background-position: -410px 5px;
+		}
+		#contact-form.jetpack-module div.module-image {
+			background-position: -1107px 5px;
+		}
+		#shortlinks.jetpack-module div.module-image {
+			background-position: -108px 5px;
+		}
+		#shortcodes.jetpack-module div.module-image {
+			background-position: -608px 5px;
+		}
+		#latex.jetpack-module div.module-image {
+			background-position: -208px 5px;
+		}
+		#widgets.jetpack-module div.module-image {
+			background-position: -5px 5px;
+		}
+		#enhanced-distribution.jetpack-module div.module-image {
+			background-position: -808px 5px;
+		}
+		#carousel.jetpack-module div.module-image {
+			background-position: -1325px 5px;
+		}
+		#custom-css.jetpack-module div.module-image {
+			background-position: -1459px 5px;
+		}
+		#minileven.jetpack-module div.module-image {
+			background-position: -1570px 5px;
+		}
+		#notes.jetpack-module div.module-image {
+			background-position: -1806px 5px;
+		}
+		#json-api.jetpack-module div.module-image {
+			background-position: -1689px 5px;
+		}
+		#mobile-push.jetpack-module div.module-image {
+			background-position: -1925px 5px;
+		}
+		#publicize.jetpack-module div.module-image {
+			background-position: -2136px 5px;
+		}
+		#post-by-email.jetpack-module div.module-image {
+			background-position: -2025px 5px;
+		}
+		#infinite-scroll.jetpack-module div.module-image {
+			background-position: -2230px 5px;
+		}
+		#photon.jetpack-module div.module-image {
+			background-position: -2320px 5px;
+		}
+		#tiled-gallery.jetpack-module div.module-image {
+			background-position: -2400px 5px;
+		}
+
+		.jetpack-module div.module-image p {
+			background-color: #b4d278;
+			color: #fff;
+			text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			clear: both;
+			font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+			font-weight: bold;
+			-webkit-font-smoothing: antialiased;
+			-webkit-border-bottom-left-radius: 2px;
+			-moz-border-radius-bottomleft: 2px;
+			border-bottom-left-radius: 2px;
+		}
+
+		.jetpack-new-module div.module-image p {
+			background-color: #f5bd4d;
+		}
+
+		.jetpack-updated-module div.module-image p {
+			background-color: #6aafcf;
+		}
+
+		.jetpack-new-module:hover div.module-image p {
+			background-color: #b4d278;
+		}
+
+		.jetpack-updated-module:hover div.module-image p {
+			background-color: #b4d278;
+		}
+
+		.jetpack-new-module:hover div.module-image span.module-image-free,
+		.jetpack-updated-module:hover div.module-image span.module-image-free {
+			display: inline !important;
+		}
+
+		.jetpack-new-module:hover div.module-image span.module-image-badge,
+		.jetpack-updated-module:hover div.module-image span.module-image-badge {
+			display: none;
+		}
+
+	.jetpack-toggle {
+		float: right;
+		padding: 2px 4px 4px;
+	}
+		.jetpack-toggle a {
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 180%;
+			color: #bbb;
+		}
+
+		.jetpack-active .jetpack-toggle-button:hover { color: #b90000;  }
+
+	.jetpack-module h3 {
+		line-height: 1.1;
+		margin: 0;
+		padding: 0;
+		font-size: 17px;
+		font-weight: normal;
+		font-style: normal;
+		color: #000;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+	}
+
+	.jetpack-module-description p {
+		line-height: 150%;
+		font-size: 12px;
+		font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+		margin-bottom: 20px;
+		color: #666;
+	}
+
+	.jetpack-module .jetpack-module-actions {
+		position: absolute;
+		bottom: 20px;
+		left: 15px;
+		background: #fff;
+		display: block;
+	}
+
+		.jetpack-module .jetpack-module-actions a {
+			position: relative;
+			font-weight: bold;
+			color: #888;
+			font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		}
+
+	.jetpack-inactive {
+		border-color: #eee;
+		cursor: pointer;
+	}
+		.jetpack-inactive *, jetpack-inactive:hover * { -webkit-transition-duration: .4s; -moz-transition-duration: .4s }
+
+		.jetpack-inactive h3, .jetpack-inactive p, .jetpack-inactive span {
+			color: #ccc;
+		}
+
+		.jetpack-inactive .jetpack-configure-button { display: none; }
+		.jetpack-inactive div.module-image {
+			opacity: 0.6;
+		}
+
+		.jetpack-inactive .jetpack-module-description p a {
+			color: #92b8d0;
+		}
+			.jetpack-inactive:hover .jetpack-module-description p a {
+				color: #5590b7;
+			}
+
+
+		.jetpack-inactive:hover {
+			border-color: #ddd;
+		}
+
+		.jetpack-inactive:hover h3, .jetpack-inactive:hover p, .jetpack-inactive:hover span {
+			color: #aaa;
+		}
+
+		.jetpack-inactive:hover div.module-image {
+			opacity: 0.75;
+		}
+
+	.placeholder {
+		border-color: #eee !important;
+		cursor: default !important;
+	}
+
+		.placeholder h3 {
+			color: #dadada;
+			margin-top: 55px;
+			text-align: center;
+			background: transparent url(images/icon-comingsoon.png) top center no-repeat;
+			padding: 40px 0 0 0;
+			margin-right: 15px;
+			box-shadow: none;
+		}
+
+		@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		    .placeholder h3  {
+		    	background: transparent url(images/icon-comingsoon-2x.png) top center no-repeat;
+		    	background-size:32px 32px;
+		    }
+		}
+
+#jp-settings-screen {
+	margin: 0 25px;
+}
+	#jp-settings-screen h3 {
+		font-size: 18px;
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+		color: #555;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #eee;
+	}
+
+p#news-sub {
+	text-align: center;
+}
+
+#jp-footer {
+	background: url( images/footer-clouds.png ) top center no-repeat;
+	margin: 30px 0;
+	padding-top: 60px;
+	text-align: center;
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #jp-footer  {
+    	background: url( images/footer-clouds-2x.png ) top center no-repeat;
+		background-size:700px 150px;
+    }
+}
+
+
+	#jp-footer .automattic {
+		color: #999;
+		font-size: 10px;
+		line-height: 15px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		padding-left: 3px;
+	}
+
+		#jp-footer .automattic span {
+			text-indent: -999em;
+			overflow: hidden;
+			background: url( images/automattic.png ) center top no-repeat;
+			display: inline-block;
+			width: 165px;
+			vertical-align: top;
+			margin: 0 5px 0 1px;
+			line-height: 14px;
+			height: 14px;
+			filter: alpha(opacity=40);
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+			opacity: 0.5;
+		}
+		@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		    #jp-footer .automattic span  {
+		    	background: url( images/automattic-2x.png ) center top no-repeat;
+				background-size:165px 14px;
+		    }
+		}
+
+	#jp-footer p.small {
+		font-size: 11px;
+		color: #ccc;
+	}
+
+		#jp-footer .small a {
+			text-decoration: none;
+		}
+
+		#jp-footer .small a:hover {
+			text-decoration: underline;
+		}
+
+#jetpack-configuration code {
+	font-size: 14px;
+}
+
+.clear {
+	clear: both;
+}
+
+.error, .updated { position: relative; z-index: 100; }
+
+.toplevel_page_jetpack .wrap {
+	max-width: 983px;
+	min-width: 741px;
+	margin-top: 15px;
+}
+
+#jetpack-settings .button-primary {
+	color: #fff !important;
+}
+
+.jp-survey {
+	position: relative;
+	z-index: 100;
+	border: 1px solid #ccc !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #efefef !important;
+	-webkit-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	-moz-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	padding: 18px 90px 8px 15px !important;
+	overflow: hidden;
+	line-height: 180%;
+}
+
+#jetpack-settings > .jp-survey { margin: 10px 13px 40px 15px }
+
+.jp-survey h4 {
+	margin: 0;
+	font-size: 18px;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+	font-weight: normal;
+	color: #333;
+	text-shadow: 0 1px 0 #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: block;
+	float: left;
+}
+
+.jp-survey p {
+	float: right;
+	margin: -1px 0 0 0 !important;
+	padding: 0;
+	display: block;
+}
+
+.jp-survey-container {
+	overflow: hidden;
+	padding: 0 20px 8px 0;
+}
+
+.jp-survey-text {
+	float: left;
+	width: 68.421053%; /* 390px / 570px */
+}
+
+.jp-survey-button-container {
+	position: absolute;
+	top: 28px;
+	right: 15px;
+}
+
+.jetpack-close-button-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.jetpack-close-button {
+	display: block;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+	background: transparent url( images/alertbox-closeicon.png ) no-repeat center center;
+	border: 0 none;
+	-moz-border-radius: 0 0 0 5px;
+	-webkit-border-radius: 0 0 0 5px;
+	-o-border-radius: 0 0 0 5px;
+	-ms-border-radius: 0 0 0 5px;
+	border-radius: 0 0 0 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	-ms-transition-duration: .3s;
+	transition-duration: .3s;
+	cursor: pointer;
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .jetpack-close-button  {
+    	background: transparent url( images/alertbox-closeicon-2x.png ) no-repeat center center;
+		background-size:16px 16px;
+    }
+}
+
+.jetpack-close-button:hover {
+	background-color: #fff;
+	border: 0 none;
+	outline: none;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	-ms-transition-duration: .3s;
+	transition-duration: .3s;
+}
+
+.jetpack-close-button:active {
+	background-color: #efefef;
+	border: 0 none;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	-ms-transition-duration: .3s;
+	transition-duration: .3s;
+}
+
+.jetpack-wrap-container {
+	overflow: hidden;
+	padding: 0 20px 8px 15px;
+}
+
+.jetpack-text-container {
+	float: left;
+	width: 68.421053%; /* 390px / 570px */
+}
+
+.jetpack-install-container p a.button-connector {
+	position: absolute;
+	bottom: 5px;
+	right: 15px;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+	float: right;
+	display: inline-block;
+	background: #b4d278;
+	-moz-box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 2px #fff, 0 1px 5px rgba(0,0,0,0.3);
+	padding: 8px 15px;
+	border: 1px solid #2a8cba;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 1.3;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 2px rgba( 0,0,0,0.5);
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	cursor: pointer;
+}
+
+.jetpack-install-container p a.button-connector:hover, .jetpack-install-container p a.button-connector:active {
+	background-color: #f0a000;
+	border-color: #c87800;
+	-webkit-transition-duration: .3s;
+	outline: none;
+	-moz-box-shadow: inset 0 0 2px #fff, 0 1px 7px rgba(240,160,0,0.5);
+	-webkit-box-shadow: inset 0 0 2px #fff, 0 1px 7px rgba(240,160,0,0.5);
+	box-shadow: inset 0 0 2px #fff, 0 1px 7spx rgba(240,160,0,0.5);
+}
+
+.jetpack-inline-error, .jetpack-inline-message {
+	padding: .5em 1em .5em 1em;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	color: #333;
+}
+
+.jetpack-inline-error {
+	background-color: #ffebe8;
+	border-color: #c00;
+}
+
+.jetpack-inline-message {
+	background-color: #ffffe0;
+	border-color: #e6db55;
+}
+
+.jetpack-targetable {
+	border-top: 28px solid transparent;
+	margin-top: -28px;
+}
+
+.jetpack-targetable:target {
+	background-color: #ffffe0;
+	background-clip: padding-box;
+	padding: 0 10px;
+	margin-left: -10px;
+	margin-right: -10px;
+}

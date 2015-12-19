@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "tappy",
+  "repo": "rileyjshaw/tappy",
+  "files": {
+    "basePath": "dist/",
+    "include": ["tappy.min.js"]
+  }
+}

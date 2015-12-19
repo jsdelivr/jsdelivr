@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ie10-viewport",
+  "repo": "thekondrashov/ie10-viewport",
+  "files": {
+    "basePath": "js/",
+    "include": ["ie10-viewport.min.js"]
+  }
+}

@@ -1,0 +1,455 @@
+/*
+Theme Name: MACCACO
+Theme URI: http://www.projekktor.com/downloads
+Description: this theme is a screenr clone
+Version: 0.9
+Author: Michel Maillard
+Author URI: http://www.porkhead.org
+*/
+/* IE Fix for Floatbox - not required if no floatbox */
+#simplePro, #multiPro {
+zoom: 1;
+}
+/**************/
+
+.projekktor {
+background-color:#000;
+font-family: 'Lucida Grande', Trebuchet MS, Arial, Sans-Serif;
+font-size: 12px;
+font-weight: bold;
+text-align:center;
+text-transform:uppercase;
+text-shadow: 0 1px 1px #0c0c0c;
+padding:0;
+margin:0;
+display:block;
+position: relative; 
+}
+
+.ppdisplay {
+position: relative !important;
+}
+
+.ppcontrols {
+position: absolute;
+bottom: 0;
+right:0;
+display: block;
+overflow: hidden;
+width: 100%;
+height: 36px;
+background: url("player.png") repeat-x scroll 0 0 #0f0e0e;
+border-style:solid;
+border-color:#413e3e;
+border-width:1px 0;
+padding: 0;
+margin:0;
+}
+
+.pplogo.inactive,
+.ppstart.inactive,
+.ppbuffering.inactive,
+.ppcontrols.inactive,
+.ppplay.inactive,
+.pppause.inactive,
+.ppfsenter.inactive,
+.ppfsexit.inactive,
+.ppprev.inactive,
+.ppnext.inactive {
+display: none;
+}
+
+.pplogo.active,
+.ppstart.active,
+.ppbuffering.active,
+.ppcontrols.active,
+.ppplay.active,
+.pppause.active,
+.ppfsenter.active,
+.ppfsexit.active,
+.ppprev.active,
+.ppnext.active {
+display: block;
+}
+
+.ppplay,
+.pppause  {
+display:block;
+position: absolute;
+top: 0;
+left: 0;
+background: url("maccaco.png") no-repeat left top transparent;
+width: 30px;
+height: 30px;
+cursor: pointer;
+border-right: 1px solid #000;
+}
+.ppplay:hover {
+background: url("maccaco.png") no-repeat left -35px transparent;
+}
+.ppplay:active {
+background: url("maccaco.png") no-repeat left -36px transparent;
+}
+
+.pppause {
+background: url("maccaco.png") no-repeat left -70px transparent;
+}
+
+.pppause:hover {
+background: url("maccaco.png") no-repeat left -105px transparent;
+}
+
+.pppause:active {
+background: url("maccaco.png") no-repeat left -106px transparent;
+}
+
+.ppfsenter,
+.ppfsexit  {
+display:block;
+position: absolute;
+top: 0;
+right: 0;
+width: 30px;
+height: 30px;
+background: url("maccaco.png") no-repeat right top transparent;
+cursor: pointer;
+border-left: 1px solid #413e3e;
+}
+.ppfsenter:hover {
+background: url("maccaco.png") no-repeat right -35px transparent;
+}
+.ppfsenter:active {
+background: url("maccaco.png") no-repeat right -36px transparent;
+}
+.ppfsexit {
+background: url("maccaco.png") no-repeat right -70px transparent;
+}
+.ppfsexit:hover {
+background: url("maccaco.png") no-repeat right -105px transparent;
+}
+.ppfsexit:active {
+background: url("maccaco.png") no-repeat right -106x transparent;
+}
+
+.ppscrubber {
+position: absolute;
+display: block;
+left: 0;
+bottom: 0;
+height: 5px;
+width: 100%;
+background: url("maccaco-load.gif") repeat-x left top transparent;
+margin: auto;
+padding: 0;
+border-bottom: 1px solid #000;
+}
+
+.ppplayhead, .pploaded {
+position: absolute;
+display: block;
+left: 0;
+bottom: 0;
+height: 5px;
+width: 1px;
+background-color:#fff;
+cursor: pointer;
+z-index: 301;
+}
+.pploaded {
+z-index: 10;
+background: rgb(65, 62, 62) ;
+opacity: 0.8;
+/* ie7 */
+filter: alpha(opacity = 80);
+/* ie8 */
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.ppplayhead {
+margin-top: -5px;
+}
+
+.pptitle {
+position: absolute;
+left: 31px;
+padding: 0 10px;
+color: #fff;
+overflow: hidden;
+text-align: left;
+line-height: 30px;
+height:30px;
+border-left:1px solid #413e3e;
+font-size:11px;
+}
+
+.pptimeleft,
+.ppvmax,
+.ppmute  {
+position: absolute;
+top: 0;
+right: 153px;
+height: 15px;
+color: #fff;
+width: 100px;
+line-height: 30px;
+height: 30px;
+border-left: 1px solid #413e3e;
+border-right: 1px solid #000;
+overflow: hidden;
+}
+
+/* special for single */
+.pptimeleft {
+background: url("maccaco.png") no-repeat -91px top transparent;
+}
+.ppvmax  {
+position: absolute;
+top: 0;
+right: 31px;
+width: 30px;
+border-left:none;
+background: url("maccaco.png") no-repeat -842px top transparent;
+}
+.ppvmax:hover  {
+background: url("maccaco.png") no-repeat -842px -35px transparent;
+}
+.ppvmax:active  {
+background: url("maccaco.png") no-repeat -842px -36px transparent;
+}
+
+.ppmute  {
+position: absolute;
+top: 0;
+width: 30px;
+right: 122px;
+border-left:1px solid #413e3e;
+border-right:none;
+background: url("maccaco.png") no-repeat -750px top transparent;
+}
+.ppmute:hover  {
+background: url("maccaco.png") no-repeat -750px -35px transparent;
+}
+.ppmute:active  {
+background: url("maccaco.png") no-repeat -750px -36px transparent;
+}
+
+.ppvslider {
+position: absolute;
+right:62px;
+top: 13px;
+height: 6px;
+width: 60px;
+background: url("maccaco.png") no-repeat -781px -13px transparent;
+}
+
+.ppvmarker {
+position: absolute;
+right:0;
+left: 0;
+height: 6px;
+width: 100%;
+background: url("maccaco.png") no-repeat -634px -13px transparent;
+}
+
+.ppvknob  {
+cursor: pointer;
+z-index: 201;
+position: absolute;
+background: url("maccaco.png") no-repeat -699px -5px transparent;
+top:-7px;
+left:0px;
+width: 6px;
+height: 20px;
+}
+
+.ppnext,
+.ppprev {
+display:block;
+position: absolute;
+top: 0;
+right: 255px;
+background: url("maccaco.png") no-repeat -59px top transparent;
+width: 30px;
+height: 30px;
+cursor: pointer;
+border-left:1px solid #413e3e;
+border-right:1px solid #000;
+}
+.ppnext { border-right:none;}
+.ppnext:hover {
+background: url("maccaco.png") no-repeat -59px -35px transparent;
+}
+.ppnext:active {
+background: url("maccaco.png") no-repeat -59px -36px transparent;
+}
+
+.ppprev {
+right: 284px;
+background: url("maccaco.png") no-repeat -32px top transparent;
+}
+
+.ppprev:hover {
+background: url("maccaco.png") no-repeat -32px -35px transparent;
+}
+.ppprev:active {
+background: url("maccaco.png") no-repeat -32px -36px transparent;
+}
+
+.pptestcard {
+background: url("noise.gif") center center repeat;
+width: 100%;
+height: 100%;
+color: #fff;
+font-size: 18px;
+overflow: hidden;
+}
+
+.pptestcard p {
+background-color: #3b393e;
+width: 60%;
+margin: auto;
+line-height: 25px;
+position: relative;
+top: 25%;
+padding: 10px;
+border:5px solid #000;
+text-align: center;
+}
+
+.ppbuffering {
+position: absolute;
+left: 50%;
+bottom: 50%;
+margin-left:-45px;
+margin-bottom: -38px;
+display: block;
+z-index:9010;
+padding: 0px;
+background: url("buffering.gif") no-repeat center center #000;
+height: 84px;
+width: 84px;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+display: none;
+}
+
+
+.ppstart {
+position: absolute;
+left: 50%;
+bottom: 50%;
+margin-left:-45px;
+margin-bottom: -38px;
+cursor: pointer;
+height: 84px;
+width: 84px;
+display: block;
+z-index:8000;
+padding: 0px;
+background: url("start.png") no-repeat left top transparent;
+}
+.ppstart:hover {
+background: url("start.png") no-repeat left bottom transparent;
+}
+.ppstart:active{
+background: url("start.png") no-repeat left -169px transparent;
+}
+
+.ppdebug {
+background-color:#FFFFFF;
+border:1px solid #999999;
+margin-top: 15px;
+position:absolute;
+text-align:left;
+width:250px;
+height: 250px;
+z-index:1050;
+overflow: scroll;
+padding: 25px 25px 20px;
+}
+
+
+/*
+SOCIAL
+*/
+.ppsocialbar {
+position: absolute;
+right: 0;
+bottom: 14%;
+width: 90px;
+height: 50%;
+padding: 0;
+}
+
+
+.ppsocialbutton, .ppsocialbutton:hover {
+cursor: pointer;
+overflow: hidden;
+height: 16px; 
+width: 80px;
+padding: 5px;    
+margin: 15px 0;
+text-align: center;
+font-size: 14px;    
+background-color: #191B10;
+color: #fdfdfd;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+line-height: 14px;
+opacity: .5;
+filter: alpha(opacity=50);
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.ppsocialbutton:hover {
+opacity: 1;
+filter: alpha(opacity=100);
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+
+
+.ppsocialpopup {
+position: absolute;
+margin-right: -122px;
+margin-top: -140px;	
+right: 50%;
+top: 50%;
+width: 185px;
+height: 225px;
+text-align: center;
+padding: 10px 20px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+background: rgb(34, 34, 34);
+background: rgba(34, 34, 34, 0.8);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99222222, endColorstr=#99222222);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99222222, endColorstr=#99222222)";
+color: #fefefe;
+}
+
+.ppsocialpopup textarea {
+width: 185px;
+height: 65px;
+border: 1px solid #ccc;
+outline: 0 none;
+overflow: hidden;
+margin: 0;
+padding: 0;
+display: block;    
+}
+
+.ppsocialpopup a {
+display: block;
+width: 100%;
+text-decoration: underline;
+margin: 5px auto;
+text-align: center;
+color: #ddd;
+cursor: pointer;
+}
+
+.ppsocialpopup a:hover {
+text-decoration: none;
+}

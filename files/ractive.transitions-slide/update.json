@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ractive-transitions-slide",
+  "repo": "ractivejs/ractive-transitions-slide",
+  "files": {
+		"basePath": "dist/",
+		"include": ["*.min.*"]
+  }
+}

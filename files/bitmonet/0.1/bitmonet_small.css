@@ -1,0 +1,119 @@
+/* ----- Mobile ----- */
+
+#bitmonet-dialog {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-width: 315px;
+    height: 100%;
+    min-height: 565px;
+
+    border-radius: 0px;
+
+    position: absolute;
+}
+
+#bitmonet-dialog > .bitmonet-relativeWrap {
+    padding: 0;
+}
+
+.bitmonet-relativeWrap > .close {
+    top: 12px;
+}
+
+.bitmonet-content > h4 {
+    font-size: 12px;
+    text-align: center;
+
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+
+    box-shadow: 0px 0px 2px black;
+}
+
+.bitmonet-content .bitmonet-header {
+    padding: 25px 0;
+}
+
+.bitmonet-header .bitmonet-logo {
+    margin-bottom: 20px;
+}
+
+.bitmonet-content .bitmonet-heading {
+    padding: 0 20px;
+    
+    font-size: 15px;
+}
+.bitmonet-content .bitmonet-subtitle {
+    font-size: 10px;
+}
+
+.bitmonet-content > .bitmonet-purchaseOptions {
+    padding: 10px 20px;
+}
+
+.bitmonet-purchaseOptions > .bitmonet-purchaseOption {
+    margin: 0;
+
+    width: auto;
+    float: none;
+
+    background-size: 20px 20px;
+    background-position: 25px 20px;
+
+    text-align: left;
+
+    padding: 3px 0 1px 0;
+
+    margin: 0 0 5px 0;
+}
+
+.bitmonet-icon.medium {
+    display: none;
+}
+
+.bitmonet-purchaseOption > h5 {
+    padding: 0px 0 0 60px;
+    margin-top: 10px;
+}
+
+.bitmonet-purchaseOption > .bitmonet-purchaseDesc {
+    padding: 0px 0 0 60px;
+    margin-bottom: 0;
+}
+
+.bitmonet-purchaseOption .bitmonet-buyLink {
+    text-decoration: none;
+}
+
+.bitmonet-purchaseOption .bitmonet-button.orange {
+    margin: 10px 15px 15px 15px;
+    display: block;
+    width: auto;
+
+    text-align: center;
+    padding: 10px;
+}
+
+ #bitmonet-dialog > .bitmonet-footer {
+     display: none;
+ }
+
+/* ----- Small Thank you ----- */
+
+.bitmonet-thankYou > h4 {
+    background-position: 9px 21px;
+    padding: 20px 30px 20px 62px;
+
+    font-size: 16px;
+    text-align: left;
+}
+
+.bitmonet-thankYou > p {
+    padding: 14px;
+
+    font-size: 13px;
+}

@@ -1,0 +1,31 @@
+.wp-pointer .wp-pointer-content h3.slidedeck {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3609e', endColorstr='#8a2564',GradientType=0 ); /* IE6-8 */
+}
+#slidedeck-types .decks .deck a .glow { display: none; }
+#slidedeck-table .slidedeck-row td.col-slidedeck-delete form {
+    position: relative;
+    display: block;
+    margin: 0;
+    height: 45px;
+}
+#slidedeck-table .slidedeck-row td.col-slidedeck-delete input[type="submit"] {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 2px;
+}
+#slidedeck2-submit-ticket {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3);";
+}
+#slidedeck2-submit-ticket.visible { right: -93px; }
+#slidedeck-table .slidedeck-row .slidedeck-actions { background: none; }
+
+#slidedeck-manage-footer .float-wrapper .leftLeft,
+#slidedeck-manage-footer .float-wrapper .leftRight{
+    width: 49%;
+    float: left;
+}
+.fancy-checkbox .off span {
+    background: #fff; /* Old browsers */
+}

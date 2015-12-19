@@ -1,0 +1,1 @@
+registerCrossLinks:function(){var f=this;f.crosslinks=d("[data-liquidslider-ref*="+(f.sliderId).split("#")[1]+"]");(f.crosslinks).on("click",function(g){if(f.options.autoSlide===true){f.startAutoSlide(true)}f.setNextPanel(f.getPanelNumber((d(this).attr("href").split("#")[1]),f.options.panelTitleSelector));g.preventDefault()})},

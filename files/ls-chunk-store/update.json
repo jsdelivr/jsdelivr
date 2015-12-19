@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "ls-chunk-store",
+  "repo": "DiegoRBaquero/ls-chunk-store",
+  "files": {
+    "include": ["dist/ls-chunk-store.min.js"]
+  }
+}

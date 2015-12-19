@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "react",
+  "repo": "reactjs/react-bower",
+  "files": {
+    "include": [
+      "*.js"
+    ]
+  }
+}

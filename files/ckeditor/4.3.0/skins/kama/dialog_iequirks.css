@@ -1,0 +1,123 @@
+/*
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+
+/*
+dialog_iequirks.css
+===============
+
+This file contains styles to used by all versions of Internet Explorer
+in Quirks mode only.
+*/
+
+/* Base it on dialog_ie.css, overriding it with styles defined in this file. */
+@import url("dialog_ie.css");
+
+.cke_dialog_title
+{
+	margin-bottom: 22px;
+}
+
+/* Fix dialog height doesn't stretch to 100%. (#4863)*/
+.cke_dialog_page_contents
+{
+	position: absolute;
+}
+
+.cke_single_page .cke_dialog_title
+{
+	margin-bottom: 10px;
+}
+
+.cke_dialog_close_button
+{
+	top: 27px;
+	background-image: url(images/sprites_ie6.png);
+}
+
+.cke_dialog_footer .cke_resizer
+{
+	margin-top: 27px;
+}
+
+.cke_dialog_tabs
+{
+	display: block;
+	top: 33px;
+	margin-top: 33px;
+}
+
+/* RTL + IE6: Input overflows dialog element. (#7321) */
+.cke_rtl .cke_dialog_ui_labeled_content
+{
+	_width: 95%;
+}
+
+/* IE6 buttons. */
+a.cke_dialog_ui_button
+{
+	background: none;
+	padding: 0;
+}
+
+a.cke_dialog_ui_button span
+{
+	width: 70px;
+	padding: 5px 15px;
+	text-align: center;
+	color: #3b3b1f;
+	background: #53D9F0 none;
+	display: inline-block;
+	cursor: default;
+}
+
+a.cke_dialog_ui_button_ok span
+{
+	background-image: none;
+	background-color: #B8E834;
+	margin-right: 0;
+}
+a.cke_dialog_ui_button_cancel span
+{
+	background-image: none;
+	background-color: #F65D20;
+	margin-right: 0;
+}
+
+a.cke_dialog_ui_button:hover span,
+a.cke_dialog_ui_button:focus span,
+a.cke_dialog_ui_button:active span
+{
+	background-image: none;
+	background: #F7A922;
+}
+
+/* END IE6 buttons. */
+
+
+/* make sure the content does not overflow (#7321) */
+div.cke_dialog_ui_input_password,
+textarea.cke_dialog_ui_input_textarea
+{
+	width: 99%;
+}
+
+/* Predefined border to avoid visual size change impact. */
+.cke_dialog_ui_checkbox_input,
+.cke_dialog_ui_ratio_input,
+.cke_btn_reset,
+.cke_btn_locked,
+.cke_btn_unlocked
+{
+	/* Emulating border-color: transparent in IE6.*/
+	border: 1px solid red !important;
+	filter: chroma(color=red);
+}
+
+/* Compensate focus outline for some input elements, using borders (#6200) */
+.cke_dialog_ui_focused,
+.cke_btn_over
+{
+	border: 1px dotted #696969 !important;
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "openlayers.layerswitcher",
+  "repo": "walkermatt/ol3-layerswitcher",
+  "files": {
+    "basePath": "src/"
+  }
+}

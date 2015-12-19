@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Galleria Flickr Plugin</title>
+        <style>
+
+            /* Demo styles */
+            html,body{background:#222;margin:0;}
+            body{border-top:4px solid #000;}
+            .content{color:#777;font:12px/1.4 "helvetica neue",arial,sans-serif;width:620px;margin:20px auto;}
+            h1{font-size:12px;font-weight:normal;color:#ddd;margin:0;}
+            p{margin:0 0 20px}
+            a {color:#22BCB9;text-decoration:none;}
+            .cred{margin-top:20px;font-size:11px;}
+
+            /* This rule is read by Galleria to define the gallery height: */
+            #galleria{height:320px;}
+
+        </style>
+
+        <!-- load jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+        <!-- load Galleria -->
+        <script src="../../galleria-1.2.9.min.js"></script>
+
+        <!-- load picasa plugin -->
+        <script src="galleria.picasa.min.js"></script>
+
+    </head>
+<body>
+    <div class="content">
+        <h1>Galleria Picasa Plugin Demo</h1>
+        <p>Demonstrating a basic gallery example with photos from a Picasa album.</p>
+
+        <!-- Adding gallery images. This is just a container for the dynamic picasa images -->
+
+        <div id="galleria"></div>
+
+        <p class="cred">Made by <a href="http://galleria.aino.se">Galleria</a>.</p>
+    </div>
+    <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('../../themes/classic/galleria.classic.min.js');
+
+    Galleria.run('#galleria', {
+        // The user & album. This example fetches the album "Demo" from the user "galleriajs"
+        picasa: 'useralbum:galleriajs/Demo'
+    });
+
+    </script>
+    </body>
+</html>

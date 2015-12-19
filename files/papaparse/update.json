@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "papaparse",
+  "repo": "mholt/PapaParse",
+  "files": {
+    "include": [ "papaparse.min.js" ]
+  }
+}

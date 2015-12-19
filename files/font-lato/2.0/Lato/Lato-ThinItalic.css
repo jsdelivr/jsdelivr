@@ -1,0 +1,11 @@
+/* Webfont: Lato-ThinItalic */@font-face {
+    font-family: 'LatoThin';
+    src: url('Lato-ThinItalic.eot'); /* IE9 Compat Modes */
+    src: url('Lato-ThinItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-ThinItalic.woff') format('woff'), /* Modern Browsers */
+         url('Lato-ThinItalic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

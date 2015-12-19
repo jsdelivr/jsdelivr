@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "fuelux",
+  "repo": "ExactTarget/fuelux",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["fuelux.zip", "js/npm.js"]
+  }
+}

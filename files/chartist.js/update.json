@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "chartist.js",
+  "repo": "gionkunz/chartist-js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["chartist.min.js.map", "chartist.min.js", "chartist.min.css"]
+  }
+}

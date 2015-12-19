@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "svg4everybody",
+  "repo": "jonathantneal/svg4everybody",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

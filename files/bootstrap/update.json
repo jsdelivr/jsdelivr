@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap",
+  "repo": "twbs/bootstrap",
+  "files": {
+    "basePath": "dist/"
+  }
+}

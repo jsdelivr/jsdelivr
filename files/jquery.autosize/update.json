@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.autosize",
+  "repo": "jackmoore/autosize",
+  "files": {
+	"basePath": "dist/",
+    "include": ["autosize.min.js"]
+  }
+}

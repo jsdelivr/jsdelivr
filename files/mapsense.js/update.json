@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "Mapsense.js",
+  "repo": "mapsense/mapsense.js",
+  "files": {
+    "basePath": "/",
+    "include": [
+      "mapsense.js",
+      "mapsense.css"
+    ]
+  }
+}

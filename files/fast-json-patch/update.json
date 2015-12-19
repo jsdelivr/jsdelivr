@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "fast-json-patch",
+  "repo": "Starcounter-Jack/JSON-Patch",
+  "files": {
+    "basePath": "dist/"
+  }
+}

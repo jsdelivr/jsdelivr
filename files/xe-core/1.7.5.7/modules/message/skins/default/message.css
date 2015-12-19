@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* NAVER */
+@font-face{font-family:NG;src:url(https://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);src:local(※),url(https://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff')}
+body, #access table, #access input, #access textarea, #access select, #access button, #access label{font-family:나눔고딕,NanumGothic,NG,돋움,Dotum,Arial,Helvetica,sans-serif;font-size:13px}
+@media all and (max-width:980px){
+body, #access table, #access input, #access textarea, #access select, #access button, #access label{font-family:돋움,Dotum,Arial,Helvetica,sans-serif}
+}
+#access{width:400px;margin:30px auto;background-color:#ffffff;border:1px solid #999;border-radius:6px;box-shadow:0 3px 7px #ccc;box-sizing:border-box}
+#access>.login-header{padding:9px 15px;border-bottom:1px solid #eee}
+#access>.login-header>h1{margin:0;font-size:16px;line-height:1.4;font-weight:600;color:#666}
+#access>.login-header>h1>i{opacity:.5;filter:alpha(opacity=50);margin:2px 0 0 0}
+#access>.login-body{max-height:400px;padding:15px}
+#access>.login-body>*:first-child{margin-top:0}
+#access>.login-footer{padding:14px 15px 15px;margin-bottom:0;text-align:right;background-color:#f5f5f5;border-top:1px solid #ddd;-webkit-border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px;*zoom:1;-webkit-box-shadow:inset 0 1px 0 #ffffff;-moz-box-shadow:inset 0 1px 0 #ffffff;box-shadow:inset 0 1px 0 #ffffff; color:#ccc}
+#access>.login-footer:before,
+#access>.login-footer:after{display:table;line-height:0;content:"";clear:both}
+#access .control-group{position:relative;padding:0 14px 0 0;margin:0;clear:both}
+#access .control-group:before{content:"";display:block;clear:both}
+#access form{margin:0}
+#access fieldset{margin:0}
+#access label{cursor:pointer;display:inline-block}
+#access input[type="text"],
+#access input[type="email"],
+#access input[type="password"]{width:100%}
+#access input[type="checkbox"]{margin:0}
+#access .btn{border-radius:2px;overflow:visible;font-size:14px;line-height:18px;height:auto;padding:3px 9px;text-decoration:none}
+#access .submit{position:absolute;top:0;right:0}
+#access p{margin:10px 0}
+#access #warning{margin-right:-14px}
+#access a{color: #0088cc;text-decoration: none;}
+@media all and (max-width:480px){
+#access{position:static;margin:0;width:100%}
+}

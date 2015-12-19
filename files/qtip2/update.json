@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "qtip2",
+  "repo": "qtip2/qtip2",
+  "files": {
+    "basePath": "dist"
+  }
+}

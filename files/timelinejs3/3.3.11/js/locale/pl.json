@@ -1,0 +1,75 @@
+{
+    "lang": "pl", 
+    "date": {
+        "month_abbr": [
+            "Sty.", 
+            "Lut.", 
+            "Mar.", 
+            "Kwi.", 
+            "Maj.", 
+            "Cze.", 
+            "Lip.", 
+            "Sie.", 
+            "Wrz.", 
+            "Paź.", 
+            "Lis.", 
+            "Gru."
+        ], 
+        "day_abbr": [
+            "Nie.", 
+            "Pon.", 
+            "Wto.", 
+            "Śro.", 
+            "Czw.", 
+            "Pią.", 
+            "Sob."
+        ], 
+        "day": [
+            "Niedziela", 
+            "Poniedziałek", 
+            "Wtorek", 
+            "Środa", 
+            "Czwartek", 
+            "Piątek", 
+            "Sobota"
+        ], 
+        "month": [
+            "Stycznia", 
+            "Lutego", 
+            "Marca", 
+            "Kwietnia", 
+            "Maja", 
+            "Czerwca", 
+            "Lipca", 
+            "Sierpnia", 
+            "Września", 
+            "Października", 
+            "Listopada", 
+            "Grudnia"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "pl"
+    }, 
+    "messages": {
+        "loading": "Ładowanie", 
+        "contract_timeline": "Zmniejsz Timeline", 
+        "return_to_title": "Wróć do tytułu", 
+        "wikipedia": "Z Wikipedii, wolnej encyklopedii", 
+        "loading_content": "Ładowanie zawartości", 
+        "expand_timeline": "Powiększ Timeline", 
+        "loading_timeline": "Ładowanie Timeline... "
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'um' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}

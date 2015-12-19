@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "parallax",
+  "repo": "wagerfield/parallax",
+  "files": {
+    "basePath": "deploy/",
+    "include": ["*.min.js"]
+  }
+}

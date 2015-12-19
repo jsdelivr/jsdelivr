@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "validator",
+  "repo": "chriso/validator.js",
+  "files": {
+    "include": ["validator.min.js"]
+  }
+}

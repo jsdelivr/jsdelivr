@@ -1,0 +1,10 @@
+(function($){var lazyload_toolkit={init:function(options){return this.each(function(){var screen_sight=$(this),instance=$.data(this,'advanced_lazyloader');if(instance){instance._init.call(this,options)}else{$.data(this,'advanced_lazyloader',lazyload_toolkit);lazyload_toolkit._init.call(this,options)}})},_init:function(options){var screen_sight=this,opt=$.extend({},$.fn.advanced_lazyloader.settings,options);lazyload_toolkit.reposition.call(screen_sight,opt);$(window).bind('scroll.advanced_lazyloader resize.advanced_lazyloader',function(){lazyload_toolkit.reposition.call(screen_sight,opt)}).triggerHandler("scroll.advanced_lazyloader");return this},getHolder:function(){var opt=$.extend({},$.fn.advanced_lazyloader.settings);return $(this).filter('['+opt.space_holder+']')},reposition:function(options){var imgHolder=lazyload_toolkit.getHolder.call(this);var currentScreenHeight=$(window).height(),docScrollTop=$(document).scrollTop(),winHeight=$(document).height(),screenHeight=options.screenHeight;imgHolder.each(function(){var screen_sight=$(this);var imagehead=screen_sight.offset();if(screen_sight.height()===0){screen_sight.width(2);screen_sight.height(2)}if(currentScreenHeight-(imagehead.top-docScrollTop-screenHeight)>0){var sourceImg=screen_sight.attr(options.space_holder);if(screen_sight.width()===2){screen_sight.width("auto").height("auto")}screen_sight.attr("src",sourceImg).removeAttr(options.space_holder).removeData('advanced_lazyloader').css('opacity','0');
+var img=new Image();
+
+
+img.onload=function(){screen_sight.animate({opacity:1},parseFloat(obj_lz.ifd_duration))};
+
+
+img.onerror=function(){}
+img.src=sourceImg;img=null}})}};$.fn.advanced_lazyloader=function(method){if(lazyload_toolkit[method]){return lazyload_toolkit[method].apply(this,Array.prototype.slice.call(arguments,1))}else if(typeof method==='object'||!method){return lazyload_toolkit.init.apply(this,arguments)}else{alert("error!");}}
+$.fn.advanced_lazyloader.settings={space_holder:"ImageHolder",screenHeight:parseFloat(obj_lz.ifd_pixel)}})(jQuery);jQuery(function($){$("img").advanced_lazyloader()});

@@ -1,0 +1,21 @@
+/*
+Document   : jquery.pnotify.default.icons.css
+Created on : Nov 24, 2009, 2:58:21 PM
+Author     : Hunter Perrin
+Version    : 1.2.0
+Link       : http://pinesframework.org/pnotify/
+Description:
+	Pines Icon styling for Pines Notify.
+*/
+
+.ui-pnotify .picon {
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: center center;
+width: 17px;
+height: 17px;
+}
+.ui-pnotify-title {
+line-height: 17px;
+min-height: 17px;
+}

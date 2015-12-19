@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "rangeslider.js",
+  "repo": "andreruffert/rangeslider.js",
+  "files": {
+    "basePath": "dist/",
+	"include": ["rangeslider.min.js", "rangeslider.css"]
+  }
+}

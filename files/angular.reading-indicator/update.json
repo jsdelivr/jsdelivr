@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular-reading-indicator",
+  "repo": "dominicrico/angular-reading-indicator",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ng-reading-indicator.min.js", "ng-reading-indicator.min.js.map", "ng-reading-indicator.min.css"]
+  }
+}

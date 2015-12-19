@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.timer",
+  "repo": "siddii/angular-timer",
+  "files": {
+    "include": ["dist/angular-timer.min.js"]
+  }
+}

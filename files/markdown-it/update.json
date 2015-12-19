@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "markdown-it",
+  "repo": "markdown-it/markdown-it",
+  "files": {
+    "basePath": "dist/",
+    "include": ["markdown-it.min.js"]
+  }
+}

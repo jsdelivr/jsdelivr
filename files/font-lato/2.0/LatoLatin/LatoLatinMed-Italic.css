@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinMed-Italic */@font-face {
+    font-family: 'LatoLatinMed';
+    src: url('LatoLatinMed-Italic.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinMed-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinMed-Italic.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinMed-Italic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

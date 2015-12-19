@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "engine2d",
+  "repo": "jackdalton/engine2d",
+  "files": {
+    "include": ["prod/engine2d.min.js", "src/engine2d.js"]
+  }
+}

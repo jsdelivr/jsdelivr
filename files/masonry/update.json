@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "masonry",
+  "repo": "desandro/masonry",
+  "files": {
+  	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

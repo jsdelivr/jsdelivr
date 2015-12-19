@@ -1,0 +1,147 @@
+/* Warnings */
+	.em-warning { margin:10px 0px; padding:10px; color:#333; border-radius:3px; }
+	.em-warning p { margin:10px 0px !important; padding:0px; color:#333 }
+	.em-warning-errors { background-color:#FFEBE8; border:1px solid #C00; }
+	.em-warning-confirms { background-color:#f1fff0; border:1px solid #a8d144; }
+	a.em-button { float:right; padding:5px 10px; margin:5px; background:#EEE; color:#333; border:1px solid #CCC; border-radius:3px; display:inline-block; text-decoration:none; }
+	a.em-button:hover { text-decoration:none; }	
+
+/* Booking Form */
+	.em-booking { margin:15px 0px 10px 0px; position:relative; }
+	.em-booking-form  { position:relative; clear:left; }
+	.em-booking-form-details  { padding:10px; width:360px; float:left; }  
+	.em-booking-form-details input.input, .em-booking-form-details textarea { width:250px; }
+	.em-booking-form-details p { clear:left; }
+	.em-booking-form-details label { display:block; float:left; }
+	.em-booking-form-details span.input-group input { margin-left:-20px; }
+	.em-booking-form-details span.input-group { display:block; margin-left:120px; }
+	.em-booking-form-details .em-booking-submit { width:auto; }	
+	.em-booking-form label  { display:inline-block; width:100px; }	
+	/* Tickets */
+		.em-tickets { margin-bottom:20px; }
+	/* Message Errors */
+		div.em-booking-message { margin:10px 0px; padding:10px; color:#333; border-radius:3px; }
+		div.em-booking-message p { margin:10px 0px !important; padding:0px; color:#333; }
+		div.em-booking-message-success { background-color:#f1fff0; border:1px solid #a8d144; }	
+		div.em-booking-message-error { background-color:#FFEBE8; border:1px solid #C00; }
+	/* Optional Login Form */
+		div.em-booking-login { padding: 10px 10px 10px 20px; margin: 0px 0px 0px 390px;	border-left: 1px solid black; }
+		div.em-booking-login label { display:inline-block; width:90px; }
+		div.em-booking-login p{ margin:10px 0px !important; padding:0px !important;	}	
+		div.em-booking-login input { margin:0px; }
+		
+/* Add Event Form */
+	#event-form h4 { margin:25px 0px 15px 0px; font-weight:bold; }
+	#event-form p { margin-top:10px; }
+	#event-form .inside { clear:both; margin-bottom:20px; }	
+	/* Event Details */
+		#event-form #event-name { width:80%; padding:2px; }
+		#event-form .event-extra-details { margin-top:20px; }
+		#event-form .event-extra-details select { vertical-align:top; }
+	/*Tickets*/
+		.em-tickets-row .ticket-status span.ticket_on { display:block; width:10px; height:10px; background:green; }
+		.em-tickets-row .ticket-status span.ticket_off { display:block; width:10px; height:10px; background:red; }
+		.em-tickets-row .ticket-status span.ticket_new { display:block; width:10px; height:10px; background:grey; }
+		#event-tickets th { width:auto; }
+		#event-tickets th.ticket-status { width:20px; }
+		/* Overlay Form */
+			#em-tickets-form input[type=text] { width:97%; padding:2px; color:#666; }
+			#em-tickets-form #wp-submit { display:block; clear:both; }		
+		/*Inline Form */
+			.em-ticket-form { padding:0px 10px; margin-bottom:10px; width:400px; }
+			.em-ticket-form label { display:inline-block; min-width:70px; padding-right:10px; }
+			.em-ticket-form div { clear:both; margin:5px 0px;}
+			.em-ticket-form input.name { width:300px; }
+			.em-ticket-form .space-limits input { width:40px; }
+			.em-ticket-form .date-limits input { width:100px; }
+			.em-ticket-form div.description { margin-top:9px;}
+			.em-ticket-form textarea { width:100%; margin-top:7px; }
+	/* The editor */
+		#wp-em-editor-content-wrap table { margin-bottom:0px; }
+	/* Location form */
+		#event-form table.em-location-data td, #event-form table.em-location-data th { vertical-align:top; border:none; }
+		#event-form table.em-location-data { width:50%; float:left; border:none; }
+		#event-form .em-location-map-container, #event-form .em-location-map-404, #event-form .em-location-map-content { width: 400px; height: 300px; float:left; }
+		#event-form .em-location-map-404 { vertical-align:middle; text-align: center; }
+/* Booking Admin */
+	/* Generic Table Info */
+	table.em-form-fields td, table.em-form-fields th { text-align:left; vertical-align:top; }
+	table.em-form-fields th { padding:0px 20px 5px 0px; }		
+	/* Bookings Table */
+		.em_obj { position:relative; }
+		.em_obj .table-wrap { clear:left; padding-top:5px; }
+		.em-bookings-table .em-bookings-table-export, .em-bookings-table .em-bookings-table-settings { float:left; display:block; margin:2px 5px; width:25px; height:25px;  }
+		.em-bookings-table .em-bookings-table-export { background:url(../images/csv.png) 0px 0px no-repeat; }
+		.em-bookings-table .em-bookings-table-settings { background:url(../images/settings.png) 0px 0px no-repeat; }
+		/* Settings & Export */
+			#em-bookings-table-export, #em-bookings-table-settings { width:500px; height: 75%; }
+			#em-bookings-table-export form, #em-bookings-table-settings form { height: 100%; overflow:auto; }
+			/* Sorting */
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable { list-style-type: none; margin: 0; padding: 0 0 10px; float: left; margin-right: 10px; }
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li { margin: 0 5px 5px 5px; padding: 3px 8px; font-size: 12px; width: 120px; font-weight:none; cursor:move; }
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li.ui-state-highlight {}
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li.ui-state-default { color:#999; }
+				#em-bookings-export-cols-inactive, #em-bookings-cols-inactive { width:300px; }	
+				#em-bookings-export-cols-inactive li, #em-bookings-cols-inactive li { float:left; }
+	/* Single Booking Edit View */
+		#em-bookings-admin-booking .em-booking-single-info { display:none; }
+		#em-bookings-admin-booking .em-booking-single-form { padding-right:20px; }		
+		
+/* Printable stuff */
+	body#printable { font-family: Gill Sans, Helvetica, Arial, sans-serif; text-align: center; }  
+	body#printable #container { margin: 0 auto; width: 780px; text-align: left; }
+	table#bookings-table { width: 600px; border-spacing: 0px; }
+	table#bookings-table td { padding: 5px 0; }
+	table#bookings-table td.spaces-number { text-align: right; padding-right: 20px; }
+	table#bookings-table th { text-align: left; margin-left: 5px; }   
+	table#bookings-table tr#booked-spaces td{ border-top: 2px solid #999; }
+	table#bookings-table td.total-label { text-align: right; }                                  
+	table#bookings-table tr#booked-spaces td.spaces-number, table#bookings-table tr#available-spaces td.spaces-number { font-weight: bold; }
+	table#em-location-data th { text-align: right; width: 50px; }
+
+/* Calendar Styles */
+	table.em-calendar td { padding: 2px 4px; text-align: center; }
+	table.em-calendar.table tr.days-names { font-weight: bold; } 
+	table.em-calendar td.eventless-pre, .em-calendar td.eventless-post { color: #ccc; }
+	table.em-calendar td.eventful-pre a, table.em-calendar td.eventful-post a{ color: #aaa; text-decoration:underline; }
+	table.em-calendar td.eventful a, table.em-calendar td.eventful-today a { color: #FD7E29; }
+	table.em-calendar td.eventful-today a { font-weight: bold; }
+	table.em-calendar td.eventless-today, table.em-calendar td.eventful-today { background-color: #CFCFCF; }
+	table.em-calendar thead { font-size: 120%; font-weight: bold; }
+	table.fullcalendar { border-collapse: collapse; }
+	table.fullcalendar td { text-align: left; width: 50px; height: 50px; border: 1px solid #888; }
+	div.em-calendar-wrapper { position:relative; }
+	div#em-loading { position:absolute; width:100%; height:100%; background:#FFFFFF url(../images/loading.gif) 50% 50% no-repeat; left:0px; top:0px; opacity:0.8; filter:alpha(opacity=80); z-index:9999999999; }
+/*
+Maps - if the info balloons don't look right on your site, chances are it's a CSS issue. 
+Google is VERY sensitive to CSS rules for the infowindows, making it hard to accommodate every theme in WP. 
+Please edit your theme's CSS to override this 
+*/
+	.em-map-balloon .em-map-balloon-content { 
+		margin:0px 0px 0px 0px !important; 
+		padding:0px 0px 20px 0px !important; 
+		font-size:12px !important;
+		color:#000000  !important;
+		width:auto !important; 
+		max-width:none !important;
+		height:auto !important;
+		max-height:none !important;
+	}
+	.em-location-map img, .em-locations-map img, #em-map img { 
+		max-width:none !important; 
+		background:none !important; 
+		border:none !important; 
+		margin:0 !important; 
+		padding:0 !important; 
+		height:auto; 
+		width:auto;
+	}
+
+/* Time Picker */
+	#start-time, #end-time { width:7em;}
+	#start-time.error, #end-time.error { border:#cc0000 1px solid; }
+	div.time-picker {  position: absolute; height: 191px; width:5em; /* needed for IE */ overflow: auto; background: #fff; border: 1px solid #aaa; z-index: 99; margin: 0; }
+	div.time-picker-12hours { width:7em; /* needed for IE */ }
+	div.time-picker ul { list-style-type: none; margin: 0; padding: 0; }
+	div.time-picker li { cursor: pointer; height: 10px; font: 12px/1 Helvetica, Arial, sans-serif; padding: 4px 3px; }
+	div.time-picker li.selected { background: #0063CE; color: #fff; }

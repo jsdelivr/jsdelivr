@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "gridlayout",
+  "repo": "ghinda/gridlayout",
+  "files": {
+    "include": ["gridlayout.min.css", "gridlayout-ie.min.js"]
+  }
+}

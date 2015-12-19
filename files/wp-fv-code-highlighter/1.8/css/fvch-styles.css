@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/**
+ * Dreamweaver look a like highlighting colors.
+ *
+ * If you want to customize this file, copy it to your current theme directory
+ *  first. Then start editing the copied file.
+ *
+ * @version 1.2
+ * @author  Frank Verhoeven <info@frank-verhoeven.com>
+ */
+
+ .fvch-hide-if-no-js {
+     display: none !important;
+ }
+
+.fvch-codeblock {
+	border:  1px solid #e2e2e2;
+	margin: 0;
+	padding: 0 !important;
+	margin-bottom: 1em;
+	border-radius: 4px;
+	overflow: auto;
+    position: relative;
+}
+
+.fvch-codeblock table,
+.fvch-codeblock table tr,
+.fvch-codeblock table tr td {
+    padding: 0;
+    margin: 0;
+}
+
+.fvch-toolbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    border-left: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #fff;
+    padding: 3px 6px 0;
+}
+
+.fvch-codeblock:hover .fvch-toolbox {
+    display: block;
+}
+
+.fvch-toolbox .fvch-toolbox-icon {
+    border: none !important;
+    background: none !important;
+    cursor: pointer !important;
+    margin: 0 4px 0 0 !important;
+    padding: 2px !important;
+}
+
+.fvch-toolbox .fvch-toolbox-icon:last-child {
+    margin-right:  0 !important;
+}
+
+.fvch-codeblock pre {
+	font-family:  "Monaco", "Courier New", Courier, monospace;
+	background:  url(../images/notepaper.png) top left repeat;
+	font-size:  10px;
+	padding:  0 3px !important;
+	margin: 0 !important;
+	text-align:  left;
+	white-space: pre;
+}
+
+.fvch-line-numbers pre {
+	text-align: right;
+	color: #666;
+}
+
+
+/**
+ * CSS
+ */
+.css {
+	color: #f0f;
+}
+.css-background {
+	background-color: #fff;
+}
+.css-import {
+	color: #099;
+	font-weight: bold;
+}
+.css-media {
+	color: #900;
+	font-weight: bold;
+}
+.css-comment {
+	color: #999;
+}
+.css-important {
+	color: #f00;
+	font-weight: bold;
+}
+.css-property {
+	color: #009;
+}
+.css-selector {
+	color: #f0f;
+}
+.css-string {
+	color: #060;
+	font-weight: normal;
+}
+.css-value {
+	color: #00f;
+}
+.css-rest {
+	color: #f0f;
+	font-weight: bold;
+}
+
+/**
+ * (x)HTML
+ */
+.html {
+	font-weight: normal;
+	color: #000;
+}
+.html-anchor-element {
+	color: #060;
+}
+.html-attribute {
+	color: #00f;
+}
+.html-comment {
+	color: #999;
+}
+.html-form-element {
+	color: #f90;
+}
+.html-image-element {
+	color: #909;
+}
+.html-object-element {
+	color: #900;
+}
+.html-other-element {
+	color: #009;
+}
+.html-script-element {
+	color: #900;
+}
+.html-special-char {
+	color: #000;
+	font-weight: bold;
+}
+.html-style-element {
+	color: #909;
+}
+.html-table-element {
+	color: #099;
+}
+.html-text {
+	color: #000;
+}
+
+/**
+ * PHP
+ */
+.php {
+	color: #000;
+	font-weight: normal;
+}
+.php-script-tag {
+	color: #f00;
+	font-weight: bold;
+}
+.php-comment {
+	color: #f90;
+}
+.php-constant {
+	color: #520;
+}
+.php-function {
+	color: #00f;
+}
+.php-number {
+	color: #f00;
+}
+.php-operator {
+	color: #00f;
+}
+.php-brackets {
+	color: #009;
+}
+.php-keyword {
+	color: #006600;
+}
+.php-string {
+	color: #c00;
+}
+.php-var-type {
+	color: #099;
+}
+.php-var {
+	color: #06f;
+}
+
+/**
+ * XML
+ */
+.xml {
+}
+.xml-string {
+	color: #060;
+}
+.xml-comment, .xml-comment span {
+	color: #999;
+}
+.xml-number {
+	color: #f00;
+}
+.xml-element {
+	color: #009;
+}
+.xml-text {
+	color: #000;
+}
+
+/**
+ * JavaScript
+ */
+.js {
+	color: #000;
+}
+.js-string {
+	color: #00f;
+}
+.js-bracket {
+	color: #009;
+	font-weight: bold;
+}
+.js-client-keyword {
+	color: #909;
+}
+.js-comment {
+	color: #999;
+}
+.js-function-keyword {
+	color: #000;
+	font-weight: bold;
+}
+.js-native-keyword {
+	color: #099;
+}
+.js-number {
+	color: #f00;
+}
+.js-operator {
+	color: #00f;
+}
+.js-regexp {
+	color: #060;
+}
+.js-reserved-keyword {
+	color: #009;
+	font-weight: bold;
+}
+.js-string {
+	color: #00f;
+}

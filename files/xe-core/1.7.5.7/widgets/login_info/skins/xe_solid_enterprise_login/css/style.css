@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+#login							{border:none;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
+#login legend					{display:none;font-size:0;height:0;overflow:hidden;width:0;}
+#sign_box						{position:absolute;right:0;top:40px;z-index:100;}
+#sign_box div.txt				{display:inline-block;padding-right:27px;position:absolute;text-align:right;top:0;right:0;z-index:140;cursor:pointer;}
+#sign_box div.txt span.label	{display:inline-block;padding-left:10px;white-space:nowrap;}
+#sign_box .sign_state1			{color:#d3d3d3;height:31px;background:url(../images/signin_key_right_off.gif) no-repeat top right;}
+#sign_box .sign_state2			{color:#d3d3d3;height:30px;background:url(../images/signin_key_right_on.gif) no-repeat top right;}
+
+#sign_box .sign_state1 span.label		{color:#d3d3d3;padding-top:8px;height:23px;background:url(../images/signin_key_left_off.gif) no-repeat top left;}
+#sign_box .sign_state2 span.label		{color:#d3d3d3;padding-top:8px;height:22px;background:url(../images/signin_key_left_on.gif) no-repeat top left;}
+
+
+#sign_box .signin_window	{display:none;width:219px;position:absolute;right:0px;top:29px;z-index:120;}
+.signin_window .head			{line-height:0;font-size:0;display:block;float:left;width:219px;height:1px;background:url(../images/signin_bg_tt.gif) no-repeat top left;}
+.signin_window .tail	{display:block;line-height:0;font-size:0;float:left;width:219px;height:3px;}
+
+.signin_window div.body		{width:219px;padding-top:11px;float:left;background:url(../images/signin_body_bg.gif) repeat-y top left;}
+.signin_window .mb_input_box	{width:195px;height:76px;margin:0 auto;background:url(../images/signin_win_hr.gif) no-repeat bottom left;}
+.signin_window .m_left		{width:144px;float:left;}
+.signin_window .m_right		{width:51px;float:left;}
+.signin_window .input_text	{width:133px;height:21px;padding:0 2px ;margin-bottom:6px;float:left;background:url(../images/signin_input.gif) no-repeat scroll top left;}
+.signin_window .input_text input	{width:132px;height:17px;margin:0;padding:0;background:none;color:#D3D3D3;font-size:12px;}
+.signin_window .input_text		{position:relative;}
+.signin_window .input_text img	{position:absolute;top:4px;left:4px;}
+.signin_window .input_text input	{position:absolute;width:115px;outline:none;top:2px;left:15px;}
+.sign_check					{margin:0;padding:0;}
+.signin_window input		{border:none;margin:0;padding:0;}
+.signin_window .btnbar		{width:195px;height:23px; padding-top:7px;margin:0 auto;}
+.signin_window .btnbar a.in	{display:block;margin-right:14px;}
+.signin_window .m_left label	{color:#ebf8ff;font-size:12px;}
+.signin_window .m_left label input		{margin-right:6px;vertical-align: middle;}
+/* 196px; signin_input.gif */
+#sign_box .mbInfo_window 			{display:none;width:172px;position:absolute;right:0px;top:29px;z-index:50;}
+.mbInfo_window .head				{line-height:0;font-size:0;display:block;float:left;width:172px;height:1px;background:url(../images/minfo_bg_tt.gif) no-repeat top left;}
+.mbInfo_window div.body				{width:172px;padding-top:11px;float:left;background:url(../images/minfo_body_bg.gif) repeat-y top left;}
+.mbInfo_window div.body ul			{width:143px;margin:0 auto;padding-bottom:4px;background:url(../images/signin_win_hr.gif) no-repeat bottom left;}
+.mbInfo_window li					{height:23px;padding-left:19px;}
+.mbInfo_window li a					{text-decoration:none;color:#929292;}
+.mbInfo_window div.body .btnbar		{width:143px;margin:0 auto;padding:10px 0 8px 0;}
+.mbInfo_window .btnbar p			{width:75px;margin:0 7px 0 0;float:left;font-size:11px;color:#7e7e7e; font-family:Arial, Helvetica, sans-serif;}
+.mbInfo_window .btnbar a			{float:right;}
+.icon_img		{width:16px; height:16px;} 
+.mbInfo_window .tail				{width:172px;height:3px;float:left;}
+
+.mbInfo_window li.i1					{background:url(../images/icon_write.gif) no-repeat 1px 0;}
+.mbInfo_window li.i2					{background:url(../images/icon_add.gif) no-repeat top left;}
+.mbInfo_window li.i3					{background:url(../images/icon_check.gif) no-repeat top left;}
+.mbInfo_window li.i4					{background:url(../images/icon_article.gif) no-repeat top left;}
+.mbInfo_window li.i5					{background:url(../images/icon_friends.gif) no-repeat top left;}
+.mbInfo_window li.i6					{background:url(../images/icon_message.gif) no-repeat top left;}
+.mbInfo_window li.i7					{background:url(../images/icon_tool.gif) no-repeat top left;}

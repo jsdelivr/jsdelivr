@@ -1,0 +1,48 @@
+.login_white { margin:0; padding:0; border:2px solid #d9d9d9; width:196px; position:relative; _padding-top:2px; display:block;}
+*:first-child+html body#white .login_white { padding-top:2px;}
+.login_white legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+.login_white form { position:relative; border:1px solid #cacaca; padding:11px 11px 7px 11px; width:172px; overflow:hidden;}
+.login_white form .idpwWrap { overflow:hidden; clear:both; width:172px;}
+.login_white form .idpw { float:left; width:110px;}
+.login_white form .idpw input { border:1px solid #c9c9c9; color:#282828; width:105px; background:#fbfbfb; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma;}
+.login_white form .login { float:right;}
+
+.login_white form p.securitySignIn { clear:both; padding:0 0 0 18px; margin:4px 0 0 0; }
+.login_white form p.noneSSL { background:url("../images/none_ssl.png") no-repeat left top; }
+.login_white form p.SSL { background:url("../images/ssl.png") no-repeat left top; }
+.login_white form p.noneSSL a { color:#BF6801; text-decoration:none; }
+.login_white form p.SSL a { color:#9CAC74; text-decoration:none; }
+
+.login_white form p.save { margin:0; clear:both; padding:.3em 0;}
+.login_white form p.save input { vertical-align:middle; _margin:-3px;}
+*:first-child+html body#white .login_white form p input { margin:-3px; }
+.login_white form p.save label { font:.9em; color:#999999;}
+.login_white form ul.help { margin:0; border-top:1px solid #e4e4e4; overflow:hidden; padding:.5em 0 0 0; white-space:nowrap; list-style:none;}
+.login_white form ul.help li { list-style:none; float:left; display:block; padding:0 3px 0 7px; background:url(../images/white/vrType1.gif) no-repeat left center;}
+.login_white form ul.help li.first-child { background:none; padding-left:0;}
+.login_white form ul.help li a { color:#999999; font:.9em; white-space:nowrap; text-decoration:none; }
+.login_white form ul.help li a:hover { text-decoration:underline; }
+.login_white form ul.help li.first-child a { color:#54564b;}
+.login_white form .userName { position:relative; width:172px; overflow:hidden; border-bottom:1px solid #e4e4e4; padding:0 0 6px 0; margin-top:-5px;}
+.login_white form .userName strong { color:#282828; padding:4px 0 0 2px; font:bold .9em Tahoma;}
+.login_white form .userName a { position:relative; right:0px; }
+.login_white form .userName img { border:none; }
+.login_white form ul.userMenu { margin:0; position:relative; padding:0 0 6px 4px; overflow:hidden; margin-top:10px;}
+.login_white form ul.userMenu li { list-style:none; padding-left:10px; background:url(../images/white/bulletFF1A00.gif) no-repeat left 4px; margin-bottom:5px;}
+.login_white form ul.userMenu li a { color:#54564b; text-decoration:none; }
+.login_white form ul.userMenu li a:hover { text-decoration:underline; }
+.login_white form p.latestLogin { margin:0; color:#999999; font:.9em;}
+.login_white form p.latestLogin span { font:1em Tahoma;}
+
+img.login_mask { width:201px; height:5px; background:#ffffff; display:block;}
+.openid_login_white { margin:0; padding:0; border:2px solid #d9d9d9; width:196px; position:relative; _padding-top:2px; display:block; }
+*:first-child+html body .openid_login_white { padding-top:2px;}
+.openid_login_white legend { display:none; width:0; height:0; overflow:hidden; font-size:0;}
+.openid_login_white form { position:relative; border:1px solid #cacaca; padding:11px 11px 7px 11px; width:172px; }
+.openid_login_white form .idpwWrap { overflow:hidden; clear:both; width:172px;}
+.openid_login_white form .idpw { float:left;}
+.openid_login_white form .idpw p { margin:0; padding:0; margin-bottom:5px; background: url(../images/openid_login_bg.gif) left no-repeat; padding-left:18px; font-size:.9em Tahoma;color:#999999}
+.openid_login_white form .idpw input { border:1px solid #c9c9c9; color:#282828; width:105px; background:#fbfbfb; padding:1px 5px; margin-bottom:2px; font:.9em Tahoma; }
+.openid_login_white form .login { float:right;}
+.openid_login_white form p.save { margin:0; padding: 0; }
+.openid_login_white form p.save label { font:.9em; color:#999999;}

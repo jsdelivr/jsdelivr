@@ -1,0 +1,62 @@
+// Variables
+//------------------------------------------------------
+$img-src:                "../bootflat/img/check_flat/default.png" !default; 
+
+// Exports
+//------------------------------------------------------
+
+@include exports("checkbox-radio") {
+
+  /**
+   * checkbox and radio
+   * --------------------------------------------------
+   */
+  .checkbox, .radio {
+      margin-top: 0;
+      padding-left: 0;
+  }
+  .icheckbox_flat,
+  .iradio_flat {
+      display: inline-block;
+      *display: inline;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0 !important;
+      width: 20px;
+      height: 20px;
+      background: url($img-src) no-repeat;
+      border: none;
+      cursor: pointer;
+  }
+
+  .icheckbox_flat {
+      background-position: 0 0;
+
+      &.checked {
+          background-position: -22px 0;
+      }
+      &.disabled {
+          background-position: -44px 0;
+          cursor: default;
+      }
+      &.checked.disabled {
+          background-position: -66px 0;
+      }
+  }
+
+  .iradio_flat {
+      background-position: -88px 0;
+
+      &.checked {
+          background-position: -110px 0;
+      }
+      &.disabled {
+          background-position: -132px 0;
+          cursor: default;
+      }
+      &.checked.disabled {
+          background-position: -154px 0;
+      }
+  }
+
+}

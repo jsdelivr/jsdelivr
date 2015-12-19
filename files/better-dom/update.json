@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "better-dom",
+  "repo": "chemerisuk/better-dom",
+  "files": {
+    "basePath": "dist/",
+    "include": ["better-dom.min.js"]
+  }
+}

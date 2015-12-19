@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "covjson-reader",
+  "repo": "Reading-eScience-Centre/covjson-reader",
+  "files": {
+    "include": ["*.min.js"]
+  }
+}

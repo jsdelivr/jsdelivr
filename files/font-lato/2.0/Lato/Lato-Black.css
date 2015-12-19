@@ -1,0 +1,11 @@
+/* Webfont: Lato-Black */@font-face {
+    font-family: 'LatoBlack';
+    src: url('Lato-Black.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Black.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Black.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

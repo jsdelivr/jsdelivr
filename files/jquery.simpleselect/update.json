@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.simpleselect",
+  "repo": "pioul/jQuery.SimpleSelect",
+  "files": {
+    "include": ["jquery.simpleselect.min.js","jquery.simpleselect.min.css"]
+  }
+}

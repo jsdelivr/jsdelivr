@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "responsive-nav",
+  "repo": "viljamis/responsive-nav.js",
+  "files": {
+    "include": ["responsive-nav.css", "responsive-nav.js", "responsive-nav.min.js"]
+  }
+}

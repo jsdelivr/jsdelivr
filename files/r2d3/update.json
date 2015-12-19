@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "r2d3",
+  "repo": "mhemesath/r2d3",
+  "files": {
+    "include": ["*.min.js"]
+  }
+}

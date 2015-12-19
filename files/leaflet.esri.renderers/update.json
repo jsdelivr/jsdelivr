@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.esri.renderers",
+  "repo": "Esri/esri-leaflet-renderers",
+  "files": {
+    "basePath": "dist/",
+    "include": ["esri-leaflet-renderers.js", "esri-leaflet-renderers.js.map"],
+    "exclude": ["README.md"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "clusterize.js",
+  "repo": "NeXTs/Clusterize.js",
+  "files": {
+	"include": ["clusterize.min.js","clusterize.css"]
+  }
+}

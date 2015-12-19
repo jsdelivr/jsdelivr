@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "mousetrap",
+  "repo": "ccampbell/mousetrap",
+  "files": {
+    "include": ["mousetrap.min.js", "mousetrap.js", "./plugins/**/*.min.js"],
+    "exclude": ["**/tests/"]
+  }
+}

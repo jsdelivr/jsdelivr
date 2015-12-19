@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "docsearch.js",
+  "repo": "algolia/docsearch.js",
+  "files": {
+    "basePath": "dist/cdn/"
+  }
+}

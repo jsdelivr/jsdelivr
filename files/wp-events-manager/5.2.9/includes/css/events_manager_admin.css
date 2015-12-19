@@ -1,0 +1,164 @@
+#location_info td { vertical-align:top; text-align:left; }
+#location_info th { vertical-align:top; text-align:left; padding:5px 10px 0 0; }
+
+p.warning {
+	border: 2px solid #FD0000;
+	background: #FF7146;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px;
+}
+.debug{
+	color: green;
+	background: #B7F98C;
+	margin: 15px;
+	padding: 10px;
+	border: 1px solid #629948;
+}
+.switch-tab {
+	background: #aaa;
+	width: 100px;
+	float: right;
+	text-align: center;
+	margin: 3px 1px 0 5px;
+	padding: 2px;
+}
+.switch-tab a {
+	color: #fff;
+	text-decoration: none;
+}
+.switch-tab a:hover {
+	color: #D54E21;
+	
+} 
+#events-pagination {
+	text-align: center; 
+	
+}
+#events-pagination a {
+	margin: 0 20px 0 20px;
+	text-decoration: none;
+	width: 80px;
+	padding: 3px 0; 
+	background: #FAF4B7;
+	border: 1px solid #ccc;
+	border-top: none;
+} 
+#new-event {
+	float: left;
+ 
+}
+div#icon-events{ background:url('../images/calendar-32.png') no-repeat center; }
+div#icon-bookings{ background:url('../images/bookings-32.png') no-repeat center; }
+
+/* Events List */
+table.events-table tr.pending { background:#FCFFA8 }
+table.events-table tr.past { background:#E4E4E4 }
+table.events-table .category { color:#888; }
+
+/* Events Add Page */
+#event-form #event-name, #location-form, #location-name { margin: 2px 0 7px; padding: 6px 5px; width: 98%; }
+	/*Locations*/
+	#em-location-data table { float:left; margin:0px 15px 0px 0px; }
+	/* Location form */
+		#em-location-data table.em-location-data td, #em-location-data table.em-location-data th { vertical-align:top; border:none; }
+		#em-location-data table.em-location-data { width:50%; float:left; border:none; }
+		#em-location-data .em-location-map-container, #em-location-data .em-location-map-404, #em-location-data .em-location-map-content { width: 400px; height: 300px; float:left; }
+		#em-location-data .em-location-map-404 { vertical-align:middle; text-align: center; }
+	/*Bookings */
+		#event-rsvp-box { margin:10px; }
+		/*Tickets*/
+			.em-tickets-row .ticket-status span.ticket_on { display:block; width:10px; height:10px; background:green; }
+			.em-tickets-row .ticket-status span.ticket_off { display:block; width:10px; height:10px; background:red; }
+			.em-tickets-row .ticket-status span.ticket_new { display:block; width:10px; height:10px; background:grey; }
+			#event-tickets th { width:auto; }
+			#event-tickets th.ticket-status { width:20px; }
+			/* Overlay Form */
+			#em-tickets-form input[type=text] { width:97%; padding:2px; color:#666; }
+			#em-tickets-form #wp-submit { display:block; clear:both; }
+			/*Inline Form */
+			.em-ticket-form { padding:0px 10px; margin-bottom:10px; width:400px; }
+			.em-ticket-form label { display:inline-block; min-width:70px; padding-right:10px; }
+			.em-ticket-form div { clear:both; margin:5px 0px;}
+			.em-ticket-form input.name { width:300px; }
+			.em-ticket-form .space-limits input { width:40px; }
+			.em-ticket-form .date-limits input { width:100px; }
+			.em-ticket-form div.description { margin-top:9px;}
+			.em-ticket-form textarea { width:100%; margin-top:7px; }
+
+/* Booking Form */
+	div#em-loading { position:absolute; width:100%; height:100%; background:#FFFFFF url(../images/loading.gif) 50% 50% no-repeat; left:0px; top:0px; opacity:0.8; filter:alpha(opacity=80)}
+	.em-booking { margin:15px 0px 10px 0px; position:relative; }
+	.em-booking-form  { position:relative; clear:left; }
+	.em-booking-form-details  { padding:10px; width:360px; float:left; }  
+	.em-booking-form-details input.input, .em-booking-form-details textarea { width:250px; }
+	.em-booking-form-details p { clear:left; }
+	.em-booking-form-details label { display:block; float:left; }
+	.em-booking-form-details span.input-group input { margin-left:-20px; }
+	.em-booking-form-details span.input-group { display:block; margin-left:120px; }
+	.em-booking-form-details .em-booking-submit { width:auto; }	
+	.em-booking-form label  { display:inline-block; width:100px; }
+	/* Message Errors */
+		div.em-booking-message { margin:10px 0px; padding:10px; color:#333; border-radius:3px; }
+		div.em-booking-message p { margin:10px 0px !important; padding:0px; color:#333; }
+		div.em-booking-message-success { background-color:#f1fff0; border:1px solid #a8d144; }	
+		div.em-booking-message-error { background-color:#FFEBE8; border:1px solid #C00; }
+		
+/* Booking admin area */
+#em-booking-details .inside { padding:5px 10px; }
+.stuffbox .inside h4 { font-size:16px; font-weight:normal; margin:10px 0px 20px; font-weight:bold; }
+	/* Generic Table Info */
+	table.em-form-fields td, table.em-form-fields th { text-align:left; vertical-align:top; }
+	table.em-form-fields th { padding:0px 20px 5px 0px; }
+	/* Ticket table info */
+	table.em-tickets-bookings-table { width:100%; border:1px #efefef solid; margin:10px 0px; }
+	table.em-tickets-bookings-table th, table.em-tickets-bookings-table td { padding:5px 5px; margin:0px; }
+	table.em-tickets-bookings-table thead th, table.em-tickets-bookings-table tfoot th { background:#cdcdcd; text-align:center }
+	table.em-tickets-bookings-table tbody td.ticket-type { text-align:left; padding-left:10px; }
+	table.em-tickets-bookings-table tbody td { text-align:center; }	
+	/* Bookings Table */
+		.em-bookings-table .em-bookings-table-export, .em-bookings-table .em-bookings-table-settings { float:left; display:block; margin:2px 5px; width:25px; height:25px;  }
+		.em-bookings-table .em-bookings-table-export { background:url(../images/csv.png) 0px 0px no-repeat; }
+		.em-bookings-table .em-bookings-table-settings { background:url(../images/settings.png) 0px 0px no-repeat; }
+		/* Settings & Export */	
+			#em-bookings-table-export, #em-bookings-table-settings { width:500px; height: 75%; }
+			#em-bookings-table-export form, #em-bookings-table-settings form { height: 100%; overflow:auto; }	
+			/* Sorting */
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable { list-style-type: none; margin: 0; padding: 0 0 10px; float: left; margin-right: 10px; }
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li { margin: 0 5px 5px 5px; padding: 3px 8px; font-size: 12px; width: 120px; font-weight:none; cursor:move; }
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li.ui-state-highlight {}
+				.em-bookings-table-overlay ul.em-bookings-cols-sortable li.ui-state-default { color:#999; }
+				#em-bookings-export-cols-inactive, #em-bookings-cols-inactive { width:300px; }	
+				#em-bookings-export-cols-inactive li, #em-bookings-cols-inactive li { float:left; }
+	/* Single Booking Edit View */
+		#em-bookings-admin-booking .em-booking-single-info { display:none; }
+		#em-bookings-admin-booking .em-booking-single-form { padding-right:20px; }
+
+/* Google Map Object */
+#location-balloon-content h3 { background:none; text-shadow:none; }
+
+/* Options Page */
+#dbem_options_form td, #dbem_options_form th { vertical-align:top; }
+table.em-caps-table th, table.em-caps-table td { width:auto !important; }
+
+/* Widget Tables CSS */
+.em_obj .table-wrap{
+	position:relative;
+}
+.em_obj #em-loading { position:absolute; width:100%; height:100%; background:#FFFFFF url(../images/loading.gif) 50% 50% no-repeat; left:0px; top:0px; opacity:0.8; filter:alpha(opacity=80)}
+
+/*Help Docs*/
+.em-docs > h3 { font-size:18px; display:block; margin-top:50px; }
+.em-docs dl, .em-docs h2, .em-docs h3, .em-docs h4, .em-docs dl { clear:left; }
+.em-docs dl dt { display:block; float:left; min-width:160px; margin-right:10px; }
+.em-docs dl dd { display:block; margin-left:170px; }		
+.em-docs-atts dl dt { min-width:110px !important; }
+.em-docs-atts dl dd { margin-left:120px !important; }
+
+/* Time Picker */
+.em-time-input.error { border:#cc0000 1px solid; }
+div.time-picker {  position: absolute; height: 191px; width:4.5em; /* needed for IE */ overflow: auto; background: #fff; border: 1px solid #aaa; z-index: 99; margin: 0; }
+div.time-picker-12hours { width:6.5em; /* needed for IE */ }
+div.time-picker ul { list-style-type: none; margin: 0; padding: 0; }
+div.time-picker li { cursor: pointer; height: 10px; font: 12px/1 Helvetica, Arial, sans-serif; padding: 4px 3px; }
+div.time-picker li.selected { background: #0063CE; color: #fff; }

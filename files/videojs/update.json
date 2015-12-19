@@ -1,0 +1,20 @@
+{
+    "packageManager": "npm",
+    "name": "video.js",
+    "repo": "videojs/video.js",
+    "files": {
+        "basePath": "dist/",
+        "include": [
+            "video-js.css",
+            "video-js.min.css",
+            "video-js.swf",
+            "video.dev.js",
+            "video.js",
+			"video.min.js",
+            "./lang/**/*",
+            "./font/**/*"
+        ]
+    }
+}
+
+

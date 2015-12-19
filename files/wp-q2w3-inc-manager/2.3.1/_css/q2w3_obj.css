@@ -1,0 +1,32 @@
+#q2w3_inc_options_table .select_pages {
+	width: 100%; 
+	height: 97px;
+}
+#q2w3_inc_options_table .text_input, #q2w3_table_search_form .text_input {
+	width: 100%;
+}
+#q2w3_inc_options_table .select_input, #q2w3_table_search_form .select_input {
+	width: 150px;
+}
+#q2w3_inc_options_table .digit_input, #q2w3_table_search_form .digit_input {
+	width: 150px;
+}
+#q2w3_inc_options_table .textarea_input, #q2w3_table_search_form .textarea_input {
+	width: 100%;
+	height: 190px;
+}
+
+#q2w3_inc_options_table .day_input, #q2w3_inc_options_table .h_input, #q2w3_inc_options_table .m_input, #q2w3_inc_options_table .s_input,
+#q2w3_table_search_form .day_input, #q2w3_table_search_form .h_input, #q2w3_table_search_form .m_input, #q2w3_table_search_form .s_input {
+	width: 30px;
+	text-align: center;
+}
+
+#q2w3_inc_options_table .year_input, #q2w3_table_search_form .year_input {
+	width: 50px;
+	text-align: center;
+}
+
+#q2w3_inc_manager_errors .q2w3_inc_manager_error {
+	color: red;
+}
