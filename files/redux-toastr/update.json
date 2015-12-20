@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "redux-toastr",
+  "repo": "diegoddox/redux-toastr",
+  "files": {
+    "basePath": "lib/",
+    "include": [
+      "css/redux-toastr.min.css",
+      "css/redux-toastr.min.css",
+      "fonts/redux-toastr.eot",
+      "fonts/redux-toastr.svg",
+      "fonts/redux-toastr.ttf",
+      "fonts/redux-toastr.woff"
+    ]
+  }
+}
