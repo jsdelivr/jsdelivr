@@ -1,13 +1,17 @@
 {
   "packageManager": "github",
   "name": "angular.file-upload",
-  "repo": "danialfarid/ng-file-upload",
+  "repo": "danialfarid/ng-file-upload-bower",
   "files": {
     "include": [
-      "dist/ng-file-upload.min.js", 
-      "dist/ng-file-upload-shim.min.js", 
-      "dist/ng-file-upload-all.min.js",
-      "dist/FileAPI.min.js",
+      "ng-file-upload.js", 
+      "ng-file-upload.min.js", 
+      "ng-file-upload-shim.js", 
+      "ng-file-upload-shim.min.js", 
+      "ng-file-upload-all.js",
+      "ng-file-upload-all.min.js",
+      "FileAPI.js",
+      "FileAPI.min.js",
       "FileAPI.flash.swf"
     ]
   }
