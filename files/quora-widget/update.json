@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "quora-widget",
+  "repo": "arpitbbhyani/quora-widget",
+  "files": {
+    "include": ["quora-widget.js", "quora-widget.min.js"]
+  }
+}
