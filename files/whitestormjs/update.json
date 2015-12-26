@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "whitestormjs",
-  "repo": "sasha240100/WhitestormJS",
+  "repo": "WhitestormJS/whitestorm.js",
   "files": {
     "include": ["build/whitestorm.min.js", "build/whitestorm.js"]
   }
