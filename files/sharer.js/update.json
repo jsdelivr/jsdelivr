@@ -3,6 +3,6 @@
   "name": "sharer.js",
   "repo": "ellisonleao/sharer.js",
   "files": {
-    "include": ["sharer.js", "sharer.min.js"]
+    "include": ["sharer.min.js"]
   }
 }
