@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "searchkit",
+  "repo": "searchkit/searchkit",
+  "files": {
+    "basePath": "release/",
+    "include":["**/*"]
+  }
+}
