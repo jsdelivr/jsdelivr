@@ -4,6 +4,6 @@
   "repo": "searchkit/searchkit",
   "files": {
     "basePath": "release/",
-    "include":"**/*"
+    "include":["**/*"]
   }
 }
