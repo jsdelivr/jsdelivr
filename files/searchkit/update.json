@@ -1,9 +1,8 @@
 {
-  "packageManager": "npm",
+  "packageManager": "github",
   "name": "searchkit",
   "repo": "searchkit/searchkit",
   "files": {
-    "basePath": "release/",
-    "include":["**/*"]
+    "basePath": "release/"
   }
 }

@@ -3,6 +3,6 @@
   "name": "watermarkjs",
   "repo": "brianium/watermarkjs",
   "files": {
-    "include": ["dist/watermark-polyfill.min.js"]
+    "include": ["dist/*.min.js"]
   }
 }

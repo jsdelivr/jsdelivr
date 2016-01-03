@@ -3,6 +3,6 @@
   "name": "toastr",
   "repo": "CodeSeven/toastr",
   "files": {
-    "include": ["buiid/*"]
+    "include": ["build/*"]
   }
 }

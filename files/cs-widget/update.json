@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "cs-widget",
-  "repo": "SpotTech/CS-Widget",
-  "files": {
-    "include": ["widget.js"]
-  }
-}
