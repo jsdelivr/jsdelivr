@@ -4,6 +4,6 @@
   "repo": "BlazeCSS/blaze",
   "files": {
     "basePath": "dist/",
-    "include": ["*.min.css"]
+    "include": ["*.css"]
   }
 }
