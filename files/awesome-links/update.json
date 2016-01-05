@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "awesome-links",
+  "repo": "kernc/awesome-links.css",
+  "files": {
+    "include": ["awesome-links.min.css"]
+  }
+}
