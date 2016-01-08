@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ngn-components",
+  "repo": "ngnjs/chassis-comonents",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js", "*.html"]
+  }
+}
