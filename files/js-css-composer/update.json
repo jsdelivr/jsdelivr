@@ -3,7 +3,6 @@
   "name": "js-css-composer",
   "repo": "icanget/js-css-composer",
   "files": {
-    "basePath": "build/",
-    "include": ["icg-js-css-composer.min.js"]
+    "include": ["dist/icg-js-css-composer.min.js"]
   }
 }
