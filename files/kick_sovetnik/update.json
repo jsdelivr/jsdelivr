@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "kick_sovetnik",
+  "repo": "SerjoPepper/kick_sovetnik",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}
