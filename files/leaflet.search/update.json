@@ -1,6 +1,6 @@
 {
   "packageManager": "bower",
-  "name": "leaflet.search",
+  "name": "leaflet-search",
   "repo": "stefanocudini/leaflet-search",
   "files": {
     "basePath": "dist/",
