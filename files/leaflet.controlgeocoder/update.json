@@ -1,6 +1,6 @@
 {
   "packageManager": "npm",
-  "name": "platform",
+  "name": "leaflet-control-geocoder",
   "files": {
     "include": ["Control.Geocoder.css", "Control.Geocoder.js"]
   }
