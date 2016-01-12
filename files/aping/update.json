@@ -3,6 +3,6 @@
   "name": "apiNG",
   "repo": "JohnnyTheTank/apiNG",
   "files": {
-    "include": ["dist/*"]
+    "include": ["dist/*.min.*"]
   }
 }
