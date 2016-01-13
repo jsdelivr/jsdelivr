@@ -60,7 +60,7 @@ A version directory should contain the following:
   * mithril
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
-### Repporting Bugs / Suggestions
+### Reporting Bugs / Suggestions
 
 Please find the correct [repo](https://github.com/jsdelivr) for your bug repport or suggestion, search issues, then post if you can't find anything.  For general questions or brainstorming new ideas, you can join our [Gitter chat](https://gitter.im/jsdelivr/jsdelivr).
 
