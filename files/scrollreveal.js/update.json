@@ -3,6 +3,7 @@
   "name": "scrollreveal",
   "repo": "jlmakes/scrollreveal.js",
   "files": {
-	"basePath": "dist/"
+	"basePath": "dist/",
+	"include": "scrollreveal.min.js"
   }
 }
