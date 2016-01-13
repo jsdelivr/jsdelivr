@@ -1,8 +1,15 @@
-### Web Interface (Recommended)
+Adding new or updating projects.
+----
+
+Each project has its [own folder](#file-structure) in this repo.  While you could upload files via git, we recommend you add only configuration files so our [bot](https://github.com/jsdelivr/libgrabber#libgrabber) does all the work for you for current and future updates automatically.  If you want to upload older files, those will need to be [uploaded by hand](#advanced---manual).
+
+### Adding Files for Hosting
+
+#### Web Interface (Recommended)
 
 *This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
 
-1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2].
+1. Add configuration files using your web browser.  Visit [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2].
 2. Note how GitHub automatically forked the project under your username and created a `patch-N` branch for it:
 
     > 	youruser wants to merge 1 commit into jsdelivr:master from youruser:patch-1
@@ -13,9 +20,7 @@
 6. Don't add any project related files. Our bot will add them after your PR gets merged.
 7. Wait for approval!
 
-
-
-### Advanced
+#### Advanced - Manual
 
  1. Fork the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
@@ -29,15 +34,14 @@
  5. That's it!
 
 
-File Structure
---------------
+### File Structure
+
 Under `files/` a directory for each project is created. Please follow the instructions below (exceptions are made on a per-case basis).
 
 1. Names should be lowercase
 2. No special characters or spaces, except for `. - _`.
 3. Name should only contain the name of the project. (no versions or additional information)
 4. If the project is a plugin of a library, prepend the name of the library, like `jquery.blurjs` or `bootstrap.select`.
-
 
 A project's directory should contain the following:
 
@@ -55,6 +59,11 @@ A version directory should contain the following:
   * jQuery
   * mithril
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
+
+### Repporting Bugs / Suggestions
+
+Please find the correct [repo](https://github.com/jsdelivr) for your bug repport or suggestion, search issues, then post if you can't find anything.  For general questions or brainstorming new ideas, you can join our [Gitter chat](https://gitter.im/jsdelivr/jsdelivr).
+
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
   [2]: https://github.com/jsdelivr/jsdelivr/blob/master/files/abaaso/info.ini
