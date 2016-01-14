@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-tumblr",
+  "repo": "JohnnyTheTank/apiNG-plugin-tumblr",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

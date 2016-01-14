@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-bandsintown",
+  "repo": "JohnnyTheTank/apiNG-plugin-bandsintown",
+  "files": {
+    "include": ["dist/*"]
+  }
+}
