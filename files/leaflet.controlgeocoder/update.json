@@ -1,7 +1,7 @@
 {
-  "packageManager": "npm",
-  "name": "leaflet-control-geocoder",
-  "files": {
-    "include": ["Control.Geocoder.css", "Control.Geocoder.js"]
-  }
+	"packageManager": "bower",
+	"name": "leaflet-control-geocoder",
+	"files": {
+		"basePath": "dist/"
+	}
 }
