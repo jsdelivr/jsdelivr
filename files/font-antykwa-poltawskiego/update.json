@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "font-antykwa-poltawskiego",
+  "repo": "marekfilipiak/font-antykwa-poltawskiego",
+  "files": {
+    "include": ["angular-moment.js", "angular-moment.min.js", "angular-moment.min.js.map"]
+  }
+}
