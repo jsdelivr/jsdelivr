@@ -3,7 +3,6 @@
   "name": "leaflet-search",
   "repo": "stefanocudini/leaflet-search",
   "files": {
-    "basePath": "dist/",
-    "include": ["*.min.js", "*.min.css"]
+    "include": ["dist/*.min.js", "dist/*.min.css", "./images/*"]
   }
 }
