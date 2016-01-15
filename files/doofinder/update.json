@@ -3,6 +3,6 @@
   "name": "doofinder",
   "repo": "doofinder/js-doofinder",
   "files": {
-    "include": ["dist/doofinder.min.js"]
+    "include": ["doofinder.min.js", "doofinder.css"]
   }
 }
