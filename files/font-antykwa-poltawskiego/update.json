@@ -3,6 +3,6 @@
   "name": "font-antykwa-poltawskiego",
   "repo": "marekfilipiak/font-antykwa-poltawskiego",
   "files": {
-    "include": ["./1.0"]
+    "include": ["*/*"]
   }
 }
