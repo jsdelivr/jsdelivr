@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "leaflet-search",
+  "repo": "stefanocudini/leaflet-search",
+  "files": {
+    "include": ["dist/*.min.js", "dist/*.min.css", "./images/*"]
+  }
+}

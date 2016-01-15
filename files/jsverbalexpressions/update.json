@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jsverbalexpressions",
+  "repo": "VerbalExpressions/JSVerbalExpressions",
+  "files": {
+    "basePath": "dist",
+    "include": ["verbalexpressions.js", "verbalexpressions.min.js", "verbalexpressions.min.js.map"]
+  }
+}
