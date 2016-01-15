@@ -3,6 +3,6 @@
   "name": "buttons",
   "repo": "alexwolfe/Buttons",
   "files": {
-    "include": ["./css/buttons.css", "./css/buttons.min.css"]
+    "include": ["./css/*", "./js/*"]
   }
 }
