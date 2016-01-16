@@ -8,7 +8,7 @@ Each project has its [own folder](#file-structure) in this repo.  While you coul
 #### Web Interface (Recommended)
 
 
-Here's a quick method to install configuration files for our bot using your web browser.<br>
+Here's a quick method to install two configuration files for our bot using your web browser.<br>
 *This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
 
 1. Visit [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an `info.ini` file inside.  (Review if `info.ini` already exists.) [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2].
