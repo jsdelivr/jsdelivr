@@ -4,8 +4,8 @@
   "repo": "ghinda/jotted",
   "files": {
     "include": [
-      "jotted.css",
-      "jotted.js"
+      "jotted.min.css",
+      "jotted.min.js"
     ]
   }
 }
