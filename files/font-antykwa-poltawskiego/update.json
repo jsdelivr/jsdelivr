@@ -3,6 +3,6 @@
   "name": "font-antykwa-poltawskiego",
   "repo": "marekfilipiak/font-antykwa-poltawskiego",
   "files": {
-    "include": ["*/*"]
+    "include": ["stylesheet.css", "antpolt-bold-webfont.ttf", "antpolt-bold-webfont.woff", "antpolt-bolditalic-webfont.eot", "antpolt-bolditalic-webfont.ttf", "antpolt-italic-webfont.eot", "antpolt-italic-webfont.ttf", "antpolt-italic-webfont.woff", "antpolt-regular-webfont.eot", "antpolt-regular-webfont.ttf", "antpolt-regular-webfont.woff"]
   }
 }
