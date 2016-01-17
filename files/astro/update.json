@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "astro-wp",
+  "repo": "Ting-y/Astro",
+  "files": {
+    "include": ["astro-wp-element.min.js", "astro-support-views.min.js"]
+  }
+}
