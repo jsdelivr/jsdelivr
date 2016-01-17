@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "xGallerify",
-  "repo": "https://github.com/xremix/xGallerify",
+  "repo": "xremix/xGallerify",
   "files": {
     "include": ["dist/*"]
   }
