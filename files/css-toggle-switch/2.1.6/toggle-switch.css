@@ -1,0 +1,310 @@
+/*
+ * CSS TOGGLE SWITCHES
+ * Unlicense
+ *
+ * Ionuț Colceriu - ghinda.net
+ * https://github.com/ghinda/css-toggle-switch
+ *
+ */
+/* Toggle Switches
+ */
+/* Shared
+ */
+/* Checkbox
+ */
+/* Radio Switch
+ */
+/* Hide by default
+ */
+.switch-toggle a, .switch-light span span {
+  display: none; }
+
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+  /* Checkbox switch
+	 */
+  /* Radio switch
+	 */
+  /* Standalone Themes */
+  /* Candy Theme
+	 * Based on the "Sort Switches / Toggles (PSD)" by Ormal Clarck
+	 * http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/
+	 */
+  /* Android Theme
+	 */
+  /* iOS Theme
+	 */
+  .switch-light {
+    display: block;
+    height: 30px;
+    /* Outline the toggles when the inputs are focused
+	 */
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    margin-left: 100px;
+    /* Position the label over all the elements, except the slide-button (<a>)
+	 * Clicking anywhere on the label will change the switch-state
+	 */
+    /* Don't hide the input from screen-readers and keyboard access
+	 */ }
+    .switch-light * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .switch-light a {
+      display: block;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+    .switch-light label, .switch-light > span {
+      line-height: 30px;
+      vertical-align: middle; }
+    .switch-light input:focus ~ a, .switch-light input:focus + label {
+      outline: 1px dotted #888; }
+    .switch-light label {
+      position: relative;
+      z-index: 3;
+      display: block;
+      width: 100%; }
+    .switch-light input {
+      position: absolute;
+      opacity: 0;
+      z-index: 5; }
+      .switch-light input:checked ~ a {
+        right: 0%; }
+    .switch-light > span {
+      position: absolute;
+      left: -100px;
+      width: 100%;
+      margin: 0;
+      padding-right: 100px;
+      text-align: left; }
+      .switch-light > span span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: block;
+        width: 50%;
+        margin-left: 100px;
+        text-align: center; }
+        .switch-light > span span:last-child {
+          left: 50%; }
+    .switch-light a {
+      position: absolute;
+      right: 50%;
+      top: 0;
+      z-index: 4;
+      display: block;
+      width: 50%;
+      height: 100%;
+      padding: 0; }
+  .switch-toggle {
+    display: block;
+    height: 30px;
+    /* Outline the toggles when the inputs are focused
+	 */
+    position: relative;
+    /* For callout panels in foundation
+	 */
+    padding: 0 !important;
+    /* Generate styles for the multiple states */ }
+    .switch-toggle * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .switch-toggle a {
+      display: block;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+    .switch-toggle label, .switch-toggle > span {
+      line-height: 30px;
+      vertical-align: middle; }
+    .switch-toggle input:focus ~ a, .switch-toggle input:focus + label {
+      outline: 1px dotted #888; }
+    .switch-toggle input {
+      position: absolute;
+      opacity: 0; }
+    .switch-toggle input + label {
+      position: relative;
+      z-index: 2;
+      float: left;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      text-align: center; }
+    .switch-toggle a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      z-index: 1;
+      width: 50%;
+      height: 100%; }
+    .switch-toggle input:last-of-type:checked ~ a {
+      left: 50%; }
+    .switch-toggle.switch-3 label, .switch-toggle.switch-3 a {
+      width: 33.33333%; }
+    .switch-toggle.switch-3 input:checked:nth-of-type(2) ~ a {
+      left: 33.33333%; }
+    .switch-toggle.switch-3 input:checked:last-of-type ~ a {
+      left: 66.66667%; }
+    .switch-toggle.switch-4 label, .switch-toggle.switch-4 a {
+      width: 25%; }
+    .switch-toggle.switch-4 input:checked:nth-of-type(2) ~ a {
+      left: 25%; }
+    .switch-toggle.switch-4 input:checked:nth-of-type(3) ~ a {
+      left: 50%; }
+    .switch-toggle.switch-4 input:checked:last-of-type ~ a {
+      left: 75%; }
+    .switch-toggle.switch-5 label, .switch-toggle.switch-5 a {
+      width: 20%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(2) ~ a {
+      left: 20%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(3) ~ a {
+      left: 40%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(4) ~ a {
+      left: 60%; }
+    .switch-toggle.switch-5 input:checked:last-of-type ~ a {
+      left: 80%; }
+  .switch-candy {
+    background-color: #2d3035;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #191b1e;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2); }
+    .switch-candy label {
+      color: #fff;
+      -webkit-transition: color 0.2s ease-out;
+      -moz-transition: color 0.2s ease-out;
+      transition: color 0.2s ease-out; }
+    .switch-candy input:checked + label {
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+    .switch-candy a {
+      border: 1px solid #333;
+      background-color: #70c66b;
+      border-radius: 3px;
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45); }
+    .switch-candy > span {
+      color: #333;
+      text-shadow: none; }
+    .switch-candy span {
+      color: #fff; }
+    .switch-candy.switch-candy-blue a {
+      background-color: #38a3d4; }
+    .switch-candy.switch-candy-yellow a {
+      background-color: #f5e560; }
+  .switch-android {
+    background-color: #464747;
+    border-radius: 1px;
+    color: #fff;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    /* Selected ON switch-light
+		 */ }
+    .switch-android label {
+      color: #fff; }
+    .switch-android > span span {
+      opacity: 0;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      transition: all 0.1s; }
+      .switch-android > span span:first-of-type {
+        opacity: 1; }
+    .switch-android a {
+      background-color: #666;
+      border-radius: 1px;
+      box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 -1px 0; }
+    .switch-android.switch-light input:checked ~ a {
+      background-color: #0E88B1; }
+    .switch-android.switch-light input:checked ~ span span:first-of-type {
+      opacity: 0; }
+    .switch-android.switch-light input:checked ~ span span:last-of-type {
+      opacity: 1; }
+    .switch-android.switch-toggle, .switch-android > span span {
+      font-size: 85%;
+      text-transform: uppercase; }
+  .switch-ios.switch-light {
+    color: #868686; }
+    .switch-ios.switch-light a {
+      left: 0;
+      width: 30px;
+      background-color: #fff;
+      border: 1px solid #d3d3d3;
+      border-radius: 100%;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1); }
+    .switch-ios.switch-light > span span {
+      width: 100%;
+      left: 0;
+      opacity: 0; }
+      .switch-ios.switch-light > span span:first-of-type {
+        opacity: 1;
+        padding-left: 30px; }
+      .switch-ios.switch-light > span span:last-of-type {
+        padding-right: 30px; }
+    .switch-ios.switch-light > span:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 100px;
+      top: 0;
+      background-color: #fafafa;
+      border: 1px solid #d3d3d3;
+      border-radius: 30px;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0; }
+    .switch-ios.switch-light input:checked ~ a {
+      left: 100%;
+      margin-left: -30px; }
+    .switch-ios.switch-light input:checked ~ span:before {
+      border-color: #53d76a;
+      box-shadow: inset 0 0 0 30px #53d76a; }
+    .switch-ios.switch-light input:checked ~ span span:first-of-type {
+      opacity: 0; }
+    .switch-ios.switch-light input:checked ~ span span:last-of-type {
+      opacity: 1;
+      color: #fff; }
+  .switch-ios.switch-toggle {
+    background-color: #fafafa;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0; }
+    .switch-ios.switch-toggle a {
+      background-color: #53d76a;
+      border-radius: 25px;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+    .switch-ios.switch-toggle label {
+      color: #868686; }
+  .switch-ios input:checked + label {
+    color: #3a3a3a; } }
+
+/* Bugfix for older Webkit, including mobile Webkit. Adapted from
+ * http://css-tricks.com/webkit-sibling-bug/
+ */
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 1280px) {
+  .switch-light, .switch-toggle {
+    -webkit-animation: webkitSiblingBugfix infinite 1s; } }
+
+@-webkit-keyframes webkitSiblingBugfix {
+  from {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0); } }
