@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mixitup",
+  "repo": "patrickkunka/mixitup",
+  "files": {
+    "include": ["jquery.mixitup.js", "jquery.mixitup.min.js"]
+  }
+}
