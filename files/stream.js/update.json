@@ -3,6 +3,6 @@
   "name": "stream.js",
   "repo": "dionyziz/stream.js",
   "files": {
-    "include": ["stream.js", "stream.min.js", "stream.min.js.map"]
+    "include": ["stream.min.js", "stream.min.js.map"]
   }
 }
