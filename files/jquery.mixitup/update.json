@@ -3,7 +3,6 @@
   "name": "mixitup",
   "repo": "patrickkunka/mixitup",
   "files": {
-    "basePath": "build/",
-    "include": ["jquery.mixitup.min.js"]
+    "include": ["build/jquery.mixitup.min.js", "src/jquery.mixitup.js"]
   }
 }
