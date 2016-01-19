@@ -1,0 +1,20 @@
+{ 
+    "packageManager": "github", 
+    "name": "ag-grid", 
+    "repo": "ceolter/ag-grid/",
+    "files": { 
+        "basePath": "dist/",
+        "include": [
+            "ag-grid.css",
+            "ag-grid.js",
+            "ag-grid.min.css",
+            "ag-grid.min.js",
+            "theme-blue.css",
+            "theme-blue.min.css",
+            "theme-dark.css",
+            "theme-dark.min.css",
+            "theme-fresh.css",
+            "theme-fresh.min.css"
+        ]
+    }
+}
