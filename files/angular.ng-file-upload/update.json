@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "angular.ng-file-upload",
+  "repo": "danialfarid/ng-file-upload",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ng-file-upload-all.min.js",
+                "ng-file-upload-shim.min.js",
+                "ng-file-upload.min.js",
+                "FileAPI.min.js"]
+  }
+}
