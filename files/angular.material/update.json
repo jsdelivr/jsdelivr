@@ -1,0 +1,13 @@
+{
+  "packageManager": "github",
+  "name": "angular.material",
+  "repo": "angular/bower-material",
+  "files": {
+    "include": ["angular-material.min.js",
+                "angular-material.min.css",
+                "angular-material.layouts.min.css",
+                "angular-material.js",
+                "angular-material.css",
+                "angular-material.layouts.css"]
+  }
+}
