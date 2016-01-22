@@ -4,6 +4,6 @@
   "repo": "pfefferle/openwebicons",
   "files": {
     "basePath": "",
-    "include": ["./css/openwebicons.min.css", "./css/openwebicons.css", "./fonts/openwebicons.eot", "./fonts/openwebicons.otf", "./fonts/openwebicons.svg", "./fonts/openwebicons.ttf", "./fonts/openwebicons.woff"]
+    "include": ["./css/openwebicons.min.css", "./css/openwebicons.css", "./fonts/openwebicons.eot", "./fonts/openwebicons.svg", "./fonts/openwebicons.ttf", "./fonts/openwebicons.woff", "./fonts/openwebicons.woff2"]
   }
 }
