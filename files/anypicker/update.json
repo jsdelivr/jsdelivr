@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "anypicker",
+  "repo": "CuriousSolutions/AnyPicker",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*"]
+  }
+}
