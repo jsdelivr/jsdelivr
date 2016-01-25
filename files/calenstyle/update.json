@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "calenstyle",
+  "repo": "CuriousSolutions/CalenStyle",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*"]
+  }
+}
