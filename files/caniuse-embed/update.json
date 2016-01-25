@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "caniuse-embed",
+  "repo": "ireade/caniuse-embed",
+  "files": {
+    "include": ["caniuse-embed.min.js"]
+  }
+}
