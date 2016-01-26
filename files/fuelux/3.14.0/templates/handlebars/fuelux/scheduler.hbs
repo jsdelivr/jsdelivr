@@ -1,0 +1,676 @@
+<div class="form-horizontal container-fluid scheduler" {{#unless doNotInit}}data-initialize="scheduler"{{/unless}} role="form" id="{{#if id}}{{id}}{{else}}myScheduler{{/if}}">
+	<div class="row start-datetime">
+		<label class="col-sm-2 control-label scheduler-label" for="{{#if startDateID}}{{startDateID}}{{else}}{{#if id}}{{id}}{{else}}myScheduler{{/if}}StartDate{{/if}}">Start Date</label>
+		<div class="col-sm-10">
+			<div class="row no-margin">
+				<div class="col-xs-4 col-sm-4 form-group">
+					<div class="datepicker start-date">
+						<div class="input-group">
+							<input class="form-control" id="{{#if startDateID}}{{startDateID}}{{else}}{{#if id}}{{id}}{{else}}myScheduler{{/if}}StartDate{{/if}}" type="text"/>
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-calendar"></span>
+									<span class="sr-only">Toggle Calendar</span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+									<div class="datepicker-calendar">
+										<div class="datepicker-calendar-header">
+											<button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous Month</span></button>
+											<button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next Month</span></button>
+											<button type="button" class="title">
+													<span class="month">
+														<span data-month="0">January</span>
+														<span data-month="1">February</span>
+														<span data-month="2">March</span>
+														<span data-month="3">April</span>
+														<span data-month="4">May</span>
+														<span data-month="5">June</span>
+														<span data-month="6">July</span>
+														<span data-month="7">August</span>
+														<span data-month="8">September</span>
+														<span data-month="9">October</span>
+														<span data-month="10">November</span>
+														<span data-month="11">December</span>
+													</span> <span class="year"></span>
+											</button>
+										</div>
+										<table class="datepicker-calendar-days">
+											<thead>
+											<tr>
+												<th>Su</th>
+												<th>Mo</th>
+												<th>Tu</th>
+												<th>We</th>
+												<th>Th</th>
+												<th>Fr</th>
+												<th>Sa</th>
+											</tr>
+											</thead>
+											<tbody></tbody>
+										</table>
+										<div class="datepicker-calendar-footer">
+											<button type="button" class="datepicker-today">Today</button>
+										</div>
+									</div>
+									<div class="datepicker-wheels" aria-hidden="true">
+										<div class="datepicker-wheels-month">
+											<h2 class="header">Month</h2>
+											<ul>
+												<li data-month="0"><button type="button">Jan</button></li>
+												<li data-month="1"><button type="button">Feb</button></li>
+												<li data-month="2"><button type="button">Mar</button></li>
+												<li data-month="3"><button type="button">Apr</button></li>
+												<li data-month="4"><button type="button">May</button></li>
+												<li data-month="5"><button type="button">Jun</button></li>
+												<li data-month="6"><button type="button">Jul</button></li>
+												<li data-month="7"><button type="button">Aug</button></li>
+												<li data-month="8"><button type="button">Sep</button></li>
+												<li data-month="9"><button type="button">Oct</button></li>
+												<li data-month="10"><button type="button">Nov</button></li>
+												<li data-month="11"><button type="button">Dec</button></li>
+											</ul>
+										</div>
+										<div class="datepicker-wheels-year">
+											<h2 class="header">Year</h2>
+											<ul></ul>
+										</div>
+										<div class="datepicker-wheels-footer clearfix">
+											<button type="button" class="btn datepicker-wheels-back"><span class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span></button>
+											<button type="button" class="btn datepicker-wheels-select">Select <span class="sr-only">Month and Year</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 form-group">
+					<label class="sr-only" for="{{#if startTimeID}}{{startTimeID}}{{else}}{{#if id}}{{id}}{{else}}myScheduler{{/if}}StartTime{{/if}}">Start Time</label>
+					<div class="input-group combobox start-time">
+						<input id="{{#if startTimeID}}{{startTimeID}}{{else}}{{#if id}}{{id}}{{else}}myScheduler{{/if}}StartTime{{/if}}" type="text" class="form-control" />
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right" role="menu">
+								<li data-value="12:00 AM"><a href="#">12:00 AM</a></li>
+								<li data-value="12:30 AM"><a href="#">12:30 AM</a></li>
+								<li data-value="1:00 AM"><a href="#">1:00 AM</a></li>
+								<li data-value="1:30 AM"><a href="#">1:30 AM</a></li>
+								<li data-value="2:00 AM"><a href="#">2:00 AM</a></li>
+								<li data-value="2:30 AM"><a href="#">2:30 AM</a></li>
+								<li data-value="3:00 AM"><a href="#">3:00 AM</a></li>
+								<li data-value="3:30 AM"><a href="#">3:30 AM</a></li>
+								<li data-value="4:00 AM"><a href="#">4:00 AM</a></li>
+								<li data-value="4:30 AM"><a href="#">4:30 AM</a></li>
+								<li data-value="5:00 AM"><a href="#">5:00 AM</a></li>
+								<li data-value="5:30 AM"><a href="#">5:30 AM</a></li>
+								<li data-value="6:00 AM"><a href="#">6:00 AM</a></li>
+								<li data-value="6:30 AM"><a href="#">6:30 AM</a></li>
+								<li data-value="7:00 AM"><a href="#">7:00 AM</a></li>
+								<li data-value="7:30 AM"><a href="#">7:30 AM</a></li>
+								<li data-value="8:00 AM"><a href="#">8:00 AM</a></li>
+								<li data-value="8:30 AM"><a href="#">8:30 AM</a></li>
+								<li data-value="9:00 AM"><a href="#">9:00 AM</a></li>
+								<li data-value="9:30 AM"><a href="#">9:30 AM</a></li>
+								<li data-value="10:00 AM"><a href="#">10:00 AM</a></li>
+								<li data-value="10:30 AM"><a href="#">10:30 AM</a></li>
+								<li data-value="11:00 AM"><a href="#">11:00 AM</a></li>
+								<li data-value="11:30 AM"><a href="#">11:30 AM</a></li>
+								<li data-value="12:00 PM"><a href="#">12:00 PM</a></li>
+								<li data-value="12:30 PM"><a href="#">12:30 PM</a></li>
+								<li data-value="1:00 PM"><a href="#">1:00 PM</a></li>
+								<li data-value="1:30 PM"><a href="#">1:30 PM</a></li>
+								<li data-value="2:00 PM"><a href="#">2:00 PM</a></li>
+								<li data-value="2:30 PM"><a href="#">2:30 PM</a></li>
+								<li data-value="3:00 PM"><a href="#">3:00 PM</a></li>
+								<li data-value="3:30 PM"><a href="#">3:30 PM</a></li>
+								<li data-value="4:00 PM"><a href="#">4:00 PM</a></li>
+								<li data-value="4:30 PM"><a href="#">4:30 PM</a></li>
+								<li data-value="5:00 PM"><a href="#">5:00 PM</a></li>
+								<li data-value="5:30 PM"><a href="#">5:30 PM</a></li>
+								<li data-value="6:00 PM"><a href="#">6:00 PM</a></li>
+								<li data-value="6:30 PM"><a href="#">6:30 PM</a></li>
+								<li data-value="7:00 PM"><a href="#">7:00 PM</a></li>
+								<li data-value="7:30 PM"><a href="#">7:30 PM</a></li>
+								<li data-value="8:00 PM"><a href="#">8:00 PM</a></li>
+								<li data-value="8:30 PM"><a href="#">8:30 PM</a></li>
+								<li data-value="9:00 PM"><a href="#">9:00 PM</a></li>
+								<li data-value="9:30 PM"><a href="#">9:30 PM</a></li>
+								<li data-value="10:00 PM"><a href="#">10:00 PM</a></li>
+								<li data-value="10:30 PM"><a href="#">10:30 PM</a></li>
+								<li data-value="11:00 PM"><a href="#">11:00 PM</a></li>
+								<li data-value="11:30 PM"><a href="#">11:30 PM</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row timezone-container">
+		<label class="col-sm-2 control-label scheduler-label">Timezone</label>
+		<div class="col-xs-10 col-sm-10 col-md-10">
+			<div data-resize="auto" class="btn-group selectlist timezone">
+				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+					<span class="selected-label">(GMT-06:00) Central Standard Time</span>
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li data-name="Central Standard Time (no DST)" data-offset="-06:00"><a href="#">(GMT-06:00) Central Standard Time</a></li>
+					<li data-name="Morocco Standard Time" data-offset="+00:00"><a href="#">(GMT) Casablanca *</a></li>
+					<li data-name="GMT Standard Time" data-offset="+00:00"><a href="#">(GMT) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London *</a></li>
+					<li data-name="Greenwich Standard Time" data-offset="+00:00"><a href="#">(GMT) Monrovia, Reykjavik</a></li>
+					<li data-name="W. Europe Standard Time" data-offset="+01:00"><a href="#">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna *</a></li>
+					<li data-name="Central Europe Standard Time" data-offset="+01:00"><a href="#">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague *</a></li>
+					<li data-name="Romance Standard Time" data-offset="+01:00"><a href="#">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris *</a></li>
+					<li data-name="Central European Standard Time" data-offset="+01:00"><a href="#">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb *</a></li>
+					<li data-name="W. Central Africa Standard Time" data-offset="+01:00"><a href="#">(GMT+01:00) West Central Africa</a></li>
+					<li data-name="Jordan Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Amman *</a></li>
+					<li data-name="GTB Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Athens, Bucharest, Istanbul *</a></li>
+					<li data-name="Middle East Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Beirut *</a></li>
+					<li data-name="Egypt Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Cairo *</a></li>
+					<li data-name="South Africa Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Harare, Pretoria</a></li>
+					<li data-name="FLE Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius *</a></li>
+					<li data-name="Israel Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Jerusalem *</a></li>
+					<li data-name="E. Europe Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Minsk *</a></li>
+					<li data-name="Namibia Standard Time" data-offset="+02:00"><a href="#">(GMT+02:00) Windhoek *</a></li>
+					<li data-name="Arabic Standard Time" data-offset="+03:00"><a href="#">(GMT+03:00) Baghdad *</a></li>
+					<li data-name="Arab Standard Time" data-offset="+03:00"><a href="#">(GMT+03:00) Kuwait, Riyadh</a></li>
+					<li data-name="Russian Standard Time" data-offset="+03:00"><a href="#">(GMT+03:00) Moscow, St. Petersburg, Volgograd *</a></li>
+					<li data-name="E. Africa Standard Time" data-offset="+03:00"><a href="#">(GMT+03:00) Nairobi</a></li>
+					<li data-name="Georgian Standard Time" data-offset="+03:00"><a href="#">(GMT+03:00) Tbilisi</a></li>
+					<li data-name="Iran Standard Time" data-offset="+03:30"><a href="#">(GMT+03:30) Tehran *</a></li>
+					<li data-name="Arabian Standard Time" data-offset="+04:00"><a href="#">(GMT+04:00) Abu Dhabi, Muscat</a></li>
+					<li data-name="Azerbaijan Standard Time" data-offset="+04:00"><a href="#">(GMT+04:00) Baku *</a></li>
+					<li data-name="Caucasus Standard Time" data-offset="+04:00"><a href="#">(GMT+04:00) Caucasus Standard Time</a></li>
+					<li data-name="Mauritius Standard Time" data-offset="+04:00"><a href="#">(GMT+04:00) Port Louis *</a></li>
+					<li data-name="Caucasus Standard Time" data-offset="+04:00"><a href="#">(GMT+04:00) Yerevan</a></li>
+					<li data-name="Afghanistan Standard Time" data-offset="+04:30"><a href="#">(GMT+04:30) Kabul</a></li>
+					<li data-name="Ekaterinburg Standard Time" data-offset="+05:00"><a href="#">(GMT+05:00) Ekaterinburg *</a></li>
+					<li data-name="Pakistan Standard Time" data-offset="+05:00"><a href="#">(GMT+05:00) Islamabad, Karachi *</a></li>
+					<li data-name="West Asia Standard Time" data-offset="+05:00"><a href="#">(GMT+05:00) Tashkent</a></li>
+					<li data-name="India Standard Time" data-offset="+05:30"><a href="#">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</a></li>
+					<li data-name="Sri Lanka Standard Time" data-offset="+05:30"><a href="#">(GMT+05:30) Sri Jayawardenepura</a></li>
+					<li data-name="Nepal Standard Time" data-offset="+05:45"><a href="#">(GMT+05:45) Kathmandu</a></li>
+					<li data-name="N. Central Asia Standard Time" data-offset="+06:00"><a href="#">(GMT+06:00) Almaty, Novosibirsk *</a></li>
+					<li data-name="Central Asia Standard Time" data-offset="+06:00"><a href="#">(GMT+06:00) Astana, Dhaka</a></li>
+					<li data-name="Myanmar Standard Time" data-offset="+06:00"><a href="#">(GMT+06:30) Yangon (Rangoon)</a></li>
+					<li data-name="SE Asia Standard Time" data-offset="+07:00"><a href="#">(GMT+07:00) Bangkok, Hanoi, Jakarta</a></li>
+					<li data-name="North Asia Standard Time" data-offset="+07:00"><a href="#">(GMT+07:00) Krasnoyarsk *</a></li>
+					<li data-name="China Standard Time" data-offset="+08:00"><a href="#">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</a></li>
+					<li data-name="North Asia East Standard Time" data-offset="+08:00"><a href="#">(GMT+08:00) Irkutsk, Ulaan Bataar *</a></li>
+					<li data-name="Singapore Standard Time" data-offset="+08:00"><a href="#">(GMT+08:00) Kuala Lumpur, Singapore</a></li>
+					<li data-name="W. Australia Standard Time" data-offset="+08:00"><a href="#">(GMT+08:00) Perth *</a></li>
+					<li data-name="Taipei Standard Time" data-offset="+08:00"><a href="#">(GMT+08:00) Taipei</a></li>
+					<li data-name="Tokyo Standard Time" data-offset="+09:00"><a href="#">(GMT+09:00) Osaka, Sapporo, Tokyo</a></li>
+					<li data-name="Korea Standard Time" data-offset="+09:00"><a href="#">(GMT+09:00) Seoul</a></li>
+					<li data-name="Yakutsk Standard Time" data-offset="+09:00"><a href="#">(GMT+09:00) Yakutsk *</a></li>
+					<li data-name="Cen. Australia Standard Time" data-offset="+09:30"><a href="#">(GMT+09:30) Adelaide *</a></li>
+					<li data-name="AUS Central Standard Time" data-offset="+09:30"><a href="#">(GMT+09:30) Darwin</a></li>
+					<li data-name="E. Australia Standard Time" data-offset="+10:00"><a href="#">(GMT+10:00) Brisbane</a></li>
+					<li data-name="AUS Eastern Standard Time" data-offset="+10:00"><a href="#">(GMT+10:00) Canberra, Melbourne, Sydney *</a></li>
+					<li data-name="West Pacific Standard Time" data-offset="+10:00"><a href="#">(GMT+10:00) Guam, Port Moresby</a></li>
+					<li data-name="Tasmania Standard Time" data-offset="+10:00"><a href="#">(GMT+10:00) Hobart *</a></li>
+					<li data-name="Vladivostok Standard Time" data-offset="+10:00"><a href="#">(GMT+10:00) Vladivostok *</a></li>
+					<li data-name="Central Pacific Standard Time" data-offset="+11:00"><a href="#">(GMT+11:00) Magadan, Solomon Is., New Caledonia</a></li>
+					<li data-name="New Zealand Standard Time" data-offset="+12:00"><a href="#">(GMT+12:00) Auckland, Wellington *</a></li>
+					<li data-name="Fiji Standard Time" data-offset="+12:00"><a href="#">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</a></li>
+					<li data-name="Tonga Standard Time" data-offset="+12:00"><a href="#">(GMT+13:00) Nukualofa</a></li>
+					<li data-name="Azores Standard Time" data-offset="+12:00"><a href="#">(GMT-01:00) Azores *</a></li>
+					<li data-name="Cape Verde Standard Time" data-offset="-01:00"><a href="#">(GMT-01:00) Cape Verde Is.</a></li>
+					<li data-name="Mid-Atlantic Standard Time" data-offset="-02:00"><a href="#">(GMT-02:00) Mid-Atlantic *</a></li>
+					<li data-name="E. South America Standard Time" data-offset="-03:00"><a href="#">(GMT-03:00) Brasilia *</a></li>
+					<li data-name="Argentina Standard Time" data-offset="-03:00"><a href="#">(GMT-03:00) Buenos Aires *</a></li>
+					<li data-name="SA Western Standard Time" data-offset="-03:00"><a href="#">(GMT-03:00) Georgetown</a></li>
+					<li data-name="Greenland Standard Time" data-offset="-03:00"><a href="#">(GMT-03:00) Greenland *</a></li>
+					<li data-name="Montevideo Standard Time" data-offset="-03:00"><a href="#">(GMT-03:00) Montevideo *</a></li>
+					<li data-name="Newfoundland Standard Time" data-offset="-03:00"><a href="#">(GMT-03:30) Newfoundland *</a></li>
+					<li data-name="Atlantic Standard Time" data-offset="-04:00"><a href="#">(GMT-04:00) Atlantic Time (Canada) *</a></li>
+					<li data-name="SA Western Standard Time" data-offset="-04:00"><a href="#">(GMT-04:00) La Paz</a></li>
+					<li data-name="Central Brazilian Standard Time" data-offset="-04:00"><a href="#">(GMT-04:00) Manaus *</a></li>
+					<li data-name="Pacific SA Standard Time" data-offset="-04:00"><a href="#">(GMT-04:00) Santiago *</a></li>
+					<li data-name="Venezuela Standard Time" data-offset="-04:30"><a href="#">(GMT-04:30) Caracas</a></li>
+					<li data-name="SA Pacific Standard Time" data-offset="-05:00"><a href="#">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</a></li>
+					<li data-name="Eastern Standard Time" data-offset="-05:00"><a href="#">(GMT-05:00) Eastern Time (US &amp; Canada) *</a></li>
+					<li data-name="US Eastern Standard Time" data-offset="-05:00"><a href="#">(GMT-05:00) Indiana (East)</a></li>
+					<li data-name="Central America Standard Time" data-offset="-06:00"><a href="#">(GMT-06:00) Central America</a></li>
+					<li data-name="Central Standard Time" data-offset="-06:00"><a href="#">(GMT-06:00) Central Time (US &amp; Canada) *</a></li>
+					<li data-name="Central Standard Time (Mexico)" data-offset="-06:00"><a href="#">(GMT-06:00) Guadalajara, Mexico City, Monterrey - New *</a></li>
+					<li data-name="Central Standard Time (Mexico)" data-offset="-06:00"><a href="#">(GMT-06:00) Guadalajara, Mexico City, Monterrey - Old</a></li>
+					<li data-name="Canada Central Standard Time" data-offset="-06:00"><a href="#">(GMT-06:00) Saskatchewan</a></li>
+					<li data-name="US Mountain Standard Time" data-offset="-07:00"><a href="#">(GMT-07:00) Arizona</a></li>
+					<li data-name="Mountain Standard Time (Mexico)" data-offset="-07:00"><a href="#">(GMT-07:00) Chihuahua, La Paz, Mazatlan - New *</a></li>
+					<li data-name="Mountain Standard Time (Mexico)" data-offset="-07:00"><a href="#">(GMT-07:00) Chihuahua, La Paz, Mazatlan - Old</a></li>
+					<li data-name="Mountain Standard Time" data-offset="-07:00"><a href="#">(GMT-07:00) Mountain Time (US &amp; Canada) *</a></li>
+					<li data-name="Pacific Standard Time" data-offset="-08:00"><a href="#">(GMT-08:00) Pacific Time (US &amp; Canada) *</a></li>
+					<li data-name="Pacific Standard Time (Mexico)" data-offset="-08:00"><a href="#">(GMT-08:00) Tijuana, Baja California *</a></li>
+					<li data-name="Alaskan Standard Time" data-offset="-09:00"><a href="#">(GMT-09:00) Alaska *</a></li>
+					<li data-name="Hawaiian Standard Time" data-offset="-10:00"><a href="#">(GMT-10:00) Hawaii</a></li>
+					<li data-name="Samoa Standard Time" data-offset="-11:00"><a href="#">(GMT-11:00) Midway Island, Samoa</a></li>
+					<li data-name="Dateline Standard Time" data-offset="-12:00"><a href="#">(GMT-12:00) International Date Line West</a></li>
+				</ul>
+				<input type="text" aria-hidden="true" readonly="readonly" name="TimeZoneSelectlist" class="hidden hidden-field">
+			</div>
+		</div>
+	</div>
+
+	<div class="row repeat-container">
+		<label class="col-sm-2 control-label scheduler-label">Repeat</label>
+		<div class="col-sm-10">
+
+			<div class="form-group repeat-interval">
+				<div data-resize="auto" class="btn-group selectlist pull-left repeat-options">
+					<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+						<span class="selected-label">None (run once)</span>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li data-value="none"><a href="#">None (run once)</a></li>
+						<li data-value="secondly" data-text="second(s)"><a href="#">Per Second</a>
+						<li data-value="minutely" data-text="minute(s)"><a href="#">Per Minute</a>
+						<li data-value="hourly" data-text="hour(s)"><a href="#">Hourly</a></li>
+						<li data-value="daily" data-text="day(s)"><a href="#">Daily</a></li>
+						<li data-value="weekdays"><a href="#">Weekdays</a></li>
+						<li data-value="weekly" data-text="week(s)"><a href="#">Weekly</a></li>
+						<li data-value="monthly" data-text="month(s)"><a href="#">Monthly</a></li>
+						<li data-value="yearly"><a href="#">Yearly</a></li>
+					</ul>
+					<input type="text" aria-hidden="true" readonly="readonly" name="intervalSelectlist" class="hidden hidden-field">
+				</div>
+
+				<div class="repeat-panel repeat-every-panel repeat-hourly repeat-daily repeat-weekly hide" aria-hidden="true">
+					<label id="{{#if everyLabelID}}{{everyLabelID}}{{else}}MySchedulerEveryLabel{{/if}}" class="inline-form-text repeat-every-pretext">{{#if every}}{{every}}{{else}}every{{/if}}</label>
+
+					<div class="spinbox digits-3 repeat-every">
+						<input type="text" class="form-control input-mini spinbox-input" aria-labelledby="{{#if everyLabelID}}{{everyLabelID}}{{else}}MySchedulerEveryLabel{{/if}}">
+						<div class="spinbox-buttons btn-group btn-group-vertical">
+							<button type="button" class="btn btn-default spinbox-up btn-xs">
+								<span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Increase</span>
+							</button>
+							<button type="button" class="btn btn-default spinbox-down btn-xs">
+								<span class="glyphicon glyphicon-chevron-down"></span><span class="sr-only">Decrease</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="inline-form-text repeat-every-text"></div>
+				</div>
+			</div>
+
+			<div class="form-group repeat-panel repeat-weekly repeat-days-of-the-week hide" aria-hidden="true">
+				<fieldset class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default"><input type="checkbox" data-value="SU">Sun</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="MO">Mon</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="TU">Tue</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="WE"> Wed</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="TH"> Thu</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="FR"> Fri</label>
+					<label class="btn btn-default"><input type="checkbox" data-value="SA"> Sat</label>
+				</fieldset>
+			</div>
+
+			<div class="repeat-panel repeat-monthly hide" aria-hidden="true">
+				<div class="form-group repeat-monthly-date">
+					<div class="radio pull-left">
+						<label class="radio-custom">
+							<input class="sr-only" type="radio" checked="checked" name="repeat-monthly" value="bymonthday">
+							<span class="radio-label">on day</span>
+						</label>
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">1</span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" style="height:200px; overflow:auto;">
+							<li data-value="1"><a href="#">1</a></li>
+							<li data-value="2"><a href="#">2</a></li>
+							<li data-value="3"><a href="#">3</a></li>
+							<li data-value="4"><a href="#">4</a></li>
+							<li data-value="5"><a href="#">5</a></li>
+							<li data-value="6"><a href="#">6</a></li>
+							<li data-value="7"><a href="#">7</a></li>
+							<li data-value="8"><a href="#">8</a></li>
+							<li data-value="9"><a href="#">9</a></li>
+							<li data-value="10"><a href="#">10</a></li>
+							<li data-value="11"><a href="#">11</a></li>
+							<li data-value="12"><a href="#">12</a></li>
+							<li data-value="13"><a href="#">13</a></li>
+							<li data-value="14"><a href="#">14</a></li>
+							<li data-value="15"><a href="#">15</a></li>
+							<li data-value="16"><a href="#">16</a></li>
+							<li data-value="17"><a href="#">17</a></li>
+							<li data-value="18"><a href="#">18</a></li>
+							<li data-value="19"><a href="#">19</a></li>
+							<li data-value="20"><a href="#">20</a></li>
+							<li data-value="21"><a href="#">21</a></li>
+							<li data-value="22"><a href="#">22</a></li>
+							<li data-value="23"><a href="#">23</a></li>
+							<li data-value="24"><a href="#">24</a></li>
+							<li data-value="25"><a href="#">25</a></li>
+							<li data-value="26"><a href="#">26</a></li>
+							<li data-value="27"><a href="#">27</a></li>
+							<li data-value="28"><a href="#">28</a></li>
+							<li data-value="29"><a href="#">29</a></li>
+							<li data-value="30"><a href="#">30</a></li>
+							<li data-value="31"><a href="#">31</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="monthlySelectlist" class="hidden hidden-field">
+					</div>
+				</div>
+
+				<div class="repeat-monthly-day form-group">
+					<div class="radio pull-left">
+						<label class="radio-custom">
+							<input class="sr-only" type="radio" checked="checked" name="repeat-monthly" value="bysetpos">
+							<span class="radio-label">on the</span>
+						</label>
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist month-day-pos pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">First</span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li data-value="1"><a href="#">First</a></li>
+							<li data-value="2"><a href="#">Second</a></li>
+							<li data-value="3"><a href="#">Third</a></li>
+							<li data-value="4"><a href="#">Fourth</a></li>
+							<li data-value="-1"><a href="#">Last</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="monthlySelectlist" class="hidden hidden-field">
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist month-days pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">Sunday</span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li data-value="SU"><a href="#">Sunday</a></li>
+							<li data-value="MO"><a href="#">Monday</a></li>
+							<li data-value="TU"><a href="#">Tuesday</a></li>
+							<li data-value="WE"><a href="#">Wednesday</a></li>
+							<li data-value="TH"><a href="#">Thursday</a></li>
+							<li data-value="FR"><a href="#">Friday</a></li>
+							<li data-value="SA"><a href="#">Saturday</a></li>
+							<li data-value="SU,MO,TU,WE,TH,FR,SA"><a href="#">Day</a></li>
+							<li data-value="MO,TU,WE,TH,FR"><a href="#">Weekday</a></li>
+							<li data-value="SU,SA"><a href="#">Weekend day</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="monthlySelectlist" class="hidden hidden-field">
+					</div>
+
+				</div>
+			</div>
+
+			<div class="repeat-panel repeat-yearly hide" aria-hidden="true">
+				<div class="form-group repeat-yearly-date">
+
+					<div class="radio pull-left">
+						<label class="radio-custom">
+							<input class="sr-only" type="radio" checked="checked" name="repeat-yearly" value="bymonthday">
+							<span class="radio-label">on</span>
+						</label>
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist year-month pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">January</span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li data-value="1"><a href="#">January</a></li>
+							<li data-value="2"><a href="#">February</a></li>
+							<li data-value="3"><a href="#">March</a></li>
+							<li data-value="4"><a href="#">April</a></li>
+							<li data-value="5"><a href="#">May</a></li>
+							<li data-value="6"><a href="#">June</a></li>
+							<li data-value="7"><a href="#">July</a></li>
+							<li data-value="8"><a href="#">August</a></li>
+							<li data-value="9"><a href="#">September</a></li>
+							<li data-value="10"><a href="#">October</a></li>
+							<li data-value="11"><a href="#">November</a></li>
+							<li data-value="12"><a href="#">December</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="monthlySelectlist" class="hidden hidden-field">
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist year-month-day pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">1</span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" style="height:200px; overflow:auto;">
+							<li data-value="1"><a href="#">1</a></li>
+							<li data-value="2"><a href="#">2</a></li>
+							<li data-value="3"><a href="#">3</a></li>
+							<li data-value="4"><a href="#">4</a></li>
+							<li data-value="5"><a href="#">5</a></li>
+							<li data-value="6"><a href="#">6</a></li>
+							<li data-value="7"><a href="#">7</a></li>
+							<li data-value="8"><a href="#">8</a></li>
+							<li data-value="9"><a href="#">9</a></li>
+							<li data-value="10"><a href="#">10</a></li>
+							<li data-value="11"><a href="#">11</a></li>
+							<li data-value="12"><a href="#">12</a></li>
+							<li data-value="13"><a href="#">13</a></li>
+							<li data-value="14"><a href="#">14</a></li>
+							<li data-value="15"><a href="#">15</a></li>
+							<li data-value="16"><a href="#">16</a></li>
+							<li data-value="17"><a href="#">17</a></li>
+							<li data-value="18"><a href="#">18</a></li>
+							<li data-value="19"><a href="#">19</a></li>
+							<li data-value="20"><a href="#">20</a></li>
+							<li data-value="21"><a href="#">21</a></li>
+							<li data-value="22"><a href="#">22</a></li>
+							<li data-value="23"><a href="#">23</a></li>
+							<li data-value="24"><a href="#">24</a></li>
+							<li data-value="25"><a href="#">25</a></li>
+							<li data-value="26"><a href="#">26</a></li>
+							<li data-value="27"><a href="#">27</a></li>
+							<li data-value="28"><a href="#">28</a></li>
+							<li data-value="29"><a href="#">29</a></li>
+							<li data-value="30"><a href="#">30</a></li>
+							<li data-value="31"><a href="#">31</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="monthlySelectlist" class="hidden hidden-field">
+					</div>
+				</div>
+
+				<div class="form-group repeat-yearly-day">
+
+					<div class="radio pull-left"><label class="radio-custom"><input class="sr-only" type="radio" name="repeat-yearly" value="bysetpos"> on the</label></div>
+
+					<div data-resize="auto" class="btn-group selectlist year-month-day-pos pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">First</span>
+							<span class="caret"></span>
+							<span class="sr-only">First</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li data-value="1"><a href="#">First</a></li>
+							<li data-value="2"><a href="#">Second</a></li>
+							<li data-value="3"><a href="#">Third</a></li>
+							<li data-value="4"><a href="#">Fourth</a></li>
+							<li data-value="-1"><a href="#">Last</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="yearlyDateSelectlist" class="hidden hidden-field">
+					</div>
+
+					<div data-resize="auto" class="btn-group selectlist year-month-days pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">Sunday</span>
+							<span class="caret"></span>
+							<span class="sr-only">Sunday</span>
+						</button>
+						<ul class="dropdown-menu" role="menu" style="height:200px; overflow:auto;">
+							<li data-value="SU"><a href="#">Sunday</a></li>
+							<li data-value="MO"><a href="#">Monday</a></li>
+							<li data-value="TU"><a href="#">Tuesday</a></li>
+							<li data-value="WE"><a href="#">Wednesday</a></li>
+							<li data-value="TH"><a href="#">Thursday</a></li>
+							<li data-value="FR"><a href="#">Friday</a></li>
+							<li data-value="SA"><a href="#">Saturday</a></li>
+							<li data-value="SU,MO,TU,WE,TH,FR,SA"><a href="#">Day</a></li>
+							<li data-value="MO,TU,WE,TH,FR"><a href="#">Weekday</a></li>
+							<li data-value="SU,SA"><a href="#">Weekend day</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="yearlyDaySelectlist" class="hidden hidden-field">
+					</div>
+					<div class="inline-form-text repeat-yearly-day-text"> of </div>
+
+					<div data-resize="auto" class="btn-group selectlist year-month pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">January</span>
+							<span class="caret"></span>
+							<span class="sr-only">January</span>
+						</button>
+						<ul class="dropdown-menu" role="menu" style="height:200px; overflow:auto;">
+							<li data-value="1"><a href="#">January</a></li>
+							<li data-value="2"><a href="#">February</a></li>
+							<li data-value="3"><a href="#">March</a></li>
+							<li data-value="4"><a href="#">April</a></li>
+							<li data-value="5"><a href="#">May</a></li>
+							<li data-value="6"><a href="#">June</a></li>
+							<li data-value="7"><a href="#">July</a></li>
+							<li data-value="8"><a href="#">August</a></li>
+							<li data-value="9"><a href="#">September</a></li>
+							<li data-value="10"><a href="#">October</a></li>
+							<li data-value="11"><a href="#">November</a></li>
+							<li data-value="12"><a href="#">December</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="yearlyDaySelectlist" class="hidden hidden-field">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row repeat-end hide" aria-hidden="true">
+		<label class="col-sm-2 control-label scheduler-label">End</label>
+		<div class="col-sm-10">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-lg-2 form-group">
+					<div data-resize="auto" class="btn-group selectlist end-options pull-left">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+							<span class="selected-label">Never</span>
+							<span class="caret"></span>
+							<span class="sr-only">Never</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li data-value="never"><a href="#">Never</a></li>
+							<li data-value="after"><a href="#">After</a></li>
+							<li data-value="date"><a href="#">On date</a></li>
+						</ul>
+						<input type="text" aria-hidden="true" readonly="readonly" name="EndSelectlist" class="hidden hidden-field">
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-lg-4 form-group end-option-panel end-after-panel pull-left hide" aria-hidden="true">
+					<div class="spinbox digits-3 end-after">
+						<label id="{{#if endAfterID}}{{endAfterID}}{{else}}MyEndAfter{{/if}}" class="sr-only">{{#if endAfterLabel}}{{endAfterLabel}}{{else}}End After{{/if}}</label>
+						<input type="text" class="form-control input-mini spinbox-input" aria-labelledby="{{#if endAfterID}}{{endAfterID}}{{else}}MyEndAfter{{/if}}">
+						<div class="spinbox-buttons btn-group btn-group-vertical">
+							<button type="button" class="btn btn-default spinbox-up btn-xs">
+								<span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Increase</span>
+							</button>
+							<button type="button" class="btn btn-default spinbox-down btn-xs">
+								<span class="glyphicon glyphicon-chevron-down"></span><span class="sr-only">Decrease</span>
+							</button>
+						</div>
+					</div>
+					<div class="inline-form-text end-after-text">occurrence(s)</div>
+				</div>
+
+				<div class="col-xs-4 col-sm-4 col-lg-4 form-group end-option-panel end-on-date-panel pull-left hide" aria-hidden="true">
+					<div class="datepicker end-on-date">
+						<div class="input-group">
+							<input class="form-control" id="{{#if endDateID}}{{endDateID}}{{else}}{{#if id}}{{id}}{{else}}myScheduler{{/if}}EndDate{{/if}}" type="text"/>
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-calendar"></span>
+									<span class="sr-only">Toggle Calendar</span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+									<div class="datepicker-calendar">
+										<div class="datepicker-calendar-header">
+											<button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous Month</span></button>
+											<button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next Month</span></button>
+											<button type="button" class="title">
+												<span class="month">
+													<span data-month="0">January</span>
+													<span data-month="1">February</span>
+													<span data-month="2">March</span>
+													<span data-month="3">April</span>
+													<span data-month="4">May</span>
+													<span data-month="5">June</span>
+													<span data-month="6">July</span>
+													<span data-month="7">August</span>
+													<span data-month="8">September</span>
+													<span data-month="9">October</span>
+													<span data-month="10">November</span>
+													<span data-month="11">December</span>
+												</span> <span class="year"></span>
+											</button>
+										</div>
+										<table class="datepicker-calendar-days">
+											<thead>
+											<tr>
+												<th>Su</th>
+												<th>Mo</th>
+												<th>Tu</th>
+												<th>We</th>
+												<th>Th</th>
+												<th>Fr</th>
+												<th>Sa</th>
+											</tr>
+											</thead>
+											<tbody></tbody>
+										</table>
+										<div class="datepicker-calendar-footer">
+											<button type="button" class="datepicker-today">Today</button>
+										</div>
+									</div>
+									<div class="datepicker-wheels" aria-hidden="true">
+										<div class="datepicker-wheels-month">
+											<h2 class="header">Month</h2>
+											<ul>
+												<li data-month="0"><button type="button">Jan</button></li>
+												<li data-month="1"><button type="button">Feb</button></li>
+												<li data-month="2"><button type="button">Mar</button></li>
+												<li data-month="3"><button type="button">Apr</button></li>
+												<li data-month="4"><button type="button">May</button></li>
+												<li data-month="5"><button type="button">Jun</button></li>
+												<li data-month="6"><button type="button">Jul</button></li>
+												<li data-month="7"><button type="button">Aug</button></li>
+												<li data-month="8"><button type="button">Sep</button></li>
+												<li data-month="9"><button type="button">Oct</button></li>
+												<li data-month="10"><button type="button">Nov</button></li>
+												<li data-month="11"><button type="button">Dec</button></li>
+											</ul>
+										</div>
+										<div class="datepicker-wheels-year">
+											<h2 class="header">Year</h2>
+											<ul></ul>
+										</div>
+										<div class="datepicker-wheels-footer clearfix">
+											<button type="button" class="btn datepicker-wheels-back"><span class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span></button>
+											<button type="button" class="btn datepicker-wheels-select">Select <span class="sr-only">Month and Year</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
