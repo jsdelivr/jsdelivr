@@ -1,0 +1,11 @@
+<div class="input-group input-append dropdown combobox{{#if cols}} col-sm-{{cols}}{{/if}}" {{#unless doNotInit}}data-initialize="combobox"{{/unless}} id="{{#if id}}{{id}}{{else}}myCombobox{{/if}}">
+	<input type="text" class="form-control">
+	<div class="input-group-btn">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+		<ul class="dropdown-menu dropdown-menu-right" role="menu">
+			{{#each options}}
+			<li data-value="{{value}}"{{#each data}} data-{{name}}="{{value}}"{{/each}}><a href="#">{{text}}</a></li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

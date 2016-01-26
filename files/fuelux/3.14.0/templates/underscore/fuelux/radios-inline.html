@@ -1,0 +1,11 @@
+<!-- Fuel UX Radios Inline http://getfuelux.com/javascript.html#radio-examples-inline -->
+<div class="form-group">
+  <label for="<%= name %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+
+  <div class="radio<% if(horizontal) {%> col-sm-10<% } %><% if(required) {%> required <% } %>">
+      <% _.each(radios, function(radio, i){ %><label class="radio-custom radio-inline<% if(isDisabled) {%> disabled<% } %>" data-initialize="radio" id="<%= name+'-'+i %>">
+        <input class="sr-only" name="<%= name %>" type="radio" value="<%= radio %>"<% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>> <span class="radio-label"><%= radio %></span>
+      </label><% }); %>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

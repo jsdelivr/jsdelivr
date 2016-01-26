@@ -1,0 +1,11 @@
+<!-- Button Group http://getbootstrap.com/components/#btn-groups -->
+<div class="form-group">
+  <label class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <div class="<%= buttonalign %><% if(horizontal) {%> col-sm-10<% } %>">
+    <div id="<%= id %>Group" class="btn-group" role="group" aria-label="<%= label %>">
+      <button type="<%= button1type %>" id="<%= id %>" name="<%= id %>" class='btn <%= button1style %><% if(inputsize.length > 0) {%> <%= inputsize %><% } %>' <% if(isDisabled) {%> disabled <% } %> aria-label="<%= button1label %>"><%= button1label %></button>
+      <button type="<%= button2type %>" id="<%= id2 %>" name="<%= id2 %>" class='btn <%= button2style %><% if(inputsize.length > 0) {%> <%= inputsize %><% } %>' <% if(isDisabled) {%> disabled <% } %> aria-label="<%= button1label %>"><%= button2label %></button>
+    </div>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>
