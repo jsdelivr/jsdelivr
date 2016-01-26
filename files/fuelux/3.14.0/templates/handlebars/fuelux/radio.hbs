@@ -1,0 +1,6 @@
+{{#unless inline}}<div class="radio{{#if highlight}} highlight{{/if}}">{{/unless}}
+	<label class="radio-custom{{#if inline}} radio-inline{{/if}}{{#if highlight}} highlight{{/if}}"{{#unless doNotInit}} data-initialize="radio"{{/unless}} id="{{#if id}}{{id}}{{else}}myCustomRadio{{/if}}">
+		<input class="sr-only" type="radio" {{#if data-toggle}}data-toggle="{{data-toggle}}" {{/if}}{{#if checked}}checked="checked" {{/if}}{{#if disabled}}disabled="disabled" {{/if}}value="" name="{{#if name}}{{name}}{{else}}myCustomRadioName{{/if}}">
+		<span class="radio-label">{{#if label}}{{label}}{{else}}Radio Label{{/if}}</span>
+	</label>
+{{#unless inline}}</div>{{/unless}}
