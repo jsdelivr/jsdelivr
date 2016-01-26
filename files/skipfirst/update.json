@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "skipfirst",
+  "repo": "coderaiser/skipfirst",
+  "files": {
+    "include": ["dist/skipfirst.min.js"]
+  }
+}

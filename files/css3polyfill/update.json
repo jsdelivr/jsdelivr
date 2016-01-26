@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "css3polyfill",
+  "repo": "marcofugaro/css3polyfill",
+  "files": {
+    "include": ["css3polyfill.min.js"]
+  }
+}

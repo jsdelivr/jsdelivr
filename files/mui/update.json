@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "mui",
+	"repo": "muicss/mui",
+	"files": {
+		"basePath": "dist/"
+	}
+}

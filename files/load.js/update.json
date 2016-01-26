@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "load.js",
+  "repo": "coderaiser/load.js",
+  "files": {
+    "include": ["load.min.js"]
+  }
+}

@@ -1,0 +1,201 @@
+/*!
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *               CASCADE FRAMEWORK 1.0
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ *
+ * Copyright 2013, John Slegers
+ * Released under the MIT license
+ * http://jslegers.github.com/cascadeframework/license.html
+ *
+ *
+ * This means you can use Cascade Framework for any project,
+ * whether commercial or not.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * 
+ * Cascade Framework also contains the following goodies,
+ * which all have the same or similar 'permissive licenses :
+ *
+ *
+ * Includes polyfills by Joshua Bell
+ * http://www.calormen.com/polyfill/
+ * Released in public domain
+ *
+ *
+ * Includes Google ExplorerCanvas
+ * https://code.google.com/p/explorercanvas/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Google Prettify
+ * https://code.google.com/p/google-code-prettify/
+ * Released under the Apache 2.0 license
+ *
+ *
+ * Includes Yepnope
+ * http://yepnopejs.com/
+ * Released under the WTFPL license
+ *
+ *
+ * Includes Modernizr
+ * http://modernizr.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes lodash
+ * http://lodash.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery
+ * http://jquery.com/
+ * Released under the MIT license
+ *
+ *
+ * Includes jQuery Easing plugin
+ * http://gsgd.co.uk/sandbox/jquery/easing/
+ * Released under the BSD license
+ *
+ *
+ * Includes jQuery Flot plugin
+ * http://www.flotcharts.org/
+ * Released under the MIT license
+ *
+ *
+ * Includes the Font Awesome webfont
+ * http://fortawesome.github.com/Font-Awesome/
+ * Released under the SIL Open Font License
+ *
+ *
+ *
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * Cascade Framework was inspired by many articles and projects
+ * 
+ * Especially these authors are worth mentioning :
+ *             
+ *             Nicolle Sullivan
+ *             Jonathan Snook
+ *             Chris Coyier
+ *             Eric Meyer
+ *             Nicolas Gallagher
+ *             Paul Irish
+ *             Mark Otto
+ *             Jacob Thornton
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Date: 2013-03-15
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+*/
+
+
+
+/* =============================================================================
+   Default table padding and font
+   ========================================================================== */
+
+.block th, .block td {
+    padding:10px 20px;
+}
+
+.condensed th, .condensed td {
+    padding:4px 5px;
+}
+
+.datasheet td,.datasheet th {
+    padding:2px 4px;
+}
+
+.outline-header th {
+    font-size:14px;
+    line-height:14px;
+}
+
+.datasheet th {
+    line-height:16px;
+    height:18px;
+}
+
+.datasheet tbody th {
+    text-align:right;
+}
+
+.uppercase-header th {
+    text-transform:uppercase;
+}
+
+/* =============================================================================
+   Default table border
+   ========================================================================== */
+
+.box-header th {
+    border-left-width:0;
+    border-right-width:0;
+}
+
+.box-header th,.outline td,.outline th {
+    border-bottom-width:0;
+}
+
+.outline tr :last-child {
+    border-right-width:0;
+}
+
+.block th, .block td {
+    border-width:0 1px 0 0;
+}
+
+table.box {
+    border-width:1px;
+}
+
+.header-border thead td,.header-border thead th {
+    border-bottom-width:1px;
+}
+
+table.block  {
+    border-width:1px 0 1px 1px;
+}
+
+.datasheet td,.datasheet th {
+    border-width:1px;
+}
+
+table.border,table.datasheet {
+    border-width:1px 0 0 1px;
+}
+
+.datasheet td,.border th,.border td {
+    border-width:0 1px 1px 0;
+}
+
+.box-header thead tr {
+    border-width:0 0 1px 0;
+}
+
+table.outline {
+    border-width:2px;
+}
+
+.horizontal-border th, .horizontal-border td {
+    border-bottom-width:1px;
+}
+
+.outline-header thead td,.outline-header thead th {
+    border-bottom-width:2px;
+}
+
+.border .body {
+    border-bottom-width:0;
+}
+
+.border .body,.block .body {
+    border-right-width:0;
+}

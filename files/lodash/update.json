@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "lodash",
+  "repo": "lodash/lodash",
+  "files": {
+  	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

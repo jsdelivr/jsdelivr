@@ -1,0 +1,87 @@
+.uEditor {
+	width:700px;
+	padding:0;
+	margin:10px 0;
+	border:1px solid #ccc;
+}
+.uEditor ul.uEditorToolbar {
+	background:#eee;
+	border-bottom:1px solid #ccc;
+	list-style: none;
+	height: 16px;
+	margin: 0;
+	padding:5px;
+	margin:0;
+}
+.uEditor ul.uEditorToolbar li {
+	display:inline;
+	margin: 0 5px 0 0;
+	float:left;
+	cursor:pointer;
+}
+.uEditor ul.uEditorToolbar li a {
+	color:#999;
+	display:inline;
+	margin: 0;
+	padding:0;
+	float:left;
+	cursor:pointer;
+	text-indent:-1000px;
+	width:16px;
+	height:16px;
+	background-image:url(img/customIcons.gif);
+	opacity:0.6;
+}
+
+.uEditor ul.uEditorToolbar li a.uEditorButtonBold {
+	background-position: 0 -16px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonItalic  {
+	background-position:-16px -16px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonOrderedList {
+	background-position: -32px -48px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonUnorderedList {
+	background-position: -16px -48px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonHyperlink {
+	background-position: -80px -48px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonImage {
+	background-position: -80px -80px;
+}
+.uEditor ul.uEditorToolbar li a.uEditorButtonHTML {
+	background-position: -48px -48px;
+}
+
+.uEditor ul.uEditorToolbar li a.myButtonClass,
+.uEditor ul.uEditorToolbar li a.mySecondButtonClass {
+	background: url(img/plugin.png);
+}
+
+.uEditor ul.uEditorToolbar li a:hover,
+.uEditor ul.uEditorToolbar li a.on,
+.uEditor ul.uEditorToolbar.uEditorSource li a.uEditorButtonHTML  {
+	opacity:1;
+}
+
+.uEditor ul.uEditorToolbar li.uEditorEditSelect {
+	float:right;
+	margin:0;
+	padding:0;
+}
+.uEditor .uEditorIframe {
+	clear: both;
+	width: 100%;
+	height: 200px;
+	border: none;
+}
+.uEditor textarea.uEditorTextarea
+{
+	clear: both;
+	width: 100%;
+	height: 200px;
+	border: none;
+	font-family:monospace;
+}

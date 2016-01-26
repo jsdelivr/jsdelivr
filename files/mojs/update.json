@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "mojs",
+	"repo": "legomushroom/mojs",
+	"files": {
+		"basePath": "build/",
+		"include": ["mo.js", "mo.min.js"]
+	}
+}

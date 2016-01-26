@@ -1,0 +1,8 @@
+{
+	"packageManager": "bower",
+	"name": "leaflet-routing-machine",
+	"repo": "perliedman/leaflet-routing-machine",
+	"files": {
+		"basePath": "dist/"
+	}
+}

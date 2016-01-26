@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bhwi",
+  "repo": "cyrilkyburz/bhwi",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.hammer.js",
+  "repo": "hammerjs/jquery.hammer.js",
+  "files": {
+	"include": ["jquery.hammer.js"]
+  }
+}

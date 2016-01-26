@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "tooltip.js",
+  "repo": "HubSpot/tooltip",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js/tooltip.min.js", "css/tooltip-theme-arrows.css"]
+  }
+}

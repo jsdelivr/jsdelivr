@@ -1,0 +1,29 @@
+@media (min-width:1200px) {
+    .site-center {
+        width:1160px;
+    }
+    .cell{
+        margin:15px;
+    }
+}
+
+@media (min-width:768px) and (max-width:979px) {
+    .site-center {
+        width:704px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .col {
+        display:block;
+        float:left;
+        width:100% !important;
+    }
+
+    .site-center,.site-body,.site-header,.site-footer {
+        margin:0 !important;
+        width:100% !important;
+        border:none !important;
+    }
+}

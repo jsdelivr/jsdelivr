@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery-ajax-unobtrusive",
+  "repo": "aspnet/jquery-ajax-unobtrusive",
+  "files": {
+    "include": ["jquery.unobtrusive-ajax.min.js"]
+  }
+}

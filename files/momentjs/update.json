@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "momentjs",
+  "repo": "moment/moment",
+  "files": {
+	"basePath": "min/",
+	"exclude": ["tests.js"]
+  }
+}

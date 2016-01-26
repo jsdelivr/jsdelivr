@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pouchdb",
+  "repo": "pouchdb/pouchdb",
+  "files": {
+	"basePath": "dist/",
+    "include": ["pouchdb.min.js", "pouchdb.js"]
+  }
+}

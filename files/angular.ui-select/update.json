@@ -1,0 +1,12 @@
+{ 
+    "packageManager": "github", 
+    "name": "angular.ui-select", 
+    "repo": "angular-ui/ui-select",
+    "files": { 
+        "basePath": "dist/",
+        "include": [
+            "select.min.css", 
+            "select.min.js"
+        ]
+    }
+}

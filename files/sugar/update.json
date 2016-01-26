@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "Sugar",
+  "repo": "andrewplummer/Sugar",
+  "files": {
+    "basePath": "release/",
+    "include": [
+      "*.min.js"
+    ]
+  }
+}

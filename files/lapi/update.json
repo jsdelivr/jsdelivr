@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "lapi",
+  "repo": "lagoa/API-Samples",
+  "files": {
+    "basePath": "build/",
+    "include": ["lapi.min.js"]
+  }
+}

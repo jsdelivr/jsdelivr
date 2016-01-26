@@ -1,0 +1,71 @@
+/**
+ *  sliderkit-demos-ie7.css
+ *	> CSS hacks for Internet Explorer 7 compatibility
+ *  
+ *  This file is part of Slider Kit jQuery plugin.
+ *  http://www.kyrielles.net/sliderkit/
+ *  
+ *  Copyright (c) 2010-2012 Alan Frog
+ *  Licensed under the GNU General Public License
+ *  See <license.txt> or <http://www.gnu.org/licenses/>
+ *
+ */
+
+/*---------------------------------
+ *  Photos sliders >  Minimal
+ *---------------------------------*/
+.photoslider-mini .sliderkit-go-btn a{filter:alpha(opacity=60);}
+.photoslider-mini .sliderkit-btn-disable a{filter:alpha(opacity=0);}
+
+/*---------------------------------
+ *  Photos slider > With nav bullets
+ *---------------------------------*/
+.photoslider-bullets .sliderkit-nav{width:70px;/* width must be specified for a right alignment */}
+
+/*---------------------------------
+ *  Photos slider > 1 click
+ *---------------------------------*/
+.photoslider-1click .sliderkit-nav{width:160px;}
+
+/*---------------------------------
+ *  Photos gallery > Standard
+ *---------------------------------*/
+.photosgallery-std .sliderkit-go-btn a{filter:alpha(opacity=60);}
+.photosgallery-std .sliderkit-btn-disable a{filter:alpha(opacity=30);}
+
+/*---------------------------------
+ *  Photos gallery > With captions
+ *---------------------------------*/
+.photosgallery-captions .sliderkit-btn-disable a{filter:alpha(opacity=30);}
+.photosgallery-captions .sliderkit-panel .sliderkit-panel-overlay{filter:alpha(opacity=40);}
+
+/*---------------------------------
+ *  Photos gallery > Vertical
+ *---------------------------------*/
+.photosgallery-vertical .sliderkit-nav-clip{left:0;}
+.photosgallery-vertical .sliderkit-panel .sliderkit-panel-overlay{filter:alpha(opacity=40);}
+
+/*---------------------------------
+ *  Photos gallery > Minimalistic
+ *---------------------------------*/
+.photosgallery-minimalistic .sliderkit-nav-clip ul li a{filter:alpha(opacity=40);}
+.photosgallery-minimalistic .sliderkit-nav-clip ul li.sliderkit-selected a{filter:alpha(opacity=100);}
+
+/*---------------------------------
+ *  Carousel > Demo #1
+ *---------------------------------*/
+.carousel-demo1 .sliderkit-nav-clip ul li a{filter:alpha(opacity=80);}
+.carousel-demo1 .sliderkit-nav-clip ul li a:hover{filter:alpha(opacity=100);}
+.carousel-demo1 .sliderkit-btn-disable{filter:alpha(opacity=30);}
+
+/*---------------------------------
+ *  Carousel > Demo #2
+ *---------------------------------*/
+.carousel-demo2 .sliderkit-nav-clip ul li a{filter:alpha(opacity=80);}
+.carousel-demo2 .sliderkit-nav-clip ul li a:hover{filter:alpha(opacity=100);}
+.carousel-demo2 .sliderkit-nav .sliderkit-btn-disable{filter:alpha(opacity=30);}
+
+/*---------------------------------
+ *  Add-on > Timer
+ *---------------------------------*/
+.timer-demo01 .sliderkit-timer-wrapper{filter:alpha(opacity=80);}

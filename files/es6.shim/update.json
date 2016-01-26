@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "es6-shim",
+  "repo": "paulmillr/es6-shim",
+  "files": {
+    "include": ["es6-shim.map", "es6-shim.min.js"]
+  }
+}

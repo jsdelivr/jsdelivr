@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "webshim",
+  "repo": "aFarkas/webshim",
+  "files": {
+    "basePath": "js-webshim/minified"
+  }
+}

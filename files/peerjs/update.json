@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "peerjs",
+  "repo": "peers/peerjs",
+  "files": {
+    "basePath": "dist/",
+    "include": ["peer.min.js", "peer.js"]
+  }
+}

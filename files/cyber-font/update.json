@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cyber-font",
+  "repo": "TheTannerRyan/cyber-font",
+  "files": {
+    "basePath": "dist/"
+  }
+}

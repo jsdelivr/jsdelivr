@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "noUiSlider",
+  "repo": "leongersen/noUiSlider",
+  "files": {
+    "basePath": "distribute/",
+    "include": ["*.min.js", "*.min.css"]
+  }
+}

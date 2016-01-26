@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "metadata.js",
+  "repo": "oknosoft/metadata.js",
+  "files": {
+    "include": [
+      "dist/metadata.min.js",
+      "dist/metadata.js",
+      "dist/metadata.css",
+      "dist/metadata.core.min.js",
+      "dist/dhx_web.css",
+      "dist/dhx_terrace.css",
+      "dist/dhtmlx.min.js"
+      ]
+  }
+}

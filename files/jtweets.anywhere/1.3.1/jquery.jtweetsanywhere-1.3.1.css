@@ -1,0 +1,370 @@
+/*
+ * jTweetsAnywhere V1.3.1
+ * http://thomasbillenstein.com/jTweetsAnywhere/
+ *
+ * Copyright 2011, Thomas Billenstein
+ * Licensed under the MIT license.
+ * http://thomasbillenstein.com/jTweetsAnywhere/license.txt
+ */
+
+.jta-tweet-list
+{
+    padding: 0;
+    list-style: none;
+}
+
+.jta-tweet-list-item
+{
+    background: #fafafa;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 8px 0px 8px 0px;
+	overflow: hidden;
+}
+
+.jta-tweet-list-item:first-child
+{
+    border-top: 1px solid #e4e4e4;
+}
+
+.jta-tweet-profile-image
+{
+	width: 48px;
+	display: inline;
+	float: left;
+}
+
+.jta-tweet-profile-image-link
+{
+}
+
+.jta-tweet-profile-image img
+{
+	width: 48px;
+	height: 48px;
+}
+
+.jta-tweet-body
+{
+}
+
+.jta-tweet-text
+{
+}
+
+.jta-tweet-body-list-profile-image-present
+{
+	margin-left: 58px;
+}
+
+.jta-tweet-user-name
+{
+	display: block;
+}
+
+.jta-tweet-user-screen-name
+{
+	font-weight: bold;
+}
+
+.jta-tweet-user-full-name
+{
+	font-size: 11px;
+    color: #999;
+}
+
+.jta-tweet-user-screen-name-link,
+.jta-tweet-a,
+.twitter-anywhere-user
+{
+    color: #900;
+	text-decoration: none;
+}
+
+.jta-tweet-user-screen-name-link:hover,
+.jta-tweet-a:hover,
+.twitter-anywhere-user:hover
+{
+    color: #900;
+	text-decoration: underline;
+}
+
+.jta-tweet-user-full-name-link
+{
+    color: #999;
+	text-decoration: none;
+}
+
+.jta-tweet-user-full-name-link:hover
+{
+    color: #666666;
+	text-decoration: underline;
+}
+
+.jta-tweet-link
+{
+}
+
+.jta-tweet-link:hover
+{
+}
+
+.jta-tweet-hashtag
+{
+}
+
+.jta-tweet-hashtag:hover
+{
+}
+
+.jta-tweet-attributes
+{
+	display: block;
+    color: #999;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.jta-tweet-twitter-bird
+{
+}
+
+.jta-tweet-twitter-bird-icon
+{
+	float: left;
+	width: 19px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-image: url(http://si0.twimg.com/images/dev/cms/intents/bird/bird_gray/bird_16_gray.png);
+}
+
+.jta-tweet-twitter-bird-icon:hover
+{
+	background-image: url(http://si0.twimg.com/images/dev/cms/intents/bird/bird_black/bird_16_black.png);
+}
+
+.jta-tweet-timestamp
+{
+}
+
+.jta-tweet-source
+{
+}
+
+.jta-tweet-inreplyto
+{
+}
+
+.jta-tweet-location
+{
+}
+
+.jta-tweet-retweeter
+{
+}
+
+.jta-tweet-timestamp-link,
+.jta-tweet-source-link a,
+.jta-tweet-inreplyto-link,
+.jta-tweet-location-link,
+.jta-tweet-retweeter-link
+{
+    color: #999;
+	text-decoration: none;
+}
+
+.jta-tweet-timestamp-link:hover,
+.jta-tweet-source-link a:hover,
+.jta-tweet-inreplyto-link:hover,
+.jta-tweet-location-link:hover,
+.jta-tweet-retweeter-link:hover
+{
+    color: #999;
+	text-decoration: underline;
+}
+
+.jta-tweet-actions
+{
+	display: block;
+    color: #999;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.jta-tweet-action-reply,
+.jta-tweet-action-retweet,
+.jta-tweet-action-favorite
+{
+	padding-right: 1em;
+}
+
+.jta-tweet-action-reply a,
+.jta-tweet-action-retweet a,
+.jta-tweet-action-favorite a
+{
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left: 19px;
+	padding-top: 3px;
+	color: #999;
+	text-decoration: none;
+}
+
+.jta-tweet-action-reply a    { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/reply.png); }
+.jta-tweet-action-retweet a  { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png); }
+.jta-tweet-action-favorite a { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png); }
+
+.jta-tweet-action-reply a:hover,
+.jta-tweet-action-retweet a:hover,
+.jta-tweet-action-favorite a:hover
+{
+    color: #666666;
+	text-decoration: underline;
+}
+
+.jta-tweet-action-reply a:hover    { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/reply_hover.png); }
+.jta-tweet-action-retweet a:hover  { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/retweet_hover.png); }
+.jta-tweet-action-favorite a:hover { background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/favorite_hover.png); }
+
+.jta-tweet-list-controls
+{
+	margin-top: 20px;
+}
+
+.jta-tweet-list-controls-button
+{
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+    border: 1px solid #999;
+}
+
+.jta-tweet-list-controls-button:hover
+{
+	color: black;
+	background-color: #999;
+	cursor: pointer;
+}
+
+.jta-tweet-list-controls-button-more
+{
+}
+
+.jta-tweet-list-controls-button-prev
+{
+}
+
+.jta-tweet-list-controls-button-next
+{
+	margin-left: 10px;
+}
+
+.jta-tweet-list-autorefresh-trigger
+{
+	padding: 8px 0px 8px 0px;
+	margin-bottom: 10px;
+	text-align: center;
+    border: 1px solid #999;
+}
+
+.jta-tweet-list-autorefresh-trigger:hover
+{
+	color: black;
+	background-color: #999;
+	cursor: pointer;
+}
+
+.jta-tweet-list-autorefresh-trigger-content
+{
+}
+
+.jta-follow-button
+{
+}
+
+
+.jta-tweet-box
+{
+}
+
+
+.jta-connect-button
+{
+}
+
+
+.jta-login-info
+{
+}
+
+.jta-login-info-profile-image
+{
+	width: 48px;
+	display: inline;
+	float: left;
+}
+
+.jta-login-info-profile-image img
+{
+	width: 48px;
+	height: 48px;
+}
+
+.jta-login-info-block
+{
+	margin-left: 58px;
+}
+
+.jta-login-info-screen-name
+{
+}
+
+.jta-login-info-sign-out
+{
+	width: 97px;
+	margin-top: 2px;
+	padding: 1px;
+	text-align: center;
+    border: 1px solid #999;
+}
+
+.jta-login-info-sign-out:hover
+{
+	color: black;
+	background-color: #999;
+	cursor: pointer;
+}
+
+
+.jta-loading
+{
+	margin: 0;
+    padding: 8px 0px 8px 0px;
+}
+
+.jta-error
+{
+	margin: 0;
+    padding: 8px;
+    color: #000;
+    background-color: #f00
+}
+
+.jta-nodata
+{
+	margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.jta-clear
+{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}

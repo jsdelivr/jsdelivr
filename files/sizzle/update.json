@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "repo": "jquery/sizzle",
+  "name": "sizzle",
+  "files": {
+    "basePath": "dist"
+  }
+}

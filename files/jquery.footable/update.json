@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.footable",
+  "repo": "fooplugins/FooTable",
+  "files": {
+    "include": ["./css/**/*", "dist/*"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.moment",
+  "repo": "urish/angular-moment",
+  "files": {
+    "include": ["angular-moment.js", "angular-moment.min.js", "angular-moment.min.js.map"]
+  }
+}

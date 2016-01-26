@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "Leaflet.awesome-markers",
+  "repo": "lvoogdt/Leaflet.awesome-markers",
+  "files": {
+    "basePath": "dist/"
+  }
+}

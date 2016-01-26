@@ -1,0 +1,577 @@
+/*--------------------- Loading cursor -------------------*/
+#mediaplayerloading, #mediabusy {
+  position:absolute;
+  display: table-cell;
+}
+
+#mediaplayerloading img, #mediabusy img {
+  width:32px;
+  height:32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  text-align:center;
+  vertical-align:center;
+}
+
+/*--------------------- Main Dialog -------------------*/
+.mediaplayerdialog {
+  position:relative;
+  font-family:"Trebuchet MS", Helvetica, sans-serif !important;
+  font-style:normal !important;
+  font-size:11px !important;
+  line-height:110% !important;
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+.mediaplayerdialog.playlistonly {
+  width:150px;
+}
+
+.mediaplayerdialog.playlistonly.playlisthorizontal {
+  height:136px;
+}
+
+.mediaplayerdialog.playlistonly.playlisthorizontal.mediashowtitle {
+  height:152px;
+}
+
+.mediaplayerdialog.controlleronly {
+  height:22px;
+}
+
+#mediaplayer {
+  position:absolute;
+  left:0;
+  right:0;
+  top:0px;
+  bottom:0px;
+}
+
+.mediaplayerdialog.mediashowtitle #mediaplayer {
+  top:22px;
+}
+
+.mediaplayerdialog.mediashowplaylist #mediaplayer {
+  right:150px;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediaplayer {
+  right:0px;
+  bottom:0px;
+}
+
+.mediaplayerdialog.playlisthorizontal.mediashowplaylist #mediaplayer {
+  bottom:136px;
+}
+
+#medianode {
+  position:absolute;
+  z-index:10;
+  width:100%;
+  top:0px;
+  bottom:22px;
+}
+
+#mediadisplay {
+  background-color:#000;
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:11;
+}
+
+.mediaplayerdialog.mediafullscreen #mediadisplay {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index:1001;
+  width: 100%;
+  height: 100%;
+}
+
+/*--------------------- Media Overlays -------------------*/
+#mediabusy {
+  position:absolute;
+  z-index:14;
+  width:100%;
+  height:100%;
+  border:0;
+  background-image:url('images/mask.png');
+}
+
+.mediaplayerdialog.mediafullscreen #mediabusy {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index:1004;
+  width: 100%;
+  height: 100%;
+}
+
+#mediapreview {
+  position: absolute;
+  display: table-cell;
+  background-color:#000;
+  z-index:12;
+  width:100%;
+  height:100%;
+}
+
+.mediaplayerdialog.mediafullscreen #mediapreview {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index:1002;
+  width: 100%;
+  height: 100%;
+}
+
+#mediaplay {
+  position:absolute;
+  z-index:13;
+  display: table-cell;
+  width:100%;
+  height:100%;
+  background-image:url('images/mask.png');
+}
+
+.mediaplayerdialog.mediafullscreen #mediaplay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index:1003;
+  width: 100%;
+  height: 100%;
+}
+
+#mediaplay img {
+  width:50px;
+  height:57px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -29px 0 0 -25px;
+  text-align:center;
+  vertical-align:center;
+  cursor:pointer;
+}
+
+/*--------------------- Title Bar -------------------*/
+#mediatitlebar, #mediacontrol, #mediapager {
+  position:absolute;
+  width:100%;
+  height:22px;
+  border:0;
+}
+
+#mediatitlelinks {
+  float:right;
+  width:64px;
+}
+
+.mediaplayerdialog.mediafullscreen #mediatitlelinks {
+  position:fixed;
+  top:5px;
+  right:5px;
+  z-index:1020;
+}
+
+#mediatitlelinks a, #mediapager div.mediapagerlink {
+  float:left;
+  margin:2px 2px 0 0px;
+}
+
+#mediatitlelinksinner {
+  float:right;
+}
+
+/*--------------------- Voter -------------------*/
+
+#medianodevoter {
+  float:left;
+  width:110px;
+  margin-top:-3px;
+}
+
+#mediavoters .ui-icon {
+  width:12px;
+  height:12px;
+}
+
+#mediacontrol #mediavoter div, #mediacontrol #mediauservoter div {
+  float:left;
+  height:12px;
+  border:0;
+  background:none;
+  text-decoration: none;
+}
+
+
+#mediauservotertext, #mediavotertext {
+  text-align:right;
+}
+
+#mediavoterstext {
+  float:left;
+  line-height:100%;
+  margin-top:2px;
+}
+
+#mediavoter .ui-state-active, #mediavoter .ui-state-hover, #mediavoter .ui-state-highlight,
+#mediauservoter .ui-state-active, #mediauservoter .ui-state-hover, #mediauservoter .ui-state-highlight {
+  background:0;
+}
+
+/*--------------------- Control Bar -------------------*/
+#mediacontrol {
+  position:absolute;
+  z-index:15;
+  bottom:0;
+}
+
+.mediaplayerdialog.mediafullscreen #mediacontrol {
+  position: fixed;
+  z-index:1005;
+  width:400px;
+  left: 50%;
+  bottom:5px;
+  margin: 0 0 0 -200px;
+  text-align:center;
+}
+
+#mediacontrolleft {
+  float:left;
+  width:60px;
+  height:22px;
+}
+
+#mediacontrolcenter {
+  margin:0 120px 0 60px;
+  height:22px;
+}
+
+.mediaplayerdialog.mediashowvoter #mediacontrolcenter {
+  margin-right:230px;
+}
+
+#mediacontrolright {
+  float:right;
+  width:120px;
+  height:22px;
+}
+
+.mediaplayerdialog.mediashowvoter #mediacontrolright {
+  width:230px;
+}
+
+#medialist, #mediaplaypause, #mediamute, #mediamenuclose {
+  cursor:pointer;
+}
+
+#mediamute, #mediaplaypause {
+  float:left;
+  margin:2px 0 0 3px;
+}
+
+#mediacurrenttime, #mediatotaltime {
+  float:left;
+  text-align:right;
+  margin:4px 2px 0 4px;
+  width:30px;
+}
+
+#mediavolumebar {
+  float:left;
+  width:50px;
+  height:4px;
+  margin:7px 5px 0 4px;
+}
+
+#mediaseekhandle, #mediavolumehandle {
+  position:absolute;
+  z-index:18;
+  margin-top:-6px;
+  width:18px;
+  height:18px;
+}
+
+#mediaseekhandle span, #mediavolumehandle span {
+  margin-left:-6px;
+}
+
+#mediaseekbar {
+  margin-top:7px;
+  height:4px;
+}
+
+#mediaseekupdate, #mediavolumeupdate, #mediaseekprogress {
+  position:absolute;
+  height:4px;
+  border-bottom:none;
+}
+
+#mediaseekupdate, #mediavolumeupdate {
+  z-index:17;
+}
+
+#mediaseekprogress {
+  z-index:16;
+}
+
+/*--------------------- Menu -------------------*/
+
+#mediamenu {
+  position: absolute;
+  z-index:20;
+  width:300px;
+  height:150px;
+  display:none;
+  padding:2px;
+  top: 50%;
+  left: 50%;
+  margin: -75px 0 0 -150px;
+  text-align:center;
+  vertical-align:center;
+}
+
+.mediaplayerdialog.mediafullscreen #mediamenu {
+  position:fixed;
+  z-index:1020;
+  top: 50%;
+  left: 50%;
+}
+
+.menucontent {
+  text-align:left;
+}
+
+#mediamenuclose {
+  float:right;
+  margin:8px 6px 0 0;
+}
+
+.ui-icon {
+  width:17px;
+  height:18px;
+}
+
+/*--------------------- Playlist -------------------*/
+
+#mediaplaylist {
+  position:absolute;
+  z-index:1;
+  width:150px;
+  top:0px;
+  bottom:0px;
+  right:0;
+}
+
+.mediaplayerdialog.mediashowtitle #mediaplaylist {
+  top:22px;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediaplaylist {
+  width:100%;
+  height:136px;
+  top:auto;
+  bottom:0px;
+  right:0;
+}
+
+.mediaplayerdialog.playlisthorizontal.playlistonly #mediaplaylist {
+  top:22px;
+}
+
+#mediascrollwrapper {
+  position:absolute;
+  width:100%;
+  top:0px;
+  bottom:22px;
+}
+
+#mediascroll, #medialistmask {
+  width:100%;
+  height:100%;
+}
+
+/*--------------------- Links -------------------*/
+
+#medialinks {
+  height:25px;
+}
+
+#medialink {
+  float:left;
+  margin: 0 2px 0 0;
+  text-align:center;
+}
+
+#medialinktext {
+  margin: 2px;
+}
+
+/*--------------------- Pager -------------------*/
+
+#mediapager {
+  position:absolute;
+  z-index:1;
+  bottom:0px;
+}
+
+#mediapagerleft {
+  float:left;
+  margin-left:3px;
+}
+
+#mediapagerright {
+  float:right;
+  margin-right:3px;
+}
+
+/*--------------------- Scroll Bar -------------------*/
+#mediascrollbarwrapper {
+  position:absolute;
+  right:0;
+  width:18px;
+  height:100%;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediascrollbarwrapper{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:18px;
+}
+
+#mediascrollup, #mediascrolldown, #mediascrollhandle {
+  height:18px;
+  width:18px;
+  border:0;
+}
+
+#mediascrollup {
+  position:absolute;
+  top:0px;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediascrollup {
+  position:absolute;
+  left:0px;
+}
+
+#mediascrolldown {
+  position:absolute;
+  bottom:0px;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediascrolldown {
+  position:absolute;
+  right:0px;
+}
+
+#mediascrollbar {
+  position:absolute;
+  top:18px;
+  bottom:0px;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediascrollbar {
+  position:absolute;
+  left:18px;
+  right:18px;
+  top:0px;
+  bottom:0px;
+}
+
+#mediascrolltrack {
+  position:absolute;
+  top:0px;
+  bottom:18px;
+  width:18px;
+  border:0;
+}
+
+.mediaplayerdialog.playlisthorizontal #mediascrolltrack {
+  position:absolute;
+  width:100%;
+  height:18px;
+  border:0;
+}
+
+/*--------------------- Teaser -------------------*/
+
+#mediateaser {
+  float:left  ;
+  height:90px;
+  width:125px;
+  margin:0 1px 2px 0;
+  padding:2px;
+  cursor:pointer;
+}
+
+.mediaplayerdialog.mediahidescroll #mediateaser {
+  width:143px;
+}
+
+.mediaplayerdialog.playlisthorizontal.mediahidescroll #mediateaser {
+  height:108px;
+}
+
+#mediateaser #mediaimage {
+  width:80px;
+  height:60px;
+  margin-bottom:1px;
+  float:left;
+}
+
+/*--------------------- Teaser Voter -------------------*/
+
+#mediateaser #mediavoter {
+  margin-left:83px;
+}
+
+#mediateaser #mediatitle {
+  clear:left;
+  width:120px;
+  height:2.2em;
+}
+
+#mediateaser #mediavoter div {
+  width:14px;
+  border:0;
+  background:none;
+  text-decoration: none;
+}
+
+#mediateaser #mediavoter span {
+  height:12px;
+}
+
+/*--------------------- Logo -------------------*/
+.medialogo {
+  position:absolute;
+  width:49px;
+  height:15px;
+  z-index:500;
+}
+
+.mediaplayerdialog.mediafullscreen .medialogo {
+  position:fixed;
+  z-index:1500;
+  left:5px;
+  bottom:5px;
+}

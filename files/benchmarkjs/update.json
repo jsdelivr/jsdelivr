@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "benchmark",
+  "files": {
+    "include": ["benchmark.js"]
+  }
+}

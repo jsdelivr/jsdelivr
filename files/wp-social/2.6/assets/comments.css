@@ -1,0 +1,891 @@
+/**
+ * Social comments styles
+ * @package social-comments
+ * ================================================ */
+
+/** @section Basics
+ * Covers resets and typography
+ * a #social id is used to namespace our styles and create enough
+ * specificity to make sure they take work.
+ *
+ * Always use a social- prefix on classes and IDs to prevent naming conflicts
+ -------------------------------------------------- */
+
+/* Override default theme line-height */
+#social {
+	background: #fff;
+	line-height: 1.5;
+	margin: 40px 0;
+}
+
+/**
+ * Browser/theme style reset
+ * This gives us a reliable foundation for our styles, regardless of theme
+ * but scoped to our comments.
+ *
+ * Based on work by Eric Meyer
+ * @see http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+ */
+#social * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#social a {
+	text-decoration: none;
+	outline: 0;
+}
+
+#social a:hover {
+	text-decoration: underline;
+}
+
+/** @section Utility
+ -------------------------------------------------- */
+
+/**
+ * Updated super safe clearfix
+ * Taken from CSS section of HTML5 Boilerplate http://html5boilerplate.com/. Thanks guys!
+ */
+#social .social-clearfix:before,
+#social .social-clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+#social .social-clearfix:after {
+	clear: both;
+}
+
+#social .social-clearfix {
+	zoom: 1;
+}
+
+#social .social-imr {
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	text-indent: -32000px;
+}
+
+/**
+ * Subtext, help text, etc
+ */
+#social .social-help,
+#social .social-psst {
+	color: #999;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#social .social-help {
+	font-style: italic;
+}
+
+/** @section Sign-in and forms
+ -------------------------------------------------- */
+
+#social #commentform {
+	overflow: hidden;
+}
+
+/* Threaded respond form */
+#social .social-commentlist #respond {
+	margin: 6px 0;
+	padding: 0 0 0 7px;
+}
+
+#social .social-commentlist #reply-title {
+	background-position: 0 -400px;
+}
+
+#social .social-commentlist #commentform {
+	border-left: 1px solid #e1e1e1;
+	padding-left: 10px;
+}
+
+/* Specificity of selector is dialed to
+override TwentyEleven's treatment of text inputs in
+the respond form */
+#social input.social-input,
+#social textarea.social-input,
+#social .social-select {
+	background: #f8f8f8;
+	border: 1px solid #ccc;
+	-moz-border-radius: 3px; /* FF1+ */
+	-webkit-border-radius: 3px; /* Saf3+, Chrome */
+	-khtml-border-radius: 3px; /* Konqueror */
+	border-radius: 3px; /* Standard. IE9 */
+	/**
+	 * @bugfix border-radius background bleed
+	 * @see http://tumble.sneak.co.nz/post/928998513/fixing-the-background-bleed
+	 */
+	-webkit-background-clip: padding-box;
+	-moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); /* FF3.5+ */
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); /* Saf3+, Chrome */
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); /* Standard. Opera 10.5, IE9 */
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	padding: 2px 4px;
+	text-indent: 0;
+}
+
+/**
+ * Line-height fix
+ */
+#social input.social-input,
+#social .social-select {
+	height: 22px;
+	padding-bottom: 1px;
+	padding-top: 3px;
+}
+
+#social .social-select {
+	margin-top: 2px;
+}
+
+#social .social-select optgroup {
+	padding: 2px;
+	font-weight: bold;
+}
+
+#social .social-select option {
+	font-weight: normal;
+}
+
+#social .social-post {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Input row styles */
+#social .social-input-row,
+#social .form-submit {
+	clear: left;
+	margin: 0 0 10px;
+	overflow: hidden;
+	padding-left: 80px;
+	position: relative;
+	zoom: 1;
+}
+
+/* Override TwentyEleven
+Remove float from para wrapping submit button. */
+#social .form-submit {
+	float: none;
+}
+
+#social .form-submit,
+#social .social-input-row-submit {
+	height: 30px;
+	margin-bottom: 0;
+}
+
+#social .social-input-row .social-label {
+	color: #333;
+	cursor: pointer;
+	font-size: 14px;
+	display: block;
+	left: 7px;
+	position: absolute;
+	top: 4px;
+	width: 70px;
+}
+
+#social #submit,
+#social .social-input-row .social-input {
+	/* Bypasses vertical alignment issues.
+	only effects social-input-row inputs */
+	float: left;
+	/* Specifically here to counteract issues with margins in TwentyTen,
+	but good to have either way */
+	margin: 0;
+}
+
+#social .social-input-row .social-help {
+	float: left;
+	line-height: 28px;
+	margin-left: 7px;
+}
+
+#social #respond {
+	/* Override TwentyEleven theme
+	Remove grey background */
+	background: transparent;
+	margin-bottom: 30px;
+	width: auto;
+}
+
+#social #respond input.social-input {
+	width: 314px;
+}
+
+#social #respond textarea.social-input {
+	height: 83px;
+	max-width: 464px;
+}
+
+/* Specificity of this selector is dialed in to
+override submit styles in TwentyEleven theme */
+#social input#submit {
+	background: #e9e9e9 url(sprite-y-24.png) 0 0 no-repeat;
+	border: 1px solid #ccc;
+	-moz-border-radius: 4px; /* FF1+ */
+	-webkit-border-radius: 4px; /* Saf3+, Chrome */
+	-khtml-border-radius: 4px; /* Konqueror */
+	border-radius: 4px; /* Standard. IE9 */
+	/* Workaround for TwentyEleven theme
+	Remove box shadow */
+	-moz-box-shadow: none; /* FF3.5+ */
+	-webkit-box-shadow: none; /* Saf3+, Chrome */
+	box-shadow: none; /* Standard. Opera 10.5, IE9 */
+	color: #0867ab;
+	cursor: pointer;
+	font: bold 14px/13px Helvetica, Arial, sans-serif;
+	height: 24px;
+	margin: 0;
+	/**
+	 * @bugfix input width issue
+	 * @affected IE7
+	 * IE7 likes to make buttons with CSS applied WIDE, unless you apply overflow:visible
+	 */
+	overflow: visible;
+	padding: 4px 13px;
+	/* Override TwentyEleven theme styles
+	Remove left offset */
+	position: static;
+	text-shadow: #fff 0 1px 0;
+}
+
+/* Specificity of this selector is dialed in to
+override submit styles in TwentyEleven theme */
+#social input#submit:active {
+	background: #dedede url(sprite-y-24.png) 0 -100px no-repeat;
+	color: #0867ab;
+}
+
+/**
+ * @bugfix invisible hidden element
+ * FF adds an invisible pseudo element to inputs. Reset it here.
+ * @affected Firefox
+ * @valid no
+ */
+#social #submit::-moz-focus-inner {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#social .social-twitter-icon,
+#social .social-facebook-icon,
+#social .social-facebook-like-icon {
+	background: url(sprite-y-24-icons.png) 0 -99px no-repeat;
+	display: block;
+	padding-left: 21px;
+	/**
+	 * @bugfix hasLayout fix
+	 * @affected	IE6
+	 * Keeps background from showing up twice.
+	 */
+	zoom: 1;
+}
+
+#social .social-facebook-icon,
+#social .social-facebook-like-icon {
+	background-position: 0 -199px;
+}
+
+#social .social-sign-in-links {
+	margin: 0 auto 9px;
+	width: 360px;
+}
+
+#social .social-sign-in-links a {
+	display: inline;
+	float: left;
+	height: 22px;
+	margin: 0 15px;
+	width: 150px;
+}
+
+#social .social-sign-in-links .social-twitter {
+	background: url('social.png') 0 0 no-repeat;
+}
+
+#social .social-sign-in-links .social-twitter:hover {
+	background-position: 0 -22px;
+}
+
+#social .social-sign-in-links .social-twitter:active {
+	background-position: 0 -44px;
+}
+
+#social .social-sign-in-links .social-facebook {
+	background: url('social.png') -150px 0 no-repeat;
+}
+
+#social .social-sign-in-links .social-facebook:hover {
+	background-position: -150px -22px;
+}
+
+#social .social-sign-in-links .social-facebook:active {
+	background-position: -150px -44px;
+}
+
+/* Logged in form */
+
+.logged-in #social .social-input-row-comment .social-label {
+	/* Hide visually, but remain readable by screen readers */
+	left: -999em;
+	position: absolute;
+}
+
+.logged-in #social #respond .form-submit,
+.logged-in #social .social-input-row {
+	/* Override TwentyEleven theme
+	remove float:right */
+	float: none;
+	padding-left: 50px;
+}
+
+/** @section Tabs
+ -------------------------------------------------- */
+
+/**
+ * Work around Javascript FOUC accessibly
+ * Prevent flash before tabs init...
+ * Relies on snippet in master.js
+ */
+.social-js .social-tabs-panel {
+	display: none;
+}
+
+.social-js .social-tabs-first-panel {
+	display: block;
+}
+
+#social .social-heading {
+	background: url('background-strikethrough.gif') 0 13px repeat-x;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-bottom: 10px;
+}
+
+#social .social-title {
+	margin: 0 0 0 9px;
+	zoom: 1;
+}
+
+#social .social-title span {
+	display: block;
+}
+
+#social .social-divider {
+	background: url('background-strikethrough.gif') center repeat-x;
+	clear: both;
+	font: italic 13px/1.5 Helvetica, Arial, sans-serif;
+	margin: 0 7px 10px;
+	text-align: center;
+}
+
+#social .social-divider span {
+	background-color: #fff;
+	padding: 0 10px;
+}
+
+#social .must-log-in {
+	text-align: center;
+}
+
+#social .social-must-log-in {
+	margin-bottom: 25px;
+}
+
+/** @section Comments List
+ -------------------------------------------------- */
+#social .social-commentlist {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 10px 0 0;
+}
+
+#social .social-comment {
+	position: relative;
+	border-top: 1px solid #e1e1e1;
+	border-left: 1px solid #e1e1e1;
+	-moz-border-radius-topleft: 4px; /* FF1+ */
+	-webkit-border-top-left-radius: 4px; /* Saf3+, Chrome */
+	-khtml-border-top-left-radius: 4px; /* Konqueror */
+	border-top-left-radius: 4px; /* Standard. IE9 */
+	margin: 0 0 10px;
+	zoom: 1;
+}
+
+#social .social-comment-header {
+	margin-bottom: 6px;
+	position: relative;
+	z-index: 4;
+}
+
+#social .social-comment-author {
+	margin-right: 125px;
+}
+
+#social .social-fn {
+	display: block;
+	font-size: 16px;
+	line-height: 1.2;
+	-o-text-overflow: ellipsis; /* Opera */
+	text-overflow: ellipsis; /* IE6+, Safari, Konqueror, Standard? */
+	overflow: hidden;
+	/**
+	 * @workaround Prevent ugly overflow issues in IE6
+	 * @valid yes
+	 * @affected IE6
+	 */
+	width: 100%;
+}
+
+/* Callout post-author name */
+#social .bypostauthor .social-fn {
+	font-weight: bold;
+}
+
+#social .social-identity {
+	margin-top: 10px;
+	position: relative;
+}
+
+#social .social-identity .avatar {
+	left: 0;
+	position: absolute;
+	top: 2px;
+}
+
+#social #cancel-comment-reply-link {
+	display: inline;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	margin: 3px 10px;
+	position: static;
+	text-transform: none;
+}
+
+#social .social-comment-header .avatar {
+	left: 0px;
+	position: absolute;
+	/**
+	 * Align with visual text top
+	 */
+	top: 3px;
+}
+
+#social .social-replied {
+	background: url(sprite-y-24-icons.png) 0 -300px no-repeat;
+	display: block;
+	height: 16px;
+	left: -67px;
+	position: absolute;
+	top: -17px;
+	width: 16px;
+}
+
+#social .social-comment-inner {
+	margin-right: 10px;
+	padding: 7px 0 0 10px;
+	position: relative;
+	zoom: 1;
+}
+
+#social .social-comment-header,
+#social .social-comment-body,
+#social .social-comment-entry-meta {
+	padding-left: 50px;
+}
+
+#social .social-comment-body {
+	font-size: 14px;
+	line-height: 18px;
+	overflow: hidden;
+	/**
+	 * @workaround Prevent ugly overflow issues in IE6
+	 * @valid yes
+	 * @affected IE6
+	 */
+	width: 100%;
+}
+
+#social .social-comment-body p {
+	margin: 0 0 5px;
+}
+
+/* Children Comments */
+#social .social-children {
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+}
+
+#social .social-children li {
+	list-style: none;
+	margin: 0;
+}
+
+#social .social-children .social-comment {
+	border-right: 0;
+	-moz-border-radius-topright: 0; /* FF1+ */
+	-webkit-border-top-right-radius: 0; /* Saf3+, Chrome */
+	-khtml-border-top-right-radius: 0; /* Konqueror */
+	border-top-right-radius: 0; /* Standard. IE9 */
+	-moz-border-radius-bottomright: 0; /* FF1+ */
+	-webkit-border-bottom-right-radius: 0; /* Saf3+, Chrome */
+	-khtml-border-bottom-right-radius: 0; /* Konqueror */
+	border-bottom-right-radius: 0; /* Standard. IE9 */
+	margin-left: 6px;
+}
+
+#social .social-actions,
+#social .social-actions a,
+#social .social-comment-meta,
+#social .social-comment-meta a,
+#social .social-last-reply-when {
+	color: #999;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#social a.comment-reply-link {
+	/* Override TwentyEleven theme
+	Remove background from reply links. */
+	background: transparent;
+}
+
+#social .social-actions {
+	margin-bottom: 8px;
+}
+
+#social .social-actions a,
+#social .social-comment-meta a {
+	text-decoration: underline;
+}
+
+#social .social-comment-meta {
+	background: url('sprite-y-24-icons.png') no-repeat;
+	line-height: 16px;
+	padding-right: 20px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	white-space: nowrap;
+}
+
+#social .social-comment-meta .social-posted-from a,
+#social .social-comment-meta .social-posted-from {
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+}
+
+#social .social-comment-meta .social-posted-from span {
+	display: none;
+}
+
+#social .social-actions,
+#social .social-actions a,
+#social .social-last-reply-when,
+#social .social-last-reply-when a {
+	text-transform: lowercase;
+}
+
+#social .social-last-reply-when {
+	float: right;
+	font-size: 11px;
+	font-style: italic;
+	margin-bottom: 4px;
+	text-align: right;
+}
+
+#social .social-comment-meta {
+	background-position: right -1px;
+}
+
+#social .social-comment-meta-twitter {
+	background-position: right -100px;
+}
+
+#social .social-comment-meta-facebook {
+	background-position: right -200px;
+}
+
+#social .social-comment-meta-pingback {
+	background-position: right -400px;
+}
+
+#social .social-pingback > .social-comment-inner {
+	padding-left: 10px;
+}
+
+#social .social-comment-collapse > .social-comment-inner > .social-comment-body,
+#social .social-comment-collapse > .social-comment-inner > .social-actions,
+#social .social-comment-collapse > .social-comment-inner > .social-items-comment {
+	display: none;
+}
+
+#social .social-comment-collapse > .social-comment-inner > .social-comment-header,
+#social .social-comment-collapse.social-facebook-like > .social-comment-inner > .social-comment-body {
+	filter: alpha(opacity = 30);
+	font-size: 12px;
+	min-height: 18px;
+	opacity: .3;
+	padding-left: 35px;
+}
+
+#social .social-facebook-like {
+	margin-bottom: 5px;
+}
+
+#social .social-facebook-like > .social-comment-inner > .social-comment-body {
+	z-index: 3;
+	position: relative;
+	top: -1px;
+	font-size: 12px;
+}
+
+#social .social-comment-collapse.social-facebook-like > .social-comment-inner > .social-comment-body {
+	top: -5px;
+}
+
+#social .social-facebook-like > .social-comment-inner > .social-comment-header > .social-comment-author img {
+	top: 1px;
+}
+
+#social .social-comment-collapse > .social-comment-inner > .social-comment-header .social-fn {
+	font-size: 12px;
+	position: relative;
+	left: -10px;
+}
+
+#social .social-pingback.social-comment-collapse > .social-comment-inner > .social-comment-header .social-fn {
+	left: 0;
+}
+
+#social .social-comment-collapse > .social-comment-inner > .social-comment-header > .social-comment-author img {
+	width: 16px;
+	height: 16px;
+	top: -1px;
+}
+
+/*Tabs*/
+#social .social-nav {
+	background: url('background-strikethrough.gif') 0 13px repeat-x;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 28px;
+	list-style: none;
+	margin: 0 0 3px;
+	padding: 0 0 0 4px;
+}
+
+#social .social-nav li {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+}
+
+#social .social-nav .social-tab-main {
+	margin-left: 0;
+}
+
+#social #social-tabs-comments .social-nav li a span {
+	background: url('sprite-y-24-icons.png') 0 100px no-repeat;
+	display: block;
+}
+
+#social #social-tabs-comments .social-nav .social-wordpress a span {
+	background-position: 0 4px;
+	padding-left: 19px;
+}
+
+#social #social-tabs-comments .social-nav .social-twitter a span {
+	background-position: 0 -96px;
+	padding-left: 19px;
+}
+
+#social #social-tabs-comments .social-nav .social-facebook a span {
+	background-position: 0 -195px;
+	padding-left: 19px;
+}
+
+#social #social-tabs-comments .social-nav .social-pingback a span {
+	background-position: 0 -394px;
+	padding-left: 19px;
+}
+
+/* Tab graphical treatment - selected tabs, and section headers*/
+#social #reply-title {
+	margin: 0;
+	overflow: hidden;
+	padding-left: 13px;
+	zoom: 1;
+}
+
+#social #reply-title span,
+#social .social-nav li a {
+	float: left;
+	font-size: 14px;
+	height: 26px;
+	line-height: 26px;
+}
+
+#social .social-nav li a {
+	background: #fff;
+	padding: 0 12px 4px 12px;
+}
+
+#social #reply-title span,
+#social .social-nav .social-current-tab a {
+	padding: 0 12px 4px 8px;
+}
+
+#social #reply-title,
+#social .social-nav .social-current-tab {
+	background: url(sprite-y-24.png) 0 -200px no-repeat;
+}
+
+#social .social-nav .social-current-tab {
+	background-position: -9px -200px;
+	padding-left: 4px;
+}
+
+#social #reply-title span,
+#social .social-nav .social-current-tab a {
+	background: url(sprite-y-24.png) right -300px no-repeat;
+	color: #000;
+}
+
+/**
+ * This is for the "more important" tabs
+ */
+#social .social-tab-main,
+#social .social-heading .social-title {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#social #post_to {
+	margin: 0 10px;
+}
+
+#social #post_to label {
+	cursor: pointer;
+	width: auto;
+}
+
+#social #post_to input {
+	width: auto;
+}
+
+/**
+ * Comment Aggregation Widget
+ */
+.social-aggregation-spinner {
+	vertical-align: middle;
+}
+
+#wp-adminbar-comments-social {
+	position: absolute;
+	visibility: hidden;
+}
+
+.social-aggregation-results {
+	white-space: nowrap;
+}
+
+/**
+ * Social items display (retweets, likes, etc...)
+ */
+#social-items-wrapper {
+	float: left;
+}
+
+#social .social-items {
+	clear: both;
+}
+
+#social .social-items-icon {
+	display: block;
+	float: left;
+	margin: 9px 7px 0 7px;
+	width: 14px;
+}
+
+#social .social-items-comments {
+	float: left;
+}
+
+#social .social-items-comment {
+	margin: 6px 0;
+}
+
+#social .social-items.social-twitter .social-items-icon {
+	background-image: url('retweet.png');
+	height: 8px;
+}
+
+#social .social-items.social-facebook .social-items-icon {
+	background-image: url('like.png');
+	width: 13px;
+	margin: 6px 8px 0 7px;
+	height: 12px;
+}
+
+#social .social-comment .social-items-icon {
+	margin-top: 6px;
+}
+
+#social .social-items.social-comment-collapse {
+	filter: alpha(opacity = 30);
+	opacity: .3;
+}
+
+#social .social-items img {
+	margin: 0 2px;
+}
+
+#social .social-items-comments a {
+	float: left;
+}
+
+#social .social-items-and-more {
+	margin: 8px 0 0 5px;
+	font-size: 12px;
+	color: #666;
+}
+
+#social .social-items-comments .social-items-and-more {
+	font-size: 11px;
+	margin-top: 4px;
+}
+
+.cf-clearfix {
+	display: block;
+	zoom: 1;
+}
+
+.cf-clearfix:after {
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}

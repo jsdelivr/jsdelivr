@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*
+ * jQuery File Upload Plugin CSS Example 1.1.1
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2012, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  width: 960px;
+  margin: 10px auto;
+}
+a {
+  color: #08C;
+  text-decoration: none;
+}
+a:hover,
+.active a {
+  color: #005580;
+  text-decoration: underline;
+}
+td {
+  padding: 5px;
+}
+img {
+  border: 0;
+}
+.nav-collapse,
+ul.nav,
+ul.nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.navbar .brand {
+  font-size: 16px;
+}
+.row {
+  zoom: 1;
+}
+.row:before, .row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+.span5, .span7 {
+  width: auto;
+  float: left;
+}
+td.delete {
+  white-space: nowrap;
+}
+
+/* Fix for IE 6: */
+* html .nav-collapse,
+* html ul.nav,
+* html ul.nav li {
+  display: inline;
+}
+* html .navbar-fixed-top {
+  margin-bottom: 35px;
+}
+
+/* Fix for IE 7: */
+* + html .nav-collapse,
+* + html ul.nav,
+* + html ul.nav li {
+  display: inline;
+}
+* + html .navbar-fixed-top {
+  margin-bottom: 35px;
+}
+
+@media (max-width: 979px) {
+  body {
+    width: auto;
+    padding: 10px;
+  }
+}

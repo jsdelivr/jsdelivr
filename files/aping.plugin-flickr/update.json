@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-flickr",
+  "repo": "JohnnyTheTank/apiNG-plugin-flickr",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

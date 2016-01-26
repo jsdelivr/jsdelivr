@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "classcoderpack",
+	"repo": "CodingWithClass/classcoderpack",
+	"files": {
+		"include": ["./css/theme-basic.min.css", "./css/theme-material.min.css", "./js/classcoderpack.min.js"]
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "TouchSwipe-Jquery-Plugin",
+  "repo": "mattbryson/TouchSwipe-Jquery-Plugin",
+  "files": {
+    "include": ["jquery.touchSwipe.min.js", "jquery.touchSwipe.js"]
+  }
+}

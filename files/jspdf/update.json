@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jspdf",
+  "repo": "MrRio/jsPDF",
+  "files": {
+	"basePath": "dist/",
+    "include": ["jspdf.min.js"]
+  }
+}

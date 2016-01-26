@@ -1,0 +1,42 @@
+// Variables
+//------------------------------------------------------
+$progress-primary:                 $aqua-dark !default;
+$progress-success:                 $grass-dark !default;
+$progress-danger:                  $grapefruit-dark !default;
+$progress-warning:                 $sunflower-dark !default;
+$progress-info:                    $mint-dark !default;
+
+$progress-background-color:        $lightgray-dark !default;
+
+// Exports
+//------------------------------------------------------
+@include exports("progress") {
+
+  /**
+   * progress
+   * --------------------------------------------------
+   */
+  .progress {
+      background-color: $progress-background-color;
+      @include box-shadow($value: none);
+
+      #{&}-bar {
+        background-color: $progress-primary;
+        @include box-shadow($value: none);
+      }
+      #{&}-bar-success {
+        background-color: $progress-success;
+      }
+      #{&}-bar-info {
+        background-color: $progress-info;
+      }
+      #{&}-bar-warning {
+        background-color: $progress-warning;
+      }
+      #{&}-bar-danger {
+        background-color: $progress-danger;
+      }
+  }
+}
+
+

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "offline",
+  "repo": "HubSpot/offline",
+  "files": {
+    "basePath": "/",
+    "include": ["offline.min.js"]
+  }
+}

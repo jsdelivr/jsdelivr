@@ -1,0 +1,60 @@
+/* Random quote */
+.quotescollection_randomquote q {
+}
+
+.quotescollection_randomquote cite {
+	display:block; /* To display author and source in a new line */
+	text-align:right; 
+}
+
+.quotescollection_author { /* author */
+	font-style:normal;
+}
+
+.quotescollection_source { /* source */
+	font-style: italic;
+}
+
+.quotescollection_nextquote { /* 'Next Quote »' link */
+
+}
+
+.quotescollection_nextquote a { /* use this if you want to change, for example, the color of the 'Next Quote »' link */
+
+}
+
+
+/* Quotes page */
+blockquote.quotescollection {
+	border:0;
+	background:none;
+	padding:0;
+	margin:2em;
+	font-size:1em;
+}
+
+blockquote.quotescollection q {
+
+}
+
+blockquote.quotescollection cite {
+	display:inline;	
+	font-size:0.83em;
+}
+
+a.disabled {
+	cursor:default;
+}
+
+/* See http://www.w3schools.com/css/pr_gen_quotes.asp */
+q:lang(en)
+{
+quotes: "“" "”" "‘" "’";
+}
+
+/* Uncomment the block below if you want to get rid of the quotation marks before and after the quote */
+/*
+q:before, q:after {
+	content:"";
+}
+*/

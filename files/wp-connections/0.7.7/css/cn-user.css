@@ -1,0 +1,334 @@
+/*
+ * Common
+ */
+#cn-list div.cn-list-head { position: relative; }
+#cn-list div.cn-list-section-head { position: relative; }
+#cn-list div.cn-list-section-head h4 { font-size: 16px; padding: 0; margin-bottom: .8em; }
+#cn-list div.cn-alphaindex { font-weight: bold; font-size: 14px; position: relative; bottom: 0; right: 0; }
+#cn-list label { cursor: pointer; }
+
+/*
+ * Image / Logo Styles
+ */
+#cn-list span.cn-image {
+	background:url("../images/loading.gif") transparent no-repeat 50% 50%;
+	display: block;
+	position: relative;
+}
+#cn-list span.cn-image img {
+	border: none !important;
+	height: auto;
+	left: 0 !important;
+	margin: 0 !important;
+	max-height: none !important;
+	max-width: none !important;
+	padding: 0 !important;
+	position: relative !important;
+	top: 0 !important;
+	width: auto;
+}
+#cn-list span.cn-image-loading img {
+	visibility: hidden;
+}
+#cn-list span.cn-image-style {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	margin: 0 0 5px;
+	padding: 5px;
+}
+
+/*
+ * Name and Org Styles
+ */
+#cn-list span.fn { display: block; }
+#cn-list span.org { display: block; }
+#cn-list span.organization-name { display: block; }
+#cn-list span.organization-unit { display: block; }
+#cn-list span.title { display: block; }
+#cn-list span.contact-name { display: block; }
+#cn-list span.contact-label { font-weight: bold; }
+
+/*
+ * Address Styles
+ */
+#cn-list span.adr { display: block; margin-bottom: 10px; }
+#cn-list span.adr span.address-name { display: block; font-weight: bold; }
+#cn-list span.adr span.street-address { display: block; }
+#cn-list span.adr span.extended-address { display: block; }
+#cn-list span.adr span.country-name { display: block; }
+#cn-list span.adr span.geo, div#cn-list span.adr span.geo span.latitude,div#cn-list span.adr span.geo span.longitude { display: block; }
+
+/*
+ * Phone Styles
+ */
+#cn-list span.phone-number-block { display: block; margin-bottom: 10px; }
+#cn-list span.tel { display: block; margin: 0 0 5px; }
+#cn-list span.tel span.phone-name { font-weight: bold; }
+
+/*
+ * Email Styles
+ */
+#cn-list span.email-address-block { display: block; margin-bottom: 10px; }
+#cn-list span.email { background-image: none; display: block; float: none; margin: 0; }
+#cn-list span.email span.email-name { font-weight: bold; }
+
+/*
+ * IM Styles
+ */
+#cn-list span.im-network-block { display: block; margin-bottom: 10px; }
+#cn-list span.im-network { display: block; }
+#cn-list span.im-network span.im-name { font-weight: bold; }
+
+/*
+ * Social Media Network Styles
+ */
+#cn-list span.social-media-block { display: block; margin-bottom: 10px; }
+#cn-list span.social-media-block a { margin: 0; padding: 0; }
+#cn-list span.social-media-block img { border: none; margin: 0; padding: 0; max-height: none; max-width: none; width: auto; }
+#cn-list span.social-media-network { display: inline-block; margin: 0 1px; }
+
+/*
+ * Link Styles
+ */
+#cn-list span.link-block { display: block; margin-bottom: 10px; }
+#cn-list span.link { display: block; }
+#cn-list span.link span.link-name { font-weight: bold; }
+
+/*
+ * Date Styles
+ */
+#cn-list span.date-block { display: block; margin-bottom: 10px; }
+#cn-list span.date { display: block; }
+#cn-list span.date span.date-name { font-weight: bold; }
+
+/*
+ * Anniversary/Birthday vEvent Styles
+ */
+#cn-list div.vevent abbr{ border: 0; cursor: default; text-transform: none; letter-spacing: normal; }
+#cn-list span.vevent { display: block; }
+span.date-name { font-weight: bold; }
+.vevent abbr{ border: 0; cursor: default; text-transform: none; letter-spacing: normal; }
+
+/*
+ * Bio/Notes Styles
+ */
+#cn-list div.bio, div#cn-list div.note { text-align: left; }
+
+/*
+ * Why o` why do theme's insist on floating and setting form widths globally???
+ */
+#cn-list input {
+	float: none;
+	width: auto;
+}
+
+/*
+ * A few style style from Chosen with the selectors more specific so the theme's don't
+ * easily override them. I'm sure I'll have to add to this list as I run accross theme conflicts.
+ */
+#cn-list .chzn-container-multi .chzn-choices .search-field input { line-height: normal; }
+#cn-list .chzn-container .chzn-results .active-result { background: none !important; }
+#cn-list .chzn-container .chzn-results .highlighted { background: #3875d7 !important; color: #FFFFFF; }
+#cn-list .chzn-container ul.chzn-results {
+	clear: both !important;
+	margin: 0 4px 4px 0;
+	max-height: 190px;
+	padding: 0 0 0 4px;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#cn-list .chzn-container .chzn-results li {
+	line-height: 80% !important;
+	padding: 7px 7px 8px;
+	margin: 0;
+	list-style: none !important;
+	color: black;
+	text-transform: none;
+	font-size: 100% !important;
+	border: none !important;
+	background-image: none !important;
+}
+#cn-list .chzn-container .chzn-results li.group-result {
+	color: #999;
+	text-transform: uppercase;
+}
+#cn-list .chzn-container-single .chzn-single { line-height: 26px !important; }
+
+/*
+ * Search control styles.
+ */
+#cn-search-input {
+	background: #FFFFFF none;
+	border-width: 1px 0 1px 1px;
+	border-style: solid;
+	border-color: #DFDFDF;
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-khtml-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: #888;
+	display: inline-block;
+	font-size: 12px;
+	float: none;
+	height: 28px;
+	line-height: 20px;
+	margin: 1px 0 1px 1px !important;
+	padding: 3px 6px;
+	text-align: left;
+	vertical-align: bottom;
+	width: 140px;
+}
+#cn-search-input:focus {
+	color: #373737;
+}
+input#cn-search-submit {
+	background:  #FFFFFF url(../images/icons/search.png) no-repeat 8px center;
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: #DFDFDF;
+	border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-khtml-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	cursor: pointer;
+	font-size: 12px;
+	float: none;
+	height: 28px;
+	line-height: 20px;
+	margin: 1px 1px 1px 0 !important;
+	padding: 3px;
+	text-align: left;
+	vertical-align: bottom;
+	width: 30px;
+}
+
+/*
+ * Pagination control styles.
+ */
+#cn-page-nav { /*clear: both;*/ display: block; font-size: 12px; margin: 10px 0; text-align: center; } /* Setting clear breaks Market */
+#cn-page-nav a {
+	color: #AAAAAA !important;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	border: none;
+	padding: 3px 6px;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 1px;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 1px 0 0;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#cn-page-nav a:active, #cn-page-nav a:visited { color: #AAAAAA !important; }
+#cn-page-nav a.disabled { color: #CCCCCC !important; }
+#cn-page-nav input {
+	background: #FFFFFF none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #DFDFDF;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #888;
+	display: inline;
+	float: none;
+	font-size: 12px;
+	height: auto;
+	line-height: 15px;
+	margin: 1px;
+	padding: 3px;
+	text-align: center;
+	vertical-align: baseline;
+	width: 30px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+/*
+ * Submit Button
+ */
+input#cn-submit {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 2px 1px rgba(100, 100, 100, .4);
+	-moz-box-shadow: 0px 1px 2px 1px rgba(100, 100, 100, .4);
+	color: #666666;
+	display: inline;
+	box-shadow: 0px 1px 2px 1px rgba(100, 100, 100, .4);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#CCC')"; /* For IE 8 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#000000'); /* For IE 5.5 - 7 */
+	float: none;
+	background: #e3e3e3; /* Old browsers */
+	background: -moz-linear-gradient(top, #e3e3e3 1%, #f1f1f1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e3e3e3), color-stop(100%,#f1f1f1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e3e3e3 1%,#f1f1f1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e3e3e3 1%,#f1f1f1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e3e3e3 1%,#f1f1f1 100%); /* IE10+ */
+	background: linear-gradient(top, #e3e3e3 1%,#f1f1f1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#f1f1f1',GradientType=0 ); /* IE6-9 */
+	border:1px solid #D3D3D3;
+	font-size: 12px;
+	margin: 2px;
+	padding: 3px 8px;
+	position: relative;
+    vertical-align: top;
+}
+
+/*
+ * Tables
+ * @todo these styles interfere with the templates that use tables.
+ */
+/*#cn-list table { border: none; border-collapse: separate; float: none; margin: 0; width: 100%; }
+#cn-list table tr { background: transparent; }
+#cn-list table tr.alternate { background: #F1F1F1; }
+#cn-list table td { background: transparent; border: none; line-height: normal; margin: 0; padding: 0; }
+#cn-list table, #cn-list th, #cn-list td { color: #888; font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; font-size: 12px; vertical-align: top; }
+#cn-list table td ul { list-style: none; margin: 6px 0px 6px 6px; padding: 0; text-indent: 0; }
+#cn-list table td li { font-size: 100%; letter-spacing: normal; list-style: none; margin: 0; padding: 0;}
+#cn-list table td ul ul { margin: 6px 0px 6px 16px; }
+#cn-list table td ul li:before { content: ""; }
+#cn-list table td input[type="checkbox"] { margin: 0 0 2px; padding: 0; vertical-align: middle;}
+#cn-list table td input[type="radio"] { margin: 0 0 2px; padding: 0; vertical-align: middle;}*/
+
+/*
+ * This should help to keep themes from breaking Google Maps by setting the img to max-width: 100%;
+ */
+.cn-gmap img {
+	background-color: transparent;
+	max-width: none !important;
+}
+
+/*
+ * Return to top.
+ */
+div#cn-list span.cn-return-to-top img {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	display: inline-block;
+	float: none;
+	margin: 0 0 -6px;
+	max-width: none;
+	padding: 5px;
+}

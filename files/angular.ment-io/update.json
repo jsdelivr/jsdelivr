@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ment.io",
+  "repo": "jeff-collins/ment.io",
+  "files": {
+	"basePath": "dist/",
+	"include": ["*.min.*"]
+  }
+}

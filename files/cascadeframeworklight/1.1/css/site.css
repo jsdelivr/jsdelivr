@@ -1,0 +1,86 @@
+.taskbar {
+    width:30%;
+}
+
+.label,.additional,.lists {
+    width:200px;
+}
+
+.masthead {
+    background:#f7f7f9;
+    color:#333;
+}
+
+.site-header {
+    background:#3981a7;
+}
+
+.masthead h3 {
+    font-weight: 500;
+}
+
+.site-body {
+    padding-top: 40px;
+}
+
+.total {
+    background: #f89406;
+    font-weight: 700;
+}
+
+.size {
+    text-align: right;
+}
+
+.docs p {
+    font-size: 110%;
+}
+
+.docs {
+    width:48%;
+}
+
+a {
+    -webkit-transition:0.25s;
+    -moz-transition:0.25s;
+    transition:0.25s;
+}
+
+.download {
+    position: absolute;
+    right:5px;
+    background: #eee;
+    padding: 5px;
+    border-width: 3px;
+    border-color:#3981a7;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 900;
+}
+
+.download:hover {
+    text-decoration: none;
+    background: #ccc;
+}
+
+@media (min-width: 1200px){
+    .docs {
+        width:30%;
+    }
+}
+
+@media (max-width: 979px) {
+    .docs {
+        width: 100%;
+        max-width:500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .download {
+        position: static;
+        float:left;
+        margin-top:15px;
+    }
+}

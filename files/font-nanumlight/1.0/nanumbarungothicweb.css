@@ -1,0 +1,28 @@
+﻿/* NanumBarunGothic Light */ 
+@font-face{
+	font-family: 'NanumBarunGothic';
+	font-style:normal;
+	font-weight:400;
+	src:url('NanumBarunGothicWeb.eot');
+	src:url('NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+		url('NanumBarunGothicWeb.woff') format('woff'),
+		url('NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face{
+	font-family:'NanumBarunGothic';
+	font-style:normal;
+	font-weight:700;
+	src:url('NanumBarunGothicWebBold.eot');
+	src:url('NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'),
+		url('NanumBarunGothicWebBold.woff') format('woff'),
+		url('NanumBarunGothicWebBold.ttf') format('truetype');
+}
+@font-face{
+	font-family:'NanumBarunGothic';
+	font-style:normal;
+	font-weight:100;
+	src:url('NanumBarunGothicWebLight.eot');
+	src:url('NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'),
+		url('NanumBarunGothicWebLight.woff') format('woff'),
+		url('NanumBarunGothicWebLight.ttf') format('truetype');
+}

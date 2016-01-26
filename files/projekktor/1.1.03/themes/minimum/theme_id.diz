@@ -1,0 +1,10 @@
+Theme Name: minimum
+Theme URI: http://themes.projekktor.com/minimum
+Preview Image: http://themes.projekktor.com/minimum/theme_preview.png
+Description: This is the minimum …
+Supported Plugins: Controlbar, Display
+Author: Lionel Loeb
+Author URI: http://www.pix-l.com
+License: http://www.projekktor.com/license/
+config.controlsTemplate: '<div {fsexit}></div><div {fsenter}></div><div {play}></div><div {pause}></div><div {prev}></div><div {next}></div><div {timeleft}><span {timedur}>{min_dur}:{sec_dur}</span><span {timeremaining}> | {min_rem}:{sec_rem}</span></div><div {scrubber}><div {loaded}></div><div {playhead}></div></div><div {vslider}><div {vmarker}></div><div {vknob}></div></div><div {mute}></div><div {vmax}></div>	
+config.controlsTemplateFull: null

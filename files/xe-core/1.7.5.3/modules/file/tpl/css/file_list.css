@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.adminTable tr.bg1 td {
+    background-color: #FAFAFA;
+}

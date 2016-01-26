@@ -1,0 +1,193 @@
+.container {
+	display: block;
+	width: 910px;
+	margin: 0px auto;
+}
+
+#iview, #iview2 {
+	display: block;
+	width: 900px;
+	height: 400px;
+	background: #000;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+	border-radius: 5px;
+	position: relative;
+	-webkit-box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+	margin: 40px auto;
+	overflow: hidden;
+}
+
+#iview2 {
+	margin-top: 20px;
+}
+
+#iview .iviewSlider, #iview2 .iviewSlider {
+	display: block;
+	width: 900px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+#iview div.iview-directionNav {
+	position: absolute;
+	top: 187px;
+	left: 0px;
+	z-index: 9;
+	width: 100%;
+}
+
+#iview div.iview-directionNav a {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	background-image: url(../../img/bg_direction_nav.png);
+	text-indent: -9999px;
+	-webkit-transition: left 0.3s ease-in-out;
+	-webkit-transition-property: left,right;
+	-moz-transition: left 0.3s ease-in-out;
+	-moz-transition-property: left,right;
+	-o-transition: left 0.3s ease-in-out;
+	-o-transition-property: left,right;
+	-ms-transition: left 0.3s ease-in-out;
+	-ms-transition-property: left,right;
+	transition: left 0.3s ease-in-out;
+	transition-property: left,right;
+}
+
+#iview div.iview-directionNav a.iview-nextNav {
+	right: -27px;
+	background-position: 27px 0px;
+}
+
+#iview div.iview-directionNav a.iview-prevNav {
+	left: -27px;
+	background-position: 0px 0px
+}
+
+#iview.iview-hover div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+}
+
+#iview.iview-hover div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+}
+
+#iview2 .iview-controlNav {
+	position: absolute;
+	bottom: 20px;
+	left: 418px;
+}
+
+#iview2 .iview-controlNav a {
+	text-indent: -9999px;
+}
+
+#iview2 .iview-controlNav a.iview-control {
+	padding: 0px;
+	float: left;
+	width: 11px;
+	height: 11px;
+	background: url('../../img/bullets_2.png') no-repeat 0px 0px;
+	line-height: 0px;
+	margin-right: 7px;
+}
+
+#iview2 .iview-controlNav a.iview-control.active {
+	background-position: 0px -11px;
+}
+
+#iview2 div.iview-directionNav {
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	z-index: 9;
+	width: 100%;
+}
+
+#iview2 div.iview-directionNav a {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	width: 40px;
+	height: 100px;
+	background-image: url(../../img/nav_paddles.png);
+	text-indent: -9999px;
+}
+
+#iview2 div.iview-directionNav a:active {
+	background-image: url(../../img/nav_paddles_down.png);
+}
+
+#iview2 div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+	background-position: 56px 0px;
+}
+
+#iview2 div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+	background-position: -16px 0px
+}
+
+.iview-caption {
+	background: url('../../img/caption-bg.png');
+	color: #FFF;
+	border-radius: 3px;
+	padding: 10px 15px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-shadow: #000 1px 1px 0px;
+}
+
+.iview-caption.video-caption {
+	padding: 10px;
+}
+
+.iview-caption.caption1 {
+	text-shadow: none;
+}
+
+.iview-caption.caption2 {
+	background: #FFF;
+	color: #000;
+	text-shadow: none;
+}
+
+.iview-caption.caption3 {
+	background: #c4302b;
+	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
+	text-shadow: none;
+}
+
+.iview-caption.caption3 div {
+	line-height: 150%;
+	text-align: justify;
+}
+
+.iview-caption.caption4 {
+	background: #00b4ff;
+	font-size: 36px;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.iview-caption.caption5 {
+	background: #FFF;
+	color: #000;
+	font-size: 26px;
+	text-shadow: none;
+}
+
+#iview-preloader {
+	border: #666 1px solid;
+	width: 150px
+}
+
+#iview-preloader div {
+	background: #666;
+}

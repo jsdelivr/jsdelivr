@@ -1,0 +1,313 @@
+.projekktor { 
+    overflow:hidden;
+    background-color:#000;
+    font-family: 'Lucida Grande', Arial, Sans-Serif;
+    position:relative;
+    padding:0;
+    margin:0;
+    display:block;    
+}
+
+.ppcontrols {  
+    position: absolute;
+    left: 50%;
+    margin-left:-210px;
+    bottom: 0px;
+    display: block; 
+    width: 420px; 
+    height: 87px;
+    background: transparent url(mxskin.png) 0 0 no-repeat;
+    z-index:8000;
+    padding: 0px;
+}
+
+.pplogo.inactive,
+.ppstart.inactive,
+.ppbuffering.inactive,
+.ppcontrols.inactive,
+.ppplay.inactive,
+.pppause.inactive,
+.ppfsenter.inactive,
+.ppfsexit.inactive,
+.ppprev.inactive,
+.ppnext.inactive {
+	display: none;
+}
+
+.pplogo.active,
+.ppstart.active,
+.ppbuffering.active,
+.ppcontrols.active,
+.ppplay.active,
+.pppause.active,
+.ppfsenter.active,
+.ppfsexit.active,
+.ppprev.active,
+.ppnext.active {
+	display: block;
+}
+
+.ppfsexit { 
+    display:block;
+    position: absolute;
+    margin: 56px 380px;
+    background: transparent url(mxskin.png) -420px -30px no-repeat;
+    width: 26px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+.ppfsexit:hover {
+    background: transparent url(mxskin.png) -457px -30px no-repeat;
+}
+
+.ppfsenter { 
+    display:block;
+    position: absolute;
+    margin: 56px 380px;
+    background: transparent url(mxskin.png) -420px 0px no-repeat;
+    width: 26px; 
+    height: 20px;
+    cursor: pointer;
+}
+.ppfsenter:hover { 
+    display:block;
+    position: absolute;
+    margin: 56px 380px;
+    background: transparent url(mxskin.png) -457px 0px no-repeat;
+    width: 26px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.ppplay { 
+    display:block;
+    position: absolute;
+    top: 53px;
+    left: 192px;
+    /*background: transparent url(mxskin.png) -825px 0 no-repeat;*/
+	background: transparent url(mxskin.png) -619px 0 no-repeat;
+    width: 34px; 
+    height: 27px;
+    cursor: pointer;
+}
+
+.ppplay:hover {
+    /*background: transparent url(mxskin.png) -869px 0 no-repeat;*/
+	background: transparent url(mxskin.png) -653px 0 no-repeat;
+}
+
+.pppause { 
+    display:none;
+    position: absolute;
+    top: 53px;
+    left: 192px;
+	/*background: transparent url(mxskin.png) -737px 0 no-repeat;*/
+    background: transparent url(mxskin.png) -551px 0 no-repeat;
+    width: 34px; 
+    height: 27px;
+    cursor: pointer;
+}
+
+.pppause:hover {
+	/*background: transparent url(mxskin.png) -781px 0 no-repeat;*/
+    background: transparent url(mxskin.png) -585px 0 no-repeat;
+}
+
+.ppnext { 
+    position: absolute;
+    top: 53px;
+    left: 232px;        
+    /*background: transparent url(mxskin.png) -631px 0 no-repeat;*/
+	background: transparent url(mxskin.png) -483px 0 no-repeat;
+    width: 34px; 
+    height: 27px;
+    cursor: pointer;
+}
+
+.ppnext:hover {
+    /*background: transparent url(mxskin.png) -684px 0 no-repeat;*/
+	background: transparent url(mxskin.png) -517px 0 no-repeat;
+}
+
+.ppprev { 
+    position: absolute;
+    top: 53px;
+    left: 153px;        
+    /*background: transparent url(mxskin.png) -913px 0 no-repeat;*/
+	background: transparent url(mxskin.png) -687px 0 no-repeat;
+    width: 34px; 
+    height: 27px;
+}
+
+.ppprev:hover {
+    background: transparent url(mxskin.png) -721px 0 no-repeat;
+	/*background: transparent url(mxskin.png) -966px 0 no-repeat;*/
+}
+
+.pptitle {
+    position: absolute;
+    top: 20px;
+    left: 10px;    
+    height: 15px; 
+    width: 400px; 
+    cursor: pointer; 
+    text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+    font-weight: bold;
+    color: #fabb00;  
+}
+
+.pptimeleft {
+    position: absolute;
+    top:60px;
+    left: 295px;    
+    height: 15px; 
+    width: 75px; 
+    cursor: pointer; 
+    text-align:left;    
+    font-size: 10px;
+    color: #fff;  
+}
+
+
+.ppscrubber {
+    position: absolute;
+    top: 40px;
+    left: 4px;
+    height: 4px; 
+    width: 412px; 
+    cursor: pointer;   
+}
+
+.ppplayhead, .pploaded {
+    z-index: 101; 
+    position: absolute;
+    bottom:0;
+    height: 5px; 
+    width: 1px; 
+    background-color: #fabb00; 
+    cursor: pointer;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;    
+}
+
+.pploaded {
+    z-index: 100;
+    background: transparent url(loaded.png) repeat-x;
+}
+
+.ppvslider {
+    position: absolute;
+    top:50px;
+    left:27px;    
+    height: 30px; 
+    width: 80px;      
+}
+
+.ppvknob  {
+    cursor: pointer;
+    z-index: 201; 
+    position: absolute;
+    background: transparent url(mxskin.png) -1552px 0 no-repeat;
+    top:9px;
+    left:0px;
+    width: 6px; 
+    height: 15px;
+}
+
+.ppvknob:hover  {
+    background: transparent url(mxskin.png) -1552px 0px no-repeat;
+}
+
+
+.ppvmax  {
+	cursor: pointer;
+	position: absolute;
+	top:60px;
+	left:116px;
+	width: 15px;
+	height: 13px;
+	background: transparent url(mxskin.png) -1332px 0px no-repeat;
+}
+
+.ppvmax:hover {
+	cursor: pointer;
+	position: absolute;
+	top:60px;
+	left:116px;
+	width: 15px;
+	height: 13px;
+	background: transparent url(mxskin.png) -1357px 0px no-repeat;
+}
+
+
+.ppmute  {
+	cursor: pointer;
+	position: absolute;
+	top:62px;
+	left:10px;
+	width: 15px;
+	height: 13px;
+	background: transparent url(mxskin.png) -1518px 0px no-repeat;
+}
+
+.ppmute:hover  {
+	background: transparent url(mxskin.png) -1537px 0px no-repeat;
+}
+
+.pptestcard {
+    background: transparent url(testcard.jpg) center center no-repeat;
+    width: 100%;
+    height: 100%;
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+
+.ppbuffering {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-30px;
+    margin-top: -30px;    
+    display: block; 
+    z-index:9010;
+    padding: 0px;
+    background: #F6F6F6 url(buffering.gif) center center no-repeat;
+    height: 60px; 
+    width: 60px; 
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;        
+    display: none; 
+}
+
+.ppstart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    margin:-40px 0 0 -40px;	
+    display: block;
+    z-index:8000;
+    padding: 0px;    
+    background: transparent url(start.png) center center no-repeat;
+}
+
+.pptestcard p {
+    background-color: #fdfdfd;
+    width: 50%;
+    margin: auto;
+    line-height: 25px;
+    position: relative;
+    top: 40%;    
+    padding: 10px;
+    border:5px solid #000;
+    text-align: center;
+}

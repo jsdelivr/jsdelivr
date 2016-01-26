@@ -1,0 +1,11 @@
+/* Webfont: LatoLatinHair-Regular */@font-face {
+    font-family: 'LatoLatinHair';
+    src: url('LatoLatinHair-Regular.eot'); /* IE9 Compat Modes */
+    src: url('LatoLatinHair-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LatoLatinHair-Regular.woff') format('woff'), /* Modern Browsers */
+         url('LatoLatinHair-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "phaser",
+  "repo": "photonstorm/phaser",
+  "files": {
+    "basePath": "build/",
+    "include": ["phaser.js", "phaser.min.js", "phaser.map"]
+  }
+}

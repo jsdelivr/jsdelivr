@@ -1,0 +1,169 @@
+/* -------------------------------------------------------------- 
+   
+   Basic WordPress Blog Styles   
+     
+-------------------------------------------------------------- */   
+
+
+/* Images
+-------------------------------------------------------------- */
+
+
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+.wp-caption {
+	text-align: center;
+	margin-bottom: 1.5em;
+
+}
+.wp-caption img {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding: 10px;
+
+}
+.wp-smiley { 
+	max-height: 1em;
+	margin:0 !important;
+}
+
+.gallery { margin: 0 auto 18px; text-align: center; }
+.gallery .gallery-item {
+	
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+.gallery img {
+	border: 6px solid rgba(0,0,0,0.1);
+}
+.gallery img:hover {
+	.opacity(70);
+}
+.gallery-columns-2 .attachment-medium {
+	max-width: 92%;
+	height: auto;
+}
+.gallery-columns-4 .attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+}
+.gallery .gallery-caption {
+	font-size: 11px;
+	padding: 6px 20px;
+}
+.gallery dl, .gallery dt { margin: 0; }
+.gallery br+br { display: none; }
+
+
+
+/* Pullquotes
+-------------------------------------------------------------- */
+blockquote {
+	position: relative;
+	background-color: #f6f6f6;
+	background-color: rgba(0,0,0,0.05);
+	padding: 15px 15px 15px 70px;
+	&:before {
+		position: absolute;
+		content: "\f10d";
+		display: block;
+		color: #dddddd;
+		color: rgba(0,0,0,0.1);
+		left:20px;
+		top:20px;
+		font-size: 32px;
+
+	}
+}
+blockquote.left {
+	float: left;
+	margin-left: 0;
+	margin-right: 20px;
+	text-align: right;
+	width: 33%;
+}
+blockquote.right {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+	text-align: left;
+	width: 33%;
+}
+
+
+
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table
+{
+	text-align: left;
+	border-collapse: collapse;
+	width:100%;
+	padding:0;
+	margin:0;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+table th
+{
+	text-align:center;
+	padding:18px 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+
+table tfoot td
+{
+	padding:6px;
+}
+
+
+table {
+	tr:nth-child(odd) 
+	{
+
+	}
+
+ 	tfoot{
+
+	}
+	tr {
+
+	}
+	td {
+		text-align:center;
+		padding: 12px;
+	}
+}

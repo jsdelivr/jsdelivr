@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "dataTrack.js",
+	"repo": "realitydesign/dataTrack.js",
+	"files": {
+		"include": ["dataTrack.min.js"]
+	}
+}

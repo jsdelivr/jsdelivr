@@ -1,0 +1,450 @@
+<!--
+`juicy-tile-list element` - masonry-like Polymer Element for sortable tiles that packs efficiently without changing HTML structure (changes CSS only).
+
+@elementjuicy-tile-list
+@demo https://Juicy.github.io/juicy-tile-list/
+--><!-- Import Polymer --><script src="rectangle.js"></script><script src="packer.js"></script><script src="package.js"></script><!-- Define your custom element --><polymer-element name="juicy-tile-list" constructor="JuicyTileListElement" attributes="setup rowspans colspans layersOrientation defaultTileSetup"><template><style>:host {
+            display: inline-block;
+            padding: 16px;
+        }
+        #container{
+            position: relative;
+        }
+        polyfill-next-selector { content: ':host #container> *'; }
+        #container ::content>*,
+        #container >*  {
+            position: absolute;
+            z-index: 2;
+        }
+        polyfill-next-selector { content: ':host #container.animate> *'; }
+        #container.animate ::content>*,
+        #container.animate >*  {
+            -webkit-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, -webkit-transform 0.5s;
+            transition: width 0.5s ease-out, height 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out, transform 0.5s ease-out;
+        }
+        #container {
+          z-index: 0;
+        }</style><div id="container" class="animate"><content></content></div></template><script>(function( scope ){
+      /**
+       * For a given element, returns the available width excluding margin, border and padding
+       * @param {Element} elem
+       * @return {Number}
+       */
+      function innerWidth(elem) {
+        var outerWidth = elem.offsetWidth;
+        var computedStyle = window.getComputedStyle(elem, null);
+        var borderLeft = parseFloat(computedStyle.getPropertyValue('border-left')) || 0;
+        var borderRight = parseFloat(computedStyle.getPropertyValue('border-right')) || 0;
+        var paddingLeft = parseFloat(computedStyle.getPropertyValue('padding-left')) || 0;
+        var paddingRight = parseFloat(computedStyle.getPropertyValue('padding-right')) || 0;
+        return outerWidth - borderLeft - borderRight - paddingLeft - paddingRight;
+      }
+
+      /**
+       * For a given element, returns the available height excluding margin, border and padding
+       * @param {Element} elem
+       * @return {Number}
+       */
+      function innerHeight(elem) {
+        var outerHeight = elem.offsetHeight;
+        var computedStyle = window.getComputedStyle(elem, null);
+        var borderTop = parseFloat(computedStyle.getPropertyValue('border-top')) || 0;
+        var borderBottom = parseFloat(computedStyle.getPropertyValue('border-bottom')) || 0;
+        var paddingTop = parseFloat(computedStyle.getPropertyValue('padding-top')) || 0;
+        var paddingBottom = parseFloat(computedStyle.getPropertyValue('padding-bottom')) || 0;
+        return outerHeight - borderTop - borderBottom - paddingTop - paddingBottom;
+      }
+
+      /**
+       * Save string to the local storage using the provided key
+       * @param {String} key
+       * @param {String} value
+       */
+      function saveJson(key, value) {
+        if (key) {
+          localStorage.setItem(key, value);
+        }
+      }
+
+      /**
+       * Loads string from the local storage using the provided key
+       * @param {String} key
+       * @return {String}
+       */
+      function loadJson(key) {
+        if (key) {
+          return localStorage.getItem(key);
+        }
+      }
+
+        var defaultTileSetup = {
+            width: 256,
+            height: 128,
+            priority: 0
+        }
+        /**
+         * Disregard `<style>`, `<template>` and Text nodes.
+         * @param  {NodesList} nodesList nodes list to filter
+         * @return {Array}           array of sortable children.
+         */
+        function filterNodes( nodesList ){
+            return nodesList.array()
+                        .filter(function filterOutText(child){
+                            return !(child instanceof Text) &&
+                                    !(child instanceof HTMLLinkElement) &&
+                                    !(child instanceof HTMLStyleElement) &&
+                                    !(child instanceof HTMLTemplateElement) &&
+                                    !(child.nodeName == "PUPPET-MORPHURL") && //ok, this is too much. ideas?
+                                    !(child instanceof HTMLScriptElement);
+                        });
+        }
+
+        /**
+         * Modifies setup array with default settings for not mapped elements
+         * @param {Array} elements
+         * @param {Array} setupItems
+         * @param {Array} item
+         * @param {Object} defaultTileSetup
+         */
+        function defaultSetup( elements, setupItems, items, defaultTileSetup ){
+            for(var elNo = 0, eLen = elements.length; elNo < eLen; elNo++) {
+              var element = elements[elNo];
+              if( !items[elNo] ){
+                var itemSetup = JSON.parse(JSON.stringify(defaultTileSetup));
+                if(setupItems.length == 0) {
+                  itemSetup.priority = 0.5;
+                }
+                else {
+                  itemSetup.priority = getMinimumPriority(setupItems) * (1-1/eLen);
+                }
+                itemSetup.index = elNo;
+                Object.defineProperty(itemSetup, "container", {value:items["root"], writable: true})
+                setupItems.push(itemSetup);
+                items[elNo] = itemSetup;
+              }
+            }
+        }
+
+        /**
+         * Returns the minimum value of the priority property from the given array of objects
+         * @param {Array<Object>} arr
+         * @return {Number} number in range from 0 to 1
+         * @TODO DRY
+         */
+        function getMinimumPriority(arr) {
+          var min = 1;
+          for (var i = 0, ilen = arr.length; i < ilen; i++) {
+            if (arr[i].priority < min) {
+              min = arr[i].priority;
+            }
+          }
+          if (min < 0) {
+            min = 0;
+          }
+          return min;
+        }
+        function workaroundOnResizeEvent(node, fn){
+          var parent = node;
+          parent = parent.parentNode;
+          while( parent && parent.tagName != "BODY" ){
+            if(parent.tagName == node.tagName){
+              parent.addEventListener("juicy-tile-list-refresh", fn);
+              break;
+            }
+            parent = parent.parentNode;
+          }
+        }
+
+
+        Polymer('juicy-tile-list', Platform.mixin( {}, Package.prototype, {
+            setup: null,
+             _storedSetup: null, //string
+            // {
+            //   direction: "rightDown",
+            //   gap: 8,
+            //   items: []
+            // },
+            elements: null,
+            // {
+            //  index_in_DOM: {element: DOMElement, setup: setupObject, container},..
+            //  containerName: {setup: setupObject, items: , packer: packer}        
+            items: null,// {}, 
+
+            defaultTileSetup: defaultTileSetup,
+            sorter: function byPriority(itemA, itemB){
+                return itemB.priority - itemA.priority;
+            },
+            createItemsList: function(){
+              this.elements = filterNodes(this.children);
+              this.elements["root"] = this.$.container;
+              defaultSetup(
+                this.elements,
+                this.setup.items,
+                this.items,
+                this.defaultTileSetup
+              );
+            },
+            domReady: function gridAttached(){
+              var that = this;
+
+              if(document.attachEvent){
+                this.attachEvent('onresize', this.refresh.bind(this, null, null));
+              } else {
+                //FIXME: async timeout look ugly (tomalec)
+                //we wait for transition, so innerHeight won't miss the planned size
+                workaroundOnResizeEvent( this, this.async.bind(this, "refresh", [null, null],500+1) );
+              }
+
+              window.addEventListener('resize', this.refresh.bind(this, null, null), true);
+
+              // It's kinda strange but `loadFromStorage` initializes Packer instance <-smells badly
+              // It also calls `.refresh()` which need to be called after setting listeners.
+              this.loadFromStorage();
+
+
+              // Observe changes
+              // TODO: Make it cleaner
+              // create an observer instance
+              var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  console.log("observation", mutation.type, arguments, mutations);
+                  if(mutation.addedNodes){
+                      //DRY, performance
+                      console.log("something was added")
+                      that.createItemsList();
+                      that.refresh();
+                  }
+                });
+              });
+              // pass in the target node, as well as the observer options
+              observer.observe(this, { childList: true });
+              // end of: Observe changes
+            },
+          /**
+           * Delete virtual container, move items (if any) to one above.
+           * @extends Package#deleteContainer
+           * Remove corresponding ShadowDOM element.
+           * @param  {Item | String} what        Reference to, or name of the container to delete.
+           * @param  {Boolean} [noRepacking=false]  `true` to prevent  re-packing after setup change.
+           * @return {Object}             deleted item
+           */
+          deleteContainer: function( what, noRepacking ){
+            var deletedItem = Package.prototype.deleteContainer.call(this, what, noRepacking);
+            var deletedElement = this.elements[deletedItem.name];
+            deletedElement.parentNode.removeChild(deletedElement);
+            return deletedItem;
+          },
+          /**
+           Deletes fake containers from DOM
+           */
+          cleanupDOM: function() {
+            var containerBackgrounds = this.$.container.querySelectorAll('.containerBackground');
+            for (var i = 0, ilen = containerBackgrounds.length; i < ilen; i++) {
+              this.$.container.removeChild(containerBackgrounds[i]);
+            }
+          },
+          /**
+           * Extend `Package.prototype.packItems` with DOM features: 
+           * `heightAuto`, `widthAuto`, 
+           * map virtual containers to real elements in ShadowDOM.
+           * @param  {Object} [setup=this.setup] setup to pack
+           * @return {Object} packed setup as in Package.prototype.packItems
+           * @see Package.prototype.packItems
+           */
+          packItems: function packDOMItems( setup ){
+            setup || (setup = this.setup);
+            var elements = this.elements;
+            // TODO: support LTR
+            if( this.setup.direction != "downRight"){
+               this.setup.width = innerWidth(this);
+               this.setup.heightAuto = true;
+            } else {
+              this.setup.height = innerHeight(this);
+              this.setup.widthAuto = true;
+            }
+            // IDEA move to outter scope, not to redefine it every time
+            var itemSetup, itemsLength = setup.items.length;
+            while( itemsLength--){
+                // TODO: do it more lightweight
+                itemSetup = setup.items[itemsLength];
+
+                var element;
+                if (elements) {
+                  if(itemSetup.index !== undefined) {
+                    element = elements[ itemSetup.index ];
+                  }
+                  else if (itemSetup.name !== undefined) {
+                    element = elements[ itemSetup.name ];
+                    if (!element) {
+                      element = document.createElement('DIV');
+                      element.className = 'containerBackground';
+                      element.style.zIndex = -1;
+                      this.$.container.appendChild(element);
+                      elements[ itemSetup.name ] = element;
+                    }
+
+                    (itemSetup.innerHTML != undefined) && (element.innerHTML = itemSetup.innerHTML);
+                  }
+                }
+
+                if (! itemSetup.items ){ // element
+                  if(itemSetup.widthAuto){
+                    // itemSetup.width = element.clientWidth;
+                    element.style.width = ""; //slow, but I don't know another way to measure real width when element's content has shrinked other than remove height property before measuring (Marcin)
+                    element.style["grid-row"] = "";
+                    element.style["grid-column"] = "";
+                    itemSetup.width = element.scrollWidth; //now we can measure scrollHeight because width is already set and height is not constrained
+                  } 
+                  if(itemSetup.heightAuto){
+                    // us width constraint first, if given.
+                    if( !itemSetup.widthAuto ){
+                      element.style.width = itemSetup.width + "px";
+                    }
+                    // itemSetup.height = element.clientHeight;          
+                    element.style.height = ""; //slow, but I don't know another way to measure real height when element's content has shrinked other than remove height property before measuring (Marcin)
+                    itemSetup.height = element.scrollHeight; //now we can measure scrollHeight because width is already set and height is not constrained
+                  }
+                }
+                //recursion is done in Package#packItems 
+            }
+            
+
+            return Package.prototype.packItems.call( this, setup );
+
+          },
+            /**
+             * Refresh everything
+             */
+          refresh: function( ) {
+            var container = this.$.container;
+            var packedTree = this.packItems();
+            
+            container.style.width = packedTree.width + "px";
+            container.style.height = packedTree.height + "px";
+            this.renderer( packedTree, this.elements, 0, 0);
+            // trigger event
+            this.dispatchEvent( new CustomEvent("juicy-tile-list-refresh") );
+          },
+
+          /**
+           * Returns true if current setup state is different from loaded from storage
+           * @return {Boolean}
+           */
+          isModified: function() {
+            return (JSON.stringify(this.setup) !== this._storedSetup);
+          },
+
+          saveToStorage: function(customSetup) {
+            this._storedSetup = JSON.stringify(customSetup || this.setup);
+            saveJson(this.id, this._storedSetup);
+          },
+
+          loadFromStorage: function() {
+            this._storedSetup = loadJson(this.id);
+            this.loadFromString(this._storedSetup);
+          },
+
+          loadFromString: function(setupString) {
+            this.cleanupDOM();
+            if(setupString) {
+              this.setup = JSON.parse(setupString);
+            }
+            Package.call(this, this.setup);
+            this.createItemsList();
+            this.refresh();
+          },
+
+          /**
+           * For an array of HTML elements, returns total size in which they would all fit in one dimension.
+           * Dimension projection is read through startProp and sizeProp
+           * @param {Array} elements
+           * @param {String} startProp - "offsetLeft" or "offsetTop"
+           * @param {String} sizeProp - "offsetWidth" or "offsetHeight"
+           * @returns {Number}
+           * @TODO: consider use of items, or packedItems instead of DOM, and moving to Package.js (tomalec)
+           * @TODO: if this is private, make it private instead of adding `_`  (tomalec)
+           */
+          _getMinimumDimension: function (elements, startProp, sizeProp) {
+            var ranges = [];
+
+            if (elements.length < 1) {
+              throw new Error("I need at least one element");
+            }
+
+            elements.sort(function (a, b) {
+              return a[startProp] - b[startProp];
+            });
+
+            ranges.push({
+              start: elements[0][startProp],
+              end: elements[0][startProp] + elements[0][sizeProp]
+            });
+
+            for (var i = 1, ilen = elements.length; i < ilen; i++) {
+              var last = ranges[ranges.length - 1];
+              var start = elements[i][startProp];
+              var end = elements[i][startProp] + elements[i][sizeProp];
+
+              if (last.end < start) {
+                ranges.push({
+                  start: start,
+                  end: end
+                });
+              }
+              else if (last.end < end) {
+                last.end = end;
+              }
+            }
+
+            var sizeSum = 0;
+            for (var i = 0, ilen = ranges.length; i < ilen; i++) {
+              sizeSum += ranges[i].end - ranges[i].start;
+            }
+
+            return sizeSum;
+          },
+          /**
+           * For an array of HTML elements, returns the minimum width and height where they can fit
+           * @param {Array} elements
+           * @returns {{width: {Number}, height: {Number}}}
+           * @TODO: consider use of items, or packedItems instead of DOM, and moving to Package.js (tomalec)
+           */
+          getMinimumDimensions: function (elements) {
+            return {
+              width: this._getMinimumDimension(elements, 'offsetLeft', 'offsetWidth'),
+              height: this._getMinimumDimension(elements, 'offsetTop', 'offsetHeight')
+            }
+          },
+          /**
+           * Renderer method, used to render packed tree to DOM
+           */
+          renderer: function positionAbsolute( node, elements, offsetX, offsetY ){
+            var childNodeNo = node.items.length,
+                child,
+                element, elementStyle, left, top;  
+            while(childNodeNo--){
+              child = node.items[childNodeNo]
+              element = elements[ child.name || child.index ];
+              if(!element) {
+                continue; //if element is not found, perhaps DOM was not yet rendered? Skip gracefully
+              }
+              elementStyle = element.style;
+              left = ( child.x || 0 ) + offsetX; 
+              top = ( child.y || 0 ) + offsetY;
+              var oversize = child.oversize || 0;
+              elementStyle.left = ( left - oversize ) + "px";
+              elementStyle.top = ( top - oversize ) + "px";
+              elementStyle.width = ( child.width + 2 * oversize ) + "px";
+              elementStyle.height = ( child.height + 2 * oversize ) + "px";
+              if(child.background !== undefined) {
+                elementStyle.backgroundColor = child.background || "transparent";
+              }
+              
+              if(child.items){// virtual container
+                positionAbsolute( child, elements, left, top);
+              }
+            }
+          }
+         }) 
+        );
+    }());</script></polymer-element>

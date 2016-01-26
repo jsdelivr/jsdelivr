@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ua-parser.js",
+  "repo": "faisalman/ua-parser-js",
+  "files": {
+	"include": ["src/ua-parser.js", "dist/ua-parser.min.js"]
+  }
+}

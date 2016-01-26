@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "malihu-custom-scrollbar-plugin",
+  "repo": "malihu/malihu-custom-scrollbar-plugin",
+  "files": {
+    "include": ["jquery.mCustomScrollbar.concat.min.js", "jquery.mCustomScrollbar.js", "jquery.mCustomScrollbar.min.css", "js/minified/jquery.mCustomScrollbar.min.js", "mCSB_buttons.png"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.fancytree",
+  "repo": "mar10/fancytree",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js", "**/*.min.css", "**/*.gif"]
+  }
+}

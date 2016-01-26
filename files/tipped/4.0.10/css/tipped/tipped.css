@@ -1,0 +1,561 @@
+/*
+ * Tipped - <%= pkg.description %> - v<%= pkg.version %>
+ * (c) 2012-<%= grunt.template.today("yyyy") %> Nick Stakenburg
+ *
+ * http://www.tippedjs.com
+ *
+ * License: http://www.tippedjs.com/license
+ */
+
+.tpd-tooltip {
+  position: absolute;
+}
+
+/* Fix for CSS frameworks that don't keep the use of box-sizing: border-box
+   within their own namespace */
+.tpd-tooltip,
+.tpd-tooltip [class^="tpd-"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Content */
+.tpd-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tpd-content-spacer,
+.tpd-content-relative,
+.tpd-content-relative-padder {
+  float: left;
+  position: relative;
+}
+.tpd-content-relative {
+  width: 100%;
+}
+
+.tpd-content {
+  float: left;
+  clear: both;
+  position: relative;
+  padding: 10px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #fff;
+}
+.tpd-has-inner-close .tpd-content-relative .tpd-content { padding-right: 0 !important; }
+.tpd-tooltip .tpd-content-no-padding { padding: 0 !important; }
+
+.tpd-title-wrapper {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.tpd-title-spacer {
+  float: left;
+}
+.tpd-title-relative,
+.tpd-title-relative-padder {
+  float: left;
+  position: relative;
+}
+.tpd-title-relative { width: 100%; }
+.tpd-title {
+  float: left;
+  position: relative;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tpd-has-title-close .tpd-title { padding-right: 0 !important; }
+.tpd-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.tpd-close-icon {
+  float: left;
+  font-family: Arial, Baskerville, monospace;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+
+
+/* Skin */
+.tpd-skin {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tpd-frames {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tpd-frames .tpd-frame {
+  float: left;
+  width: 100%;
+  height: 100%;
+  clear: both;
+}
+
+.tpd-backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+.tpd-background-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+}
+.tpd-no-shadow .tpd-skin .tpd-background-shadow { box-shadow: none !important; }
+
+.tpd-background-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.tpd-background-box-shift,
+.tpd-background-box-shift-further {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.tpd-background {
+  border-radius: 10px;
+  float: left;
+  clear: both;
+  background: none;
+  border-style: solid;
+  border-width: 0px;
+  border-color: #fff; /* for browsers that don't support rgba */
+  border-color: rgba(255,255,255, 1);
+  -webkit-background-clip: padding-box; /* Safari */
+  background-clip: padding-box; /* IE9+, Firefox 4+, Opera, Chrome */
+
+  border-width: 1px;
+  border-color: #808080;
+  border-color: rgba(0,0,0,.4); /* opacity here bugs out in firefox, .tpd-background-content should have no opacity if this opacity is less than 1 */
+}
+/* no radius */
+.tpd-no-radius .tpd-skin .tpd-frames .tpd-frame .tpd-backgrounds .tpd-background { border-radius: 0; }
+.tpd-background-title {
+  float: left;
+  clear: both;
+  width: 100%;
+  background-color: #ccc;
+}
+.tpd-background-content {
+  float: left;
+  clear: both;
+  width: 100%;
+  background-color: #101010;
+  background-color: rgba(16,16,16,.9);
+}
+.tpd-background-border-hack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+}
+
+.tpd-background-box-top { top: 0; }
+.tpd-background-box-bottom { bottom: 0; }
+.tpd-background-box-left { left: 0; }
+.tpd-background-box-right { right: 0; }
+
+/* iframeshim IE6 */
+.tpd-iframeshim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/* Skin / Stems */
+.tpd-shift-stem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.tpd-shift-stem-side {
+  position: absolute;
+}
+.tpd-frame-top .tpd-shift-stem-side,
+.tpd-frame-bottom .tpd-shift-stem-side { width: 100%; }
+.tpd-frame-left .tpd-shift-stem-side,
+.tpd-frame-right .tpd-shift-stem-side { height: 100%; }
+
+.tpd-stem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; /* shows possible invalid subpx rendering */
+  width: 16px; /* best cross browser stem: width = 2 x height (90deg angle) */
+  height: 8px;
+  margin-left: 3px; /* space from the side */
+  margin-top: 3px; /* space between target and stem */
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+/* remove margins once we're done measuring */
+.tpd-tooltip .tpd-skin .tpd-frames .tpd-frame .tpd-shift-stem .tpd-stem-reset { margin: 0 !important; }
+
+.tpd-stem-spacer {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.tpd-stem-reset .tpd-stem-spacer { margin-top: 0; }
+
+.tpd-stem-point {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.tpd-stem-downscale,
+.tpd-stem-transform {
+  float: left;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  position: relative;
+}
+
+.tpd-stem-side {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.tpd-stem-side-inversed {
+  -webkit-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+.tpd-stem-triangle {
+  width: 0;
+  height: 0;
+  border-bottom-style: solid;
+  border-left-color: transparent;
+  border-left-style: solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tpd-stem-border {
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #fff; /* will become transparent */
+  border-right-color: #fff;
+  border-right-style: solid;
+  border-right-width: 0;
+}
+
+.tpd-stem-border-corner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 0;
+}
+
+/* fixes rendering issue in IE */
+.tpd-stem * { z-index: 0; zoom: 1; }
+
+/* used by IE < 9 */
+.tpd-stem-border-center-offset,
+.tpd-stem-border-center-offset-inverse {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tpd-stem-notransform {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.tpd-stem-notransform .tpd-stem-border {
+  height: 100%;
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+.tpd-stem-notransform .tpd-stem-border-center {
+  position: absolute;
+}
+.tpd-stem-notransform .tpd-stem-border-corner {
+  background: #fff;
+  border: 0;
+  top: auto;
+  left: auto;
+}
+.tpd-stem-notransform .tpd-stem-border-center,
+.tpd-stem-notransform .tpd-stem-triangle {
+  height: 0;
+  border: 0;
+  left: 50%;
+}
+
+/* transformations for left/right/bottom */
+.tpd-stem-transform-left {
+  -webkit-transform: rotate(-90deg) scale(-1,1);
+  transform: rotate(-90deg) scale(-1,1);
+}
+.tpd-stem-transform-right {
+  -webkit-transform: rotate(90deg) translate(0, -100%);
+  transform: rotate(90deg) translate(0, -100%);
+}
+.tpd-stem-transform-bottom {
+  -webkit-transform: scale(1,-1) translate(0, -100%);
+  transform: scale(1,-1) translate(0, -100%);
+}
+
+
+/* Spinner measurements */
+.tpd-loading-icon {
+  position: absolute;
+  width: 42px; 
+  height: 42px;
+  display: none;
+}
+.tpd-loading-line {
+  z-index: 12;
+  height: 3px;
+  width: 2px;
+  margin-bottom: 5px;
+}
+.tpd-spinner {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+/* show the loader while loading and hide all the content */
+.tpd-is-loading .tpd-loading-icon { display: block; }
+.tpd-is-loading .tpd-content-wrapper,
+.tpd-is-loading .tpd-title-wrapper { display: none; }
+
+
+/* The actual spinner */
+@-moz-keyframes tpd-spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes tpd-spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes tpd-spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.tpd-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.tpd-spin-rotate,
+.tpd-spin-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tpd-spin-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+
+/* Resets while measuring content */
+.tpd-tooltip-measuring {
+  top: 0;
+  left: 0;
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+}
+.tpd-tooltip-measuring .tpd-skin,
+.tpd-tooltip-measuring .tpd-loading-icon {
+  display: none;
+}
+
+/* Links */
+.tpd-tooltip a,
+.tpd-tooltip a:hover { color: #8e8e8e; text-decoration: none; }
+.tpd-tooltip a:hover { text-decoration: underline; }
+
+
+/*
+ * Sizes
+ */
+/* x-small */
+.tpd-size-x-small .tpd-content,
+.tpd-size-x-small .tpd-title {
+  padding: 7px 8px;
+  font-size: 10px;
+  line-height: 15px;
+}
+.tpd-size-x-small .tpd-background { border-radius: 5px; }
+.tpd-size-x-small .tpd-stem {
+  width: 12px;  
+  height: 6px;
+  margin-left: 4px; 
+  margin-top: 2px; 
+}
+.tpd-size-x-small.tpd-no-radius .tpd-stem { margin-left: 7px; }
+.tpd-size-x-small .tpd-loading-icon { width: 32px; height: 32px; }  
+.tpd-size-x-small .tpd-loading-line {
+  z-index: 12;        /* amount of lines */
+  margin-bottom: 4px; /* radius of the inner circle */
+  height: 3px;        /* length of a line */
+  width: 2px;         /* width of a line */
+}
+.tpd-size-x-small .tpd-close { margin-bottom: 1px; }
+
+/* small */
+.tpd-size-small .tpd-content,
+.tpd-size-small .tpd-title {
+  padding: 8px;
+  font-size: 10px;
+  line-height: 16px;
+}
+.tpd-size-small .tpd-background { border-radius: 6px; }
+.tpd-size-small .tpd-stem {
+  width: 14px;
+  height: 7px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.tpd-size-small.tpd-no-radius .tpd-stem { margin-left: 8px; }
+.tpd-size-small .tpd-loading-icon { width: 34px; height: 34px; }
+.tpd-size-small .tpd-loading-line {
+  z-index: 12;        /* amount of lines */
+  margin-bottom: 4px; /* radius of the inner circle */
+  height: 3px;        /* length of a line */
+  width: 2px;         /* width of a line */
+}
+.tpd-size-small .tpd-close { margin: 2px 1px; }
+
+
+/* medium (default) */
+.tpd-size-medium .tpd-content,
+.tpd-size-medium .tpd-title {
+  padding: 10px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.tpd-size-medium .tpd-background { border-radius: 8px; } 
+.tpd-size-medium .tpd-stem {
+  width: 16px;      /* best cross browser stem width is 2xheight, for a 90deg angle */
+  height: 8px;
+  margin-left: 6px; /* space from the side */
+  margin-top: 2px;  /* space to offset the tooltip */
+}
+.tpd-size-medium.tpd-no-radius .tpd-stem { margin-left: 10px; }
+/* wraps the loader, ideal dimensions don't cause stem movement when opening large tooltips */
+.tpd-size-medium .tpd-loading-icon { width: 42px; height: 42px; }
+.tpd-size-medium .tpd-loading-line {
+  z-index: 12;        /* amount of lines */
+  margin-bottom: 5px; /* radius of the inner circle */
+  height: 4px;        /* length of a line */
+  width: 2px;         /* width of a line */
+}
+.tpd-size-medium .tpd-close { margin: 4px 2px; }
+
+
+
+/* large */
+.tpd-size-large .tpd-content,
+.tpd-size-large .tpd-title {
+  padding: 10px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.tpd-size-large .tpd-background { border-radius: 8px; }
+.tpd-size-large .tpd-stem {
+  width: 18px;
+  height: 9px;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+.tpd-size-large.tpd-no-radius .tpd-stem { margin-left: 10px; }
+.tpd-size-large .tpd-loading-icon { width: 50px; height: 50px; }
+.tpd-size-large .tpd-loading-line {
+  z-index: 12;        /* amount of lines */
+  margin-bottom: 5px; /* radius of the inner circle */
+  height: 5px;        /* length of a line */
+  width: 2px;         /* width of a line */
+}
+.tpd-size-large .tpd-close { margin: 5px 2px 5px 2px; }
+
+
+
+/* Skins */
+/* dark (default) */
+.tpd-skin-dark .tpd-content,
+.tpd-skin-dark .tpd-title,
+.tpd-skin-dark .tpd-close { color: #fff; }
+.tpd-skin-dark .tpd-background-content,
+.tpd-skin-dark .tpd-background-title {
+  background-color: #282828;
+}
+.tpd-skin-dark .tpd-background {
+  border-width: 1px;
+  border-color: #282828;
+  border-color: rgba(255,255,255,.1);
+}
+/* line below the title */
+.tpd-skin-dark .tpd-title-wrapper { border-bottom: 1px solid #404040; }
+/* links */
+.tpd-skin-dark a,
+.tpd-skin-dark a:hover { color: #ccc; }
+

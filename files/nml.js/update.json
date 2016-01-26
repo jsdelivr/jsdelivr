@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "NML.js",
+  "repo": "clickslide/NML.js",
+  "files": {
+    "include": ["NML.min.js"]
+  }
+}

@@ -1,0 +1,423 @@
+/*
+Theme Name: MACCACO
+Theme URI: http://www.projekktor.com/downloads
+Description: this theme is a screenr clone
+Version: 0.9
+Author: Michel Maillard
+Author URI: http://www.porkhead.org
+*/
+
+.projekktor {
+    background-color:#000;
+    font-family: 'Lucida Grande', 'Trebuchet MS', Arial, Sans-Serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align:center;
+    text-transform:uppercase;
+    text-shadow: 0 1px 1px #0c0c0c;
+    padding:0;
+    margin:0;
+    display:block;
+    position: relative;
+    overflow: hidden;    
+}
+
+.projekktor .inactive {
+    display: none;
+}
+
+.projekktor .active {
+    display: block;	
+}
+
+.ppdisplay {
+    position: relative !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.ppstart {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    margin-left:-45px;
+    margin-bottom: -38px;
+    cursor: pointer;
+    height: 84px;
+    width: 84px;
+    display: block;
+
+    padding: 0px;
+    background: url("start.png") no-repeat left top transparent;
+}
+.ppstart:hover {
+    background: url("start.png") no-repeat left bottom transparent;
+}
+.ppstart:active{
+    background: url("start.png") no-repeat left -169px transparent;
+}
+
+
+.ppcontrols {
+    position: absolute;
+    bottom: 0;
+    right:0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+    background: url("player.png") repeat-x scroll 0 0 #0f0e0e;
+    border-style:solid;
+    border-color:#413e3e;
+    border-width:1px 0;
+    padding: 0;
+    margin:0;
+}
+
+.ppcontrols ul {
+    list-style-type: none;   
+}
+
+.ppcontrols ul.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin:0;
+} 
+
+.ppcontrols ul.right {
+    background: url("player.png") repeat-x scroll 0 0 #0f0e0e;    
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin:0;    
+}
+
+.ppcontrols ul.bottom {
+    position: relative;
+    top: 31px;
+    left: 0;
+    padding: 0;
+    margin:0;
+}
+
+
+.ppcontrols ul.left li {
+    float: left;
+    position: relative;
+}
+
+.ppcontrols ul.right li {
+    float: right;
+    position: relative;    
+}
+
+.pptitle {
+    padding: 0 10px;
+    color: #fff;
+    overflow: hidden;
+    text-align: left;
+    line-height: 30px;
+    height:30px;
+    border-left:1px solid #413e3e;
+    font-size:11px;
+    cursor: pointer;
+}
+
+
+/* PLAY / PAUSE - left */
+.ppplay,
+.pppause  {
+    background: url("maccaco.png") no-repeat left top transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-right: 1px solid #000;
+}
+
+.ppplay:hover {
+    background: url("maccaco.png") no-repeat left -35px transparent;
+}
+.ppplay:active {
+    background: url("maccaco.png") no-repeat left -36px transparent;
+}
+
+.pppause {
+    background: url("maccaco.png") no-repeat left -70px transparent;
+}
+
+.pppause:hover {
+    background: url("maccaco.png") no-repeat left -105px transparent;
+}
+
+.pppause:active {
+    background: url("maccaco.png") no-repeat left -106px transparent;
+}
+
+
+
+/* Enter / Exit Fullscreen - right */
+.projekktor.audio .ppfsenter,
+.projekktor.audio .ppfsexit {
+    display: none;
+}
+
+.ppfsenter,
+.ppfsexit  {    
+    width: 30px;
+    height: 30px;
+    background: url("maccaco.png") no-repeat right top transparent;
+    cursor: pointer;
+    border-left: 1px solid #413e3e;
+}
+.ppfsenter:hover {
+    background: url("maccaco.png") no-repeat right -35px transparent;
+}
+.ppfsenter:active {
+    background: url("maccaco.png") no-repeat right -36px transparent;
+}
+.ppfsexit {
+    background: url("maccaco.png") no-repeat right -70px transparent;
+}
+.ppfsexit:hover {
+    background: url("maccaco.png") no-repeat right -105px transparent;
+}
+.ppfsexit:active {
+    background: url("maccaco.png") no-repeat right -106px transparent;
+}
+
+
+
+/* Unmute / Max volume - right */
+.ppvmax {
+    width: 30px;
+    height: 30px;
+    border-right: 1px solid #000;    
+    border-left:none; 
+    background: url("maccaco.png") no-repeat -842px top transparent;
+}
+
+.ppvmax:hover  {
+    background: url("maccaco.png") no-repeat -842px -35px transparent;
+}
+.ppvmax:active  {
+    background: url("maccaco.png") no-repeat -842px -36px transparent;
+}
+
+
+
+/* Mute / Min volume - right */
+.ppmute  {
+    width: 29px;
+    height: 30px;    
+    border-left:1px solid #413e3e;
+    background: url("maccaco.png") no-repeat -750px top transparent;
+}
+.ppmute:hover  {
+    background: url("maccaco.png") no-repeat -750px -35px transparent;
+}
+.ppmute:active  {
+    background: url("maccaco.png") no-repeat -750px -36px transparent;
+}
+
+
+
+/* volume slider - right */
+.ppvslider {
+    margin: 13px 5px;
+    height: 16px;
+    width: 60px;
+    background: url("maccaco.png") no-repeat -781px -13px transparent;
+}
+
+.ppvmarker {
+    position: relative;
+    right:0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: url("maccaco.png") no-repeat -634px -13px transparent;
+}
+
+.ppvknob  {
+    cursor: pointer;
+    z-index: 201;
+    position: relative;
+    background: url("maccaco.png") no-repeat -699px -5px transparent;
+    top:-13px;
+    left:0;
+    width: 6px;
+    height: 20px;
+}
+
+
+
+/* time / time left */
+.pptimeleft {    
+    color: #fff;
+    width: 130px;
+    line-height: 30px;
+    height: 30px;
+    border-left: 1px solid #413e3e;
+    border-right: 1px solid #000;
+    overflow: hidden;
+}
+
+/* special for single
+.pptimeleft {
+background: url("maccaco.png") no-repeat -91px top transparent;
+}
+*/
+
+
+
+
+/* previous / next item */
+.ppnext,
+.ppprev {
+    display:block;
+    background: url("maccaco.png") no-repeat -59px top transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-left:1px solid #413e3e;
+    border-right:1px solid #000;
+}
+.ppnext { border-right:none;}
+.ppnext:hover {
+    background: url("maccaco.png") no-repeat -59px -35px transparent;
+}
+.ppnext:active {
+    background: url("maccaco.png") no-repeat -59px -36px transparent;
+}
+
+.ppprev {
+    background: url("maccaco.png") no-repeat -32px top transparent;
+}
+
+.ppprev:hover {
+    background: url("maccaco.png") no-repeat -32px -35px transparent;
+}
+.ppprev:active {
+    background: url("maccaco.png") no-repeat -32px -36px transparent;
+}
+
+
+
+/* Scrubber, Playhead and fluff */
+.ppscrubber {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: url("maccaco-load.gif") repeat-x left top transparent;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #000;
+}
+
+.audio .ppscrubber {
+    background: url("maccaco-load-static.png") repeat-x left top transparent;
+}
+
+
+
+.ppscrubberdrag {
+    cursor: pointer;
+    z-index: 302;
+    position: absolute;
+    background-color: transparent;    
+    top:0;
+    left:0;
+    height: 5px;
+    width: 100%; 
+}
+
+.ppplayhead, .pploaded {
+    position: relative;
+    display: block;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 1px;
+    background-color:#fff;
+    cursor: pointer;
+    z-index: 301;
+}
+
+.ppcuepoint {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 302;
+}
+
+.ppcuepoint:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.pploaded {
+    position: relative;    
+    z-index: 10;
+    background: rgb(65, 62, 62) ;
+    opacity: 0.8;
+    /* ie7 */
+    filter: alpha(opacity = 80);
+    /* ie8 */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.ppplayhead {
+    margin-top: -5px;
+}
+
+
+.pptestcard {
+    background: url("noise.gif") center center repeat;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.pptestcard p {
+    background-color: #3b393e;
+    width: 60%;
+    margin: auto;
+    line-height: 25px;
+    position: relative;
+    top: 25%;
+    padding: 10px;
+    border:5px solid #000;
+    text-align: center;
+}
+
+.ppbuffering {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    margin-left:-45px;
+    margin-bottom: -38px;
+    display: block;
+    z-index:9010;
+    padding: 0px;
+    background: url("buffering.gif") no-repeat center center #000;
+    height: 84px;
+    width: 84px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    display: none;
+}
