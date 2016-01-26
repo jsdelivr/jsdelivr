@@ -7,12 +7,12 @@
     "include": ["*.min.*", 
                 "calenstyle-jquery-ui-override.css", 
                 "calenstyle-iconfont.css", 
-                "./fonts/calenstyle-iconfont.ttf", 
-                "./fonts/calenstyle-iconfont.woff", 
-                "./fonts/calenstyle-iconfont.svg", 
-                "./fonts/calenstyle-iconfont.eot",
-                "./images/resize-handle.png",
-                "./i18n/calenstyle-i18n.js"
+                "././fonts/calenstyle-iconfont.ttf", 
+                "././fonts/calenstyle-iconfont.woff", 
+                "././fonts/calenstyle-iconfont.svg", 
+                "././fonts/calenstyle-iconfont.eot",
+                "././images/resize-handle.png",
+                "././i18n/calenstyle-i18n.js"
               ]
   }
 }
