@@ -5,8 +5,8 @@
   "files": {
     "basePath": "lib/",
     "include": [
-      "css/redux-toastr.css",
-      "css/redux-toastr.min.css"
+      "css/*",
+      "fonts/*"
     ]
   }
 }
