@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "stream.js",
+  "repo": "dionyziz/stream.js",
+  "files": {
+    "include": ["stream.min.js", "stream.min.js.map"]
+  }
+}

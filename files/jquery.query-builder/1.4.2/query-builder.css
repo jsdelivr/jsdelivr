@@ -1,0 +1,131 @@
+/*!
+ * jQuery QueryBuilder 1.4.2
+ * Copyright 2014-2015 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+.query-builder .rule-container,
+.query-builder .rules-group-container,
+.query-builder .rule-placeholder {
+  margin:4px 0;
+  border-radius:5px;
+  padding:5px;
+  border:1px solid #eee;
+  background:#fff;
+  background:rgba(255, 255, 255, 0.9);
+}
+
+.query-builder .rules-group-container {
+  padding:10px 10px 5px 10px;
+  border:1px solid #DCC896;
+  background:#FCF9ED;
+  background:rgba(250, 240, 210, 0.5);
+}
+  .query-builder .rules-group-header {
+    margin-bottom:10px;
+  }
+    .query-builder .rules-group-header input[name$=_cond] {
+      display:none;
+    }
+  .query-builder .rules-list {
+    list-style:none;
+    padding:0 0 0 20px;
+    margin:0;
+  }
+
+.query-builder .rule-container  {}
+  .query-builder .rule-container>div:not(.rule-header) {
+    display:inline-block;
+    margin:0 5px 0 0;
+    vertical-align:top;
+  }
+  .query-builder .rule-value-container:not(:empty) {
+    border-left:1px solid #ddd;
+    padding-left:5px;
+  }
+  .query-builder .rule-value-container label {
+    margin-bottom:0;
+  }
+  .query-builder .rule-value-container label.block {
+    display:block;
+  }
+  .query-builder .rule-container select,
+  .query-builder .rule-container input[type=text],
+  .query-builder .rule-container input[type=number] {
+    padding:1px;
+  }
+
+.query-builder  .has-error {
+  background:#fdd;
+  border-color:#f99;
+}
+
+.query-builder .error-container {
+  display:none !important;
+  cursor:help;
+  color:red;
+}
+
+.query-builder .has-error .error-container {
+  display:inline-block !important;
+}
+
+.query-builder .rules-list>* {
+  position:relative;
+}
+  .query-builder .rules-list>*:before,
+  .query-builder .rules-list>*:after {
+    content:'';
+    position:absolute;
+    left:-15px;
+    width:15px;
+    height:calc(50% + 4px);
+    border-color:#ccc;
+    border-style:solid;
+  }
+
+  .query-builder .rules-list>*:before {
+    top:-2px;
+    border-width:0 0 2px 2px;
+  }
+  .query-builder .rules-list>*:after {
+    top:50%;
+    border-width:0 0 0 2px;
+  }
+
+  .query-builder .rules-list>*:first-child:before {
+    top:-12px;
+    height:calc(50% + 14px);
+  }
+  .query-builder .rules-list>*:last-child:before {
+    border-radius:0 0 0 4px;
+  }
+  .query-builder .rules-list>*:last-child:after {
+    display:none;
+  }
+.query-builder .tooltip-inner {
+  color:#fdd !important;
+}
+.query-builder p.filter-description {
+  margin:5px 0 0 0;
+  background:#D9EDF7;
+  border:1px solid #BCE8F1;
+  color:#31708F;
+  border-radius:4px;
+  padding:2px 5px;
+  font-size:0.8em;
+}
+.query-builder  .drag-handle {
+  cursor:move;
+  display:inline-block;
+  vertical-align:middle;
+  margin-left:5px;
+}
+
+.query-builder  .dragged {
+  opacity:0.5;
+}
+
+.query-builder .rule-placeholder {
+  border:1px dashed #bbb;
+  opacity:0.7;
+}

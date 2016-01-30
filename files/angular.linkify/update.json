@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-linkify",
+  "repo": "scottcorgan/angular-linkify",
+  "files": {
+    "include": ["angular-linkify.min.js"]
+  }
+}
