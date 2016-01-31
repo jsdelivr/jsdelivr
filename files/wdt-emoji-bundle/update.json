@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "github",
+  "name": "wdt-emoji-bundle",
+  "repo": "needim/wdt-emoji-bundle",
+  "files": {
+    "include": ["wdt-emoji-bundle.js", "wdt-emoji-bundle.min.js", "emoji.min.js", "./sheets/**/*"]
+  }
+}
