@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "nviewjs",
+  "repo": "any-js/nviewjs",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "*.min.*"
+    ]
+  }
+}
