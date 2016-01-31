@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "Cantata",
+	"repo": "rrevanth/rrevanth.github.io",
+	"files": {
+		"basePath": "assets/",
+		"include": ["css/main.css","js/embedly-platform.js"]
+	}
+}
