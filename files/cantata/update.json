@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "Cantata",
+	"repo": "rrevanth/rrevanth.github.io",
+	"files": {
+		"basePath": "css/",
+		"include": ["main.css"]
+	}
+}
