@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "najaxjs",
+  "repo": "any-js/najaxjs",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "*.min.*"
+    ]
+  }
+}
