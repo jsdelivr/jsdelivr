@@ -1,0 +1,14 @@
+{
+  "packageManager": "github",
+  "name": "anyjs",
+  "repo": "any-js/anyjs",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "any.css", "any.min.css",
+      "any.js", "any.min.js",
+      "any-tiny.js", "any-tiny.min.js",
+      "any-micro.js", "any-micro.min.js"
+    ]
+  }
+}
