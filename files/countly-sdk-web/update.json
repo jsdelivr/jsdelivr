@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "countly-sdk-web",
+  "repo": "Countly/countly-sdk-web",
+  "files": {
+    "basePath": "lib",
+    "include": ["countly.min.js"]
+  }
+}
