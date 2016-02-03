@@ -5,10 +5,12 @@
   "files": {
     "basePath": "dist/",
     "include": [
-      "any.css", "any.min.css",
-      "any.js", "any.min.js",
-      "any-tiny.js", "any-tiny.min.js",
-      "any-micro.js", "any-micro.min.js"
+      "any.css",
+      "any.js",
+      "any-tiny.js",
+      "any-micro.js",
+      "*.min.*"
     ]
   }
 }
+
