@@ -5,8 +5,9 @@
   "files": {
     "basePath": "dist/",
     "include": [
-      "nview.css", "nview.min.css",
-      "nview.js", "nview.min.js"
+      "nview.css",
+      "nview.js",
+      "*.min.*"
     ]
   }
 }
