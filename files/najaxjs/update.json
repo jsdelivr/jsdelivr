@@ -5,9 +5,10 @@
   "files": {
     "basePath": "dist/",
     "include": [
-      "najax.js", "najax.min.js",
-      "najax-tiny.js", "najax-tiny.min.js",
-      "rlk.js", "rlk.min.js"
+      "najax.js",
+      "najax-tiny.js",
+      "rlk.js",
+      "*.min.*"
     ]
   }
 }
