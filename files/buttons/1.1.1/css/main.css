@@ -1,0 +1,417 @@
+@-webkit-keyframes title {
+  /* line 12, ../scss/main.scss */
+  from {
+    color: #EEE;
+    margin-top: -220px;
+  }
+
+  /* line 16, ../scss/main.scss */
+  to {
+    color: #333;
+    margin-top: 0px;
+  }
+}
+
+/* line 35, ../scss/main.scss */
+.clear {
+  clear: both;
+}
+
+/* line 37, ../scss/main.scss */
+body {
+  padding: 60px 0px 0px 0px;
+  margin: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+/* line 45, ../scss/main.scss */
+nav {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  background: #FFF;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+/* line 55, ../scss/main.scss */
+nav ul {
+  width: 900px;
+  margin: 0px auto;
+  padding: 0px;
+  list-style-type: none;
+}
+/* line 63, ../scss/main.scss */
+nav ul li {
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  float: left;
+  margin-bottom: -3px;
+}
+/* line 68, ../scss/main.scss */
+nav ul li.selected {
+  border-bottom: 10px solid #d30d15;
+}
+/* line 72, ../scss/main.scss */
+nav ul li.home {
+  padding: 10px;
+}
+/* line 75, ../scss/main.scss */
+nav ul li.home a {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  display: block;
+  line-height: 40px;
+  width: 40px;
+  background: #d30d15;
+  color: #FFF;
+  font-family: "Cherry Swash", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  padding: 0px;
+}
+/* line 90, ../scss/main.scss */
+nav ul a {
+  float: left;
+  text-decoration: none;
+  padding: 20px 15px;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* line 102, ../scss/main.scss */
+header {
+  background: #fcfcfc;
+  padding: 40px 0px 100px 0px;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  margin-bottom: 100px;
+  position: relative;
+}
+/* line 110, ../scss/main.scss */
+header hgroup {
+  text-align: center;
+  font-family: "Cherry Swash", sans-serif;
+}
+/* line 114, ../scss/main.scss */
+header hgroup h1 {
+  -webkit-animation-name: title;
+  -khtml-animation-name: title;
+  -moz-animation-name: title;
+  -ms-animation-name: title;
+  -o-animation-name: title;
+  animation-name: title;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
+  font-size: 150px;
+  font-weight: 700;
+  margin: 0px 10px 0px 10px;
+  line-height: 150px;
+  color: #333;
+  text-shadow: 0px 1px 0px #FFF;
+}
+/* line 123, ../scss/main.scss */
+header hgroup h2 {
+  color: #999;
+  font-weight: normal;
+  margin: 0px 10px 20px 10px;
+  text-shadow: 0px 1px 0px #FFF;
+}
+/* line 131, ../scss/main.scss */
+header .social-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+/* line 136, ../scss/main.scss */
+header .social-buttons .github-button {
+  min-width: 90px;
+}
+/* line 141, ../scss/main.scss */
+header .button-download {
+  position: absolute;
+  bottom: -74px;
+  left: 50%;
+  margin-left: -74px;
+  z-index: 10;
+}
+@media only screen and (max-width: 480px) {
+  /* line 102, ../scss/main.scss */
+  header {
+    padding: 70px 0px 80px 0px;
+  }
+  /* line 156, ../scss/main.scss */
+  header hgroup h1 {
+    font-size: 70px;
+    line-height: 80px;
+    margin: 0px 10px 10px 10px;
+  }
+  /* line 161, ../scss/main.scss */
+  header hgroup h2 {
+    font-size: 24px;
+    margin: 0px 20px 20px 20px;
+  }
+  /* line 167, ../scss/main.scss */
+  header .social-buttons {
+    position: absolute;
+    top: 20px;
+    left: auto;
+    bottom: auto;
+    right: 20px;
+  }
+}
+
+/* line 179, ../scss/main.scss */
+#page {
+  max-width: 920px;
+  margin: 0px auto;
+}
+/* line 184, ../scss/main.scss */
+#page .showcase {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
+  margin: 0px 10px 60px 10px;
+  position: relative;
+}
+/* line 191, ../scss/main.scss */
+#page .showcase hgroup {
+  position: absolute;
+  top: -30px;
+  z-index: 1;
+}
+/* line 196, ../scss/main.scss */
+#page .showcase hgroup h3 {
+  font-family: "Cherry Swash", sans-serif;
+  font-weight: lighter;
+  color: #CCC;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 205, ../scss/main.scss */
+#page .showcase hgroup h3 em {
+  font-size: 11px;
+  color: #999;
+  font-style: normal;
+}
+/* line 210, ../scss/main.scss */
+#page .showcase hgroup h3 em a {
+  color: #999;
+}
+/* line 217, ../scss/main.scss */
+#page .showcase .gallery {
+  padding: 20px 20px 20px 20px;
+}
+/* line 220, ../scss/main.scss */
+#page .showcase .gallery > ul {
+  list-style-type: none;
+  margin: 0px 0px 20px 0px;
+  padding: 0;
+}
+/* line 225, ../scss/main.scss */
+#page .showcase .gallery > ul:last-child {
+  margin-bottom: 0px;
+}
+/* line 229, ../scss/main.scss */
+#page .showcase .gallery > ul > li {
+  margin: 5px;
+  display: inline-block;
+}
+/* line 235, ../scss/main.scss */
+#page .showcase .gallery em {
+  font-size: 11px;
+  color: #999;
+  font-style: normal;
+}
+/* line 240, ../scss/main.scss */
+#page .showcase .gallery em a {
+  color: #999;
+}
+/* line 246, ../scss/main.scss */
+#page .showcase .prettyprint {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #333;
+  padding: 10px 5px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  overflow: hidden;
+}
+/* line 256, ../scss/main.scss */
+#page .showcase .prettyprint li.L1, #page .showcase .prettyprint li.L3, #page .showcase .prettyprint li.L5, #page .showcase .prettyprint li.L7, #page .showcase .prettyprint li.L9 {
+  background: #333;
+}
+
+/* line 264, ../scss/main.scss */
+#setup {
+  background: #EEE;
+}
+/* line 267, ../scss/main.scss */
+#setup h2 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 60px;
+  color: #CCC;
+  text-shadow: 0px 1px 0px #FFF;
+  margin: 0px 0px 20px 0px;
+  line-height: 60px;
+}
+@media only screen and (max-width: 480px) {
+  /* line 267, ../scss/main.scss */
+  #setup h2 {
+    font-size: 44px;
+  }
+}
+/* line 280, ../scss/main.scss */
+#setup h3 {
+  color: #666;
+  font-size: 22px;
+}
+/* line 285, ../scss/main.scss */
+#setup .instructions {
+  max-width: 880px;
+  padding: 40px 20px;
+  margin: 0px auto;
+}
+/* line 290, ../scss/main.scss */
+#setup .instructions ol.steps {
+  padding-left: 30px;
+}
+/* line 292, ../scss/main.scss */
+#setup .instructions ol.steps > li {
+  line-height: 22px;
+  margin-bottom: 10px;
+  color: #666;
+}
+/* line 299, ../scss/main.scss */
+#setup .instructions em {
+  font-size: 12px;
+}
+/* line 305, ../scss/main.scss */
+#setup .prettyprint {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #333;
+  padding: 5px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 16px;
+  overflow: hidden;
+}
+/* line 315, ../scss/main.scss */
+#setup .prettyprint .linenums {
+  padding-left: 20px;
+}
+/* line 319, ../scss/main.scss */
+#setup .prettyprint li.L1, #setup .prettyprint li.L3, #setup .prettyprint li.L5, #setup .prettyprint li.L7, #setup .prettyprint li.L9 {
+  background: #333;
+}
+/* line 324, ../scss/main.scss */
+#setup .customize {
+  float: right;
+}
+/* line 328, ../scss/main.scss */
+#setup .setup {
+  float: left;
+}
+/* line 331, ../scss/main.scss */
+#setup .customize, #setup .setup {
+  width: 47%;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  /* line 331, ../scss/main.scss */
+  #setup .customize, #setup .setup {
+    float: none;
+    width: auto;
+    margin: 20px auto 40px auto;
+  }
+}
+
+/* line 344, ../scss/main.scss */
+footer {
+  background: #333;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+/* line 351, ../scss/main.scss */
+footer a {
+  color: #FFF;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 366, ../scss/main.scss */
+  body {
+    padding: 0px;
+  }
+
+  /* line 371, ../scss/main.scss */
+  nav {
+    position: static;
+  }
+  /* line 374, ../scss/main.scss */
+  nav ul {
+    width: auto;
+  }
+  /* line 377, ../scss/main.scss */
+  nav ul li {
+    float: none;
+    display: block;
+    border-bottom: 1px solid #EEE;
+  }
+  /* line 382, ../scss/main.scss */
+  nav ul li.home {
+    padding: 10px;
+    margin: 5px auto;
+  }
+  /* line 385, ../scss/main.scss */
+  nav ul li.home a {
+    margin: 5px auto;
+  }
+  /* line 391, ../scss/main.scss */
+  nav ul li.selected {
+    border-bottom: 1px solid #EEE;
+  }
+  /* line 395, ../scss/main.scss */
+  nav ul li a {
+    float: none;
+    display: block;
+    line-height: 24px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}

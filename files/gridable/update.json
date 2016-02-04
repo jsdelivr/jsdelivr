@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "gridable",
+  "repo": "gridable/gridable",
+  "files": {
+    "basePath": "dist/"
+  }
+}
