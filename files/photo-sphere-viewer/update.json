@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "Photo-Sphere-Viewer",
+  "repo": "mistic100/Photo-Sphere-Viewer",
+  "files": {
+    "basePath": "dist/",
+    "include": ["./*.min.*"]
+  }
+}
