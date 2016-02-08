@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.svg",
+  "repo": "MarkPflug/svg",
+  "files": {
+    "include": ["jquery.svg.min.js", "jquery.svganim.min.js"]
+  }
+}
