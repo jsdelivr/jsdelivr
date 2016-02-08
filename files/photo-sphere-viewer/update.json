@@ -4,6 +4,6 @@
   "repo": "mistic100/Photo-Sphere-Viewer",
   "files": {
     "basePath": "dist/",
-    "include": ["./*.min.*"]
+    "include": ["*.min.js", "*.min.css"]
   }
 }
