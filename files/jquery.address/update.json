@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-address",
+  "repo": "asual/jquery-address",
+  "files": {
+    "basePath": "src",
+    "include": ["jquery.address.js"]
+  }
+}
