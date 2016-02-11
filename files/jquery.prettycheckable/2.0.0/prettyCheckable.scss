@@ -1,0 +1,98 @@
+@import 'compass';
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {clear: both;}
+
+.clearfix {*zoom: 1;}
+
+$sprite: sprite-map("sprites/*.png", $layout: "horizontal");
+
+.prettycheckbox,
+.prettyradio {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    > a {
+        @include sprite-dimensions($sprite, 'A-checkbox');
+        display: block;
+        float: left;
+        cursor: pointer;
+        margin: 0;
+        background: $sprite;
+
+        &:focus {
+          outline: 0 none;
+        }
+    }
+
+    label {
+        display: block;
+        float: left;
+        margin: 6px 5px;
+        cursor: pointer;
+    }
+
+    a,
+    label {
+        &.disabled {
+            cursor:not-allowed;
+        }
+    }
+}
+
+.prettycheckbox {
+    > a {
+        background-position: sprite-position($sprite, 'A-checkbox');
+
+        &:focus {
+            background-position: sprite-position($sprite, 'B-checkbox-focus');
+        }
+
+        &.checked {
+            background-position: sprite-position($sprite, 'C-checkbox-checked');
+
+            &:focus {
+                background-position: sprite-position($sprite, 'D-checkbox-checked-focus');
+            }
+
+            &.disabled {
+                background-position: sprite-position($sprite, 'F-checkbox-checked-disabled');
+            }
+        }
+
+        &.disabled {
+          background-position: sprite-position($sprite, 'E-checkbox-disabled');
+        }
+    }
+}
+
+.prettyradio {
+    > a {
+        background-position: sprite-position($sprite, 'G-radio');
+
+        &:focus {
+            background-position: sprite-position($sprite, 'H-radio-focus');
+        }
+
+        &.checked {
+            background-position: sprite-position($sprite, 'I-radio-checked');
+
+            &:focus {
+                background-position: sprite-position($sprite, 'J-radio-checked-focus');
+            }
+
+            &.disabled {
+                background-position: sprite-position($sprite, 'L-radio-checked-disabled');
+            }
+        }
+
+        &.disabled {
+          background-position: sprite-position($sprite, 'K-radio-disabled');
+        }
+    }
+}
