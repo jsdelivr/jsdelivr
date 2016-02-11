@@ -3,5 +3,5 @@
   "name": "jquery.typeit",
   "repo": "alexmacarthur/typeit",
   "files": {
-    "include": ["typeit.js", "typeit.min.js"]
+    "basePath": "dist/"
   }
