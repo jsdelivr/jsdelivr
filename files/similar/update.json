@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "similar",
+  "repo": "InputSimilar/similar",
+  "files": {
+    "basePath": "/",
+    "include": ['similar.eva.js']
+  }
+}
