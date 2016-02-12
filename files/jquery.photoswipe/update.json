@@ -1,7 +1,6 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "jquery.photoswipe",
-  "repo": "yaquawa/jquery.photoswipe",
   "files": {
     "basePath": "dist/",
     "include": ["jquery.photoswipe.js"]
