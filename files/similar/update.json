@@ -1,0 +1,9 @@
+{
+  "packageManager": "Custom",
+  "name": "similar",
+  "repo": "Null",
+  "files": {
+    "basePath": "/",
+    "include": ""
+  }
+}
