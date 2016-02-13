@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "MaterialRipple",
+  "repo": "db2k/MaterialRipple",
+  "files": {
+    "include": ["js/jquery.materialripple.js", "css/jquery.materialripple.css"]
+  }
+}
