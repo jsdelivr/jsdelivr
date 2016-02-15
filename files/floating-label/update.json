@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "floating-label",
+  "repo": "datuhealth/floating-label",
+  "files": {
+    "basePath": "dist/",
+    "include": ["floatingLabel.js", "floatingLabel.min.js"]
+  }
+}
