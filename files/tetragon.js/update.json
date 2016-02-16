@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Tetragon.js",
+  "repo": "detomon/Tetragon.js",
+  "files": {
+    "include": ["dist/*.min.*"]
+  }
+}
