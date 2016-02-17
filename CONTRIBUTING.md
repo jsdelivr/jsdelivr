@@ -62,7 +62,7 @@ A version directory should contain the following:
 
 ### Reporting Bugs / Suggestions
 
-Please find the correct [repo](https://github.com/jsdelivr) for your bug repport or suggestion, search issues, then post if you can't find anything.  For general questions or brainstorming new ideas, you can join our [Gitter chat](https://gitter.im/jsdelivr/jsdelivr).
+Please find the correct [repo](https://github.com/jsdelivr) for your bug report or suggestion, search issues, then post if you can't find anything.  For general questions or brainstorming new ideas, you can join our [Gitter chat](https://gitter.im/jsdelivr/jsdelivr).
 
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
