@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ag-grid",
+  "repo": "/ceolter/ag-grid",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "styles/*.css"]
+  }
+}
