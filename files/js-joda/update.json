@@ -1,5 +1,5 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "js-joda",
   "repo": "pithu/js-joda",
   "files": {
