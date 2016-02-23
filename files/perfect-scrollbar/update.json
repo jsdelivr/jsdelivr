@@ -3,6 +3,6 @@
   "name": "perfect-scrollbar",
   "repo": "noraesae/perfect-scrollbar",
   "files": {
-    "include": ["dist/**/*.js", "dist/**/*.css"]
+    "basePath": "dist/"
   }
 }
