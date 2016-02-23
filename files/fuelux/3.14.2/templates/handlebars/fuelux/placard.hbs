@@ -1,0 +1,20 @@
+<div class="placard"{{#unless doNotInit}} data-initialize="placard"{{/unless}}{{#if ellipsis}} data-ellipsis="true"{{/if}} id="{{#if id}}{{id}}{{else}}myPlacard{{/if}}">
+	<div class="placard-popup"></div>
+{{#if header}}
+	<div class="placard-header"><h5>{{header}}</h5></div>
+{{/if}}
+{{!-- div must come first, because if a placard has both div and textarea set to true, it is a div that behaves like a textarea --}}
+{{#if div}}
+	<div class="form-control placard-field{{#if glass}} glass{{/if}}"{{#if textarea}} data-textarea="true"{{/if}} contenteditable="true">{{#if placeholder}}{{placeholder}}{{/if}}</div>
+{{else if textarea}}
+	<textarea class="form-control placard-field{{#if glass}} glass{{/if}}" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myPlacard{{/if}}{{/if}}">{{#if placeholder}}{{placeholder}}{{/if}}</textarea>
+{{else}}
+	<input class="form-control placard-field{{#if glass}} glass{{/if}}" type="text"{{#if placeholder}} placeholder="{{placeholder}}"{{/if}} name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myPlacard{{/if}}{{/if}}"/>
+{{/if}}
+{{#if footer}}
+	<div class="placard-footer">
+		<a class="placard-cancel" href="#">Cancel</a>
+		<button class="btn btn-primary btn-xs placard-accept" type="button">Save</button>
+	</div>
+{{/if}}
+</div>
