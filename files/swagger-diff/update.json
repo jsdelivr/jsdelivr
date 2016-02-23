@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "swagger-diff",
+  "repo": "zallek/swagger-diff",
+  "files": {
+    "basePath": "dist/"
+  }
+}
