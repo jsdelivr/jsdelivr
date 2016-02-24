@@ -3,6 +3,7 @@
   "name": "js-joda",
   "repo": "pithu/js-joda",
   "files": {
-    "include": ["dist/js-joda.js", "dist/js-joda.js.map", "dist/js-joda.min.js"]
+    "basePath": "dist/"
+    "include": ["*.js", "*.map"]
   }
 }
