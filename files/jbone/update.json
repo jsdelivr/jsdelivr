@@ -3,6 +3,6 @@
   "name": "jbone",
   "repo": "kupriyanenko/jbone",
   "files": {
-    "include": ["dist/*.js"]
+    "include": ["dist/jbone.min.js"]
   }
 }
