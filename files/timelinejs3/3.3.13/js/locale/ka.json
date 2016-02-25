@@ -1,0 +1,75 @@
+{
+    "lang": "ka", 
+    "date": {
+        "month_abbr": [
+            "იან.", 
+            "თებ.", 
+            "მარტი", 
+            "აპრ", 
+            "მაი.", 
+            "ივნ.", 
+            "ივლ.", 
+            "აგვ.", 
+            "სექ.", 
+            "ოქტ.", 
+            "ნოე.", 
+            "დეკ."
+        ], 
+        "day_abbr": [
+            "კვ.", 
+            "ორ.", 
+            "სამ.", 
+            "ოთხ.", 
+            "ხუთ.", 
+            "პარ.", 
+            "შაბ."
+        ], 
+        "day": [
+            "კვირა", 
+            "ორშაბათი", 
+            "სამშაბათი", 
+            "ოთხშაბათი", 
+            "ხუთშაბათი", 
+            "პარასკევი", 
+            "შაბათი"
+        ], 
+        "month": [
+            "იანვარი", 
+            "თებერვალი", 
+            "მარტი", 
+            "აპრილი", 
+            "მაისი", 
+            "ივნისი", 
+            "ივლისი", 
+            "აგვისტო", 
+            "სექტემბერი", 
+            "ოქტომბერი", 
+            "ნოემბერი", 
+            "დეკემბერი"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "ka"
+    }, 
+    "messages": {
+        "loading": "ჩამოტვირთვა", 
+        "contract_timeline": "Contract Timeline", 
+        "return_to_title": "დაბრუნდი თავში", 
+        "wikipedia": "თავისუფალი ენციკლოპედია Wikipedia-დან", 
+        "loading_content": "შინაარსის ჩამოტვირთვა", 
+        "expand_timeline": "გაშალე თაიმლაინი", 
+        "loading_timeline": "იტვირთება თაიმლაინი... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}
