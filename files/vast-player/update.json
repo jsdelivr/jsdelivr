@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "vast-player",
+  "repo": "cinema6/vast-player",
+  "files": {
+    "basePath": "dist"
+  }
+}
