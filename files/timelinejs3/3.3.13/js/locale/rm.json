@@ -1,0 +1,75 @@
+{
+    "lang": "rm", 
+    "date": {
+        "month_abbr": [
+            "Schan.", 
+            "Favr.", 
+            "Mars", 
+            "Avr.", 
+            "Matg", 
+            "Zercl.", 
+            "Fan.", 
+            "Avust", 
+            "Sett.", 
+            "Oct.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Du", 
+            "Gli", 
+            "Ma", 
+            "Me", 
+            "Gie", 
+            "Ve", 
+            "So"
+        ], 
+        "day": [
+            "Dumengia", 
+            "Glindesdi", 
+            "Mardi", 
+            "Mesemna", 
+            "Gievgia", 
+            "Venderdi", 
+            "Sonda"
+        ], 
+        "month": [
+            "Schaner", 
+            "Favrer", 
+            "Mars", 
+            "Avrigl", 
+            "Matg", 
+            "Zercladur", 
+            "Fanadur", 
+            "Avust", 
+            "Settember", 
+            "October", 
+            "November", 
+            "December"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "rm"
+    }, 
+    "messages": {
+        "loading": "Chargiar", 
+        "contract_timeline": "Contract Timeline", 
+        "return_to_title": "Turnar al titel", 
+        "wikipedia": "Da Vichipedia, l'enciclopedia libra", 
+        "loading_content": "Chargiar il cuntegn", 
+        "expand_timeline": "Expander la cronologia", 
+        "loading_timeline": "Chargiar la cronologia... "
+    }, 
+    "dateformats": {
+        "full_long": "d 'da' mmm yyyy', las' HH:M", 
+        "full_short": "d 'da' mmm", 
+        "full": "d 'da' mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:M'<br/><small>'d 'da' mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:M", 
+        "time_short": "HH:M:s", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:M'<br/><small>d 'da' mmm yyyy'</small>'"
+    }
+}
