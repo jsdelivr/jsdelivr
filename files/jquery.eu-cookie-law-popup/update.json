@@ -3,7 +3,7 @@
   "name": "jquery.eu-cookie-law-popup",
   "repo": "wimagguc/jquery-eu-cookie-law-popup",
   "files": {
-    "basePath": "/",
+    "basePath": "/jquery.eu-cookie-law-popup",
     "include": ["**/*.js", "**/*.css"]
   }
 }
