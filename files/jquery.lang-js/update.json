@@ -3,7 +3,7 @@
   "name": "jquery.lang-js",
   "repo": "Irrelon/jquery-lang-js",
   "files": {
-    "basePath": "/js",
+    "basePath": "/jquery.lang-js",
     "include": ["**/*.js"]
   }
 }
