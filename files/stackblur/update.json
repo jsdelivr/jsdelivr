@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "stackblur-canvas",
+  "repo": "flozz/StackBlur",
+  "files": {
+    "include": ["dist/stackblur.min.js"]
+  }
+}
