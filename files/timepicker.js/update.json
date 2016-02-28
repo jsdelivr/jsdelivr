@@ -4,6 +4,6 @@
   "repo": "jonataswalker/timepicker.js",
   "files": {
     "basePath": "build/",
-    "include": ["timepicker.js", "timepicker.min.js", "timepicker.css", "timepicker.min.css"]
+    "include": ["timepicker.min.js", "timepicker.min.css"]
   }
 }
