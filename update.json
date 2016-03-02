@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "box2dPlug",
+  "repo": "amo/box2dplug",
+  "files": {
+    "include": ["box2dPlug.js", "box2dPlug.min.js"]
+  }
+}
