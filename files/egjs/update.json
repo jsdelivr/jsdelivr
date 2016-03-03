@@ -3,7 +3,6 @@
   "name": "egjs",
   "repo": "naver/egjs",
   "files": {
-    "basePath": "dist/",
-    "include": ["**/*.js"]
+    "basePath": "dist/"
   }
 }
