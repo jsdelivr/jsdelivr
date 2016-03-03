@@ -1,7 +1,7 @@
 {
   "packageManager": "npm",
   "name": "redux",
-  "repo": "rackt/redux",
+  "repo": "reactjs/redux",
   "files": {
     "basePath": "dist/"
   }
