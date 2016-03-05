@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "js-joda",
+  "repo": "pithu/js-joda",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "*.map"]
+  }
+}

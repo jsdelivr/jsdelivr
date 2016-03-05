@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jbone",
+  "repo": "kupriyanenko/jbone",
+  "files": {
+    "include": ["dist/jbone.min.js"]
+  }
+}

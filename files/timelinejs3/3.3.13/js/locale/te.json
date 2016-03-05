@@ -1,0 +1,74 @@
+{
+    "lang": "te", 
+    "date": {
+        "month_abbr": [
+            "జన.", 
+            "ఫిబ్ర.", 
+            "మార్చి", 
+            "ఏప్రి.", 
+            "మే", 
+            "జూన్", 
+            "జూలై", 
+            "ఆగ.", 
+            "సెప్టెం.", 
+            "అక్టో.", 
+            "నవం.", 
+            "డిసెం."
+        ], 
+        "day_abbr": [
+            "ఆది.", 
+            "సోమ.", 
+            "మంగళ.", 
+            "బుధ.", 
+            "గురు.", 
+            "శుక్ర.", 
+            "శని."
+        ], 
+        "day": [
+            "ఆదివారం", 
+            "సోమవారం", 
+            "మంగళవారం", 
+            "బుధవారం", 
+            "గురువారం", 
+            "శుక్రవారం", 
+            "శనివారం"
+        ], 
+        "month": [
+            "జనవరి", 
+            "ఫిబ్రవరి", 
+            "మార్చి", 
+            "ఏప్రిల్", 
+            "మే", 
+            "జూన్", 
+            "జూలై", 
+            "ఆగస్ట్", 
+            "సెప్టెంబర్", 
+            "అక్టోబర్", 
+            "నవంబర్", 
+            "డిసెంబర్"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "te"
+    }, 
+    "messages": {
+        "loading": "లోడవుతూంది", 
+        "contract_timeline": "టైమ్‌లైన్‌ను కుదించండి", 
+        "return_to_title": "తిరిగి మొదటి స్లైడుకి", 
+        "wikipedia": "స్వేచ్ఛా విజ్ఞాన సర్వస్వమైన వికీపీడియా నుండి", 
+        "loading_content": "విషయం లోడవుతూంది", 
+        "expand_timeline": "టైమ్‌లైన్‌ను విస్తరించండి", 
+        "loading_timeline": "టైమ్‌లైన్ లోడవుతూంది... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "time_no_seconds_short": "h:MM TT", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "full": "mmmm d',' yyyy", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}
