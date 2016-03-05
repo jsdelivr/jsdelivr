@@ -1,0 +1,75 @@
+{
+    "lang": "nl", 
+    "date": {
+        "month_abbr": [
+            "jan", 
+            "febr", 
+            "maa", 
+            "apr", 
+            "mei", 
+            "juni", 
+            "juli", 
+            "aug", 
+            "sept", 
+            "okt", 
+            "nov", 
+            "dec"
+        ], 
+        "day_abbr": [
+            "zo", 
+            "ma", 
+            "di", 
+            "wo", 
+            "do", 
+            "vr", 
+            "za"
+        ], 
+        "day": [
+            "zondag", 
+            "maandag", 
+            "dinsdag", 
+            "woensdag", 
+            "donderdag", 
+            "vrijdag", 
+            "zaterdag"
+        ], 
+        "month": [
+            "januari", 
+            "februari", 
+            "maart", 
+            "april", 
+            "mei", 
+            "juni", 
+            "juli", 
+            "augustus", 
+            "september", 
+            "oktober", 
+            "november", 
+            "december"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "nl"
+    }, 
+    "messages": {
+        "loading": "Laden", 
+        "contract_timeline": "Tijdlijn inzoomen", 
+        "return_to_title": "Terug naar het begin", 
+        "wikipedia": "From Wikipedia, the free encyclopedia", 
+        "loading_content": "Inhoud laden", 
+        "expand_timeline": "Tijdlijn uitzoomen", 
+        "loading_timeline": "Tijdlijn laden ... "
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'om' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}

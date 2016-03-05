@@ -4,6 +4,6 @@
   "repo": "getastro/Astro",
   "files": {
     "basePath": "dist/",
-    "include": ["astro-wp-element.min.js", "astro-support-views.min.js"]
+    "include": ["astro-api.min.js", "astro-support-views.min.js"]
   }
 }
