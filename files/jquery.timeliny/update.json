@@ -4,6 +4,6 @@
   "repo": "maoosi/jquery.timeliny",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js", "*.css"]
+    "include": ["*.min.*"]
   }
 }
