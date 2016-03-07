@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jQuery.Marquee",
+  "repo": "aamirafridi/jQuery.Marquee",
+  "files": {
+    "include": ["*.js"]
+  }
+}
