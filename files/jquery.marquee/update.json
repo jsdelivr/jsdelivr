@@ -3,6 +3,6 @@
   "name": "jQuery.Marquee",
   "repo": "aamirafridi/jQuery.Marquee",
   "files": {
-    "include": ["*.js"]
+    "include": ["*.min.js"]
   }
 }
