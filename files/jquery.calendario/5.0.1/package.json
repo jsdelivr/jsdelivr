@@ -1,0 +1,13 @@
+{
+  "name": "Calendario",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deviprsd21/Calendario.git"
+  },
+  "description": "A jQuery calendar plugin for creating flexible calendars.",
+  "author": "https://twitter.com/deviprsd21",
+  "version": "5.0.1",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
+}
