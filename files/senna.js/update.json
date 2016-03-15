@@ -4,6 +4,6 @@
   "repo": "liferay/senna.js",
   "files": {
   	"basePath": "build/",
-    "include": ["senna-min.js", "senna.css"]
+    "include": ["globals/senna-min.js", "senna.css"]
   }
 }
