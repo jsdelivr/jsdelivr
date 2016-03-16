@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "amcharts",
+  "repo": "amcharts/amcharts3",
+  "files": {
+    "basePath": "amcharts/",
+    "include": ["**/*"]
+  }
+}
