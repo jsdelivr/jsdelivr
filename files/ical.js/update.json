@@ -3,6 +3,6 @@
   "name": "ical.js",
   "repo": "mozilla-comm/ical.js",
   "files": {
-    "include": ["build/ical.js", "build/ical.min.js", "build/ical.min.js.map"]
+    "include": ["ical.js", "ical.min.js"]
   }
 }
