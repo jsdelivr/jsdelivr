@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "oboejs",
+  "repo": "jimhigson/oboe.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["oboe-browser.min.js"]
+  }
+}
