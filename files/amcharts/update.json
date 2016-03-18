@@ -4,6 +4,7 @@
   "repo": "amcharts/amcharts3",
   "files": {
     "basePath": "amcharts/",
-    "include": ["**/*"]
+    "include": ["**/*"],
+    "exclude": ["plugins/**/*"]
   }
 }
