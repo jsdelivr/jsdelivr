@@ -5,6 +5,9 @@
   "files": {
     "basePath": "amcharts/",
     "include": ["**/*"],
-    "exclude": ["plugins/**/*"]
+    "exclude": ["**/*.txt",
+                "**/*.md",
+                "**/LICENSE",
+                "**/examples/**/*"]
   }
 }
