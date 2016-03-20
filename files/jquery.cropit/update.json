@@ -3,6 +3,6 @@
   "name": "cropit",
   "repo": "scottcheng/cropit",
   "files": {
-    "include": ["jquery.cropit.js"]
+    "include": ["dist/jquery.cropit.js"]
   }
 }
