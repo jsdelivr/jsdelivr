@@ -4,6 +4,6 @@
   "repo": "unpoly/unpoly",
   "files": {
     "basePath": "dist/",
-    "include": ["**/*"]
+    "include": ["**/*.min.*"]
   }
 }
