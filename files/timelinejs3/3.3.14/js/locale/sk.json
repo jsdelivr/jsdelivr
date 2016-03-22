@@ -1,0 +1,75 @@
+{
+    "lang": "sk", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Marec", 
+            "Apr&#237;l", 
+            "M&#225;j", 
+            "J&#250;n", 
+            "J&#250;l", 
+            "Aug.", 
+            "Sept.", 
+            "Okt.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Ned.", 
+            "Pon.", 
+            "Uto.", 
+            "Str.", 
+            "&#352;tv.", 
+            "Pia.", 
+            "Sob."
+        ], 
+        "day": [
+            "Nede&#318;a", 
+            "Pondelok", 
+            "Utorok", 
+            "Streda", 
+            "&#352;tvrtok", 
+            "Piatok", 
+            "Sobota"
+        ], 
+        "month": [
+            "Janu&#225;r", 
+            "Febru&#225;r", 
+            "Marec", 
+            "Apr&#237;l", 
+            "M&#225;j", 
+            "J&#250;n", 
+            "J&#250;l", 
+            "August", 
+            "September", 
+            "Okt&#243;ber", 
+            "November", 
+            "December"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "sk"
+    }, 
+    "messages": {
+        "loading": "Na&#269;&#237;tanie", 
+        "contract_timeline": "Zmen&#353;i&#357; &#269;asov&#250; os", 
+        "return_to_title": "Sp&#228;&#357; na &#250;vod", 
+        "wikipedia": "Z Wikipedie, encyklop&#233;die zadarmo", 
+        "loading_content": "Na&#269;&#237;tam obsah", 
+        "expand_timeline": "Zv&#228;&#269;&#353;i&#357; &#269;asov&#250; os", 
+        "loading_timeline": "Na&#269;&#237;tam &#269;asov&#250; os... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' hh:MM TT", 
+        "full_short": "mmm d", 
+        "full": "d. mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "hh:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

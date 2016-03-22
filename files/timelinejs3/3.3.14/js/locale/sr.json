@@ -1,0 +1,75 @@
+{
+    "lang": "sr", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Mart", 
+            "Apr.", 
+            "Maj", 
+            "Jun", 
+            "Jul", 
+            "Avg.", 
+            "Sep.", 
+            "Okt.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Ned.", 
+            "Pon.", 
+            "Uto.", 
+            "Sre.", 
+            "Čet.", 
+            "Pet.", 
+            "Sub."
+        ], 
+        "day": [
+            "Nedelja", 
+            "Ponedeljak", 
+            "Utorak", 
+            "Sreda", 
+            "Četvratk", 
+            "Petak", 
+            "Subota"
+        ], 
+        "month": [
+            "januar", 
+            "Februar", 
+            "Mart", 
+            "April", 
+            "Maj", 
+            "Jun", 
+            "Jul", 
+            "Avgust", 
+            "Septembar", 
+            "Oktobar", 
+            "Novembar", 
+            "Decembar"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "sr"
+    }, 
+    "messages": {
+        "loading": "Učitava se", 
+        "contract_timeline": "Umanji", 
+        "return_to_title": "Početak", 
+        "wikipedia": "Iz Vikipedije, slobodne enciklopedije", 
+        "loading_content": "Sadržaj se učitava", 
+        "expand_timeline": "Uvećaj", 
+        "loading_timeline": "Učitavanje... "
+    }, 
+    "dateformats": {
+        "full_long": "d. mmm yyyy. 'u' HH:MM", 
+        "full_short": "d. mmm", 
+        "full": "d. mmmm yyyy.", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm yyyy.'</small>'", 
+        "month": "mmmm yyyy.", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy.", 
+        "full_long_small_date": "HH:MM'<br/><small>d. mmm yyyy.'</small>'"
+    }
+}
