@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jclic.js",
+  "repo": "projectestac/jclic.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
