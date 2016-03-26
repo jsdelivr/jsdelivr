@@ -3,6 +3,6 @@
   "name": "jclic.js",
   "repo": "projectestac/jclic.js",
   "files": {
-    "include": ["dist/jclic.min.js"]
+    "basePath": "dist/"
   }
 }
