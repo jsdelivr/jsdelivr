@@ -1,9 +1,9 @@
 {
   "packageManager": "github",
   "name": "motajs",
-  "repo": "motapc97/motajs",
+  "repo": "jdmota/motajs",
   "files": {
     "basePath": "main/",
-    "exclude": [ "mota.js" , "mota.css" , "mota.docs.json" ]
+    "exclude": [ "mota.js" ]
   }
 }
