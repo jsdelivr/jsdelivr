@@ -1,8 +1,0 @@
-{
-  "packageManager": "npm",
-  "name": "places.js",
-  "repo": "algolia/places",
-  "files": {
-    "basePath": "dist/cdn/"
-  }
-}
