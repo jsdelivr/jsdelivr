@@ -1,0 +1,83 @@
+.ga-grid.width\:1 > *,
+.ga-cell.width\:1 {
+  -webkit-flex-basis: 8.33333%;
+      -ms-flex-preferred-size: 8.33333%;
+          flex-basis: 8.33333%;
+  max-width: 8.33333%; }
+
+.ga-grid.width\:2 > *,
+.ga-cell.width\:2 {
+  -webkit-flex-basis: 16.66667%;
+      -ms-flex-preferred-size: 16.66667%;
+          flex-basis: 16.66667%;
+  max-width: 16.66667%; }
+
+.ga-grid.width\:3 > *,
+.ga-cell.width\:3 {
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  max-width: 25%; }
+
+.ga-grid.width\:4 > *,
+.ga-cell.width\:4 {
+  -webkit-flex-basis: 33.33333%;
+      -ms-flex-preferred-size: 33.33333%;
+          flex-basis: 33.33333%;
+  max-width: 33.33333%; }
+
+.ga-grid.width\:5 > *,
+.ga-cell.width\:5 {
+  -webkit-flex-basis: 41.66667%;
+      -ms-flex-preferred-size: 41.66667%;
+          flex-basis: 41.66667%;
+  max-width: 41.66667%; }
+
+.ga-grid.width\:6 > *,
+.ga-cell.width\:6 {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  max-width: 50%; }
+
+.ga-grid.width\:7 > *,
+.ga-cell.width\:7 {
+  -webkit-flex-basis: 58.33333%;
+      -ms-flex-preferred-size: 58.33333%;
+          flex-basis: 58.33333%;
+  max-width: 58.33333%; }
+
+.ga-grid.width\:8 > *,
+.ga-cell.width\:8 {
+  -webkit-flex-basis: 66.66667%;
+      -ms-flex-preferred-size: 66.66667%;
+          flex-basis: 66.66667%;
+  max-width: 66.66667%; }
+
+.ga-grid.width\:9 > *,
+.ga-cell.width\:9 {
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
+  max-width: 75%; }
+
+.ga-grid.width\:10 > *,
+.ga-cell.width\:10 {
+  -webkit-flex-basis: 83.33333%;
+      -ms-flex-preferred-size: 83.33333%;
+          flex-basis: 83.33333%;
+  max-width: 83.33333%; }
+
+.ga-grid.width\:11 > *,
+.ga-cell.width\:11 {
+  -webkit-flex-basis: 91.66667%;
+      -ms-flex-preferred-size: 91.66667%;
+          flex-basis: 91.66667%;
+  max-width: 91.66667%; }
+
+.ga-grid.width\:12 > *,
+.ga-cell.width\:12 {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  max-width: 100%; }

@@ -1,0 +1,89 @@
+@media (min-width: 25rem) {
+  .ga-grid--direct\.tiny\:horizontal {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .ga-grid--direct\.tiny\:horizontal.ga-grid--order\:reverse, .ga-grid--direct\.tiny\:horizontal.ga-grid--order\.tiny\:reverse {
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  .ga-grid--direct\.tiny\:vertical {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ga-grid--direct\.tiny\:vertical.ga-grid--order\:reverse, .ga-grid--direct\.tiny\:vertical.ga-grid--order\.tiny\:reverse {
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+
+@media (min-width: 50rem) {
+  .ga-grid--direct\.small\:horizontal {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .ga-grid--direct\.small\:horizontal.ga-grid--order\:reverse, .ga-grid--direct\.small\:horizontal.ga-grid--order\.small\:reverse {
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  .ga-grid--direct\.small\:vertical {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ga-grid--direct\.small\:vertical.ga-grid--order\:reverse, .ga-grid--direct\.small\:vertical.ga-grid--order\.small\:reverse {
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+
+@media (min-width: 75rem) {
+  .ga-grid--direct\.medium\:horizontal {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .ga-grid--direct\.medium\:horizontal.ga-grid--order\:reverse, .ga-grid--direct\.medium\:horizontal.ga-grid--order\.medium\:reverse {
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  .ga-grid--direct\.medium\:vertical {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ga-grid--direct\.medium\:vertical.ga-grid--order\:reverse, .ga-grid--direct\.medium\:vertical.ga-grid--order\.medium\:reverse {
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+
+@media (min-width: 100rem) {
+  .ga-grid--direct\.large\:horizontal {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .ga-grid--direct\.large\:horizontal.ga-grid--order\:reverse, .ga-grid--direct\.large\:horizontal.ga-grid--order\.large\:reverse {
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  .ga-grid--direct\.large\:vertical {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ga-grid--direct\.large\:vertical.ga-grid--order\:reverse, .ga-grid--direct\.large\:vertical.ga-grid--order\.large\:reverse {
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+
+@media (min-width: 125rem) {
+  .ga-grid--direct\.huge\:horizontal {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .ga-grid--direct\.huge\:horizontal.ga-grid--order\:reverse, .ga-grid--direct\.huge\:horizontal.ga-grid--order\.huge\:reverse {
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  .ga-grid--direct\.huge\:vertical {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ga-grid--direct\.huge\:vertical.ga-grid--order\:reverse, .ga-grid--direct\.huge\:vertical.ga-grid--order\.huge\:reverse {
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
