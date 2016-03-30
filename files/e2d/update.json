@@ -3,7 +3,7 @@
 	"name": "e2d",
 	"repo": "e2d/e2d",
 	"files": {
-		"basePath": "/",
+		"basePath": "dist/",
 		"include": ["e2d.js", "e2d.min.js"]
 	}
 }
