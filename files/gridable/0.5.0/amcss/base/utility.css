@@ -1,0 +1,7 @@
+@media (orientation: portrait) {
+  [ga-hide~="portrait"] {
+    display: none; } }
+
+@media (orientation: landscape) {
+  [ga-hide~="landscape"] {
+    display: none; } }
