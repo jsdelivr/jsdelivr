@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "e2d",
-  "repo": "E2D/e2d",
-  "files": {
-    "basePath": "dist/"
-  }
-}
