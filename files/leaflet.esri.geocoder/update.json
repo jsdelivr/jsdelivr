@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.esri.geocoder",
+  "repo": "esri/esri-leaflet-geocoder",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["README.md"]
+  }
+}

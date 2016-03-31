@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "openlayers.popup",
+  "repo": "walkermatt/ol3-popup",
+  "files": {
+    "basePath": "src/"
+  }
+}

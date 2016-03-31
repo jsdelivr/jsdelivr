@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flexslider",
+  "repo": "woothemes/FlexSlider",
+  "files": {
+    "include": ["jquery.flexslider.js", " jquery.flexslider-min.js", "flexslider.css", "./fonts/*", "./images/*"]
+  }
+}

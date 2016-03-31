@@ -1,18 +1,23 @@
-### Web interface (Recommended)
+### Web Interface (Recommended)
 
 *This is limited to projects that can be auto-updated by our bot. It requires github/npm/bower with tagged versions.*
 
-1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2]
-2. In the same directory create an update.json file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json)
-3. Dont add any project related files. Our bot will add them after your PR gets merged
-4. Make sure you do everything correctly the first time. If your PR exceeds 2 commits(1 per file) it will be declined.
-5. Wait for approval!
+1. Using your browser go to [files/][1] and use [Github's interface](https://cloud.githubusercontent.com/assets/1834071/6826939/4019ce7a-d30d-11e4-8d1b-7821b923dd50.gif) to create a new folder with an info.ini file inside. [Documentation](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md#file-structure)/[Example][2].
+2. Note how GitHub automatically forked the project under your username and created a `patch-N` branch for it:
+
+    > 	youruser wants to merge 1 commit into jsdelivr:master from youruser:patch-1
+
+3. Go to that patch, e.g. https://github.com/youruser/jsdelivr/tree/patch-1
+4. In the same directory as at step 1, create an `update.json` file to enable auto-updates. [Documentation](https://github.com/jsdelivr/libgrabber#add-updatejson-schema)/[Example](https://github.com/jsdelivr/jsdelivr/blob/master/files/angular.moment/update.json).
+5. Make sure both files are in the same PR (they'll be separate commits).
+6. Don't add any project related files. Our bot will add them after your PR gets merged.
+7. Wait for approval!
 
 
 
 ### Advanced
 
- 1. [Fork][9] the jsDelivr repository.
+ 1. Fork the jsDelivr repository.
  2. Add files that you want to be synced with the CDN
 
   **Note** If there is a previous version of the project you are adding please ensure that the new version contains same files. For example if in the previous version there are both .min.js and .js files please add both to the new version.
@@ -52,5 +57,5 @@ A version directory should contain the following:
 4. Do not upload useless files like demos, examples, licenses, readmes and any other files not being used in the production.
 
   [1]: https://github.com/jsdelivr/jsdelivr/tree/master/files
-  [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://refresh-sf.com/yui/
+  [2]: https://github.com/jsdelivr/jsdelivr/blob/master/files/abaaso/info.ini
+  [3]: http://refresh-sf.com/

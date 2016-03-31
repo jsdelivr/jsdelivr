@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "binaryjs",
+  "repo": "binaryjs/binaryjs",
+  "files": {
+	"basePath": "dist/",
+	"include": ["*.min.*"]
+  }
+}

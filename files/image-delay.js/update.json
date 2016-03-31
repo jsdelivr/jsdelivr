@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "image-delay.js",
+  "repo": "Sneezry/image-delay.js",
+  "files": {
+    "include": ["image-delay.min.js", "image-delay.css", "ng-image-delay.js"]
+  }
+}

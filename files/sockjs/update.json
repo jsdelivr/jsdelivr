@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "sockjs-client",
+	"repo": "sockjs/sockjs-client",
+	"files": {
+		"basePath": "dist/",
+		"include": ["sockjs.min.js"]
+	}
+}

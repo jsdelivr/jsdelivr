@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "flowthings-browser",
+  "repo": "flowthings/browser-client",
+  "files": {
+    "basePath": "dist/",
+    "include": ["flowthings-browser.min.js"]
+  }
+}

@@ -3,7 +3,7 @@
   "name": "sweetalert",
   "repo": "t4t5/sweetalert",
   "files": {
-    "basePath": "lib/",
-    "include": ["sweet-alert.min.js", "sweet-alert.css"]
+    "basePath": "dist/",
+    "include": ["sweetalert.min.js", "sweetalert.css"]
   }
 }

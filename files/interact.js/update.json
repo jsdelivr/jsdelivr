@@ -3,6 +3,10 @@
   "name": "interact.js",
   "repo": "taye/interact.js",
   "files": {
-    "include": ["interact.min.js"]
+    "include": [
+      "dist/interact.js",
+      "dist/interact.min.js",
+      "dist/interact.min.js.map"
+    ]
   }
 }

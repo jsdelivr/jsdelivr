@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "usertiming.js",
+  "repo": "nicjansma/usertiming.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
