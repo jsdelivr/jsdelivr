@@ -1,6 +1,6 @@
  {
     "packageManager": "github",
-   "name": "browJS",
+   "name": "browjs",
     "repo": "misterzik/browJS",
     "files": {
       "basePath": "src/",
