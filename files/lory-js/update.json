@@ -1,0 +1,8 @@
+{
+    "packageManager": "npm",
+    "name": "lory.js",
+    "repo": "meandmax/lory",
+    "files": {
+        "basePath": "dist/"
+    }
+ }
