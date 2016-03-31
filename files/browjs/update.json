@@ -3,7 +3,7 @@
    "name": "browjs",
     "repo": "misterzik/browJS",
     "files": {
-      "basePath": "src/",
-     "include": ["js/brow.min.js", "css/brow.min.js", "index.html", "brow.html"]
+      "basePath": "dist/",
+     "include": ["brow.min.js", "brow.min.css"]
     }
   }
