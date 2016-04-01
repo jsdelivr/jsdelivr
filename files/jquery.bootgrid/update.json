@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery Bootgrid",
+  "repo": "rstaib/jquery-bootgrid",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*"]
+  }
+}

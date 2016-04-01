@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tinynav",
+  "repo": "viljamis/TinyNav.js",
+  "files": {
+    "include": ["tinynav.js", "tinynav.min.js"]
+  }
+}

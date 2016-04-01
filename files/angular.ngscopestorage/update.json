@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "ngscopestorage",
+  "repo": "rannn505/ngscopestorage",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ngscopestorage.min.js"]
+  }
+}

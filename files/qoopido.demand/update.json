@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "qoopido.demand",
+	"repo": "dlueth/qoopido.demand",
+	"files": {
+		"basePath": "dist/"
+	}
+}

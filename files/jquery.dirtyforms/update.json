@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.dirtyforms",
+  "repo": "NightOwl888/jquery.dirtyforms.dist",
+  "files": {
+    "include": ["jquery.dirtyforms.min.*", "plugins/*.min.*"]
+  }
+}

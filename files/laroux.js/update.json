@@ -3,7 +3,7 @@
   "name": "laroux.js",
   "repo": "larukedi/laroux.js",
   "files": {
-    "basePath": "dist/",
-    "include": ["laroux.min.js","laroux.min.css", "./parts/*.min.js"]
+    "basePath": "build/dist/web/",
+    "include": ["laroux.min.js","laroux.min.js.map"]
   }
 }

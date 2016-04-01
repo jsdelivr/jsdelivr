@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clipboard.js",
+  "repo": "zenorocha/clipboard.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

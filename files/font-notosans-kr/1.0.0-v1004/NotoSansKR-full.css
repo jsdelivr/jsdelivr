@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(./fonts/full/NotoSansKR-Thin.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Thin.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 200;
+    src: url(./fonts/full/NotoSansKR-Light.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Light.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Light.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(./fonts/full/NotoSansKR-DemiLight.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-DemiLight.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-DemiLight.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/full/NotoSansKR-Regular.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Regular.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Regular.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./fonts/full/NotoSansKR-Medium.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Medium.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Medium.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./fonts/full/NotoSansKR-Bold.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Bold.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(./fonts/full/NotoSansKR-Black.woff2) format('woff2'),
+    url(./fonts/full/NotoSansKR-Black.woff) format('woff'),
+    url(./fonts/full/NotoSansKR-Black.otf) format('opentype');
+}
+

@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "riotjs",
-  "repo": "muut/riotjs",
-  "files": {
-    "basePath": "/",
-    "include": ["riot.js", "riot.min.js"]
-  }
-}

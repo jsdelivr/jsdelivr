@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "background-size-polyfill",
+  "repo": "louisremi/background-size-polyfill",
+  "files": {
+    "include": ["backgroundsize.min.htc"]
+  }
+}
