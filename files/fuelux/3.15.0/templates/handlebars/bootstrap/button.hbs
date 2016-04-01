@@ -1,0 +1,7 @@
+<div class="form-group{{#if validation}} has-{{validation}}{{/if}}">
+	<label class="control-label{{#if horizontal}} col-sm-2{{/if}}" for="{{#if id}}{{id}}{{else}}myButton{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+	<div class="{{#if buttonalign}}{{buttonalign}}{{/if}}{{#if horizontal}} col-sm-10{{/if}}">
+		<{{#if isinput}}input{{else}}{{#if islink}}a{{else}}button{{/if}}{{/if}} {{#unless islink}}type="{{#if type}}{{type}}{{else}}button{{/if}}"{{else}}role="button"{{/unless}} id="{{#if id}}{{id}}{{else}}myButton{{/if}}" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myButton{{/if}}{{/if}}" class='btn{{#if buttonstyle}} {{buttonstyle}}{{else}} btn-default{{/if}}{{#if inputsize}} {{inputsize}}{{/if}}'{{#if disabled}} disabled{{/if}} aria-label="{{#if label}}{{label}}{{/if}}" {{#if isinput}}value="{{text}}"{{/if}}>{{#unless isinput}}{{text}}{{/unless}}</{{#if isinput}}input{{else}}{{#if islink}}a{{else}}button{{/if}}{{/if}}>
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	</div>
+</div>
