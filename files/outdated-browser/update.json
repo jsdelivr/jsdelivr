@@ -3,7 +3,7 @@
   "name": "outdated-browser",
   "repo": "burocratik/outdated-browser",
   "files": {
-	"basePath": "outdated-browser/",
-	"include": ["outdatedbrowser.css", "outdatedbrowser.js", "outdatedbrowser.min.css", "outdatedbrowser.min.js"]
+	"basePath": "outdatedbrowser/",
+	"include": ["*.min.*"]
  }
 }
