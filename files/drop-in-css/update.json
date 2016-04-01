@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "drop-in.css",
+  "repo": "webdevjeffus/drop-in-css",
+  "files": {
+    "basePath": "minimized/"
+  }
+}
