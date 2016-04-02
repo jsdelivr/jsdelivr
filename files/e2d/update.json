@@ -1,8 +1,9 @@
 {
-  "packageManager": "github",
-  "name": "e2d",
-  "repo": "E2D/e2d",
-  "files": {
-    "basePath": "dist/"
-  }
+	"packageManager": "github",
+	"name": "e2d",
+	"repo": "e2d/e2d",
+	"files": {
+		"basePath": "dist/",
+		"include": ["e2d.js", "e2d.min.js"]
+	}
 }

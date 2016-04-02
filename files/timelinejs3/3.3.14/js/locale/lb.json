@@ -1,0 +1,75 @@
+{
+    "lang": "lb", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Mäe.", 
+            "Abr.", 
+            "Mee", 
+            "Jun.", 
+            "Jul", 
+            "Aug.", 
+            "Sept.", 
+            "Okt.", 
+            "Nov.", 
+            "Dez."
+        ], 
+        "day_abbr": [
+            "Son.", 
+            "Méi.", 
+            "Dë.", 
+            "Më.", 
+            "Do.", 
+            "Fr.", 
+            "Sa."
+        ], 
+        "day": [
+            "Sonndeg", 
+            "Méindeg", 
+            "Dënschdeg", 
+            "Mëttwoch", 
+            "Donneschden", 
+            "Freiden", 
+            "Samschden"
+        ], 
+        "month": [
+            "Januar", 
+            "Februar", 
+            "Mäerz", 
+            "Abrëll", 
+            "Mee", 
+            "Juni", 
+            "Juli", 
+            "August", 
+            "September", 
+            "Oktober", 
+            "November", 
+            "Dezember"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "lb"
+    }, 
+    "messages": {
+        "loading": "Lued", 
+        "contract_timeline": "Timeline verklengeren", 
+        "return_to_title": "Zeréck zum Titel", 
+        "wikipedia": "Vu Wikipedia, der fräier Enzyklopedie", 
+        "loading_content": "Inhalt lued", 
+        "expand_timeline": "Timeline vergréisseren", 
+        "loading_timeline": "Timeline gëtt gelueden... "
+    }, 
+    "dateformats": {
+        "full_long": "d'.' mmm yyyy 'um' hh:MM TT", 
+        "full_short": "mmm d", 
+        "full": "d'.' mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'d'.' mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "hh:MM", 
+        "time_short": "hh:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "hh:MM'<br/><small>d'.' mmm yyyy'</small>'"
+    }
+}
