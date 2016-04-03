@@ -3,6 +3,6 @@
   "name": "material-design-icons",
   "repo": "google/material-design-icons",
   "files": {
-    "basepath": "iconfont"
+    "basePath": "iconfont/"
   }
 }
