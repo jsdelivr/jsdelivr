@@ -1,6 +1,6 @@
  {
     "packageManager": "github",
-   "name": "browjs",
+   "name": "gridzy",
     "repo": "Insanen/Gridzy",
     "files": {
       "basePath": "src/",
