@@ -1,0 +1,9 @@
+ {
+    "packageManager": "github",
+   "name": "browjs",
+    "repo": "Insanen/Gridzy",
+    "files": {
+      "basePath": "src/",
+     "include": ["gridzy.min.css"]
+    }
+  }
