@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "typescript-collections",
+  "repo": "basarat/typescript-collections",
+  "files": {
+    "include": ["collections.js"]
+  }
+}
