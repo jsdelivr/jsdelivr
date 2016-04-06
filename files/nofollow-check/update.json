@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "nofollow-check",
+  "repo": "samuelmac/nofollow-check",
+  "files": {
+    "include": ["nofollow-check.js", "nofollow-check.min.js"]
+  }
+}
