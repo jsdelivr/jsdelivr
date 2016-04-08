@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery-colorbox",
+  "repo": "jackmoore/colorbox",
+  "files": {
+    "include": ["jquery.colorbox-min.js", "jquery.colorbox.js"]
+  }
+}

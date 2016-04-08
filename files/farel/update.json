@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "farel",
+  "files": {
+    "basePath": "bundles/",
+    "include": ["farel.min.js", "farel.min.js.map"]
+  }
+}

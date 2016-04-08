@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-instagram",
+  "repo": "JohnnyTheTank/apiNG-plugin-instagram",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

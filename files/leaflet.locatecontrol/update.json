@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "leaflet.locatecontrol",
+  "repo": "domoritz/leaflet-locatecontrol",
+  "files": {
+    "basePath": "dist/"
+  }
+}

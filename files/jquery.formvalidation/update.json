@@ -4,6 +4,6 @@
   "repo": "formvalidation/formvalidation",
   "files": {
     "basePath": "dist/",
-	"include": ["./css/*.min.css", "./js/**/*.min.js"]
+    "include": ["**/*.min.css", "**/*.min.js", "js/language/*.js"]
   }
 }

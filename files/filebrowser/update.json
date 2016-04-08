@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "FileBrowser",
+  "repo": "jonataswalker/FileBrowser",
+  "files": {
+    "basePath": "build/",
+    "include": ["filebrowser.js", "filebrowser.css", "filebrowser.min.css"]
+  }
+}

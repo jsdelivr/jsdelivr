@@ -1,0 +1,10 @@
+
+{
+  "packageManager": "github",
+  "name": "watch-element-resize.js",
+  "repo": "jonataswalker/watch-element-resize.js",
+  "files": {
+    "basePath": "build/",
+    "include": ["watch-element-resize.min.js"]
+  }
+}

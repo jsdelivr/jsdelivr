@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "umbrella",
+  "repo": "umbrellajs/umbrella",
+  "files": {
+    "include": ["umbrella.min.js", "plugins.min.js"]
+  }
+}

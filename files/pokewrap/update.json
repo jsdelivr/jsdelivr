@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "pokewrap",
+  "repo": "bdchauvette/pokewrap",
+  "files": {
+    "include": ["dist/browser/pokewrap.js", "dist/browser/pokewrap.min.js"]
+  }
+}

@@ -1,0 +1,74 @@
+{
+    "lang": "si", 
+    "date": {
+        "month_abbr": [
+            "ජන.", 
+            "පෙබ.", 
+            "මාර්තු", 
+            "අප්‍රේල්", 
+            "මැයි", 
+            "ජුනි", 
+            "ජුලි", 
+            "අගෝ.", 
+            "සැප්.", 
+            "ඔක්.", 
+            "නොවැ.", 
+            "දෙසැ."
+        ], 
+        "day_abbr": [
+            "ඉරි.", 
+            "සදු.", 
+            "අග.", 
+            "බදා.", 
+            "බ්‍රහස්.", 
+            "සිකු.", 
+            "සෙන."
+        ], 
+        "day": [
+            "ඉරිදා", 
+            "සදුදා", 
+            "අගහරුවදා", 
+            "බදාදා", 
+            "බ්‍රහස්පතින්දා", 
+            "සිකුරාදා", 
+            "සෙනසුරාදා"
+        ], 
+        "month": [
+            "ජනවාරි", 
+            "පෙබරවාරි", 
+            "මාර්තු", 
+            "අප්‍රේල්", 
+            "මැයි", 
+            "ජූනි", 
+            "ජූලි", 
+            "අගෝස්තු", 
+            "සැප්තැම්බර්", 
+            "ඔක්තෝම්බර්", 
+            "නොවැම්බර්", 
+            "දෙසැම්බර්"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "si"
+    }, 
+    "messages": {
+        "loading": "ලෝඩ් වෙමින්", 
+        "contract_timeline": "කාල රේඛාව අකුලන්න", 
+        "return_to_title": "නැවත මාතෘකාවට", 
+        "wikipedia": "විකිපීඩියා, නිදහස් විශ්වකෝෂය වෙතින්", 
+        "loading_content": "අන්තර්ගතය ලෝඩ් වෙමින්", 
+        "expand_timeline": "කාල රේඛාව විහිදන්න", 
+        "loading_timeline": "කාල රේඛාව ලෝඩ් වෙමින්... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "time_no_seconds_short": "h:MM TT", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "full": "mmmm d',' yyyy", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

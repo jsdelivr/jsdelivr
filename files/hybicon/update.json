@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "hybicon",
+  "repo": "softwaretailoring/hybicon",
+  "files": {
+    "basePath": "js",
+    "include": ["hybicon.min.js", "hybicon.min.js.map", "hybicon.core.min.js", "hybicon.core.min.js.map"]
+  }
+}

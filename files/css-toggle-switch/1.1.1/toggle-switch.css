@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/*
+ * CSS TOGGLE SWITCHES
+ * Unlicense
+ *
+ * Ionuț Colceriu - ghinda.net
+ * https://github.com/ghinda/css-toggle-switch
+ *
+ */
+/* Toggle Switches
+ */
+/* Shared
+ */
+/* Checkbox
+ */
+/* Radio Switch
+ */
+/* Hide by default
+ */
+.switch .slide-button,
+.toggle span span {
+  display: none;
+}
+
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+  /* Checkbox toggle
+   */
+  .toggle {
+    display: block;
+    height: 30px;
+    /* Outline the toggles when the inputs are focused
+     */
+    position: relative;
+    padding: 0;
+    margin-left: 100px;
+    /* Position the label over all the elements, except the slide-button
+     * Clicking anywhere on the label will change the switch-state
+     */
+    /* Don't hide the input from screen-readers and keyboard access
+     */
+  }
+  .toggle * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .toggle .slide-button {
+    display: block;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .toggle label,
+  .toggle > span {
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  .toggle input:focus ~ .slide-button,
+  .toggle input:focus + label {
+    outline: 1px dotted #888;
+  }
+  .toggle label {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%;
+  }
+  .toggle input {
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+  }
+  .toggle input:checked ~ .slide-button {
+    right: 0%;
+  }
+  .toggle > span {
+    position: absolute;
+    left: -100px;
+    width: 100%;
+    margin: 0;
+    padding-right: 100px;
+    text-align: left;
+  }
+  .toggle > span span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 50%;
+    margin-left: 100px;
+    text-align: center;
+  }
+  .toggle > span span:last-child {
+    left: 50%;
+  }
+  .toggle .slide-button {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: 4;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+  }
+
+  /* Radio switch
+   */
+  .switch {
+    display: block;
+    height: 30px;
+    /* Outline the toggles when the inputs are focused
+     */
+    position: relative;
+    padding: 0;
+    /* Generate styles for the multiple states */
+  }
+  .switch * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .switch .slide-button {
+    display: block;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .switch label,
+  .switch > span {
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  .switch input:focus ~ .slide-button,
+  .switch input:focus + label {
+    outline: 1px dotted #888;
+  }
+  .switch input {
+    position: absolute;
+    opacity: 0;
+  }
+  .switch label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .switch .slide-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+  }
+  .switch input:last-of-type:checked ~ .slide-button {
+    left: 50%;
+  }
+  .switch.switch-3 label,
+  .switch.switch-3 .slide-button {
+    width: 33.33333%;
+  }
+  .switch.switch-3 input:checked:nth-of-type(2) ~ .slide-button {
+    left: 33.33333%;
+  }
+  .switch.switch-3 input:checked:last-of-type ~ .slide-button {
+    left: 66.66667%;
+  }
+  .switch.switch-4 label,
+  .switch.switch-4 .slide-button {
+    width: 25%;
+  }
+  .switch.switch-4 input:checked:nth-of-type(2) ~ .slide-button {
+    left: 25%;
+  }
+  .switch.switch-4 input:checked:nth-of-type(3) ~ .slide-button {
+    left: 50%;
+  }
+  .switch.switch-4 input:checked:last-of-type ~ .slide-button {
+    left: 75%;
+  }
+  .switch.switch-5 label,
+  .switch.switch-5 .slide-button {
+    width: 20%;
+  }
+  .switch.switch-5 input:checked:nth-of-type(2) ~ .slide-button {
+    left: 20%;
+  }
+  .switch.switch-5 input:checked:nth-of-type(3) ~ .slide-button {
+    left: 40%;
+  }
+  .switch.switch-5 input:checked:nth-of-type(4) ~ .slide-button {
+    left: 60%;
+  }
+  .switch.switch-5 input:checked:last-of-type ~ .slide-button {
+    left: 80%;
+  }
+
+  /* Standalone Themes */
+  /* Candy Theme
+   * Based on the "Sort Switches / Toggles (PSD)" by Ormal Clarck
+   * http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/
+   */
+  .candy {
+    background-color: #2d3035;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #191b1e;
+    -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
+  }
+  .candy label {
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+  }
+  .candy input:checked + label {
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  .candy .slide-button {
+    border: 1px solid #333;
+    background-color: #70c66b;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  }
+  .candy > span {
+    color: #333;
+    text-shadow: none;
+  }
+  .candy span {
+    color: #fff;
+  }
+  .candy.blue .slide-button {
+    background-color: #38a3d4;
+  }
+  .candy.yellow .slide-button {
+    background-color: #f5e560;
+  }
+
+  /* Android Theme
+   */
+  .android {
+    background-color: #464747;
+    border-radius: 1px;
+    color: #fff;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    /* Selected ON toggle
+     */
+  }
+  .android > span span {
+    opacity: 0;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+  }
+  .android > span span:first-of-type {
+    opacity: 1;
+  }
+  .android .slide-button {
+    background-color: #666;
+    border-radius: 1px;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 0;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 0;
+    box-shadow: inset rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 0;
+  }
+  .android.toggle input:checked ~ .slide-button {
+    background-color: #0E88B1;
+  }
+  .android.toggle input:checked ~ span span:first-of-type {
+    opacity: 0;
+  }
+  .android.toggle input:checked ~ span span:last-of-type {
+    opacity: 1;
+  }
+  .android.switch,
+  .android > span span {
+    font-size: 85%;
+    text-transform: uppercase;
+  }
+
+  /* iOS Theme
+   */
+  .ios.toggle {
+    color: lightgrey;
+  }
+  .ios.toggle .slide-button {
+    left: 0;
+    width: 30px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  .ios.toggle > span span {
+    width: 100%;
+    left: 0;
+    opacity: 0;
+  }
+  .ios.toggle > span span:first-of-type {
+    opacity: 1;
+    padding-left: 30px;
+  }
+  .ios.toggle > span span:last-of-type {
+    padding-right: 30px;
+  }
+  .ios.toggle > span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    background-color: #fafafa;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+  }
+  .ios.toggle input:checked ~ .slide-button {
+    left: 100%;
+    margin-left: -30px;
+  }
+  .ios.toggle input:checked ~ span:before {
+    border-color: #53d76a;
+    -webkit-box-shadow: inset 0 0 0 30px #53d76a;
+    -moz-box-shadow: inset 0 0 0 30px #53d76a;
+    box-shadow: inset 0 0 0 30px #53d76a;
+  }
+  .ios.toggle input:checked ~ span span:first-of-type {
+    opacity: 0;
+  }
+  .ios.toggle input:checked ~ span span:last-of-type {
+    opacity: 1;
+    color: white;
+  }
+  .ios.switch {
+    background-color: #fafafa;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    color: #868686;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
+  }
+  .ios.switch .slide-button {
+    background-color: #53d76a;
+    border-radius: 25px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .ios input:checked + label {
+    color: #3a3a3a;
+  }
+}
+/* Bugfix for older Webkit, including mobile Webkit. Adapted from
+ * http://css-tricks.com/webkit-sibling-bug/
+ *
+ * Improved by @seantimm, to fix memory use issues
+ * https://github.com/zurb/foundation/pull/2725
+ */
+@media only screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 480px) {
+  .toggle,
+  .switch {
+    -webkit-animation: webkitSiblingBugfix infinite 1s;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .toggle,
+  .switch {
+    -webkit-animation: none 0;
+  }
+}
+
+@-webkit-keyframes webkitSiblingBugfix {
+  from {
+    position: relative;
+  }
+
+  to {
+    position: relative;
+  }
+}

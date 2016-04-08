@@ -4,6 +4,6 @@
   "repo": "photonstorm/phaser",
   "files": {
     "basePath": "build/",
-    "include": ["phaser.js", "phaser.min.js"]
+    "include": ["phaser.js", "phaser.min.js", "phaser.map"]
   }
 }

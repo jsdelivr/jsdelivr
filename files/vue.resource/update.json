@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.resource",
+  "repo": "vuejs/vue-resource",
+  "files": {
+	"basePath": "dist/",
+    "include": ["vue-resource.min.js"]
+  }
+}

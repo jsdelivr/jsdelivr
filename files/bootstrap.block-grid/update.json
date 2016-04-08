@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-block-grid",
+  "repo": "JohnnyTheTank/bootstrap-block-grid",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

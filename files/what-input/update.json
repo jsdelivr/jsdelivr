@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "what-input",
+  "repo": "ten1seven/what-input",
+  "files": {
+    "include": ["what-input.min.js"]
+  }
+}

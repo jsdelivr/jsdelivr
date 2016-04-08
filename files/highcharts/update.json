@@ -1,8 +1,9 @@
 {
   "packageManager": "github",
   "name": "highcharts",
-  "repo": "highslide-software/highcharts-release",
+  "repo": "highcharts/highcharts",
   "files": {
-	"exclude": ["README.md", "bower.json"]
+  	"basePath": "lib/",
+	"exclude": ["*.src.js", "*.md", "*.json"]
   }
 }

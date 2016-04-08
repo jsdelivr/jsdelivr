@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ol3-geocoder",
+  "repo": "jonataswalker/ol3-geocoder",
+  "files": {
+    "basePath": "build/",
+    "include": ["ol3-geocoder.js", "ol3-geocoder.css", "ol3-geocoder.min.css"]
+  }
+}

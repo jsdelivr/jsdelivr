@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "checkit.js",
+  "repo": "enjoyiacm/checkit.js",
+  "files": {
+    "include": ["checkit.min.js"]
+  }
+}

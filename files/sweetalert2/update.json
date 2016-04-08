@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "sweetalert2",
+  "repo": "limonte/sweetalert2",
+  "files": {
+    "basePath": "dist/",
+    "include": ["sweetalert2.min.js", "sweetalert2.css"]
+  }
+}

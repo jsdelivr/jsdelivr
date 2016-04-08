@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "planit",
+  "repo": "seancdavis/planit",
+  "files": {
+    "basePath": "dist/",
+    "include": ["planit.min.js", "planit.min.css"]
+  }
+}

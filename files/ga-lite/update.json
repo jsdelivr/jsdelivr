@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ga-lite",
+  "repo": "jehna/ga-lite",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ga-lite.min.js"]
+  }
+}

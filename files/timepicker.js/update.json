@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "timepicker.js",
+  "repo": "jonataswalker/timepicker.js",
+  "files": {
+    "basePath": "build/",
+    "include": ["timepicker.min.js", "timepicker.min.css"]
+  }
+}

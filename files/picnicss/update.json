@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "picnicss",
+	"repo": "picnicss/picnic",
+	"files": {
+		"basePath": "releases",
+		"include": ["picnic.min.css", "plugins.min.css"]
+	}
+}

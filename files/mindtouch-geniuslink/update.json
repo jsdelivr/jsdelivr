@@ -1,0 +1,9 @@
+{
+    "packageManager": "github",
+    "name": "geniuslink",
+    "repo": "MindTouch/geniuslink",
+    "files": {
+        "basePath": "dist/",
+        "include": ["geniuslink.min.js"]
+    }
+}

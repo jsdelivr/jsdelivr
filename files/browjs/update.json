@@ -1,0 +1,9 @@
+ {
+    "packageManager": "github",
+   "name": "browjs",
+    "repo": "misterzik/browJS",
+    "files": {
+      "basePath": "dist/",
+     "include": ["brow.min.js", "brow.min.css"]
+    }
+  }

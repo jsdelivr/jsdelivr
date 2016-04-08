@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "dot",
+  "repo": "olado/doT",
+  "files": {
+    "include": ["doT.min.js", "doT.js"]
+  }
+}

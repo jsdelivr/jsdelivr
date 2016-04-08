@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.floatthead",
+  "repo": "mkoryak/floatThead",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angucomplete-alt",
+  "repo": "ghiden/angucomplete-alt",
+  "files": {
+    "include": ["dist/angucomplete-alt.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "es6-promise",
+  "repo": "jakearchibald/es6-promise",
+  "files": {
+    "basePath": "dist/"
+  }
+}

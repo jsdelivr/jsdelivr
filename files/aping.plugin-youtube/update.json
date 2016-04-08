@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-youtube",
+  "repo": "JohnnyTheTank/apiNG-plugin-youtube",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

@@ -1,0 +1,75 @@
+{
+    "lang": "ne", 
+    "date": {
+        "month_abbr": [
+            "जनवरी", 
+            "फेब्रुवरी", 
+            "मार्च", 
+            "अप्रिल", 
+            "मे", 
+            "जून", 
+            "जुलाई", 
+            "अगस्ट", 
+            "सेप्टेम्बर", 
+            "अक्टोबर", 
+            "नोभेम्बर", 
+            "डिसेम्बर"
+        ], 
+        "day_abbr": [
+            "आइतबार", 
+            "सोमबार", 
+            "मंगलबार", 
+            "बुधबार", 
+            "बिहिबार", 
+            "शुक्रबार", 
+            "शनिबार"
+        ], 
+        "day": [
+            "आइतबार", 
+            "सोमबार", 
+            "मंगलबार", 
+            "बुधबार", 
+            "बिहिबार", 
+            "शुक्रबार", 
+            "शनिबार"
+        ], 
+        "month": [
+            "जनवरी", 
+            "फेब्रुवरी", 
+            "मार्च", 
+            "अप्रिल", 
+            "मे", 
+            "जून", 
+            "जुलाई", 
+            "अगस्ट", 
+            "सेप्टेम्बर", 
+            "अक्टोबर", 
+            "नोभेम्बर", 
+            "डिसेम्बर"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "ne"
+    }, 
+    "messages": {
+        "loading": "लोड हुदैछ", 
+        "contract_timeline": "टाइमलाइन छोटो बनाउनुहोस्", 
+        "return_to_title": "शीर्षकमा फर्कनुहोस्", 
+        "wikipedia": "विकिपिडियाबाट", 
+        "loading_content": "सामग्री लोड हुदैछ", 
+        "expand_timeline": "टाइमलाइन लामो बनाउनुहोस्", 
+        "loading_timeline": "टाइमलाइन लोड हुदैछ... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

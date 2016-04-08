@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "botify-sdk",
+  "repo": "botify-labs/botify-sdk-js",
+  "files": {
+    "basePath": "dist/"
+  }
+}

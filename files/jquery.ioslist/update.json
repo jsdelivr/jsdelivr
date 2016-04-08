@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.ioslist",
+  "repo": "brianhadaway/iOSList",
+  "files": {
+	"basePath" : "dist/",
+    "include": ["js/jquery.ioslist.min.js", "css/jquery.ioslist.css"]
+  }
+}

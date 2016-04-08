@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ramjet",
+  "repo": "Rich-Harris/ramjet",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ramjet.min.js"]
+  }
+}

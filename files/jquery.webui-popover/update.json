@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "webui-popover",
+  "repo": "sandywalker/webui-popover",
+  "files": {
+    "basePath":"dist",
+    "include": [ "jquery.webui-popover.min.js","jquery.webui-popover.min.css"]
+  }
+}

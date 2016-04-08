@@ -1,0 +1,75 @@
+{
+    "lang": "ga", 
+    "date": {
+        "month_abbr": [
+            "Ean.", 
+            "Fea.", 
+            "Már.", 
+            "Aibh.", 
+            "Beal.", 
+            "Meith.", 
+            "Iúil", 
+            "Lún.", 
+            "MF.", 
+            "DF.", 
+            "Samh.", 
+            "Noll."
+        ], 
+        "day_abbr": [
+            "DéDom.", 
+            "DéL.", 
+            "DéM.", 
+            "DéC.", 
+            "DéarD.", 
+            "DéhA.", 
+            "DéSat."
+        ], 
+        "day": [
+            "Dé Domhnaigh", 
+            "Dé Luain", 
+            "Dé Máirt", 
+            "Dé Céadaoin", 
+            "Déardaoin", 
+            "Dé hAoine", 
+            "Dé Sathairn"
+        ], 
+        "month": [
+            "Eanair", 
+            "Feabhra", 
+            "Márta", 
+            "Aibhreán", 
+            "Bealtaine", 
+            "Meitheamh", 
+            "Iúil", 
+            "Lúnasa", 
+            "Meán Fómhair", 
+            "Deireadh Fómhair", 
+            "Samhain", 
+            "Mí Na Nollag"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "ga"
+    }, 
+    "messages": {
+        "loading": "Ag Lódáil an Inneachar", 
+        "contract_timeline": "Coimrigh An Amlíne", 
+        "return_to_title": "Ar Ais go dtí an tideal", 
+        "wikipedia": "As Wikipedia, an ciclipéid saor", 
+        "loading_content": "Ag Lódáil an", 
+        "expand_timeline": "Leathnaigh An Amlíne", 
+        "loading_timeline": "Tá an Amlíne ag Lódáil... "
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy HH:MM", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "'<small>'d mmmm yyyy'</small>' HH:MM", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>d mmm yyyy'</small>"
+    }
+}

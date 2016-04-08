@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.infinitescroll",
+  "repo": "infinite-scroll/infinite-scroll",
+  "files": {
+    "include": ["jquery.infinitescroll.min.js", "jquery.infinitescroll.js", "ajax-loader.gif"]
+  }
+}

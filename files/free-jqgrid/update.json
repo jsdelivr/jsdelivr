@@ -1,0 +1,15 @@
+{
+  "packageManager": "github",
+  "name": "free-jqgrid",
+  "repo": "free-jqgrid/jqGrid",
+  "files": {
+    "basePath": "/",
+    "include": [
+      "./css/*",
+      "./js/*",
+      "./js/i18n/*",
+      "./js/min/*",
+      "./plugins/*"
+    ]
+  }
+}

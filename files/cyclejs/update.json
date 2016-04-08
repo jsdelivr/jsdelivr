@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cyclejs",
+  "repo": "cyclejs/cycle-core",
+  "files": {
+    "basePath": "dist/"
+  }
+}

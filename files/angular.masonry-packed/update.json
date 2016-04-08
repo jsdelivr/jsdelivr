@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-masonry-packed",
+  "repo": "JohnnyTheTank/angular-masonry-packed",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}

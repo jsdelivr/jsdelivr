@@ -1,0 +1,38 @@
+/*!
+ *  Hack v2.010 by Chris Simpkins - https://sourcefoundry.org/hack/
+ *  Licenses - Fonts: Modified SIL OFL 1.1 + Bitstream Vera license, CSS: MIT License
+ */
+/* FONT PATHS
+ * -------------------------- */
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/eot/hack-regular-webfont.eot?v=2.010');
+  src: url('../fonts/eot/hack-regular-webfont.eot?#iefix&v=2.010') format('embedded-opentype'), url('../fonts/woff2/hack-regular-webfont.woff2?v=2.010') format('woff2'), url('../fonts/woff/hack-regular-webfont.woff?v=2.010') format('woff'), url('../fonts/ttf/hack-regular-webfont.ttf?v=2.010') format('truetype'), url('../fonts/svg/hack-regular-webfont.svg?v=2.010#hackregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/eot/hack-bold-webfont.eot?v=2.010');
+  src: url('../fonts/eot/hack-bold-webfont.eot?#iefix&v=2.010') format('embedded-opentype'), url('../fonts/woff2/hack-bold-webfont.woff2?v=2.010') format('woff2'), url('../fonts/woff/hack-bold-webfont.woff?v=2.010') format('woff'), url('../fonts/ttf/hack-bold-webfont.ttf?v=2.010') format('truetype'), url('../fonts/svg/hack-bold-webfont.svg?v=2.010#hackbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/eot/hack-regularoblique-webfont.eot?v=2.010');
+  src: url('../fonts/eot/hack-regularoblique-webfont.eot?#iefix&v=2.010') format('embedded-opentype'), url('../fonts/woff2/hack-regularoblique-webfont.woff2?v=2.010') format('woff2'), url('../fonts/woff/hack-regularoblique-webfont.woff?v=2.010') format('woff'), url('../fonts/ttf/hack-regularoblique-webfont.ttf?v=2.010') format('truetype'), url('../fonts/svg/hack-regularoblique-webfont.svg?v=2.010#hackregularoblique') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/eot/hack-boldoblique-webfont.eot?v=2.010');
+  src: url('../fonts/eot/hack-boldoblique-webfont.eot?#iefix&v=2.010') format('embedded-opentype'), url('../fonts/woff2/hack-boldoblique-webfont.woff2?v=2.010') format('woff2'), url('../fonts/woff/hack-boldoblique-webfont.woff?v=2.010') format('woff'), url('../fonts/ttf/hack-boldoblique-webfont.ttf?v=2.010') format('truetype'), url('../fonts/svg/hack-boldoblique-webfont.svg?v=2.010#hackboldoblique') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+

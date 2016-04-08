@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jcanvas",
+  "repo": "caleb531/jcanvas",
+  "files": {
+	"include": ["jcanvas.js","jcanvas.min.js"]
+  }
+}

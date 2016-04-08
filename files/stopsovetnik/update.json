@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "StopSovetnik.ru",
+  "repo": "teplov/stopsovetnik",
+  "files": {
+    "include": ["lib/ss.min.js", "lib/ss.js"]
+  }
+}

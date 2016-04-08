@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue",
+  "repo": "vuejs/vue",
+  "files": {
+	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "goodshare.js",
+  "repo": "enjoyiacm/goodshare.js",
+  "files": {
+    "include": ["goodshare.min.js"]
+  }
+}

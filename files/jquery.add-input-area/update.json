@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "jquery.add-input-area",
+  "repo": "sutara79/jquery.add-input-area",
+  "files": {
+    "include": [
+      "jquery.add-input-area.min.js"
+    ]
+  }
+}

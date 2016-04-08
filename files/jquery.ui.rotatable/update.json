@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.ui.rotatable",
+  "repo": "godswearhats/jquery-ui-rotatable",
+  "files": {
+    "include": ["jquery.ui.rotatable.min.js", "jquery.ui.rotatable.css", "rotate.png"]
+  }
+}

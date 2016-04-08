@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "qoopido.rescale",
+	"repo": "dlueth/qoopido.rescale",
+	"files": {
+		"basePath": "dist/"
+	}
+}

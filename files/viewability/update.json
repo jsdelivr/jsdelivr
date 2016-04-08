@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "viewability",
+  "repo": "kahwee/viewability",
+  "files": {
+    "basePath": "dist/",
+    "include": ["viewability.min.js"]
+  }
+}
