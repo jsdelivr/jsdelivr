@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flexpoint",
+  "repo": "franciscop/flexpoint",
+  "files": {
+  "include": ["*.css", "*.scss"]
+  }
+}
