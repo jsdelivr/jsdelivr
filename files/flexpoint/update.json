@@ -3,6 +3,6 @@
   "name": "flexpoint",
   "repo": "franciscop/flexpoint",
   "files": {
-  "include": ["*.css", "*.scss"]
+  "include": ["flexpoint.min.css"]
   }
 }
