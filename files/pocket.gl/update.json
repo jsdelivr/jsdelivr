@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pocket.gl",
+  "repo": "gportelli/pocket.gl",
+  "files": {
+    "basePath": "dist/",
+    "include": ["pocket.gl.min.js"]
+  }
+}
