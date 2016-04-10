@@ -4,6 +4,6 @@
   "repo": "limonte/sweetalert2",
   "files": {
     "basePath": "dist/",
-    "include": ["sweetalert2.min.js", "sweetalert2.min.css"]
+    "include": ["sweetalert2.min.js", "sweetalert2.css", "sweetalert2.min.css"]
   }
 }
