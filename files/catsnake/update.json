@@ -1,6 +1,6 @@
 {
   "packageManager": "npm",
-  "name": "catsnake",
+  "name": "pubsub",
   "repo": "catsnakejs/catsnake-client",
   "files": {
     "basePath": "build/",
