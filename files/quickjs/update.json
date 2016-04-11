@@ -4,6 +4,6 @@
   "repo": "mk2018/QuickJS",
   "files": {
     "basePath": "./build",
-    "include": ["quick.min.js, "quick.min.css"],
+    "include": ["quick.min.js, "quick.min.css"]
   }
 }
