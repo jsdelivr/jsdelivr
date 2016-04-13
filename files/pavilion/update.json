@@ -4,6 +4,6 @@
   "repo": "getpavilion/pavilion",
   "files": {
     "basePath": "/dist",
-    "include": ["pavilion.css", "pavilion.min.css", "pavilion.min.css.map"]
+    "include": ["pavilion.min.css", "pavilion.min.css.map"]
   }
 }
