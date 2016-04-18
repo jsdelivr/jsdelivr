@@ -3,6 +3,6 @@
   "name": "vk-api",
   "repo": "vk-x/vk-api",
   "files": {
-    "include": ["dist/*.js"]
+    "include": ["dist/*.min.js"]
   }
 }
