@@ -4,6 +4,6 @@
   "repo": "joesmith100/timrjs",
   "files": {
     "basePath": "dist/",
-    "include": ["timr.js", "timr.min.js"],
+    "include": ["timr.js", "timr.min.js"]
   }
 }
