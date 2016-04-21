@@ -2,4 +2,6 @@
   "packageManager": "bower",
   "name": "bootstrap-material-datetimepicker",
   "repo": "T00rk/bootstrap-material-datetimepicker"
+  "files": {
+  }
 }
