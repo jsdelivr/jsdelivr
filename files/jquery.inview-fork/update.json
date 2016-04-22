@@ -1,8 +1,8 @@
 
 {
-  "packageManager": "github",
-  "name": "angular.moment",
-  "repo": "urish/angular-moment",
+  "packageManager": "bower",
+  "name": "protonet/jquery.inview",
+  "repo": "protonet/jquery.inview",
   "files": {
     "include": ["jquery.inview.min.js", "jquery.inview.js"]
   }
