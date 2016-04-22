@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "github",
+  "name": "angular.moment",
+  "repo": "urish/angular-moment",
+  "files": {
+    "include": ["jquery.inview.min.js", "jquery.inview.js"]
+  }
+}
