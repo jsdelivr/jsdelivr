@@ -1,5 +1,5 @@
 {
-  "packageManager": "github",
+  "packageManager": "bower",
   "name": "seiyria-bootstrap-slider",
   "repo": "seiyria/bootstrap-slider/",
   "files": {
