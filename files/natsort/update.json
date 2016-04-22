@@ -4,7 +4,6 @@
   "repo": "bubkoo/natsort",
   "files": {
     "include": [
-      "index.js",
       "./dist/*"
     ]
   }
