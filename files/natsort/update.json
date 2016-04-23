@@ -4,7 +4,7 @@
   "repo": "bubkoo/natsort",
   "files": {
     "include": [
-      "./dist/"
+      "dist/"
     ]
   }
 }
