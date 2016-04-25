@@ -1,6 +1,6 @@
 
 {
-  "packageManager": "bower",
+  "packageManager": "github",
   "name": "protonet/jquery.inview",
   "repo": "protonet/jquery.inview",
   "files": {
