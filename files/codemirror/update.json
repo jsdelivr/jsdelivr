@@ -1,6 +1,6 @@
 {
-	"packageManager": "github",
-	"name": "CodeMirror",
+	"packageManager": "bower",
+	"name": "codemirror",
 	"repo": "codemirror/CodeMirror",
 	"files": {
 	}
