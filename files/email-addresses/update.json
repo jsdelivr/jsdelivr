@@ -3,6 +3,6 @@
   "name": "email-addresses",
   "repo": "jackbowman/email-addresses",
   "files": {
-    "include": ["email-addresses.js"]
+    "include": ["lib/email-addresses.js"]
   }
 }
