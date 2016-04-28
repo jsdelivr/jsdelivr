@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "monet.js",
+  "repo": "cwmyers/monet.js",
+  "files": {
+    "basePath": "src/main/javascript/"
+  }
+}
