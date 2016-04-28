@@ -1,0 +1,11 @@
+{
+  packageManager: "github",
+  name: "chat-template",
+  repo: "sevenleaps/chat-template",
+  files: {
+    include: [
+      "build/chat-template-min.js",
+      "build/chat-template.js"
+    ]
+  }
+}
