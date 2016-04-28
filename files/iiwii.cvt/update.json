@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "iiwii.cvt",
+  "repo": "iiwii/cvt",
+  "files": {
+    "include": ["as.js", "as.min.js", "as.min.js.map"]
+  }
+}
