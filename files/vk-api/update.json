@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "vk-api",
+  "repo": "vk-x/vk-api",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}
