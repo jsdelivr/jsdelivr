@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "chassis-x",
+  "repo": "ngnjs/chassis-libx",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}
