@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "crypto-js",
+  "repo": "brix/crypto-js",
+  "files": {
+    "include": ["*.js"]
+  }
+}
