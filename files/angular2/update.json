@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "angular2",
+  "files": {
+    "basePath": "bundles/",
+    "include": ["*.js"],
+  }
+}
