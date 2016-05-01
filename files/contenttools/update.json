@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ContentTools",
+  "repo": "GetmeUK/ContentTools",
+  "files": {
+    "basePath": "build/",
+    "include": ["**/*"]
+  }
+}
