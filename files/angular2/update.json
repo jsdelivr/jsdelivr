@@ -3,6 +3,6 @@
   "name": "angular2",
   "files": {
     "basePath": "bundles/",
-    "include": ["*.js"],
+    "include": ["*.js"]
   }
 }
