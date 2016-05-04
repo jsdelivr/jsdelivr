@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "swiper",
+  "repo": "nolimits4web/Swiper",
+  "files": {
+    "basePath": "dist/"
+  }
+}
