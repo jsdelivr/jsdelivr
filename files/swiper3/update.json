@@ -3,6 +3,7 @@
   "name": "swiper",
   "repo": "nolimits4web/Swiper",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "include": ["**/*.js", "**/*.css"]
   }
 }
