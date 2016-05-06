@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "xndarray",
+  "files": {
+    "include": ["xndarray.min.js"]
+  }
+}
