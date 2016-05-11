@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "klip",
+  "repo": "SoenkeHu/klipjs",
+  "files": {
+    "include": ["klip.min.js"]
+  }
+}
