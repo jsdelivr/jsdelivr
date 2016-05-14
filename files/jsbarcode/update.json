@@ -3,6 +3,6 @@
   "name": "JsBarcode",
   "repo": "lindell/JsBarcode",
   "files": {
-    "include": ["bin/browser/*.min.*"]
+    "include": ["bin/browser/*.min.*", "bin/browser/barcodes/*.min.*"]
   }
 }
