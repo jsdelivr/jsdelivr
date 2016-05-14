@@ -1,0 +1,10 @@
+{
+    "packageManager": "github",
+    "name": "jquery.csv-calc",
+    "repo": "sutara79/jquery.csv-calc",
+    "files": {
+        "include": [
+            "jquery.csv-calc.min.js"
+        ]
+    }
+}
