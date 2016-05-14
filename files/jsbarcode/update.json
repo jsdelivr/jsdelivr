@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "JsBarcode",
+  "repo": "lindell/JsBarcode",
+  "files": {
+    "include": ["bin/browser/*.min.*"]
+  }
+}
