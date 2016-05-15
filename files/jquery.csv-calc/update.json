@@ -3,8 +3,9 @@
     "name": "jquery.csv-calc",
     "repo": "sutara79/jquery.csv-calc",
     "files": {
+        "basePath": "dist/",
         "include": [
-            "dist/jquery.csv-calc.min.js"
+            "jquery.csv-calc.min.js"
         ]
     }
 }
