@@ -4,7 +4,7 @@
     "repo": "sutara79/jquery.csv-calc",
     "files": {
         "include": [
-            "jquery.csv-calc.min.js"
+            "dist/jquery.csv-calc.min.js"
         ]
     }
 }
