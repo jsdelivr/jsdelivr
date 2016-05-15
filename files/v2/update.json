@@ -3,7 +3,6 @@
   "name": "v2",
   "repo": "goessner/v2",
   "files": {
-    "basePath": "/",
     "include": ["v2.min.js"],
     "exclude": []
   }
