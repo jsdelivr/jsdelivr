@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dominic",
+  "repo": "bigopon/dominic",
+  "files": {
+    "include": ["dist/dominic.min.js"]
+  }
+}
