@@ -1,8 +1,8 @@
 {
   "packageManager": "github",
-  "name": "angular.moment",
-  "repo": "urish/angular-moment",
+  "name": "dominic",
+  "repo": "bigopon/dominic",
   "files": {
-    "include": ["angular-moment.js", "angular-moment.min.js", "angular-moment.min.js.map"]
+    "include": ["dist/dominic.min.js"]
   }
 }
