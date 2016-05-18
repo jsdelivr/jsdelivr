@@ -3,7 +3,7 @@
   "name": "JsBarcode",
   "repo": "lindell/JsBarcode",
   "files": {
-    "basePath": "bin/browser/",
+    "basePath": "dist/",
     "include": ["*.min.*", "./barcodes/*.min.*"]
   }
 }
