@@ -4,6 +4,6 @@
   "repo": "subprotocol/genetic-js",
   "files": {
     "basePath": "lib/",
-    "include": ["dist.js"]
+    "include": ["dist.js", "genetic.js"]
   }
 }
