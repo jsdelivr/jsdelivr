@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lai32290",
+  "repo": "lai32290/TableHeadFixer",
+  "files": {
+    "include": ["tableHeadFixer.js"]
+  }
+}
