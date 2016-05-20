@@ -1,0 +1,21 @@
+<div class="wizard" {{#unless doNotInit}}data-initialize="wizard"{{/unless}} id="{{#if id}}{{id}}{{else}}myWizard{{/if}}">
+	<div class="steps-container">
+		<ul class="steps">
+			{{#each steps}}
+				<li data-step="{{step}}" class="{{#if active}}active{{/if}}{{#if complete}}complete{{/if}}"><span class="badge">{{stepBadge}}</span>{{stepLabel}}<span class="chevron"></span></li>
+			{{/each}}
+		</ul>
+	</div>
+	<div class="actions">
+		<button type="button" class="btn btn-default btn-prev"><span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+		<button type="button" class="btn btn-default btn-next" data-last="Complete">Next<span class="glyphicon glyphicon-arrow-right"></span></button>
+	</div>
+	<div class="step-content">
+		{{#each steps}}
+			<div class="step-pane{{#if active}} active{{/if}}{{#if styles}} {{styles}}{{/if}}" data-step="{{step}}">
+				{{#if title}}<h4>{{title}}</h4>{{/if}}
+				{{{content}}}
+			</div>
+		{{/each}}
+	</div>
+</div>

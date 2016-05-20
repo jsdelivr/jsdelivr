@@ -1,0 +1,75 @@
+{
+    "lang": "lt", 
+    "date": {
+        "month_abbr": [
+            "Saus.", 
+            "Vas.", 
+            "Kov.", 
+            "Bal.", 
+            "Geg.", 
+            "Birž.", 
+            "Liep.", 
+            "Rugpj.", 
+            "Rug.", 
+            "Spal.", 
+            "Lapkr.", 
+            "Gruod."
+        ], 
+        "day_abbr": [
+            "Sek.", 
+            "Pirm.", 
+            "Antr.", 
+            "Treč.", 
+            "Ketv.", 
+            "Penkt.", 
+            "Šešt."
+        ], 
+        "day": [
+            "Sekmadienis", 
+            "Pirmadienis", 
+            "Antradienis", 
+            "Trečiadienis", 
+            "Ketvirtadienis", 
+            "Penktadienis", 
+            "Šeštadienis"
+        ], 
+        "month": [
+            "Sausio", 
+            "Vasario", 
+            "Kovo", 
+            "Balandžio", 
+            "Gegužės", 
+            "Birželio", 
+            "Liepos", 
+            "Rugpjūčio", 
+            "Rugsėjo", 
+            "Spalio", 
+            "Lapkričio", 
+            "Gruodžio"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "lt"
+    }, 
+    "messages": {
+        "loading": "Kraunama", 
+        "contract_timeline": "Sutraukti laiko juostą", 
+        "return_to_title": "Grįžti į titulinį", 
+        "wikipedia": "Iš Vikipedijos, laisvosios enciklopedijos", 
+        "loading_content": "Kraunamas turinys... ", 
+        "expand_timeline": "Išplėsti laiko juostą", 
+        "loading_timeline": "Kraunama laiko juosta... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

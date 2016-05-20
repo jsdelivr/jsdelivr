@@ -1,0 +1,2 @@
+
+window.Genetic = require('./genetic');

@@ -1,0 +1,76 @@
+{
+    "lang": "de",
+    "date": {
+        "month_abbr": [
+            "Jan.",
+            "Feb.",
+            "März",
+            "Apr.",
+            "Mai",
+            "Juni",
+            "Juli",
+            "Aug.",
+            "Sept.",
+            "Okt.",
+            "Nov.",
+            "Dez."
+        ],
+        "day_abbr": [
+            "So.",
+            "Mo.",
+            "Di.",
+            "Mi.",
+            "Do.",
+            "Fr.",
+            "Sa."
+        ],
+        "day": [
+            "Sonntag",
+            "Montag",
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag",
+            "Samstag"
+        ],
+        "month": [
+            "Januar",
+            "Februar",
+            "März",
+            "April",
+            "Mai",
+            "Juni",
+            "Juli",
+            "August",
+            "September",
+            "Oktober",
+            "November",
+            "Dezember"
+        ]
+    },
+    "api": {
+        "wikipedia": "de"
+    },
+    "messages": {
+        "loading": "Loading",
+        "contract_timeline": "Chronologie verkleinern",
+        "return_to_title": "Zurück zum Anfang",
+        "wikipedia": "Wikipedia, Die freie Enzyklopädie",
+        "loading_content": "Loading",
+        "swipe_to_navigate": "Streichen um zu navigieren<br><span class='tl-button'>OK</span>",
+        "expand_timeline": "Chronologie vergrößern", 
+        "loading_timeline": "Chronologie wird geladen..."
+    },
+    "dateformats": {
+        "full_long": "dddd',' d. mmm yyyy 'um' HH:MM",
+        "full_short": "d. mmm",
+        "full": "d. mmmm yyyy",
+        "month_short": "mmm",
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm yyyy'</small>'",
+        "month": "mmmm yyyy",
+        "time_no_seconds_short": "HH:MM",
+        "time_short": "HH:MM:ss",
+        "year": "yyyy",
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d. mmm yyyy'</small>'"
+    }
+}
