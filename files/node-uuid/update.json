@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "node-uuid",
+  "repo": "broofa/node-uuid",
+  "files": {
+    "include": ["uuid.js"]
+  }
+}
