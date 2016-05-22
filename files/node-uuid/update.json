@@ -1,5 +1,5 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "node-uuid",
   "repo": "broofa/node-uuid",
   "files": {
