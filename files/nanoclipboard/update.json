@@ -3,6 +3,7 @@
   "name": "nanoclipboard",
   "repo": "bornbit/nanoclipboard",
   "files": {
-    "include": ["dist/nanoclipboard.min.js"]
+    "basePath": "dist/",
+    "include": ["nanoclipboard.min.js"]
   }
 }
