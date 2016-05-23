@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "SmartUIKit",
+  "repo": "smartincorp/smartuikit",
+  "files": {
+    "exclude": [
+      "CNAME", "README.md", "LICENSE"
+    ]
+  }
+}
