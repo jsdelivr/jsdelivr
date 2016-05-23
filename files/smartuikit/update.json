@@ -4,7 +4,7 @@
   "repo": "smartincorp/smartuikit",
   "files": {
     "exclude": [
-      "CNAME", "README.md", "LICENSE"
+      README.md", "LICENSE"
     ]
   }
 }
