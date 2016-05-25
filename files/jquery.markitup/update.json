@@ -1,4 +1,7 @@
 {
   "packageManager": "bower",
-  "name": "markitup"
+  "name": "markitup",
+  "files": {
+    "include": [ "./markitup/jquery.markitup.js", "./markitup/sets/**/*", "./markitup/skins/**/*", "./images/*" ]
+  }
 }
