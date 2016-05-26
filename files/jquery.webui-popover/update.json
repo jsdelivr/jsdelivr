@@ -3,6 +3,6 @@
   "name": "webui-popover",
   "repo": "sandywalker/webui-popover",
   "files": {
-    "include": [ "img/loading.gif,dist/jquery.webui-popover.min.js","dist/jquery.webui-popover.min.css"]
+    "include": [ "img/loading.gif","dist/jquery.webui-popover.min.js","dist/jquery.webui-popover.min.css"]
   }
 }
