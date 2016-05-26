@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "g2.mec",
+  "repo": "goessner/g2-mec",
+  "files": {
+    "include": ["g2.mec.min.js"],
+    "exclude": []
+  }
+}
