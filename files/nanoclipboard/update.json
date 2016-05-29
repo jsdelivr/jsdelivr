@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "nanoclipboard",
+  "repo": "bornbit/nanoclipboard",
+  "files": {
+    "basePath": "dist/",
+    "include": ["nanoclipboard.min.js"]
+  }
+}
