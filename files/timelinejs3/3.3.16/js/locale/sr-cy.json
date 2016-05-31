@@ -1,0 +1,75 @@
+{
+    "lang": "рп", 
+    "date": {
+        "month_abbr": [
+            "Јан.", 
+            "Феб.", 
+            "Март", 
+            "Апр.", 
+            "Мај", 
+            "Јун", 
+            "Јул", 
+            "Авг.", 
+            "Сеп.", 
+            "Окт.", 
+            "Нов.", 
+            "Дец."
+        ], 
+        "day_abbr": [
+            "Нед.", 
+            "Пон.", 
+            "Уто.", 
+            "Сре.", 
+            "Чет.", 
+            "Пет.", 
+            "Суб."
+        ], 
+        "day": [
+            "Недеља", 
+            "Понедељак", 
+            "Уторак", 
+            "Среда", 
+            "Четвртак", 
+            "Петак", 
+            "Субота"
+        ], 
+        "month": [
+            "Јануар", 
+            "Фебруар", 
+            "Март", 
+            "Април", 
+            "Мај", 
+            "Јун", 
+            "Јул", 
+            "Август", 
+            "Септембар", 
+            "Октобар", 
+            "Новембар", 
+            "Децембар"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "рп"
+    }, 
+    "messages": {
+        "loading": "Учитава се", 
+        "contract_timeline": "Умањи", 
+        "return_to_title": "Почетак", 
+        "wikipedia": "Из Википедије, слободне енциклопедије", 
+        "loading_content": "Садржај се учитава", 
+        "expand_timeline": "Увећај", 
+        "loading_timeline": "Учитавање... "
+    }, 
+    "dateformats": {
+        "full_long": "d. mmm yyyy. 'u' HH:MM", 
+        "full_short": "d. mmm", 
+        "full": "d. mmmm yyyy.", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm yyyy.'</small>'", 
+        "month": "mmmm yyyy.", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy.", 
+        "full_long_small_date": "HH:MM'<br/><small>d. mmm yyyy.'</small>'"
+    }
+}
