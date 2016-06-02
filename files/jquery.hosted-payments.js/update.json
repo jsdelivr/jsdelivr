@@ -1,0 +1,13 @@
+{
+    packageManager: "github",
+    name: "hosted-payments",
+    repo: "etsms/hosted-payments",
+    files: {
+        include: [
+            "jquery.hosted-payments.js",
+            "jquery.hosted-payments.min.js",
+            "jquery.hosted-payments.css",
+            "jquery.hosted-payments.min.css"
+        ]
+    }
+}
