@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "mark.js",
+  "repo": "julmot/mark.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
