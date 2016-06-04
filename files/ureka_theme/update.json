@@ -1,5 +1,8 @@
 {
   "packageManager": "github",
   "name": "ureka_theme",
-  "repo": "propertunist/ureka_theme"
+  "repo": "propertunist/ureka_theme",
+  "files": {
+    "include": ["**/*"]
+  }
 }
