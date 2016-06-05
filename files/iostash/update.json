@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "iostash",
+  "repo": "iostashiot/Client-Libraries/tree/master/Javascript%20-%20Web",
+  "files": {
+    "include": ["iostash.js"]
+  }
+}
