@@ -1,8 +1,9 @@
 {
   "packageManager": "github",
   "name": "iostash",
-  "repo": "iostashiot/Client-Libraries/tree/master/Javascript%20-%20Web",
+  "repo": "iostashiot/Client-Libraries",
   "files": {
+    "basePath": "Javascript - Web"
     "include": ["iostash.js"]
   }
 }
