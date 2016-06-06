@@ -3,6 +3,6 @@
 	"name": "picnicss",
 	"repo": "picnicss/picnic",
 	"files": {
-		"include": "picnic.min.css"
+		"include": ["picnic.min.css"]
 	}
 }
