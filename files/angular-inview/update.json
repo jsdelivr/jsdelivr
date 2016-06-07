@@ -1,0 +1,8 @@
++{
++  "packageManager": "github",
++  "name": "angular-inview",
++  "repo": "thenikso/angular-inview",
++  "files": {
++    "include": ["angular-inview.js"]
++  }
++}
