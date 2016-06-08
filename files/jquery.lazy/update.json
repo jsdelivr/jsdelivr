@@ -3,6 +3,9 @@
   "name": "jquery.lazy",
   "repo": "eisbehr-/jquery.lazy",
   "files": {
-    "include": ["jquery.lazy.min.js"]
+    "include": [
+      "jquery*.min.js",
+      "plugins/jquery*.min.js"
+    ]
   }
 }
