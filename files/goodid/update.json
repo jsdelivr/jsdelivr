@@ -3,6 +3,6 @@
   "name": "goodid",
   "repo": "idandtrust/goodid",
   "files": {
-    "include": ["connect.js", "connect.min.js"]
+    "include": ["connect.min.js"]
   }
 }
