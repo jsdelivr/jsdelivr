@@ -4,6 +4,6 @@
   "repo": "brianreavis/selectize.js",
   "files": {
     "basePath": "dist/",
-    "exclude": ["less/*"]
+    "exclude": ["less/**/*"]
   }
 }
