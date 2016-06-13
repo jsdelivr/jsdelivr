@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "amdcdn",
+  "repo": "zebMcCorkle/amdcdn",
+  "files": {
+    "include": ["output.js", "output.min.js"]
+  }
+}
