@@ -3,6 +3,6 @@
   "name": "jquery.tooltipster",
   "repo": "iamceege/tooltipster",
   "files": {
-	"include": ["./css/**/*", "./js/**/*"]
+	"include": ["./dist/**/*.min.js", "./dist/**/*.min.css"]
   }
 }
