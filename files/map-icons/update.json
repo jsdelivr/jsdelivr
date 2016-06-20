@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "map-icons",
+  "repo": "scottdejonge/map-icons",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js/map-icons.min.js", "css/map-icons.min.css", "fonts/map-icons.eot", "fonts/map-icons.svg", "fonts/map-icons.ttf", "fonts/map-icons.woff"]
+  }
+}
