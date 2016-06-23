@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-wikipedia",
+  "repo": "JohnnyTheTank/apiNG-plugin-wikipedia",
+  "files": {
+    "include": ["dist/*"]
+  }
+}
