@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "videogular.youtube",
+  "repo": "NamPNQ/bower-videogular-youtube",
+  "files": {
+    "include": ["youtube.js"]
+  }
+}
