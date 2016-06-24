@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.device-detector",
+  "repo": "srfrnk/ng-device-detector",
+  "files": {
+    "include": ["ng-device-detector.js", "videogularng-device-detector.min.js"]
+  }
+}
