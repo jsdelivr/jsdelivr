@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "videogular.controls",
+  "repo": "videogular/bower-videogular-controls",
+  "files": {
+    "include": ["vg-controls.js", "vg-controls.min.js"]
+  }
+}
