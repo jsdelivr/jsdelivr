@@ -3,6 +3,7 @@
   "name": "candy-grid-system",
   "repo": "andreamariotti83/candy-grid-system",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
++   "exclude": ["12-candygs.css", "12-candygs-rtl.css", "16-candygs.css", "16-candygs-rtl.css", "24-candygs.css", "24-candygs-rtl.css"]
   }
 }
