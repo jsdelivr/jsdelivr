@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "videogular.buffering",
+  "repo": "videogular/bower-videogular-buffering",
+  "files": {
+    "include": ["videogularvg-buffering.js", "vg-buffering.min.js"]
+  }
+}
