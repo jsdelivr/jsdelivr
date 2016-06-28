@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-star-rating",
+  "repo": "kartik-v/bootstrap-star-rating",
+  "files": {
+    "include": [“css/star-rating.min", “js/star-rating.min”]
+  }
+}
