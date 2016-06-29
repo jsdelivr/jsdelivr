@@ -3,6 +3,6 @@
   "name": "bootstrap-star-rating",
   "repo": "kartik-v/bootstrap-star-rating",
   "files": {
-    "include": [“css/star-rating.min.css", “js/star-rating.min.js”]
+    "include": ["css/star-rating.min.css", "js/star-rating.min.js"]
   }
 }
