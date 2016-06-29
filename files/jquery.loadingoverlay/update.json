@@ -1,0 +1,13 @@
+{
+    "packageManager"    : "github",
+    "name"              : "jquery-loading-overlay",
+    "repo"              : "gasparesganga/jquery-loading-overlay",
+    "files"             : {
+        "basePath"  : "/",
+        "include"   : [
+            "src/*.js",
+            "src/loading.gif",
+            "extras/loadingoverlay_progress/*.js"
+        ]
+    }
+}
