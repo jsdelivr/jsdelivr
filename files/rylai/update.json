@@ -2,4 +2,7 @@
   "packageManager": "github",
   "name": "rylai",
   "repo": "kaniwari/rylaicdn"
+  "files": {
+    "basePath": "dist/"
+  }
 }
