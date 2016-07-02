@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "rylai",
+  "name": "rylaicdn",
   "repo": "kaniwari/rylaicdn",
   "files": {
     "include": ["./*"]
