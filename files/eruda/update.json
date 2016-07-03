@@ -3,7 +3,6 @@
   "name": "eruda",
   "repo": "liriliri/eruda",
   "files": {
-     "basePath": "dist/",
      "include": ["eruda.js", "eruda.min.js"]
   }
 }
