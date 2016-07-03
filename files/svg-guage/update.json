@@ -1,8 +1,8 @@
 {
   "packageManager": "github",
-  "name": "svg-guage",
-  "repo": "naikus/svg-guage",
+  "name": "svg-gauge",
+  "repo": "naikus/svg-gauge",
   "files": {
-    "include": ["src/guage.js"]
+    "include": ["dist/gauge.js", "dist/guage.min.js"]
   }
 }
