@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "AvatarJS",
+  "repo": "https://github.com/IPENGR/AvatarJS.git",
+  "files": {
+    "basePath": "0.2.0",
+    "include": ["avatarServices.min.js"]
+  }
+}
