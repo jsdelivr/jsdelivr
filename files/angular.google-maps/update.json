@@ -3,6 +3,7 @@
   "name": "angular-google-maps",
   "repo": "angular-ui/angular-google-maps",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "exclude": ["architecture/"]
   }
 }
