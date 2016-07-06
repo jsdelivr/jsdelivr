@@ -1,0 +1,185 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.utils"[label="uiGmapgoogle-maps.directives.api.utils", color=1]
+
+    
+      "uiGmapgoogle-maps.extensions"[label="uiGmapgoogle-maps.extensions", color=1]
+      "uiGmapgoogle-maps.extensions" -> "uiGmapgoogle-maps.directives.api.utils"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmap_sync"[label="uiGmap_sync", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmap_sync"
+    
+      "uiGmap_async"[label="uiGmap_async", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmap_async"
+    
+      "uiGmapCtrlHandle"[label="uiGmapCtrlHandle", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapCtrlHandle"
+    
+      "uiGmapEventsHelper"[label="uiGmapEventsHelper", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapEventsHelper"
+    
+      "uiGmapFitHelper"[label="uiGmapFitHelper", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapFitHelper"
+    
+      "uiGmapGmapUtil"[label="uiGmapGmapUtil", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapGmapUtil"
+    
+      "uiGmapIsReady"[label="uiGmapIsReady", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapIsReady"
+    
+      "uiGmapLogger"[label="uiGmapLogger", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapLogger"
+    
+      "uiGmapPromise"[label="uiGmapPromise", color=5]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapPromise"
+    
+
+    
+      "uiGmapBaseObject"[label="uiGmapBaseObject", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapBaseObject"
+    
+      "uiGmapChildEvents"[label="uiGmapChildEvents", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapChildEvents"
+    
+      "uiGmapLinked"[label="uiGmapLinked", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapLinked"
+    
+      "uiGmapModelKey"[label="uiGmapModelKey", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapModelKey"
+    
+      "uiGmapModelsWatcher"[label="uiGmapModelsWatcher", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapModelsWatcher"
+    
+      "uiGmapPropMap"[label="uiGmapPropMap", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapPropMap"
+    
+      "uiGmapPropertyAction"[label="uiGmapPropertyAction", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapPropertyAction"
+    
+      "uiGmapChromeFixes"[label="uiGmapChromeFixes", color=6]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapChromeFixes"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+      
+    
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmap_async"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmap_async"
+      
+        "uiGmapDataStructures"[label="uiGmapDataStructures"]
+        "uiGmapDataStructures" -> "uiGmap_async"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmap_async"
+      
+    
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapEventsHelper"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapFitHelper"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapGmapUtil"
+      
+    
+      
+    
+      
+        "nemSimpleLogger"[label="nemSimpleLogger"]
+        "nemSimpleLogger" -> "uiGmapLogger"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapPromise"
+      
+    
+
+    
+      
+    
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapLinked"
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapModelKey"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapModelKey"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapModelsWatcher"
+      
+        "uiGmap_async"[label="uiGmap_async"]
+        "uiGmap_async" -> "uiGmapModelsWatcher"
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmapModelsWatcher"
+      
+    
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapPropertyAction"
+      
+    
+      
+    
+
+    
+
+
+}

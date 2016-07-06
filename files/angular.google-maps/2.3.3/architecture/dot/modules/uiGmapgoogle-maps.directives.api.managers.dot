@@ -1,0 +1,102 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.managers"[label="uiGmapgoogle-maps.directives.api.managers", color=1]
+
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmapGoogleMapObjectManager"[label="uiGmapGoogleMapObjectManager", color=5]
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapGoogleMapObjectManager"
+    
+
+    
+      "uiGmapClustererMarkerManager"[label="uiGmapClustererMarkerManager", color=6]
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapClustererMarkerManager"
+    
+      "uiGmapMarkerManager"[label="uiGmapMarkerManager", color=6]
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapMarkerManager"
+    
+      "uiGmapSpiderfierMarkerManager"[label="uiGmapSpiderfierMarkerManager", color=6]
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapSpiderfierMarkerManager"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+      
+    
+
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapClustererMarkerManager"
+      
+        "uiGmapFitHelper"[label="uiGmapFitHelper"]
+        "uiGmapFitHelper" -> "uiGmapClustererMarkerManager"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapClustererMarkerManager"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapClustererMarkerManager"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMarkerManager"
+      
+        "uiGmapFitHelper"[label="uiGmapFitHelper"]
+        "uiGmapFitHelper" -> "uiGmapMarkerManager"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapMarkerManager"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapSpiderfierMarkerManager"
+      
+        "uiGmapFitHelper"[label="uiGmapFitHelper"]
+        "uiGmapFitHelper" -> "uiGmapSpiderfierMarkerManager"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapSpiderfierMarkerManager"
+      
+        "uiGmapMarkerSpiderfier"[label="uiGmapMarkerSpiderfier"]
+        "uiGmapMarkerSpiderfier" -> "uiGmapSpiderfierMarkerManager"
+      
+    
+
+    
+
+
+}

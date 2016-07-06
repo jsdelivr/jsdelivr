@@ -1,0 +1,118 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.models.child"[label="uiGmapgoogle-maps.directives.api.models.child", color=1]
+
+    
+      "uiGmapgoogle-maps.directives.api.utils"[label="uiGmapgoogle-maps.directives.api.utils", color=1]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+      "uiGmapgoogle-maps.directives.api.options"[label="uiGmapgoogle-maps.directives.api.options", color=1]
+      "uiGmapgoogle-maps.directives.api.options" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+      "uiGmapgoogle-maps.directives.api.options.builders"[label="uiGmapgoogle-maps.directives.api.options.builders", color=1]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+
+    
+      "uiGmapDrawFreeHandChildModel"[label="uiGmapDrawFreeHandChildModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.child" -> "uiGmapDrawFreeHandChildModel"
+    
+      "uiGmapMarkerChildModel"[label="uiGmapMarkerChildModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.child" -> "uiGmapMarkerChildModel"
+    
+      "uiGmapWindowChildModel"[label="uiGmapWindowChildModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.child" -> "uiGmapWindowChildModel"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapDrawFreeHandChildModel"
+      
+    
+      
+        "uiGmapModelKey"[label="uiGmapModelKey"]
+        "uiGmapModelKey" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapPropertyAction"[label="uiGmapPropertyAction"]
+        "uiGmapPropertyAction" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapMarkerOptions"[label="uiGmapMarkerOptions"]
+        "uiGmapMarkerOptions" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapIMarker"[label="uiGmapIMarker"]
+        "uiGmapIMarker" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapMarkerManager"[label="uiGmapMarkerManager"]
+        "uiGmapMarkerManager" -> "uiGmapMarkerChildModel"
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmapMarkerChildModel"
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapWindowChildModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapWindowChildModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapWindowChildModel"
+      
+        "uiGmapChromeFixes"[label="uiGmapChromeFixes"]
+        "uiGmapChromeFixes" -> "uiGmapWindowChildModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapWindowChildModel"
+      
+    
+
+    
+
+
+}
