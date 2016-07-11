@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "hello.js",
+  "repo": "MrSwitch/hello.js",
+  "files": {
+    "basePath": "/dist/"
+  }
+}
