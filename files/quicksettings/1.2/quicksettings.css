@@ -1,0 +1,77 @@
+.msettings_main {
+	background-color: #dddddd;
+	text-align:left;
+	position: absolute;
+	width: 200px;
+	font: 12px sans-serif;
+	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+	user-select: none;
+  	-webkit-user-select: none;
+}
+
+.msettings_content {
+	background-color: #dddddd;
+	overflow-y: auto;
+}
+
+.msettings_title_bar {
+	background-color: #ffffff;
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+	padding: 5px;
+	border: 1px #eeeeee solid;
+}
+
+.msettings_container {
+	margin: 5px;
+	padding: 5px;
+	background-color: #eeeeee;
+}
+
+.msettings_range {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.msettings_checkbox {
+	margin-left: 5px;
+}
+
+.msettings_checkbox_label {
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+}
+
+.msettings_label {
+	margin-bottom: 3px;
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+}
+
+.msettings_text_input {
+  width: 90%;
+
+}
+
+.msettings_select {
+	
+}
+
+.msettings_image {
+	width: 100%;
+}
+
+.msettings_progress {
+	width: 100%;
+}
+
+.msettings_textarea {
+  resize: vertical;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
