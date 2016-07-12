@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "blezyy",
-  "repo": "DheepaKumar123/jsdeliver",
+  "repo": "https://github.com/DheepaKumar123/jsdeliver",
   "files": {
     "basePath": "dist/"
   }
