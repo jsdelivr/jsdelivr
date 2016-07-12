@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "blezzy",
+  "repo": "DheepaKumar123/jsdeliver",
+  "files": {
+    "basePath": "dist/"
+  }
+}
