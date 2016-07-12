@@ -3,6 +3,7 @@
   "name": "hello.js",
   "repo": "MrSwitch/hello.js",
   "files": {
-    "basePath": "/dist/"
+    "basePath": "dist/",
+    "include": ["*.min.js"]
   }
 }
