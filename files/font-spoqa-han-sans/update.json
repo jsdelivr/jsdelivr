@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "font-SpoqaHanSans",
+  "repo": "the1900/spoqa-han-sans",
+  "files": {
+    "include": ["Subset/**/*", "css/**/*"]
+  }
+}
