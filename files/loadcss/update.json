@@ -5,5 +5,5 @@
   "files": {
     "basePath": "src/",
     "include": ["*.js"]
-  
+  }
 }
