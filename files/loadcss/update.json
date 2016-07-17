@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "loadcss",
+  "repo": "filamentgroup/loadCSS",
+  "files": {
+    "basePath": "src/",
+    "include": ["*.js"]
+  
+}
