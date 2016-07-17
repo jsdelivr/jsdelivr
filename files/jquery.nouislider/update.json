@@ -1,6 +1,6 @@
 {
-  "packageManager": "github",
-  "name": "noUiSlider",
+  "packageManager": "bower",
+  "name": "nouislider",
   "repo": "leongersen/noUiSlider",
   "files": {
     "basePath": "distribute/",
