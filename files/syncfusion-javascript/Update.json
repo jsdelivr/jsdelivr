@@ -1,0 +1,9 @@
+{
+    "packageManager": "github",
+    "name": "syncfusion-javascript",
+    "repo": "https://github.com/syncfusion/JavaScript-Widgets",
+    "files": {
+      "basePath": "Content/",
+	           "Scripts/"
+    
+}
