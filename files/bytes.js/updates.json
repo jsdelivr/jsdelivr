@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bytes.js",
+  "repo": "visionmedia/bytes.js",
+  "files": {
+    "include": ["index.js" ]
+  }
+}
