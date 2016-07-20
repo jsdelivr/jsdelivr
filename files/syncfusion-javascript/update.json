@@ -5,6 +5,6 @@
     "files": {
       "basePath": "Content/",
 	           "Scripts/" ,
-    "exclude": ["Scripts/ej/ej.widgets.all.min.js"]
+    "exclude": ["ej/ej.widgets.all.min.js"]
 }
 }
