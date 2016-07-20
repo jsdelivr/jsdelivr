@@ -4,7 +4,7 @@
     "repo": "syncfusion/JavaScript-Widgets",
     "files": {
       "basePath": "Content/",
-	           "Scripts/",
+	           "Scripts/" ,
     "exclude": ["Scripts/ej/ej.widgets.all.min.js"]
 }
 }
