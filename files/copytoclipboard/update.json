@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "CopyToClipboard",
+  "repo": "sudheerkaku/CopyToClipboard",
+  "files": {
+    "basePath": "dist",
+    "include": [ "CopyToClipboard.js", "CopyToClipboard.min.js" ]
+  }
+}
