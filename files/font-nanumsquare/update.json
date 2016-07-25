@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "font-nanumsquare",
+  "repo": "wesky93/font-nanumsquare",
+  "files": {
+    "include": ["nanumsquare.css","*.eot","*.ttf","*.woff","*.woff2"]
+  }
+}
