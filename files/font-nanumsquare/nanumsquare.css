@@ -1,0 +1,31 @@
+/* 
+ * Nanum Square Web Fonts
+ * https://github.com/hiun/NanumSquare
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com) 
+ */
+ 
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./nanumsquarer.eot);
+  src: local('Nanum Square Regular'),
+       local('NanumSquareR'),
+       url(./nanumsquarer.eot?#iefix) format('embedded-opentype'),
+       url(./nanumsquarer.woff2) format('woff2'),
+       url(./nanumsquarer.woff) format('woff'),
+       url(./nanumsquarer.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: url(./nanumsquareb.eot);
+  src: local('Nanum Square Bold'),
+       local('NanumSquareB'),
+       url(./nanumsquareb.eot?#iefix) format('embedded-opentype'),
+       url(./nanumsquareb.woff2) format('woff2'),
+       url(./nanumsquareb.woff) format('woff'),
+       url(./nanumsquareb.ttf) format('truetype');
+}
