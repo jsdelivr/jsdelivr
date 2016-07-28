@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "LeaVerou/bliss",
+  "repo": "LeaVerou/bliss",
+  "files": {
+    "include": ["bliss.min.js", "bliss.js", "bliss.shy.js", "bliss.shy.min.js"]
+  }
+}
