@@ -3,6 +3,6 @@
   "name": "angular-base-apps",
   "repo": "base-apps/angular-base-apps",
   "files": {
-    "include": ["base-apps.css", "base-apps.min.css", "base-apps.js", "base-apps.min.js", "base-apps-templates.js", "base-apps-templates.min.js"]
+    "include": ["dist/css/base-apps.css", "dist/css/base-apps.min.css", "dist/js/base-apps.js", "dist/js/base-apps.min.js", "dist/js/base-apps-templates.js", "dist/js/base-apps-templates.min.js"]
   }
 }
