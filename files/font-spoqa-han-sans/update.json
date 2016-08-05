@@ -3,6 +3,6 @@
   "name": "font-SpoqaHanSans",
   "repo": "spoqa/spoqa-han-sans",
   "files": {
-    "include": ["Subset/**/*", "css/**/*"]
+    "include": ["./Subset/**/*", "./css/**/*"]
   }
 }
