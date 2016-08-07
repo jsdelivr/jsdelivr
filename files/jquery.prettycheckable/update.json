@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "prettyCheckable",
+  "repo": "arthurgouveia/prettyCheckable",
+  "files": {
+    "include": ["./img/*", "dist/*"],
+    "exclude": ["./img/sprites/*"]
+  }
+}

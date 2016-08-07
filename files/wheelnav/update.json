@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "wheelnav",
+  "repo": "softwaretailoring/wheelnav",
+  "files": {
+    "basePath": "js/dist",
+    "include": ["wheelnav.min.js", "wheelnav.min.js.map"]
+  }
+}

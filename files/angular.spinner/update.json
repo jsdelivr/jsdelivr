@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.spinner",
+  "repo": "urish/angular-spinner",
+  "files": {
+    "include": ["angular-spinner.js", "angular-spinner.min.js", "angular-spinner.min.js.map"]
+  }
+}

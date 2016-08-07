@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "525icons",
+  "repo": "runestro/525icons",
+  "files": {
+    "basePath": "fonts/",
+    "include": ["525icons.css", "525icons.min.css", "525icons.eot", "525icons.svg", "525icons.ttf", "525icons.woff", "525icons.woff2"]
+  }
+}

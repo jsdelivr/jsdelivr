@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "ally.js",
+  "repo": "medialize/ally.js",
+  "files": {
+    "include": ["ally.min.js", "ally.min.js.map"]
+  }
+}

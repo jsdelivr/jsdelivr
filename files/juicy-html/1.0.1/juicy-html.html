@@ -1,0 +1,113 @@
+<!--
+juicy-html.html
+(c) 2013-2015 Juicy
+MIT license
+https://github.com/Juicy/juicy-html
+version: 1.0.1
+-->
+<script>
+  (function (scope) {
+    var JuicyHTMLPrototype = Object.create( (HTMLTemplateElement || HTMLElement ).prototype);
+
+
+    JuicyHTMLPrototype.createdCallback = function(){
+        var model = null;
+        Object.defineProperty(this, "model",{
+            set: function(newValue){
+                model = newValue;
+                this.attachModel(newValue);
+            },
+            get: function(){
+             return model;
+            }
+        });
+    };
+    JuicyHTMLPrototype.stampedNodes = null;
+    JuicyHTMLPrototype.loadTemplate_ = function() {
+      var val = this.getAttribute('content');
+      if (val && (val.indexOf('/') === 0 || val.indexOf('./') === 0 || val.indexOf('../') === 0)) {
+        //val is a URL, load the partial from the HTTP server/cache
+        var oReq = new XMLHttpRequest();
+        var that = this;
+        oReq.onload = function (event) {
+          that.reattachTemplate_(event.target.responseText);
+        };
+        oReq.open("GET", val, true);
+        oReq.send();
+      }
+      else {
+        //val is HTML code, insert the partial from the string
+        this.reattachTemplate_(val);
+      }
+    };
+
+    JuicyHTMLPrototype.reattachTemplate_ = function(html) {
+      this.clear();
+      // fragmentFromString(strHTML) from http://stackoverflow.com/a/25214113/868184
+      var fragment = document.createRange().createContextualFragment(html);
+      // convert dynamic NodeList to regullar array
+      this.stampedNodes = Array.prototype.slice.call(fragment.childNodes);
+      // attach models
+      this.attributeChangedCallback("model", undefined, this.model || this.getAttribute("model"));
+      this.parentNode.insertBefore(fragment, this.nextSibling);
+      this.dispatchEvent(new CustomEvent("stamped", {detail: this.stampedNodes}));
+
+    };
+
+    /**
+     * Remove stamped content.
+     */
+    JuicyHTMLPrototype.clear = function(){
+      var parent = this.parentNode;
+      var childNo = this.stampedNodes && this.stampedNodes.length || 0;
+      var child;
+      while(childNo--){
+        // this.stampedNodes[childNo].remove();
+        child = this.stampedNodes[childNo];
+        if (child.parentNode) {
+          child.parentNode.removeChild(child);
+        }
+      }
+    };
+
+    JuicyHTMLPrototype.isAttached = false;
+    JuicyHTMLPrototype.attachedCallback = function () {
+      this.isAttached = true;
+      this.loadTemplate_();
+    };
+    JuicyHTMLPrototype.detachedCallback = function(){
+      this.isAttached = false;
+      this.clear();
+    };
+    JuicyHTMLPrototype.attributeChangedCallback = function(name, oldVal, newVal){
+      if(this.isAttached){
+          switch(name){
+              case "model":
+                if (typeof newVal === "string") {
+                    newVal = newVal ? JSON.parse(newVal) : null;
+                }
+                this.model = newVal;
+                break;
+              case "content":
+                this.loadTemplate_();
+                break;
+          }
+      }
+    };
+
+    JuicyHTMLPrototype.attachModel = function(model, arrayOfElements){
+        arrayOfElements || (arrayOfElements = this.stampedNodes);
+        if (model === null || !arrayOfElements) {
+            return;
+        }
+        for (var childNo = 0; childNo < arrayOfElements.length; childNo++) {
+            arrayOfElements[childNo].model = model;
+        }
+    };
+
+    scope.JuicyHTMLElement = document.registerElement('juicy-html', {
+      prototype: JuicyHTMLPrototype,
+      extends: "template"
+    });
+})(window);
+</script>

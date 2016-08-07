@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "quicksettings",
+  "repo": "bit101/quicksettings",
+  "files": {
+    "include": ["quicksettings.min.js", "quicksettings.css", "quicksettings_minimal.css", "quicksettings_minimal_dark.css"]
+  }
+}

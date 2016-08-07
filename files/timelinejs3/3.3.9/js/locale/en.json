@@ -1,0 +1,122 @@
+{
+    "lang": "en",
+    "date": {
+        "month_abbr": [
+            "Jan.",
+            "Feb.",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "Aug.",
+            "Sept.",
+            "Oct.",
+            "Nov.",
+            "Dec."
+        ],
+        "day_abbr": [
+            "Sun.",
+            "Mon.",
+            "Tues.",
+            "Wed.",
+            "Thurs.",
+            "Fri.",
+            "Sat."
+        ],
+        "day": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ],
+        "month": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ]
+    },
+    "api": {
+        "wikipedia": "en" // the two letter code at the beginning of the Wikipedia subdomain for this language
+    },
+    "messages": {
+        "loading": "Loading",
+        "error": "Error",
+        "contract_timeline": "Contract Timeline",
+        "return_to_title": "Return to Title",
+        "wikipedia": "From Wikipedia, the free encyclopedia",
+        "loading_content": "Loading Content",
+        "expand_timeline": "Expand Timeline",
+        "loading_timeline": "Loading Timeline... ",
+        "swipe_to_navigate": "Swipe to Navigate<br><span class='tl-button'>OK</span>",
+        "unknown_read_err": "An unexpected error occurred trying to read your spreadsheet data",
+        "network_err": "Unable to read your Google Spreadsheet. Make sure you have published it to the web.",
+        "empty_feed_err": "No data entries found",
+        "missing_start_date_err": "Missing start_date",
+        "invalid_data_format_err": "Invalid data format",
+        "date_compare_err": "Can't compare TL.Dates on different scales",
+        "invalid_scale_err": "Invalid scale",
+        "invalid_date_err": "Invalid date",
+        "invalid_separator_error": "Invalid time: misuse of : or . as separator.",
+        "invalid_hour_err": "Invalid time (hour)",
+        "invalid_minute_err": "Invalid time (minute)",
+        "invalid_second_err": "Invalid time (second)",
+        "invalid_fractional_err": "Invalid time (fractional seconds)",
+        "invalid_second_fractional_err": "Invalid time (seconds and fractional seconds)",
+        "invalid_year_err": "Invalid year",
+        "flickr_notfound_err": "Photo not found or private",
+        "flickr_invalidurl_err": "Invalid Flickr URL",
+        "imgur_invalidurl_err": "Invalid Imgur URL",
+        "twitter_invalidurl_err": "Invalid Twitter URL",
+        "twitter_load_err": "Unable to load Tweet",
+        "twitterembed_invalidurl_err": "Invalid Twitter Embed url",
+        "wikipedia_load_err": "Unable to load Wikipedia entry",
+        "youtube_invalidurl_err": "Invalid YouTube URL",
+        "template_value_err": "No value provided for variable",
+        "invalid_rgb_err": "Invalid RGB argument",
+        "time_scale_scale_err": "Don't know how to get date from time for scale",
+        "axis_helper_no_options_err": "Axis helper must be configured with options",
+        "axis_helper_scale_err": "No AxisHelper available for scale",
+        "invalid_integer_option": 				"Invalid option value—must be a whole number."
+    },
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT",
+        "full_short": "mmm d",
+        "full": "mmmm d',' yyyy",
+        "month_short": "mmm",
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'",
+        "month": "mmmm yyyy",
+        "time_no_seconds_short": "h:MM TT",
+        "time_short": "h:MM:ss TT",
+        "year": "yyyy",
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    },
+    "era_labels": { // specify prefix or suffix to apply to formatted date. Blanks mean no change.
+        "positive_year": {
+            "prefix": "",
+            "suffix": ""
+        },
+        "negative_year": { // if either of these is specified, the year will be converted to positive before they are applied
+            "prefix": "",
+            "suffix": "BCE"
+        }
+    },
+    "period_labels": {  // use of t/tt/T/TT is a legacy of original Timeline date format
+        "t": ["a", "p"],
+        "tt": ["am", "pm"],
+        "T": ["A", "P"],
+        "TT": ["AM", "PM"]
+    },
+}

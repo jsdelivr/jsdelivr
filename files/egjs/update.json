@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "egjs",
+  "repo": "naver/egjs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

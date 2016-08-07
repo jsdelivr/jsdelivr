@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-openweathermap",
+  "repo": "JohnnyTheTank/apiNG-plugin-openweathermap",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

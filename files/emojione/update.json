@@ -3,6 +3,6 @@
     "name": "emojione",
     "repo": "Ranks/emojione",
     "files": {
-    	"include": ["assets/css/emojione.min.css", "lib/js/emojione.min.js"]
+    	"include": ["./assets/css/emojione.min.css", "./lib/js/emojione.min.js"]
     }
 }

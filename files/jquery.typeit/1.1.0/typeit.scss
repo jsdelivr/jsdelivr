@@ -1,0 +1,55 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ti-container {
+  display: block;
+  font-size: inherit;
+}
+
+.ti-text-container {
+  position: relative;
+  display: inline;
+  font-size: inherit;
+
+  // :before pseudo element is necessary so that when lines with no text hold the cursor, the cursor stays in the correct space on the screen
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    position: relative;
+  }
+
+  &.active-container {
+
+    &.ti-cursor {
+
+      &:after {
+        display: inline;
+      }
+    }
+  }
+}
+
+.ti-cursor {
+
+  &:after {
+    display: none;
+    content: '|';
+    bottom: .05em;
+    right: -.25em;
+    position: absolute;
+    line-height: normal;
+    font-size: inherit;
+    animation: blink 1s infinite;
+  }
+}

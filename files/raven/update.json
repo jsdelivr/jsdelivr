@@ -4,6 +4,6 @@
 	"repo": "getsentry/raven-js",
 	"files": {
 		"basePath": "dist",
-		"include": ["raven.min.js", "raven.min.map"]
+		"include": ["raven.min.js", "raven.min.js.map"]
 	}
 }

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "monkberry-standalone",
+  "repo": "monkberry/standalone",
+  "files": {
+    "include": ["monkberry.min.js"]
+  }
+}

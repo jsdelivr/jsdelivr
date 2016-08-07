@@ -1,0 +1,75 @@
+{
+    "lang": "fo", 
+    "date": {
+        "month_abbr": [
+            "jan.", 
+            "febr.", 
+            "mars", 
+            "aprÌl", 
+            "mai", 
+            "juni", 
+            "juli", 
+            "aug.", 
+            "sept.", 
+            "okt.", 
+            "nov.", 
+            "des."
+        ], 
+        "day_abbr": [
+            "sun.", 
+            "m·n.", 
+            "t˝s.", 
+            "mik.", 
+            "hÛs.", 
+            "frÌ.", 
+            "ley."
+        ], 
+        "day": [
+            "sunnudagur", 
+            "m·nadagur", 
+            "t˝sdagur", 
+            "mikudagur", 
+            "hÛsdagur", 
+            "frÌggjadagur", 
+            "leygardagur"
+        ], 
+        "month": [
+            "januar", 
+            "februar", 
+            "mars", 
+            "aprÌl", 
+            "mai", 
+            "juni", 
+            "juli", 
+            "august", 
+            "september", 
+            "oktober", 
+            "november", 
+            "desember"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "fo"
+    }, 
+    "messages": {
+        "loading": "Lesur inn", 
+        "contract_timeline": "Minka t&iacute;&eth;arr&aacute;s", 
+        "return_to_title": "V&iacute;&eth;ka t&iacute;&eth;arr&aacute;s...", 
+        "wikipedia": "Fr· Wikipedia", 
+        "loading_content": "Lesur inn tilfar", 
+        "expand_timeline": "Minka t&iacute;&eth;arr&aacute;s...", 
+        "loading_timeline": "Lesur inn t&iacute;&eth;arr&aacute;s..."
+    }, 
+    "dateformats": {
+        "full_long": "d'.' mmmm yyyy 'klokkan' HH:MM", 
+        "full_short": "d'.' mmm", 
+        "full": "d'.' mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d'.' mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'d'.' mmm yyyy'</small>'"
+    }
+}

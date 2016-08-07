@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "jquery.lazy",
+  "repo": "eisbehr-/jquery.lazy",
+  "files": {
+    "include": [
+      "jquery*.min.js",
+      "./plugins/jquery*.min.js"
+    ]
+  }
+}

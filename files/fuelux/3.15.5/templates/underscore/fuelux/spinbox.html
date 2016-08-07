@@ -1,0 +1,18 @@
+<!-- Spinbox http://getfuelux.com/javascript.html#spinbox -->
+<div class="form-group">
+  <label for="<%= id %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <div<% if(horizontal) {%> class="col-sm-10"<% } %>>
+    <div class="spinbox" data-initialize="spinbox" id="<%= id %>">
+      <input id="<%= id %>Input" type="text" class="form-control input-mini spinbox-input" value="<%= placeholder %>" <% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+      <div class="spinbox-buttons btn-group btn-group-vertical">
+        <button type="button" class="btn btn-default spinbox-up btn-xs"<% if(isDisabled) {%> disabled<% } %>>
+          <span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Increase</span>
+        </button>
+        <button type="button" class="btn btn-default spinbox-down btn-xs"<% if(isDisabled) {%> disabled<% } %>>
+          <span class="glyphicon glyphicon-chevron-down"></span><span class="sr-only">Decrease</span>
+        </button>
+      </div>
+    </div>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

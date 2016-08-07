@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "embed.js",
+  "repo": "ritz078/embed.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -3,6 +3,8 @@
   "name": "textAngular",
   "repo": "fraywing/textAngular",
   "files": {
-    "include": ["src/textAngular-sanitize.js", "src/textAngular.js", "dist/*.js"]
+    "include": [
+      "dist/*"
+    ]
   }
 }

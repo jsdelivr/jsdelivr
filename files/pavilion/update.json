@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pavilion",
+  "repo": "getpavilion/pavilion",
+  "files": {
+    "basePath": "dist/",
+    "include": ["pavilion.min.css", "pavilion.min.css.map"]
+  }
+}

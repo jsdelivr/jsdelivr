@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ng-youtube-embed",
+  "repo": "ArunMichaelDsouza/ng-youtube-embed",
+  "files": {
+    "include": ["build/ng-youtube-embed.min.js"]
+  }
+}

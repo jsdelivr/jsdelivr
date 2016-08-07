@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "blaze",
+  "repo": "BlazeCSS/blaze",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.css"]
+  }
+}

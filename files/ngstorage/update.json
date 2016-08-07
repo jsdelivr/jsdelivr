@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ngStorage",
+  "repo": "gsklee/ngStorage",
+  "files": {
+    "include": ["ngStorage.min.js"]
+  }
+}

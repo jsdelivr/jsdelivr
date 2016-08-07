@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.typeit",
+  "repo": "alexmacarthur/typeit",
+  "files": {
+    "basePath": "dist/",
+    "include": ["typeit.js", "typeit.min.js"]
+  }
+}

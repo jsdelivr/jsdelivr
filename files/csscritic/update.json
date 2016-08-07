@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "csscritic",
+  "repo": "cburgmer/csscritic",
+  "files": {
+    "basePath": "dist/",
+    "include": ["csscritic.allinone.js*"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.native",
+  "repo": "thednp/bootstrap.native",
+  "files": {
+    "basePath": "dist/"
+  }
+}

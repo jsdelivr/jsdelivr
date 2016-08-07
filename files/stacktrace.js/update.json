@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "stacktrace.js",
+  "repo": "stacktracejs/stacktrace.js",
+  "files": {
+    "include": ["stacktrace.js", "dist/*.js"]
+  }
+}

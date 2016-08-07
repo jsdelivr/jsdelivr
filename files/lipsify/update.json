@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lipsify",
+  "repo": "michalrusina/lipsify",
+  "files": {
+    "include": ["lipsify.js"]
+  }
+}

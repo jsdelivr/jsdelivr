@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.shadow-animation",
+  "repo": "edwinm/Shadow-animation-jQuery-plugin",
+  "files": {
+    "include": ["jquery.animate-shadow-min.js"]
+  }
+}

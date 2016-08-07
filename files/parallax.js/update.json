@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "parallax.js",
+  "repo": "pixelcog/parallax.js",
+  "files": {
+    "include": ["parallax.js", "parallax.min.js"]
+  }
+}

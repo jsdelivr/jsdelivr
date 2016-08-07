@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "rapidoid",
+  "repo": "rapidoid/rapidoid",
+  "files": {
+    "include": ["rapidoid-html/src/main/resources/default/static/rapidoid.min.js", "rapidoid-html/src/main/resources/default/static/rapidoid.min.css"]
+  }
+}

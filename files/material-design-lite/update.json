@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "material-design-lite",
+	"repo": "google/material-design-lite",
+	"files": {
+		"include": ["*.js*", "*.css*"],
+		"exclude": ["*.json", "gulpfile.js", "gulpfile.babel.js"]
+	}
+}

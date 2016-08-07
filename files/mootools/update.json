@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "mootools",
+  "repo": "mootools/mootools-core",
+  "files": {
+	"basePath": "dist/",
+	"exclude": ["mootools-core-server.js"]
+  }
+}

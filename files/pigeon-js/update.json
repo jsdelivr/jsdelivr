@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pigeon-js",
+  "repo": "labsvisual/pigeon-js",
+  "files": {
+    "basePath": "dist/",
+    "include": [ "pigeon.min.js" ]
+  }
+}

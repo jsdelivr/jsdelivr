@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "javascript.validation",
+  "repo": "GiancarloGomez/javascript.validation",
+  "files": {
+    "basePath" : "dist/",
+    "include": ["validation.full.js", "validation.min.js"]
+  }
+}

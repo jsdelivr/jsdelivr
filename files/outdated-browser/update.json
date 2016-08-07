@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "outdated-browser",
+  "repo": "burocratik/outdated-browser",
+  "files": {
+	"basePath": "outdatedbrowser/",
+	"include": ["*.min.*"]
+ }
+}

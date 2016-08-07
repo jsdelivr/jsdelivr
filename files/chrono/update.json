@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "chrono",
+  "repo": "wanasit/chrono",
+  "files": {
+    "include": ["chrono.js", "chrono.min.js"]
+  }
+}

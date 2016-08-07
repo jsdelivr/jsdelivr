@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.switchery",
+  "repo": "abpetkov/switchery",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js","*.min.css"]
+  }
+}

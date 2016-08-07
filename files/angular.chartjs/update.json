@@ -1,0 +1,10 @@
+{
+  "packageManager": "npm",
+  "name": "angular-chart.js",
+  "files": {
+    "basePath": "dist/", 
+    "exclude": ["angular-chart.js.tar.gz" ]	
+  }
+}
+
+

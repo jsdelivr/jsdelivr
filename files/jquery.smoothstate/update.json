@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "smoothstate",
+  "repo": "miguel-perez/smoothState.js",
+  "files": {
+    "include": ["jquery.smoothState.min.js"]
+  }
+}

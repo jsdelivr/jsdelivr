@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "synaptic",
+  "repo": "cazala/synaptic",
+  "files": {
+    "basePath": "dist/",
+    "include": ["synaptic.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-data-localstorage",
+  "repo": "js-data/js-data-localstorage",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js-data-localstorage.min.js"]
+  }
+}

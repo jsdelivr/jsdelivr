@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "zocial",
+  "repo": "smcllns/css-social-buttons",
+  "files": {
+    "include": ["css/*.*"]
+  }
+}

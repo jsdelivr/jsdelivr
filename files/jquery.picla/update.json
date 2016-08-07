@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "picla",
+  "repo": "ArunMichaelDsouza/picla",
+  "files": {
+    "include": ["build/picla.min.js"]
+  }
+}

@@ -1,0 +1,75 @@
+{
+    "lang": "eu", 
+    "date": {
+        "month_abbr": [
+            "Urt.", 
+            "Ots.", 
+            "Mar.", 
+            "Api.", 
+            "Mai.", 
+            "Eka.", 
+            "Uzt.", 
+            "Abu.", 
+            "Ira.", 
+            "Urr.", 
+            "Aza.", 
+            "Abe."
+        ], 
+        "day_abbr": [
+            "Iga.", 
+            "Asl.", 
+            "Asr.", 
+            "Asz.", 
+            "Osg.", 
+            "Osr.", 
+            "Lar."
+        ], 
+        "day": [
+            "Igandea", 
+            "Astelehena", 
+            "Asteartea", 
+            "Asteazkena", 
+            "Osteguna", 
+            "Ostirala", 
+            "Larunbata"
+        ], 
+        "month": [
+            "Urtarrila", 
+            "Otsaila", 
+            "Martxoa", 
+            "Apirila", 
+            "Maiatza", 
+            "Ekaina", 
+            "Uztaila", 
+            "Abuztua", 
+            "Iraila", 
+            "Urria", 
+            "Azaroa", 
+            "Abendua"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "eu"
+    }, 
+    "messages": {
+        "loading": "Kargatzen", 
+        "contract_timeline": "Txikiago ikusi", 
+        "return_to_title": "Titulura itzuli", 
+        "wikipedia": "Wikipedia entziklopedia libretik", 
+        "loading_content": "Edukia kargatzen", 
+        "expand_timeline": "Handiago ikusi", 
+        "loading_timeline": "Kronologia kargatzen..."
+    }, 
+    "dateformats": {
+        "full_long": "yyyy'(e)ko' mmmm'ren' d'(e)an,' hh:MM TT'(r)etan'", 
+        "full_short": "mmm'-'d", 
+        "full": "yyyy'(e)ko' mmmm'k' d", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br /><small>'yyyy'-'mmm'-'d'</small>", 
+        "month": "yyyy'(e)ko' mmmm", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "hh:MM TT'<br /><small>'yyyy'-'mmm'-'d'</small>"
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "pathforajs",
+  "repo": "pathfora/pathforajs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

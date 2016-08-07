@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-codebird",
+  "repo": "JohnnyTheTank/apiNG-plugin-codebird",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

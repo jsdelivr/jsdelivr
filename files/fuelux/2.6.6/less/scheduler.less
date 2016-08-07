@@ -1,0 +1,206 @@
+.scheduler {
+    &-end {
+        display: none;
+
+        .datepicker {
+            display: none;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .select {
+            float: left;
+        }
+
+        .spinner {
+            display: none;
+            float: left;
+            margin-left: 10px;
+
+            input {
+                margin-bottom: 0;
+            }
+
+            span {
+                line-height: 27px;
+            }
+        }
+    }
+
+    &-repeat {
+        .dropdown-menu {
+            max-height: 200px;
+            overflow: auto;
+        }
+
+        .repeat-interval {
+            .clearfix;
+
+            &-panel {
+                display: none;
+                float: left;
+
+                .repeat-interval-pretext,
+                .repeat-interval-text
+                {
+                    float: left;
+                    line-height: 27px;
+                }
+
+                .repeat-interval-pretext {
+                    padding: 0 10px;
+                }
+
+                .spinner {
+                    float: left;
+                    margin-right: 0;
+
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .scheduler-monthly {
+            padding-left: 15px;
+
+            &-date {
+                margin-top: 10px;
+                .clearfix;
+
+                .select {
+                    margin-left: 5px;
+                }
+            }
+
+            &-day {
+                margin-top: 10px;
+                .clearfix;
+
+                .month-day-pos {
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .scheduler-yearly {
+            padding-left: 15px;
+
+            &-date {
+                margin-top: 10px;
+                .clearfix;
+
+                .select {
+                    &.year-month {
+                        margin-left: 5px;
+
+                        &-day {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            &-day {
+                margin-top: 10px;
+                .clearfix;
+
+                .scheduler-yearly-day-text {
+                    float: left;
+                    line-height: 27px;
+                    margin: 0 10px;
+                }
+
+                .year-month-day-pos {
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .scheduler-weekly {
+            padding: 10px 0 0 15px;
+
+            .btn-group {
+                &.disabled {
+                    position: relative;
+                    opacity: 0.65;
+
+                    &:before {
+                        background: transparent;
+                        bottom: 0;
+                        content: "";
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+
+        .select {
+            float: left;
+        }
+
+        label.radio {
+            float: left;
+            line-height: 27px;
+
+            input {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    &-start {
+        .combobox {
+            .dropdown-menu {
+                max-height: 200px;
+                overflow: auto;
+            }
+
+            input {
+                width: 65px;
+            }
+        }
+
+        .dropdown {
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &-table {
+        td {
+            margin: 0;
+            padding: 5px;
+            vertical-align: top;
+
+            &.scheduler-label {
+                padding-top: 8px;
+            }
+        }
+    }
+
+    &-timezone {
+        .dropdown-label {
+            height: 18px;
+            white-space: nowrap;
+            width: 334px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dropdown-menu {
+            max-height: 200px;
+            overflow: auto;
+            width: 376px;
+        }
+    }
+
+    .recurrence-panel {
+        display: none;
+    }
+}

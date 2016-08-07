@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jQuery-PodPicker",
+  "repo": "RoberMac/jQuery-PodPicker",
+  "files": {
+    "basePath": "dist/",
+    "include": ["jquery.podpicker.min.js", "PodPicker.min.css"]
+  }
+}

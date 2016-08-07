@@ -1,0 +1,11 @@
+{
+    "packageManager": "github",
+    "name": "syncfusion-javascript",
+    "repo": "syncfusion/JavaScript-Widgets",
+    "files": {
+      "basePath":"JavaScript-Widgets",
+      
+    "exclude": ["ej/ej.widgets.all.min.js","**/*.json",".npmignore",
+                "**/*.md"]
+}
+}

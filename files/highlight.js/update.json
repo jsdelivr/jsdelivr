@@ -7,7 +7,7 @@
     "include": [
       "highlight.min.js",
       "./languages/*.min.js",
-      "./styles/*.min.css"
+      "./styles/*"
     ]
   }
 }

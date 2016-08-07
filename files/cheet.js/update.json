@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "cheet.js",
+  "repo": "namuol/cheet.js",
+  "files": {
+    "basePath": "/",
+    "include": [
+      "cheet.min.js",
+      "cheet.js"
+    ]
+  }
+}

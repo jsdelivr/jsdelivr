@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "buttons",
+  "repo": "alexwolfe/Buttons",
+  "files": {
+    "include": ["./css/*", "./js/*"]
+  }
+}

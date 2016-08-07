@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "sidr",
+  "repo": "artberri/sidr",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "senna",
+  "repo": "liferay/senna.js",
+  "files": {
+  	"basePath": "build/",
+    "include": ["globals/senna-min.js", "senna.css"]
+  }
+}

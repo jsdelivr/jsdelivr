@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ng-image-appear",
+  "repo": "ArunMichaelDsouza/ng-image-appear",
+  "files": {
+    "include": ["dist/ng-image-appear.min.js"]
+  }
+}

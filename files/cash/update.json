@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cash",
+  "repo": "kenwheeler/cash",
+  "files": {
+    "include": ["dist/cash.min.js", "dist/cash.js"]
+  }
+}

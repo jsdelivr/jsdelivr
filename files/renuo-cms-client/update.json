@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "renuo-cms-client",
+  "repo": "renuo/renuo-cms-client",
+  "files": {
+    "basePath": "dist/"
+  }
+}

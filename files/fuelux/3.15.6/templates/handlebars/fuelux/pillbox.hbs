@@ -1,0 +1,21 @@
+<div class="pillbox" {{#unless doNotInit}}data-initialize="pillbox"{{/unless}} id="{{#if id}}{{id}}{{else}}myPillbox{{/if}}">
+	<ul class="clearfix pill-group">
+	{{#each items}}
+		<li class="btn btn-default pill{{#if class}} {{class}}{{/if}}" data-value="{{value}}">
+		<span>{{title}}</span>
+			<span class="glyphicon glyphicon-close">
+				<span class="sr-only">Remove</span>
+			</span>
+		</li>
+	{{/each}}
+		<li class="pillbox-input-wrap btn-group">
+			<a class="pillbox-more">and <span class="pillbox-more-count"></span> more...</a>
+			<input type="text" class="form-control dropdown-toggle pillbox-add-item" placeholder="add item">
+			<button type="button" class="dropdown-toggle sr-only">
+				<span class="caret"></span>
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<ul class="suggest dropdown-menu" role="menu" data-toggle="dropdown" data-flip="auto"></ul>
+		</li>
+	</ul>
+</div>

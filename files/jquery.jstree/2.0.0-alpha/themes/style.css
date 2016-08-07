@@ -1,0 +1,66 @@
+/*
+ * jsTree default theme 2.0.0
+ * Supported features: dots/no-dots, icons/no-icons, loading, clicked, hovered, checkbox, search
+  */
+
+.jstree-default li, 
+.jstree-default i { background-image:url("d.png"); background-repeat:no-repeat; background-color:transparent; }
+.jstree-default li { background-position:-90px 0; background-repeat:repeat-y; }
+.jstree-default li.jstree-last { background:transparent; }
+.jstree-default .jstree-open > .jstree-ocl { background-position:-72px 0; }
+.jstree-default .jstree-closed > .jstree-ocl { background-position:-54px 0; }
+.jstree-default .jstree-leaf > .jstree-ocl { background-position:-36px 0; }
+.jstree-default .jstree-loading > .jstree-ocl { background:url("throbber.gif") center center no-repeat !important; }
+
+.jstree-default .jstree-hovered { background:#e7f4f9; border:1px solid #d8f0fa; padding:0 2px 0 1px; border-radius:2px; }
+.jstree-default .jstree-clicked { background:#beebff; border:1px solid #99defd; padding:0 2px 0 1px; border-radius:2px; }
+
+.jstree-default .jstree-anchor > .jstree-themeicon { background-position:-56px -19px; }
+
+.jstree-default .jstree-no-dots li, 
+.jstree-default .jstree-no-dots .jstree-leaf > .jstree-ocl { background:transparent; }
+.jstree-default .jstree-no-dots .jstree-open > .jstree-ocl { background-position:-18px 0; }
+.jstree-default .jstree-no-dots .jstree-closed > .jstree-ocl { background-position:0 0; }
+
+.jstree-default > .jstree-wholerow-ul .jstree-hovered, 
+.jstree-default > .jstree-wholerow-ul .jstree-clicked { background:transparent; border:0; padding:1px 2px; border-radius:0; }
+
+.jstree-default > .jstree-wholerow-ul .jstree-wholerow-hovered { background:#e7f4f9; }
+.jstree-default > .jstree-wholerow-ul .jstree-wholerow-clicked { background:#beebff; }
+
+.jstree-default .jstree-no-icons .jstree-anchor > .jstree-themeicon { display:none; }
+
+.jstree-default .jstree-search { font-style:italic; color:aqua; }
+
+.jstree-default .jstree-no-checkboxes .jstree-checkbox { display:none !important; }
+
+.jstree-default .jstree-checkbox { background-position:-2px -19px; }
+.jstree-default .jstree-checkbox:hover { background-position:-2px -37px; }
+.jstree-default .jstree-clicked > .jstree-checkbox { background-position:-38px -19px; }
+.jstree-default .jstree-clicked > .jstree-checkbox:hover { background-position:-38px -37px; }
+.jstree-default.jstree-checkbox-no-clicked .jstree-clicked { background:transparent; border:0; padding:1px 2px; }
+.jstree-default.jstree-checkbox-no-clicked .jstree-clicked.jstree-hovered { background:#e7f4f9; border:1px solid #d8f0fa; padding:0 2px 0 1px; border-radius:2px; }
+.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked { background:transparent; }
+.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked.jstree-wholerow-hovered { background:#e7f4f9; }
+
+.jstree-default .jstree-anchor .jstree-undetermined { background-position:-20px -19px; }
+.jstree-default .jstree-anchor .jstree-undetermined:hover { background-position:-20px -37px; }
+
+#jstree-dnd.jstree-default i { background:transparent; }
+#jstree-dnd.jstree-default .jstree-ok { background:url("d.png") -2px -53px no-repeat; }
+#jstree-dnd.jstree-default .jstree-er { background:url("d.png") -18px -53px no-repeat; }
+
+#jstree-marker.jstree-default { background:url("d.png") -41px -57px no-repeat !important; text-indent:-100px; }
+
+/* RTL PART */
+.jstree-rtl.jstree-default .jstree-hovered,
+.jstree-rtl.jstree-default .jstree-clicked { padding:0 1px 0 2px; }
+.jstree-rtl.jstree-default li { background-image:url("dots_rtl.gif"); background-position: 100% 0px; }
+
+.jstree-rtl.jstree-default .jstree-checkbox { background-position:0px -19px; margin-left:2px; }
+.jstree-rtl.jstree-default .jstree-checkbox:hover { background-position:0px -37px; }
+.jstree-rtl.jstree-default .jstree-clicked > .jstree-checkbox { background-position:-36px -19px; }
+.jstree-rtl.jstree-default .jstree-clicked > .jstree-checkbox:hover { background-position:-36px -37px; }
+
+.jstree-rtl.jstree-default .jstree-anchor .jstree-undetermined { background-position:-18px -19px; }
+.jstree-rtl.jstree-default .jstree-anchor .jstree-undetermined:hover { background-position:-18px -37px; }

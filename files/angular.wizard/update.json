@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.wizard",
+  "repo": "mgonto/angular-wizard",
+  "files": {
+  "basePath": "dist/",
+    "include": ["angular-wizard.css", "angular-wizard.js", "angular-wizard.min.css", "angular-wizard.min.js"]
+  }
+}
