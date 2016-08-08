@@ -1,8 +1,0 @@
-{
-  "packageManager": "bower",
-  "name": "datatables.mark.js",
-  "repo": "julmot/datatables.mark.js",
-  "files": {
-    "basePath": "dist/"
-  }
-}

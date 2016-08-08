@@ -3,7 +3,6 @@
   "name": "howlerjs",
   "repo": "goldfire/howler.js",
   "files": {
-    "basePath": "dist/",
     "include": ["howler.js", "howler.min.js"]
   }
 }

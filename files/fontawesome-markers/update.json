@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "fontawesome-markers",
-  "repo": "nathan-muir/fontawesome-markers",
-  "files": {
-    "include": ["fontawesome-markers.min.js"]
-  }
-}

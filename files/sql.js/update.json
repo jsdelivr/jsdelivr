@@ -1,8 +1,0 @@
-{
-  "packageManager": "npm",
-  "name": "sql.js",
-  "repo": "kripken/sql.js",
-  "files": {
-    "include": ["js/sql.js", "js/worker.sql.js"]
-  }
-}

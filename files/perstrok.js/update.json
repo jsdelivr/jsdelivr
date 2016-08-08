@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "perstrok.js",
-  "repo": "maoosi/perstrok.js",
-  "files": {
-    "basePath": "dist/",
-    "include": ["perstrok.min.js"]
-  }
-}

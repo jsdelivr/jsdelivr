@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "angular-base-apps",
-  "repo": "base-apps/angular-base-apps",
-  "files": {
-    "include": ["dist/css/base-apps.css", "dist/css/base-apps.min.css", "dist/js/base-apps.js", "dist/js/base-apps.min.js", "dist/js/base-apps-templates.js", "dist/js/base-apps-templates.min.js"]
-  }
-}

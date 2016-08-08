@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "yadcf",
-  "repo": "vedmack/yadcf",
-  "files": {
-    "include": ["jquery.dataTables.yadcf.js", "jquery.dataTables.yadcf.css"]
-  }
-}

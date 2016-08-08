@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "pushbullet-tasker-js",
-  "repo": "crimoniv/pushbullet-tasker-js",
-  "files": {
-    "basePath": "/",
-    "include": ["pushbullet-tasker.js", "pushbullet-tasker.min.js"]
-  }
-}

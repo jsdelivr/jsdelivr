@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "vue-multiselect",
-  "repo": "monterail/vue-multiselect",
-  "files": {
-    "basePath": "lib",
-    "include": ["vue-multiselect.min.js"]
-  }
-}

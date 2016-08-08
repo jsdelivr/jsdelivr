@@ -1,9 +1,0 @@
-{
-	"packageManager": "github",
-	"name": "wing",
-	"repo": "KingPixil/wing",
-	"files": {
-		"basePath": "dist/",
-		"include": ["wing.css", "wing.min.css"]
-	}
-}
