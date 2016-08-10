@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "clappr-pip-plugin",
+  "repo": "tjenkinson/clappr-pip-plugin",
+  "files": {
+    "basePath": "dist/"
+  }
+}

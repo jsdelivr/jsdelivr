@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "figuration",
+  "repo": "cast-org/figuration",
+  "files": {
+    "basePath": "dist/"
+  }
+}

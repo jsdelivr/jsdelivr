@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "EasyZoom",
+  "repo": "i-like-robots/EasyZoom",
+  "files": {
+    "include": ["dist/easyzoom.js", "css/easyzoom.css"]
+  }
+}
