@@ -1,9 +1,0 @@
-{
-	"packageManager": "github",
-	"name": "breinify-api",
-	"repo": "breinify/brein-api-library-javascript-browser",
-	"files": {
-		"basePath": "dist/",
-		"include": ["breinify-api.js", "breinify-api.min.js"]
-	}
-}

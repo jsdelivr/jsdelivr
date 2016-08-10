@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "jquery.filterjitsu",
-  "repo": "Fullscreen/filterjitsu",
-  "files": {
-    "basePath": "dist/",
-    "include": ["jquery.filterjitsu.js", "jquery.filterjitsu.min.js"]
-  }
-}

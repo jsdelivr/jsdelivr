@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "Slidebars",
-  "repo": "adchsm/Slidebars",
-  "files": {
-    "basePath": "dist/"
-  }
-}

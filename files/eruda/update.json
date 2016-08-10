@@ -1,8 +1,0 @@
-{
-  "packageManager": "npm",
-  "name": "eruda",
-  "repo": "liriliri/eruda",
-  "files": {
-     "include": ["eruda.js", "eruda.min.js"]
-  }
-}

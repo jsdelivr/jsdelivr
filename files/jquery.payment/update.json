@@ -3,6 +3,7 @@
   "name": "jquery.payment",
   "repo": "stripe/jquery.payment",
   "files": {
-	"basePath": "lib/"
+	"basePath": "lib/",
+    "include": ["jquery.payment.js"]
   }
 }

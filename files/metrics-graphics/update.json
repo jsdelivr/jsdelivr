@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "metrics-graphics",
-  "repo": "mozilla/metrics-graphics",
-  "files": {
-    "include": ["dist/metricsgraphics.js", "dist/metricsgraphics.min.js", "dist/metricsgraphics.css"]
-  }
-}

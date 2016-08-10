@@ -1,9 +1,0 @@
-{
-  "packageManager": "npm",
-  "name": "caritat",
-  "repo": "anarchodin/caritat",
-  "files": {
-    "basePath": "dist/",
-    "include": ["caritat.js"]
-  }
-}

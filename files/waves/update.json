@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "Waves",
-  "repo": "fians/Waves",
-  "files": {
-    "basePath": "dist/"
-  }
-}

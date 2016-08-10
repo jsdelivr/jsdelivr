@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "card",
-  "repo": "jessepollak/card",
-  "files": {
-   "basePath": "dist/",
-    "include": ["card.js", "jquery.card.js"]
-  }
-}
