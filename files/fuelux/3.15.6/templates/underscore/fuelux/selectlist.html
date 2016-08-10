@@ -1,0 +1,18 @@
+<!-- Fuel UX Select http://getfuelux.com/javascript.html#selectlist -->
+<div class="form-group">
+  <label class="control-label<% if(horizontal) { %> col-sm-2<% } %>" for="<%= id %>"><%= label %></label>
+  <div class="controls <%= buttonalign %><% if(horizontal) {%> col-sm-10<% } %>">
+    <div class="btn-group selectlist" data-initialize="selectlist" data-resize="auto" id="<%= id %>">
+      <button class="btn btn-default dropdown-toggle<% if(inputsize.length > 0) {%> <%= inputsize %><% } %>" data-toggle="dropdown" type="button"<% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+        <span class="selected-label">&nbsp;</span>
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" role="menu"><% _.each(options, function(option) { %>
+        <li data-value="<%= option %>"><a href="#"><%= option %></a></li><% }); %>
+      </ul>
+      <input class="hidden hidden-field" name="<%= id %>" readonly="readonly" aria-hidden="true" type="text"/>
+    </div>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

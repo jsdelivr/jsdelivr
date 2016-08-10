@@ -1,0 +1,7 @@
+{
+	"packageManager": "bower",
+	"name": "leaflet-control-geocoder",
+	"files": {
+		"basePath": "dist/"
+	}
+}

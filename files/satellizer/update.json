@@ -3,6 +3,6 @@
   "name": "satellizer",
   "repo": "sahat/satellizer",
   "files": {
-    "include": ["satellizer.min.js"]
+    "include": ["dist/satellizer.js", "dist/satellizer.min.js"]
   }
 }
