@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "microTK",
+  "repo": "thenderson21/microTK",
+  "files": {
+    "basePath": "dist/"
+  }
+}
