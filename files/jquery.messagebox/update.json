@@ -1,0 +1,12 @@
+{
+    "packageManager"    : "github",
+    "name"              : "jquery-message-box",
+    "repo"              : "gasparesganga/jquery-message-box",
+    "files"             : {
+        "basePath"  : "/",
+        "include"   : [
+            "src/*.js",
+            "src/*.css"
+        ]
+    }
+}
