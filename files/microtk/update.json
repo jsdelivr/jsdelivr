@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "microTK",
+  "repo": "thenderson21/microTK",
+  "files": {
+    "basePath": "dist/",
+    "include": ["microTK.js", "microTK.min.js", "microTK.min.map"]
+  }
+}
