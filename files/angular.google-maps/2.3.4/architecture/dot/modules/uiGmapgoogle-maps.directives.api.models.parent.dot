@@ -1,0 +1,297 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.models.parent"[label="uiGmapgoogle-maps.directives.api.models.parent", color=1]
+
+    
+      "uiGmapgoogle-maps.directives.api.managers"[label="uiGmapgoogle-maps.directives.api.managers", color=1]
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+      "uiGmapgoogle-maps.directives.api.models.child"[label="uiGmapgoogle-maps.directives.api.models.child", color=1]
+      "uiGmapgoogle-maps.directives.api.models.child" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+      "uiGmapgoogle-maps.providers"[label="uiGmapgoogle-maps.providers", color=1]
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+
+    
+      "uiGmapBasePolysParentModel"[label="uiGmapBasePolysParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapBasePolysParentModel"
+    
+      "uiGmapCircleParentModel"[label="uiGmapCircleParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapCircleParentModel"
+    
+      "uiGmapDrawingManagerParentModel"[label="uiGmapDrawingManagerParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapDrawingManagerParentModel"
+    
+      "uiGmapIMarkerParentModel"[label="uiGmapIMarkerParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapIMarkerParentModel"
+    
+      "uiGmapIWindowParentModel"[label="uiGmapIWindowParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapIWindowParentModel"
+    
+      "uiGmapLayerParentModel"[label="uiGmapLayerParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapLayerParentModel"
+    
+      "uiGmapMapTypeParentModel"[label="uiGmapMapTypeParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapMapTypeParentModel"
+    
+      "uiGmapMarkersParentModel"[label="uiGmapMarkersParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapMarkersParentModel"
+    
+      "uiGmapPolygonsParentModel"[label="uiGmapPolygonsParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapPolygonsParentModel"
+    
+      "uiGmapPolylinesParentModel"[label="uiGmapPolylinesParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapPolylinesParentModel"
+    
+      "uiGmapRectangleParentModel"[label="uiGmapRectangleParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapRectangleParentModel"
+    
+      "uiGmapSearchBoxParentModel"[label="uiGmapSearchBoxParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapSearchBoxParentModel"
+    
+      "uiGmapWindowsParentModel"[label="uiGmapWindowsParentModel", color=6]
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapWindowsParentModel"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmapModelKey"[label="uiGmapModelKey"]
+        "uiGmapModelKey" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmapModelsWatcher"[label="uiGmapModelsWatcher"]
+        "uiGmapModelsWatcher" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmap_async"[label="uiGmap_async"]
+        "uiGmap_async" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmapBasePolysParentModel"
+      
+        "uiGmapFitHelper"[label="uiGmapFitHelper"]
+        "uiGmapFitHelper" -> "uiGmapBasePolysParentModel"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapCircleParentModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapCircleParentModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapCircleParentModel"
+      
+        "uiGmapCircleOptionsBuilder"[label="uiGmapCircleOptionsBuilder"]
+        "uiGmapCircleOptionsBuilder" -> "uiGmapCircleParentModel"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapDrawingManagerParentModel"
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapDrawingManagerParentModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapDrawingManagerParentModel"
+      
+    
+      
+        "uiGmapModelKey"[label="uiGmapModelKey"]
+        "uiGmapModelKey" -> "uiGmapIMarkerParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapIMarkerParentModel"
+      
+    
+      
+        "uiGmapModelKey"[label="uiGmapModelKey"]
+        "uiGmapModelKey" -> "uiGmapIWindowParentModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapIWindowParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapIWindowParentModel"
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapLayerParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapLayerParentModel"
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapMapTypeParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMapTypeParentModel"
+      
+    
+      
+        "uiGmapIMarkerParentModel"[label="uiGmapIMarkerParentModel"]
+        "uiGmapIMarkerParentModel" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapModelsWatcher"[label="uiGmapModelsWatcher"]
+        "uiGmapModelsWatcher" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapMarkerChildModel"[label="uiGmapMarkerChildModel"]
+        "uiGmapMarkerChildModel" -> "uiGmapMarkersParentModel"
+      
+        "uiGmap_async"[label="uiGmap_async"]
+        "uiGmap_async" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapClustererMarkerManager"[label="uiGmapClustererMarkerManager"]
+        "uiGmapClustererMarkerManager" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapMarkerManager"[label="uiGmapMarkerManager"]
+        "uiGmapMarkerManager" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapIMarker"[label="uiGmapIMarker"]
+        "uiGmapIMarker" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMarkersParentModel"
+      
+        "uiGmapSpiderfierMarkerManager"[label="uiGmapSpiderfierMarkerManager"]
+        "uiGmapSpiderfierMarkerManager" -> "uiGmapMarkersParentModel"
+      
+    
+      
+        "uiGmapBasePolysParentModel"[label="uiGmapBasePolysParentModel"]
+        "uiGmapBasePolysParentModel" -> "uiGmapPolygonsParentModel"
+      
+        "uiGmapPolygonChildModel"[label="uiGmapPolygonChildModel"]
+        "uiGmapPolygonChildModel" -> "uiGmapPolygonsParentModel"
+      
+        "uiGmapIPolygon"[label="uiGmapIPolygon"]
+        "uiGmapIPolygon" -> "uiGmapPolygonsParentModel"
+      
+    
+      
+        "uiGmapBasePolysParentModel"[label="uiGmapBasePolysParentModel"]
+        "uiGmapBasePolysParentModel" -> "uiGmapPolylinesParentModel"
+      
+        "uiGmapPolylineChildModel"[label="uiGmapPolylineChildModel"]
+        "uiGmapPolylineChildModel" -> "uiGmapPolylinesParentModel"
+      
+        "uiGmapIPolyline"[label="uiGmapIPolyline"]
+        "uiGmapIPolyline" -> "uiGmapPolylinesParentModel"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapRectangleParentModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapRectangleParentModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapRectangleParentModel"
+      
+        "uiGmapRectangleOptionsBuilder"[label="uiGmapRectangleOptionsBuilder"]
+        "uiGmapRectangleOptionsBuilder" -> "uiGmapRectangleParentModel"
+      
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapSearchBoxParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapSearchBoxParentModel"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapSearchBoxParentModel"
+      
+    
+      
+        "uiGmapIWindowParentModel"[label="uiGmapIWindowParentModel"]
+        "uiGmapIWindowParentModel" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapModelsWatcher"[label="uiGmapModelsWatcher"]
+        "uiGmapModelsWatcher" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapWindowChildModel"[label="uiGmapWindowChildModel"]
+        "uiGmapWindowChildModel" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapLinked"[label="uiGmapLinked"]
+        "uiGmapLinked" -> "uiGmapWindowsParentModel"
+      
+        "uiGmap_async"[label="uiGmap_async"]
+        "uiGmap_async" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapPromise"[label="uiGmapPromise"]
+        "uiGmapPromise" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapIWindow"[label="uiGmapIWindow"]
+        "uiGmapIWindow" -> "uiGmapWindowsParentModel"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapWindowsParentModel"
+      
+    
+
+    
+
+
+}

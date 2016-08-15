@@ -1,0 +1,257 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps"[label="uiGmapgoogle-maps", color=1]
+
+    
+      "uiGmapgoogle-maps.directives.api"[label="uiGmapgoogle-maps.directives.api", color=1]
+      "uiGmapgoogle-maps.directives.api" -> "uiGmapgoogle-maps"
+    
+      "uiGmapgoogle-maps.providers"[label="uiGmapgoogle-maps.providers", color=1]
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmapObjectIterators"[label="uiGmapObjectIterators", color=5]
+      "uiGmapgoogle-maps" -> "uiGmapObjectIterators"
+    
+
+    
+      "uiGmapadd-events"[label="uiGmapadd-events", color=6]
+      "uiGmapgoogle-maps" -> "uiGmapadd-events"
+    
+      "uiGmaparray-sync"[label="uiGmaparray-sync", color=6]
+      "uiGmapgoogle-maps" -> "uiGmaparray-sync"
+    
+
+    node[shape="cds"]
+    
+
+    
+      "uiGmapGoogleMap"[label="uiGmapGoogleMap", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapGoogleMap"
+    
+      "uiGmapMarker"[label="uiGmapMarker", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapMarker"
+    
+      "uiGmapMarkers"[label="uiGmapMarkers", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapMarkers"
+    
+      "uiGmapPolygon"[label="uiGmapPolygon", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapPolygon"
+    
+      "uiGmapCircle"[label="uiGmapCircle", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapCircle"
+    
+      "uiGmapPolyline"[label="uiGmapPolyline", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapPolyline"
+    
+      "uiGmapPolylines"[label="uiGmapPolylines", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapPolylines"
+    
+      "uiGmapRectangle"[label="uiGmapRectangle", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapRectangle"
+    
+      "uiGmapWindow"[label="uiGmapWindow", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapWindow"
+    
+      "uiGmapWindows"[label="uiGmapWindows", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapWindows"
+    
+      "uiGmapLayer"[label="uiGmapLayer", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapLayer"
+    
+      "uiGmapMapControl"[label="uiGmapMapControl", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapMapControl"
+    
+      "uiGmapDragZoom"[label="uiGmapDragZoom", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapDragZoom"
+    
+      "uiGmapDrawingManager"[label="uiGmapDrawingManager", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapDrawingManager"
+    
+      "uiGmapFreeDrawPolygons"[label="uiGmapFreeDrawPolygons", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapFreeDrawPolygons"
+    
+      "uiGmapMapType"[label="uiGmapMapType", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapMapType"
+    
+      "uiGmapPolygons"[label="uiGmapPolygons", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapPolygons"
+    
+      "uiGmapSearchBox"[label="uiGmapSearchBox", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapSearchBox"
+    
+      "uiGmapShow"[label="uiGmapShow", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapShow"
+    
+      "uiGmapStreetViewPanorama"[label="uiGmapStreetViewPanorama", color=3]
+      "uiGmapgoogle-maps" -> "uiGmapStreetViewPanorama"
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+      
+        "uiGmapMap"[label="uiGmapMap"]
+        "uiGmapMap" -> "uiGmapGoogleMap"
+      
+    
+      
+        "uiGmapMarker"[label="uiGmapMarker"]
+        "uiGmapMarker" -> "uiGmapMarker"
+      
+    
+      
+        "uiGmapMarkers"[label="uiGmapMarkers"]
+        "uiGmapMarkers" -> "uiGmapMarkers"
+      
+    
+      
+        "uiGmapPolygon"[label="uiGmapPolygon"]
+        "uiGmapPolygon" -> "uiGmapPolygon"
+      
+    
+      
+        "uiGmapCircle"[label="uiGmapCircle"]
+        "uiGmapCircle" -> "uiGmapCircle"
+      
+    
+      
+        "uiGmapPolyline"[label="uiGmapPolyline"]
+        "uiGmapPolyline" -> "uiGmapPolyline"
+      
+    
+      
+        "uiGmapPolylines"[label="uiGmapPolylines"]
+        "uiGmapPolylines" -> "uiGmapPolylines"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapRectangle"
+      
+        "uiGmapRectangle"[label="uiGmapRectangle"]
+        "uiGmapRectangle" -> "uiGmapRectangle"
+      
+    
+      
+        "uiGmapWindow"[label="uiGmapWindow"]
+        "uiGmapWindow" -> "uiGmapWindow"
+      
+    
+      
+        "uiGmapWindows"[label="uiGmapWindows"]
+        "uiGmapWindows" -> "uiGmapWindows"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapLayer"
+      
+        "uiGmapLayerParentModel"[label="uiGmapLayerParentModel"]
+        "uiGmapLayerParentModel" -> "uiGmapLayer"
+      
+    
+      
+        "uiGmapControl"[label="uiGmapControl"]
+        "uiGmapControl" -> "uiGmapMapControl"
+      
+    
+      
+        "uiGmapDragZoom"[label="uiGmapDragZoom"]
+        "uiGmapDragZoom" -> "uiGmapDragZoom"
+      
+    
+      
+        "uiGmapDrawingManager"[label="uiGmapDrawingManager"]
+        "uiGmapDrawingManager" -> "uiGmapDrawingManager"
+      
+    
+      
+        "uiGmapApiFreeDrawPolygons"[label="uiGmapApiFreeDrawPolygons"]
+        "uiGmapApiFreeDrawPolygons" -> "uiGmapFreeDrawPolygons"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMapType"
+      
+        "uiGmapMapTypeParentModel"[label="uiGmapMapTypeParentModel"]
+        "uiGmapMapTypeParentModel" -> "uiGmapMapType"
+      
+    
+      
+        "uiGmapPolygons"[label="uiGmapPolygons"]
+        "uiGmapPolygons" -> "uiGmapPolygons"
+      
+    
+      
+        "uiGmapGoogleMapApi"[label="uiGmapGoogleMapApi"]
+        "uiGmapGoogleMapApi" -> "uiGmapSearchBox"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapSearchBox"
+      
+        "uiGmapSearchBoxParentModel"[label="uiGmapSearchBoxParentModel"]
+        "uiGmapSearchBoxParentModel" -> "uiGmapSearchBox"
+      
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapShow"
+      
+    
+      
+        "uiGmapGoogleMapApi"[label="uiGmapGoogleMapApi"]
+        "uiGmapGoogleMapApi" -> "uiGmapStreetViewPanorama"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapStreetViewPanorama"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapStreetViewPanorama"
+      
+        "uiGmapEventsHelper"[label="uiGmapEventsHelper"]
+        "uiGmapEventsHelper" -> "uiGmapStreetViewPanorama"
+      
+    
+
+
+    
+
+    
+      
+    
+
+    
+      
+    
+      
+        "uiGmapadd-events"[label="uiGmapadd-events"]
+        "uiGmapadd-events" -> "uiGmaparray-sync"
+      
+    
+
+    
+
+
+}
