@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-icons",
+  "repo": "base-apps/angular-icons",
+  "files": {
+    "basePath": "./"
+  }
+}
