@@ -6,26 +6,26 @@
   font-family: 'Nanum Square';
   font-style: normal;
   font-weight: 400;
-  src: url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareR.eot);
+  src: url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquarer.eot);
   src: local('Nanum Square Regular'),
        local('NanumSquareR'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareR.woff2) format('woff2'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareR.woff) format('woff'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareR.ttf) format('truetype');
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquarer.eot?#iefix) format('embedded-opentype'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquarer.woff2) format('woff2'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquarer.woff) format('woff'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquarer.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Nanum Square';
   font-style: bold;
   font-weight: 700;
-  src: url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareB.eot);
+  src: url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquareb.eot);
   src: local('Nanum Square Bold'),
        local('NanumSquareB'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareB.woff2) format('woff2'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareB.woff) format('woff'),
-       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/NanumSquareB.ttf) format('truetype');
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquareb.eot?#iefix) format('embedded-opentype'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquareb.woff2) format('woff2'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquareb.woff) format('woff'),
+       url(//cdn.jsdelivr.net/seopirang-fonts/fonts/nanumsquareb.ttf) format('truetype');
 }
 
 @font-face {
@@ -33,7 +33,7 @@
   font-style: normal;
   font-weight: 700;
   src: url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.eot),
-				url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.eot?#iefix) format('embedded-opentype'),
+	url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.eot?#iefix) format('embedded-opentype'),
        url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.woff2) format('woff2'),
        url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.woff) format('woff'),
        url(//cdn.jsdelivr.net/seopirang-fonts/fonts/tfs_inklipquid.ttf) format('truetype');
