@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-toggle",
+  "repo": "minhur/bootstrap-toggle",
+  "files": {
+    "include": ["bootstrap-toggle.js", "bootstrap-toggle.min.js", "bootstrap-toggle.min.js.map", "bootstrap2-toggle.js", "bootstrap2-toggle.min.js", "bootstrap2-toggle.min.js.map", "bootstrap-toggle.css", "bootstrap-toggle.min.css", "bootstrap2-toggle.css", "bootstrap2-toggle.min.css", "header.png", "nyt.png", "nytdev.svg", "script.js", "stylesheet.css"]
+  }
+}
