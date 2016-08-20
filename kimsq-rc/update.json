@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "kimsQ RC",
-  "repo": "kimsQ/rc",
-  "files": {
-    "basePath": "dist/"
-  }
-}
