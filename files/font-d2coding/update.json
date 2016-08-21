@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "font-d2coding",
+    "repo": "Joungkyun/font-d2coding",
+    "files": {
+      "include": ["d2coding.css","D2Coding.eot","D2Coding.ttf","D2Coding.woff","D2Coding.woff2","D2CodingBold.eot","D2CodingBold.ttf","D2CodingBold.woff","D2CodingBold.woff2"],
+      "exclude": ["README.md","LICENSE"]
+  }
+}
