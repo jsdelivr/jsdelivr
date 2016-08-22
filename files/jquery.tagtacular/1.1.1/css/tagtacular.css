@@ -1,0 +1,206 @@
+h1, h2, h3, strong {
+	font-family: "Arial", Arial, Verdana;
+}
+
+html {
+	margin: 20px 20px 20px 20px;
+}
+
+div.main {
+	padding-left: 20px;
+}
+
+/* Textlike Style */
+
+div.tagtacular_textlike {
+	margin: 4px 4px 4px 4px;
+}
+
+div.tagtacular_textlike .tagtacular_tag_tray {
+	margin-right: 10px;
+	float: left;
+	padding-top: 5px;
+	font-size: 1.1em;
+}
+
+div.tagtacular_textlike .tagtacular_edit_tray input[type="text"] {
+	margin: 2px 2px 2px 2px;
+	padding: 4px 4px 4px 4px;	
+}
+
+div.tagtacular_textlike .tagtacular_edit_tray select {
+	min-width: 150px;
+}
+
+div.tagtacular_textlike a.tagtacular_delete{
+	font-family: "Arial", Arial, Verdana;
+	text-decoration: none;
+	color: #d00;
+	font-size: 0.8em;
+}
+
+div.tagtacular_textlike .tagtacular_flash{
+	color: #606060;
+	margin-left: 8px;
+}
+
+div.tagtacular_textlike .tagtacular_flash.tagtacular_failure{
+	color: #c00000;
+}
+
+div.tagtacular_textlike .tagtacular_flash.tagtacular_success{
+	color: #008000;
+}
+
+/* Basic Style */
+
+div.tagtacular_basic .tagtacular_edit_tray {
+	margin: 4px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
+}
+
+div.tagtacular_basic .tagtacular_edit_tray input[type="text"] {
+	margin-right: 8px;
+	padding: 4px 4px 4px 4px;
+}
+
+div.tagtacular_basic .tagtacular_edit_tray select {
+	margin-right: 8px;
+	min-width: 150px;
+}
+
+div.tagtacular_basic .tagtacular_tag_tray {
+	margin: 4px 4px 4px 4px;
+	padding: 6px 6px 6px 6px;
+	font-size: 1.1em;
+}
+
+div.tagtacular_basic .tagtacular_tag {
+	margin: 4px 8px 4px 0px;
+	padding: 4px 6px 4px 6px;
+}
+
+div.tagtacular_basic .tagtacular_tag a.tagtacular_delete{
+	color: black;
+	text-decoration: none;
+}
+
+div.tagtacular_basic a.tagtacular_delete{
+	font-family: "Arial", Arial, Verdana;
+	text-decoration: none;
+	color: black;
+	font-size: 0.8em;
+}
+
+div.tagtacular_basic a.tagtacular_delete:hover{
+	color: red;
+}
+
+div.tagtacular_basic button {
+	margin-right: 8px;
+	margin-left: 0px;
+}
+
+div.tagtacular_basic .tagtacular_flash{
+	color: #606060;
+	margin-left: 8px;
+}
+
+div.tagtacular_basic .tagtacular_flash.tagtacular_failure{
+	color: #c00000;
+}
+
+div.tagtacular_basic .tagtacular_flash.tagtacular_success{
+	color: #008000;
+}
+
+div.tagtacular_basic .tagtacular_tag {
+	border: 1px solid #005500;
+	background-color: #99ffbb;
+	color: #005500;
+}
+
+div.tagtacular_basic .tagtacular_tag a span.tagtacular_value {
+	background-color: #99ffbb;
+	color: #005500;
+}
+
+div.tagtacular_basic .tagtacular_tag a:hover span.tagtacular_value {
+	color: red;
+}
+
+/* Basic Style Blue */
+
+div.tagtacular_basic.blue .tagtacular_tag {
+	background-color: #c0d0ff;
+	color: #000055;
+	border: 1px solid #000055;
+}
+
+div.tagtacular_basic.blue .tagtacular_tag a span.tagtacular_value {
+	background-color: #c0d0ff;
+	color: #000055;
+}
+
+div.tagtacular_basic.blue .tagtacular_tag a:hover span.tagtacular_value {
+	color: red;
+}
+
+/* Basic Style Red */
+
+div.tagtacular_basic.red .tagtacular_tag{
+	background-color: #ffc0c0;
+	color: #550000;
+	border: 1px solid #550000;
+}
+
+div.tagtacular_basic.red .tagtacular_tag a span.tagtacular_value {
+	background-color: #ffc0c0;
+	color: #550000;
+}
+
+div.tagtacular_basic.red .tagtacular_tag a:hover span.tagtacular_value {
+	color: blue;
+}
+
+div.tagtacular_basic.red a.tagtacular_delete:hover{
+	color: blue;
+}
+
+/* Basic Style Yellow */
+
+div.tagtacular_basic.yellow .tagtacular_tag {
+	background-color: #ffffd0;
+	color: #444400;
+	border: 1px solid #444400;
+}
+
+div.tagtacular_basic.yellow .tagtacular_tag a span.tagtacular_value {
+	background-color: #ffffd0;
+	color: #444400;
+}
+
+div.tagtacular_basic.yellow .tagtacular_tag a:hover span.tagtacular_value {
+	color: red;
+}
+
+/* Basic Style Orange */
+
+div.tagtacular_basic.orange .tagtacular_tag {
+	background-color: #ff9C10;
+	color: #401500;
+	border: 1px solid #552500;
+}
+
+div.tagtacular_basic.orange .tagtacular_tag a span.tagtacular_value {
+	background-color: #ff9C10;
+	color: #401500;
+}
+
+div.tagtacular_basic.orange .tagtacular_tag a:hover span.tagtacular_value {
+	color: #006400;
+}
+
+div.tagtacular_basic.orange a.tagtacular_delete:hover{
+	color: #006400;
+}
