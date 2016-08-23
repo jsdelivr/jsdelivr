@@ -3,7 +3,7 @@
   "name": "graphdracula",
   "repo": "strathausen/dracula",
   "files": {
-    "basepath": "dist/",
+    "basePath": "dist/",
     "include": ["*"]
   }
 }
