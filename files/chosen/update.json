@@ -2,5 +2,8 @@
   "packageManager": "npm",
   "name": "chosen",
   "repo": "chosen-js",
-  "files": "{}"
+  "files": {
+    "include": ["*"],
+    "exclude": ["*.json"," *.md"]
+  }
 }
