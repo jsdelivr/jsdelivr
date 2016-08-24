@@ -3,6 +3,6 @@
   "name": "chosen",
   "repo": "chosen-js",
   "files": {
-    "include": ["**/*chosen*"]
+    "include": ["*chosen*"]
   }
 }
