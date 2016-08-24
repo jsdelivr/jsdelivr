@@ -3,7 +3,6 @@
   "name": "chosen",
   "repo": "chosen-js",
   "files": {
-    "include": ["*"],
-    "exclude": ["*.json"," *.md"]
+    "include": ["**/*chosen*"]
   }
 }
