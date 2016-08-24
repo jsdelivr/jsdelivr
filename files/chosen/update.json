@@ -1,5 +1,6 @@
 {
   "packageManager": "npm",
   "name": "chosen",
-  "repo": "chosen-js"
+  "repo": "chosen-js",
+  "files": "{}"
 }
