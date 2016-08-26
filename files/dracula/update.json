@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "graphdracula",
+  "repo": "strathausen/dracula",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*"]
+  }
+}
