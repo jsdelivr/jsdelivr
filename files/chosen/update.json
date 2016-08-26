@@ -1,6 +1,6 @@
 {
   "packageManager": "npm",
-  "name": "chosen",
+  "name": "chosen-js",
   "repo": "chosen-js",
   "files": {
     "include": ["*chosen*"]
