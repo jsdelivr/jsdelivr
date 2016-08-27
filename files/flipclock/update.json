@@ -3,6 +3,6 @@
   "name": "flipclock",
   "repo": "objectivehtml/FlipClock",
   "files": {
-    "include": ["/.compiled/flipclock.min.js", "./compiled/flipclock.css"]
+    "include": ["compiled/flipclock.min.js", "compiled/flipclock.css"]
   }
 }
