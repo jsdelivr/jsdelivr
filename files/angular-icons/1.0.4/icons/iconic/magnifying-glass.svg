@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-magnifying-glass" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Magnifying Glass</title>
+  </g>
+  <defs>
+    <clipPath id="iconic-size-lg-magnifying-glass-clip-0">
+      <path d="M95.707 83.707l-6.707 6.707-1.414-1.414 6.707-6.707-4.293-4.293-12 12 38 38 12-12z" />
+    </clipPath>
+  </defs>
+  <g class="iconic-magnifying-glass-lg iconic-container iconic-lg" data-width="128" data-height="128" display="inline">
+    <path stroke="#000" stroke-width="8" class="iconic-magnifying-glass-handle iconic-magnifying-glass-handle-connector iconic-property-stroke" d="M85 85l-7.912-7.912" fill="none" />
+    <path d="M126.939 117.061l-9.879 9.879c-.586.586-1.536.586-2.121 0l-35.879-35.879c-.586-.586-.586-1.536 0-2.121l9.879-9.879c.586-.586 1.536-.586 2.121 0l35.879 35.879c.586.586.586 1.535 0 2.121z" clip-path="url(#iconic-size-lg-magnifying-glass-clip-0)"
+    class="iconic-magnifying-glass-handle iconic-property-fill" />
+    <circle stroke="#000" stroke-width="8" cx="46" cy="46" r="42" class="iconic-magnifying-glass-rim iconic-property-stroke" fill="none" />
+    <path fill="#fff" stroke="#000" stroke-width="2" stroke-linecap="round" d="M13 46c0-18.225 14.775-33 33-33" class="iconic-magnifying-glass-reflection iconic-property-accent iconic-property-stroke" />
+  </g>
+  <g class="iconic-magnifying-glass-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
+    <path fill="#fff" stroke="#000" stroke-width="3" class="iconic-magnifying-glass-handle iconic-magnifying-glass-handle-connector iconic-property-stroke" d="M19.5 19.582l9.438 9.438" />
+    <circle stroke="#000" stroke-width="3" cx="12" cy="12" r="10.5" class="iconic-magnifying-glass-rim iconic-property-stroke" fill="none" />
+    <path d="M23.646 20.354l-3.293 3.293c-.195.195-.195.512 0 .707l7.293 7.293c.195.195.512.195.707 0l3.293-3.293c.195-.195.195-.512 0-.707l-7.293-7.293c-.195-.195-.512-.195-.707 0z" class="iconic-magnifying-glass-handle iconic-property-fill" />
+  </g>
+  <g class="iconic-magnifying-glass-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
+    <path stroke="#000" stroke-width="3" stroke-linecap="round" class="iconic-magnifying-glass-handle iconic-property-stroke" d="M11 11l3.5 3.5" fill="none" />
+    <circle stroke="#000" stroke-width="2" cx="6.5" cy="6.5" r="5.5" class="iconic-magnifying-glass-rim iconic-property-stroke" fill="none" />
+  </g>
+</svg>
