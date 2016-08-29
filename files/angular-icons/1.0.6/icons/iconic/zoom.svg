@@ -1,0 +1,56 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-icon="zoom" width="128" height="128" class="iconic iconic-zoom" viewBox="0 0 128 128">
+  <g><title>Zoom</title></g>
+  <defs>
+    <clipPath id="iconic-size-lg-zoom-in-clip-0">
+      <path d="M95.7 83.7l-6.7 6.7-1.4-1.4 6.7-6.7-4.3-4.3-12 12 38 38 12-12z"/>
+    </clipPath>
+    <clipPath id="iconic-size-lg-zoom-out-clip-0">
+      <path d="M95.7 83.7l-6.7 6.7-1.4-1.4 6.7-6.7-4.3-4.3-12 12 38 38 12-12z"/>
+    </clipPath>
+  </defs>
+  <g data-width="128" data-height="128" class="iconic-lg iconic-container" display="inline">
+    <g class="iconic-zoom-in">
+      <path stroke="#000" stroke-width="8" stroke-miterlimit="10" class="iconic-zoom-in-handle iconic-zoom-in-handle-connector iconic-property-stroke" d="M85 85l-7.9-7.9" fill="none"/>
+      <path d="M126.9 117.1l-9.9 9.9c-.6.6-1.5.6-2.1 0l-35.8-35.9c-.6-.6-.6-1.5 0-2.1l9.9-9.9c.6-.6 1.5-.6 2.1 0l35.9 35.9c.5.5.5 1.5-.1 2.1z" clip-path="url(#iconic-size-lg-zoom-in-clip-0)" class="iconic-zoom-in-handle iconic-property-fill"/>
+      <circle stroke="#000" stroke-width="8" stroke-miterlimit="10" cx="46" cy="46" r="42" class="iconic-zoom-in-rim iconic-property-stroke" fill="none"/>
+      <path stroke="#000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" class="iconic-zoom-in-plus iconic-property-accent iconic-property-stroke" d="M46 34v24m12-12h-24" fill="none"/>
+    </g>
+    <g class="iconic-zoom-out" display="none">
+      <path stroke="#000" stroke-width="8" stroke-miterlimit="10" class="iconic-zoom-out-handle iconic-zoom-out-handle-connector iconic-property-stroke" d="M85 85l-7.9-7.9" fill="none"/>
+      <path d="M126.9 117.1l-9.9 9.9c-.6.6-1.5.6-2.1 0l-35.8-35.9c-.6-.6-.6-1.5 0-2.1l9.9-9.9c.6-.6 1.5-.6 2.1 0l35.9 35.9c.5.5.5 1.5-.1 2.1z" clip-path="url(#iconic-size-lg-zoom-out-clip-0)" class="iconic-zoom-out-handle iconic-property-fill"/>
+      <circle stroke="#000" stroke-width="8" stroke-miterlimit="10" cx="46" cy="46" r="42" class="iconic-zoom-out-rim iconic-property-stroke" fill="none"/>
+      <path stroke="#000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" class="iconic-zoom-out-minus iconic-property-accent iconic-property-stroke" d="M58 46h-24" fill="none"/>
+    </g>
+  </g>
+  <g data-width="32" data-height="32" class="iconic-md iconic-container" display="none" transform="scale(4)">
+    <g class="iconic-zoom-in">
+      <path fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="10" class="iconic-zoom-in-handle iconic-zoom-in-handle-connector iconic-property-stroke" d="M19.5 19.6l9.4 9.4"/>
+      <circle stroke="#000" stroke-width="3" stroke-miterlimit="10" cx="12" cy="12" r="10.5" class="iconic-zoom-in-rim iconic-property-stroke" fill="none"/>
+      <path d="M23.6 20.4l-3.3 3.3c-.2.2-.2.5 0 .7l7.3 7.3c.2.2.5.2.7 0l3.3-3.3c.2-.2.2-.5 0-.7l-7.3-7.3c-.1-.2-.5-.2-.7 0z" class="iconic-zoom-in-handle iconic-property-fill"/>
+      <path stroke="#000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" class="iconic-zoom-in-plus iconic-property-accent iconic-property-stroke" d="M12 8v8m4-4h-8" fill="none"/>
+    </g>
+    <g class="iconic-zoom-out" display="none">
+      <path fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="10" class="iconic-zoom-out-handle iconic-zoom-out-handle-connector iconic-property-stroke" d="M19.5 19.6l9.4 9.4"/>
+      <circle stroke="#000" stroke-width="3" stroke-miterlimit="10" cx="12" cy="12" r="10.5" class="iconic-zoom-out-rim iconic-property-stroke" fill="none"/>
+      <path d="M23.6 20.4l-3.3 3.3c-.2.2-.2.5 0 .7l7.3 7.3c.2.2.5.2.7 0l3.3-3.3c.2-.2.2-.5 0-.7l-7.3-7.3c-.1-.2-.5-.2-.7 0z" class="iconic-zoom-out-handle iconic-property-fill"/>
+      <path stroke="#000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" class="iconic-zoom-out-minus iconic-property-accent iconic-property-stroke" d="M16 12h-8" fill="none"/>
+    </g>
+  </g>
+  <g data-width="16" data-height="16" class="iconic-sm iconic-container" display="none" transform="scale(8)" stroke="#000" stroke-miterlimit="10" fill="none">
+    <g class="iconic-zoom-in">
+      <path stroke-width="3" stroke-linecap="round" class="iconic-zoom-in-handle iconic-property-stroke" d="M11 11l3.5 3.5"/>
+      <circle stroke-width="2" cx="6.5" cy="6.5" r="5.5" class="iconic-zoom-in-rim iconic-property-stroke"/>
+      <path stroke-linecap="square" class="iconic-zoom-in-plus iconic-property-accent iconic-property-stroke" d="M6.5 4.5v4m2-2h-4"/>
+    </g>
+    <g class="iconic-zoom-out" display="none">
+      <path stroke-width="3" stroke-linecap="round" class="iconic-zoom-out-handle iconic-property-stroke" d="M11 11l3.5 3.5"/>
+      <circle stroke-width="2" cx="6.5" cy="6.5" r="5.5" class="iconic-zoom-out-rim iconic-property-stroke"/>
+      <path stroke-linecap="square" class="iconic-zoom-out-minus iconic-property-accent iconic-property-stroke" d="M8.5 6.5h-4"/>
+    </g>
+  </g>
+<script class="iconic-api" type="application/ecmascript">
+//<![CDATA[
+var iconicApis=window._Iconic?window._Iconic.smartIconApis:{};iconicApis["zoom"]=iconicApis["zoom"]||function(t){var e=function(e){t.setAttribute("data-state",e);var i,r,n=t.querySelectorAll(".iconic-zoom-in"),a=t.querySelectorAll(".iconic-zoom-out");i=r="none","out"===e?r="inline":i="inline";for(var c=0;c<n.length;c++)n[c].setAttribute("display",i),a[c].setAttribute("display",r)},i=function(){var i=t.getAttribute("data-state");i&&e(i)};return{update:i,setState:e}};
+//]]>
+</script>
+</svg>
