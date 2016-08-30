@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "system runtime",
+  "name": "system-runtime",
   "repo": "system-sdk/system-runtime",
   "files": {
     "include": ["system-runtime.min.js"]
