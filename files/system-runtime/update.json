@@ -3,6 +3,7 @@
   "name": "system-runtime",
   "repo": "system-sdk/system-runtime",
   "files": {
+    "basePath": "dist/",
     "include": ["system-runtime.min.js"]
   }
 }
