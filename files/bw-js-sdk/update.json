@@ -1,4 +1,7 @@
 {
   "packageManager": "bower",
-  "name": "bw-js-sdk"
+  "name": "bw-js-sdk",
+  "files": {
+    "include": ["dist/*.js"]
+  }
 }
