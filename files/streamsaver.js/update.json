@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "streamsaver.js",
+  "repo": "jimmywarting/StreamSaver.js",
+  "files": {
+    "include": ["StreamSaver.js"]
+  }
+}
