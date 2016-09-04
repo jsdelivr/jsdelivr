@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flexibility",
+  "repo": "jonathantneal/flexibility",
+  "files": {
+    "include": ["flexibility.js"]
+  }
+}
