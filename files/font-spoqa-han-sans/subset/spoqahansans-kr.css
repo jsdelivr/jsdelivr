@@ -25,28 +25,28 @@
     font-family: 'Spoqa Han Sans';
     font-weight: 700;
     src: local('SpoqaHanSans-Bold'), local('SpoqaHanSans-Bold'),
-    url('../subset/korean/bold/SpoqaHanSans-Bold.eot') format('eot'),
-    url('../subset/korean/bold/SpoqaHanSans-Bold.svg') format('svg'),
-    url('../subset/korean/bold/SpoqaHanSans-Bold.ttf') format('truetype'),
-    url('../subset/korean/bold/SpoqaHanSans-Bold.woff') format('woff');
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/bold/SpoqaHanSans-Bold.eot) format('eot'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/bold/SpoqaHanSans-Bold.svg) format('svg'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/bold/SpoqaHanSans-Bold.ttf) format('truetype'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/bold/SpoqaHanSans-Bold.woff) format('woff');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 400;
     src: local('SpoqaHanSans-Regular'), local('SpoqaHanSans-Regular'),
-    url('../subset/korean/regular/SpoqaHanSans-Regular.eot') format('eot'),
-    url('../subset/korean/regular/SpoqaHanSans-Regular.svg') format('svg'),
-    url('../subset/korean/regular/SpoqaHanSans-Regular.ttf') format('truetype'),
-    url('../subset/korean/regular/SpoqaHanSans-Regular.woff') format('woff');
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/regular/SpoqaHanSans-Regular.eot) format('eot'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/regular/SpoqaHanSans-Regular.svg) format('svg'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/regular/SpoqaHanSans-Regular.ttf) format('truetype'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/regular/SpoqaHanSans-Regular.woff) format('woff');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 200;
     src: local('SpoqaHanSans-Thin'), local('SpoqaHanSans-Thin'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.eot') format('eot'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.svg') format('svg'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.ttf') format('truetype'),
-    url('../ubset/korean/thin//SpoqaHanSans-Thin.woff') format('woff');
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/thin/SpoqaHanSans-Thin.eot) format('eot'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/thin/SpoqaHanSans-Thin.svg) format('svg'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/thin/SpoqaHanSans-Thin.ttf) format('truetype'),
+    url(//cdn.jsdelivr.net/font-spoqa-han-sans/subset/korean/thin/SpoqaHanSans-Thin.woff) format('woff');
 }
