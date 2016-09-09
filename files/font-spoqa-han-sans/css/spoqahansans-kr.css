@@ -45,8 +45,8 @@
     font-family: 'Spoqa Han Sans';
     font-weight: 200;
     src: local('SpoqaHanSans-Thin'), local('SpoqaHanSans-Thin'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.eot') format('eot'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.svg') format('svg'),
-    url('../subset/korean/thin//SpoqaHanSans-Thin.ttf') format('truetype'),
-    url('../ubset/korean/thin//SpoqaHanSans-Thin.woff') format('woff');
+    url('../subset/korean/thin/SpoqaHanSans-Thin.eot') format('eot'),
+    url('../subset/korean/thin/SpoqaHanSans-Thin.svg') format('svg'),
+    url('../subset/korean/thin/SpoqaHanSans-Thin.ttf') format('truetype'),
+    url('../subset/korean/thin/SpoqaHanSans-Thin.woff') format('woff');
 }
