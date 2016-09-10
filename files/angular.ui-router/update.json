@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "angular.ui-router",
-  "repo": "angular-ui/ui-router",
+  "repo": "angular-ui/ui-router/tree/legacy",
   "files": {
     "basePath": "release/"
   }
