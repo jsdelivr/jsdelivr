@@ -3,6 +3,6 @@
   "name": "frontexpress",
   "repo": "camelaissani/frontexpress",
   "files": {
-    "include": ["frontexpress.js", "frontexpress.min.js"]
+    "include": ["frontexpress.js", "frontexpress.min.js", "frontexpress.min.js.map"]
   }
 }
