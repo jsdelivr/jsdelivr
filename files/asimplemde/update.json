@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "asimplemde",
+  "repo": "abruneau/asimplemde",
+  "files": {
+    "basePath": "dist",
+    "include": ["asimplemde.min.js", "asimplemde.min.css"]
+  }
+}
