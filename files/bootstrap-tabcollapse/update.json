@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-tabcollapse",
+  "repo": "flatlogic/bootstrap-tabcollapse",
+  "files": {
+    "include": ["bootstrap-tabcollapse.js"]
+  }
+}
