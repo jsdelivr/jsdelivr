@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ImageSliderRibbonJS",
+  "repo": "mjza/ImageSliderRibbonJS",
+  "files": {
+    "include": ["ImageSliderRibbon.js", "ImageSliderRibbon-min.js"]
+  }
+}
