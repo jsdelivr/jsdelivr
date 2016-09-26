@@ -1,0 +1,7 @@
+{
+2	  "packageManager": "bower",
+3	  "name": "bootstrap-tabcollapse",
+4	  "files": {
+5	    "include": ["bootstrap-tabcollapse.js"]
+6	  }
+7	}
