@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "yakuhanjp",
+  "repo": "qrac/yakuhanjp",
+  "files": {
+    "include": ["./dist/css/yakuhanjp.min.css", "./dist/css/yakuhanjp_s.min.css", "./dist/css/yakuhanjp.css", "./dist/css/yakuhanjp_s.css", "./dist/fonts/*"]
+  }
+}
