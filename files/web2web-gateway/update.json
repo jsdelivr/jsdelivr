@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "web2web-gateway",
+  "repo": "elendirx/web2web-gateway",
+  "files": {
+    "include": ["web2web-gateway.min.js"]
+  }
+}
