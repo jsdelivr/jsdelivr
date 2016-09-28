@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "lovely-icons",
+  "repo": "douglasdeodato/lovely-icons",
+  "files": {
+    "basePath": "css/",
+    "include": ["*.min.css"]
+  }
+}
