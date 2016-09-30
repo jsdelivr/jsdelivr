@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "headstart-css",
+  "repo": "RotemDev/Headstart",
+  "files": {
+    "basePath": "/",
+    "include": ["css/rotem.min.css", "css/rotem.css", "css/entypo.min.css", "css/entypo.css"]
+  }
+}
