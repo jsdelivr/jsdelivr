@@ -3,7 +3,7 @@
   "name": "CopyToClipboard",
   "repo": "sudheerkaku/CopyToClipboard",
   "files": {
-    "basePath": "dist",
+    "basePath": "dist/",
     "include": [ "CopyToClipboard.js", "CopyToClipboard.min.js" ]
   }
 }
