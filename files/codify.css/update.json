@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "codify.css",
+  "repo": "zdroid/codify.css",
+  "files": {
+    "basePath": "dist/",
+		"include": ["codify.css", "codify.min.css"]
+  }
+}
