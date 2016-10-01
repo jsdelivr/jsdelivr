@@ -1,0 +1,228 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+html {
+  font: normal normal normal 16px normal "Arial", sans-serif;
+  color: #222;
+  background-color: #dddddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.info {
+  color: #0093ff;
+  background-color: #acdcff;
+  border: 2px solid #0093ff;
+  border-radius: 4px;
+}
+
+div.success {
+  color: #05b212;
+  background-color: #62e66c;
+  border: 2px solid #05b212;
+  border-radius: 4px;
+}
+
+div.warning {
+  color: #ffbb33;
+  background-color: #ffe763;
+  border: 2px solid #ffbb33;
+  border-radius: 4px;
+}
+
+div.danger {
+  color: #db0000;
+  background-color: #ff9a9a;
+  border: 2px solid #db0000;
+  border-radius: 4px;
+}
+
+div.row {
+  font-size: 0;
+}
+div.row div.col-1 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-1 {
+    width: 8.33333%;
+    vertical-align: top;
+  }
+}
+div.row div.col-2 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-2 {
+    width: 16.66667%;
+    vertical-align: top;
+  }
+}
+div.row div.col-3 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-3 {
+    width: 25%;
+    vertical-align: top;
+  }
+}
+div.row div.col-4 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-4 {
+    width: 33.33333%;
+    vertical-align: top;
+  }
+}
+div.row div.col-5 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-5 {
+    width: 41.66667%;
+    vertical-align: top;
+  }
+}
+div.row div.col-6 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-6 {
+    width: 50%;
+    vertical-align: top;
+  }
+}
+div.row div.col-7 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-7 {
+    width: 58.33333%;
+    vertical-align: top;
+  }
+}
+div.row div.col-8 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-8 {
+    width: 66.66667%;
+    vertical-align: top;
+  }
+}
+div.row div.col-9 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-9 {
+    width: 75%;
+    vertical-align: top;
+  }
+}
+div.row div.col-10 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-10 {
+    width: 83.33333%;
+    vertical-align: top;
+  }
+}
+div.row div.col-11 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-11 {
+    width: 91.66667%;
+    vertical-align: top;
+  }
+}
+div.row div.col-12 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  div.row div.col-12 {
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 64px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 10.8px;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-weight: normal;
+  font-size: 11px;
+  color: #888;
+}
+
+/*# sourceMappingURL=rotem.css.map */
