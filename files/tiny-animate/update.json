@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "tiny-animate",
+  "repo": "branneman/TinyAnimate",
+  "files": {
+    "basePath": "bin/",
+    "include": ["TinyAnimate.js"]
+  }
+}

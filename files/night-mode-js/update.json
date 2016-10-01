@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "night-mode-js",
+  "repo": "cuddlecheek/night-mode-js",
+  "files": {
+    "include": ["night-mode.min.js"]
+  }
+}

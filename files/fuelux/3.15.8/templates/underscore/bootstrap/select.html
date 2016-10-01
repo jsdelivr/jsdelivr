@@ -1,0 +1,10 @@
+<!-- Bootstrap Select http://getbootstrap.com/css/#selects -->
+<div class="form-group">
+  <label class="control-label<% if(horizontal) { %> col-sm-2<% } %>" for="<%= id %>"><%= label %></label>
+  <div class="controls <% if(horizontal) {%> col-sm-10<% } %>">
+    <select id="<%= id %>" name="<%= id %>" class="form-control<% if(inputsize.length > 0) {%> <%= inputsize %><% } %>"<% if(multiple) {%> multiple <% } %><% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>><% _.each(options, function(option) { %>
+      <option><%= option %></option><% }); %>
+    </select>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

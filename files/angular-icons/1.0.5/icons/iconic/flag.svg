@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-flag" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Flag</title>
+  </g>
+  <g class="iconic-flag-lg iconic-container iconic-lg" data-width="98" data-height="128" display="inline" transform="translate(15)">
+    <path stroke="#000" stroke-width="8" stroke-linecap="square" class="iconic-flag-mast iconic-property-stroke" d="M4 12v112" fill="none" />
+    <path d="M0 4c0-2.209 1.791-4 4-4s4 1.791 4 4v2h-8v-2z" class="iconic-flag-mast iconic-flag-mast-top iconic-property-fill" />
+    <path d="M42 13c0-.03.015-.056.017-.086-.002-.03-.017-.055-.017-.086 0-.324.175-.616.343-.828l1.314-2c.208-.287.343-.505.343-.828 0-.324-.131-.617-.343-.828-.212-.212-.505-.343-.828-.343h-32.828v52h32v-47z" class="iconic-flag-back iconic-property-accent iconic-property-fill"
+    />
+    <path d="M98 14h-54v51c0 .552.448 1 1 1h53l-14-26.11 14-25.89z" class="iconic-flag-front iconic-property-fill" />
+  </g>
+  <g class="iconic-flag-md iconic-container iconic-md" data-width="27" data-height="32" display="none" transform="scale(4) translate(2)">
+    <path stroke="#000" stroke-width="3" stroke-linecap="square" class="iconic-flag-mast iconic-property-stroke" d="M1.5 3.5v27" fill="none" />
+    <path d="M0 1c0-.552.672-1 1.5-1s1.5.448 1.5 1h-3z" class="iconic-flag-mast iconic-flag-mast-top iconic-property-fill" />
+    <path d="M13 4.5c0-.044.014-.084.025-.125-.007-.042-.025-.081-.025-.125 0-.207.084-.395.22-.53l.561-.439c.136-.136.22-.323.22-.53s-.084-.395-.22-.53-.323-.22-.53-.22h-9.25v14h9v-11.5z" class="iconic-flag-back iconic-property-accent iconic-property-fill"
+    />
+    <path class="iconic-flag-front iconic-property-fill" d="M27 5h-13v14h13l-5-6.877z" />
+  </g>
+  <g class="iconic-flag-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
+    <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-flag-mast iconic-property-stroke" d="M1 1v14" fill="none" />
+    <path d="M7 1.75c0-.138.08-.33.177-.427l.646-.646c.097-.097.177-.289.177-.427s-.112-.25-.25-.25h-4.75v8h4v-6.25z" class="iconic-flag-back iconic-property-accent iconic-property-fill" />
+    <path d="M16 2h-7.934c-.038.084-.066.174-.066.25v7.75h8l-4-3.938 4-4.062z" class="iconic-flag-front iconic-property-fill" />
+  </g>
+</svg>

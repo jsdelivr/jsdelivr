@@ -1,0 +1,73 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.providers"[label="uiGmapgoogle-maps.providers", color=1]
+
+    
+      "nemLogging"[label="nemLogging", color=1]
+      "nemLogging" -> "uiGmapgoogle-maps.providers"
+    
+
+
+    node[shape="ellipse"]
+    
+      "uiGmapGoogleMapApi"[label="uiGmapGoogleMapApi", fillcolor=2]
+      "uiGmapgoogle-maps.providers" -> "uiGmapGoogleMapApi"
+    
+
+
+    
+
+    
+      "uiGmapGoogleMapApiManualLoader"[label="uiGmapGoogleMapApiManualLoader", color=5]
+      "uiGmapgoogle-maps.providers" -> "uiGmapGoogleMapApiManualLoader"
+    
+
+    
+      "uiGmapMapScriptLoader"[label="uiGmapMapScriptLoader", color=6]
+      "uiGmapgoogle-maps.providers" -> "uiGmapMapScriptLoader"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+      
+    
+
+    
+
+
+    
+
+    
+      
+        "uiGmapMapScriptLoader"[label="uiGmapMapScriptLoader"]
+        "uiGmapMapScriptLoader" -> "uiGmapGoogleMapApiManualLoader"
+      
+    
+
+    
+      
+        "uiGmapuuid"[label="uiGmapuuid"]
+        "uiGmapuuid" -> "uiGmapMapScriptLoader"
+      
+    
+
+    
+
+
+}

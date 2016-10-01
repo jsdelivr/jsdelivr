@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ImageRotatorJS",
+  "repo": "mjza/ImageRotatorJS",
+  "files": {
+    "include": ["ImageRotator-min.js"]
+  }
+}

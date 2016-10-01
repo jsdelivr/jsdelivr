@@ -1,0 +1,14 @@
+<!-- Appended checkbox http://getbootstrap.com/components/#input-groups-checkboxes-radios -->
+<div class="form-group<% if(horizontal && inputsize.length > 0) {%> form-group-<%= inputsize %><% } %>">
+  <label class="control-label<% if(horizontal) { %> col-sm-2<% } %>" for="<%= id %>Input"><%= label %></label>
+  <% if(horizontal) {%><div class="col-sm-10"><% } %>
+    <div class="input-group<% if(inputsize.length > 0) {%> input-group-<%= inputsize %><% } %>" id="<%= id %>">
+      <% if(placement=="appended") { %><input id="<%= id %>Input" name="<%= id %>Input" type="<%= inputtype %>" class="form-control<% if(!horizontal && inputsize.length > 0) {%> input-<%= inputsize %><% } %>" placeholder="<%= placeholder %>" aria-label=""<% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %> /><% } %>
+      <label class="input-group-addon checkbox-custom" data-initialize="checkbox">
+        <input class="sr-only" type="checkbox" aria-label="<%= checkboxValue %>" <% if (checked){ %>checked="checked"<% } %> id="<%= id %>Checkbox" value="<%= checkboxValue %>" <% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %> >
+      </label>
+      <% if(placement=="prepended") { %><input id="<%= id %>Input" name="<%= id %>Input" type="<%= inputtype %>" class="form-control<% if(!horizontal && inputsize.length > 0) {%> input-<%= inputsize %><% } %>" placeholder="<%= placeholder %>" aria-label=""<% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %> /><% } %>
+    </div>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  <% if(horizontal) {%></div><% } %>
+</div>

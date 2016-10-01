@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Readmore.js",
+  "repo": "jedfoster/Readmore.js",
+  "files": {
+    "include": ["readmore.min.js"]
+  }
+}

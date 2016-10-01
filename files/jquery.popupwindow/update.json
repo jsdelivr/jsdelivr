@@ -1,0 +1,12 @@
+{
+    "packageManager"    : "github",
+    "name"              : "jquery-popup-window",
+    "repo"              : "gasparesganga/jquery-popup-window",
+    "files"             : {
+        "basePath"  : "/",
+        "include"   : [
+            "src/*.js",
+            "src/*.css"
+        ]
+    }
+}
