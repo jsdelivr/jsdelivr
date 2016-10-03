@@ -1,0 +1,75 @@
+{
+    "lang": "fi", 
+    "date": {
+        "month_abbr": [
+            "tammi", 
+            "helmi", 
+            "maalis", 
+            "huhti", 
+            "touko", 
+            "kesä", 
+            "heinä", 
+            "elo", 
+            "syys", 
+            "loka", 
+            "marras", 
+            "joulu"
+        ], 
+        "day_abbr": [
+            "su", 
+            "ma", 
+            "ti", 
+            "ke", 
+            "to", 
+            "pe", 
+            "la"
+        ], 
+        "day": [
+            "sunnuntai", 
+            "maanantai", 
+            "tiistai", 
+            "keskiviikko", 
+            "torstai", 
+            "perjantai", 
+            "lauauntai"
+        ], 
+        "month": [
+            "tammikuuta", 
+            "helmikuuta", 
+            "maaliskuuta", 
+            "huhtikuuta", 
+            "toukokuuta", 
+            "kesäkuuta", 
+            "heinäkuuta", 
+            "elokuuta", 
+            "syyskuuta", 
+            "lokakuuta", 
+            "marraskuuta", 
+            "joulukuuta"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "fi"
+    }, 
+    "messages": {
+        "loading": "Ladataan", 
+        "contract_timeline": "Tiivistä aikajanaa", 
+        "return_to_title": "Takaisin etusivulle", 
+        "wikipedia": "Wikipediasta", 
+        "loading_content": "Ladataan sisältöä", 
+        "expand_timeline": "Laajenna aikajanaa", 
+        "loading_timeline": "Ladataan aikajanaa… "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d yyyy 'klo' HH:MM", 
+        "full_short": "d. mmm", 
+        "full": "d. mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>d. mmm yyyy'</small>'"
+    }
+}
