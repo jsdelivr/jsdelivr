@@ -1,0 +1,75 @@
+{
+  "lang": "be", 
+  "date": {
+    "month_abbr": [
+      "стд", 
+      "лют", 
+      "скв", 
+      "крс", 
+      "май", 
+      "чрв", 
+      "лпн", 
+      "жнв", 
+      "врс", 
+      "кст", 
+      "лст", 
+      "снж"
+    ], 
+    "day_abbr": [
+      "Нд.", 
+      "Пн.", 
+      "Аўт.", 
+      "Ср.", 
+      "Чц.", 
+      "Пт.", 
+      "Сб."
+    ], 
+    "day": [
+      "нядзеля", 
+      "панядзелак", 
+      "аўторак", 
+      "серада", 
+      "чацвер", 
+      "пятніца", 
+      "субота"
+    ], 
+    "month": [
+      "студзень", 
+      "люты", 
+      "сакавік", 
+      "красавік", 
+      "май", 
+      "чэрвень", 
+      "ліпень", 
+      "жнівень", 
+      "верасень", 
+      "кастрычнік", 
+      "лістапад", 
+      "снежань"
+    ]
+  }, 
+  "api": {
+    "wikipedia": "be"
+  }, 
+  "messages": {
+    "loading": "Загрузка", 
+    "contract_timeline": "Аддаліць лінію часу", 
+    "return_to_title": "Вярнуцца ў пачатак", 
+    "wikipedia": "З Вікіпедыі, свабоднай энцыклапедыі", 
+    "loading_content": "Загрузка зместу", 
+    "expand_timeline": "Наблізіць лінію часу", 
+    "loading_timeline": "Загрузка лініі часу... "
+  }, 
+  "dateformats": {
+    "full_long": "d mmm yyyy 'at' h:MM TT", 
+    "full_short": "d mmm", 
+    "full": "d mmmm yyyy", 
+    "time_short": "h:MM:ss TT", 
+    "year": "yyyy", 
+    "time_no_seconds_short": "h:MM TT", 
+    "month_short": "mmm", 
+    "full_long_small_date": "h:MM TT'<br/><small>d mmm yyyy'</small>'", 
+    "time_no_seconds_small_date": "h:MM TT'<br/><small>'d mmmm yyyy'</small>'", 
+    "month": "mmmm yyyy"
+  }
+}
