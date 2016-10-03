@@ -1,0 +1,13 @@
+<div class="btn-group selectlist" {{#unless doNotInit}}data-initialize="selectlist"{{/unless}} data-resize="auto" id="{{#if id}}{{id}}{{else}}mySelectlist{{/if}}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+		<span class="selected-label">&nbsp;</span>
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		{{#each options}}
+		<li data-value="{{value}}" {{#each data}}data-{{name}}="{{value}}" {{/each}}><a href="#">{{text}}</a></li>
+		{{/each}}
+	</ul>
+	<input class="hidden hidden-field" name="{{#if id}}{{id}}{{else}}mySelectlist{{/if}}" readonly="readonly" aria-hidden="true" type="text"/>
+</div>

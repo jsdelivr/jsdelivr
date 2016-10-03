@@ -1,0 +1,11 @@
+<div class="spinbox" {{#unless doNotInit}}data-initialize="spinbox"{{/unless}} id="{{#if id}}{{id}}{{else}}mySpinbox{{/if}}">
+	<input id="{{#if inputID}}{{inputID}}{{else}}{{#if id}}{{id}}{{else}}mySpinbox{{/if}}Input{{/if}}" {{#if default}}value="{{default}}"{{/if}} type="text" class="form-control input-mini spinbox-input">
+	<div class="spinbox-buttons btn-group btn-group-vertical">
+		<button type="button" class="btn btn-default spinbox-up btn-xs">
+			<span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Increase</span>
+		</button>
+		<button type="button" class="btn btn-default spinbox-down btn-xs">
+			<span class="glyphicon glyphicon-chevron-down"></span><span class="sr-only">Decrease</span>
+		</button>
+	</div>
+</div>

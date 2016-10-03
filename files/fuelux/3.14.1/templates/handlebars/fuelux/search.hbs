@@ -1,0 +1,9 @@
+<div class="search input-group" {{#unless doNotInit}}data-initialize="search"{{/unless}} role="search" id="{{#if id}}{{id}}{{else}}mySearch{{/if}}">
+	<input type="search" class="form-control" placeholder="Search"/>
+	<span class="input-group-btn">
+		<button class="btn btn-default" type="button">
+			<span class="glyphicon glyphicon-search"></span>
+			<span class="sr-only">Search</span>
+		</button>
+	</span>
+</div>

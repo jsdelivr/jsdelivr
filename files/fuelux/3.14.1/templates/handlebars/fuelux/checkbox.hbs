@@ -1,0 +1,6 @@
+{{#unless inline}}<div class="checkbox{{#if highlight}} highlight{{/if}}">{{/unless}}
+	<label class="checkbox-custom{{#if inline}} checkbox-inline{{/if}}{{#if highlight}} highlight{{/if}}"{{#unless doNotInit}} data-initialize="checkbox"{{/unless}} id="{{#if id}}{{id}}{{else}}myCustomCheckbox{{/if}}">
+		<input class="sr-only" type="checkbox" {{#if data-toggle}}data-toggle="{{data-toggle}}" {{/if}}{{#if checked}}checked="checked" {{/if}}{{#if disabled}}disabled="disabled" {{/if}}value="" name="{{#if name}}{{name}}{{else}}myCustomCheckboxName{{/if}}">
+		<span class="checkbox-label">{{#if label}}{{label}}{{else}}Checkbox Label{{/if}}</span>
+	</label>
+{{#unless inline}}</div>{{/unless}}
