@@ -1,0 +1,441 @@
+﻿@media (max-width :320px) {
+    .e-grid.e-responsive > [id*='Dlg_wrapper'] {
+        width: 130px !important;
+    }
+    .e-grid.e-responsive .e-gridtoolbar .e-gridresponsiveicons {
+      display : inline !important;
+    }
+    .e-grid.e-responsive .e-rowcell {
+        display: block;
+        height: 27px;
+        text-align: left !important;
+    }
+
+    .e-grid.e-responsive .e-gridcontent .e-ejinputtext {
+        display: block;
+    }
+
+    .e-grid.e-responsive .e-gridcontent td:before {
+        content: attr(data-cell);
+        top: 6px;
+        left: 13px;
+        width: 45%;
+        white-space: nowrap;
+        position: absolute;
+        padding-right: 10px;
+        font-weight: bolder;
+    }
+
+    .e-grid.e-responsive .e-table, .e-grid.e-responsive .e-table tbody, .e-grid.e-responsive .e-table tr, .e-grid.e-responsive .e-table td {
+        display: block;
+    }
+
+    .e-grid.e-responsive .e-gridcontent td[data-cell] {
+        position: relative;
+        padding-left: 55%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .e-grid.e-responsive .e-gridcontent .e-normaledit .e-rowcell {
+        padding-left: 1%;
+        padding-right: 1%;
+        height: auto !important;
+        border-top-width: 0;
+    }
+
+        .e-grid.e-responsive .e-gridcontent .e-normaledit .e-rowcell:before {
+            position: static;
+            bottom: 6px;
+        }
+
+    .e-grid.e-responsive .e-gridheader {
+        border-bottom-width: 0;
+    }
+
+    .e-grid.e-responsive .e-inlineformedit .e-editform-btn {
+        float: none;
+    }
+
+    .e-grid.e-responsive > .e-gridheader {
+        display: none;
+    }
+
+    .e-grid.e-responsive .e-rowcell {
+        border-width: 0;
+        padding: 0;
+        line-height: normal;
+        white-space: normal;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .e-grid.e-responsive .e-inlineformedit .e-label {
+        text-align: left !important;
+    }
+
+        .e-grid.e-responsive .e-inlineformedit .e-label,
+        .e-grid.e-responsive .e-inlineformedit .e-label *:first-child,
+        .e-grid.e-responsive .e-inlineformedit .e-rowcell,
+        .e-grid.e-responsive .e-inlineformedit .e-rowcell *:first-child,
+        .e-grid.e-responsive .e-inlineformedit form div {
+            width: 100% !important;
+        }
+
+    .e-grid.e-responsive .e-inlineformedit .e-editform-btn {
+        padding-top: 13px;
+    }
+
+        .e-grid.e-responsive .e-inlineformedit .e-editform-btn input:first-child {
+            margin-left: 20px !important;
+        }
+
+    .e-grid.e-responsive, .e-grid.e-responsive .e-rowcell {
+        font-size: 12px;
+        font-family: segoe ui;
+    }
+
+        .e-grid.e-responsive .e-pager {
+            position: relative;
+            height: 38px;
+            margin-bottom: -5px;
+            font-family: segoe ui;
+        }
+
+            .e-grid.e-responsive .e-pager .e-parentmsgbar {
+                position: absolute;
+                top: 34px;
+                padding-top: 0;
+                margin-left: 24%;
+            }
+
+            .e-grid.e-responsive .e-pager .e-pagercontainer {
+                position: absolute;               
+                margin-left: 16%;
+                top:5px;
+            }
+            .e-pager .e-pagercontainer{
+                margin-left:30px;               
+            }
+            .e-pager div.e-parentmsgbar{
+                margin-left:24%;
+                float:none;
+            }
+
+            .e-grid.e-responsive .e-pager .e-PP, .e-grid.e-responsive .e-pager .e-NP {
+                display: none !important;
+            }
+
+    .e-grid.e-responsive,
+    .e-grid.e-responsive .e-gridcontent td.e-rowcell,
+    .e-grid.e-responsive .e-gridcontent,
+    .e-grid.e-responsive .e-gridcontent table,
+    .e-grid.e-responsive .e-gridcontent table tr {
+        -ms-touch-action: auto !important;
+        touch-action: auto !important;
+    }
+
+    .e-grid.e-responsive .e-toolbaricons.e-searchfind{
+        padding-left: 0px !important;
+    }
+
+    .e-grid.e-responsive .e-gridcontent.e-scroller {
+        -ms-touch-action: none !important;
+        touch-action: none !important;
+    }
+
+    .e-grid.e-responsive td.e-rowcell {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        min-height: 27px;
+    }
+
+    .e-grid .e-gridcontent .e-normaledit td.e-rowcell {
+        border-bottom-width: 0;
+        height: auto !important;
+        border-bottom-style: solid;
+    }
+
+    .e-grid.e-responsive .e-table > tbody > tr:last-child td:last-child {
+        border-bottom-width: 0;
+    }
+	
+	.e-grid.e-responsive .e-rowcell div.e-error{
+		position: relative;
+	}
+	.e-grid:not(.e-responsive) .e-gridtoolbar .e-ejinputtext {
+       width: 97px !important;
+    }
+}
+@media (max-width: 321px) {
+    .e-grid:not(.e-responsive) .e-table-priority-6,
+    .e-grid:not(.e-responsive) .e-table-priority-5,
+    .e-grid:not(.e-responsive) .e-table-priority-4,
+    .e-grid:not(.e-responsive) .e-table-priority-3,
+    .e-grid:not(.e-responsive) .e-table-priority-2 {
+        display: none !important;
+    }
+}
+@media (min-width: 321px) and (max-width:479px) {
+    .e-grid .e-table-priority-6,
+    .e-grid .e-table-priority-5,
+    .e-grid .e-table-priority-4,
+    .e-grid .e-table-priority-3,
+    .e-grid .e-table-priority-2 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width:639px) {
+    .e-grid .e-table-priority-6,
+    .e-grid .e-table-priority-5,
+    .e-grid .e-table-priority-4,
+    .e-grid .e-table-priority-3 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width:799px) {
+    .e-grid .e-table-priority-6,
+    .e-grid .e-table-priority-5,
+    .e-grid .e-table-priority-4 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 959px) {
+    .e-grid .e-table-priority-6,
+    .e-grid .e-table-priority-5 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1120px) {
+    .e-grid .e-table-priority-6 {
+        display: none !important;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .labelRes {
+        line-height: 1 !important;
+    }
+
+    .e-resFilterleftIcon {
+        margin-top: 0% !important;
+    }
+
+    .e-resFIlterRigthIcon {
+        margin-top: 0% !important;
+    }
+}
+
+.e-resFilterDialogHeaderDiv {
+    height: 10% !important;
+    width: 100%;
+    border-bottom: 1px solid #c4c4c4;
+    text-align: center;
+}
+
+.e-resFIlterRigthIcon {
+    float: right;
+	line-height: 2 !important;
+    font-size: 21px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.e-resFilterleftIcon {
+    float: left;
+	line-height: 2 !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    vertical-align: middle;
+    font-size: 21px;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.e-resposnsiveFilterBtnRight {
+    margin-left: 0px !important;
+    width: 50% !important;
+    bottom: 0px;
+    right: 0px;
+    position: absolute !important;
+    height: 31px;
+    float: right;
+    border-radius: 0px;
+}
+
+.e-resposnsiveFilterBtnLeft {
+    margin-left: 0px !important;
+    width: 46%;
+    height: 31px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute !important;
+    float: left;
+    border-radius: 0px;
+    border-right: 1px solid #c4c4c4 !important;
+}
+
+.e-responsiveLabelDiv {
+    margin-left: 8%;
+    font-weight: bold;
+}
+
+.e-responsiveExcelFilterFieldDiv table {
+    width: 100% !important;
+    line-height: 3;
+}
+
+.e-responsiveExcelFilterFieldDiv .e-operator {
+    width: 45% !important;
+}
+
+.e-responsiveExcelFilterFieldDiv .e-value {
+    width: 55% !important;
+}
+
+.e-responsiveExcelFilterFieldDiv {
+    width: 96% !important;
+    margin-left: 4% !important;
+    margin-top: 4%;
+}
+
+.labelRes {
+    vertical-align: middle;
+    line-height: 2 !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.e-responsviesExcelFilter {
+    padding: 0px !important;
+}
+
+.e-resSearch .e-btncontainer > div {
+    margin: 0px !important;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 105%;
+    margin-left: -5% !important;
+    background: white;
+}
+
+.e-resSearch .e-searchbox input {
+    width: 97% !important;
+}
+
+.e-resSearch {
+    height: 91%;
+}
+
+.e-responisveCustomFilter:before {
+    content: "\e753";
+}
+
+.e-responsiveSortClear:before {
+    content: "\e754";
+}
+
+.e-respponsiveSorting:before {
+    content: "\e752";
+}
+
+.e-respponsiveSortingAsc:before {
+    content: "\e74f";
+    margin-top: -5px;
+}
+
+.e-resSortIconBtn:hover span {
+    color: white !important;
+}
+
+.e-respponsiveSortingAsc {
+    margin-top: -5px;
+}
+.e-responsiveFilterClear:before{
+    content: "\e755";
+}
+.e-respponsiveSortingDesc:before {
+    content: "\e74c";
+    margin-top: -5px;
+}
+
+.e-respponsiveSortingDesc {
+    margin-top: -5px;
+}
+
+.e-responisveBack:before {
+    content: "\e74d";
+}
+
+.e-responisveClose:before {
+    content: "\e74e";
+}
+
+.e-resSearch .e-searchbox span {
+    right: 3% !important;
+}
+
+.e-resSearch .e-checkboxlist {
+    background: white !important;
+    margin-left: -3% !important;
+    line-height: 2;
+}
+
+.e-resIcon {
+    font-size: 21px !important;
+}
+
+.e-responsiveExcelFilterFieldDiv .e-value .e-widget {
+    height: 30px !important;
+    width: 88% !important;
+}
+
+.e-responsive .e-toolbaricons.e-searchfind {
+    padding-left: 1px !important;
+}
+
+.e-responsivefilterColDiv {
+    border-bottom: 1px solid #c4c4c4;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+    .e-responsivefilterColDiv:hover {
+        cursor: pointer;
+    }
+
+.resFilterDiv {
+    width: 100% !important;
+    /*height:100% !important;*/
+}
+
+.e-filterMenuBtn {
+    bottom: 0px;
+    width: 100%;
+    margin-top: 0 !important;
+}
+
+.e-resFilterOperator {
+    padding-left: 2%;
+    margin-left: 3%;
+    margin-top: 5% !important;
+    width: 92% !important;
+}
+
+    .e-resFilterOperator span {
+        height: 30px !important;
+    }
+
+    .e-resFilterOperator input {
+        width: 100% !important;
+    }
