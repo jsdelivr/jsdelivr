@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "angular.moment",
+  "name": "ckd-css",
   "repo": "equinusocio/ckdcss",
   "files": {
     "basePath": "dist/",
