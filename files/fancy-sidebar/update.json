@@ -3,6 +3,6 @@
   "name": "fancy-sidebar",
   "repo": "douglasdeodato/fancy-sidebar",
   "files": {
-    "include": ["./public/*"]
+    "include": ["./public/css/app.dist.css", "./public/js/fancy-sidebar.js"]
   }
 }
