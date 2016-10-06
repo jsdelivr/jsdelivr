@@ -3,7 +3,6 @@
     "name": "syncfusion-javascript",
     "repo": "syncfusion/JavaScript-Widgets",
     "files": {
-       "include": ["./Content/**/*","./Scripts/**/*"], 
-       "exclude": ["ej/ej.widgets.all.min.js"]
+       "include": ["./Content/**/*","./Scripts/**/*"]
 }
 }
