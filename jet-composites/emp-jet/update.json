@@ -1,0 +1,1 @@
+{    "packageManager": "github",    "name": "angular.moment",    "repo": "emp-jet",    "files": {      "include": ["loader.js", "empTable.html", "empTable.js", "empTableMetadata.json"]    }  } 
