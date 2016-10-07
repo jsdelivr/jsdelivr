@@ -1,9 +1,9 @@
 {
-  packageManager: "github",
-  name: "environment-indicator",
-  repo: "patros/environment-indicator",
-  files: {
-    include: [
+  "packageManager": "github",
+  "name": "environment-indicator",
+  "repo": "patros/environment-indicator",
+  "files": {
+    "include": [
       "environment-indicator.min.js"
     ]
   }
