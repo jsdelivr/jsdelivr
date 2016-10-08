@@ -3,6 +3,6 @@
    "name": "angular.moment", 
    "repo": "jet-composites/emp-jet", 
    "files": { 
-     "include": ["loader.js", "emptable.js", "emptablemetadata.json", "emptable.html"] 
+     "include": ["loader.js", "emptable.js", "emptablemetadata.json", "emptable.html", "emptablemetadata.json.js", "emptable.html.js"] 
    } 
  } 
