@@ -39,7 +39,7 @@ define(['knockout','ojs/ojcore', 'jquery',
             console.log("In Department self.headerValues: "+self.headerValues); 
 			$.ajax({
 				beforeSend: function(request) {
-					request.setRequestHeader("X-Mashape-Key", 'key_here');
+					request.setRequestHeader("Access-Control-Allow-Origin", '*');
 				},
 				dataType: "json",
 				url: 'http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json',
