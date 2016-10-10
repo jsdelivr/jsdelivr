@@ -42,6 +42,7 @@ define(['knockout','ojs/ojcore', 'jquery',
 					request.setRequestHeader("Access-Control-Allow-Origin", '*');
 				},
 				dataType: "json",
+				crossOrigin: true,
 				url: 'http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json',
 				success: function(data) {
 					$.map(data.items, function(val, i){
