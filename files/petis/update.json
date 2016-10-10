@@ -3,7 +3,6 @@
 	"name": "petis",
 	"repo": "dalikewara/petis",
 	"files": {
-		"basePath": "/",
 		"include": ["petis.js", "petis.min.js"]
 	}
 }
