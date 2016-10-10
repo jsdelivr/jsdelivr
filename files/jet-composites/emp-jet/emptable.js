@@ -1,7 +1,8 @@
 define(['knockout','ojs/ojcore', 'jquery', 
          'ojs/ojknockout', 'promise', 'ojs/ojdatagrid',
            'ojs/ojarraydatagriddatasource',
-          'ojs/ojchart'], function(ko, oj, $) {
+          'ojs/ojchart',
+		  'text!http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json'], function(ko, oj, $) {
 
  function tableViewModel(context){
      var self = this;
