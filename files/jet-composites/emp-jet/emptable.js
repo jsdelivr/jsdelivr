@@ -48,7 +48,7 @@ define(['knockout','ojs/ojcore', 'jquery',
 						 if(val.headerValues[10].column==objectId){
 								self.tabledata.push(val);
 						}
-					}
+					});
 				}
 			});
            
