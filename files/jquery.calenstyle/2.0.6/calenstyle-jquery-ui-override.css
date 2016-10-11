@@ -1,0 +1,95 @@
+/* ----------------------------------------------------------------------------- 
+
+  CalenStyle - Modern Event Calendar
+  Version 2.0.6
+  Copyright (c)2016 Curious Solutions LLP
+  https://curioussolutions.in/libraries/calenstyle/content/license.htm
+  See License Information in LICENSE file.
+
+ ----------------------------------------------------------------------------- */
+
+/*--------------------------------* Tooltip Start *---------------------------- */
+
+.ui-tooltip
+{
+	font-family: arial;
+	min-width: 80px;
+
+    background: #FFF;
+    border: 1px solid #34495E;
+}
+
+.tooltip-arrow:after 
+{
+    background: #FFF;
+    border: 2px solid #34495E;
+}
+
+.ui-tooltip 
+{
+    padding: 8px;
+    color: #000000;
+    border-radius: 0;
+
+    font-size: 80%;
+    max-width: 200px;
+}
+
+.ui-tooltip-content .title, .ui-tooltip-content .time
+{
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.tooltip-arrow 
+{
+    width: 70px;
+    height: 16px;
+
+    overflow: hidden;
+
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+
+    margin-left: -34px;
+}
+
+.tooltip-arrow.top 
+{
+    top: -16px;
+    bottom: auto;
+}
+
+.tooltip-arrow.left 
+{
+    left: 20%;
+}
+
+.tooltip-arrow:after 
+{
+    content: "";
+
+    position: absolute;
+    left: 20px;
+    top: -23px;
+
+    width: 25px;
+    height: 25px;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.tooltip-arrow.top:after 
+{
+    bottom: -23px;
+    top: auto;
+}
+
+
+/*--------------------------------* Tooltip End *---------------------------- */
