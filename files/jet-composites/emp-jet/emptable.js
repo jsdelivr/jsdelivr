@@ -37,20 +37,25 @@ define(['knockout','ojs/ojcore', 'jquery',
      "]"; 
             self.headerValues=JSON.parse(columnsList);
             console.log("In Department self.headerValues: "+self.headerValues);       
-            $.getJSON("http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json", {PARAM_ID : objectId, beforeSend: function(request) { 
-					request.setRequestHeader("Access-Control-Allow-Origin", '*'); 
-				}, 
-				dataType: "json", 
- 				crossOrigin: true}, function(data){
-                 $.map(data.items, function(val, i){                     
-                    if(val.headerValues[10].column==objectId){
-                        self.tabledata.push(val);
-					}
-                 });
-                 self.headerTemplate = 'th_template_dept';
-                 self.bodyTemplate = 'td_template_dept';
-                 self.accepted(true);
-            });            
+ 			$.ajax({ 
+ 				beforeSend: function(request) { 
+ 					request.setRequestHeader("Access-Control-Allow-Origin", '*'); 
+ 				}, 
+ 				dataType: "json", 
+ 				crossOrigin: true, 
+ 				url: 'http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json', 
+ 				success: function(data) { 
+ 					$.map(data.items, function(val, i){ 
+ 					//console.log("Hello: "+val.headerValues[0].column+"-"+val.headerValues[1].name+"-"+val.headerValues[2].name+"-"+val.headerValues[3].name+"-"+val.headerValues[4].name+"-"+val.headerValues[5].name);       
+ 					if(val.headerValues[10].column==objectId){ 
+ 					self.tabledata.push(val); 
+ 					} 
+ 					}); 
+ 					self.headerTemplate = 'th_template_dept'; 
+ 					self.bodyTemplate = 'td_template_dept'; 
+ 					self.accepted(true); 
+ 				} 
+ 			});        
         }else{
             columnsList = "[" +
                  "{\"column\": \"ID\", \"name\": \"ID\"}, " +
