@@ -37,7 +37,11 @@ define(['knockout','ojs/ojcore', 'jquery',
      "]"; 
             self.headerValues=JSON.parse(columnsList);
             console.log("In Department self.headerValues: "+self.headerValues);       
-            $.getJSON("http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json", {PARAM_ID : objectId}, function(data){
+            $.getJSON("http://indl144125.idc.oracle.com:7011/sales/js/dummydata.json", {PARAM_ID : objectId, beforeSend: function(request) { 
+					request.setRequestHeader("Access-Control-Allow-Origin", '*'); 
+				}, 
+				dataType: "json", 
+ 				crossOrigin: true}, function(data){
                  $.map(data.items, function(val, i){                     
                     if(val.headerValues[10].column==objectId){
                         self.tabledata.push(val);
