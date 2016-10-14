@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lightgallery.js",
+  "repo": "sachinchoolur/lightgallery.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
