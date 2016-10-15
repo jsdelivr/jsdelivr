@@ -2,6 +2,7 @@
   "packageManager": "bower",
   "name": "gt",
   "files": {
+    "basePath": "dist/",
     "include": ["**/*.js", "**/*.json", "**/*.css"]
   }
 }
