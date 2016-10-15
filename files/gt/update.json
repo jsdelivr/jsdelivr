@@ -1,4 +1,7 @@
 {
   "packageManager": "bower",
-  "name": "gt"
+  "name": "gt",
+  "files": {
+    "include": ["**/*.js", "**/*.json", "**/*.css"]
+  }
 }
