@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "feathers",
+  "repo": "feathersjs/feathers",
+  "files": {
+    "include": ["feathers.js"]
+  }
+}
