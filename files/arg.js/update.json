@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "arg.js",
+  "repo": "stretchr/arg.js",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["**/*.min.js"]
+  }
+}
