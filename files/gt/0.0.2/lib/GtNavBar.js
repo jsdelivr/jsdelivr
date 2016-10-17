@@ -1,0 +1,1 @@
+Gt.controller("GtNavBar",[],"GtWidget",function(){this.view(1)}),GtNavBar.prototype.add=function(a,b,c){b=b||"left",a.setStyle("navBar"),a.render(this.findElement(".gt-navbar-"+b),this)},GtNavBar.prototype.setAlign=function(a){this.getElement().css("text-align",a)};

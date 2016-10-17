@@ -1,0 +1,63 @@
+{
+  "GtButton":
+  {
+    "1":"<button class=\"gt-button gt-button-text btn btn-primary\">{{text}}</button>",
+    "2":"<div class=\"btn-group\"><button type=\"button\" class=\"gt-main-button gt_button gt-button-text btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{text}} <span class=\"caret\"></span></button><ul class=\"gt-buttonList dropdown-menu\"></ul></div>",
+    "3":"<li class=\"gt-button\"><a href=\"#\" class=\"gt-button-text\">{{text}}</a></li>",
+    "navBar":"<li class=\"gt-button\"><a href=\"#\">{{text}}</a></li>",
+    "tabBar":"<a class=\"gt-button gt-button-text btn btn-primary\" href=\"#\">{{text}}</a>",
+    "contextMenu":"<a class=\"gt-button gt-button-text\" href=\"#\">{{text}}</a>"
+  },
+  "GtWindow":
+  {
+    "1":"<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><h4 class=\"modal-title\">{{title}}</h4></div><div class=\"modal-body\">{{body}}</div><div class=\"modal-footer\"><div class=\"my_other_buttons\"></div>[[closeButton]]</div></div></div></div>"
+  },
+  "GtNavBar":
+  {
+    "1":"<nav class=\"navbar navbar-default navbar-static-top\"><div class=\"container\"><div class=\"navbar-header\"><button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button></div><div id=\"navbar\" class=\"navbar-collapse collapse\"><ul class=\"nav navbar-nav gt-navbar-left\"></ul><ul class=\"nav navbar-nav navbar-right gt-navbar-right\"></ul></div></div></nav>"
+  },
+  "GtTextEdit":
+  {
+    "singleline":"<input type=\"text\" class=\"form-control input-md\" value=\"{{text}}\" placeholder=\"{{placeholder}}\" />",
+    "password":"<input type=\"password\" class=\"form-control input-md\" value=\"{{text}}\" />",
+    "multiline":"<textarea placeholder=\"{{placeholder}}\" class=\"form-control\">{{text}}</textarea>"
+  },
+  "GtForm":
+  {
+    "1":"<form class=\"form-horizontal gt-form-container\"><fieldset><legend>{{title}}</legend></fieldset></form>",
+    "label":"<div class=\"form-group\"><label class=\"col-md-4 control-label\"></label><div class=\"col-md-4 gt-label-input\"></div></div>"
+  },
+  "GtCanvas":
+  {
+    "1":"<canvas tabindex=\"1000\" style=\"width:100%; height:100%; z-index:4;\"></canvas>",
+    "2":"<canvas tabindex=\"1000\" style=\"width:100%; height:100%; z-index:4;\"></canvas>"
+  },
+  "GtBar":
+  {
+    "1":"<div class=\"gt-bar\"></div>"
+  },
+  "GtPageContainer":
+  {
+    "1":"<div style=\"width:100%; height:100%;\"></div>"
+  },
+  "GtList":
+  {
+    "classic":"<table class=\"table gt-list\"></table>",
+    "classic_tr":"<tr></tr>",
+    "classic_td":"<td class=\"gt-list-element\"></td>",
+    "contextMenu":"<div class=\"dropdown clearfix\" style=\"position:absolute; display:none;\"><ul class=\"dropdown-menu gt-list\" style=\"display:block; position:relative;\"></ul></div>",
+    "contextMenu_tr":"",
+    "contextMenu_td":"<li class=\"gt-list-element\"></li>",
+    "autoComplete":"<div class=\"gt-autocomplete dropdown clearfix\" style=\"position:absolute;\"><ul class=\"dropdown-menu gt-list\" style=\"display:block; position:relative;\"></ul></div>",
+    "autoComplete_tr":"",
+    "autoComplete_td":"<li class=\"gt-list-element\" style=\"cursor:pointer; padding:3px;\"></li>"
+  },
+  "GtProgressBar":
+  {
+    "1":"<div class=\"progress\"><div class=\"progress-bar gt-progress-bar-progress gt-progress-bar-text\"></div></div>"
+  },
+  "GtAutoComplete":
+  {
+    "default":"<div style=\"display:none; position:absolute;\">[[list]]</div>"
+  }
+}
