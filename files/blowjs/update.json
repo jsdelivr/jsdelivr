@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "blow.js",
+  "repo": "MekliCZ/Blow.js",
+  "files": {
+    "include": [
+      "dist/blow/blow.min.js",
+      "dist/blow/blow.css"
+    ]
+  }
+}
