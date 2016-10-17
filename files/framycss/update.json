@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "framy-css",
+  "repo": "aaroniker/framy-css",
+  "files": {
+    "basePath": "css/",
+    "include": ["framy.min.css", "framy.css"]
+  }
+}
