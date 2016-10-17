@@ -1,0 +1,29 @@
+@font-face {
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 300;
+ src: url(roboto-light.eot);
+ src: url(roboto-light.eot?#iefix) format('embedded-opentype'),
+      url(roboto-light.woff) format('woff'),
+      url(roboto-light.ttf) format('truetype');
+}
+
+@font-face {
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 400;
+ src: url(roboto-regular.eot);
+ src: url(roboto-regular.eot?#iefix) format('embedded-opentype'),
+      url(roboto-regular.woff) format('woff'),
+      url(roboto-regular.ttf) format('truetype');
+}
+
+@font-face {
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 700;
+ src: url(roboto-bold.eot);
+ src: url(roboto-bold.eot?#iefix) format('embedded-opentype'),
+      url(roboto-bold.woff) format('woff'),
+      url(roboto-bold.ttf) format('truetype');
+}
