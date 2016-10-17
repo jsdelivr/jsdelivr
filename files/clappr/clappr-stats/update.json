@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "clappr-stats",
+  "repo": "leandromoreira/clappr-stats",
+  "files": {
+    "include": ["clappr-stats.min.js"]
+  }
+}
