@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dbj.microlib",
+  "repo": "https://github.com/DBJDBJ/JSK/",
+  "files": {
+    "include": ["dbj.microlib.min.js"]
+  }
+}
