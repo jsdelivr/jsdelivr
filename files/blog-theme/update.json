@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "stylesheet",
+  "repo": "ArthurSimas1/blog-theme",
+  "files": {
+    "include": ["style.min.css"]
+  }
+}
