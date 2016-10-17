@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "smallfoot",
+  "repo": "iwatakeshi/smallfoot",
+  "files": {
+    "basePath": "dist/"
+  }
+}
