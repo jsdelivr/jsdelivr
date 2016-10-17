@@ -1,0 +1,9 @@
+ {
+    "packageManager": "github",
+    "name": "UTPlay",
+    "repo": "Insanen/UTPlay",
+    "files": {
+      "basePath": "src/",
+     "include": ["utplay.min.js", "utplay.min.css"]
+    }
+  }
