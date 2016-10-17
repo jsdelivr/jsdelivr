@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "chessboardjs",
+  "repo": "rluncasu/chessboardjs",
+  "files": {
+    "basePath": "www/releases/0.3.0/js/",
+    "include": ["*.js"]
+  }
+}
