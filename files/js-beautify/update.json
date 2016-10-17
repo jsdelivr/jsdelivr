@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "js-beautify",
+  "repo": "beautify-web/js-beautify/js/lib/",
+  "files": {
+    "include": ["beautify-css.js", "beautify-html.js", "beautify.js"]
+  }
+}
