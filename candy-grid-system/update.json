@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "candy-grid-system",
+  "repo": "andreamariotti83/candy-grid-system",
+  "files": {
+    "basePath": "dist/"
+  }
+}
