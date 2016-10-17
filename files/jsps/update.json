@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "npm",
+  "name": "jsps-client",
+  "repo": "jsps-client",
+  "files": {
+    "include": ["build/jsps.js"]
+  }
+}
