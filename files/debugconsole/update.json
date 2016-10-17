@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "debugconsole",
+  "repo": "julianfrank/debugconsole",
+  "files": {
+    "include": ["debugconsole.js"]
+  }
+  
+}
