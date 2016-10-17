@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-home" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Home</title>
+  </g>
+  <defs>
+    <clipPath id="iconic-size-lg-home-clip-0">
+      <path d="M64 16l-48 40 .25 62h37.75v-24h20v24h38v-62z" />
+    </clipPath>
+    <clipPath id="iconic-size-md-home-clip-0">
+      <path d="M16 5l-11 10v14h9v-6h4v6h9v-14z" />
+    </clipPath>
+  </defs>
+  <g class="iconic-home-lg iconic-container iconic-lg" data-width="128" data-height="122" display="inline" transform="translate(0 3)">
+    <path clip-path="url(#iconic-size-lg-home-clip-0)" d="M16.006 57.5l.239 63c.003.828.677 1.5 1.506 1.5h92.75c.828 0 1.5-.672 1.5-1.5v-63c0-.828-.516-1.93-1.152-2.46l-45.695-38.079c-.636-.53-1.668-.53-2.305 0l-45.695 38.079c-.636.53-1.15 1.632-1.147 2.46z"
+    class="iconic-home-wall iconic-property-fill" />
+    <path d="M10.5 56h-9c-.828 0-.995-.442-.371-.988l61.742-54.024c.624-.545 1.634-.545 2.258 0l61.742 54.025c.624.545.457.988-.371.988h-9c-.828 0-2.013-.434-2.645-.969l-49.71-42.062c-.632-.535-1.658-.535-2.29 0l-49.71 42.062c-.632.535-1.817.969-2.645.969z"
+    class="iconic-home-roof iconic-property-fill" />
+  </g>
+  <g class="iconic-home-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
+    <path clip-path="url(#iconic-size-md-home-clip-0)" d="M5.5 32h21c.276 0 .5-.224.5-.5v-16c0-.276-.166-.651-.37-.836l-10.26-9.327c-.204-.186-.536-.186-.74 0l-10.26 9.327c-.204.186-.37.56-.37.836v16c0 .276.224.5.5.5z" class="iconic-home-wall iconic-property-fill"
+    />
+    <path d="M.365 14.658l15.27-14.316c.202-.189.528-.189.73 0l15.271 14.316c.201.189.141.342-.135.342h-2c-.276 0-.664-.152-.867-.339l-12.265-11.322c-.203-.187-.532-.187-.735 0l-12.265 11.322c-.203.187-.591.339-.867.339h-2c-.276 0-.337-.153-.135-.342z"
+    class="iconic-home-roof iconic-property-fill" />
+  </g>
+  <g class="iconic-home-sm iconic-container iconic-sm" data-width="16" data-height="15" display="none" transform="scale(8)">
+    <path class="iconic-home-wall iconic-property-fill" d="M8 0l-8 7h2v8h5v-3h2v3h5v-8h2z" />
+  </g>
+</svg>
