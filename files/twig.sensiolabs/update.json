@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "twig.js",
+  "repo": "twigjs/twig.js",
+  "files": {
+    "basePath": "src/"
+  }
+}
