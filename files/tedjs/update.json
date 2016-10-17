@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tedjs",
+  "repo": "poryagrand/tedjs",
+  "files": {
+	"basePath": "release/"
+  }
+}
