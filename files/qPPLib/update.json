@@ -1,0 +1,7 @@
+{
+  "packageManager": "github",
+  "name": "qPPLib",
+  "repo": "lilchow/Qualtrics-plus-plus",
+  "files": {
+    "include": ["qPPHead.js", "qPPCore.js","prefixedBootstrap.css"]
+  }
