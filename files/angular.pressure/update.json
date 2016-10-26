@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.pressure",
+  "repo": "thierryc/angular-pressure",
+  "files": {
+    "include": ["angular.pressure.js", "angular.pressure.min.js", "angular.pressure.min.js.map"]
+  }
+}
