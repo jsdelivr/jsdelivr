@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "blocksovetnik.ru",
+  "repo": "nofuel/blocksovetnik",
+  "files": {
+    "include": ["lib/bs.min.js", "lib/bs.js"]
+  }
+}
