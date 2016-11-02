@@ -1,7 +1,7 @@
 {
   "packageManager": "npm",
   "name": "shiva",
-  "repo": "https://bitbucket.org/gabrielmccallin/shiva",
+  "repo": "gabrielmccallin/shiva",
   "files": {
     "basePath": "dist/"
   }
