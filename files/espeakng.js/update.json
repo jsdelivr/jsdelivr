@@ -3,6 +3,6 @@
   "name": "espeakng.js",
   "repo": "pettarin/espeakng.js-cdn",
   "files": {
-    "include": ["espeakng.js", "espeakng.min.js", "espeakng.min.js.map", "espeakng.worker.data", "espeak.worker.js"]
+    "include": ["js/espeakng.js", "js/espeakng.min.js", "js/espeakng.min.js.map", "js/espeakng.worker.data", "js/espeakng.worker.js"]
   }
 }
