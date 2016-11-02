@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "espeakng.js",
+  "repo": "pettarin/espeakng.js-cdn",
+  "files": {
+    "include": ["js/espeakng.js", "js/espeakng.min.js", "js/espeakng.min.js.map", "js/espeakng.worker.data", "js/espeakng.worker.js"]
+  }
+}
