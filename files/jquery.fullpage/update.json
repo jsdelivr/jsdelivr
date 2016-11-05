@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.fullpage",
+  "repo": "alvarotrigo/fullPage.js",
+  "files": {
+    "basePath": "dist/",
+    "include": [ "jquery.fullpage.min.js", "jquery.fullpage.min.css", "jquery.fullpage.extensions.min.js" ]
+  }
+}
