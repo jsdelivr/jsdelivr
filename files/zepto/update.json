@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "zepto",
+  "repo": "madrobby/zepto",
+  "files": {
+    "basePath": "dist/"
+  }
+}
