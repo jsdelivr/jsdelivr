@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-pager",
+  "repo": "sachinchoolur/lg-pager",
+  "files": {
+    "basePath": "dist/"
+  }
+}
