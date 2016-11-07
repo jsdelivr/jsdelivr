@@ -3,6 +3,6 @@
   "name": "zepto",
   "repo": "madrobby/zepto",
   "files": {
-    "basePath": "dist/"
+    "include": [ "dist/*.js", "src/*.js" ]
   }
 }
