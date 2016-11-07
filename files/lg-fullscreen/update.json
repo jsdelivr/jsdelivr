@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-fullscreen",
+  "repo": "sachinchoolur/lg-fullscreen",
+  "files": {
+    "basePath": "dist/"
+  }
+}

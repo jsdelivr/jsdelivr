@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-share",
+  "repo": "sachinchoolur/lg-share",
+  "files": {
+    "basePath": "dist/"
+  }
+}
