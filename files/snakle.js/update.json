@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "snakle.js",
+  "repo": "maoosi/snakle.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["snakle.js"]
+  }
+}
