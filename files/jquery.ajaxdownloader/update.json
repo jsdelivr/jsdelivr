@@ -1,0 +1,11 @@
+{
+    "packageManager"    : "github",
+    "name"              : "jquery-ajax-downloader",
+    "repo"              : "gasparesganga/jquery-ajax-downloader",
+    "files"             : {
+        "basePath"  : "/",
+        "include"   : [
+            "src/*.js"
+        ]
+    }
+}
