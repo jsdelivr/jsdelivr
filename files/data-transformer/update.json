@@ -3,6 +3,6 @@
   "name": "data-transformer",
   "repo": "oliversturm/data-transformer",
   "files": {
-    "include": ["data-transformer-browser.min.js"]
+    "include": ["dist/data-transformer-browser.min.js"]
   }
 }
