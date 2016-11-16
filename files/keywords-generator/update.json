@@ -3,6 +3,6 @@
   "name": "keywords.generator",
   "repo": "yangar/keywords-generator",
   "files": {
-    "include": ["jquery.keywords.finder.js"]
+    "include": ["jquery.keywords.finder.js", "jquery.keywords.finder.min.js"]
   }
 }
