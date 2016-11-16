@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "keywords.generator",
+  "repo": "yangar/keywords-generator",
+  "files": {
+    "include": ["jquery.keywords.finder.js"]
+  }
+}
