@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "store2",
+  "files": {
+    "include": ["dist/store2.*"]
+  }
+}
