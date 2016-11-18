@@ -4,6 +4,6 @@
   "repo": "Dog2puppy/Buttons.css",
   "files": {
     "basePath": "/",
-    "include": ["Buttons.css", "Buttons.min.css"]
+    "include": ["buttons.css", "buttons.min.css"]
   }
 }
