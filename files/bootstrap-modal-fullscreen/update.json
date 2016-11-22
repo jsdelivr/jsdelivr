@@ -1,0 +1,10 @@
+{
+  "packageManager": "npm",
+  "name": "bootstrap-fullscreen-modal",
+  "repo": "benallfree/bootstrap-fullscreen-modal",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js"],
+    "exclude": []
+  }
+}
