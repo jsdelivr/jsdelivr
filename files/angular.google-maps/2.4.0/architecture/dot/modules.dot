@@ -1,0 +1,80 @@
+digraph dependencies {
+  node[shape="ellipse",style="filled",colorscheme=paired12]
+
+  
+    "uiGmapgoogle-maps.providers"[label="uiGmapgoogle-maps.providers", color=1]
+  
+    "uiGmapgoogle-maps.wrapped"[label="uiGmapgoogle-maps.wrapped", color=1]
+  
+    "uiGmapgoogle-maps.extensions"[label="uiGmapgoogle-maps.extensions", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.utils"[label="uiGmapgoogle-maps.directives.api.utils", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.managers"[label="uiGmapgoogle-maps.directives.api.managers", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.options"[label="uiGmapgoogle-maps.directives.api.options", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.options.builders"[label="uiGmapgoogle-maps.directives.api.options.builders", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.models.child"[label="uiGmapgoogle-maps.directives.api.models.child", color=1]
+  
+    "uiGmapgoogle-maps.directives.api.models.parent"[label="uiGmapgoogle-maps.directives.api.models.parent", color=1]
+  
+    "uiGmapgoogle-maps.directives.api"[label="uiGmapgoogle-maps.directives.api", color=1]
+  
+    "uiGmapgoogle-maps"[label="uiGmapgoogle-maps", color=1]
+  
+
+  node[shape="ellipse",style="filled",color=2]
+  
+    
+      "nemLogging" -> "uiGmapgoogle-maps.providers"
+    
+  
+    
+  
+    
+      "uiGmapgoogle-maps.wrapped" -> "uiGmapgoogle-maps.extensions"
+    
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps.extensions"
+    
+  
+    
+      "uiGmapgoogle-maps.extensions" -> "uiGmapgoogle-maps.directives.api.utils"
+    
+  
+    
+  
+    
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapgoogle-maps.directives.api.options"
+    
+  
+    
+  
+    
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+      "uiGmapgoogle-maps.directives.api.options" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapgoogle-maps.directives.api.models.child"
+    
+  
+    
+      "uiGmapgoogle-maps.directives.api.managers" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+      "uiGmapgoogle-maps.directives.api.models.child" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps.directives.api.models.parent"
+    
+  
+    
+      "uiGmapgoogle-maps.directives.api.models.parent" -> "uiGmapgoogle-maps.directives.api"
+    
+  
+    
+      "uiGmapgoogle-maps.directives.api" -> "uiGmapgoogle-maps"
+    
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps"
+    
+  
+}

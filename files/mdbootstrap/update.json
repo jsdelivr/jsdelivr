@@ -1,0 +1,9 @@
+{
+    "packageManager": "github",
+    "name": "mdbootstrap",
+    "repo": "mdbootstrap/bootstrap-material-design",
+    "files": {
+        "basePath": "/",
+        "include": ["css/bootstrap.css", "css/bootstrap.min.css", "css/mdb.css", "css/mdb.min.css", "js/bootstrap.js", "js/bootstrap.min.js", "js/jquery-2.2.3.js", "js/jquery-2.2.3.min.js", "js/mdb.js", "js/mdb.min.js", "js/tether.js", "js/tether.min.js"]
+    }
+}

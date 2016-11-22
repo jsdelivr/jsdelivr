@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "gear-upload",
+  "repo": "aaroniker/gear-upload",
+  "files": {
+    "basePath": "dist/"
+  }
+}

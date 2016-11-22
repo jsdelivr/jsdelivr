@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "Justified-Gallery",
+  "repo": "miromannino/Justified-Gallery",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*.css", "**/*.js"],
+    "exclude": ["*.zip"]
+  }
+}

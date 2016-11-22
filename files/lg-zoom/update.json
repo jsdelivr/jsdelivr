@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-zoom",
+  "repo": "sachinchoolur/lg-zoom",
+  "files": {
+    "basePath": "dist/"
+  }
+}

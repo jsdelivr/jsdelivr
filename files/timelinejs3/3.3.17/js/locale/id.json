@@ -1,0 +1,75 @@
+{
+    "lang": "id", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Maret", 
+            "April", 
+            "Mei", 
+            "Juni", 
+            "July", 
+            "Agus.", 
+            "Sept.", 
+            "Okt.", 
+            "Nov.", 
+            "Des."
+        ], 
+        "day_abbr": [
+            "Ahad", 
+            "Sen.", 
+            "Sel.", 
+            "Rabu", 
+            "Kamis", 
+            "Jum.", 
+            "Sab."
+        ], 
+        "day": [
+            "Ahad", 
+            "Senin", 
+            "Selasa", 
+            "Rabu", 
+            "Kamis", 
+            "Jum'at", 
+            "Sabtu"
+        ], 
+        "month": [
+            "Januari", 
+            "Februari", 
+            "Maret", 
+            "April", 
+            "Mei", 
+            "Juni", 
+            "Juli", 
+            "Agustus", 
+            "September", 
+            "Oktober", 
+            "November", 
+            "Desember"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "id"
+    }, 
+    "messages": {
+        "loading": "Memuat", 
+        "contract_timeline": "Ciutkan Timeline", 
+        "return_to_title": "Kembali ke Judul", 
+        "wikipedia": "dari Wikipedia, ensiklopedia bebas", 
+        "loading_content": "Memuat Isi", 
+        "expand_timeline": "Kembangkan Timeline", 
+        "loading_timeline": "Memuat Timeline... "
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'pukul' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}

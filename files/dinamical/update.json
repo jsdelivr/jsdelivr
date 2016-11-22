@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dinamical",
+  "repo": "estebanrfp/dinamical-rcms",
+  "files": {
+    "include": ["dinamical.client.min.js", "dinamical.admin.min.js"]
+  }
+}

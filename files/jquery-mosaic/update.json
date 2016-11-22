@@ -1,0 +1,13 @@
+{
+  "packageManager": "github",
+  "name": "jquery-mosaic",
+  "repo": "tin-cat/jquery-mosaic",
+  "files": {
+    "include": [
+      "jquery.mosaic.js", 
+      "jquery.mosaic..min.js",
+      "jquery.mosaic.css", 
+      "jquery.mosaic..min.css"
+    ]
+  }
+}

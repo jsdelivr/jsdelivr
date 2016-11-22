@@ -1,0 +1,1 @@
+Gt.controller("GtText",[],"GtWidget",function(a){this.text=a,this.view(1),this.connectToJSEvent("click","click")});

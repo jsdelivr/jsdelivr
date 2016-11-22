@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ol3-interactive-overview",
+  "repo": "jonataswalker/ol3-interactive-overview",
+  "files": {
+    "basePath": "build/",
+    "include": ["ol3-interactive-overview.js", "ol3-interactive-overview.css", "ol3-interactive-overview.min.css"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lazzy.js",
+  "repo": "IcaliaLabs/lazzy.js",
+  "files": {
+    "include": ["lazzy.min.js"]
+  }
+}

@@ -1,0 +1,81 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.extensions"[label="uiGmapgoogle-maps.extensions", color=1]
+
+    
+      "uiGmapgoogle-maps.wrapped"[label="uiGmapgoogle-maps.wrapped", color=1]
+      "uiGmapgoogle-maps.wrapped" -> "uiGmapgoogle-maps.extensions"
+    
+      "uiGmapgoogle-maps.providers"[label="uiGmapgoogle-maps.providers", color=1]
+      "uiGmapgoogle-maps.providers" -> "uiGmapgoogle-maps.extensions"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmapExtendGWin"[label="uiGmapExtendGWin", color=5]
+      "uiGmapgoogle-maps.extensions" -> "uiGmapExtendGWin"
+    
+      "uiGmapLodash"[label="uiGmapLodash", color=5]
+      "uiGmapgoogle-maps.extensions" -> "uiGmapLodash"
+    
+      "uiGmapExtendMarkerClusterer"[label="uiGmapExtendMarkerClusterer", color=5]
+      "uiGmapgoogle-maps.extensions" -> "uiGmapExtendMarkerClusterer"
+    
+
+    
+      "uiGmapString"[label="uiGmapString", color=6]
+      "uiGmapgoogle-maps.extensions" -> "uiGmapString"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+      
+    
+      
+    
+      
+        "uiGmapLodash"[label="uiGmapLodash"]
+        "uiGmapLodash" -> "uiGmapExtendMarkerClusterer"
+      
+        "uiGmapPropMap"[label="uiGmapPropMap"]
+        "uiGmapPropMap" -> "uiGmapExtendMarkerClusterer"
+      
+    
+
+    
+      
+    
+
+    
+
+
+}
