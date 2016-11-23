@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "syncfusion-ej-global",
+    "repo": "syncfusion/ej-global",
+    "files": {
+       "include": ["./i18n/**/*","./l10n/**/*"]
+}
+}
