@@ -8,7 +8,7 @@
       "dist/route.min.js",
       "dist/amd.route.js",
       "dist/amd.route.min.js",
-      "dist/es6.route.js"
+      "dist/cjs.route.js"
     ]
   }
 }
