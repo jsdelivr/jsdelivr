@@ -1,0 +1,37 @@
+css-button.round {
+   boarder-radius: 15px;
+   padding: 10px;
+   background-color: gray;
+   font-color: black;
+}
+
+css-button.sharp-corners {
+   padding: 10px;
+   background-color: gray;
+   font-color: black;
+}
+
+css-button.red {
+   background-color: red;
+}
+
+css-button.blue {
+   background-color: blue;
+}
+
+css-button.light-blue {
+   background-color: lightCyan;
+}
+
+css-button.green {
+   background-color: green;
+}
+
+css-button.white {
+   background-color: white;
+   font-color: black;
+}
+
+css-button.white-text {
+   font-color: white;
+}
