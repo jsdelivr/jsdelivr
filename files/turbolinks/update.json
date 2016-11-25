@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "turbolinks",
+  "repo": "turbolinks/turbolinks",
+  "files": {
+    "basePath": "dist/"
+  }
+}
