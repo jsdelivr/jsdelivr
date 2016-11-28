@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "prelodr",
-  "repo": "quintana-dev/prelodr",
+  "repo": "joseluisq/prelodr",
   "files": {
     "basePath": "dist/",
     "include": ["prelodr.min.js", "prelodr.min.css"]
