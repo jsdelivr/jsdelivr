@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dom-to-image",
+  "repo": "tsayen/dom-to-image",
+  "files": {
+    "include": ["dom-to-image.min.js"]
+  }
+}
