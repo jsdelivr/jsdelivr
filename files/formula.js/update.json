@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "formula.js",
+  "repo": "sutoiku/formula.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["formula.js", "formula.min.js"]
+  }
+}
