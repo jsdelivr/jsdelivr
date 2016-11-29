@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-document" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Document</title>
+  </g>
+  <defs>
+    <clipPath id="iconic-size-lg-document-clip-0">
+      <path d="M70 28v-28h-70v128h98v-100h-28zm-58 30h60v4h-60v-4zm0 36h68v4h-68v-4zm74 22h-74v-4h74v4zm0-36h-74v-4h74v4zm0-36h-74v-4h74v4z" />
+    </clipPath>
+    <clipPath id="iconic-size-md-document-clip-0">
+      <path d="M17 8v-8h-17v32h25v-24h-8zm-14 7h15v1h-15v-1zm0 8h17v1h-17v-1zm19 5h-19v-1h19v1zm0-8h-19v-1h19v1zm0-8h-19v-1h19v1z" />
+    </clipPath>
+    <clipPath id="iconic-size-sm-document-clip-0">
+      <path d="M8 0h-8v16h13v-11h-5v-5zm-6 4h4v1h-4v-1zm0 6h7v1h-7v-1zm9 4h-9v-1h9v1zm0-7v1h-9v-1h9z" />
+    </clipPath>
+  </defs>
+  <g class="iconic-document-lg iconic-container iconic-lg" data-width="98" data-height="128" display="inline" transform="translate(15)">
+    <path clip-path="url(#iconic-size-lg-document-clip-0)" d="M96.5 128h-95c-.828 0-1.5-.672-1.5-1.5v-125c0-.828.672-1.5 1.5-1.5h95c.828 0 1.5.672 1.5 1.5v125c0 .828-.672 1.5-1.5 1.5z" class="iconic-document-page iconic-property-fill" />
+    <path class="iconic-document-flap iconic-property-fill" d="M98 24l-24-24v24z" />
+  </g>
+  <g class="iconic-document-md iconic-container iconic-md" data-width="25" data-height="32" display="none" transform="scale(4) translate(3)">
+    <path clip-path="url(#iconic-size-md-document-clip-0)" d="M24.5 32h-24c-.276 0-.5-.224-.5-.5v-31c0-.276.224-.5.5-.5h24c.276 0 .5.224.5.5v31c0 .276-.224.5-.5.5z" class="iconic-document-page iconic-property-fill" />
+    <path class="iconic-document-flap iconic-property-fill" d="M25 7l-7-7v7z" />
+  </g>
+  <g class="iconic-document-sm iconic-container iconic-sm" data-width="13" data-height="16" display="none" transform="scale(8) translate(1)">
+    <path clip-path="url(#iconic-size-sm-document-clip-0)" class="iconic-document-page iconic-property-fill" d="M0 0h13v16h-13z" />
+    <path class="iconic-document-flap iconic-property-fill" d="M13 4l-4-4v4z" />
+  </g>
+</svg>
