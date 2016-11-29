@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cookieconsent3",
+  "repo": "insites/cookieconsent",
+  "files": {
+    "basePath": "build/"
+  }
+}
