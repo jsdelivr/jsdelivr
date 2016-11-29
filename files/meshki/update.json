@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "meshki",
+  "repo": "borderliner/meshki",
+  "files": {
+    "basePath": "dist/"
+  }
+}
