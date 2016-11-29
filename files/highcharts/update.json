@@ -1,9 +1,10 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "highcharts",
   "repo": "highcharts/highcharts",
   "files": {
-  	"basePath": "lib/",
-	"exclude": ["*.src.js", "*.md", "*.json"]
+  	"basePath": "/",
+	"include": ["*.js", "*.css"],
+	"exclude": ["lib", "js"]
   }
 }
