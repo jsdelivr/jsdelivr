@@ -1,8 +1,8 @@
 {
-  "packageManager": "npm",
+  "packageManager": "github",
   "name": "wsm",
   "repo": "jefftham/wsm",
   "files": {
-    "include": ["*.js"]
+    "include": ["lib/*.js"]
   }
 }
