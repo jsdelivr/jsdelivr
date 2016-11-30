@@ -3,6 +3,6 @@
   "name": "parafiadywity",
   "repo": "krzysztofmat/parafiadywity",
   "files": {
-    "include": ['parafiadywity.min.js']
+    "include": ['parafiadywity-JointsWP.min.css']
   }
 }
