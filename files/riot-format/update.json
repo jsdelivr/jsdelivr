@@ -1,8 +1,9 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "riot-format",
   "repo": "joylei/riot-format",
   "files": {
-    "include": ["dist/riot-format.js", "dist/riot-format.min.js", "dist/riot-format.min.js.map"]
+    "basePath": "dist/",
+    "include": ["riot-format.js", "riot-format.min.js", "riot-format.min.js.map"]
   }
 }
