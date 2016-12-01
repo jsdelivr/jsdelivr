@@ -1,0 +1,27 @@
+/* 
+ * D2 coding (Korean) http://dev.naver.com/projects/d2coding/
+ */
+@font-face {
+  font-family: 'D2 coding';
+  font-style: normal;
+  font-weight: 700;
+  src: url('d2codingbold.eot');
+  src: local('※'), local('D2Coding Bold'),
+       url('d2codingbold.eot?#iefix') format('embedded-opentype'),
+       url('d2codingbold.woff2') format('x-woff2'),
+       url('d2codingbold.woff') format('woff'),
+       url('d2codingbold.ttf') format('truetype'),
+       url('d2codingbold.svg') format('svg');
+}
+@font-face {
+  font-family: 'D2 coding';
+  font-style: normal;
+  font-weight: 400;
+  src: url('d2coding.eot');
+  src: local('※'), local('D2Coding'),
+       url('d2coding.eot?#iefix') format('embedded-opentype'),
+       url('d2coding.woff2') format('x-woff2'),
+       url('d2coding.woff') format('woff'),
+       url('d2coding.ttf') format('truetype'),
+       url('d2coding.svg') format('svg');
+}
