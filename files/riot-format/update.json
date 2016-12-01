@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "riot-format",
+  "repo": "joylei/riot-format",
+  "files": {
+    "basePath": "dist/",
+    "include": ["riot-format.js", "riot-format.min.js", "riot-format.min.js.map"]
+  }
+}
