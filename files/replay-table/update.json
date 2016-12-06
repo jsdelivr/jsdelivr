@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "replayTable",
+  "repo": "targetprocess/replayTable",
+  "files": {
+    "basePath": "dist/"
+  }
+}
