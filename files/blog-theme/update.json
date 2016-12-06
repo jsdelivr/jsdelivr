@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "blog-theme",
+  "repo": "ArthurSimas1/blog-theme",
+  "files": {
+    "basePath": "css/"
+  }
+}
