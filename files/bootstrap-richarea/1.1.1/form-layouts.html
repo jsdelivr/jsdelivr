@@ -1,0 +1,11 @@
+
+
+<div data-id="301" data-cat="['default','forms']">
+  <div 
+    data-editor="forms" 
+    data-field="form"
+    class='gated-container' 
+    v-html="forms.filter(function(o) { return o.slug == item.data.form; })[0].locked" 
+    :data-render="'['+item.data.form+']'"
+  >
+</div>

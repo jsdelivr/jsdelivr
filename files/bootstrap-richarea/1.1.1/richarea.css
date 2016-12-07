@@ -1,0 +1,70 @@
+.richarea figure {
+  text-align: center; }
+
+.richarea .btn {
+  min-width: 25px; }
+
+.richarea img {
+  max-width: 100%; }
+
+.richarea .richarea-app {
+  display: none; }
+  .richarea .richarea-app .richarea-editor {
+    position: relative; }
+    .richarea .richarea-app .richarea-editor ul.sortable {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: relative; }
+      .richarea .richarea-app .richarea-editor ul.sortable li {
+        min-height: 20px;
+        position: relative;
+        border: none;
+        border-radius: 3px;
+        padding: 0px;
+        margin: 0px; }
+        .richarea .richarea-app .richarea-editor ul.sortable li .tools {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: none;
+          background: rgba(85, 85, 85, 0.2);
+          border-radius: 3px;
+          padding: 3px;
+          width: 150px;
+          z-index: 1000; }
+          .richarea .richarea-app .richarea-editor ul.sortable li .tools .glyphicon {
+            margin-bottom: 3px;
+            width: 25px; }
+        .richarea .richarea-app .richarea-editor ul.sortable li .item {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          -o-user-select: none;
+          user-select: none; }
+          .richarea .richarea-app .richarea-editor ul.sortable li .item:after {
+            content: " ";
+            z-index: 10;
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: transparent;
+            border-radius: 3px; }
+        .richarea .richarea-app .richarea-editor ul.sortable li:hover {
+          cursor: pointer; }
+        .richarea .richarea-app .richarea-editor ul.sortable li.active .item:after {
+          background: rgba(238, 238, 238, 0.44); }
+    .richarea .richarea-app .richarea-editor .modal.layout-selector .modal-body {
+      background-color: #eeeeee;
+      color: #222222; }
+    .richarea .richarea-app .richarea-editor img.layout {
+      border: 1px solid #eeeeee;
+      border-radius: 3px;
+      margin: 5px;
+      max-width: 195px; }
+      .richarea .richarea-app .richarea-editor img.layout:hover {
+        cursor: pointer; }
+
