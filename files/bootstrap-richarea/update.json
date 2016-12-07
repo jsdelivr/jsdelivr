@@ -1,0 +1,10 @@
+{
+  "packageManager": "npm",
+  "name": "bootstrap-richarea",
+  "repo": "benallfree/bootstrap-richarea",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "*.css", "images/*", "templates/*"],
+    "exclude": []
+  }
+}
