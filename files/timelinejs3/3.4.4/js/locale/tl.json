@@ -1,0 +1,75 @@
+{
+    "lang": "tl", 
+    "date": {
+        "month_abbr": [
+            "Ene.", 
+            "Peb.", 
+            "Mar.", 
+            "Abr.", 
+            "Mayo", 
+            "Hun.", 
+            "Hul.", 
+            "Ago.", 
+            "Set.", 
+            "Okt.", 
+            "Nob.", 
+            "Dis."
+        ], 
+        "day_abbr": [
+            "Li.", 
+            "L.", 
+            "M.", 
+            "Mi.", 
+            "H.", 
+            "B.", 
+            "S."
+        ], 
+        "day": [
+            "Linggo", 
+            "Lunes", 
+            "Martes", 
+            "Miyerkules", 
+            "Huwebes", 
+            "Biyernes", 
+            "Sabado"
+        ], 
+        "month": [
+            "Enemo", 
+            "Pebrero", 
+            "Marso", 
+            "Abril", 
+            "Mayo", 
+            "Hunyo", 
+            "Hulyo", 
+            "Agosto", 
+            "Setyembre", 
+            "Oktubre", 
+            "Nobyembre", 
+            "Disyembre"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "tl"
+    }, 
+    "messages": {
+        "loading": "Loading", 
+        "contract_timeline": "Contract Timeline", 
+        "return_to_title": "Return to Title", 
+        "wikipedia": "Mula sa Wikipedia, ang malayang ensiklopedya", 
+        "loading_content": "Loading Content", 
+        "expand_timeline": "Expand Timeline", 
+        "loading_timeline": "Loading Timeline... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}
