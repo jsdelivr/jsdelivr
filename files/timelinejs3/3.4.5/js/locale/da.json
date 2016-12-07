@@ -1,0 +1,75 @@
+{
+    "lang": "da", 
+    "date": {
+        "month_abbr": [
+            "jan.", 
+            "feb.", 
+            "mar.", 
+            "apr.", 
+            "maj.", 
+            "jun.", 
+            "jul.", 
+            "aug.", 
+            "sep.", 
+            "okt.", 
+            "nov.", 
+            "dec."
+        ], 
+        "day_abbr": [
+            "sø.", 
+            "ma.", 
+            "ti.", 
+            "on.", 
+            "to.", 
+            "fr.", 
+            "lø."
+        ], 
+        "day": [
+            "søndag", 
+            "mandag", 
+            "tirsdag", 
+            "onsdag", 
+            "torsdag", 
+            "fredag", 
+            "lørdag"
+        ], 
+        "month": [
+            "januar", 
+            "februar", 
+            "marts", 
+            "april", 
+            "maj", 
+            "juni", 
+            "juli", 
+            "august", 
+            "september", 
+            "oktober", 
+            "november", 
+            "december"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "da"
+    }, 
+    "messages": {
+        "loading": "Henter", 
+        "contract_timeline": "Træk tidslinien sammen", 
+        "return_to_title": "Tilbage til titel", 
+        "wikipedia": "Fra Wikipedia", 
+        "loading_content": "Henter indhold", 
+        "expand_timeline": "Udvid tidslinien", 
+        "loading_timeline": "Henter tidslinie..."
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d. mmm',' yyyy 'um' HH:MM", 
+        "full_short": "d. mmm", 
+        "full": "d. mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d. mmm yyyy'</small>'"
+    }
+}
