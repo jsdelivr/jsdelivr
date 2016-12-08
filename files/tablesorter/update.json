@@ -3,6 +3,6 @@
   "name": "tablesorter",
   "repo": "Mottie/tablesorter",
   "files": {
-    "include": ["dist/**/*"]
+    "basePath": "dist/"
   }
 }
