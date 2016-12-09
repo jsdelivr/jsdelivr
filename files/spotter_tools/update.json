@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "spotter-ferramentas-adicionais",
+  "repo": "/exactsales/spotter-ferramentas",
+  "files": {
+    "include": ["spotter-ferramentas-adicionais.js"]
+  }
+}
