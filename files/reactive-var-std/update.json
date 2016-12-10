@@ -3,6 +3,7 @@
   "name": "reactive-var-std",
   "repo": "nlhuykhang/reactive-var-std",
   "files": {
+    "basePath": "dist/umd/",
     "include": ["reactive-var-std.min.js"]
   }
 }
