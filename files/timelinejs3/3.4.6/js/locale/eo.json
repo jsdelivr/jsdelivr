@@ -1,0 +1,75 @@
+{
+    "lang": "eo", 
+    "date": {
+        "month_abbr": [
+            "jan.", 
+            "feb.", 
+            "mar.", 
+            "apr.", 
+            "maj.", 
+            "jun.", 
+            "jul.", 
+            "aŭg.", 
+            "sep.", 
+            "okt.", 
+            "nov.", 
+            "dec."
+        ], 
+        "day_abbr": [
+            "dim.", 
+            "lun.", 
+            "mar.", 
+            "mer.", 
+            "ĵaŭ.", 
+            "ven.", 
+            "sab."
+        ], 
+        "day": [
+            "dimanĉo", 
+            "lundo", 
+            "mardo", 
+            "merkredo", 
+            "ĵaŭdo", 
+            "vendredo", 
+            "sabato"
+        ], 
+        "month": [
+            "januaro", 
+            "februaro", 
+            "marto", 
+            "aprilo", 
+            "majo", 
+            "junio", 
+            "julio", 
+            "aŭgusto", 
+            "septembro", 
+            "oktobro", 
+            "novembro", 
+            "decembro"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "eo"
+    }, 
+    "messages": {
+        "loading": "Ŝarĝante", 
+        "contract_timeline": "Malpliampleksigu Kronologio", 
+        "return_to_title": "Reveno al Titolo", 
+        "wikipedia": "El Vikipedio, la libera enciklopedio", 
+        "loading_content": "Ŝarĝante enhavo", 
+        "expand_timeline": "Pliampleksigu Kronologio", 
+        "loading_timeline": "Ŝarĝante Kronologio... "
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'ĉe' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}
