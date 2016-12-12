@@ -1,0 +1,76 @@
+{
+    "lang": "ar", 
+    "messages": {
+        "loading": "تحميل", 
+        "contract_timeline": "الاتفاقية", 
+        "return_to_title": "العودة", 
+        "wikipedia": "من ويكيبيديا, الموسوعة الحرة", 
+        "loading_content": "تحميل المحتوى", 
+        "expand_timeline": "تكبير العرض", 
+        "loading_timeline": "جاري التحميل... "
+    }, 
+    "api": {
+        "wikipedia": "ar"
+    }, 
+    "right_to_left": true, 
+    "date": {
+        "month_abbr": [
+            "كانون الثاني", 
+            "شباط", 
+            "آذار", 
+            "نيسان", 
+            "أيار", 
+            "حزيران", 
+            "تموز", 
+            "آب", 
+            "أيلول", 
+            "تشرين الأول", 
+            "تشرين الثاني", 
+            "كانون الأول"
+        ], 
+        "day_abbr": [
+            "الأحد", 
+            "الإثنين", 
+            "الثلاثاء", 
+            "الأربعاء", 
+            "الخميس", 
+            "الجمعة", 
+            "السبت"
+        ], 
+        "day": [
+            "الأحد", 
+            "الإثنين", 
+            "الثلاثاء", 
+            "الأربعاء", 
+            "الخميس", 
+            "الجمعة", 
+            "السبت"
+        ], 
+        "month": [
+            "كانون الثاني", 
+            "شباط", 
+            "آذار", 
+            "نيسان", 
+            "أيار", 
+            "حزيران", 
+            "تموز", 
+            "آب", 
+            "أيلول", 
+            "تشرين الأول", 
+            "تشرين الثاني", 
+            "كانون الأول"
+        ]
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' hh:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "hh:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

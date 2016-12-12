@@ -1,0 +1,75 @@
+{
+    "lang": "en", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "March", 
+            "April", 
+            "May", 
+            "June", 
+            "July", 
+            "Aug.", 
+            "Sept.", 
+            "Oct.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Sun.", 
+            "Mon.", 
+            "Tues.", 
+            "Wed.", 
+            "Thurs.", 
+            "Fri.", 
+            "Sat."
+        ], 
+        "day": [
+            "Sunday", 
+            "Monday", 
+            "Tuesday", 
+            "Wednesday", 
+            "Thursday", 
+            "Friday", 
+            "Saturday"
+        ], 
+        "month": [
+            "January", 
+            "February", 
+            "March", 
+            "April", 
+            "May", 
+            "June", 
+            "July", 
+            "August", 
+            "September", 
+            "October", 
+            "November", 
+            "December"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "en"
+    }, 
+    "messages": {
+        "loading": "Loading", 
+        "contract_timeline": "Contract Timeline", 
+        "return_to_title": "Return to Title", 
+        "wikipedia": "From Wikipedia, the free encyclopedia", 
+        "loading_content": "Loading Content", 
+        "expand_timeline": "Expand Timeline", 
+        "loading_timeline": "Loading Timeline... "
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' HH:MM TT", 
+        "full_short": "mmm d", 
+        "full": "mmmm d',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM TT", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}
