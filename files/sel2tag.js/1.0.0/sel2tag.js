@@ -461,7 +461,8 @@ function select2tag_init(select_box, params) {
 
     var remove_item = function(item) {
         var val_to_remove = item.parents('.mridlistitem').attr('myval');
-        currently_selected_vals.pop(val_to_remove);
+        var index = currently_selected_vals.indexOf(val_to_remove);
+        currently_selected_vals.splice(index, 1);
         select_box.val(currently_selected_vals);
         $(item).parents('.mridlistitem').hide(1, function(){
             if(!!onItemRemoval)
