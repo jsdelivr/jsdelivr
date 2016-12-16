@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lib-name",
+  "repo": "user_id/lib-name",
+  "files": {
+    "include": ["lib-name.js", "lib-name.min.js"]
+  }
+} 
