@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "c3",
+  "repo": "c3js/c3",
+  "files": {
+    "include": ["c3.*"]
+  }
+}
