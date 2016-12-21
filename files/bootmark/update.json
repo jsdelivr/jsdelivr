@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootmark",
+  "repo": "obedm503/bootmark",
+  "files": {
+    "basePath": "dist/"
+  }
+}
