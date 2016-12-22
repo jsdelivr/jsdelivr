@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "WebFunk",
-  "repo": "RealStep/WebFunk",
+  "repo": "wsngamerz/WebFunk",
   "files": {
     "basePath": "/dist",
     "include": ["webfunk.min.css", "webfunk.min.js"]
