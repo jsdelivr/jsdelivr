@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "dollar-array",
+  "repo": "obedm503/dollar-array",
+  "files": {
+    "basePath": "dist/"
+  }
+}
