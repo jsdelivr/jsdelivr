@@ -4,5 +4,6 @@
   "repo": "humaan/Modaal",
   "files": {
     "basePath": "dist/",
+    "exclude": ["css/modaal.scss"]
   }
 }
