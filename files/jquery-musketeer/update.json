@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-musketeer",
+  "repo": "grenouille220/jquery-musketeer",
+  "homepage": "https://github.com/grenouille220/jquery-musketeer/blob/master/README.md",
+  "files": {
+    "include": ["jquery.musketeer.js", "jquery.musketeer.min.js", "jquery.musketeer.min.js.map"]
+  }
+ }
