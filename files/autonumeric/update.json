@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "autoNumeric",
+  "repo": "BobKnothe/autoNumeric",
+  "files": {
+    "include": [
+      "autoNumeric.js",
+      "autoNumeric.min.js"
+    ]
+  }
+}
