@@ -3,6 +3,7 @@
   "name": "autoNumeric",
   "repo": "BobKnothe/autoNumeric",
   "files": {
+    "basePath": "dist/",
     "include": [
       "autoNumeric.js",
       "autoNumeric.min.js"
