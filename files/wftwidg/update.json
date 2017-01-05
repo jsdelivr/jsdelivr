@@ -1,8 +1,8 @@
 {
   "packageManager": "github",
   "name": "webfirethemes",
-  "repo": "webfirethemes/wftwidg",
+  "repo": "webfirethemes/jsdelivr",
   "files": {
-    "include": ["./css/master_widgets.css"]
+    "include": ["./files/wftwidg/1.0.0/css/master_widgets.css"]
   }
 }
