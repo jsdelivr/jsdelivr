@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "wft_widg",
+  "repo": "webfirethemes/wftwidg",
+  "files": {
+    "include": ["./css2/widgets.css"]
+  }
+}
