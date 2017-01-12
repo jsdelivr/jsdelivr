@@ -3,6 +3,6 @@
   "name": "egraphql-fetch",
   "repo": "martinheidegger/egraphql-fetch",
   "files": {
-    "include": ["index.min.js"]
+    "include": ["index.min.js", "index.pack.js"]
   }
 }
