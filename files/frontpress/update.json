@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "frontpress",
+  "files": {
+    "basePath": "release",
+    "include": ["frontpress.min.js", "frontpress.js", "frontpress.v1.min.js", "frontpress.v1.js"]
+  }
+}
