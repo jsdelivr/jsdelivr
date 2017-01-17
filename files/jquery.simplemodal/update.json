@@ -5,4 +5,5 @@
   "files": {
     "basePath": "/",
     "include": ["js/*.js", "css/*.css"]
+  }
 }
