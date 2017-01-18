@@ -3,6 +3,6 @@
   "name": "logdown",
   "repo": "caiogondim/logdown.js",
   "files": {
-    "include": ["dist/index.js"]
+    "include": ["dist/logdown.js"]
   }
 }
