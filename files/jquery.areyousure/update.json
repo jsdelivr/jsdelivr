@@ -3,6 +3,6 @@
   "name": "jquery.areyousure",
   "repo": "quinns/jquery.AreYouSure",
   "files": {
-    "include": ["jquery.are-you-sure.js", "jquery.are-you-sure.min.js"],
+    "include": ["jquery.are-you-sure.js", "jquery.are-you-sure.min.js"]
   }
 }
