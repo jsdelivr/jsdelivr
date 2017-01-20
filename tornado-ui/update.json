@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "angular.moment",
+  "name": "tornado-ui",
   "repo": "EngCode/Tornado/tree/master/dist/",
   "files": {
     "include": ["css-js/*"]
