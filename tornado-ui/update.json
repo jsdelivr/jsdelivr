@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.moment",
+  "repo": "EngCode/Tornado/tree/master/dist/",
+  "files": {
+    "include": ["css-js/*"]
+  }
+}
