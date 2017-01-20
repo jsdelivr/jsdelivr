@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jsdelivr",
+  "repo": "klhurley/jsdelivr",
+  "files": {
+    "basePath": "/",
+    "include": ["js/*.js", "css/*.css"]
+  }
+}
