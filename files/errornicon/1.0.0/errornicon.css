@@ -1,0 +1,116 @@
+
+/******************************************** 
+    Created on : Jan 12, 2017, 2:23:45 PM
+    Author     : harshilkumar
+*********************************************/
+
+.icon_pos{
+    position: relative;
+    top: 0px;
+    margin-left: 2px;
+    vertical-align: top;
+    display: inline-block;
+}
+.icon_pos_top{
+    vertical-align: top;
+}
+.icon_specs{
+    color: #b91717;
+    position: relative;
+}
+
+i.info_icon span {
+  display: none;
+}
+i.info_icon:hover {
+  text-decoration: none;
+}
+/*
+i.tipArrow span {
+    display: none;
+    position: absolute;
+    width: 120px;
+    padding: 5px;
+    z-index: 100;
+    background: #b91717;
+    color: #fff;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    font-size: 12px;
+    font-family: sans-serif;
+}
+i.tipArrowLeft span {
+    top: -2px;
+    left: 27px;
+}
+i.tipArrowTop span {
+   top: 30px;
+   left: -50px; 
+} 
+i.tipArrowRight span {
+    top: -2px;
+    left: -145px;
+}
+i.tipArrowDown span {
+   top: -35px;
+   left: -50px; 
+} 
+
+i.tipArrow span:before {
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+}
+i.tipArrowLeft span:before{
+    
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-right:8px solid #b91717;
+    left: -7px;
+    top: 3px;
+}
+i.tipArrowTop span:before{
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent; 
+    border-bottom:8px solid #b91717;
+    left: 50px;
+    top: -8px;
+}
+i.tipArrowDown span:before{
+    border-top: 8px solid #b91717;
+    border-left: 8px solid transparent; 
+    border-right:8px solid transparent;
+    left: 50px;
+    top: 20px;
+}
+i.tipArrowRight span:before{
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left:8px solid #b91717;
+    left: 130px;
+    top: 3px;
+}
+
+i:hover.icon_specs {
+//this is just for IE 
+    font-size: 99%; 
+}
+
+i:hover.icon_specs span {
+    display: block;
+}
+
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #f00;
+}
+*/
+/*========================*/
+
