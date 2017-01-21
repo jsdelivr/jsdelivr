@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "tornado-ui",
-  "repo": "EngCode/Tornado/",
+  "repo": "https://github.com/EngCode/Tornado",
   "files": {
     "basePath": "dist/",
     "include": ["css-js/*"]
