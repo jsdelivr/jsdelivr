@@ -3,6 +3,7 @@
   "name": "porterjs",
   "repo": "ahopkins/porterjs",
   "files": {
-    "include": ["porter.min.js"]
+    "include": ["porter.min.js"],
+    "basePath": "bin/"
   }
 }
