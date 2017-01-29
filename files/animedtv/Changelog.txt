@@ -1,0 +1,32 @@
+Sevida AnimeD 1.2.1 (Update)
+* Actualizado FontAwesome a versión 4.7.0
+- Fix al logo que se mostraba sin estilo (cambio a trazo)
+- Eliminada la fuente AderaSSK del sitio ya que no tiene ningún uso
+- Fix al Favicon que estaba en HTTP y no permitía conexiones seguras cambiado a HTTPS
+
+Sevida AnimeD 1.2
+- Eliminado el Meta <b:include data='blog' name='all-head-content'/> que añade los códigos meta generados por Blogger
+- Fix a un error en los meta Faltaban los Feeds y Favicon
+- Fix a un error en los botones de paginación de los posts se mostraban al revés
+- Implementada la fuente AderaSSK del logo del sitio
+
+Sevida AnimeD 1.1 
+- Eliminado un codigo encriptado (con AES) que causaba redirección al modificar el copyright
+* Integrado Google Analitycs
+
+Sevida AnimeD 1.0 (Release)
+* Implementado Hint Tooltip Plugin - v2.4.1
+* Integrado Logo del Header en versión SVG (Escalable)
+- Fix a las imágenes para uso de HTTPS
+- Fix a los archivos de fontawesome para uso de HTTPS
+- Algunos widgets traducidos (sólo los del post e index)
+
+Sevida AnimeD 0.9.2
+- Añadido etiquetas D.C META a la plantilla
+- Código css3-mediaqueries.js eliminado de googlecode ahora alojado en cloudflare
+- Añadido html5shiv.min.js para HTML5 en los navegadores de Internet Explorer
+
+Sevida AnimeD 0.9.1 - (Initial Release)
+- Reemplazadas las etiquetas META por unas nuevas (metas usadas en la plantilla ZMegaByte creditos a Daniel Abel)
+-- Eliminado <meta content='YOUR KEYWORDS HERE' name='keywords'/> ya que no tiene ningún efecto en el seo
+- Fix a algunas reglas css
