@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "animedtv",
+  "repo": "Alecgcast/animedtv",
+  "files": {
+    "include": ["img/**/*.svg", "css/**/*.css", "js/**/*.js"]
+    "exclude": ["README.md", "LICENSE", "Changelog"]
+  }
+}
