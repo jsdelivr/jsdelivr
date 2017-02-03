@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "abm",
+  "repo": "listenloop/abm",
+  "files": {
+    "basePath": "dist",
+    "include": ["ad_unit.bundle.js", "ad_unit.bundle.js.map"]
+  }
+}
