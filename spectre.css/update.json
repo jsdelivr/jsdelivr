@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "spectre.css",
+  "repo": "picturepan2/spectre",
+  "files": {
+    "basePath": "dist"
+  }
+}

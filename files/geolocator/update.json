@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "geolocator",
+  "repo": "onury/geolocator",
+  "files": {
+    "basePath": "dist",
+    "include": ["**/*"]
+  }
+}
