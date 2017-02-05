@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lazyload.js",
+  "repo": "OscarDCorbalan/lazyload.js",
+  "files": {
+    "include": ["lazyload.js", "lazyload.min.js"]
+  }
+}
