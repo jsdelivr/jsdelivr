@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "processing.js",
+  "repo": "processing-js/processing-js",
+  "files": {
+    "basePath": "/",
+    "include": ["processing.js", "processing.min.js"]
+  }
+}
