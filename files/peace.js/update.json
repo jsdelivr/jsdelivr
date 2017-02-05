@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "peace.js",
+  "repo": "humancopy/peace.js",
+  "files": {
+    "include": ["dits/peace.min.js", "min/peace.min.css"]
+  }
+}
