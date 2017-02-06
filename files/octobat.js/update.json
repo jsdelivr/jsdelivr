@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "octobat.js",
+  "repo": "0ctobat/octobat.js",
+  "files": {
+    "basePath": "/dist"
+  }
+}
