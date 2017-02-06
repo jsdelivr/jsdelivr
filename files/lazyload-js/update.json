@@ -3,6 +3,7 @@
   "name": "lazyload.js",
   "repo": "OscarDCorbalan/lazyload.js",
   "files": {
+    "basePath": "build/",
     "include": ["lazyload.js", "lazyload.min.js"]
   }
 }
