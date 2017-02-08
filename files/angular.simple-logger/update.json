@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-simple-logger",
+  "repo": "nmccready/angular-simple-logger",
+  "files": {
+    "basePath": "dist/"
+  }
+}
