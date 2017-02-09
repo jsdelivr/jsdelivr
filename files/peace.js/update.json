@@ -3,6 +3,6 @@
   "name": "peace.js",
   "repo": "humancopy/peace.js",
   "files": {
-    "include": ["dist/peace.min.js", "dist/peace.min.css"]
+    "include": ["dist/peace.min.js", "dist/peace.min.css", "dist/peace.min.js.map", "dist/peace.min.css.map"]
   }
 }
