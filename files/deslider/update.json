@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "deslider",
+  "repo": "kevguy/Deslider",
+  "files": {
+    "include": ["lib/Deslider.min.js", "lib/Deslider.min.js.map", "css/style.css", "css/style.css.map"]
+  }
+}
