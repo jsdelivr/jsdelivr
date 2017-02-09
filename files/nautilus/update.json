@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "nautilus",
+  "repo": "hdf1986/nautilus",
+  "files": {
+    "include": ["nautilus.js","nautilus.min.js"]
+  }
+}
