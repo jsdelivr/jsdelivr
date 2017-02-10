@@ -3,6 +3,7 @@
   "name": "simple-line-icons",
   "repo": "thesabbir/simple-line-icons",
   "files": {
-    "include": ["css/simple-line-icons.css"]
+    "include": ["css/simple-line-icons.css"],
+    "include": ["fonts/**/*"]
   }
 }
