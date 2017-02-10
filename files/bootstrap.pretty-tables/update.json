@@ -4,6 +4,6 @@
   "name": "bootstrap.pretty-tables",
   "repo": "xavierfaucon/bootstrap-pretty-tables",
   "files": {
-    "include": ["bootstrap-pretty-tables.css"]
+    "include": ["bootstrap-pretty-tables.min.css"]
   }
 }
