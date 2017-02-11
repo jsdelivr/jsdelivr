@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "font-frino",
-  "repo": "arbati6/Frino",
-  "files": {
-    "include": ["fonts/frino.ttf", "fonts/frino.woff", "fonts/frino.woff2"]
-  }
-}
