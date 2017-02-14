@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angulartics.google.analytics",
+  "repo": "angulartics/angulartics-google-analytics",
+  "files": {
+    "include": ["angulartics-ga.min.js", "angulartics-ga.min.js.map"]
+  }
+}
