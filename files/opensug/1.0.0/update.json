@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "opensug",
+  "repo": "baiduinc/opensug",
+  "files": {
+    "include": ["opensug.js"]
+  }
+}
