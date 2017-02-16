@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Alorel/alo-timer",
+  "repo": "Alorel/alo-timer",
+  "files": {
+    "basePath": "src/",
+    "include": ["alotimer.js", "alotimer.min.js"]
+  }
+}
