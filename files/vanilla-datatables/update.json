@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "vanilla-datatables",
+  "repo": "Mobius1/Vanilla-DataTables",
+  "files": {
+    "include": ["vanilla-dataTables.min.js", "vanilla-dataTables.min.css"]
+  }
+}
