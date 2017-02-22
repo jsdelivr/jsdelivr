@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.timepicker",
+  "repo": "jonthornton/jquery-timepicker",
+  "files": {
+    "include": ["jquery.timepicker.min.js", "jquery.timepicker.css"]
+  }
+}
