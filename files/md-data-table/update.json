@@ -3,6 +3,6 @@
   "name": "md-data-table",
   "repo": "daniel-nagy/md-data-table",
   "files": {
-    "include": ["./dist/*"]
+    "include": ["dist/md-data-table.min.js", "dist/md-data-table.min.css"]
   }
 }
