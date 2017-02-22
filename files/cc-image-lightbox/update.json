@@ -3,6 +3,6 @@
   "name": "cc-image-lightbox",
   "repo": "codeclou/cc-image-lightbox",
   "files": {
-    "include": ["cc-image-lightbox.js", "cc-image-lightbox.min.js", "cc-image-lightbox.css", "cc-image-lightbox.min.css"]
+    "basePath": "build/"
   }
 }
