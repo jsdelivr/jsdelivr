@@ -3,6 +3,6 @@
   "name": "font-iroke-batang",
   "repo": "iropke/font-iropke-batang",
   "files": {
-    "include": ["font-iropke-batang.css", "IropkeBatangM.eot", "IropkeBatangM.woff", "IropkeBatangM.ttf"]
+    "include": ["font-iropke-batang.css", "IropkeBatangM.eot", "IropkeBatangM.woff", "IropkeBatangM.ttf", "IropkeBatangM.otf"]
   }
 }
