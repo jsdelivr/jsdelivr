@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "latency-monitor",
+  "repo": "mlucool/latency-monitor",
+  "files": {
+    "include": ["./dist/EventLoopPrinterWebpacked.js"]
+  }
+}
