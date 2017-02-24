@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "jquery-form",
+  "repo": "jquery-form/form",
+  "files": {
+    "include": [
+      "dist/*.js"
+    ]
+  }
+}
