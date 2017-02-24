@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "lg-thumbnail.js",
+  "repo": "sachinchoolur/lg-thumbnail.js",
+  "files": {
+    "include": [
+      "lg-thumbnail.min.js"
+    ]
+  }
+}
