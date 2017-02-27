@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cc-image-lightbox",
+  "repo": "codeclou/cc-image-lightbox",
+  "files": {
+    "basePath": "build/"
+  }
+}

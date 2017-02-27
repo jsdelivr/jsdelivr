@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.tablesort",
+  "repo": "kylefox/jquery-tablesort",
+  "files": {
+    "include": ["jquery.tablesort.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "utf8.js",
+  "repo": "mathiasbynens/utf8.js",
+  "files": {
+    "include": ["utf8.js"]
+  }
+}

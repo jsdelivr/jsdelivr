@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "ngnx-chassis",
+  "repo": "ngnjs/cdn",
+  "files": {
+    "basePath": "chassis-x/",
+    "include": ["*.min.js"]
+  }
+}

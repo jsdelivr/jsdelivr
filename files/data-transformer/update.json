@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "data-transformer",
+  "repo": "oliversturm/data-transformer",
+  "files": {
+    "include": ["dist/data-transformer-browser.min.js"]
+  }
+}

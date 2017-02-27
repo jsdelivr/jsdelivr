@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.esri.cluster",
+  "repo": "esri/esri-leaflet-cluster",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["README.md"]
+  }
+}

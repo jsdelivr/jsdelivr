@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "fitch",
+  "repo": "raphaelpor/fitch.js",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["utils/*", "index.js"]
+  }
+}

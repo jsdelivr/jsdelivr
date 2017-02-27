@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "tsumegumi",
-  "repo": "allianceport/tsumegumi.js",
+  "repo": "grenouille220/tsumegumi.js",
   "files": {
     "include": ["tsumegumi.js","tsumegumi.min.js"],
     "exclude": ["package.json","update.json","README.md"]

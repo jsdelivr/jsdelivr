@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "twitch-emoji",
+  "repo": "JamesFrost/twitch-emoji",
+  "files": {
+    "basePath": "dist/"
+  }
+}

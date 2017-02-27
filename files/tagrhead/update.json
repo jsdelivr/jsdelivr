@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tagrhead",
+  "repo": "kevguy/TagrHead",
+  "files": {
+    "include": ["lib/Tagrhead.min.js", "lib/Tagrhead.min.js.map", "css/style.css", "css/style.css.map"]
+  }
+}

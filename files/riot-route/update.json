@@ -1,0 +1,17 @@
+{
+  "packageManager": "github",
+  "name": "riot",
+  "repo": "riot/route",
+  "files": {
+    "include": [
+      "dist/route.js",
+      "dist/route.min.js",
+      "dist/amd.route.js",
+      "dist/amd.route.min.js",
+      "dist/route+tag.js",
+      "dist/route+tag.min.js",
+      "dist/amd.route+tag.js",
+      "dist/amd.route+tag.min.js"
+    ]
+  }
+}

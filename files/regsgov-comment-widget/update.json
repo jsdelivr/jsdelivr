@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "regsgov-comment-widget",
+  "repo": "regulationsgov/comment-widget",
+  "files": {
+    "basePath": "dist/"
+  }
+}

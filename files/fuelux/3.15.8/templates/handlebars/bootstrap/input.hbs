@@ -1,0 +1,32 @@
+<div class="form-group{{#if horizontal}}{{#if inputsize}} form-group-{{inputsize}}{{/if}}{{/if}}{{#if validation}} has-{{validation}}{{#if feedback}} has-feedback{{/if}}{{/if}}">
+	{{#if label}}<label for="{{#if id}}{{id}}{{else}}myInput{{/if}}" class="control-label{{#if horizontal}} col-sm-2{{/if}}">{{label}}</label>{{/if}}
+	{{#if horizontal}}<div class="col-sm-10">{{/if}}
+		{{#if hasAside}}<div class="input-group">{{/if}}
+			{{#if prependText}}<span id="{{#if id}}{{id}}{{else}}myInput{{/if}}Prepend" class="input-group-addon{{#if horizontal}}{{#if inputsize}} input-{{inputsize}}{{/if}}{{/if}}">{{prependText}}</span>{{/if}}
+			{{#with prependCheckbox}}<label class="input-group-addon checkbox-custom" data-initialize="checkbox">
+				<input class="sr-only" type="checkbox" aria-label="{{#if aria}}{{aria}}{{else}}{{value}}{{/if}}" {{#if checked}}checked="checked"{{/if}} id="{{#if ../id}}{{../id}}{{else}}myInput{{/if}}Checkbox" name="{{#if ../name}}{{../name}}{{else}}{{#if ../id}}{{../id}}{{else}}myInput{{/if}}{{/if}}Checkbox" value="{{value}}"{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>
+			</label>{{/with}}
+			{{#with prependButtonDropdown}}
+			<div class="input-group-btn">
+				<button type="button" class="btn dropdown-toggle{{#if ../inputsize}} btn-{{../inputsize}}{{/if}}{{#if style}} {{style}}{{/if}}" data-toggle="dropdown"{{#if ../label}} aria-label="{{../label}} related options"{{/if}} aria-haspopup="true" aria-expanded="false"{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>{{text}}&nbsp;<span class="caret"></span></button>
+				<ul class="dropdown-menu">{{#each options}}
+					{{#if separator}}<li role="separator" class="divider"></li>{{else}}<li><a href="#">{{value}}</a></li>{{/if}}{{/each}}
+				</ul>
+			</div>{{/with}}
+			<input type="{{#if type}}{{type}}{{else}}text{{/if}}" class="{{#unless horizontal}}{{#if inputsize}}input-{{inputsize}} {{/if}}{{/unless}}form-control" id="{{#if id}}{{id}}{{else}}myInput{{/if}}" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myInput{{/if}}{{/if}}"{{#if placeholder}} placeholder="{{placeholder}}"{{/if}}{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}{{#if validation}}{{#if feedback}}aria-describedby="{{#if id}}{{id}}{{else}}myInput{{/if}}Status"{{/if}}{{/if}}>
+			{{#with appendButtonDropdown}}
+			<div class="input-group-btn">
+				<button type="button" class="btn dropdown-toggle{{#if ../inputsize}} btn-{{../inputsize}}{{/if}}{{#if style}} {{style}}{{/if}}" data-toggle="dropdown"{{#if ../label}} aria-label="{{../label}} related options"{{/if}} aria-haspopup="true" aria-expanded="false"{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>{{text}}&nbsp;<span class="caret"></span></button>
+				<ul class="dropdown-menu dropdown-menu-right">{{#each options}}
+					{{#if separator}}<li role="separator" class="divider"></li>{{else}}<li><a href="#">{{value}}</a></li>{{/if}}{{/each}}
+				</ul>
+			</div>{{/with}}
+			{{#with appendCheckbox}}<label class="input-group-addon checkbox-custom" data-initialize="checkbox">
+				<input class="sr-only" type="checkbox" aria-label="{{#if checkboxAria}}{{checkboxAria}}{{else}}{{value}}{{/if}}" {{#if checked}}checked="checked"{{/if}} id="{{#if ../id}}{{../id}}{{else}}myInput{{/if}}Checkbox" name="{{#if ../name}}{{../name}}{{else}}{{#if ../id}}{{../id}}{{else}}myInput{{/if}}{{/if}}Checkbox" value="{{value}}"{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>
+			</label>{{/with}}
+			{{#if appendText}}<span id="{{#if id}}{{id}}{{else}}myInput{{/if}}Prepend" class="input-group-addon{{#if horizontal}}{{#if inputsize}} input-{{inputsize}}{{/if}}{{/if}}">{{appendText}}</span>{{/if}}
+		{{#if hasAside}}</div>{{/if}}
+		{{#if feedback}}<span class="glyphicon glyphicon-{{feedback}} form-control-feedback" aria-hidden="true"></span><span id="{{#if id}}{{id}}{{else}}myInput{{/if}}Status" class="sr-only">({{#if validation}}{{validation}}{{/if}})</span>{{/if}}
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	{{#if horizontal}}</div>{{/if}}
+</div>

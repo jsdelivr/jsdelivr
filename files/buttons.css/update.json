@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Buttons.css",
+  "repo": "Dog2puppy/Buttons.css",
+  "files": {
+    "basePath": "/",
+    "include": ["buttons.css", "buttons.min.css"]
+  }
+}

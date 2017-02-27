@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "labcoat",
+  "repo": "weathergard/labcoat",
+  "files": {
+    "include": ["dist/labcoat.js", "dist/labcoat.min.js"]
+  }
+}

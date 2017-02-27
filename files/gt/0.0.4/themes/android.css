@@ -1,0 +1,182 @@
+*
+{
+	margin:0;
+	padding:0;
+	font-family:'Roboto', sans-serif;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	outline:none;
+}
+
+html
+{
+	color:#6d6d6d;
+	background-color:#f5f5f5;
+}
+
+ul
+{
+	list-style:none;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+strong
+{
+	font-weight:700;
+}
+
+.gt-navbar
+{
+	width:100%;
+	height:63px;
+	background-color:rgb(0, 154, 164);
+	color:white;
+	/*border-bottom:3px solid rgba(200, 200, 200, 0.5);*/
+	font-weight:500;
+}
+
+.gt-navbar a
+{
+	color:white;
+}
+
+.gt-navbar-left
+{
+	float:left;
+}
+
+.gt-navbar-right
+{
+	float:right;
+}
+
+.gt-navbar li
+{
+	float:left;
+	font-size:21px;
+	padding-top: 19px;
+	padding-left:15px;
+}
+
+/* FORM */
+
+.gt-form-element
+{
+	width:100%;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+input[type="text"]
+{
+	border:0px;
+	border-bottom:1px solid #797979;
+	color:#7f7f7f;
+	font-size:16px;
+	margin-top:10px;
+	margin-bottom:11px;
+	width:100%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    #7f7f7f;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #7f7f7f;
+	opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #7f7f7f;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:    #7f7f7f;
+}
+
+input[type="text"]:focus
+{
+	border-bottom:2px solid #4cb8c0;
+	margin-bottom:10px;
+}
+
+button
+{
+	background-color:rgb(0, 154, 164);
+	border:0px;
+	padding:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:white;
+	font-size:17px;
+}
+
+fieldset, legend
+{
+	border:0px;
+	font-size:20px;
+}
+
+.container
+{
+	margin-left:3%;
+	width:94%;
+}
+
+
+/*TAB BAR*/
+
+.gt-tabbar
+{
+	width:100%;
+	height:38px;
+	overflow:auto;
+	/*position:relative;*/
+	background-color:rgb(0, 154, 164);
+	color:white;
+	font-weight:500;
+}
+
+.gt-tabbar ul
+{
+	/*position:absolute;*/
+	top:0;
+	left:0;
+	width:max-content;
+	text-transform:uppercase;
+}
+
+.gt-tabbar a
+{
+	color:white;
+}
+
+.gt-tabbar li
+{
+	float:left;
+	font-size:14px;
+	padding-top:8px;
+	padding-left:9px;
+	padding-right:7px;
+	cursor:pointer;
+	height:27px;
+}
+
+.gt-tabbar li.active
+{
+	border-bottom:3px solid white;
+}
+
+
+
+.gt-block
+{
+	background-color:white;
+	box-shadow:-1px 1px 3px 0px rgba(0,0,0,0.3);
+	border-radius:2px;
+	padding:8px;
+	margin-top:10px;
+	margin-bottom:10px;
+}

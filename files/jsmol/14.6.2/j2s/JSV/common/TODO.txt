@@ -1,0 +1,3 @@
+Jmol.___JSVDate="$Date: 2016-01-06 17:10:19 -0500 (Wed, 06 Jan 2016) $"
+Jmol.___JSVSvnRev="$LastChangedRevision: 1705 $"
+Jmol.___JSVVersion="14.2.7"

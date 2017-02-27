@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp>
+     <information>
+         <title>OpenAstexViewerApplet (All-Permissions)</title>
+         <vendor>IntegratedGraphics</vendor>
+  <offline-allowed/>
+     </information>
+     <resources>
+         <j2se version="1.6+"/>
+         <jar href="OpenAstexViewer.jar" main="true"/>
+     </resources>
+     <applet-desc
+         name="Open Astex Viewer Applet (All-Permissions)"
+         main-class="astex.MoleculeViewerApplet.class"
+         width="600"
+         height="600">
+     </applet-desc>
+     <security>
+         <all-permissions/>
+     </security>
+</jnlp> 

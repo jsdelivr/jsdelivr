@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-datepicker",
+  "repo": "uxsolutions/bootstrap-datepicker",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "prowl",
+  "repo": "aotik/prowl",
+  "files": {
+    "include": ["dist/prowl.js"]
+  }
+}

@@ -1,0 +1,108 @@
+.deslider-next, .deslider-prev {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background: #000;
+  background: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  z-index: 4;
+  font-size: 2em;
+  margin-top: -1.2em;
+  opacity: .5;
+  user-select: none; }
+
+.deslider {
+  display: flex;
+  align-items: center;
+  width: 300%;
+  background-color: #000;
+  justify-content: space-around;
+  margin-bottom: -15px; }
+  .deslider.is-animating {
+    transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1); }
+  .deslider figure {
+    text-align: center;
+    margin: 0 auto;
+    user-select: none;
+    flex-grow: 1; }
+    .deslider figure img {
+      width: 100%;
+      user-select: none;
+      user-drag: none; }
+  .deslider figcaption {
+    position: relative;
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: 1.5em;
+    color: #fff;
+    background: #000;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 1.2s;
+    max-width: 30%;
+    right: 0;
+    z-index: 2;
+    opacity: 1; }
+    .deslider figcaption a {
+      color: #fff; }
+
+.deslider-panel {
+  width: 100%;
+  height: 100%; }
+
+.deslider-pagination {
+  bottom: 6.25%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+  .deslider-pagination > * {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    height: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    transition: background-color 250ms;
+    width: 6px; }
+    .deslider-pagination > *.is-active {
+      background-color: rgba(255, 255, 255, 0.75); }
+
+.deslider-next {
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+  .deslider-next:hover {
+    cursor: pointer;
+    opacity: 1; }
+
+.deslider-prev {
+  left: 0;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; }
+  .deslider-prev:hover {
+    cursor: pointer;
+    opacity: 1; }
+
+.deslider-fullscreen {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.3) url(http://leemark.github.io/better-simple-slideshow/img/arrows-alt_ffffff_64.png);
+  background-size: contain;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  opacity: .3;
+  user-select: none;
+  position: absolute;
+  z-index: 4;
+  font-size: 2em; }
+  .deslider-fullscreen:hover {
+    opacity: .8; }
+
+/*# sourceMappingURL=style.css.map*/

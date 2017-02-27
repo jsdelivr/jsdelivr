@@ -2,5 +2,5 @@
    "packageManager": "github",
    "name":           "dna.js",
    "repo":           "dnajs/dna.js",
-   "files":          { "include": ["dna.min.js", "dna.css"] }
+   "files":          { "include": ["dna.js", "dna.min.js", "dna.css"] }
 }

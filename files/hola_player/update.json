@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "@hola.org%2fhola_player",
+  "repo": "hola/hola_player",
+  "files": {
+    "basePath": "dist/"
+  }
+}

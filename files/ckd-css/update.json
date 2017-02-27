@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ckd-css",
+  "repo": "equinusocio/ckdcss",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ckd-css.min.css"]
+  }
+}

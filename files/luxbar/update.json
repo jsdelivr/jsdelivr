@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "luxbar",
+  "repo": "balzss/luxbar",
+  "files": {
+    "include": ["luxbar.css", "luxbar.min.css"]
+  }
+}

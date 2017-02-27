@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tablesorter",
+  "repo": "Mottie/tablesorter",
+  "files": {
+    "basePath": "dist/"
+  }
+}

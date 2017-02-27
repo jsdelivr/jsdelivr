@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.i18n",
+  "repo": "kazupon/vue-i18n",
+  "files": {
+	"basePath" : "dist/",
+    "include": ["vue-i18n.min.js"]
+  }
+}

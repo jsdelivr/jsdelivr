@@ -1,0 +1,66 @@
+/*! ==================================================
+*  Web Fonts Title: Yaku Han JP Small Amount
+*  Version: 1.3.1
+*  GitHub URL: https://github.com/qrac/yakuhanjp
+*  Author: Qrac
+*  Author URL: https://twitter.com/Qrac_jp
+*  "Noto Sans CJK JP" licensed under the SIL Open Font License
+*  https://www.google.com/get/noto/#/
+=================================================== */
+
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 100;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Thin.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Thin.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Thin.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Light.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Light.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Light.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Regular.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Regular.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Regular.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Medium.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Medium.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Medium.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Bold.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Bold.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Bold.eot);
+}
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Black.woff2) format("woff2"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Black.woff) format("woff"),
+  url(../fonts/YakuHanJPs/YakuHanJPs-Black.eot);
+}

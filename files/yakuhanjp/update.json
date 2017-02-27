@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "yakuhanjp",
+  "repo": "qrac/yakuhanjp",
+  "files": {
+    "basePath": "dist/"
+  }
+}

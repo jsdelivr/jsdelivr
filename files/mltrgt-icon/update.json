@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "mltrgt-icon",
+  "repo": "mltrgt/icon",
+  "files": {
+    "include": ["docs/css/mltrgt-icon.min.css", "docs/css/mltrgt-icon.css", ".docs/fonts/**/*"]
+  }
+}
+

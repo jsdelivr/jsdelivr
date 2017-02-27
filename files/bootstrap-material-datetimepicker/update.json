@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "T00rk/bootstrap-material-datetimepicker",
+  "repo": "T00rk/bootstrap-material-datetimepicker",
+  "files": {
+        "include": ["js/bootstrap-material-datetimepicker.js", "css/bootstrap-material-datetimepicker.css"]
+  }
+}

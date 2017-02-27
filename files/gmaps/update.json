@@ -6,6 +6,7 @@
     "basePath": "/",
     "include": [
       "gmaps.min.js",
+      "gmaps.min.js.map",
       "gmaps.js"
     ]
   }

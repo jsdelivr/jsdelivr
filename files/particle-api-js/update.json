@@ -4,6 +4,6 @@
   "repo": "spark/particle-api-js",
   "files": {
     "basePath": "dist",
-    "include": ["particle.min.js"]
+    "include": ["particle.min.js", "particle.min.js.map"]
   }
 }

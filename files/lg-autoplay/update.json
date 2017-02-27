@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-autoplay",
+  "repo": "sachinchoolur/lg-autoplay",
+  "files": {
+    "basePath": "dist/"
+  }
+}

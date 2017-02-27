@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "doppler-maps",
+  "repo": "CodeForAfrica/DopplerMaps",
+  "files": {
+    "basePath": "dist/",
+    "include": ["doppler-maps.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "intense-images",
+  "repo": "tholman/intense-images",
+  "files": {
+    "include": ["intense.min.js"]
+  }
+}

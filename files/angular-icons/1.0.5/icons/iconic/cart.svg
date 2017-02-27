@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-cart" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Cart</title>
+  </g>
+  <defs>
+    <clipPath id="iconic-size-lg-cart-clip-0">
+      <path d="M0 0v106h22.695c-2.835-1.992-4.695-5.28-4.695-9 0-6.065 4.935-11 11-11s11 4.935 11 11c0 3.72-1.861 7.008-4.695 9h61.391c-2.835-1.992-4.695-5.28-4.695-9 0-6.065 4.935-11 11-11s11 4.935 11 11c0 3.72-1.861 7.008-4.695 9h18.695v-106h-128z" />
+    </clipPath>
+    <clipPath id="iconic-size-md-cart-clip-0">
+      <path d="M0 0v28h5.058c-.651-.636-1.058-1.52-1.058-2.5 0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5c0 .98-.407 1.864-1.058 2.5h14.116c-.651-.636-1.058-1.52-1.058-2.5 0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5c0 .98-.407 1.864-1.058 2.5h3.058v-28h-32z" />
+    </clipPath>
+  </defs>
+  <g class="iconic-cart-lg iconic-container iconic-lg" data-width="128" data-height="106" display="inline" transform="translate(0 11)">
+    <path d="M31.176 65.115l-14.352-50.231c-.455-1.593.519-2.885 2.176-2.885h106c1.657 0 2.719 1.313 2.371 2.933l-10.743 50.133c-.347 1.62-1.972 2.933-3.629 2.933h-78c-1.657 0-3.369-1.291-3.824-2.885z" class="iconic-cart-basket iconic-property-fill" />
+    <circle cx="29" cy="97" r="9" class="iconic-cart-wheel iconic-cart-wheel-back iconic-property-fill" />
+    <circle cx="103" cy="97" r="9" class="iconic-cart-wheel iconic-cart-wheel-front iconic-property-fill" />
+    <path clip-path="url(#iconic-size-lg-cart-clip-0)" stroke="#000" stroke-width="4" d="M106 92h-81.25c-.414 0-.621-.31-.462-.692l9.423-22.615c.159-.382.196-1.015.081-1.413l-18.585-64.559c-.115-.398-.543-.721-.957-.721h-11.25" class="iconic-cart-body iconic-property-stroke"
+    fill="none" />
+    <circle cx="3" cy="3" r="3" class="iconic-cart-handle iconic-property-fill" />
+  </g>
+  <g class="iconic-cart-md iconic-container iconic-md" data-width="32" data-height="28" display="none" transform="scale(4) translate(0 2)">
+    <path d="M8.742 17.034l-3.485-13.068c-.142-.534.19-.966.742-.966h25c.552 0 .912.439.804.981l-2.608 13.039c-.108.542-.644.981-1.196.981h-18c-.552 0-1.115-.433-1.258-.966z" class="iconic-cart-basket iconic-property-fill" />
+    <circle cx="7.5" cy="25.5" r="2.5" class="iconic-cart-wheel iconic-cart-wheel-back iconic-property-fill" />
+    <circle cx="26.5" cy="25.5" r="2.5" class="iconic-cart-wheel iconic-cart-wheel-front iconic-property-fill" />
+    <path clip-path="url(#iconic-size-md-cart-clip-0)" stroke="#000" d="M27 24.5h-20c-.276 0-.42-.209-.321-.467l2.141-5.567c.099-.258.124-.683.055-.951l-4.251-16.531c-.069-.267-.348-.484-.625-.484h-3" class="iconic-cart-body iconic-property-stroke" fill="none"
+    />
+    <circle cx="1" cy="1" r="1" class="iconic-cart-handle iconic-property-fill" />
+  </g>
+  <g class="iconic-cart-sm iconic-container iconic-sm" data-width="16" data-height="14" display="none" transform="scale(8) translate(0 1)">
+    <circle cx="3.5" cy="12.5" r="1.5" class="iconic-cart-wheel iconic-cart-wheel-back iconic-property-fill" />
+    <circle cx="13.5" cy="12.5" r="1.5" class="iconic-cart-wheel iconic-cart-wheel-front iconic-property-fill" />
+    <path d="M3.929 8.505l-.858-6.005c-.039-.273.153-.495.429-.495l12-.004c.276 0 .468.221.429.495l-.859 6.01c-.039.273-.295.495-.571.495h-10c-.276 0-.532-.222-.571-.495z" class="iconic-cart-basket iconic-property-fill" />
+    <path stroke="#000" stroke-linecap="square" d="M.5.5h2.25c.138 0 .274.109.302.244l1.395 6.511c.029.135.03.354.003.49l-.902 4.51c-.027.135.063.245.201.245h9.75" class="iconic-cart-body iconic-property-stroke" fill="none" />
+  </g>
+</svg>

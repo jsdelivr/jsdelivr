@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "persisto",
+  "repo": "mar10/persisto",
+  "files": {
+    "basePath": "dist",
+    "include": ["persisto.js", "persisto.min.js", "persisto.min.js.map"]
+  }
+}

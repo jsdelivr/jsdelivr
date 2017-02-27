@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "natsort",
+  "repo": "bubkoo/natsort",
+  "files": {
+    "include": [
+      "dist/*.*"
+    ]
+  }
+}

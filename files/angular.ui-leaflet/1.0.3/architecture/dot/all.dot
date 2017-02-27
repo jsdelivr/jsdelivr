@@ -1,0 +1,675 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+    node[shape="component"]
+    
+      "ui-leaflet"[label="ui-leaflet", color=1]
+    
+
+    
+      
+        "ui-leaflet" -> "nemLogging"
+      
+    
+
+    node[shape="ellipse"]
+
+
+    
+      
+
+      
+
+      
+        "leafletData"[label="leafletData", color=5]
+      
+        "leafletDirectiveControlsHelpers"[label="leafletDirectiveControlsHelpers", color=5]
+      
+        "leafletGeoJsonHelpers"[label="leafletGeoJsonHelpers", color=5]
+      
+        "leafletHelpers"[label="leafletHelpers", color=5]
+      
+        "leafletIterators"[label="leafletIterators", color=5]
+      
+        "leafletMarkersHelpers"[label="leafletMarkersHelpers", color=5]
+      
+        "leafletWatchHelpers"[label="leafletWatchHelpers", color=5]
+      
+        "leafletLogger"[label="leafletLogger", color=5]
+      
+        "leafletEventsHelpers"[label="leafletEventsHelpers", color=5]
+      
+
+      
+        "leafletBoundsHelpers"[label="leafletBoundsHelpers", color=6]
+      
+        "leafletControlHelpers"[label="leafletControlHelpers", color=6]
+      
+        "leafletLayerHelpers"[label="leafletLayerHelpers", color=6]
+      
+        "leafletLegendHelpers"[label="leafletLegendHelpers", color=6]
+      
+        "leafletMapDefaults"[label="leafletMapDefaults", color=6]
+      
+        "leafletPathsHelpers"[label="leafletPathsHelpers", color=6]
+      
+        "nominatimService"[label="nominatimService", color=6]
+      
+        "leafletEventsHelpersFactory"[label="leafletEventsHelpersFactory", color=6]
+      
+        "leafletGeoJsonEvents"[label="leafletGeoJsonEvents", color=6]
+      
+        "leafletLabelEvents"[label="leafletLabelEvents", color=6]
+      
+        "leafletMapEvents"[label="leafletMapEvents", color=6]
+      
+        "leafletMarkerEvents"[label="leafletMarkerEvents", color=6]
+      
+        "leafletPathEvents"[label="leafletPathEvents", color=6]
+      
+
+
+      node[shape="cds"]
+
+      
+
+      
+        "leaflet"[label="leaflet", color=3]
+      
+        "bounds"[label="bounds", color=3]
+      
+        "center"[label="center", color=3]
+      
+        "lfCenter"[label="lfCenter", color=3]
+      
+        "controls"[label="controls", color=3]
+      
+        "decorations"[label="decorations", color=3]
+      
+        "eventBroadcast"[label="eventBroadcast", color=3]
+      
+        "geojson"[label="geojson", color=3]
+      
+        "layercontrol"[label="layercontrol", color=3]
+      
+        "layers"[label="layers", color=3]
+      
+        "legend"[label="legend", color=3]
+      
+        "markers"[label="markers", color=3]
+      
+        "maxbounds"[label="maxbounds", color=3]
+      
+        "paths"[label="paths", color=3]
+      
+        "tiles"[label="tiles", color=3]
+      
+        "markersWatchOptions"[label="markersWatchOptions", color=3]
+      
+        "geojsonWatchOptions"[label="geojsonWatchOptions", color=3]
+      
+
+
+
+
+
+      node[shape="ellipse"]
+      
+
+      
+        "ui-leaflet" -> "leaflet"
+      
+        "ui-leaflet" -> "bounds"
+      
+        "ui-leaflet" -> "center"
+      
+        "ui-leaflet" -> "lfCenter"
+      
+        "ui-leaflet" -> "controls"
+      
+        "ui-leaflet" -> "decorations"
+      
+        "ui-leaflet" -> "eventBroadcast"
+      
+        "ui-leaflet" -> "geojson"
+      
+        "ui-leaflet" -> "layercontrol"
+      
+        "ui-leaflet" -> "layers"
+      
+        "ui-leaflet" -> "legend"
+      
+        "ui-leaflet" -> "markers"
+      
+        "ui-leaflet" -> "maxbounds"
+      
+        "ui-leaflet" -> "paths"
+      
+        "ui-leaflet" -> "tiles"
+      
+        "ui-leaflet" -> "markersWatchOptions"
+      
+        "ui-leaflet" -> "geojsonWatchOptions"
+      
+
+      
+
+      
+        "ui-leaflet" -> "leafletData"
+      
+        "ui-leaflet" -> "leafletDirectiveControlsHelpers"
+      
+        "ui-leaflet" -> "leafletGeoJsonHelpers"
+      
+        "ui-leaflet" -> "leafletHelpers"
+      
+        "ui-leaflet" -> "leafletIterators"
+      
+        "ui-leaflet" -> "leafletMarkersHelpers"
+      
+        "ui-leaflet" -> "leafletWatchHelpers"
+      
+        "ui-leaflet" -> "leafletLogger"
+      
+        "ui-leaflet" -> "leafletEventsHelpers"
+      
+
+      
+        "ui-leaflet" -> "leafletBoundsHelpers"
+      
+        "ui-leaflet" -> "leafletControlHelpers"
+      
+        "ui-leaflet" -> "leafletLayerHelpers"
+      
+        "ui-leaflet" -> "leafletLegendHelpers"
+      
+        "ui-leaflet" -> "leafletMapDefaults"
+      
+        "ui-leaflet" -> "leafletPathsHelpers"
+      
+        "ui-leaflet" -> "nominatimService"
+      
+        "ui-leaflet" -> "leafletEventsHelpersFactory"
+      
+        "ui-leaflet" -> "leafletGeoJsonEvents"
+      
+        "ui-leaflet" -> "leafletLabelEvents"
+      
+        "ui-leaflet" -> "leafletMapEvents"
+      
+        "ui-leaflet" -> "leafletMarkerEvents"
+      
+        "ui-leaflet" -> "leafletPathEvents"
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      node[shape="ellipse",style="filled", color=8]
+      
+
+      
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "leaflet"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "leaflet"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leaflet"
+        
+          "leafletMapEvents"[label="leafletMapEvents"]
+          "leafletMapEvents" -> "leaflet"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "bounds"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "bounds"
+        
+          "nominatimService"[label="nominatimService"]
+          "nominatimService" -> "bounds"
+        
+          "leafletBoundsHelpers"[label="leafletBoundsHelpers"]
+          "leafletBoundsHelpers" -> "bounds"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "center"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "center"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "center"
+        
+          "leafletBoundsHelpers"[label="leafletBoundsHelpers"]
+          "leafletBoundsHelpers" -> "center"
+        
+          "leafletMapEvents"[label="leafletMapEvents"]
+          "leafletMapEvents" -> "center"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "lfCenter"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "lfCenter"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "lfCenter"
+        
+          "leafletBoundsHelpers"[label="leafletBoundsHelpers"]
+          "leafletBoundsHelpers" -> "lfCenter"
+        
+          "leafletMapEvents"[label="leafletMapEvents"]
+          "leafletMapEvents" -> "lfCenter"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "controls"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "controls"
+        
+          "leafletControlHelpers"[label="leafletControlHelpers"]
+          "leafletControlHelpers" -> "controls"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "decorations"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "decorations"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "eventBroadcast"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "eventBroadcast"
+        
+          "leafletMapEvents"[label="leafletMapEvents"]
+          "leafletMapEvents" -> "eventBroadcast"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "eventBroadcast"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "geojson"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "geojson"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "geojson"
+        
+          "leafletWatchHelpers"[label="leafletWatchHelpers"]
+          "leafletWatchHelpers" -> "geojson"
+        
+          "leafletDirectiveControlsHelpers"[label="leafletDirectiveControlsHelpers"]
+          "leafletDirectiveControlsHelpers" -> "geojson"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "geojson"
+        
+          "leafletGeoJsonEvents"[label="leafletGeoJsonEvents"]
+          "leafletGeoJsonEvents" -> "geojson"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "layercontrol"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "layercontrol"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "layercontrol"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "layers"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "layers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "layers"
+        
+          "leafletLayerHelpers"[label="leafletLayerHelpers"]
+          "leafletLayerHelpers" -> "layers"
+        
+          "leafletControlHelpers"[label="leafletControlHelpers"]
+          "leafletControlHelpers" -> "layers"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "legend"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "legend"
+        
+          "leafletLegendHelpers"[label="leafletLegendHelpers"]
+          "leafletLegendHelpers" -> "legend"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "markers"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "markers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "markers"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "markers"
+        
+          "leafletMarkersHelpers"[label="leafletMarkersHelpers"]
+          "leafletMarkersHelpers" -> "markers"
+        
+          "leafletMarkerEvents"[label="leafletMarkerEvents"]
+          "leafletMarkerEvents" -> "markers"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "markers"
+        
+          "leafletWatchHelpers"[label="leafletWatchHelpers"]
+          "leafletWatchHelpers" -> "markers"
+        
+          "leafletDirectiveControlsHelpers"[label="leafletDirectiveControlsHelpers"]
+          "leafletDirectiveControlsHelpers" -> "markers"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "maxbounds"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "maxbounds"
+        
+          "leafletBoundsHelpers"[label="leafletBoundsHelpers"]
+          "leafletBoundsHelpers" -> "maxbounds"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "maxbounds"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "paths"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "paths"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "paths"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "paths"
+        
+          "leafletPathsHelpers"[label="leafletPathsHelpers"]
+          "leafletPathsHelpers" -> "paths"
+        
+          "leafletPathEvents"[label="leafletPathEvents"]
+          "leafletPathEvents" -> "paths"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "tiles"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "tiles"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "tiles"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "tiles"
+        
+      
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "markersWatchOptions"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "markersWatchOptions"
+        
+      
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "geojsonWatchOptions"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "geojsonWatchOptions"
+        
+      
+
+      
+
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletData"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletData"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletDirectiveControlsHelpers"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "leafletDirectiveControlsHelpers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletDirectiveControlsHelpers"
+        
+      
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletGeoJsonHelpers"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "leafletGeoJsonHelpers"
+        
+      
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletIterators"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletIterators"
+        
+      
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletMarkersHelpers"
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletMarkersHelpers"
+        
+          "leafletGeoJsonHelpers"[label="leafletGeoJsonHelpers"]
+          "leafletGeoJsonHelpers" -> "leafletMarkersHelpers"
+        
+      
+        
+      
+        
+          "nemSimpleLogger"[label="nemSimpleLogger"]
+          "nemSimpleLogger" -> "leafletLogger"
+        
+      
+        
+          "leafletEventsHelpersFactory"[label="leafletEventsHelpersFactory"]
+          "leafletEventsHelpersFactory" -> "leafletEventsHelpers"
+        
+      
+
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletBoundsHelpers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletBoundsHelpers"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletControlHelpers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletControlHelpers"
+        
+          "leafletLayerHelpers"[label="leafletLayerHelpers"]
+          "leafletLayerHelpers" -> "leafletControlHelpers"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "leafletControlHelpers"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletLayerHelpers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletLayerHelpers"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "leafletLayerHelpers"
+        
+      
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletLegendHelpers"
+        
+      
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletMapDefaults"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletPathsHelpers"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletPathsHelpers"
+        
+      
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "nominatimService"
+        
+          "leafletMapDefaults"[label="leafletMapDefaults"]
+          "leafletMapDefaults" -> "nominatimService"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletEventsHelpersFactory"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletEventsHelpersFactory"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletGeoJsonEvents"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletGeoJsonEvents"
+        
+          "leafletEventsHelpersFactory"[label="leafletEventsHelpersFactory"]
+          "leafletEventsHelpersFactory" -> "leafletGeoJsonEvents"
+        
+          "leafletData"[label="leafletData"]
+          "leafletData" -> "leafletGeoJsonEvents"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletLabelEvents"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletLabelEvents"
+        
+          "leafletEventsHelpersFactory"[label="leafletEventsHelpersFactory"]
+          "leafletEventsHelpersFactory" -> "leafletLabelEvents"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletMapEvents"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletMapEvents"
+        
+          "leafletEventsHelpers"[label="leafletEventsHelpers"]
+          "leafletEventsHelpers" -> "leafletMapEvents"
+        
+          "leafletIterators"[label="leafletIterators"]
+          "leafletIterators" -> "leafletMapEvents"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletMarkerEvents"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletMarkerEvents"
+        
+          "leafletEventsHelpersFactory"[label="leafletEventsHelpersFactory"]
+          "leafletEventsHelpersFactory" -> "leafletMarkerEvents"
+        
+          "leafletLabelEvents"[label="leafletLabelEvents"]
+          "leafletLabelEvents" -> "leafletMarkerEvents"
+        
+      
+        
+          "leafletLogger"[label="leafletLogger"]
+          "leafletLogger" -> "leafletPathEvents"
+        
+          "leafletHelpers"[label="leafletHelpers"]
+          "leafletHelpers" -> "leafletPathEvents"
+        
+          "leafletLabelEvents"[label="leafletLabelEvents"]
+          "leafletLabelEvents" -> "leafletPathEvents"
+        
+          "leafletEventsHelpers"[label="leafletEventsHelpers"]
+          "leafletEventsHelpers" -> "leafletPathEvents"
+        
+      
+
+      
+
+    
+}

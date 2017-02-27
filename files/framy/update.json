@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "framy-css",
+  "repo": "aaroniker/framy-css",
+  "files": {
+    "basePath": "dist/"
+  }
+}

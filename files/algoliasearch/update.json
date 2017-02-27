@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "algoliasearch",
-  "repo": "algolia/algoliasearch-client-js",
+  "repo": "algolia/algoliasearch-client-javascript",
   "files": {
     "basePath": "dist/"
   }
