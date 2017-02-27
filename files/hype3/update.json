@@ -1,0 +1,8 @@
+{
+  "packageManager": "dimitrigq",
+  "name": "tumult.hype.3",
+  "repo": "wefuse/hype",
+  "files": {
+    "include": ["HYPE-552.full.min.js", "HYPE-552.thin.min.js"]
+  }
+}
