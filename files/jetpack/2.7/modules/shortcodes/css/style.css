@@ -1,0 +1,187 @@
+/**
+* 1. Fullscreen styles
+*/
+html.presentation-wrapper-fullscreen-parent,
+body.presentation-wrapper-fullscreen-parent {
+	overflow: hidden !important;
+}
+
+.presentation-wrapper-fullscreen-parent #wpadminbar {
+	display: none;
+}
+
+.presentation-wrapper-fullscreen,
+.presentation-wrapper-fullscreen-parent {
+	min-width: 100% !important;
+	min-height: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 10000 !important;
+}
+
+.presentation-wrapper-fullscreen {
+	background-color: #808080;
+	border: none !important;
+}
+
+.presentation-wrapper-fullscreen .nav-arrow-left,
+.presentation-wrapper-fullscreen .nav-arrow-right {
+	z-index: 20001;
+}
+
+.presentation-wrapper-fullscreen .nav-fullscreen-button {
+	z-index: 20002;
+}
+
+
+/**
+ * 2. General presentation styles
+ */
+.presentation-wrapper {
+	margin: 20px auto;
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+
+.presentation {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	outline: none;
+}
+
+/**
+ * jmpress requires that step sizes are explicitly defined
+ * as it inserts sizeless divs before the steps. These
+ * dimensions are set by the js code on initialization
+ */
+.presentation,
+.presentation .step {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+/**
+ * Opacity transition durations are set by the js code
+ * so they match the presentation animation durations
+ */
+.presentation .step.fade:not(.active) {
+	opacity: 0;
+}
+
+.presentation .slide-content {
+	padding: 30px;
+}
+
+
+/**
+ * 3. Styles for the navigation arrows
+ */
+.presentation .nav-arrow-left,
+.presentation .nav-arrow-right,
+.presentation .nav-fullscreen-button {
+	position: absolute;
+	width: 34px;
+	background-repeat: no-repeat;
+	z-index: 2;
+	opacity: 0;
+
+	-webkit-transition : opacity .25s;
+	-moz-transition    : opacity .25s;
+	-ms-transition     : opacity .25s;
+	-o-transition      : opacity .25s;
+	transition         : opacity .25s;
+}
+
+.presentation .nav-arrow-left,
+.presentation .nav-arrow-right {
+	height: 100%;
+	background-image: url(../images/slide-nav.png);
+	background-size: 450% 61px;
+}
+
+.presentation .nav-arrow-left {
+	left: 0;
+	background-position: 4px 50%;
+}
+
+.presentation .nav-arrow-right {
+	right: 0;
+	background-position: -120px 50%;
+}
+
+.presentation .nav-fullscreen-button {
+	width: 32px;
+	height: 32px;
+	margin: 4px;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+	background-image: url(../images/expand.png);
+	background-size: 100% 100%;
+}
+
+.presentation:hover .nav-arrow-left,
+.presentation:hover .nav-arrow-right {
+	opacity: 1;
+}
+
+.presentation:hover .nav-fullscreen-button {
+	opacity: 0.8;
+}
+
+.presentation-wrapper-fullscreen .nav-fullscreen-button {
+	background-image: url(../images/collapse.png);
+}
+
+/**
+ * 4. Styles for the autoplay overlay
+ */
+.presentation .autoplay-overlay {
+	height: 15%;
+	width: 80%;
+	margin: 30% 10%;
+	position: relative;
+	z-index: 100;
+	display: table;
+	border-radius: 50px;
+	background-color: #e5e5e5;
+	background-color: rgba(0, 0, 0, 0.75);
+
+	-webkit-transition : opacity .5s;
+	-moz-transition    : opacity .5s;
+	-ms-transition     : opacity .5s;
+	-o-transition      : opacity .5s;
+	transition         : opacity .5s;
+}
+
+.presentation .autoplay-overlay .overlay-msg {
+	position: relative;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+}
+
+/**
+ * 5. Styles for fading steps
+ */
+.presentation .will-fade {
+	opacity: 0;
+}
+
+.presentation .do-fade {
+	opacity: 1;
+
+	-webkit-transition : opacity .5s;
+	-moz-transition    : opacity .5s;
+	-ms-transition     : opacity .5s;
+	-o-transition      : opacity .5s;
+	transition         : opacity .5s;
+}

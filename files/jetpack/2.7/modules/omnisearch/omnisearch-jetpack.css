@@ -1,0 +1,35 @@
+
+.wp-admin #wpwrap {
+	background: url('../../_inc/images/header-clouds.png') 200% 0 repeat-x;
+}
+
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		#wpwrap {
+			background: url('../../_inc/images/header-clouds-2x.png') 0 0 repeat-x;
+			background-size: 1600px 400px;
+		}
+}
+
+ul#adminmenu a.wp-has-current-submenu:after,
+ul#adminmenu > li.current > a.current:after {
+	border-right-color:#8da94c;
+	display: none;
+}
+
+h2.page-title {
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#results-title,
+.jump-to {
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.omnisearch-results > li:first-child > h2 {
+	text-shadow: none;
+}

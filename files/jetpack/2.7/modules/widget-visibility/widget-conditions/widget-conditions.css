@@ -1,0 +1,39 @@
+.widget-liquid-right .widget.expanded {
+	overflow: visible;
+}
+.widget-conditional-hide {
+	display: none;
+}
+.widget-conditional .widget-conditional-inner {
+	background: #F9F9F9;
+	border: 1px solid #DFDFDF;
+	padding: 12px 12px 0;
+}
+.widget-conditional .condition,
+.widget-conditional .condition-top {
+	margin-bottom: 12px;
+}
+.widget-conditional .condition select {
+	width: 120px;
+}
+.widget-conditional .condition-top select {
+	width: auto;
+}
+.widget-conditional .condition .alignright {
+	padding-top: 4px;
+}
+.widget-conditional .condition-control a {
+	text-decoration: none;
+}
+.widget-conditional .condition:last-child .condition-conjunction {
+	display: none;
+}
+.widget-control-actions .alignright {
+	text-align: right;
+}
+.wp-core-ui .button.display-options {
+	margin-right: 5px;
+}
+.wp-core-ui .button.display-options:hover {
+	text-decoration: none;
+}

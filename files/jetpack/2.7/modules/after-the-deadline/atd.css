@@ -1,0 +1,105 @@
+/* AtD error styles */
+
+.hiddenSpellError
+{
+   border-bottom: 2px solid red;
+   cursor: default;
+}
+
+.hiddenGrammarError
+{
+   border-bottom: 2px solid green;
+   cursor: default;
+}
+
+.hiddenSuggestion
+{
+   border-bottom: 2px solid blue;
+   cursor: default;
+}
+
+/* Menu styles derived from:
+ * jquery.spellchecker.js - a simple jQuery Spell Checker
+ * Copyright (c) 2008 Richard Willis
+ * MIT license  : http://www.opensource.org/licenses/mit-license.php
+ * Project      : http://jquery-spellchecker.googlecode.com
+ */
+
+#suggestmenu
+{
+   min-width: 122px;
+   background: #ebeaeb;
+   position: absolute;
+   display: none;
+   z-index: 9999;
+   overflow: none;
+   margin-top: 1px;
+   text-align: left;
+   font-size: 11px;
+   font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+#suggestmenu strong
+{
+   background: #cccccc;
+   font-weight: bold;
+   padding:3px 6px 3px 6px;
+   display:block;
+   border:1px solid #dddddd;
+   border-bottom: 1px solid #aaaaaa;
+   color: black;
+}
+
+#suggestmenu em
+{
+   text-align:center;
+   padding:3px 6px 3px 6px;
+   display:block;
+   border-top:1px solid #ccc;
+   border-left:1px solid #ccc;
+}
+
+#suggestmenu a, #suggestmenu a:visited
+{
+   background: #ebeaeb;
+   border-left:1px solid #dddddd;
+   border-right:1px solid #dddddd;
+   padding:3px 6px 3px 6px;
+   display:block;
+   margin:0px;
+   text-decoration:none;
+   color: black;
+   outline:none
+}
+
+#suggestmenu a.first, #suggestmenu a.first:visited
+{
+   border-top:1px solid #dddddd;
+}
+
+.spell_sep_bottom
+{
+   border-bottom: 1px solid #dddddd;
+}
+
+.spell_sep_top
+{
+   border-top: 1px solid #aaaaaa;
+}
+
+#suggestmenu a:hover
+{
+   color:#000;
+   background: #f5f5f5;
+}
+
+#suggestmenu .foot
+{
+   border-top:1px solid #aaaaaa;
+   background:#fff
+}
+
+#suggestmenu .foot a, #suggestmenu .foot a:visited
+{
+   outline:none
+}

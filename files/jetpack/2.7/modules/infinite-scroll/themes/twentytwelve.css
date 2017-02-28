@@ -1,0 +1,33 @@
+/* =Infinity Styles
+-------------------------------------------------------------- */
+.infinite-scroll .site-content:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+.infinite-wrap {
+	border-top: 0;
+}
+.infinite-scroll.neverending .site-content {
+	margin-bottom: 48px;
+	margin-bottom: 3.428571429rem;
+}
+
+/* Elements to hide: post navigation, regular footer */
+.infinite-scroll #nav-below,
+.infinite-scroll.neverending #colophon {
+	display: none;
+}
+
+/* Hooks to infinity-end body class to restore footer */
+.infinity-end.neverending #colophon {
+	display: block;
+}
+
+/* For responsive CSS */
+@media (max-width: 599px) {
+	.infinite-scroll #infinite-handle {
+		padding-bottom: 48px;
+		padding-bottom: 3.428571429rem;
+	}
+}

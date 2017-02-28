@@ -1,0 +1,14 @@
+.many-items-table th, .many-items-table td {
+	width: 25%;
+}
+
+.many-items-table input, .many-items-table textarea {
+	width: 100%;
+}
+
+.many-items-table input[type=file] {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}

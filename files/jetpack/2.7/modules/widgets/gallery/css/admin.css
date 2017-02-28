@@ -1,0 +1,11 @@
+.gallery-widget-thumbs-wrapper {
+	margin: -5px 0 0.3em 0;
+}
+
+.gallery-widget-thumbs img {
+	border: 1px solid #ccc;
+	padding: 2px;
+	background-color: #fff;
+	margin: 0 5px 5px 0;
+	float: left;
+}

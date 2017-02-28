@@ -1,0 +1,51 @@
+#gplus-connection-details {
+	margin-top: 10px;
+	padding: 15px;
+	background: #fff;
+	border: none !important;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+	width: 400px;
+}
+
+#gplus-connection-details p {
+	padding: 0;
+}
+
+#gplus-connection-details img {
+	float: left;
+	margin-right: .5em;
+}
+
+.gplus-clear {
+	clear: both;
+}
+
+.gplus-connected {
+	float: right;
+	font-weight: bold;
+	color: #78AB46;
+}
+
+.gplus-disconnect {
+	float:right;
+	position: relative;
+	top: 13px;
+	right: -5px;
+}
+
+.gplus-disconnect a {
+	color: #c21c19;
+	font-size: 110%;
+}
+
+.gplus-post-meta-box img {
+	vertical-align: middle;
+	margin-bottom: 5px;
+	height: 20px;
+	width: 20px;
+}
+
+.gplus-sharing-screen {
+	margin: 10px 0 45px 0;
+}

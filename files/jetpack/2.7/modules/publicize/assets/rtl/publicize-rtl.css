@@ -1,0 +1,191 @@
+/* This file was automatically generated on Oct 08 2013 18:28:14 */
+
+div#publicize-services-block {
+	display: inline-block;
+	clear: both;
+	margin-bottom: 25px;
+	background-color: #fff;
+	padding: 25px 20px 5px 25px;
+}
+
+/* Add the logos for the Publicize services */
+span.pub-logos {
+	float: right;
+	display: block;
+	width: 130px;
+	height: 75px;
+	margin-top: -18px;
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+span#facebook { background: url( ../facebook-logo.png ) 50% 19px no-repeat; background-size: 125px 41px; }
+span#twitter { background: url( ../twitter-logo.png ) 50% 19px no-repeat; background-size: 125px 47px; }
+span#linkedin { background: url( ../linkedin-logo.png ) 50% 19px no-repeat; background-size: 125px 47px; }
+span#tumblr { background: url( ../tumblr-logo.png ) 50% 19px no-repeat; background-size: 125px 47px; }
+span#path { background: url( ../path-logo.png ) 50% 19px no-repeat; background-size: 85px 32px; }
+span#google_plus { background: url( ../gplus.png ) 50% 19px no-repeat; background-size: 125px; }
+
+a.publicize-profile-link, a.publicize-profile-link:visited {
+	text-decoration: none;
+}
+
+a.publicize-profile-link:hover {
+	color: #f1831e;
+}
+
+a.publicize-add-connection, a.publicize-add-connection:visited {
+	text-decoration: none;
+}
+
+a.publicize-add-connection:hover {
+	color: #f1831e;
+}
+
+div.publicize-service-entry {
+	width: 100%;
+	clear: both;
+	margin-bottom: 10px;
+}
+
+div.publicize-service-left {
+	display: inline-block;
+	width: 150px;
+	vertical-align: top;
+}
+
+div.publicize-service-right {
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 5px;
+	width: 300px;
+	padding: 10px;
+	background-color: #f1f1f1;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+div.publicize-service-right ul {
+	margin-top: 0;
+}
+
+div.publicize-service-right li {
+	list-style-type: none;
+}
+
+.publicize-info {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url( ../info-2x.png );
+	background-size: 16px 16px;
+	text-indent: -99999px;
+	float: left;
+	cursor: help;
+}
+
+.pub-disconnect-button {
+	-webkit-border-image: none;
+	border-bottom-color: #CCC;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-right-color: #CCC;
+	border-right-style: none;
+	border-right-width: 0px;
+	border-left-color: #CCC;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-top-color: #CCC;
+	border-top-style: none;
+	border-top-width: 0px;
+	color: #CCC;
+	cursor: auto;
+	display: inline;
+	font-family: sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: 22px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	outline-color: #CCC;
+	outline-style: none;
+	outline-width: 0px;
+	overflow-y: visible;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	position: static;
+	left: auto;
+	text-align: right;
+	text-decoration: none;
+	top: auto;
+	vertical-align: baseline;
+	width: auto;
+	z-index: auto;
+}
+
+.pub-disconnect-button:hover {
+	color: #f1831e;
+}
+
+table#option-profile {
+	padding-bottom: 8px;
+}
+
+table#option-profile td {
+	font-family: "Lucida Grande",Verdana,Arial,sans-serif;
+	vertical-align: middle;
+}
+
+table#option-profile td.radio {
+	padding-left: 20px;
+}
+
+table#option-profile td.thumbnail {
+	padding-left: 20px;
+}
+
+table#option-profile td.details {
+	font-weight: bold; color: #333333
+}
+
+table#option-fb-fanpage td, table#option-fanpage td {
+	font-family: "Lucida Grande",Verdana,Arial,sans-serif;
+	vertical-align: middle;
+}
+
+table#option-fb-fanpage td.thumbnail, table#option-fanpage td.thumbnail  {
+	padding: 5px 20px 5px 20px;
+}
+
+table#option-fb-fanpage td.details, table#option-fanpage td.details {
+	width: 130px;
+	padding-left: 10px;
+}
+
+table#option-fb-fanpage td.details span.name, table#option-fanpage td.details span.name {
+	font-weight: bold; color: #333333;
+}
+
+table#option-fb-fanpage td.details span.category, table#option-fanpage td.details span.category {
+	font-size: 10px; color: #888888;
+}
+
+input.fb-options {
+	font-family: "Lucida Grande",Verdana,Arial,sans-serif;
+	font-size: 12px;
+}
+
+.pub-connection-error {
+	color: #ff0000;
+}

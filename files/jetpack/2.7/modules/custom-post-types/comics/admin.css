@@ -1,0 +1,7 @@
+#adminmenu #menu-posts-jetpack-comic .menu-icon-post div.wp-menu-image:before {
+	content: '\f125';
+}
+
+.edit-php .column-preview-jetpack-comic {
+	width: 150px;
+}

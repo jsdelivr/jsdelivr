@@ -1,0 +1,11 @@
+
+@font-face {
+	font-family: 'Jetpack';
+	src:url('font/jetpack.eot');
+	src:url('font/jetpack.eot?#iefix') format('embedded-opentype'),
+		url('font/jetpack.ttf') format('truetype'),
+		url('font/jetpack.woff') format('woff'),
+		url('font/jetpack.svg#jetpack') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

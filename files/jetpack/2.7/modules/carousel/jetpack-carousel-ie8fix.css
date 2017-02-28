@@ -1,0 +1,8 @@
+.jp-carousel .jp-carousel-slide {
+        display: none !important;
+}
+
+.jp-carousel .selected {
+        margin: 0 auto;
+        display: block !important;
+}
