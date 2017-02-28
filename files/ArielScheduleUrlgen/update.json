@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "ArielScheduleUrlgen",
+  "repo": "komikoni/ArielScheduleUrlgen",
+  "files": {
+    "include": [
+      "/dist/ArielScheduleUrlgen-min.js"
+    ]
+  }
+}
