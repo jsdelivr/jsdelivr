@@ -3,9 +3,9 @@
   "name": "ArielScheduleUrlgen",
   "repo": "komikoni/ArielScheduleUrlgen",
   "files": {
-    "basepath": "/dist/",
+    "basePath": "/dist/",
     "include": [
-      "ArielScheduleUrlgen-min.js"
+      "ArieleScheduleUrlgen-min.js"
     ]
   }
 }
