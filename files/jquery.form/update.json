@@ -3,8 +3,6 @@
   "name": "jquery-form",
   "repo": "jquery-form/form",
   "files": {
-    "include": [
-      "dist/*.js"
-    ]
+    "basePath": "dist/"
   }
 }
