@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "xss",
+  "repo": "leizongmin/js-xss",
+  "files": {
+    "basePath": "dist/",
+    "include": ["xss.min.js", "xss.js"]
+  }
+}
