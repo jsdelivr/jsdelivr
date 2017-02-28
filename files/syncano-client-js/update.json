@@ -3,6 +3,6 @@
   "name": "syncano-client-js",
   "repo": "syncano/syncano-client-js",
   "files": {
-    "basePath": "lib/"
+    "basePath": "src/"
   }
 }
