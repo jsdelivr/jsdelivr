@@ -5,7 +5,7 @@ Similar to Google Hosted Libraries, jsDelivr is an open source [CDN][6] that all
 and anyone to link to our hosted files in their websites.
 
 We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
-There are no bandwidth limits or premium features and its completely free to use by anybody.
+There are no bandwidth limits or premium features and its completely free to use by anybody.  HTTP and HTTPS protocols are available at all our [POPs](http://www.jsdelivr.com/network.php).  In addition, most of our providers support [SPDY](http://caniuse.com/spdy) v[3.1](http://blog.cloudflare.com/staying-up-to-date-with-the-latest-protocols-spdy-3-1) for faster transfers.
 
 All kinds of files are allowed, including JavaScript libraries, jQuery plugins, CSS frameworks, fonts and more.
 
