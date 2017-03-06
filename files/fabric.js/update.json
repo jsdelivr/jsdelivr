@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fabric.js",
+  "repo": "kangax/fabric.js",
+  "files": {
+    "include": ["dist/fabric.min.js", "dist/fabric.js"]
+  }
+}
