@@ -1,7 +1,7 @@
 {
   "packageManager": "npm",
   "name": "v",
-  "repo": "DiegoRBaquero/V",
+  "repo": "diegorbaquero/v",
   "files": {
     "include": ["v.min.js"]
   }
