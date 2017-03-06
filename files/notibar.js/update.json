@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "notibar.js",
+  "repo": "duyetdev/notibar.js",
+  "files": {
+    "include": ["notibar.js", "notibar.min.js", "notibar.js.map"]
+  }
+}
