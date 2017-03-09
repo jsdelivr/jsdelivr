@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-marked",
+  "repo": "Hypercubed/angular-marked,
+  "files": {
+    "include": ["angular-marked.js", "angular-marked.min.js"]
+  }
+}
