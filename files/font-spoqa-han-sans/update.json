@@ -4,6 +4,6 @@
   "repo": "spoqa/spoqa-han-sans",
   "files": {
     "include": ["Subset/**/*", "css/**/*"],
-	"exclude": ["glyphs.txt", "LICENSE_OFL.txt"]
+	"exclude": ["Subset/**/glyphs.txt", "Subset/**/LICENSE_OFL.txt"]
   }
 }
