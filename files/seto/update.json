@@ -3,6 +3,6 @@
   "name": "seto",
   "repo": "sashiba042/seto",
   "files": {
-    "include": ["setofont.ttf", "setofont-ex.ttf"]
+    "include": ["setofont.woff", "setofont.ttf", "setofont-ex.ttf"]
   }
 }
