@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fetch-inject",
+  "repo": "jhabdas/fetch-inject",
+  "files": {
+    "basePath": "dist/"
+  }
+}
