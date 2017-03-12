@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ical.js",
+  "repo": "mozilla-comm/ical.js",
+  "files": {
+    "include": ["ical.js", "ical.min.js"]
+  }
+}
