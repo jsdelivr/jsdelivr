@@ -4,7 +4,7 @@
   "repo": "nakupanda/bootstrap3-dialog",
   "files": {
     "basePath": "dist/",
-    "include": ["*.js", "*.css", "*.less"],
+    "include": ["js/*.js", "css/*.css", "less/*.less"],
     "exclude": []
   }
 }
