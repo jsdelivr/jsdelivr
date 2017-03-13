@@ -4,6 +4,6 @@
   "repo": "processing/p5.js",
   "files": {
     "basePath": "lib/",
-    "include": ["p5.min.js", "./addons/**/*"]
+    "include": ["p5.js", "p5.min.js", "addons/**/*"]
   }
 }
