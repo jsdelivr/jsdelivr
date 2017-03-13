@@ -3,6 +3,6 @@
   "name": "v",
   "repo": "diegorbaquero/v",
   "files": {
-    "include": ["v.min.js"]
+    "include": ["v.min.js", "v.js"]
   }
 }
