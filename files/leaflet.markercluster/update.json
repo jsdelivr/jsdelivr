@@ -3,6 +3,7 @@
   "name": "leaflet.markercluster",
   "repo": "Leaflet/Leaflet.markercluster",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
+    "exclude": ["*.txt"]
   }
 }
