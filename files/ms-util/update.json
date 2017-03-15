@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Alorel/node-ms-util",
+  "repo": "Alorel/node-ms-util",
+  "files": {
+    "basePath": "dist/",
+    "include": ["ms-util.js", "ms-util.min.js"]
+  }
+}
