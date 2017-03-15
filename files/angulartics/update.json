@@ -3,6 +3,6 @@
   "name": "angulartics",
   "repo": "angulartics/angulartics",
   "files": {
-    "include": ["angulartics.js", "angular-moment.min.js"]
+    "include": ["angulartics.js"]
   }
 }
