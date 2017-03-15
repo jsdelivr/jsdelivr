@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tez-ui",
+  "repo": "dalisoft/tez-ui",
+  "files": {
+    "include": ["Tez.UI.js", "Tez.UI.min.js"]
+  }
+}
