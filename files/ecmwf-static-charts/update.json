@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ecmwf-static-charts",
+  "repo": "ecmwf-sdo/static-charts",
+  "files": {
+    "include": ["ecmwf_static_charts.js"]
+  }
+}
