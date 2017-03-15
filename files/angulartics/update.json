@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "angulartics",
-  "repo": "angulartics/angulartics",
+  "repo": "angulartics/angulartics/src",
   "files": {
     "include": ["angulartics.js"]
   }
