@@ -1,9 +1,9 @@
 {
-  "packageManager": "github",
-  "name": "three.js",
+  "packageManager": "npm",
+  "name": "three",
   "repo": "mrdoob/three.js",
   "files": {
     "basePath": "build/",
-    "include": ["three.js", "three.min.js"]
+    "include": ["three.js", "three.min.js", "three.module.js"]
   }
 }
