@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "iconlol",
+  "repo": "rrurr/iconlol",
+  "files": {
+    "include": ["iconlol.min.js"],
+  }
+}
