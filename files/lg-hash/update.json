@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-hash",
+  "repo": "sachinchoolur/lg-hash",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "dio",
+	"repo": "thysultan/dio.js",
+	"files": {
+    	"include": ["dio.min.js", "dio.js"]
+	}
+}

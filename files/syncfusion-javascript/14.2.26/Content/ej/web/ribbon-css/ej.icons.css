@@ -1,0 +1,905 @@
+
+@font-face {
+    font-family: 'ej-ribbonfont';
+    src: url('../common-images/ribbon/ejrbnicons.eot?-dzszjm');
+    src: url('../common-images/ribbon/ejrbnicons.eot?#iefix-dzszjm') format('embedded-opentype'), url('../common-images/ribbon/ejrbnicons.woff?-dzszjm') format('woff'), url('../common-images/ribbon/ejrbnicons.ttf?-dzszjm') format('truetype'), url('../common-images/ribbon/ejrbnicons.svg?-dzszjm#ejrbnicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/**/
+.e-ribbon .e-icon.e-resbold:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e932";
+    font-size: 24px;
+    text-indent: -6px;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon .e-resitalic:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e933";
+    font-size: 24px;
+    text-indent: -6px;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon .e-resunderline:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e934";
+    font-size: 24px;
+    text-indent: -6px;
+    position: relative;
+    top: -6px;    
+}
+.e-ribbon .e-resaligncenter:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e902";
+    font-size: 24px;
+    position: relative;
+    top: -6px;
+    left: -5px;
+}
+
+.e-ribbon .e-resalignleft:before {
+    left: -5px;
+    font-family: 'ej-ribbonfont';
+    content: "\e900";
+    font-size: 24px;
+    position: relative;
+    top: -6px;
+}
+/**/
+
+.e-ribbon.e-responsive .e-resizebtn .e-New.e-icon:before, .e-ribbon.e-responsive .e-resizebtn .e-Actions.e-icon:before {
+    top: 4px;
+}
+
+.e-ribbon.e-responsive .e-resizebtn .e-icon:before {    
+    position: relative;
+}
+
+.e-ribbon.e-responsive .e-icon.e-Illustrations:before, .e-ribbon.e-responsive .e-icon.e-Comments:before, .e-ribbon.e-responsive .e-icon.e-Hyperlink:before, .e-ribbon.e-responsive .e-icon.e-Equation:before {
+    position: relative;
+    top: 8px;
+}
+.e-ribbon.e-responsive .e-responsiveqat .e-resundo.e-icon:before,.e-ribbon.e-responsive .e-responsiveqat .e-resredo.e-icon:before {
+    top: -8px;
+}
+.e-ribbon .e-resequation:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16e";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-reshyperlink:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e909";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -8px;
+}
+
+.e-ribbon .e-reschart:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e940";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon.e-responsive .e-icon.e-comment:before {
+    left: 0;
+}
+
+.e-ribbon  .e-resshape:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e93f";
+    font-size: 24px;
+    text-indent: -6px;
+    left: -4px;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-resvideo:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e93d";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -5px;
+}
+
+.e-ribbon .e-respicture:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e93c";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -5px;
+}
+
+.e-ribbon .e-restable:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e92d";
+    font-size: 24px;
+    left: 0;
+    position: relative;
+    text-indent: -4px;
+    top: -5px;
+}
+
+.e-ribbon .e-resprintlayout:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e93b";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-resborder:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e945";
+    font-size: 25px;
+    text-indent: -6px;    
+    position: relative;
+    top: -6px;
+}
+.e-ribbon .e-resindent:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e944";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon .e-resoutdent:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e943";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon.e-responsive .e-resnumbericon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e942";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon .e-resbullet:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e941";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -6px;
+}
+.e-ribbon .e-resundo:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e949";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-resredo:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e948";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-resnew:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e90b";
+    font-size: 24px;
+    text-indent: -6px;
+    left: 0;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon.e-responsive .e-resalignright:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e901";
+    font-size: 24px;
+    text-indent: -6px;
+    left: -5px;
+    position: relative;
+    top: -6px;
+}
+
+
+.e-ribbon.e-responsive .e-resaligncenter:before, .e-ribbon.e-responsive .e-resalignleft:before {
+    left: -5px;
+}
+
+.e-ribbon.e-responsive .e-resizebtn .e-Print.e-icon:before {
+    top: 8px;
+}
+
+.e-ribbon.e-responsive .e-resfillcolor:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e936";
+    font-size: 24px;
+    text-indent: -6px;
+    left: -5px;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon.e-responsive .e-resfontcolor:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e935";
+    font-size: 24px;
+    text-indent: -6px;
+    left: -5px;
+    position: relative;
+    top: -6px;
+}
+
+.e-ribbon .e-icon.clearAll:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e161";
+    font-size: 16px;
+}
+
+.e-ribbon .e-icon.strikethrough:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17d";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.strikethrough:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.bold:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15a";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.bold:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.alignleft:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e156";
+    font-size: 16px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.alignleft:before {
+    left: 0;
+}
+
+.e-ribbon .e-icon.aligncenter:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e155";
+    font-size: 16px;
+    left: 0;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.aligncenter:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.alignright:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e157";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.alignright:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.justify:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e164";
+    font-size: 16px;
+    left: 0;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.justify:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-fontcolor:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e181";
+}
+
+.e-ribbon .e-icon.e-fillcolor:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e180";
+}
+
+.e-ribbon.e-responsive .e-icon.e-ribbonpaste:before {
+    font-size: 28px !important;
+}
+
+.e-ribbon .e-icon.e-ribbonpaste:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e169";
+    font-size: 36px;
+    position: relative;
+    left: -9px;
+    top: -4px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-ribbonpaste:before {
+    left: 12px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-ribboncut:before {
+    left: 6px;
+    right: auto;
+}
+
+.e-ribbon .e-icon.e-ribboncut:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15f";
+    font-size: 16px;
+    position: relative;
+    right: 4px;
+}
+
+.e-ribbon .e-icon.e-ribboncopy:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15e";
+    font-size: 16px;
+}
+
+.e-ribbon .e-icon.e-ribbonitalic:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e163";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -1px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-ribbonitalic:before {
+    left: 1px;
+}
+
+.e-ribbon .e-ribbonunderline:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e176";
+    font-size: 16px;
+    position: relative;
+    top: -1px;
+}
+
+.e-ribbon.e-rtl .e-ribbonunderline:before {
+    left: 1px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-superscripticon:before {
+    left: 2px;
+}
+
+.e-ribbon .e-icon.e-superscripticon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e171";
+    font-size: 16px;
+    position: relative;
+    top: -4px;
+}
+
+.e-ribbon .e-icon.e-subscripticon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e170";
+    font-size: 16px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-subscripticon:before {
+    text-indent: -4px;
+}
+
+.e-ribbon .e-icon.e-indent:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e174";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-indent:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-outdent:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e175";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-outdent:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-bullet:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15b";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-bullet:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-numbericon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e168";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -3px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-numbericon:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-table:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e172";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-uppercase:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17e";
+    font-size: 16px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-uppercase:before {
+    left: 0;
+}
+
+.e-ribbon .e-icon.e-lowercase:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17c";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -3px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-lowercase:before {
+    left: 1px;
+}
+
+.e-ribbon .e-fontcoloricon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e181";
+    font-size: 15px;
+    position: relative;
+    right: -2px;
+    top: -6px;
+}
+
+.e-ribbon .e-icon.e-Alignment:before {
+    text-indent: 13px;
+}
+
+.e-ribbon .e-colorwidget .e-tool-icon .e-selected-color {
+    bottom: 0;
+    left: 0;
+}
+
+.e-ribbon .e-fillcoloricon:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e180";
+    font-size: 15px;
+    position: relative;
+    right: -2px;
+    top: -6px;
+}
+
+.e-ribbon .e-icon.e-sort:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17a";
+    font-size: 16px;
+    left: -2px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-sort:before {
+    left: 0;
+}
+
+.e-ribbon .e-icon.e-border:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17b";
+    font-size: 16px;
+    left: -1px;
+    position: relative;
+    top: -2px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-border:before {
+    left: 1px;
+}
+
+.e-ribbon .e-icon.e-picture:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16a";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-video:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e179";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-chart:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15c";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-shape:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16e";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-comment:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e15d";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-text:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e173";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-text:before {
+    text-indent: -7px;
+}
+
+.e-ribbon .e-icon.e-hyperlink:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e162";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-hyperlink:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-datetimenew:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e160";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-datetimenew:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-print:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16b";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-print:before {
+    text-indent: -7px;
+}
+
+.e-ribbon .e-icon.e-equation:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e158";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-equation:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-save:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16d";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-printlayout:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e16c";
+    font-size: 30px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+.e-ribbon .e-icon.e-new:before{
+    font-family: 'ej-ribbonfont';
+    content: "\e167";
+    font-size: 30px;
+    line-height: 9px;
+    text-indent: -8px;
+}
+
+.e-ribbon .e-icon.e-zoomin:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e185";
+    font-size: 28px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-zoomin:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-zoomout:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e186";
+    font-size: 28px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-zoomout:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-fullscreen:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e183";
+    font-size: 28px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-fullscreen:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-undo:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e184";
+    font-size: 28px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-undo:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-redo:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e182";
+    font-size: 28px;
+    line-height: 5px;
+    text-indent: -8px;
+}
+
+.e-ribbon.e-rtl .e-icon.e-redo:before {
+    text-indent: -6px;
+}
+
+.e-ribbon .e-icon.e-dot:before {
+    font-family: 'ej-ribbonfont';
+    content: "\e17f";
+}
+
+.e-designtablestyle label {
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.e-activestyle {
+    border: 4px solid lightblue !important;
+}
+
+.e-contenteditor {
+    width: 100%;
+    height: 220px;
+    border: 1px solid #c8c3c3;
+    overflow: auto;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+    .e-contenteditor p {
+        margin: 20px;
+    }
+
+.e-headings {
+    background-color: white;
+    border: 1px solid #a0a0a0;
+    height: 65px;
+}
+
+.darktheme .e-headings {
+    background-color: #1f1f1f;
+    border: 1px solid #494949;
+    height: 65px;
+}
+
+.e-headings div {
+    border: 4px solid transparent;
+    float: left;
+    padding: 4px 1px 1px 1px;
+    height: 50px;
+    margin: 1px;
+}
+
+    .e-headings div:hover, .e-designtables div:hover {
+        border-color: lightblue;
+    }
+
+.e-strong {
+    font-weight: bold;
+}
+
+.e-emphasis {
+    font-style: italic;
+}
+
+.e-headings1 {
+    color: lightblue;
+}
+
+.e-ribbon .e-designtables {
+    font-size: 7px;
+}
+
+.e-designtables {
+    background-color: white;
+    border: 1px solid #a0a0a0;
+    height: 67px;
+}
+
+.darktheme .e-designtables {
+    background-color: #1f1f1f;
+    border: 1px solid #494949;
+    height: 67px;
+}
+
+.e-designtables > div {
+    float: left;
+    padding: 3px;
+    border: 4px solid transparent;
+}
+
+.e-designtables td {
+    text-align: center;
+}
+
+.e-designtable1 table, .e-designtable1 td {
+    border: 1px solid #566CE8;
+}
+
+.e-designtable2 table, .e-designtable2 td {
+    border: 1px solid #EDB2F7;
+}
+
+.e-designtable3 table, .e-designtable3 td {
+    border: 1px solid #E6652E;
+}
+
+.e-designtable4 table, .e-designtable4 td {
+    border: 1px solid #7ABF41;
+}
+
+.e-designtable5 table, .e-designtable5 td {
+    border: 1px solid #FCC474;
+}
+
+.lighttheme .e-ribbon .e-icon {
+    color: #515151;
+}
+
+.darktheme .e-ribbon .e-icon {
+    color: #BABABA;
+}
+
+.darktheme .e-contenteditor {
+    border-color: #464646;
+}
+
+.darktheme .e-contextualtabset {
+    background-color: #353332 !important;
+}
+
+.darktheme .e-author {
+    color: #6d6d6d;
+}
+
+.darktheme .e-ribbonbackstagepage {
+    color: #8e8e8e;
+}
+
+.darktheme .e-bsptitle {
+    color: #eaeaea;
+}

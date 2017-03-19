@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "numeral",
+  "repo": "adamwdraper/Numeral-js",
+  "files": {
+    "basePath": "min",
+    "include": ["numeral.min.js", "languages.min.js"]
+  }
+}

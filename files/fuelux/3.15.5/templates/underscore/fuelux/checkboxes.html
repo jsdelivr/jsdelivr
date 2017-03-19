@@ -1,0 +1,13 @@
+<!-- Fuel UX Checkboxes http://getfuelux.com/javascript.html#checkbox -->
+<div class="form-group">
+  <label for="<%= name %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <div class="<% if(horizontal) {%> col-sm-10<% } %><% if(required) {%> required<% } %>">
+    <% _.each(checkboxes, function(checkbox, i){ %><div class="checkbox">
+      <label class="checkbox-custom<% if(isDisabled) {%> disabled<% } %>" data-initialize="checkbox" id="<%= name+'-'+i %>">
+        <input class="sr-only" name="<%= name %>" type="checkbox" value="<%= checkbox %>"<% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+        <span class="checkbox-label"><%= checkbox %></span>
+      </label>
+    </div><% }); %>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

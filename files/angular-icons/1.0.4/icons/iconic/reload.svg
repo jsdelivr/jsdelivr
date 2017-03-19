@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-reload" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Reload</title>
+  </g>
+  <g class="iconic-reload-lg iconic-container iconic-lg" data-width="127" data-height="127" display="inline">
+    <path stroke="#000" stroke-width="8" d="M123.956 63.96c0 22.534-13.073 43.601-33.199 53.691-20.763 10.41-46.377 7.568-64.436-6.972-17.721-14.268-25.908-37.951-20.841-60.125 5.023-21.982 22.571-39.743 44.522-44.953 20.127-4.777 41.747 1.298 56.38 15.931"
+    class="iconic-reload-line iconic-property-stroke" fill="none" />
+    <path d="M121.64 36.429l-5.369-24.937c-.174-.81-.791-.992-1.376-.406l-19.879 19.879c-.586.586-.403 1.198.407 1.368l25.064 5.255c.811.17 1.327-.349 1.152-1.159z" class="iconic-reload-arrowhead iconic-property-fill" />
+  </g>
+  <g class="iconic-reload-md iconic-container iconic-md" data-width="31" data-height="31" display="none" transform="scale(4)">
+    <path stroke="#000" stroke-width="3" d="M30.497 15.987c0 5.327-3.018 10.331-7.726 12.824-4.772 2.526-10.729 2.14-15.136-.976-4.384-3.1-6.727-8.494-6.005-13.815.711-5.238 4.356-9.781 9.308-11.625 5.265-1.96 11.343-.63 15.313 3.34" class="iconic-reload-line iconic-property-stroke"
+    fill="none" />
+    <path d="M29.502 9.916l-6.01-.859c-.273-.039-.337-.229-.141-.424l5.293-5.293c.195-.195.385-.132.424.141l.859 6.01c.039.273-.151.463-.424.424z" class="iconic-reload-arrowhead iconic-property-fill" />
+  </g>
+  <g class="iconic-reload-sm iconic-container iconic-sm" data-width="15" data-height="15" display="none" transform="scale(8)">
+    <path stroke="#000" stroke-width="2" d="M14.99 8c0 3.223-2.293 6.108-5.438 6.825-3.272.746-6.705-1.009-8.012-4.1-1.268-2.997-.24-6.568 2.413-8.444 2.748-1.943 6.609-1.609 8.987.77" class="iconic-reload-line iconic-property-stroke" fill="none" />
+    <path class="iconic-reload-arrowhead iconic-property-fill" d="M15.99 0v6h-6z" />
+  </g>
+</svg>

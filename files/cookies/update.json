@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "cookies.js",
+  "repo": "franciscop/cookies.js",
+  "files": {
+    "include": ["cookies.js", "cookies.min.js"]
+  }
+}

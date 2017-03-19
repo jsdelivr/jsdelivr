@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "wsm",
+  "repo": "jefftham/wsm",
+  "files": {
+    "include": ["*.js"]
+  }
+}

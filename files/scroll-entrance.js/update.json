@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "scroll-entrance",
+  "repo": "andycaygill/scroll-entrance",
+  "files": {
+    "include": ["dist/*.js"]
+  }
+}
