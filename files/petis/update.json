@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "petis",
+	"repo": "dalikewara/petis",
+	"files": {
+		"include": ["petis.js", "petis.min.js"]
+	}
+}
