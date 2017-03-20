@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "faunadb",
+  "repo": "fauna/faunadb-js-release",
+  "files": {
+    "include": ["faunadb.js", "faunadb-min.js"]
+  }
+}
