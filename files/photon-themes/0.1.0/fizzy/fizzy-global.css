@@ -1,0 +1,458 @@
+:global(.psh) {
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+:global(.psh code::-moz-selection), :global(.psh samp::-moz-selection) {
+  background-color: #cfe9ff;
+}
+
+:global(.psh code::selection), :global(.psh samp::selection) {
+  background-color: #cfe9ff;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #999;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #fff;
+  text-align: right;
+  height: 18px;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #e6e6e6;
+  color: #5c5c5c;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #e6e6e6;
+  font-weight: 700;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #e6e6e6;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #5c5c5c;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #999;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #ccc;
+  font-size: 13px;
+  color: #5c5c5c;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #f1faf5;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #ecf9fc;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #f6f3fe;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #fef6f0;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #fdf1f3;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #fcf8f1;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #f1faf5;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #fdf1f3;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ccc;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #e9ad1a;
+}
+
+:global(.psh .comment) {
+  color: #adadad;
+  font-style: normal;
+}
+
+:global(.psh .entity) {
+  color: #2f6f9f;
+}
+
+:global(.psh .keyword) {
+  color: #699d36;
+}
+
+:global(.psh .storage.type) {
+  color: #699d36;
+}
+
+:global(.psh .constant) {
+  color: #f93232;
+}
+
+:global(.psh .constant.boolean), :global(.psh .constant.numeric) {
+  color: #2aa198;
+}
+
+:global(.psh .variable) {
+  color: #5fafef;
+}
+
+:global(.psh .brace), :global(.psh .delimiter) {
+  color: #000;
+}
+
+:global(.psh .delimiter.period) {
+  color: #699d36;
+}
+
+:global(.psh .invalid.deprecated) {
+  text-decoration: underline;
+  color: #f93232;
+}
+
+:global(.psh .invalid.illegal) {
+  color: #f93232;
+}
+
+:global(.psh .string) {
+  color: #e9ad1a;
+}
+
+:global(.psh .string .constant.character.escape) {
+  color: #f93232;
+}
+
+:global(.psh .string.regexp) {
+  color: #2aa198;
+}
+
+:global(.psh .string.regexp .source.ruby.embedded),
+:global(.psh .string.regexp .string.regexp.arbitrary-repitition) {
+  color: #f93232;
+}
+
+:global(.psh .css .entity) {
+  color: #5fafef;
+}
+
+:global(.psh .css .property-name) {
+  color: #f93232;
+}
+
+:global(.psh .css .variable) {
+  color: #699d36;
+}
+
+:global(.psh .css .constant), :global(.psh .css .unit) {
+  color: #6700b9;
+  background-color: rgba(118, 83, 119, .07);
+  border-radius: 3px;
+}
+
+:global(.psh .css .quoted) {
+  color: #e9ad1a;
+}
+
+:global(.psh .html .tag), :global(.psh .xml .tag) {
+  color: #5fafef;
+}
+
+:global(.psh .html .entity), :global(.psh .xml .entity) {
+  color: #2f6f9f;
+}
+
+:global(.psh .html .entity.name), :global(.psh .xml .entity.name) {
+  background-color: rgba(137, 198, 243, .1);
+  border-radius: 3px;
+}
+
+:global(.psh .html .comment), :global(.psh .xml .comment) {
+  color: #adadad;
+}
+
+:global(.psh .html .attribute-name), :global(.psh .xml .attribute-name) {
+  color: #5fafef;
+}
+
+:global(.psh .html .quoted), :global(.psh .xml .quoted) {
+  color: #f93232;
+}
+
+:global(.psh .html .quoted .punctuation), :global(.psh .xml .quoted .punctuation) {
+  color: #2f6f9f;
+}
+
+:global(.psh .html .js .quoted), :global(.psh .xml .js .quoted) {
+  color: #e9ad1a;
+}
+
+:global(.psh .gfm .link) {
+  color: #000;
+  font-weight: 700;
+}
+
+:global(.psh .gfm .link .entity) {
+  color: #e9ad1a;
+  font-weight: 400;
+}
+
+:global(.psh .gfm .link .link) {
+  color: #699d36;
+  font-weight: 400;
+}
+
+:global(.psh .gfm .heading) {
+  font-weight: 700;
+  color: #000;
+}
+
+:global(.psh .gfm .hr), :global(.psh .gfm .list) {
+  color: #f93232;
+}
+
+:global(.psh .gfm .quote) {
+  font-style: italic;
+  color: #2f6f9f;
+}
+
+:global(.psh .gfm .raw) {
+  color: #6700b9;
+}
+
+:global(.psh .gfm .raw .support) {
+  color: #f93232;
+  font-weight: 700;
+}
+
+:global(.psh .json .punctuation) {
+  color: #333;
+}
+
+:global(.psh .json .punctuation.separator) {
+  color: red;
+}
+
+:global(.psh .json .quoted) {
+  color: #2f6f9f;
+  background-color: rgba(137, 198, 243, .1);
+  border-radius: 3px;
+}
+
+:global(.psh .json .constant) {
+  color: #6700b9;
+  background-color: rgba(118, 83, 119, .07);
+  border-radius: 3px;
+}
+
+:global(.psh .yaml .entity.name) {
+  background-color: rgba(137, 198, 243, .1);
+}
+
+:global(.psh .yaml .string .punctuation) {
+  color: #777;
+}
+
+:global(.psh .ruby .entity.name) {
+  color: #6700b9;
+}
+
+:global(.psh .ruby .string) {
+  color: #f93232;
+}
+
+:global(.psh .erb .embedded.erb) {
+  color: #6700b9;
+  background-color: rgba(118, 83, 119, .07);
+  border-radius: 3px;
+}
+
+:global(.psh .erb .embedded.erb .variable) {
+  color: #47007f;
+}
+
+:global(.psh .erb .embedded.erb .punctuation) {
+  color: #6700b9;
+}

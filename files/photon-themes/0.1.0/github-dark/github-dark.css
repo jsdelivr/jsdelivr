@@ -1,0 +1,483 @@
+.psh {
+  margin: 0;
+  background-color: #20272b;
+  color: #ddd;
+}
+
+.psh pre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.psh code, .psh samp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+.psh code::-moz-selection, .psh samp::-moz-selection {
+  background-color: #832563;
+}
+
+.psh code::selection, .psh samp::selection {
+  background-color: #832563;
+}
+
+.psh .psh-line-numbers {
+  counter-reset: line;
+}
+
+.psh .psh-line-numbers .psh-line {
+  counter-increment: line;
+}
+
+.psh .psh-line-numbers .psh-line::before {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #7f8284;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before {
+  width: 2em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before {
+  width: 2.6em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before {
+  width: 3.2em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before {
+  width: 3.8em;
+}
+
+.psh .psh-label {
+  background-color: #20272b;
+  text-align: right;
+  height: 18px;
+}
+
+.psh .psh-label-value {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #363d40;
+  color: #afb1b3;
+}
+
+.psh .psh-caption {
+  padding: 12px;
+  background-color: #363d40;
+  font-weight: 700;
+  font-size: 14px;
+  color: #afb1b3;
+}
+
+.psh .psh-filename {
+  padding: 3px 12px;
+  background-color: #363d40;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #afb1b3;
+}
+
+.psh .psh-request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+.psh .psh-request .psh-request-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #7f8284;
+  font-size: 15px;
+  color: #fff;
+}
+
+.psh .psh-request .psh-request-method-get {
+  background-color: #42bd79;
+}
+
+.psh .psh-request .psh-request-method-post {
+  background-color: #00abd6;
+}
+
+.psh .psh-request .psh-request-method-put {
+  background-color: #845eed;
+}
+
+.psh .psh-request .psh-request-method-patch {
+  background-color: #f0813d;
+}
+
+.psh .psh-request .psh-request-method-delete {
+  background-color: #df435d;
+}
+
+.psh .psh-request .psh-request-resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #4f5558;
+  font-size: 13px;
+  color: #afb1b3;
+}
+
+.psh .psh-request .psh-request-method-get + .psh-request-resource {
+  background-color: #394445;
+}
+
+.psh .psh-request .psh-request-method-post + .psh-request-resource {
+  background-color: #364449;
+}
+
+.psh .psh-request .psh-request-method-put + .psh-request-resource {
+  background-color: #3c404a;
+}
+
+.psh .psh-request .psh-request-method-patch + .psh-request-resource {
+  background-color: #414242;
+}
+
+.psh .psh-request .psh-request-method-delete + .psh-request-resource {
+  background-color: #403f44;
+}
+
+.psh .psh-add, .psh .psh-highlight, .psh .psh-remove {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+.psh .psh-highlight {
+  border-left: 3px solid #dba643;
+  background-color: #404342;
+}
+
+.psh .psh-add {
+  border-left: 3px solid #42bd79;
+  background-color: #394445;
+}
+
+.psh .psh-remove {
+  border-left: 3px solid #df435d;
+  background-color: #403f44;
+}
+
+.psh .psh-invisibles-lf, .psh .psh-invisibles-space, .psh .psh-invisibles-tab {
+  position: relative;
+}
+
+.psh .psh-invisibles-lf::before, .psh .psh-invisibles-space::before, .psh .psh-invisibles-tab::before {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #4f5558;
+}
+
+.psh .psh-invisibles-tab::before {
+  content: "⇥";
+}
+
+.psh .psh-invisibles-space::before {
+  content: "·";
+}
+
+.psh .psh-invisibles-lf::before {
+  content: "↩";
+}
+
+.psh .psh-commands::before {
+  content: ">";
+  padding-right: .8em;
+  color: #3c66e2;
+}
+
+.psh .comment, .psh .punctuation.definition.comment, .psh .string.comment {
+  color: #969896;
+}
+
+.psh .constant, .psh .entity.name.constant, .psh .variable.language, .psh .variable.other.constant {
+  color: #0099cd;
+}
+
+.psh .entity, .psh .entity.name {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #9774cb;
+}
+
+.psh .variable.parameter.function {
+  color: #ddd;
+}
+
+.psh .entity.name.tag {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #7bcc72;
+}
+
+.psh .keyword {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #cc2372;
+}
+
+.psh .storage, .psh .storage.type {
+  color: #cc2372;
+}
+
+.psh .storage.modifier.import, .psh .storage.modifier.package, .psh .storage.type.java {
+  color: #ddd;
+}
+
+.psh .punctuation.definition.string, .psh .string, .psh .string .punctuation.section.embedded .source {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #3c66e2;
+}
+
+.psh .support {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #0099cd;
+}
+
+.psh .meta.property-name {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #0099cd;
+}
+
+.psh .variable {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #fb8764;
+}
+
+.psh .variable.other {
+  color: #ddd;
+}
+
+.psh .invalid.broken {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  color: #e63525;
+}
+
+.psh .invalid.deprecated {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  color: #e63525;
+}
+
+.psh .invalid.illegal {
+  font-style: italic;
+  text-decoration: underline;
+  color: #f8f8f8;
+  background-color: #e63525;
+}
+
+.psh .carriage-return {
+  font-style: italic;
+  text-decoration: underline;
+  color: #f8f8f8;
+  background-color: #e63525;
+  undefined: ^M;
+}
+
+.psh .invalid.unimplemented {
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  color: #e63525;
+}
+
+.psh .message.error {
+  color: #e63525;
+}
+
+.psh .string .source {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.psh .string .variable {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #0099cd;
+}
+
+.psh .source.regexp, .psh .string.regexp {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #3c66e2;
+}
+
+.psh .string.regexp.character-class, .psh .string.regexp .constant.character.escape, .psh .string.regexp .source.ruby.embedded, .psh .string.regexp .string.regexp.arbitrary-repitition {
+  color: #3c66e2;
+}
+
+.psh .string.regexp .constant.character.escape {
+  font-weight: 700;
+  color: #7bcc72;
+}
+
+.psh .support.constant {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #0099cd;
+}
+
+.psh .support.variable {
+  color: #0099cd;
+}
+
+.psh .meta.module-reference {
+  color: #0099cd;
+}
+
+.psh .markup.list {
+  color: #c26b2b;
+}
+
+.psh .markup.heading, .psh .markup.heading .entity.name {
+  font-weight: 700;
+  color: #264ec5;
+}
+
+.psh .markup.quote {
+  color: #00acac;
+}
+
+.psh .markup.italic {
+  font-style: italic;
+  color: #ddd;
+}
+
+.psh .markup.bold {
+  font-weight: 700;
+  color: #ddd;
+}
+
+.psh .markup.raw {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #0099cd;
+}
+
+.psh .markup.deleted, .psh .meta.diff.header.from-file, .psh .punctuation.definition.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.psh .markup.inserted, .psh .meta.diff.header.to-file, .psh .punctuation.definition.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.psh .markup.changed, .psh .punctuation.definition.changed {
+  background-color: #ffe3b4;
+  color: #ef9700;
+}
+
+.psh .markup.ignored, .psh .markup.untracked {
+  color: #d8d8d8;
+  background-color: gray;
+}
+
+.psh .meta.diff.range {
+  font-weight: 700;
+  color: #9774cb;
+}
+
+.psh .meta.diff.header {
+  color: #0099cd;
+}
+
+.psh .meta.separator {
+  font-weight: 700;
+  color: #264ec5;
+}
+
+.psh .meta.output {
+  color: #264ec5;
+}
+
+.psh .constant.other.reference.link, .psh .string.other.link {
+  color: #3c66e2;
+  text-decoration: underline;
+}
