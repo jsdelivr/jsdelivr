@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "Brass",
+	"repo": "jstnbr/brass",
+	"files": {
+		"include": ["brass.min.css"]
+	}
+}
