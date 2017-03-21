@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue-strap",
+  "repo": "https://github.com/yuche/vue-strap",
+  "files": {
+    "basePath": "dist/",
+    "include": ["vue-strap.js", "vue-strap.min.js"]
+  }
+}
