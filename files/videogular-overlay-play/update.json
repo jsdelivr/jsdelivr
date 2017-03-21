@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "videogular",
+  "repo": "videogular/bower-videogular-overlay-play",
+  "files": {
+    "include": ["vg-overlay-play.js", "vg-overlay-play.min.js"]
+  }
+}
