@@ -1,0 +1,7 @@
+{
+	"packageManager": "bower",
+	"name": "codemirror",
+	"repo": "codemirror/CodeMirror",
+	"files": {
+	}
+}
