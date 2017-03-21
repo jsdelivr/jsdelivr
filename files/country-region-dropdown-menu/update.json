@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "country-region-dropdown-menu",
+  "repo": "geodatasource/country-region-dropdown-menu",
+  "files": {
+    "include": ["geodatasource-cr.min.js"]
+  }
+}
