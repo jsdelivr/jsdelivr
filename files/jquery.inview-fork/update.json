@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "github",
+  "name": "protonet/jquery.inview",
+  "repo": "protonet/jquery.inview",
+  "files": {
+    "include": ["jquery.inview.min.js", "jquery.inview.js"]
+  }
+}
