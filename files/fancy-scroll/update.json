@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fancy-scroll",
+  "repo": "peachananr/fancy-scroll",
+  "files": {
+    "include": ["jquery.fancy-scroll.js", "jquery.fancy-scroll.min.js"]
+  }
+}
