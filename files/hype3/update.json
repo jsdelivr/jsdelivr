@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tumult.hype.3",
+  "repo": "wefuse/hype",
+  "files": {
+    "include": ["dist/*"]
+  }
+}
