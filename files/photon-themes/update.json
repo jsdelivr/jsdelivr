@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "photon-themes",
+  "repo": "photonsh/photon-themes",
+  "files": {
+    "include": [
+      "**/*"
+    ]
+  }
+}
