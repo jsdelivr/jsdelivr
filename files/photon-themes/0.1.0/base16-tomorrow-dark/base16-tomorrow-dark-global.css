@@ -1,0 +1,518 @@
+:global(.psh) {
+  margin: 0;
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+:global(.psh code::-moz-selection), :global(.psh samp::-moz-selection) {
+  background-color: #373b41;
+}
+
+:global(.psh code::selection), :global(.psh samp::selection) {
+  background-color: #373b41;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #717474;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #1d1f21;
+  text-align: right;
+  height: 18px;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #343537;
+  color: #aeaeaf;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #343537;
+  font-weight: 700;
+  font-size: 14px;
+  color: #aeaeaf;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #343537;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #aeaeaf;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #717474;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #47494a;
+  font-size: 13px;
+  color: #aeaeaf;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #363e3c;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #333d40;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #393941;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #3e3b3a;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #3d383b;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #3d3d3a;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #363e3c;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #3d383b;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #47494a;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #b5bd68;
+}
+
+:global(.psh .comment) {
+  color: #969896;
+}
+
+:global(.psh .comment .markup.link) {
+  color: #969896;
+}
+
+:global(.psh .entity.name.type) {
+  color: #f0c674;
+}
+
+:global(.psh .entity.other.inherited-class) {
+  color: #b5bd68;
+}
+
+:global(.psh .keyword) {
+  color: #b294bb;
+}
+
+:global(.psh .keyword.control) {
+  color: #b294bb;
+}
+
+:global(.psh .keyword.operator) {
+  color: #c5c8c6;
+}
+
+:global(.psh .keyword.other.special-method) {
+  color: #81a2be;
+}
+
+:global(.psh .keyword.other.unit) {
+  color: #de935f;
+}
+
+:global(.psh .storage) {
+  color: #b294bb;
+}
+
+:global(.psh .constant) {
+  color: #de935f;
+}
+
+:global(.psh .constant.character.escape) {
+  color: #8abeb7;
+}
+
+:global(.psh .constant.numeric) {
+  color: #de935f;
+}
+
+:global(.psh .constant.other.color) {
+  color: #8abeb7;
+}
+
+:global(.psh .constant.other.symbol) {
+  color: #b5bd68;
+}
+
+:global(.psh .variable) {
+  color: #c66;
+}
+
+:global(.psh .variable.interpolation) {
+  color: #a3685a;
+}
+
+:global(.psh .variable.parameter.function) {
+  color: #c5c8c6;
+}
+
+:global(.psh .invalid.illegal) {
+  background-color: #c66;
+  color: #1d1f21;
+}
+
+:global(.psh .string) {
+  color: #b5bd68;
+}
+
+:global(.psh .string.regexp) {
+  color: #8abeb7;
+}
+
+:global(.psh .string.regexp .source.ruby.embedded) {
+  color: #f0c674;
+}
+
+:global(.psh .string.other.link) {
+  color: #c66;
+}
+
+:global(.psh .punctuation.definition.array), :global(.psh .punctuation.definition.parameters) {
+  color: #c5c8c6;
+}
+
+:global(.psh .punctuation.definition.heading), :global(.psh .punctuation.definition.identity) {
+  color: #81a2be;
+}
+
+:global(.psh .punctuation.definition.bold) {
+  color: #f0c674;
+  font-weight: 700;
+}
+
+:global(.psh .punctuation.definition.italic) {
+  color: #b294bb;
+  font-style: italic;
+}
+
+:global(.psh .punctuation.section.embedded) {
+  color: #a3685a;
+}
+
+:global(.psh .punctuation.section.class), :global(.psh .punctuation.section.inner-class), :global(.psh .punctuation.section.method) {
+  color: #c5c8c6;
+}
+
+:global(.psh .support.class) {
+  color: #f0c674;
+}
+
+:global(.psh .support.function) {
+  color: #8abeb7;
+}
+
+:global(.psh .support.function.any-method) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.function) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.class), :global(.psh .entity.name.type.class) {
+  color: #f0c674;
+}
+
+:global(.psh .entity.name.section) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.tag) {
+  color: #c66;
+}
+
+:global(.psh .entity.other.attribute-name) {
+  color: #de935f;
+}
+
+:global(.psh .entity.other.attribute-name.id) {
+  color: #81a2be;
+}
+
+:global(.psh .meta.class) {
+  color: #f0c674;
+}
+
+:global(.psh .meta.class.body) {
+  color: #c5c8c6;
+}
+
+:global(.psh .meta.link) {
+  color: #de935f;
+}
+
+:global(.psh .meta.method), :global(.psh .meta.method-call) {
+  color: #c5c8c6;
+}
+
+:global(.psh .meta.require) {
+  color: #81a2be;
+}
+
+:global(.psh .meta.selector) {
+  color: #b294bb;
+}
+
+:global(.psh .meta.separator) {
+  background-color: #373b41;
+  color: #c5c8c6;
+}
+
+:global(.psh .meta.tag) {
+  color: #c5c8c6;
+}
+
+:global(.psh .none) {
+  color: #c5c8c6;
+}
+
+:global(.psh .markup.bold) {
+  color: #de935f;
+  font-weight: 700;
+}
+
+:global(.psh .markup.changed) {
+  color: #b294bb;
+}
+
+:global(.psh .markup.deleted) {
+  color: #c66;
+}
+
+:global(.psh .markup.italic) {
+  color: #b294bb;
+  font-style: italic;
+}
+
+:global(.psh .markup.heading) {
+  color: #c66;
+}
+
+:global(.psh .markup.heading .punctuation.definition.heading) {
+  color: #81a2be;
+}
+
+:global(.psh .markup.link) {
+  color: #81a2be;
+}
+
+:global(.psh .markup.inserted) {
+  color: #b5bd68;
+}
+
+:global(.psh .markup.quote) {
+  color: #de935f;
+}
+
+:global(.psh .markup.raw) {
+  color: #b5bd68;
+}
+
+:global(.psh .source.gfm .markup) {
+  -webkit-font-smoothing: auto;
+}
+
+:global(.psh .source.gfm .link .entity) {
+  color: #8abeb7;
+}
+
+:global(.psh .source.cs .keyword.operator) {
+  color: #b294bb;
+}
+
+:global(.psh .source.json .meta.structure.dictionary.json > .string.quoted.json) {
+  color: #c66;
+}
+
+:global(.psh .source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string) {
+  color: #c66;
+}
+
+:global(.psh .source.json .meta.structure.array.json > .value.json > .string.quoted.json),
+:global(.psh .source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation),
+:global(.psh .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json),
+:global(.psh .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation) {
+  color: #b5bd68;
+}
+
+:global(.psh .source.json .meta.structure.array.json > .constant.language.json),
+:global(.psh .source.json .meta.structure.dictionary.json > .constant.language.json) {
+  color: #8abeb7;
+}
