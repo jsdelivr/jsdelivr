@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "sinon",
+  "repo": "sinonjs/sinon",
+  "files": {
+    "basePath": "lib/",
+    "include": ["sinon.js"]
+  }
+}
