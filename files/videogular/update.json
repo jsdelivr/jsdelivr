@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "videogular",
+  "repo": "videogular/bower-videogular",
+  "files": {
+    "include": ["videogular.js", "videogular.min.js"]
+  }
+}
