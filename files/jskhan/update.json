@@ -3,9 +3,7 @@
   "name": "JSKhanFramework",
   "repo": "PaulaoDeveloper/JSKhanFramework",
   "files": {
-    "include": [
-      "scripts/app.js", 
-      "scripts/app.min.js"
-    ]
+    "basePath": "scripts/",
+    "include": ["app.js", "app.min.js"]
   }
 }
