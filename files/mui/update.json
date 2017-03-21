@@ -1,7 +1,6 @@
 {
-	"packageManager": "github",
-	"name": "mui",
-	"repo": "muicss/mui",
+	"packageManager": "npm",
+	"name": "muicss",
 	"files": {
 		"basePath": "dist/"
 	}
