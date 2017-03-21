@@ -1,0 +1,99 @@
+#quickousel * {
+ padding:0;
+}
+
+#quickousel ul {
+  margin:0;
+}
+
+#quickousel .arrow {
+  position: absolute;
+  cursor: pointer;
+  cursor: hand;
+  margin-bottom:-55px;
+  bottom:50%;
+  opacity: .7;
+  box-shadow: 0px 1px 10px rgba(59, 58, 58, 0.47);
+  width:50px;
+  height:63px;
+}
+
+#quickousel .arrow:hover {
+  opacity:.8;
+}
+
+#quickousel .arrow.left {
+  float: left;
+  left:-4px;
+  background-image: url('../img/arrow_left_t.png');
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#quickousel .arrow.right {
+  float : right;
+  right:-4px;
+  background-image: url('../img/arrow_right_t.png');
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#quickousel {
+  width: 100%;
+  height:100%;
+  position: relative;
+  overflow:hidden;
+  background-color:#000;
+  text-align:left;
+}
+
+#quickousel .carousel-buttons {
+  text-align:center;
+  position: absolute;
+  
+  z-index: 10;
+  width:100%;
+  bottom: .5em;
+}
+
+#quickousel .carousel-buttons .carousel-button {
+  padding: 0 1em 0 0;
+  font-size: 1em;
+  cursor: pointer;
+  cursor: hand;
+  color: rgba(217, 217, 217, .4);
+  margin:0 auto;
+}
+
+#quickousel .carousel-buttons .carousel-button * {
+  max-width:10%;
+  height:auto;
+}
+
+#quickousel .carousel-buttons .carousel-button:hover {
+  color: rgba(217, 217, 217, .9);
+}
+
+#quickousel .active-button {
+  color: rgba(217, 217, 217, .9)!important;
+}
+
+#quickousel ul.carousel, #quickousel ul.carousel li.item{
+  width: 100%;
+  height:100%;
+}
+
+#quickousel .active {
+  display: block!important;
+}
+
+#quickousel .carousel li.item {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  display: inline;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
