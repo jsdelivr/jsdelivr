@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "planck",
+  "repo": "shakiba/planck.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
