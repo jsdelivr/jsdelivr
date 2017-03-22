@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "JSKhanFramework",
+  "repo": "PaulaoDeveloper/JSKhanFramework",
+  "files": {
+    "basePath": "scripts/",
+    "include": ["app.js", "app.min.js"]
+  }
+}
