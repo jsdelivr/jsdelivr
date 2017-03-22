@@ -1,0 +1,1113 @@
+:global(.psh) {
+  background-color: #fdf6e3;
+  color: #657b83;
+}
+
+:global(.psh figure) {
+  margin: 0;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+:global(.psh code::-moz-selection), :global(.psh samp::-moz-selection) {
+  background-color: #eee8d5;
+}
+
+:global(.psh code::selection), :global(.psh samp::selection) {
+  background-color: #eee8d5;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #b1b9b3;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #fdf6e3;
+  text-align: right;
+  height: 18px;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #e4ddcc;
+  color: #5b5952;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #e4ddcc;
+  font-weight: 700;
+  font-size: 14px;
+  color: #5b5952;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #e4ddcc;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #5b5952;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #b1b9b3;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #d7d7cb;
+  font-size: 13px;
+  color: #5b5952;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #eff2dd;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #eaf1e4;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #f4ebe6;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #fceed9;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #fbe9db;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #fbf1d9;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #eff2dd;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #fbe9db;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #d7d7cb;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #2aa198;
+}
+
+:global(.psh .comment) {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+:global(.psh .comment .markup.link) {
+  color: #93a1a1;
+}
+
+:global(.psh .string) {
+  color: #2aa198;
+}
+
+:global(.psh .string.regexp) {
+  color: #dc322f;
+}
+
+:global(.psh .constant.numeric) {
+  color: #d33682;
+}
+
+:global(.psh .constant.language) {
+  color: #b58900;
+}
+
+:global(.psh .constant.character), :global(.psh .constant.other) {
+  color: #cb4b16;
+}
+
+:global(.psh .variable) {
+  color: #268bd2;
+}
+
+:global(.psh .keyword) {
+  color: #859900;
+}
+
+:global(.psh .storage) {
+  color: #859900;
+}
+
+:global(.psh .entity.name.class), :global(.psh .entity.name.function), :global(.psh .entity.name.type) {
+  color: #268bd2;
+}
+
+:global(.psh .entity.other.attribute-name) {
+  color: #657b83;
+}
+
+:global(.psh .support.function) {
+  color: #268bd2;
+}
+
+:global(.psh .support.function.builtin) {
+  color: #859900;
+}
+
+:global(.psh .support.class), :global(.psh .support.type) {
+  color: #859900;
+}
+
+:global(.psh .tag.entity.name) {
+  color: #268bd2;
+}
+
+:global(.psh .tag.punctuation.definition.begin), :global(.psh .tag.punctuation.definition.end), :global(.psh .tag.punctuation.definition.html) {
+  color: #93a1a1;
+}
+
+:global(.psh .invalid.deprecated) {
+  color: #b58900;
+  text-decoration: underline;
+}
+
+:global(.psh .invalid.illegal) {
+  color: #dc322f;
+  text-decoration: underline;
+}
+
+:global(.psh .none) {
+  color: #657b83;
+}
+
+:global(.psh .source.c .meta.preprocessor), :global(.psh .source.cpp .meta.preprocessor) {
+  color: #dc322f;
+}
+
+:global(.psh .source.c .keyword.control.directive), :global(.psh .source.cpp .keyword.control.directive) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.c .punctuation.string), :global(.psh .source.cpp .punctuation.string) {
+  color: #2aa198;
+}
+
+:global(.psh .source.c .constant), :global(.psh .source.cpp .constant) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.c .constant.language.c), :global(.psh .source.c .constant.numeric), :global(.psh .source.cpp .constant.language.c), :global(.psh .source.cpp .constant.numeric) {
+  color: #2aa198;
+}
+
+:global(.psh .source.c .storage), :global(.psh .source.cpp .storage) {
+  color: #b58900;
+}
+
+:global(.psh .source.c .entity), :global(.psh .source.cpp .entity) {
+  color: #657b83;
+}
+
+:global(.psh .source.c .entity.name.function.preprocessor),
+:global(.psh .source.cpp .entity.name.function.preprocessor) {
+  color: #dc322f;
+}
+
+:global(.psh .source.c .support.type), :global(.psh .source.cpp .support.type) {
+  color: #b58900;
+}
+
+:global(.psh .source.c .support.type.posix-reserved), :global(.psh .source.cpp .support.type.posix-reserved) {
+  color: #657b83;
+}
+
+:global(.psh .source.c .variable.other.dot-access), :global(.psh .source.cpp .variable.other.dot-access) {
+  color: #657b83;
+}
+
+:global(.psh .source.c .variable.parameter.preprocessor),
+:global(.psh .source.cpp .variable.parameter.preprocessor) {
+  color: #dc322f;
+}
+
+:global(.psh .source.coffee .support.class) {
+  color: #859900;
+}
+
+:global(.psh .source.coffee .entity.name.class), :global(.psh .source.coffee .entity.name.function), :global(.psh .source.coffee .variable) {
+  color: #268bd2;
+}
+
+:global(.psh .source.coffee .variable.parameter.function) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .variable.other.readwrite) {
+  color: #859900;
+}
+
+:global(.psh .source.coffee .storage.type.function) {
+  color: #859900;
+}
+
+:global(.psh .source.coffee .entity.name) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .meta.brace.round), :global(.psh .source.coffee .meta.brace.square) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .meta.delimiter) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .storage.type.class) {
+  color: #859900;
+}
+
+:global(.psh .source.coffee .punctuation.terminator) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .punctuation.section.embedded) {
+  color: #dc322f;
+}
+
+:global(.psh .source.coffee .embedded.source) {
+  color: #657b83;
+}
+
+:global(.psh .source.coffee .constant.numeric) {
+  color: #d33682;
+}
+
+:global(.psh .source.coffee .constant.language.boolean) {
+  color: #b58900;
+}
+
+:global(.psh .source.css .punctuation.separator), :global(.psh .source.css .punctuation.terminator) {
+  color: #657b83;
+}
+
+:global(.psh .source.css .punctuation.property-list.begin),
+:global(.psh .source.css .punctuation.property-list.end) {
+  color: #dc322f;
+}
+
+:global(.psh .source.css .punctuation.section.function) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .entity.name) {
+  color: #859900;
+}
+
+:global(.psh .source.css .attribute-name.class), :global(.psh .source.css .id) {
+  color: #268bd2;
+}
+
+:global(.psh .source.css .pseudo-class), :global(.psh .source.css .pseudo-element) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.css .property-value) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .constant.numeric) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .constant.numeric .unit) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .rgb-value) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .support.constant) {
+  color: #2aa198;
+}
+
+:global(.psh .source.css .support.constant.media) {
+  color: #dc322f;
+}
+
+:global(.psh .source.css .keyword.important) {
+  color: #dc322f;
+}
+
+:global(.psh .source.less .keyword.unit), :global(.psh .source.scss .keyword.unit) {
+  color: #2aa198;
+}
+
+:global(.psh .source.go .operator) {
+  color: #657b83;
+}
+
+:global(.psh .source.go .operator.assignment) {
+  color: #859900;
+}
+
+:global(.psh .source.java .keyword.operator) {
+  color: #859900;
+}
+
+:global(.psh .source.java .keyword.import) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.java .storage.modifier.import) {
+  color: #93a1a1;
+}
+
+:global(.psh .source.java .meta.class .storage.modifier) {
+  color: #b58900;
+}
+
+:global(.psh .source.java .meta.class .meta.class.identifier .entity.name.type.class) {
+  color: #268bd2;
+}
+
+:global(.psh .source.java .storage.type.primitive.array) {
+  color: #859900;
+}
+
+:global(.psh .source.java .constant.numeric) {
+  color: #d33682;
+}
+
+:global(.psh .source.java .constant.other) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.java .storage.type) {
+  color: #859900;
+}
+
+:global(.psh .source.java .meta.method-call) {
+  color: #dc322f;
+}
+
+:global(.psh .source.java .meta.method-call .meta.method) {
+  color: #6c71c4;
+}
+
+:global(.psh .source.java .meta.method-call .punctuation.definition.seperator.parameter) {
+  color: #859900;
+}
+
+:global(.psh .source.java .punctuation.definition.method-parameters) {
+  color: #586e75;
+}
+
+:global(.psh .source.js .constant) {
+  color: #859900;
+}
+
+:global(.psh .source.js .comma) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .support.class) {
+  color: #859900;
+}
+
+:global(.psh .source.js .entity.name.type) {
+  color: #b58900;
+}
+
+:global(.psh .source.js .entity.name) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .meta.brace) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .keyword) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .keyword.operator.new) {
+  color: #859900;
+}
+
+:global(.psh .source.js .keyword.control) {
+  color: #859900;
+}
+
+:global(.psh .source.js .keyword.control.regexp) {
+  color: #2aa198;
+}
+
+:global(.psh .source.js .variable) {
+  color: #268bd2;
+}
+
+:global(.psh .source.js .variable.parameter) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .regexp) {
+  color: #2aa198;
+}
+
+:global(.psh .source.js .support.function) {
+  color: #6c71c4;
+}
+
+:global(.psh .source.js .support.constant) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .constant.numeric) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .punctuation.terminator.statement) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .meta.delimiter.method.period) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .meta.brace.square) {
+  color: #268bd2;
+}
+
+:global(.psh .source.js .meta.brace.curly) {
+  color: #268bd2;
+}
+
+:global(.psh .source.js .string.quoted.template .embedded.source) {
+  color: #657b83;
+}
+
+:global(.psh .source.js .string.quoted.template .embedded.source > .embedded.punctuation) {
+  color: #dc322f;
+}
+
+:global(.psh .source.js.embedded .entity.name.tag) {
+  color: #268bd2;
+}
+
+:global(.psh .source.js.jsx .entity.name.tag) {
+  color: #268bd2;
+}
+
+:global(.psh .gfm .link .entity) {
+  color: #6c71c4;
+}
+
+:global(.psh .gfm .list.ordered) {
+  color: #859900;
+}
+
+:global(.psh .gfm .list.unordered) {
+  color: #b58900;
+}
+
+:global(.psh .gfm .raw) {
+  font-style: italic;
+}
+
+:global(.psh .gfm.support) {
+  color: #93a1a1;
+}
+
+:global(.psh .gfm.support.quote) {
+  color: #6c71c4;
+}
+
+:global(.psh .markup.bold) {
+  font-weight: 700;
+}
+
+:global(.psh .markup.italic) {
+  font-style: italic;
+}
+
+:global(.psh .markup.heading) {
+  color: #268bd2;
+}
+
+:global(.psh .markup.link) {
+  color: #2aa198;
+}
+
+:global(.psh .markup.deleted) {
+  color: #dc322f;
+}
+
+:global(.psh .markup.changed) {
+  color: #b58900;
+}
+
+:global(.psh .markup.inserted) {
+  color: #2aa198;
+}
+
+:global(.psh .source.php .storage.type.class) {
+  color: #b58900;
+}
+
+:global(.psh .source.php .storage.type.function) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.php .storage.modifier) {
+  color: #b58900;
+}
+
+:global(.psh .source.php .entity.name.type.class) {
+  color: #657b83;
+}
+
+:global(.psh .source.php .entity.name.function) {
+  color: #657b83;
+}
+
+:global(.psh .source.php .entity.other) {
+  color: #657b83;
+}
+
+:global(.psh .source.php .variable) {
+  color: #268bd2;
+}
+
+:global(.psh .source.php .punctuation.definition) {
+  color: #657b83;
+}
+
+:global(.psh .source.php .punctuation.definition.comment) {
+  color: #93a1a1;
+}
+
+:global(.psh .source.php .punctuation.definition.array) {
+  color: #dc322f;
+}
+
+:global(.psh .source.php .punctuation.definition.string) {
+  color: #657b83;
+}
+
+:global(.psh .source.php .punctuation.definition.variable) {
+  color: #859900;
+}
+
+:global(.psh .source.php .support.function.construct) {
+  color: #b58900;
+}
+
+:global(.psh .source.php .support.function.array) {
+  color: #859900;
+}
+
+:global(.psh .source.php .keyword.operator.class) {
+  color: #b58900;
+}
+
+:global(.psh .source.php .keyword.operator.assignment) {
+  color: #859900;
+}
+
+:global(.psh .source.php .keyword.other) {
+  color: #dc322f;
+}
+
+:global(.psh .source.python .entity) {
+  color: #657b83;
+}
+
+:global(.psh .source.python .entity.name) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .entity.other) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .function) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .function.magic) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .punctuation.string) {
+  color: #2aa198;
+}
+
+:global(.psh .source.python .keyword.operator) {
+  color: #657b83;
+}
+
+:global(.psh .source.python .keyword.operator.quantifier) {
+  color: #2aa198;
+}
+
+:global(.psh .source.python .keyword.operator.logical) {
+  color: #859900;
+}
+
+:global(.psh .source.python .keyword.control.import) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.python .keyword.other) {
+  color: #859900;
+}
+
+:global(.psh .source.python .constant.language) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .constant.character) {
+  color: #2aa198;
+}
+
+:global(.psh .source.python .constant.other) {
+  color: #dc322f;
+}
+
+:global(.psh .source.python .entity.name.type.class) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .variable) {
+  color: #657b83;
+}
+
+:global(.psh .source.python .support.function.builtin) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .support.type.exception.python) {
+  color: #b58900;
+}
+
+:global(.psh .source.python .support.type.python) {
+  color: #268bd2;
+}
+
+:global(.psh .source.python .storage.type.string) {
+  color: #2aa198;
+}
+
+:global(.psh .source.python .storage.type.class) {
+  color: #859900;
+}
+
+:global(.psh .source.python .storage.type.class.todo) {
+  color: #d33682;
+}
+
+:global(.psh .source.python .storage.type.function) {
+  color: #859900;
+}
+
+:global(.psh .source.python .punctuation.definition.parameters) {
+  color: #657b83;
+}
+
+:global(.psh .source.python .punctuation.section.function.begin) {
+  color: #657b83;
+}
+
+:global(.psh .source.python .punctuation.separator.parameters) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .meta.embedded .punctuation.section) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .punctuation.definition) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .punctuation.definition.string) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .punctuation.definition.comment) {
+  color: #93a1a1;
+}
+
+:global(.psh .source.ruby .entity.inherited-class) {
+  color: #b58900;
+}
+
+:global(.psh .source.ruby .variable.parameter) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .variable.constant) {
+  color: #b58900;
+}
+
+:global(.psh .source.ruby .constant.boolean) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .instance .punctuation.definition) {
+  color: #268bd2;
+}
+
+:global(.psh .source.ruby .class) {
+  color: #b58900;
+}
+
+:global(.psh .source.ruby .class.control) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .module) {
+  color: #b58900;
+}
+
+:global(.psh .source.ruby .require .keyword.other.special-method) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.ruby .keyword.other.special-method) {
+  color: #cb4b16;
+}
+
+:global(.psh .source.ruby .keyword.other) {
+  color: #859900;
+}
+
+:global(.psh .source.ruby .keyword.control) {
+  color: #859900;
+}
+
+:global(.psh .source.ruby .keyword.operator) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .special-method) {
+  color: #268bd2;
+}
+
+:global(.psh .source.ruby .symbol) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .symbol .punctuation.definition) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .hashkey) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .hashkey .punctuation.definition) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .string.regexp) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .todo) {
+  color: #d33682;
+}
+
+:global(.psh .source.ruby .variable.ruby.global) {
+  color: #268bd2;
+}
+
+:global(.psh .source.ruby .variable.ruby.global .punctuation) {
+  color: #268bd2;
+}
+
+:global(.psh .source.ruby .variable.block) {
+  color: #268bd2;
+}
+
+:global(.psh .source.ruby .variable.self) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .punctuation.separator) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .numeric) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .punctuation.section.regexp) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .string.interpolated) {
+  color: #2aa198;
+}
+
+:global(.psh .source.ruby .string.interpolated .embedded.line.ruby .punctuation .source.ruby) {
+  color: #dc322f;
+}
+
+:global(.psh .source.ruby .string.interpolated .embedded.line.ruby .source.ruby) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .string.interpolated .embedded.line.ruby .source.ruby .punctuation.array),
+:global(.psh .source.ruby .string.interpolated .embedded.line.ruby .source.ruby .punctuation.function) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .support.function) {
+  color: #657b83;
+}
+
+:global(.psh .source.ruby .support.function.kernel) {
+  color: #859900;
+}
+
+:global(.psh .source.scala .variable) {
+  color: #586e75;
+}
+
+:global(.psh .source.scala .declaration) {
+  color: #586e75;
+  font-weight: 700;
+}
+
+:global(.psh .source.scala .comparison) {
+  color: #586e75;
+}
+
+:global(.psh .source.scala .class), :global(.psh .source.scala .type) {
+  color: #b58900;
+}
+
+:global(.psh .source.scala .val) {
+  font-weight: 400;
+}
+
+:global(.psh .source.scala .variable) {
+  font-weight: 700;
+}
+
+:global(.psh .source.scala .variable.parameter) {
+  color: #6c71c4;
+  font-weight: 400;
+}
+
+:global(.psh .source.scala .control.flow) {
+  color: #586e75;
+  font-weight: 700;
+}
+
+:global(.psh .source.scala .constant.language) {
+  color: #586e75;
+  font-weight: 700;
+}
+
+:global(.psh .source.scala .function.declaration) {
+  color: #6c71c4;
+}
+
+:global(.psh .source.scala .modifier.other) {
+  font-weight: 700;
+}
+
+:global(.psh .source.scala .package) {
+  color: #586e75;
+}
+
+:global(.psh .source.scala .variable.import) {
+  font-weight: 400;
+}
+
+:global(.psh .source.scala .type .bounds), :global(.psh .source.scala .type .class) {
+  color: #6c71c4;
+}
+
+:global(.psh .source.scala .documentation :not(.embedded).link.entity) {
+  color: #268bd2;
+  text-decoration: underline;
+}
+
+:global(.psh .source.scala .documentation :not(.embedded) .class),
+:global(.psh .source.scala .documentation :not(.embedded) .parameter) {
+  color: #586e75;
+}
+
+:global(.psh .source.scala .documentation :not(.embedded) .description) {
+  color: #93a1a1;
+}
+
+:global(.psh .source.scala .embedded) {
+  color: #374549;
+  font-style: italic;
+}
+
+:global(.psh .source.scala .embedded .delimiters), :global(.psh .source.scala .embedded .margin) {
+  font-style: normal;
+}
