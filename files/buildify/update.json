@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "buildify",
-  "repo": "DevIT-team/buildify",
+  "repo": "yan-korobko/buildify",
   "files": {
     "include": ["buildify.js", "buildify.css"]
   }
