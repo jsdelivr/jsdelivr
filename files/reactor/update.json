@@ -1,7 +1,7 @@
 {
 	"packageManager": "github",
 	"name": "Reactor",
-	"repo": "Sinova/Reactor",
+	"repo": "ShimShamSam/Reactor",
 	"files": {
 		"basePath": "lib/",
 		"include": [

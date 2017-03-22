@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "astro-wp",
+  "repo": "getastro/Astro",
+  "files": {
+    "basePath": "dist/",
+    "include": ["astro-api.min.js", "astro-support-views.min.js"]
+  }
+}

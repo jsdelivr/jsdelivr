@@ -1,8 +1,8 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "qtip2",
-  "repo": "qtip2/bower",
+  "repo": "qtip2/qtip2",
   "files": {
-    "include": ["*.js", "*.css", "*.map", "./basic/**/*"]
+    "basePath": "dist"
   }
 }

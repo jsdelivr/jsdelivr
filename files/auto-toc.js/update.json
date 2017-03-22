@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "github",
+  "name": "auto-toc.js",
+  "repo": "timaschew/auto-toc.js",
+  "files": {
+    "include": ["index.js", "dist.js"]
+  }
+}

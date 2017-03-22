@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-vimeo",
+  "repo": "JohnnyTheTank/apiNG-plugin-vimeo",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

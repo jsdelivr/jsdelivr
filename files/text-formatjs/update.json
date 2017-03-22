@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "text-formatjs",
+  "repo": "yannickebongue/text-formatjs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

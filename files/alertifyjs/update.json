@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "alertifyjs",
+  "repo": "mohammadyounes/alertifyjs",
+  "files": {
+    "basePath": "build/",
+    "include": ["*.min.js","./css/**/*.min.css"]
+  }
+}

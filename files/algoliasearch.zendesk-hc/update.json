@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "algoliasearch.zendesk-hc",
+  "files": {
+    "basePath": "dist/"
+  }
+}

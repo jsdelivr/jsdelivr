@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "jquery-ui-pinpad",
+  "repo": "yannickebongue/jquery-ui-pinpad",
+  "files": {
+    "basePath": "dist/"
+  }
+}

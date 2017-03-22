@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.validator",
+  "repo": "vuejs/vue-validator",
+  "files": {
+	"basePath" : "dist/",
+    "include": ["vue-validator.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "element-ui",
+  "repo": "ElemeFE/element",
+  "files": {
+    "basePath": "lib",
+    "include": ["index.js", "theme-default/index.css"]
+  }
+}

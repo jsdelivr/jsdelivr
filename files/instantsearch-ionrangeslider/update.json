@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "instantsearch-ion.rangeSlider",
+  "repo": "instantsearch/instantsearch-ion.rangeSlider",
+  "files": {
+    "basePath": "dist/"
+  }
+}

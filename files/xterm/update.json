@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "xterm",
+  "files": {
+    "basePath": "dist/"
+  }
+}

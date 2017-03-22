@@ -1,0 +1,7 @@
+{
+  "packageManager": "npm",
+  "name": "blast-text",
+  "files": {
+    "include": ["jquery.blast.min.js"]
+  }
+}

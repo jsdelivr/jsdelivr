@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "js-joda",
+  "repo": "js-joda/js-joda",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "*.map"]
+  }
+}

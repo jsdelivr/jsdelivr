@@ -1,0 +1,10 @@
+/*
+ *  jquery-easy-loading - v1.2
+ *  Easily add and manipulate loading states of any element on the page
+ *  http://github.com/CarlosBonetti/jquery-loading
+ *
+ *  Made by Carlos Bonetti <carlosb_bc@hotmail.com>
+ *  Under MIT License
+ */
+
+.loading-overlay{display:table;opacity:.7}.loading-overlay-content{text-transform:uppercase;letter-spacing:.4em;font-size:1.15em;font-weight:700;text-align:center;display:table-cell;vertical-align:middle}.loading-overlay.loading-theme-light{background-color:#fff;color:#000}.loading-overlay.loading-theme-dark{background-color:#000;color:#fff}

@@ -1,0 +1,10 @@
+{
+    "packageManager": "github",
+    "name": "backbone.babysitter",
+    "repo": "marionettejs/backbone.babysitter",
+    "files": {
+        "basePath": "lib/",
+        "include": ["*"],
+        "exclude": ["backbone.babysitter.js"]
+    }
+}

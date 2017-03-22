@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "jquery-block_ellipsis",
+  "repo": "algolia/jquery-block_ellipsis",
+  "files": {
+    "basePath": "dist/"
+  }
+}

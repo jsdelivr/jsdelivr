@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "afterglow",
+  "repo": "moay/afterglow",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

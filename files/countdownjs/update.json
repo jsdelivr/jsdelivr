@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "countdownjs",
+  "repo": "mckamey/countdownjs",
+  "files": {
+    "include": ["countdown.min.js", "countdown.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "foundation-sites",
+  "repo": "zurb/foundation-sites",
+  "files": {
+    "include": ["dist/foundation.min.css","dist/foundation.min.js", "./js/*.js"]
+  }
+}

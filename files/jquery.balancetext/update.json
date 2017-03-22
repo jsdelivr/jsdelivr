@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.balancetext.js",
+  "repo": "adobe-webplatform/balance-text",
+  "files": {
+    "include": ["jquery.balancetext.js", "jquery.balancetext.min.js"]
+  }
+}

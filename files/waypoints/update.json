@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "waypoints",
+  "repo": "imakewebthings/waypoints",
+  "files": {
+    "basePath": "lib",
+    "include": ["*.min.*", "*.map", "./shortcuts/*.min.*"]
+  }
+}

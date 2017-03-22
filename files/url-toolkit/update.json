@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "url-toolkit",
+  "repo": "tjenkinson/url-toolkit",
+  "files": {
+    "include": ["src/url-toolkit.js"]
+  }
+}

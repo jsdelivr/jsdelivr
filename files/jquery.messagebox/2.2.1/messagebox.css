@@ -1,0 +1,135 @@
+/***********************************************************************************************************************
+MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.confirm() and window.prompt() functions
+    Author          : Gaspare Sganga
+    Version         : 2.2.1
+    License         : MIT
+    Documentation   : http://gasparesganga.com/labs/jquery-message-box/
+***********************************************************************************************************************/
+/*
+    You can customize your MessageBox style directly in this file 
+    or override some classes/styles using an external CSS file loaded after this.
+*/
+
+/* Overlay */
+.messagebox_overlay {
+    background-color    : rgba(255,255,255,0.6);
+}
+    .messagebox_overlay *:focus {
+        outline : 0;
+    }
+
+/* MessageBox */
+.messagebox {
+    font-family         : verdana, arial, helvetica, sans-serif;
+    font-size           : 10pt;
+    font-style          : normal;
+    font-weight         : normal;
+    text-align          : left;
+    color               : #303030;
+    background-color    : #fcfcfc;
+    border              : 1px solid #c8c8c8;
+    box-shadow          : 0px 2px 4px #a0a0a0;
+    max-height          : 90%;  /* This value is useful only when "top" option is set to "auto" */
+    max-width           : 90%;
+    min-width           : 300px;
+}
+
+/* Content */
+.messagebox_content {
+    padding         : 20px;
+    padding-bottom  : 0;    /* In order to preserve "padding-bottom" when the content is taller than the MessageBox and thus scrolled on the Y-axis, use the following :after pseudo-class "height" value instead of "padding-bottom" here! */
+}
+    .messagebox_content:after {
+        content : "";
+        display : block;
+        flex    : 0 0 auto;
+        height  : 20px;     /* Use this value as if it was #messagebox_content's "padding-bottom" to preserve it when the content overflows Y-axis and the scrollbar is shown */
+    }
+ 
+/* Label for Input */
+.messagebox_content_label {
+    display     : block;
+    width       : 100%;
+    margin      : auto;
+    margin-top  : 10px;
+    font-style  : italic;
+}
+
+/* Input (it applies to selects too) */
+.messagebox_content_input {
+    display         : block;
+    width           : 100%;
+    margin          : auto;
+    margin-top      : 10px;
+    padding         : 3px;
+    color           : #303030;
+    border          : 1px solid #909090;
+    font-family     : inherit;
+    font-size       : inherit;
+    font-style      : normal;
+    font-weight     : inherit;
+    text-align      : left;
+}
+    .messagebox_content_input:hover {
+        border-color    : #707070;
+    }
+    .messagebox_content_input:focus {
+        border-color    : #707070;
+        box-shadow      : inset 0px 0px 3px #ffd540;
+    }
+    
+    /* Input style when placed inside a label */
+    .messagebox_content_label .messagebox_content_input {
+        margin-top  : 4px;
+    }
+    
+    /* Select's "fake placeholder" */
+    .messagebox_content_input_selectplaceholder {
+        color   : #909090;
+    }
+    
+/* Error */
+.messagebox_content_error {
+    background-color    : #fad0d5;
+    color               : #a02020;
+    margin-top          : 15px;
+    margin-bottom       : -10px;
+    padding             : 4px 6px;
+    border-radius       : 2px;
+}
+
+/* Buttons */
+.messagebox_buttons {
+    background-color    : #f5f5f5;
+    border-top          : 1px solid #c8c8c8;
+    padding             : 10px 20px 0px 20px;
+    text-align          : center;
+}
+    .messagebox_buttons button {
+        font-family         : inherit;
+        font-size           : inherit;
+        font-weight         : bold;
+        text-align          : center;
+        min-width           : 75px;
+        margin              : 0px 4px 10px 4px;
+        padding             : 5px 10px;
+        cursor              : pointer;
+        color               : #404040;
+        background-color    : #e9e9e9;
+        background-image    : linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 51%, rgba(255,255,255,0.0) 100%);
+        border              : 1px solid #c0c0c0;
+        border-radius       : 2px;
+    }
+        .messagebox_buttons button:hover {
+            color               : #202020;
+            background-color    : #f0f0f0;
+        }
+        .messagebox_buttons button:active {
+            background-color    : #e6e6e6;
+            border              : 1px solid #a0a0a0;
+            box-shadow          : inset 0px 0px 6px #d0d0d0;
+        }
+        .messagebox_buttons button::-moz-focus-inner {
+            padding             : 0;
+            border              : 0;
+        }

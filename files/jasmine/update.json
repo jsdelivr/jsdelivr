@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jasmine",
+  "repo": "jasmine/jasmine",
+  "files": {
+    "basePath": "lib/jasmine-core",
+    "include": ["boot.js", "jasmine.js", "jasmine-html.js", "jasmine.css"]
+  }
+}

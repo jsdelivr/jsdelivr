@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "phoneformat.js",
+  "repo": "albeebe/phoneformat.js",
+  "files": {
+    "basePath": "dist",
+    "include": ["*.min.*"]
+  }
+}

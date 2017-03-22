@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vuefire",
+  "repo": "vuejs/vuefire",
+  "files": {
+    "basePath": "dist/",
+    "include": ["vuefire.js", "vuefire.min.js"]
+  }
+}

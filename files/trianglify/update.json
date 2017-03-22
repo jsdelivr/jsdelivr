@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "trianglify",
+  "repo": "qrohlf/trianglify",
+  "files": {
+    "include": ["dist/trianglify.min.js"]
+  }
+}

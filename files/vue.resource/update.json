@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.resource",
+  "repo": "pagekit/vue-resource",
+  "files": {
+	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

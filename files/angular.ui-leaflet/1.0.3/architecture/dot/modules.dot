@@ -1,0 +1,14 @@
+digraph dependencies {
+  node[shape="ellipse",style="filled",colorscheme=paired12]
+
+  
+    "ui-leaflet"[label="ui-leaflet", color=1]
+  
+
+  node[shape="ellipse",style="filled",color=2]
+  
+    
+      "nemLogging" -> "ui-leaflet"
+    
+  
+}

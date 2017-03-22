@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.terminal",
+  "repo": "jcubic/jquery.terminal",
+  "files": {
+    "include": ["js/jquery.terminal.js", "js/jquery.terminal.min.js", "css/jquery.terminal.css", "css/jquery.terminal.min.css"]
+  }
+}

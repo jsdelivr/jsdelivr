@@ -1,0 +1,103 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.options.builders"[label="uiGmapgoogle-maps.directives.api.options.builders", color=1]
+
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmapCommonOptionsBuilder"[label="uiGmapCommonOptionsBuilder", color=5]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapCommonOptionsBuilder"
+    
+
+    
+      "uiGmapPolylineOptionsBuilder"[label="uiGmapPolylineOptionsBuilder", color=6]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapPolylineOptionsBuilder"
+    
+      "uiGmapShapeOptionsBuilder"[label="uiGmapShapeOptionsBuilder", color=6]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapShapeOptionsBuilder"
+    
+      "uiGmapPolygonOptionsBuilder"[label="uiGmapPolygonOptionsBuilder", color=6]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapPolygonOptionsBuilder"
+    
+      "uiGmapRectangleOptionsBuilder"[label="uiGmapRectangleOptionsBuilder", color=6]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapRectangleOptionsBuilder"
+    
+      "uiGmapCircleOptionsBuilder"[label="uiGmapCircleOptionsBuilder", color=6]
+      "uiGmapgoogle-maps.directives.api.options.builders" -> "uiGmapCircleOptionsBuilder"
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+      
+        "uiGmapBaseObject"[label="uiGmapBaseObject"]
+        "uiGmapBaseObject" -> "uiGmapCommonOptionsBuilder"
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapCommonOptionsBuilder"
+      
+        "uiGmapModelKey"[label="uiGmapModelKey"]
+        "uiGmapModelKey" -> "uiGmapCommonOptionsBuilder"
+      
+    
+
+    
+      
+        "uiGmapCommonOptionsBuilder"[label="uiGmapCommonOptionsBuilder"]
+        "uiGmapCommonOptionsBuilder" -> "uiGmapPolylineOptionsBuilder"
+      
+    
+      
+        "uiGmapCommonOptionsBuilder"[label="uiGmapCommonOptionsBuilder"]
+        "uiGmapCommonOptionsBuilder" -> "uiGmapShapeOptionsBuilder"
+      
+    
+      
+        "uiGmapShapeOptionsBuilder"[label="uiGmapShapeOptionsBuilder"]
+        "uiGmapShapeOptionsBuilder" -> "uiGmapPolygonOptionsBuilder"
+      
+    
+      
+        "uiGmapShapeOptionsBuilder"[label="uiGmapShapeOptionsBuilder"]
+        "uiGmapShapeOptionsBuilder" -> "uiGmapRectangleOptionsBuilder"
+      
+    
+      
+        "uiGmapShapeOptionsBuilder"[label="uiGmapShapeOptionsBuilder"]
+        "uiGmapShapeOptionsBuilder" -> "uiGmapCircleOptionsBuilder"
+      
+    
+
+    
+
+
+}

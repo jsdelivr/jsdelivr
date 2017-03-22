@@ -1,0 +1,12 @@
+{
+    "packageManager": "npm",
+    "name": "emujs",
+    "repo": "zudd/emujs",
+    "files": {
+        "include": [
+            "dist/emu.js",
+            "dist/emu.css",
+            "dist/emu.css.map"
+        ]
+    }
+}

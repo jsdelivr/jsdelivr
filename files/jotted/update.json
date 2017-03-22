@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "jotted",
+  "repo": "ghinda/jotted",
+  "files": {
+    "include": [
+      "jotted.min.css",
+      "jotted.min.js"
+    ]
+  }
+}

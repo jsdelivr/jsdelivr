@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'cyber-font';
+    src: url('eot/cyber-font.eot');
+    src: url('eot/cyber-font.eot?#iefix') format('embedded-opentype'),
+         url('woff2/cyber-font.woff2') format('woff2'),
+         url('woff/cyber-font.woff') format('woff'),
+         url('ttf/cyber-font.ttf') format('truetype'),
+         url('svg/cyber-font.svg#cyber-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cyber-font';
+    src: url('eot/cyber-font-bold.eot');
+    src: url('eot/cyber-font-bold.eot?#iefix') format('embedded-opentype'),
+         url('woff2/cyber-font-bold.woff2') format('woff2'),
+         url('woff/cyber-font-bold.woff') format('woff'),
+         url('ttf/cyber-font-bold.ttf') format('truetype'),
+         url('svg/cyber-font-bold.svg#cyber-font') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}

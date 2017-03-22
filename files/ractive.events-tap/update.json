@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "ractive-events-tap",
-  "repo": "ractivejs/ractive-events-tap",
-  "files": {
-    "include": ["ractive-events-tap.min.js"]
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mousewheel",
+  "repo": "jquery/jquery-mousewheel",
+  "files": {
+    "include": ["jquery.mousewheel.js", "jquery.mousewheel.min.js"]
+  }
+}

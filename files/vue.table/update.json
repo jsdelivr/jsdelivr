@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.table",
+  "repo": "ratiw/vue-table",
+  "files": {
+	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

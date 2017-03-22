@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "jquery.photoswipe",
+  "files": {
+    "basePath": "dist/min/",
+    "include": ["jquery.photoswipe.js"]
+  }
+}

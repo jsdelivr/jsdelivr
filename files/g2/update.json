@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "g2",
+  "repo": "goessner/g2",
+  "files": {
+    "include": ["g2.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "fs-traversal",
+  "repo": "genealogysystems/fs-traversal",
+  "files": {
+    "include": ["fs-traversal.min.js"]
+  }
+}

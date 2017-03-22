@@ -1,8 +1,10 @@
 {
-  "packageManager": "npm",
+  "packageManager": "github",
   "name": "react",
-  "repo": "facebook/react",
+  "repo": "reactjs/react-bower",
   "files": {
-    "basePath": "dist/"
+    "include": [
+      "*.js"
+    ]
   }
 }

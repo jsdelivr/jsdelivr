@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "jQuery-QueryBuilder",
+  "repo": "mistic100/jQuery-QueryBuilder",
+  "files": {
+    "basePath": "dist/",
+    "include": ["./js/*.min.*", "./css/*.min.*", "./i18n/*"]
+  }
+}

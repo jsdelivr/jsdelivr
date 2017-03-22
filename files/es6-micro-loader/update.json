@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "es6-micro-loader",
+  "repo": "caridy/es6-micro-loader",
+  "files": {
+    "basePath": "dist/",
+    "include": ["system-polyfill.min.js"]
+  }
+}

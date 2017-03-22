@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.drawsvg",
+  "repo": "lcdsantos/jquery-drawsvg",
+  "files": {
+    "include": ["public/jquery.drawsvg.min.js"]
+  }
+}

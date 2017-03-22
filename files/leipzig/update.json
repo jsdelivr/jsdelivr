@@ -1,0 +1,10 @@
+
+{
+  "packageManager": "github",
+  "name": "leipzig",
+  "repo": "bdchauvette/leipzig.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["leipzig.min.js", "leipzig.min.css"]
+  }
+}

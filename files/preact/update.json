@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "preact",
+  "repo": "developit/preact",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["preact.d.ts", "preact.js.flow"]
+  }
+}

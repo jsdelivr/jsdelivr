@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "deltadb",
+  "repo": "delta-db/deltadb",
+  "files": {
+    "basePath": "dist/",
+    "include": ["deltadb.js", "deltadb.min.js"]
+  }
+}

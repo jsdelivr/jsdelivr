@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bigscreen",
+  "repo": "bdougherty/BigScreen",
+  "files": {
+    "include": ["bigscreen.min.js", "bigscreen.min.js.map"]
+  }
+}

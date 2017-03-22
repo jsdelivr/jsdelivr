@@ -6,11 +6,13 @@
     "basePath": "/",
     "include": [
       "./css/*",
-      "./js/jquery.jqgrid.min.js",
-      "./js/jquery.jqgrid.min.map",
-      "./js/jquery.jqgrid.src.js",
-      "./js/i18n/*.js",
-      "./js/i18n/*.map",
+      "./js/*",
+      "./js/i18n/*",
+      "./js/i18n/min/*",
+      "./js/min/*",
+      "./ts/*.d.ts",
+      "./plugins/css/*",
+      "./plugins/min/*",
       "./plugins/*"
     ]
   }

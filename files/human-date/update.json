@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "human-date",
+  "repo": "montanaflynn/human-date",
+  "files": {
+    "basePath": "/",
+    "include": ["humandate.min.js", "humandate.js"]
+  }
+}

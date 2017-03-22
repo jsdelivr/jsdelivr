@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "cheval",
+  "repo": "ryanpcmcquen/cheval",
+  "files": {
+    "include": [
+      "cheval.js",
+      "cheval.min.js"
+    ]
+  }
+}

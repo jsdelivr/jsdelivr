@@ -1,0 +1,29 @@
+/* Light */
+@font-face {
+  font-family: 'KoreaUniv';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivL.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivL.woff') format('woff');
+  font-stretch: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'KoreaUniv';
+  font-style: normal;
+  font-weight: 500;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivM.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivM.woff') format('woff');
+  font-stretch: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'KoreaUniv';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivB.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/orgs/univs/Korea/KoreaUnivB.woff') format('woff');
+  font-stretch: normal;
+}

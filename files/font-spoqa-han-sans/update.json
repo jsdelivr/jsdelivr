@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "font-SpoqaHanSans",
+  "repo": "spoqa/spoqa-han-sans",
+  "files": {
+    "include": ["Subset/**/*", "css/**/*"],
+	"exclude": ["Subset/**/glyphs.txt", "Subset/**/LICENSE_OFL.txt"]
+  }
+}

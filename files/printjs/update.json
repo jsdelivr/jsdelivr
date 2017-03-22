@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Print.js",
+  "repo": "crabbly/Print.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["print.min.js", "print.min.css"]
+  }
+}

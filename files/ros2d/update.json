@@ -1,0 +1,10 @@
+{
+    "packageManager": "github",
+    "name": "ros2d",
+    "repo": "RobotWebTools/ros2djs",
+    "files": {
+        "basePath": "build/",
+        "include": ["**/*"],
+        "exclude": ["ros2d.js"]
+    }
+}

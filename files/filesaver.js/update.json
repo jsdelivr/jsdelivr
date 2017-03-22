@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "filesaver.js",
+  "repo": "eligrey/FileSaver.js",
+  "files": {
+    "include": ["FileSaver.js", "FileSaver.min.js"]
+  }
+}

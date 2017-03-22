@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.mockjax",
+  "repo": "jakerella/jquery-mockjax",
+  "files": {
+		"basePath": "dist/",
+		"include": ["*.min.*"]
+  }
+}

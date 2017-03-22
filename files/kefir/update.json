@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "kefir",
+  "repo": "rpominov/kefir",
+  "files": {
+    "include": ["dist/kefir.js", "dist/kefir.min.js"]
+  }
+}

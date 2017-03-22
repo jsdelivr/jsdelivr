@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "imagesloaded",
+  "repo": "desandro/imagesloaded",
+  "files": {
+    "include": ["imagesloaded.js", "imagesloaded.min.js", "imagesloaded.pkgd.js", "imagesloaded.pkgd.min.js"]
+  }
+}

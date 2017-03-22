@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "welderjs",
+  "repo": "YarmoM/welderjs",
+  "files": {
+    "include": ["welder.js", "welder.min.js"]
+  }
+}

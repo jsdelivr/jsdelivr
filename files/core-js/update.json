@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "core-js",
+  "repo": "zloirock/core-js",
+  "files": {
+    "basePath": "/client"
+  }
+}

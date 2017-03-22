@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-footballdata",
+  "repo": "JohnnyTheTank/apiNG-plugin-footballdata",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

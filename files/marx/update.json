@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "marx",
+  "repo": "mblode/marx",
+  "files": {
+    "basePath": "css/",
+    "include": ["marx.min.css", "marx.min.css.map"]
+  }
+}

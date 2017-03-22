@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "faker.js",
+  "repo": "Marak/faker.js",
+  "files": {
+	"basePath": "build/build/",
+	"include": ["*.min.*"]
+  }
+}

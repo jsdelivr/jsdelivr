@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "snap.svg",
+	"repo": "adobe-webplatform/Snap.svg",
+	"files": {
+		"basePath": "dist/"
+	}
+}

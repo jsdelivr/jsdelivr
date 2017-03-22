@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "epub.js",
+  "repo": "futurepress/epub.js",
+  "files": {
+    "include": ["build/epub.min.js", "build/hooks.min.js", "build/reader.min.js"]
+  }
+}

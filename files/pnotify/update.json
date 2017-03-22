@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "pnotify",
+  "repo": "sciactive/pnotify",
+  "files": {
+	"basePath": "dist/"
+  }
+}

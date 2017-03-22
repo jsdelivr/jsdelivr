@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "simplemde-markdown-editor",
+  "repo": "NextStepWebs/simplemde-markdown-editor",
+  "files": {
+    "basePath": "dist",
+    "include": ["simplemde.min.js", "simplemde.min.css"]
+  }
+}

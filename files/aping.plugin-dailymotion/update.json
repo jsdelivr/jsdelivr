@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "apiNG-plugin-dailymotion",
+  "repo": "JohnnyTheTank/apiNG-plugin-dailymotion",
+  "files": {
+    "include": ["dist/*"]
+  }
+}

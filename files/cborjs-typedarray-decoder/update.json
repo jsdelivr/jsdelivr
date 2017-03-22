@@ -1,0 +1,10 @@
+{
+  "packageManager": "npm",
+  "name": "cborjs-typedarray-decoder",
+  "repo": "Reading-eScience-Centre/cborjs-typedarray-decoder",
+  "files": {
+    "include": ["cborjs-typedarray-decoder.min.js", 
+                "cborjs-typedarray-decoder.src.js", 
+                "cborjs-typedarray-decoder.min.js.map"]
+  }
+}

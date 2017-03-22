@@ -1,0 +1,6 @@
+.richarea .richarea-app .richarea-editor .modal.layout-settings .image-editor .cropit-preview:hover {
+  cursor: move; }
+
+.richarea .richarea-app .richarea-editor .modal.layout-settings .image-editor img {
+  max-width: initial; }
+

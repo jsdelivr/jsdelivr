@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "epoch",
+  "repo": "epochjs/epoch",
+  "files": {
+	"include": ["dist/css/epoch.min.css", "dist/js/epoch.min.js"]
+  }
+}

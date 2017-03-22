@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "defunctr",
+  "repo": "cinecove/defunctr",
+  "files": {
+    "include": [
+      "dist/defunctr.js",
+      "dist/defunctr.min.js",
+      "dist/defunctr.map"
+    ]
+  }
+}

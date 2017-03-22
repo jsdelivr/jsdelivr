@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vuex",
+  "repo": "vuejs/vuex",
+  "files": {
+    "basePath": "dist",
+    "include": ["vuex.js", "vuex.min.js"]
+  }
+}

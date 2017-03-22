@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ng-textarea-enter",
+  "repo": "ArunMichaelDsouza/ng-textarea-enter",
+  "files": {
+    "include": ["build/ng-textarea-enter.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "redux-logger",
+  "repo": "fcomb/redux-logger",
+  "files": {
+    "basePath": "dist/"
+  }
+}

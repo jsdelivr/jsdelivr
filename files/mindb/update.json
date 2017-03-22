@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "mindb",
+  "repo": "iwillwen/mindb",
+  "files": {
+    "basePath": "dist/",
+    "include": ["min.js", "min.js.map", "min.debug.js", "min.debug.js.map"]
+  }
+}

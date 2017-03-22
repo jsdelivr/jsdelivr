@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "prettyPhoto",
+  "repo": "scaron/prettyphoto",
+  "files": {
+    "include": [
+      "./js/jquery.prettyPhoto.js",
+      "./css/prettyPhoto.css",
+      "./images/**/*"
+    ]
+  }
+}

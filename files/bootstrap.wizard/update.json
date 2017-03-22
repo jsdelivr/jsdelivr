@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.wizard",
+  "repo": "VinceG/twitter-bootstrap-wizard",
+  "files": {
+    "include": ["jquery.bootstrap.wizard.min.js"]
+  }
+}

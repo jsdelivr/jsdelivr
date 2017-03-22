@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "aws-sdk",
+  "repo": "aws/aws-sdk-js",
+  "files": {
+    "include": ["dist/aws-sdk.js", "dist/aws-sdk.min.js"]
+  }
+}

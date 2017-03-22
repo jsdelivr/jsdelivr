@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clappr-comment-plugin",
+  "repo": "metrakit/clappr-comment-plugin",
+  "files": {
+    "basePath": "dist/",
+    "include": ["comments.min.js"]
+  }
+}

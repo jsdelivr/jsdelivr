@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "jRumble",
+  "repo": "jackrugile/jrumble",
+  "files": {
+    "basePath": "/",
+    "include": [
+      "jquery.jrumble.min.js",
+      "jquery.jrumble.js"
+    ]
+  }
+}

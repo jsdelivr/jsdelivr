@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "countupjs",
+  "repo": "inorganik/countUp.js",
+  "files": {
+    "include": ["dist/countUp.min.js"]
+  }
+}

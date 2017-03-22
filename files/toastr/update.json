@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "toastr",
+  "repo": "CodeSeven/toastr",
+  "files": {
+    "include": ["build/*"]
+  }
+}
