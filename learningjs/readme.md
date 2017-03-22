@@ -1,0 +1,1 @@
+learningjs is a library of definitions, examples, and snippets to aid in learning JavaScript
