@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "gyronorm.js",
+  "repo": "https://github.com/dorukeker/gyronorm.js",
+  "files": {
+    "include": ["gyronorm.complete.js", "gyronorm.complete.min.js", "gyronorm.js","gyronorm.min.js"]
+  }
+}
