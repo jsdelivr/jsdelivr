@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "twemoji",
+  "repo": "twitter/twemoji",
+  "files": {
+    "include": ["2/twemoji.min.js"]
+  }
+}
