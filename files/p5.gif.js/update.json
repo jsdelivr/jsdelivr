@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "p5.gif.js",
+  "repo": "antiboredom/p5.gif.js",
+  "files": {
+    "basePath": "/",
+    "include": ["p5.gif.js", "p5.gif.min.js"]
+  }
+}
