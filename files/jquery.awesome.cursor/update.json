@@ -1,6 +1,6 @@
 {
   "packageManager": "github",
-  "name": "jwarby",
+  "name": "jQuery Awesome Cursor",
   "repo": "jwarby/jquery-awesome-cursor",
   "files": {
     "basePath": "dist/"
