@@ -2,7 +2,7 @@
   "packageManager": "npm",
   "name": "fetch-inject",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
     "include": ["fetch-inject.min.js", "fetch-inject.umd.min.js"]
   }
 }
