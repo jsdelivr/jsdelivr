@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "mediaelement-plugins",
-  "repo": "johndyer/mediaelement-plugins",
+  "repo": "mediaelement/mediaelement-plugins",
   "files": {
     "basePath": "dist"
   }
