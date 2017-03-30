@@ -3,6 +3,6 @@
   "name": "discord-widget",
   "repo": "restingcoder/discord-widget",
   "files": {
-    "include": ["discord.min.js", "dark.min.css", "light.min.js", "none.min.js"]
+    "include": ["discord-widget.min.js", "dark.min.css", "light.min.js", "none.min.js"]
   }
 }
