@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "seto",
+  "repo": "sashiba042/seto",
+  "files": {
+    "include": ["setofont.woff", "setofont.ttf", "setofont-ex.ttf"]
+  }
+}

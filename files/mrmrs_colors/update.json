@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mrmrs_colors",
+  "repo": "mrmrs/colors",
+  "files": {
+    "include": ["css/colors.min.css", "css/colors.css"]
+  }
+}

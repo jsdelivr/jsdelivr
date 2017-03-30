@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "windowevents",
+  "repo": "pdroll/windowevents",
+  "files": {
+    "include": ["windowevents.min.js"]
+  }
+}

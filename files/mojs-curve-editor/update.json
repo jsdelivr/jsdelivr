@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mojs-curve-editor",
+  "repo": "legomushroom/mojs-curve-editor",
+  "files": {
+    "include": ["app/build/mojs-curve-editor.js", "app/build/mojs-curve-editor.min.js"]
+  }
+}

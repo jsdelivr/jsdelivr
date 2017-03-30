@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "stats.js",
+  "repo": "mrdoob/stats.js",
+  "files": {
+    "basePath": "build/",
+    "include": ["stats.min.js", "../src/Stats.js"]
+  }
+}

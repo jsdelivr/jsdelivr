@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "search-client",
+  "repo": "intellisearch/search-client",
+  "files": {
+    "basePath": "dist/",
+    "include": ["SearchClient.bundle.min.js"]
+  }
+}

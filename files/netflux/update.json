@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "netflux",
+  "repo": "coast-team/netflux",
+  "files": {
+    "include": ["dist/netflux.es2015.umd.js"]
+  }
+}

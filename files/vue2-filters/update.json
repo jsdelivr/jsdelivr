@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "vue2-filters",
+	"repo": "freearhey/vue2-filters",
+	"files": {
+		"basePath": "dist/",
+		"include": ["vue2-filters.js", "vue2-filters.min.js"]
+	}
+}

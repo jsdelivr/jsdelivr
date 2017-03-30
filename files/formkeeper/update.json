@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "FormKeeper",
+  "repo": "EdGraVill/FormKeeper",
+  "files": {
+    "include": ["FormKeeper.js", "FormKeeper.min.js", "Lite/FormKeeperLite.js", "Lite/FormKeeperLite.min.js", "Attributable/FormKeeperAttributable.js", "Attributable/FormKeeperAttributable.min.js"]
+  }
+}

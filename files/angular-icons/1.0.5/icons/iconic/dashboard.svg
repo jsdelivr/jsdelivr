@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-dashboard" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Dashboard</title>
+  </g>
+  <defs>
+    <clipPath id="iconic-size-lg-dashboard-clip-0">
+      <path d="M0 0v122h128v-122h-128zm73.9 73.9c-2.644 2.644-6.16 4.1-9.9 4.1s-7.255-1.456-9.899-4.101c-4.01-4.01-25.253-37.144-29.471-43.746-1.011-1.582-.785-3.655.542-4.982.772-.772 1.796-1.172 2.83-1.172.743 0 1.49.206 2.152.629 6.601 4.218 39.736 25.461 43.746 29.471 2.645 2.644 4.101 6.16 4.101 9.9s-1.456 7.255-4.1 9.9z"
+      />
+    </clipPath>
+    <clipPath id="iconic-size-md-dashboard-clip-0">
+      <path d="M0 0v30h32v-30h-32zm19.626 19.626c-.885.885-2.061 1.372-3.313 1.372-1.251 0-2.428-.487-3.313-1.372-1.091-1.091-5.745-8.451-7.696-11.565-.495-.79-.378-1.818.281-2.477.386-.386.898-.585 1.414-.585.366 0 .735.101 1.063.306 3.126 1.963 10.51 6.642 11.563 7.695 1.796 1.796 1.796 4.83 0 6.625z"
+      />
+    </clipPath>
+    <clipPath id="iconic-size-sm-dashboard-clip-0">
+      <path d="M0 0v15h16v-15h-16zm9.313 9.313c-.442.442-1.031.686-1.656.686s-1.657-.999-1.657-.999l-2-1s-1.018-4.396-.706-4.708c.192-.192.448-.292.707-.292.161 0 4 1 4 1l1 2s1.211 2.415.313 3.313z" />
+    </clipPath>
+  </defs>
+  <g class="iconic-dashboard-lg iconic-container iconic-lg" data-width="128" data-height="122" display="inline" transform="translate(0 3)">
+    <path stroke="#000" stroke-width="8" d="M90 118.001c2.562-1.244 5.204-2.666 7.547-4.248 3.192-2.156 6.165-4.612 8.88-7.327 2.715-2.715 5.17-5.688 7.327-8.88 2.156-3.192 4.014-6.603 5.532-10.192s2.697-7.357 3.496-11.263 1.219-7.95 1.219-12.092-.42-8.186-1.219-12.092-1.978-7.673-3.496-11.263c-1.518-3.589-3.376-7-5.532-10.192s-4.612-6.165-7.327-8.88c-2.715-2.715-5.688-5.17-8.88-7.327-3.192-2.156-6.603-4.014-10.192-5.532s-7.357-2.697-11.263-3.496-7.95-1.219-12.092-1.219-8.186.42-12.092 1.219-7.673 1.978-11.263 3.496c-3.589 1.518-7 3.376-10.192 5.532s-6.165 4.612-8.88 7.327-5.17 5.688-7.327 8.88-4.014 6.603-5.532 10.192c-1.518 3.589-2.697 7.357-3.496 11.263s-1.219 7.95-1.219 12.092.42 8.186 1.219 12.092 1.978 7.673 3.496 11.263 3.376 7 5.532 10.192 4.612 6.165 7.327 8.88c2.715 2.715 5.688 5.17 8.88 7.327 2.397 1.619 4.918 2.982 7.544 4.247l52.002.001z"
+    class="iconic-dashboard-body iconic-property-stroke" fill="none" />
+    <path clip-path="url(#iconic-size-lg-dashboard-clip-0)" stroke="#000" stroke-width="4" stroke-linecap="round" d="M32.887 94.779c-3.981-3.981-7.203-8.722-9.43-13.986-2.227-5.264-3.458-11.052-3.458-17.127s1.231-11.863 3.458-17.127 5.448-10.005 9.43-13.986c3.981-3.981 8.722-7.203 13.986-9.43s11.052-3.458 17.127-3.458 11.863 1.231 17.127 3.458c5.264 2.227 10.005 5.448 13.986 9.43 3.981 3.981 7.203 8.722 9.43 13.986 2.226 5.264 3.458 11.052 3.458 17.127s-1.231 11.863-3.458 17.127c-2.227 5.264-5.448 10.005-9.43 13.986"
+    class="iconic-dashboard-values iconic-property-accent iconic-property-stroke" fill="none" />
+    <path d="M71.071 56.929c-3.905-3.905-43.071-28.929-43.071-28.929s25.024 39.166 28.929 43.071c3.905 3.905 10.237 3.905 14.142 0 3.905-3.905 3.905-10.237 0-14.142zm-7.071 9.071c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z" class="iconic-dashboard-needle iconic-property-fill"
+    />
+  </g>
+  <g class="iconic-dashboard-md iconic-container iconic-md" data-width="32" data-height="30" display="none" transform="scale(4) translate(0 1)">
+    <path stroke="#000" stroke-width="3" d="M9.001 28.5c-4.472-2.448-7.501-7.03-7.501-12.5 0-8.008 6.492-14.5 14.5-14.5s14.5 6.492 14.5 14.5c0 5.469-3.028 10.052-7.499 12.5h-14z" class="iconic-dashboard-body iconic-property-stroke" fill="none" />
+    <path d="M14.415 18.212c1.048 1.048 2.748 1.048 3.797 0s1.007-2.79 0-3.797c-1.007-1.007-11.212-7.415-11.212-7.415s6.367 10.164 7.415 11.212z" class="iconic-dashboard-needle iconic-property-fill" />
+    <path clip-path="url(#iconic-size-md-dashboard-clip-0)" stroke="#000" stroke-linecap="round" d="M9.283 22.718c-1.719-1.719-2.783-4.094-2.783-6.718s1.063-4.998 2.783-6.718 4.094-2.782 6.717-2.782 4.998 1.063 6.718 2.783 2.782 4.094 2.782 6.717-1.063 4.998-2.783 6.718"
+    class="iconic-dashboard-values iconic-property-accent iconic-property-stroke" fill="none" />
+  </g>
+  <g class="iconic-dashboard-sm iconic-container iconic-sm" data-width="16" data-height="15" display="none" transform="scale(8)">
+    <path stroke="#000" stroke-width="2" d="M4.5 14c-2.081-1.213-3.5-3.418-3.5-6 0-3.866 3.134-7 7-7s7 3.134 7 7c0 2.59-1.407 4.79-3.498 6h-7.002z" class="iconic-dashboard-body iconic-property-stroke" fill="none" />
+    <path d="M6.708 8.606c.524.524 1.374.524 1.899 0s.503-1.395 0-1.899c-.503-.503-4.606-2.708-4.606-2.708s2.183 4.082 2.708 4.606z" class="iconic-dashboard-needle iconic-property-fill" />
+    <path clip-path="url(#iconic-size-sm-dashboard-clip-0)" stroke="#000" stroke-linecap="round" d="M5.525 10.475c-.633-.633-1.025-1.508-1.025-2.475s.392-1.841 1.025-2.475 1.508-1.025 2.475-1.025 1.841.392 2.475 1.025 1.025 1.508 1.025 2.475-.392 1.841-1.025 2.475"
+    class="iconic-dashboard-values iconic-property-accent iconic-property-stroke" fill="none" />
+  </g>
+</svg>

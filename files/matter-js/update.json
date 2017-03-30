@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "matter-js",
+  "repo": "liabru/matter-js",
+  "files": {
+    "basePath": "build/",
+    "include": ["matter.js", "matter.min.js"]
+  }
+}

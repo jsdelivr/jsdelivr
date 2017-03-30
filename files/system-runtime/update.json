@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "system-runtime",
+  "repo": "design-first/system-runtime",
+  "files": {
+    "basePath": "dist/",
+    "include": ["system-runtime.min.js","system-runtime.js"]
+  }
+}

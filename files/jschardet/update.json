@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jschardet",
+  "repo": "aadsm/jschardet",
+  "files": {
+    "include": ["dist/jschardet.js", "dist/jschardet.min.js"]
+  }
+}

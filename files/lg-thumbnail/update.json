@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-thumbnail",
+  "repo": "sachinchoolur/lg-thumbnail",
+  "files": {
+    "basePath": "dist/"
+  }
+}

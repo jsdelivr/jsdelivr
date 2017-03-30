@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "gss4tilda",
+  "repo": "Petrovich-Z/gss4tilda",
+  "files": {
+    "basePath": "src/js",
+    "include": ["gss4tilda.min.js"]
+  }
+}

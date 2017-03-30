@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "whs",
+  "repo": "WhitestormJS/whitestorm.js",
+  "files": {
+    "include": ["./build/whitestorm.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "vee-validate",
+  "repo": "logaretm/vee-validate",
+  "files": {
+    "basePath": "dist/",
+    "include": ["vee-validate.js", "vee-validate.min.js"]
+  }
+}

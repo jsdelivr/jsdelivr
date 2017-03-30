@@ -8,7 +8,11 @@
       "./css/*",
       "./js/*",
       "./js/i18n/*",
+      "./js/i18n/min/*",
       "./js/min/*",
+      "./ts/*.d.ts",
+      "./plugins/css/*",
+      "./plugins/min/*",
       "./plugins/*"
     ]
   }

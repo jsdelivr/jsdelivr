@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "npm",
+  "name": "mobius1-selectr",
+  "files": {
+    "basePath": "dist/",
+    "include": ["selectr.min.js", "selectr.min.css"]
+  }
+}

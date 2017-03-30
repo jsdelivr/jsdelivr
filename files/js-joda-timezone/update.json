@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "js-joda-timezone",
+  "repo": "js-joda/js-joda-timezone",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "*.map"]
+  }
+}

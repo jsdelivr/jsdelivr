@@ -1,9 +1,11 @@
 {
-  "packageManager": "npm",
+  "packageManager": "github",
   "name": "p5",
   "repo": "processing/p5.js",
   "files": {
-    "basePath": "lib/",
-    "include": ["p5.min.js", "./addons/**/*"]
+    "basePath": "releases/download/**/",
+    "include": ["p5.js", "p5.min.js",
+                "p5.dom.js", "p5.dom.min.js",
+                "p5.sound.js", "p5.sound.min.js"]
   }
 }

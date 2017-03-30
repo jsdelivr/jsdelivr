@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "leaflet.esri.clustered-feature-layer",
-  "repo": "esri/esri-leaflet-clustered-feature-layer",
-  "files": {
-    "basePath": "dist/",
-    "exclude": ["README.md"]
-  }
-}

@@ -1,0 +1,75 @@
+{
+    "lang": "gl", 
+    "date": {
+        "month_abbr": [
+            "Xan.", 
+            "Feb.", 
+            "Mar.", 
+            "Abr.", 
+            "Mai.", 
+            "Xuñ.", 
+            "Xul.", 
+            "Ago.", 
+            "Set.", 
+            "Out.", 
+            "Nov.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Dom.", 
+            "Lun.", 
+            "Mar.", 
+            "Mér.", 
+            "Xov.", 
+            "Ven.", 
+            "Sáb."
+        ], 
+        "day": [
+            "Domingo", 
+            "Luns", 
+            "Martes", 
+            "Mércores", 
+            "Xoves", 
+            "Venres", 
+            "Sábado"
+        ], 
+        "month": [
+            "Xaneiro", 
+            "Febreiro", 
+            "Marzo", 
+            "Abril", 
+            "Maio", 
+            "Xuño", 
+            "Xullo", 
+            "Agosto", 
+            "Setembro", 
+            "Outubro", 
+            "Novembro", 
+            "Decembro"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "gl"
+    }, 
+    "messages": {
+        "loading": "cargando", 
+        "contract_timeline": "Acurtar a cronoloxía", 
+        "return_to_title": "Volver ao título", 
+        "wikipedia": "Dende Wikipedia, a enciclopedia libre", 
+        "loading_content": "cargando", 
+        "expand_timeline": "Alongar a cronoloxía", 
+        "loading_timeline": "Cronoloxía esta cargando"
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'um' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}

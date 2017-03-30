@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "move.js",
+  "repo": "visionmedia/move.js",
+  "files": {
+    "include": [
+      "move.js", "move.min.js"
+    ]
+  }
+}

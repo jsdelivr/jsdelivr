@@ -1,0 +1,35 @@
+pocketmine.button {
+  background-color: lightblue; 
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+pocketmine.button.not-rounded {
+  border-radius: 0px;
+}
+
+pocketmine.button.color.gray {
+  background-color: gray;
+  color: white;
+}
+
+pocketmine.button.color.green {
+  background-color: green;
+}
+
+pocketmine.button.color.blue {
+  background-color: blue;
+}
+
+pocketmine.button.color.yellow {
+  background-color: yellow;
+}
+
+pocketmine.button.color.orange {
+  background-color: orange;
+}

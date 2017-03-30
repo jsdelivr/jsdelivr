@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "britecharts",
+  "repo": "eventbrite/britecharts",
+  "files": {
+    "basePath": "dist/",
+    "include": ["css/britecharts.min.css", "bundled/britecharts.min.js"]
+  }
+}

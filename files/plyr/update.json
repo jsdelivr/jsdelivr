@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "plyr",
+  "repo": "selz/plyr",
+  "files": {
+    "include": ["plyr.js", "plyr.css", "plyr.svg"]
+  }
+}

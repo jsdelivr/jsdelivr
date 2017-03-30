@@ -1,0 +1,8 @@
+/**
+ * Interactive Map Overview for OpenLayers 3
+ * https://github.com/jonataswalker/ol3-interactive-overview
+ * Version: v0.1.0
+ * Built: 2016-09-12T13:25:51-03:00
+ */
+
+.ol-itv-overview-container{position:absolute;top:.5em;right:.5em;box-sizing:border-box}.ol-itv-overview-container *,.ol-itv-overview-container ::after,.ol-itv-overview-container ::before{box-sizing:inherit}.ol-itv-overview-container:not(.ol-itv-overview-collapsed){border:1px solid #333;background:rgba(255,255,255,.8)}.ol-itv-overview-container button{position:relative;right:0;top:0}.ol-itv-overview-container button.ol-itv-overview-transitionend{position:absolute;right:2px;top:2px}.ol-itv-overview-container.ol-itv-overview-collapsed .ol-itv-overview-map{width:0;height:0;border:0}.ol-itv-overview-container .ol-itv-overview-map{width:300px;height:150px;overflow:hidden;-webkit-transition:width .2s,height .2s;transition:width .2s,height .2s}.ol-itv-overview-container .ol-overlay-container{-webkit-transition-property:top,left;transition-property:top,left;-webkit-transition-duration:150ms;transition-duration:150ms;-webkit-transition-timing-function:linear;transition-timing-function:linear}.ol-itv-overview-overlay{width:50px;height:50px;border:1px solid red}

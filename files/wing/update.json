@@ -1,6 +1,6 @@
 {
-	"packageManager": "github",
-	"name": "wing",
+	"packageManager": "npm",
+	"name": "wingcss",
 	"repo": "KingPixil/wing",
 	"files": {
 		"basePath": "dist/",

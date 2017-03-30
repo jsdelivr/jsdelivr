@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "jquery-resizable-columns",
+  "repo": "dobtco/jquery-resizable-columns",
+  "files": {
+    "basePath": "dist/"
+  }
+}
