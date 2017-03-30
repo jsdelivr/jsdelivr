@@ -3,6 +3,6 @@
   "name": "keyrune",
   "repo": "andrewgioia/Keyrune",
   "files": {
-    "include": ["css/keyrune.css", "css/keyrune.min.css", "fonts/keyrune.eot", "fonts/keyrune.svg", "fonts/keyrune.ttf", "fonts/keyrune.woff", "fonts/keyrune.woff2"]
+    "include": ["./css/keyrune.css", "./css/keyrune.min.css", "./fonts/keyrune.eot", "./fonts/keyrune.svg", "./fonts/keyrune.ttf", "./fonts/keyrune.woff", "./fonts/keyrune.woff2"]
   }
 }
