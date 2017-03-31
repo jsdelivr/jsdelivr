@@ -5,7 +5,7 @@
   "files": {
     "basePath": "/dist/",
     "include": [
-      "ArieleScheduleUrlgen-min.js"
+      "bundle.js"
     ]
   }
 }
