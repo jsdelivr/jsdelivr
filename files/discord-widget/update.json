@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "discord-widget",
+  "repo": "restingcoder/discord-widget",
+  "files": {
+    "include": ["discord-widget.min.js", "dark.min.css", "light.min.js", "none.min.js"]
+  }
+}
