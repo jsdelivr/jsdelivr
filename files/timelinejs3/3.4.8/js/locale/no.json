@@ -1,0 +1,76 @@
+{
+    "lang": "no", 
+    "date": {
+        "month_abbr": [
+            "Jan.", 
+            "Feb.", 
+            "Mars", 
+            "Apr.", 
+            "Mai", 
+            "Juni", 
+            "Juli", 
+            "Aug.", 
+            "Sep.", 
+            "Okt.", 
+            "Nov.", 
+            "Des."
+        ], 
+        "day_abbr": [
+            "Søn.", 
+            "Man.", 
+            "Tir.", 
+            "Ons.", 
+            "Tor.", 
+            "Fre.", 
+            "Lør."
+        ], 
+        "day": [
+            "Søndag", 
+            "Mandag", 
+            "Tirsdag", 
+            "Onsdag", 
+            "Torsdag", 
+            "Fredag", 
+            "Lørdag"
+        ], 
+        "month": [
+            "Januar", 
+            "Februar", 
+            "Mars", 
+            "April", 
+            "Mai", 
+            "Juni", 
+            "Juli", 
+            "August", 
+            "September", 
+            "Oktober", 
+            "November", 
+            "Desember"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "no"
+    }, 
+    "messages": {
+        "loading": "Laster", 
+        "contract_timeline": "Krymp tidslinje", 
+        "return_to_title": "Tilbake til tittel", 
+        "wikipedia": "Fra Wikipedia, den frie encyklopedi", 
+        "loading_content": "Laster innhold", 
+        "expand_timeline": "Utvid tidslinje", 
+        "loading_timeline": "Laster tidslinje... ",
+        "swipe_to_navigate": "Sveip for å navigere<br><span class='tl-button'>OK</span>"
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d. mmm',' yyyy 'kl.' HH:MM", 
+        "full_short": "d. mmm", 
+        "full": "d. mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d. mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d. mmm',' yyyy'</small>'"
+    }
+}
