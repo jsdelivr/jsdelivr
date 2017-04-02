@@ -3,6 +3,6 @@
   "name": "smc-webfonts",
   "repo": "kollavarsham/smc-webfonts",
   "files": {
-    "include": ["webfonts.min.css", "fonts/**/*"]
+    "include": ["smc-webfonts.css", "smc-webfonts.min.css", "fonts/**/*"]
   }
 }
