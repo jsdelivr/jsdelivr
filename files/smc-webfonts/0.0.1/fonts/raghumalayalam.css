@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'RaghuMalayalam';
+	src: url('RaghuMalayalam/RaghuMalayalamSans-Regular.eot');
+	src: url('RaghuMalayalam/RaghuMalayalamSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('RaghuMalayalam/RaghuMalayalamSans-Regular.woff2') format('woff2'),
+		url('RaghuMalayalam/RaghuMalayalamSans-Regular.woff') format('woff'),
+		url('RaghuMalayalam/RaghuMalayalamSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Dyuthi';
+	src: url('Dyuthi/Dyuthi.eot');
+	src: url('Dyuthi/Dyuthi.eot?#iefix') format('embedded-opentype'),
+		url('Dyuthi/Dyuthi.woff2') format('woff2'),
+		url('Dyuthi/Dyuthi.woff') format('woff'),
+		url('Dyuthi/Dyuthi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
