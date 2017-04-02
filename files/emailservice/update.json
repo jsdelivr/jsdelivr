@@ -3,7 +3,7 @@
   "name": "emailservice",
   "repo": "mboosh/emailservice",
   "files": {
-    "basePath": "webapp",
+    "basePath": "src/main/webapp",
     "include": ["*.js", "*.css"]
   }
 }
