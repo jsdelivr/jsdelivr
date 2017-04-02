@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "smc-webfonts",
+  "repo": "kollavarsham/smc-webfonts",
+  "files": {
+    "include": ["webfonts.min.css", "fonts/**/*"]
+  }
+}
