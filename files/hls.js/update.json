@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "hls.js",
-  "repo": "dailymotion/hls.js",
+  "repo": "video-dev/hls.js",
   "files": {
     "basePath": "dist/"
   }
