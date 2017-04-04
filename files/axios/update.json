@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "axios",
+  "repo": "mzabriskie/axios",
+  "files": {
+    "basePath": "dist/"
+  }
+}
