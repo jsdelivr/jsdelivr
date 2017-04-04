@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "@hola.org%2fdashjs",
+  "repo": "hola/dash.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}
