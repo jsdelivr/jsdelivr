@@ -3,6 +3,7 @@
     "name": "jaxon-js",
     "repo": "jaxon-php/jaxon-js",
     "files": {
+        "basePath": "src/",
         "include": [
             "jaxon.core.min.js",
             "jaxon.debug.min.js",
