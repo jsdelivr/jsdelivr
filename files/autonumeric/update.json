@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "autoNumeric",
-  "repo": "BobKnothe/autoNumeric",
+  "repo": "autoNumeric/autoNumeric",
   "files": {
     "basePath": "dist/",
     "include": [
