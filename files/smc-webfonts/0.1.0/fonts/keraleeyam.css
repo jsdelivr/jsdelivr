@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Keraleeyam';
+	src: url('Keraleeyam/Keraleeyam.eot');
+	src: url('Keraleeyam/Keraleeyam.eot?#iefix') format('embedded-opentype'),
+		url('Keraleeyam/Keraleeyam.woff2') format('woff2'),
+		url('Keraleeyam/Keraleeyam.woff') format('woff'),
+		url('Keraleeyam/Keraleeyam.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
