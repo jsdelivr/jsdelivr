@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "pretty-checknbox",
+  "repo": "lokesh-coder/pretty-checkbox",
+  "files": {
+    "basePath": "src/",
+    "include": ["pretty.css", "pretty.min.css"]
+  }
+}
