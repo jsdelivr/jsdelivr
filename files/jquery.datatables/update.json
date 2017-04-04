@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.datatables",
+  "repo": "DataTables/DataTables",
+  "files": {
+    "basePath": "media/",
+    "include": ["css/*.min.css", "images/*.png", "js/*.min.js"]
+  }
+}
