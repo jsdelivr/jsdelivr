@@ -13,7 +13,7 @@
 (function(jQuery){
 	
 	jQuery.hotkeys = {
-		version: "0.8",
+		version: "0.1.0",
 
 		specialKeys: {
 			8: "backspace", 9: "tab", 13: "return", 16: "shift", 17: "ctrl", 18: "alt", 19: "pause",
