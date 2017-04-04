@@ -9,13 +9,13 @@
             "jaxon.debug.min.js",
             "jaxon.verbose.min.js",
             "jaxon.ready.min.js",
-            "./lang/jaxon.en.min.js",
-            "./lang/jaxon.fr.min.js",
-            "./lang/jaxon.de.min.js",
-            "./lang/jaxon.nl.min.js",
-            "./lang/jaxon.es.min.js",
-            "./lang/jaxon.bg.min.js",
-            "./lang/jaxon.tr.min.js"
+            "././lang/jaxon.en.min.js",
+            "././lang/jaxon.fr.min.js",
+            "././lang/jaxon.de.min.js",
+            "././lang/jaxon.nl.min.js",
+            "././lang/jaxon.es.min.js",
+            "././lang/jaxon.bg.min.js",
+            "././lang/jaxon.tr.min.js"
         ]
     }
 }
