@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ng-xhr-promisify",
+  "repo": "tiago/ng-xhr-promisify",
+  "files": {
+    "basePath": "dist/"
+  }
+}
