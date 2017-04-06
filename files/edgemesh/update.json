@@ -8,7 +8,8 @@
       "edgemesh.client.min.js",
       "edgemesh.hub.min.js",
       "edgemesh.worker.min.js",
-      "edgemesh.sw.min.js"
+      "edgemesh.sw.min.js",
+      "edgemesh.track.min.js"
     ]
   }
 }
