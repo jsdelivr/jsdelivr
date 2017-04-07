@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "MathJax",
+  "repo": "mathjax/mathjax",
+  "files": {
+    "include": [
+      "config/**/*",
+      "extensions/**/*",
+      "fonts/**/*",
+      "images/**/*",
+      "jax/**/*",
+      "localization/**/*",
+      "MathJax.js"
+    ]
+  }
+}
