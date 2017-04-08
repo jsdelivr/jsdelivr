@@ -3,6 +3,7 @@
   "name": "plyr",
   "repo": "selz/plyr",
   "files": {
+    "basePath": "dist/"
     "include": ["plyr.js", "plyr.css", "plyr.svg"]
   }
 }
