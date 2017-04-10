@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "selector.js",
+  "repo": "websilk/selector",
+  "files": {
+    "basePath": "dist/",
+    "include": ["selector.min.js"]
+  }
+}
