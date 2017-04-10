@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "rrose",
-  "repo": "erictheise/rrose",
+  "repo": "GPavlovic/rrose",
   "files": {
     "include": ["dist/leaflet.rrose-src.js", "dist/leaflet.rrose.css"]
   }
