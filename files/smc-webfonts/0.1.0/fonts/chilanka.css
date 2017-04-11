@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Chilanka';
+	src: url('Chilanka/Chilanka-Regular.eot');
+	src: url('Chilanka/Chilanka-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Chilanka/Chilanka-Regular.woff2') format('woff2'),
+		url('Chilanka/Chilanka-Regular.woff') format('woff'),
+		url('Chilanka/Chilanka-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
