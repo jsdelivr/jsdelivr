@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "chatbotlab",
+  "repo": "FordSoft/chatbotlab",
+  "files": {
+    "include": ["scripts/app.js", "scripts/vendor.js", "scripts/d2d.lib.js", "scripts/kendo.js", "scripts/vendor.datatables.js", "scripts/vendor.graphs.js", "scripts/vendor.ui.js"]
+  }
+}
