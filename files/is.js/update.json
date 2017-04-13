@@ -3,6 +3,6 @@
   "name": "is.js",
   "repo": "arasatasaygin/is.js",
   "files": {
-    "include": ["is.min.js"]
+    "include": [ "is.min.js" ]
   }
 }
