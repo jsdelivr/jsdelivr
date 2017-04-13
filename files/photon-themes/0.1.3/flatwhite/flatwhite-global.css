@@ -1,0 +1,1072 @@
+:global(.psh) {
+  background-color: #f7f3ee;
+  color: #605a52;
+  margin: 1em 0;
+}
+
+:global(.psh figure) {
+  margin: 0;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+  background-color: #f7f3ee;
+  color: #605a52;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #aca7a0;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #f7f3ee;
+  height: 18px;
+  text-align: right;
+  line-height: 18px;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #dedbd6;
+  color: #595756;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #dedbd6;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  word-break: break-all;
+  color: #595756;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #dedbd6;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24px;
+  word-break: break-all;
+  text-align: center;
+  color: #595756;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  font-family: monospace;
+  font-weight: 500;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #aca7a0;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #d1cdc7;
+  font-size: 13px;
+  word-break: break-all;
+  color: #595756;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #eaf0e7;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #e5efed;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #efe9ef;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #f7ebe2;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #f6e7e4;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #f6eee2;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #eaf0e7;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #f6e7e4;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #d1cdc7;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #605a52;
+}
+
+:global(.psh .keyword.control) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .constant.keyword), :global(.psh .constant.symbol) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .constant.language), :global(.psh .constant.numeric) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .string.quoted), :global(.psh .string.regexp) {
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .string.quoted .constant.keyword), :global(.psh .string.quoted .constant.language), :global(.psh .string.quoted .constant.numeric), :global(.psh .string.quoted .constant.symbol), :global(.psh .string.quoted .entity.name.tag), :global(.psh .string.quoted .keyword.control), :global(.psh .string.quoted .meta.embedded), :global(.psh .string.quoted .string.quoted), :global(.psh .string.quoted .string.regexp), :global(.psh .string.regexp .constant.keyword), :global(.psh .string.regexp .constant.language), :global(.psh .string.regexp .constant.numeric), :global(.psh .string.regexp .constant.symbol), :global(.psh .string.regexp .entity.name.tag), :global(.psh .string.regexp .keyword.control), :global(.psh .string.regexp .meta.embedded), :global(.psh .string.regexp .string.quoted), :global(.psh .string.regexp .string.regexp) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .string.quoted .meta.embedded .punctuation.embedded),
+:global(.psh .string.regexp .meta.embedded .punctuation.embedded) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .string.quoted .meta.embedded .string.quoted .punctuation.definition),
+:global(.psh .string.regexp .meta.embedded .string.quoted .punctuation.definition) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .string.quoted .punctuation.definition), :global(.psh .string.regexp .punctuation.definition) {
+  color: #81895d;
+}
+
+:global(.psh .comment) {
+  color: #b9a992;
+  font-style: italic;
+}
+
+:global(.psh .meta.embedded:not(.php) .punctuation.embedded) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .bold) {
+  font-weight: 700;
+}
+
+:global(.psh .italic) {
+  font-style: italic;
+}
+
+:global(.psh .invalid.deprecated) {
+  color: #000 !important;
+  background-color: #f2a60d !important;
+}
+
+:global(.psh .invalid.illegal) {
+  color: #fff !important;
+  background-color: #ff1414 !important;
+}
+
+:global(.psh .source.c .storage.type) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.clojure .storage.control) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .ink.result.inline .ink.leaf .text) {
+  color: #b9a992;
+  font-style: italic;
+}
+
+:global(.psh .source.coffee .meta.inline.function), :global(.psh .source.coffee .storage.type.class), :global(.psh .source.coffee .storage.type.function) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.coffee .meta.inline.function .function),
+:global(.psh .source.coffee .storage.type.class .function),
+:global(.psh .source.coffee .storage.type.function .function) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.coffee .support.class) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.coffee .comment .storage.type.class) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.crystal .keyword.control.float),
+:global(.psh .source.crystal .keyword.control.signed-int),
+:global(.psh .source.crystal .keyword.control.unsigned-int),
+:global(.psh .source.crystal .support.class.struct) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.crystal .keyword.other.special-method),
+:global(.psh .source.crystal .support.function.kernel) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.css .entity.attribute-name), :global(.psh .source.css .entity.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.css .entity.attribute-name .entity.attribute-name),
+:global(.psh .source.css .entity.tag .entity.attribute-name) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.css .entity.attribute-name .punctuation.definition),
+:global(.psh .source.css .entity.tag .punctuation.definition) {
+  color: #9c739c;
+}
+
+:global(.psh .source.css .support.constant) {
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .source.css .constant.rgb-value) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .source.css .keyword.important) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.css .keyword.other.unit) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+  color: #5f8c7d;
+}
+
+:global(.psh .source.css .punctuation.separator), :global(.psh .source.css .punctuation.terminator) {
+  color: #93836c;
+}
+
+:global(.psh .source.elixir .keyword.other.special-method) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.elixir .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .source.elixir .constant.symbol .punctuation.definition) {
+  color: #7382a0;
+}
+
+:global(.psh .source.elixir.embedded .constant.language),
+:global(.psh .source.elixir.embedded .keyword.other.special-method) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.elm .meta.import .keyword.other) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.elm .storage.type), :global(.psh .source.elm .support.type) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.elm .constant.other) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.elm .support.constant) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .source.gfm .markup.heading) {
+  display: inline-block;
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.gfm .markup.heading .heading) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.gfm .markup.heading .marker) {
+  color: #9c739c;
+}
+
+:global(.psh .source.gfm .markup.code), :global(.psh .source.gfm .markup.raw) {
+  display: inline-block;
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.gfm .markup.code .constant.boolean),
+:global(.psh .source.gfm .markup.code .constant.keyword),
+:global(.psh .source.gfm .markup.code .constant.nil),
+:global(.psh .source.gfm .markup.code .constant.numeric),
+:global(.psh .source.gfm .markup.code .constant.symbol),
+:global(.psh .source.gfm .markup.code .keyword.control),
+:global(.psh .source.gfm .markup.code .keyword.new),
+:global(.psh .source.gfm .markup.code .keyword.special-method),
+:global(.psh .source.gfm .markup.code .storage.control),
+:global(.psh .source.gfm .markup.code .storage.var),
+:global(.psh .source.gfm .markup.code .string.quoted),
+:global(.psh .source.gfm .markup.code .support.function.actionpack),
+:global(.psh .source.gfm .markup.code .support.function.activerecord),
+:global(.psh .source.gfm .markup.code .support.function.activesupport),
+:global(.psh .source.gfm .markup.code .support.function.viewhelpers),
+:global(.psh .source.gfm .markup.code .variable.this),
+:global(.psh .source.gfm .markup.raw .constant.boolean),
+:global(.psh .source.gfm .markup.raw .constant.keyword),
+:global(.psh .source.gfm .markup.raw .constant.nil),
+:global(.psh .source.gfm .markup.raw .constant.numeric),
+:global(.psh .source.gfm .markup.raw .constant.symbol),
+:global(.psh .source.gfm .markup.raw .keyword.control),
+:global(.psh .source.gfm .markup.raw .keyword.new),
+:global(.psh .source.gfm .markup.raw .keyword.special-method),
+:global(.psh .source.gfm .markup.raw .storage.control),
+:global(.psh .source.gfm .markup.raw .storage.var),
+:global(.psh .source.gfm .markup.raw .string.quoted),
+:global(.psh .source.gfm .markup.raw .support.function.actionpack),
+:global(.psh .source.gfm .markup.raw .support.function.activerecord),
+:global(.psh .source.gfm .markup.raw .support.function.activesupport),
+:global(.psh .source.gfm .markup.raw .support.function.viewhelpers),
+:global(.psh .source.gfm .markup.raw .variable.this) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.gfm .markup.italic) {
+  font-style: italic;
+}
+
+:global(.psh .source.gfm .markup.bold) {
+  font-weight: 700;
+}
+
+:global(.psh .source.gfm .markup.strike) {
+  text-decoration: line-through;
+}
+
+:global(.psh .source.gfm .link) {
+  display: inline-block;
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.gfm .link .link) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.gfm .link .punctuation.definition) {
+  color: #7382a0;
+}
+
+:global(.psh .source.gfm .comment) {
+  display: inline-block;
+  font-style: normal;
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .source.gfm .comment .comment), :global(.psh .source.gfm .comment .link) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.gfm .comment .support.quote) {
+  color: #81895d;
+}
+
+:global(.psh .source.go .keyword.function), :global(.psh .source.go .keyword.import), :global(.psh .source.go .keyword.package), :global(.psh .source.go .keyword.type) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.go .storage.type) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.go .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .gohtml .punctuation.embedded) {
+  color: #93836c;
+}
+
+:global(.psh .source.haskell .keyword.other:not(.arrow):not(.double-colon)) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.haskell .entity.name.type) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.haskell .support.tag.prelude) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .html .meta.tag) {
+  color: #93836c;
+}
+
+:global(.psh .html .meta.tag .entity.attribute-name) {
+  color: #93836c;
+  font-style: italic;
+}
+
+:global(.psh .html .meta.tag .entity.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .html.htmlplus .meta.tag .entity.tag) {
+  color: inherit;
+  background-color: transparent;
+  color: #605a52;
+}
+
+:global(.psh .html.htmlplus .string.content) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .mustache .meta.tag.template) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .mustache .meta.tag.template .constant.keyword),
+:global(.psh .mustache .meta.tag.template .constant.language),
+:global(.psh .mustache .meta.tag.template .constant.numeric),
+:global(.psh .mustache .meta.tag.template .constant.symbol),
+:global(.psh .mustache .meta.tag.template .entity.name.tag),
+:global(.psh .mustache .meta.tag.template .keyword.control),
+:global(.psh .mustache .meta.tag.template .meta.embedded),
+:global(.psh .mustache .meta.tag.template .string.quoted),
+:global(.psh .mustache .meta.tag.template .string.regexp) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .mustache .meta.tag.template .meta.embedded .punctuation.embedded) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .mustache .meta.tag.template .meta.embedded .string.quoted .punctuation.definition) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .mustache .meta.tag.template .entity.name.tag) {
+  color: #957f5f;
+}
+
+:global(.psh .mustache .meta.tag.template .entity.name.tag .entity.name.function) {
+  color: #5b5143;
+}
+
+:global(.psh .htmlbars .meta.tag:not(.html)) {
+  color: #605a52;
+}
+
+:global(.psh .htmlbars .meta.tag:not(.html) .punctuation.definition) {
+  color: #93836c;
+}
+
+:global(.psh .htmlbars .meta.tag.inline .punctuation.definition) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .htmlbars .meta.tag.inline .punctuation.definition.inline) {
+  color: #93836c;
+}
+
+:global(.psh .htmlbars .support.function.builtin) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .htmlbars .string.quoted .function.inline) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .htmlbars .string.quoted .punctuation.definition.tag) {
+  color: #81895d !important;
+}
+
+:global(.psh .htmlbars .constant.symbol) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .haml .meta.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .haml .meta.tag .punctuation.definition) {
+  color: #9c739c;
+}
+
+:global(.psh .haml .meta.section.attributes) {
+  color: #93836c;
+}
+
+:global(.psh .haml .meta.section.attributes .constant.symbol) {
+  color: inherit;
+  background-color: transparent;
+  color: #93836c;
+  font-style: italic;
+}
+
+:global(.psh .haml .entity.tag.class) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.jade .entity.class), :global(.psh .source.jade .entity.name.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.jade .complete_tag) {
+  color: #93836c;
+}
+
+:global(.psh .source.jade .complete_tag .entity.attribute-name.tag) {
+  color: #93836c;
+  font-style: italic;
+}
+
+:global(.psh .source.jade .complete_tag .text) {
+  color: #605a52;
+}
+
+:global(.psh .source.java .meta.class .storage.modifier),
+:global(.psh .source.java .meta.method .storage.modifier) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.java .storage.type.annotation), :global(.psh .source.java .storage.type.primitive) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.js .storage.type.function) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.js .storage.type.function .function) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.js .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .source.js .string.unquoted) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.js .comment .storage.type.class) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.js .meta.tag.jsx .entity.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.js .meta.tag.jsx .entity.other.attribute-name.jsx) {
+  color: #93836c;
+  font-style: italic;
+}
+
+:global(.psh .source.js .meta.tag.jsx .keyword.operator.assignment),
+:global(.psh .source.js .meta.tag.jsx .punctuation.definition.tag) {
+  color: #93836c;
+}
+
+:global(.psh .source.json .meta.structure.dictionary .string.quoted) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.json .meta.structure.dictionary .string.quoted .punctuation.definition) {
+  color: #93836c;
+}
+
+:global(.psh .source.json .meta.structure.dictionary .array .string.quoted) {
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .source.json .meta.structure.dictionary .array .string.quoted .punctuation.definition) {
+  color: #81895d;
+}
+
+:global(.psh .source.json .meta.structure.dictionary .punctuation.key-value) {
+  color: #93836c;
+}
+
+:global(.psh .source.json .meta.structure.array > .value.json > .string.quoted.json),
+:global(.psh .source.json .meta.structure.dictionary > .value.json > .string.quoted.json) {
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .source.json .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .latex .keyword.control), :global(.psh .latex .support.function) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .latex .keyword.control .punctuation), :global(.psh .latex .support.function .punctuation) {
+  color: #9c739c;
+}
+
+:global(.psh .latex .meta.preamble .support.class) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .latex .variable.parameter) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .latex .constant.other) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .latex .punctuation.definition), :global(.psh .latex .punctuation.section) {
+  color: #93836c;
+}
+
+:global(.psh .latex .string.quoted) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .latex .string.quoted .punctuation) {
+  color: inherit;
+}
+
+:global(.psh .source.less .keyword.control.at-rule .punctuation.definition) {
+  color: #9c739c;
+}
+
+:global(.psh .source.less .variable) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.less .variable.other.interpolation) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .liquid .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .liquid .entity.name.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .liquid .punctuation.output.liquid .punctuation.embedded),
+:global(.psh .liquid .punctuation.tag.liquid .punctuation.embedded) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .php .storage.type.class), :global(.psh .php .storage.type.function) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .php .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .php .variable.global) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .php .variable.global .punctuation.definition) {
+  color: #7382a0;
+}
+
+:global(.psh .php .variable .punctuation.definition) {
+  color: #93836c;
+}
+
+:global(.psh .php .support.function.construct) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .php .punctuation.terminator) {
+  color: #93836c;
+}
+
+:global(.psh .php .meta.embedded) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .php .meta.embedded .punctuation.embedded) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.python .storage.type.class), :global(.psh .source.python .storage.type.function) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.python .meta.structure.dictionary.key .numeric),
+:global(.psh .source.python .meta.structure.dictionary.key .string.quoted) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.python .meta.structure.dictionary.key .numeric .punctuation.definition),
+:global(.psh .source.python .meta.structure.dictionary.key .string.quoted .punctuation.definition) {
+  color: #7382a0;
+}
+
+:global(.psh .source.python .constant.language) {
+  color: #465953;
+  background-color: rgba(0, 189, 164, .15);
+}
+
+:global(.psh .source.python .variable.self) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .ruby .constant.symbol .punctuation.definition) {
+  color: #7382a0;
+}
+
+:global(.psh .ruby .keyword.special-method), :global(.psh .ruby .support.function.actionpack), :global(.psh .ruby .support.function.activerecord), :global(.psh .ruby .support.function.activesupport), :global(.psh .ruby .support.function.viewhelpers) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .ruby .meta.embedded .punctuation.embedded),
+:global(.psh .ruby .source.embedded .punctuation.embedded) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .ruby .meta.embedded .keyword.special-method),
+:global(.psh .ruby .meta.embedded .support.function.actionpack),
+:global(.psh .ruby .meta.embedded .support.function.activerecord),
+:global(.psh .ruby .meta.embedded .support.function.activesupport),
+:global(.psh .ruby .meta.embedded .support.function.viewhelpers),
+:global(.psh .ruby .source.embedded .keyword.special-method),
+:global(.psh .ruby .source.embedded .support.function.actionpack),
+:global(.psh .ruby .source.embedded .support.function.activerecord),
+:global(.psh .ruby .source.embedded .support.function.activesupport),
+:global(.psh .ruby .source.embedded .support.function.viewhelpers) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .ruby .meta.embedded .string.quoted .punctuation.definition),
+:global(.psh .ruby .source.embedded .string.quoted .punctuation.definition) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.rust .keyword.other) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.rust .storage.type) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.rust .comment .storage) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .source.sass .meta.selector .class) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.sass .meta.selector .class .punctuation.definition) {
+  color: #9c739c;
+}
+
+:global(.psh .source.sass .entity.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .source.sass .meta .variable.other) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.sass .support.constant) {
+  color: #525643;
+  background-color: rgba(132, 189, 0, .19);
+}
+
+:global(.psh .source.scss .meta .variable) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .source.scss .punctuation.separator.key-value),
+:global(.psh .source.scss .punctuation.terminator) {
+  color: #93836c;
+}
+
+:global(.psh .source.shell .support.function.builtin) {
+  color: #5b5143;
+  background-color: rgba(240, 140, 0, .18);
+}
+
+:global(.psh .source.shell .string.quoted .variable .punctuation) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .slim .entity.name.tag), :global(.psh .slim .punctuation.definition.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .slim .entity.attribute-name) {
+  color: #4c5361;
+  background-color: rgba(117, 163, 255, .2);
+}
+
+:global(.psh .yaml .constant.numeric) {
+  color: inherit;
+  background-color: transparent;
+}
+
+:global(.psh .yaml .entity.tag) {
+  color: #614c61;
+  background-color: rgba(206, 92, 255, .15);
+}
+
+:global(.psh .yaml .entity.tag .punctuation) {
+  color: #9c739c;
+}
