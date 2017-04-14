@@ -1,0 +1,126 @@
+/*! Colors.css 1.7 | MIT License | https://github.com/eustasy/colors.css */
+/* Colors from http://flatuicolors.com/ */
+/* $ Backgrounds */
+/* Baseline */
+.background-inherit { background: inherit; }
+.background-transparent { background: transparent; }
+/* Turquoise */
+.background-turquoise { background: #1abc9c; }
+.background-green-sea { background: #16a085; }
+/* Green */
+.background-emerald { background: #2ecc71; }
+.background-nephritis { background: #27ae60; }
+/* Blue */
+.background-peter-river { background: #3498db; }
+.background-belize-hole { background: #2980b9; }
+/* Purple */
+.background-amethyst { background: #9b59b6; }
+.background-wisteria { background: #8e44ad; }
+/* Navy */
+.background-wet-asphalt { background: #34495e; }
+.background-midnight-blue { background: #2c3e50; }
+/* Yellow */
+.background-sun-flower { background: #f1c40f; }
+.background-orange { background: #f39c12; }
+/* Orange */
+.background-carrot { background: #e67e22; }
+.background-pumpkin { background: #d35400; }
+/* Red */
+.background-alizarin { background: #e74c3c; }
+.background-pomegranate { background: #c0392b; }
+/* Greys */
+.background-clouds { background: #ecf0f1; }
+.background-silver { background: #bdc3c7; }
+.background-concrete { background: #95a5a6; }
+.background-asbestos { background: #7f8c8d; }
+/* White - Grey - Black */
+.background-f,
+.background-white { background: #ffffff; }
+.background-e { background: #eeeeee; }
+.background-d { background: #dddddd; }
+.background-c { background: #cccccc; }
+.background-b { background: #bbbbbb; }
+.background-a { background: #aaaaaa; }
+.background-9,
+.background-nine { background: #999999; }
+.background-8,
+.background-eight { background: #888888; }
+.background-7,
+.background-seven { background: #777777; }
+.background-6,
+.background-six { background: #666666; }
+.background-5,
+.background-five { background: #555555; }
+.background-4,
+.background-four { background: #444444; }
+.background-3,
+.background-three { background: #333333; }
+.background-2,
+.background-two { background: #222222; }
+.background-1,
+.background-one { background: #111111; }
+.background-0,
+.background-zero,
+.background-black { background: #000000; }
+/* $ Colors */
+/* Baseline */
+.color-inherit { color: inherit; }
+.color-transparent { color: transparent; }
+/* Turquoise */
+.color-turquoise { color: #1abc9c; }
+.color-green-sea { color: #16a085; }
+/* Green */
+.color-emerald { color: #2ecc71; }
+.color-nephritis { color: #27ae60; }
+/* Blue */
+.color-peter-river { color: #3498db; }
+.color-belize-hole { color: #2980b9; }
+/* Purple */
+.color-amethyst { color: #9b59b6; }
+.color-wisteria { color: #8e44ad; }
+/* Navy */
+.color-wet-asphalt { color: #34495e; }
+.color-midnight-blue { color: #2c3e50; }
+/* Yellow */
+.color-sun-flower { color: #f1c40f; }
+.color-orange { color: #f39c12; }
+/* Orange */
+.color-carrot { color: #e67e22; }
+.color-pumpkin { color: #d35400; }
+/* Red */
+.color-alizarin { color: #e74c3c; }
+.color-pomegranate { color: #c0392b; }
+/* Greys */
+.color-clouds { color: #ecf0f1; }
+.color-silver { color: #bdc3c7; }
+.color-concrete { color: #95a5a6; }
+.color-asbestos { color: #7f8c8d; }
+/* White - Grey - Black */
+.color-f,
+.color-white { color: #ffffff; }
+.color-e { color: #eeeeee; }
+.color-d { color: #dddddd; }
+.color-c { color: #cccccc; }
+.color-b { color: #bbbbbb; }
+.color-a { color: #aaaaaa; }
+.color-9,
+.color-nine { color: #999999; }
+.color-8,
+.color-eight { color: #888888; }
+.color-7,
+.color-seven { color: #777777; }
+.color-6,
+.color-six { color: #666666; }
+.color-5,
+.color-five { color: #555555; }
+.color-4,
+.color-four { color: #444444; }
+.color-3,
+.color-three { color: #333333; }
+.color-2,
+.color-two { color: #222222; }
+.color-1,
+.color-one { color: #111111; }
+.color-0,
+.color-zero,
+.color-black { color: #000000; }
