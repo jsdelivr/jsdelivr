@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption");
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Caption", sans-serif;
+}
+a {
+    color: #00BFFF;
+    text-decoration: underline;
+}
+code, kbd {
+    font-family: "PT Mono", monospace;
+    font-size: 0.9em;
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 0 2px;
+}
+button, input[type="button"], input[type="submit"] {
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.75em;
+    padding-top: 5px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #000000;
+}
