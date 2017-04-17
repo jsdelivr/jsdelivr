@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption");
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Caption", sans-serif;
+}
+a {
+    color: #00BFFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #00BFFF;
+    text-decoration: underline;
+}
+a:active {
+    color: #00AAFF;
+    text-decoration: underline;
+}
+a:visited {
+    color: #AA00FF;
+    text-decoration: underline;
+}
+code, kbd {
+    font-family: "PT Mono", monospace;
+    font-size: 0.9em;
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 0 2px;
+}
+code.noborder, kbd.noborder {
+    font-family: "PT Mono", monospace;
+    font-size: 1em;
+    background-color: inherit;
+    border: none;
+}
+button, input[type="button"], input[type="submit"] {
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.75em;
+    padding: 3px 10px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+button:active, input[type="button"]:active, input[type="submit"]:active {
+    background-color: #000000;
+    color: #C0C0C0;
+    border-color: #C0C0C0;
+}
+ul {
+    list-style-type: disc !important;
+}
+ol {
+    list-style-type: decimal !important;
+}
+ol.roman {
+    list-style-type: upper-roman !important;
+}
+ul.none, ol.none {
+    list-style-type: none !important;
+    padding-left: 25px !important;
+}
