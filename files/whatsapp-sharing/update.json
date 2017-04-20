@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "whatsapp-sharing",
+  "repo": "kriskbx/whatsapp-sharing",
+  "files": {
+    "basePath": "dist/"
+  }
+}

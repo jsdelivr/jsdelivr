@@ -1,0 +1,11 @@
+{
+    "packageManager": "github",
+    "name": "holder",
+    "repo": "imsky/holder",
+    "files": {
+        "include": [
+            "holder.js",
+            "holder.min.js"
+        ]
+    }
+}

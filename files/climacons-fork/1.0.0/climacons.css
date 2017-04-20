@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Climacons';
+    src: url('eot/cc.eot');
+    src: url('eot/cc.eot?#iefix') format('embedded-opentype'),
+         url('woff2/cc.woff2') format('woff2'),
+         url('woff/cc.woff') format('woff'),
+         url('ttf/cc.ttf') format('truetype'),
+         url('svg/cc.svg#Climacons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.climacon:before {
+    font-family: Climacons;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 3.5em
+}
+
+.climacon.cloud:before {
+    content: "\e000"
+}
+.climacon.cloud.sun:before {
+    content: "\e001"
+}
+.climacon.cloud.moon:before {
+    content: "\e002"
+}
+.climacon.rain.cloud:before,
+.climacon.rain:before {
+    content: "\e003"
+}
+.climacon.rain.cloud.sun:before,
+.climacon.rain.sun:before {
+    content: "\e004"
+}
+.climacon.rain.cloud.moon:before,
+.climacon.rain.moon:before {
+    content: "\e005"
+}
+.climacon.showers.cloud:before,
+.climacon.showers:before {
+    content: "\e006"
+}
+.climacon.showers.cloud.sun:before,
+.climacon.showers.sun:before {
+    content: "\e007"
+}
+.climacon.showers.cloud.moon:before,
+.climacon.showers.moon:before {
+    content: "\e008"
+}
+.climacon.downpour.cloud:before,
+.climacon.downpour:before {
+    content: "\e009"
+}
+.climacon.downpour.cloud.sun:before,
+.climacon.downpour.sun:before {
+    content: "\e00a"
+}
+.climacon.downpour.cloud.moon:before,
+.climacon.downpour.moon:before {
+    content: "\e00b"
+}
+.climacon.drizzle.cloud:before,
+.climacon.drizzle:before {
+    content: "\e00c"
+}
+.climacon.drizzle.cloud.sun:before,
+.climacon.drizzle.sun:before {
+    content: "\e00d"
+}
+.climacon.drizzle.cloud.moon:before,
+.climacon.drizzle.moon:before {
+    content: "\e00e"
+}
+.climacon.sleet.cloud:before,
+.climacon.sleet:before {
+    content: "\e00f"
+}
+.climacon.sleet.cloud.sun:before,
+.climacon.sleet.sun:before {
+    content: "\e010"
+}
+.climacon.sleet.cloud.moon:before,
+.climacon.sleet.moon:before {
+    content: "\e011"
+}
+.climacon.hail.cloud:before,
+.climacon.hail:before {
+    content: "\e012"
+}
+.climacon.hail.cloud.sun:before,
+.climacon.hail.sun:before {
+    content: "\e013"
+}
+.climacon.hail.cloud.moon:before,
+.climacon.hail.moon:before {
+    content: "\e014"
+}
+.climacon.flurries.cloud:before,
+.climacon.flurries:before {
+    content: "\e015"
+}
+.climacon.flurries.cloud.sun:before,
+.climacon.flurries.sun:before {
+    content: "\e016"
+}
+.climacon.flurries.cloud.moon:before,
+.climacon.flurries.moon:before {
+    content: "\e017"
+}
+.climacon.snow.cloud:before,
+.climacon.snow:before {
+    content: "\e018"
+}
+.climacon.snow.cloud.sun:before,
+.climacon.snow.sun:before {
+    content: "\e019"
+}
+.climacon.snow.cloud.moon:before,
+.climacon.snow.moon:before {
+    content: "\e01a"
+}
+.climacon.fog.cloud:before,
+.climacon.fog:before {
+    content: "\e01b"
+}
+.climacon.fog.cloud.sun:before,
+.climacon.fog.sun:before {
+    content: "\e01c"
+}
+.climacon.fog.cloud.moon:before,
+.climacon.fog.moon:before {
+    content: "\e01d"
+}
+.climacon.haze:before {
+    content: "\e01e"
+}
+.climacon.haze.sun:before {
+    content: "\e01f"
+}
+.climacon.haze.moon:before {
+    content: "\e020"
+}
+.climacon.wind:before {
+    content: "\e021"
+}
+.climacon.wind.cloud:before {
+    content: "\e022"
+}
+.climacon.wind.cloud.sun:before,
+.climacon.wind.sun:before {
+    content: "\e023"
+}
+.climacon.wind.cloud.moon:before,
+.climacon.wind.moon:before {
+    content: "\e024"
+}
+.climacon.lightning.cloud:before,
+.climacon.lightning:before {
+    content: "\e025"
+}
+.climacon.lightning.cloud.sun:before,
+.climacon.lightning.sun:before {
+    content: "\e026"
+}
+.climacon.lightning.cloud.moon:before,
+.climacon.lightning.moon:before {
+    content: "\e027"
+}
+.climacon.sun:before {
+    content: "\e028"
+}
+.climacon.sun.set:before,
+.climacon.sunset:before {
+    content: "\e029"
+}
+.climacon.sun.rise:before,
+.climacon.sunrise:before {
+    content: "\e02a"
+}
+.climacon.low-sun:before,
+.climacon.sun-low:before,
+.climacon.sun.low:before {
+    content: "\e02b"
+}
+.climacon.lower-sun:before,
+.climacon.sun-lower:before,
+.climacon.sun.lower:before {
+    content: "\e02c"
+}
+.climacon.moon:before {
+    content: "\e02d"
+}
+.climacon.moon.new:before {
+    content: "\e02e"
+}
+.climacon.moon.first-crescent:before,
+.climacon.moon.waxing.crescent:before {
+    content: "\e02f"
+}
+.climacon.moon.first-half:before,
+.climacon.moon.first-quarter:before,
+.climacon.moon.waxing.half:before,
+.climacon.moon.waxing.quarter:before {
+    content: "\e030"
+}
+.climacon.moon.first-gibbous:before,
+.climacon.moon.first-three-quarter:before,
+.climacon.moon.waxing.gibbous:before,
+.climacon.moon.waxing.three-quarter:before {
+    content: "\e031"
+}
+.climacon.moon.full:before {
+    content: "\e032"
+}
+.climacon.moon.last-gibbous:before,
+.climacon.moon.last-three-quarter:before,
+.climacon.moon.waning.gibbous:before,
+.climacon.moon.waning.three-quarter:before {
+    content: "\e033"
+}
+.climacon.moon.last-half:before,
+.climacon.moon.last-quarter:before,
+.climacon.moon.waning.half:before,
+.climacon.moon.waning.quarter:before {
+    content: "\e034"
+}
+.climacon.moon.last-crescent:before,
+.climacon.moon.waning.crescent:before {
+    content: "\e035"
+}
+.climacon.snowflake:before {
+    content: "\e036"
+}
+.climacon.tornado:before {
+    content: "\e037"
+}
+.climacon.thermometer.empty:before,
+.climacon.thermometer:before {
+    content: "\e038"
+}
+.climacon.thermometer.low:before {
+    content: "\e039"
+}
+.climacon.thermometer.medium-low:before {
+    content: "\e03a"
+}
+.climacon.thermometer.medium-high:before {
+    content: "\e03b"
+}
+.climacon.thermometer.high:before {
+    content: "\e03c"
+}
+.climacon.thermometer.full:before {
+    content: "\e03d"
+}
+.climacon.celcius:before,
+.climacon.celsius:before {
+    content: "\e03e"
+}
+.climacon.fahrenheit:before,
+.climacon.farenheit:before {
+    content: "\e03f"
+}
+.climacon.compass:before {
+    content: "\e040"
+}
+.climacon.compass.north:before {
+    content: "\e041"
+}
+.climacon.compass.east:before {
+    content: "\e042"
+}
+.climacon.compass.south:before {
+    content: "\e043"
+}
+.climacon.compass.west:before {
+    content: "\e044"
+}
+.climacon.umbrella:before {
+    content: "\e045"
+}
+.climacon.sunglasses:before {
+    content: "\e046"
+}
+.climacon.cloud.cycle:before,
+.climacon.cloud.refresh:before {
+    content: "\e047"
+}
+.climacon.cloud.down:before,
+.climacon.cloud.download:before {
+    content: "\e048"
+}
+.climacon.cloud.up:before,
+.climacon.cloud.upload:before {
+    content: "\e049"
+}

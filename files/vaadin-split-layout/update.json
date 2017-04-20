@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "vaadin-split-layout",
+  "repo": "vaadin/vaadin-split-layout",
+  "files": {
+    "include": [
+      "vaadin-split-layout.html"
+    ]
+  }
+}

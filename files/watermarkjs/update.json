@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "watermarkjs",
+  "repo": "brianium/watermarkjs",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}

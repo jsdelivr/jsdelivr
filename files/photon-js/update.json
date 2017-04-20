@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "photon-js",
+  "repo": "photonsh/photon-js",
+  "files": {
+    "include": [
+      "dist/*.js"
+    ]
+  }
+}

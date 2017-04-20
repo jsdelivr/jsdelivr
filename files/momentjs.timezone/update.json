@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "moment-timezone",
+  "repo": "moment/moment-timezone",
+  "files": {
+    "basePath": "builds",
+    "include": ["*.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "uniformjs",
+  "repo": "pixelmatrix/uniform",
+  "files": {
+    "include": ["jquery.uniform.js", "jquery.uniform.min.js","./themes/**/*"]
+  }
+}

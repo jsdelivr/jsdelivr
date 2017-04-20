@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "replayTable",
+  "repo": "targetprocess/replayTable",
+  "files": {
+    "basePath": "dist/"
+  }
+}

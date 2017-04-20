@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Alorel/alo-cookie",
+  "repo": "Alorel/alo-cookie",
+  "files": {
+    "basePath": "src/",
+    "include": ["cookie.js", "cookie.min.js"]
+  }
+}

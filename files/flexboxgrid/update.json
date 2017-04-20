@@ -3,7 +3,7 @@
   "name": "flexboxgrid",
   "repo": "kristoferjoseph/flexboxgrid",
   "files": {
-    "basePath": "css/",
+    "basePath": "dist/",
     "include": ["flexboxgrid.min.css"]
   }
 }

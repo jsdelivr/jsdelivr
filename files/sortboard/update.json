@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "sortboard",
+  "repo": "quintana-dev/sortboard",
+  "files": {
+    "basePath": "dist/",
+    "include": ["sortboard.min.js"]
+  }
+}

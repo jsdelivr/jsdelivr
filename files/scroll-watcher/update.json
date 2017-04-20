@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "scroll-watcher",
+  "repo": "jonataswalker/scroll-watcher",
+  "files": {
+    "basePath": "build/",
+    "include": ["scroll-watcher.min.js"]
+  }
+}

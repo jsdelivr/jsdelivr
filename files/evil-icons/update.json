@@ -1,0 +1,12 @@
+{
+  "packageManager": "npm",
+  "name": "evil-icons",
+  "repo": "outpunk/evil-icons",
+  "files": {
+    "basePath": "assets/",
+    "include": [
+      "evil-icons.min.js",
+      "evil-icons.min.css"
+    ]
+  }
+}

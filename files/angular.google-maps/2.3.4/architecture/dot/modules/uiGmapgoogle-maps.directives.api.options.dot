@@ -1,0 +1,63 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "uiGmapgoogle-maps.directives.api.options"[label="uiGmapgoogle-maps.directives.api.options", color=1]
+
+    
+      "uiGmapgoogle-maps.directives.api.utils"[label="uiGmapgoogle-maps.directives.api.utils", color=1]
+      "uiGmapgoogle-maps.directives.api.utils" -> "uiGmapgoogle-maps.directives.api.options"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+
+    
+      "uiGmapMarkerOptions"[label="uiGmapMarkerOptions", color=5]
+      "uiGmapgoogle-maps.directives.api.options" -> "uiGmapMarkerOptions"
+    
+
+    
+
+    node[shape="cds"]
+    
+
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+
+
+    
+
+    
+      
+        "uiGmapLogger"[label="uiGmapLogger"]
+        "uiGmapLogger" -> "uiGmapMarkerOptions"
+      
+        "uiGmapGmapUtil"[label="uiGmapGmapUtil"]
+        "uiGmapGmapUtil" -> "uiGmapMarkerOptions"
+      
+    
+
+    
+
+    
+
+
+}

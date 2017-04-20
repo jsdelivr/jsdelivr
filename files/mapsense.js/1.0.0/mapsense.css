@@ -1,0 +1,984 @@
+.mapsense-attribution {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 11px;
+  font-family: sans-serif;
+  line-height: 5px;
+  text-decoration: none;
+}
+.mapsense-attribution a {
+  color: #ccc;
+  text-decoration: none;
+}
+path {
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/* zoom-dependent styling for roads & admins */
+/* general rules */
+path._undefined.none {
+  fill: none;
+}
+path.landuse.other {
+  fill: none;
+  stroke: none;
+}
+.park {
+  opacity: .3;
+}
+.water_line {
+  opacity: .5;
+  fill: none;
+}
+.runway {
+  opacity: .7;
+}
+.rail_major,
+.rail_minor {
+  stroke-dasharray: 4, 3;
+}
+.roads,
+.admin {
+  fill: none;
+}
+.disputed_border,
+.state_border {
+  stroke-dasharray: 8, 3;
+}
+/* admins */
+.country_border {
+  stroke-width: 2;
+}
+.admin._3,
+.admin._2,
+.admin._1 {
+  stroke-width: 1;
+}
+.admin._4 {
+  stroke-width: 1.5;
+}
+.state_border._2 {
+  stroke-width: .3;
+}
+.state_border._3,
+.state_border._4 {
+  stroke-width: .5;
+}
+.state_border._8,
+.state_border._9,
+.state_border._10,
+.state_border._11 {
+  stroke-width: 1.5;
+  opacity: .75;
+}
+.state_border._12,
+.state_border._13,
+.state_border._14,
+.state_border._15,
+.state_border._16,
+.state_border._17 {
+  stroke-width: 2;
+  stroke-dasharray: 10, 4;
+  opacity: .75;
+}
+/* roads */
+.ne_10m_roads._3 {
+  stroke-width: 0.5;
+}
+.ne_10m_roads._4,
+.ne_10m_roads._5 {
+  stroke-width: 0.75;
+}
+.ne_10m_roads._6 {
+  opacity: 0.75;
+}
+.motorway._6 {
+  stroke-width: .75;
+}
+.motorway._7,
+.ne_10m_roads._7 {
+  stroke-width: 1;
+}
+.arterial_major._7 {
+  stroke-width: .5;
+}
+/* zoom 8 */
+.ne_10m_roads._8 {
+  stroke-width: 1.25;
+  opacity: 0.75;
+}
+.motorway._8 {
+  stroke-width: 1.25;
+  opacity: 0.75;
+}
+.arterial_major._8 {
+  stroke-width: .5;
+  opacity: .75;
+}
+.arterial_minor._8 {
+  stroke-width: 0.5;
+  opacity: .5;
+}
+/* zoom 9 */
+.motorway._9 {
+  stroke-width: 1.5;
+}
+.arterial_major._9 {
+  stroke-width: .75;
+}
+.arterial_minor._9 {
+  stroke-width: 0.5;
+  opacity: .5;
+}
+/* zoom 10 */
+.motorway._10 {
+  stroke-width: 1.75;
+}
+.arterial_major._10 {
+  stroke-width: 1.25;
+}
+.arterial_minor._10 {
+  stroke-width: 1;
+}
+.road_med._10 {
+  stroke-width: .75;
+}
+/* zoom 11 */
+.motorway._11 {
+  stroke-width: 3;
+}
+.arterial_major._11,
+.runway._11 {
+  stroke-width: 1.75;
+}
+.arterial_minor._11 {
+  stroke-width: 1.25;
+}
+.road_med._11 {
+  stroke-width: 1;
+}
+.road_minor._11 {
+  stroke-width: .5;
+}
+/* zoom 12 */
+.motorway._12 {
+  stroke-width: 3.5;
+}
+.arterial_major._12,
+.runway._12 {
+  stroke-width: 2;
+}
+.arterial_minor._12 {
+  stroke-width: 1.5;
+}
+.road_med._12 {
+  stroke-width: 1;
+}
+.road_minor._12 {
+  stroke-width: .75;
+}
+/* zoom 13 */
+.motorway._13 {
+  stroke-width: 5;
+}
+.arterial_major._13,
+.runway._13 {
+  stroke-width: 3.5;
+}
+.arterial_minor._13 {
+  stroke-width: 2.5;
+}
+.road_med._13 {
+  stroke-width: 2;
+}
+.road_minor._13 {
+  stroke-width: 1.5;
+}
+.path._13,
+.water_line._13 {
+  stroke-width: 0.3;
+}
+/* zoom 14 */
+.motorway._14 {
+  stroke-width: 6.5;
+}
+.arterial_major._14,
+.runway._14 {
+  stroke-width: 4.75;
+}
+.arterial_minor._14 {
+  stroke-width: 4.25;
+}
+.road_med._14 {
+  stroke-width: 3.75;
+}
+.road_minor._14 {
+  stroke-width: 2.5;
+}
+.rail_minor._14 {
+  stroke-width: 1;
+}
+.rail_major._14 {
+  stroke-width: 1.5;
+}
+.path._14,
+.water_line._14 {
+  stroke-width: 0.75;
+}
+/* zoom 15 */
+.motorway._15 {
+  stroke-width: 8.5;
+}
+.arterial_major._15,
+.runway._15 {
+  stroke-width: 7;
+}
+.arterial_minor._15 {
+  stroke-width: 6;
+}
+.road_med._15 {
+  stroke-width: 5;
+}
+.road_minor._15 {
+  stroke-width: 4;
+}
+.rail_minor._15 {
+  stroke-width: 1.5;
+}
+.rail_major._15 {
+  stroke-width: 1.5;
+}
+.path._15,
+.water_line._15 {
+  stroke-width: 1;
+}
+/* zoom 16 */
+.motorway._16 {
+  stroke-width: 12;
+}
+.arterial_major._16,
+.runway._16 {
+  stroke-width: 9;
+}
+.arterial_minor._16 {
+  stroke-width: 8;
+}
+.road_med._16 {
+  stroke-width: 7;
+}
+.road_minor._16 {
+  stroke-width: 6;
+}
+.rail_minor._16 {
+  stroke-width: 1.5;
+}
+.rail_major._16 {
+  stroke-width: 2;
+}
+.path._16,
+.water_line._16 {
+  stroke-width: 2;
+}
+/* zoom 17 */
+.motorway._17 {
+  stroke-width: 15;
+}
+.arterial_major._17,
+.runway._17 {
+  stroke-width: 10;
+}
+.arterial_minor._17 {
+  stroke-width: 9;
+}
+.road_med._17 {
+  stroke-width: 8;
+}
+.road_minor._17 {
+  stroke-width: 8;
+}
+.rail_minor._17 {
+  stroke-width: 3;
+  stroke-dasharray: 7, 6;
+}
+.rail_major._17 {
+  stroke-width: 4;
+  stroke-dasharray: 7, 6;
+}
+.path._17,
+.water_line._17 {
+  stroke-width: 5;
+}
+/* zoom 18 */
+.motorway._18 {
+  stroke-width: 16;
+}
+.arterial_major._18,
+.runway._18 {
+  stroke-width: 10;
+}
+.arterial_minor._18 {
+  stroke-width: 10;
+}
+.road_med._18 {
+  stroke-width: 9;
+}
+.road_minor._18 {
+  stroke-width: 8;
+}
+.rail_minor._18 {
+  stroke-width: 3;
+  stroke-dasharray: 7, 6;
+}
+.rail_major._18 {
+  stroke-width: 4;
+  stroke-dasharray: 7, 6;
+}
+.path._18,
+.water_line._18 {
+  stroke-width: 5;
+}
+.mapsense-blackprint.labels {
+  font-size: 18;
+  fill: #999;
+  font-weight: 200;
+  text-transform: uppercase;
+  stroke-width: .3;
+  /*stroke: grey;*/
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-blackprint.tile-background {
+  fill: #141414;
+}
+.mapsense-blackprint.land {
+  fill: #000000;
+  stroke: #bdbcbc;
+  stroke-width: 1;
+}
+.mapsense-blackprint.agriculture {
+  display: none;
+}
+.mapsense-blackprint.water_polygon {
+  fill: #141414;
+}
+.mapsense-blackprint.water_line {
+  stroke: #323232;
+  stroke-width: 1;
+  opacity: .3;
+  fill: none;
+}
+.mapsense-blackprint.park {
+  fill: rgba(15, 15, 15, 0.3);
+  stroke: none;
+}
+.mapsense-blackprint.building {
+  fill: none;
+  stroke: #505050;
+  stroke-width: .52;
+}
+.mapsense-blackprint.school {
+  fill: #0f0f0f;
+  stroke: none;
+}
+.mapsense-blackprint.other {
+  stroke: #323232;
+}
+.mapsense-blackprint.urban {
+  fill: none;
+  stroke: none;
+}
+.mapsense-blackprint.roads {
+  stroke: #222;
+}
+.mapsense-blackprint.motorway,
+.mapsense-blackprint.ne_10m_roads {
+  stroke: #333;
+}
+.mapsense-blackprint.country_border,
+.mapsense-blackprint.disputed_border {
+  stroke: grey;
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+  fill: none;
+}
+.mapsense-blackprint.state_border {
+  stroke: grey;
+  stroke-dasharray: 3 3;
+  fill: none;
+}
+.mapsense-dark.labels {
+  font-size: 14;
+  fill: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  /*stroke: grey;*/
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-dark.tile-background {
+  fill: #3a4250;
+}
+.mapsense-dark.land {
+  fill: #161619;
+}
+.mapsense-dark.agriculture {
+  display: none;
+}
+.mapsense-dark.country_border,
+.mapsense-dark.disputed_border {
+  stroke: #777;
+}
+.mapsense-dark.state_border {
+  stroke: #777;
+}
+.mapsense-dark.water_polygon {
+  fill: #3a4250;
+  stroke: none;
+}
+.mapsense-dark.water_line {
+  stroke: #516283;
+  stroke-width: 1;
+  fill: none;
+}
+.mapsense-dark.park {
+  fill: #268061;
+}
+.mapsense-dark.building {
+  fill: #222;
+  stroke: black;
+}
+.mapsense-dark.school {
+  fill: #35161e;
+}
+.mapsense-dark.other {
+  fill: rgba(76, 69, 67, 0.15);
+  stroke: black;
+}
+.mapsense-dark.urban {
+  fill: #000000;
+  stroke: none;
+}
+.mapsense-dark.ne_10m_roads {
+  stroke: #7c5c2c;
+}
+.mapsense-dark.motorway {
+  stroke: #7c5c2c;
+}
+.mapsense-dark.arterial_major {
+  stroke: #4a472a;
+}
+.mapsense-dark.arterial_minor {
+  stroke: #3c3c3c;
+}
+.mapsense-dark.road_med {
+  stroke: #3c3c3c;
+}
+.mapsense-dark.road_minor {
+  stroke: #323232;
+}
+.mapsense-dark.rail_major {
+  stroke: #323228;
+  fill: none;
+}
+.mapsense-dark.rail_minor {
+  stroke: #323228;
+  fill: none;
+}
+.mapsense-dark.runway {
+  stroke: #333;
+}
+.mapsense-dark.path {
+  stroke: #323228;
+}
+.mapsense-grayscale.labels {
+  font-size: 14;
+  fill: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  /*stroke: grey;*/
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-grayscale.tile-background {
+  fill: #aaa9af;
+}
+.mapsense-grayscale.land {
+  fill: #e8e5e5;
+  stroke: none;
+}
+.mapsense-grayscale.water_polygon {
+  fill: #aaa9af;
+}
+.mapsense-grayscale.water_line {
+  stroke: gray;
+  stroke-width: 1;
+}
+.mapsense-grayscale.park {
+  fill: #cad4ca;
+}
+.mapsense-grayscale.building {
+  fill: #f0f0f0;
+}
+.mapsense-grayscale.school {
+  fill: #dcdcdc;
+  stroke: none;
+}
+.mapsense-grayscale.other {
+  fill: #cbcbcb;
+  stroke: none;
+}
+.mapsense-grayscale.urban {
+  fill: none;
+  stroke: none;
+}
+.mapsense-grayscale.ne_10m_roads {
+  stroke: #ccc;
+}
+.mapsense-grayscale.motorway {
+  stroke: #CCC;
+}
+.mapsense-grayscale.arterial_major {
+  stroke: #d2d2d2;
+}
+.mapsense-grayscale.arterial_minor {
+  stroke: #d7d7d7;
+}
+.mapsense-grayscale.road_med {
+  stroke: #DDD;
+}
+.mapsense-grayscale.road_minor {
+  stroke: #DDD;
+}
+.mapsense-grayscale.rail_major {
+  stroke: lightgray;
+}
+.mapsense-grayscale.rail_minor {
+  stroke: lightgray;
+}
+.mapsense-grayscale.runway {
+  stroke: #f2efef;
+}
+.mapsense-grayscale.path {
+  stroke: #DDD;
+}
+.mapsense-grayscale.country_border,
+.mapsense-grayscale.disputed_border {
+  stroke: #BBB;
+}
+.mapsense-grayscale.state_border {
+  stroke: #bbb;
+}
+.mapsense-light.labels {
+  font-size: 14;
+  fill: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  /*stroke: grey;*/
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-light.tile-background {
+  fill: #ffffff;
+}
+.mapsense-light.land {
+  fill: #ddddda;
+  stroke: none;
+}
+.mapsense-light.water_polygon {
+  fill: #ffffff;
+  stroke: none;
+}
+.mapsense-light.country_border,
+.mapsense-light.disputed_border {
+  stroke: #aaa;
+}
+.mapsense-light.state_border {
+  stroke: #aaa;
+}
+.mapsense-light.water_line {
+  stroke: #c8d0df;
+}
+.mapsense-light.park {
+  fill: #caceb9;
+  stroke: none;
+}
+.mapsense-light.building {
+  fill: #d7d6d1;
+}
+.mapsense-light.school {
+  fill: #eadddb;
+  stroke: none;
+}
+.mapsense-light.other {
+  fill: none;
+  stroke: none;
+}
+.mapsense-light.urban {
+  fill: rgba(177, 135, 74, 0.07);
+  stroke: none;
+}
+.mapsense-light.ne_10m_roads {
+  stroke: #ededed;
+}
+.mapsense-light.motorway {
+  stroke: #f6f4f3;
+}
+.mapsense-light.arterial_major {
+  stroke: #f4f4ef;
+}
+.mapsense-light.arterial_minor {
+  stroke: #f1eded;
+}
+.mapsense-light.road_med {
+  stroke: #f6f3f3;
+}
+.mapsense-light.road_minor {
+  stroke: #faf8f8;
+}
+.mapsense-light.rail_major {
+  stroke: #cccccc;
+}
+.mapsense-light.rail_minor {
+  stroke: #cccccc;
+}
+.mapsense-light.runway {
+  stroke: #ccc;
+}
+.mapsense-light.path {
+  stroke: #ccc;
+}
+.mapsense-parchment.labels {
+  font-size: 14;
+  fill: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  /*stroke: grey;*/
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-parchment.tile-background {
+  fill: #b8bdc1;
+}
+.mapsense-parchment.land {
+  fill: #e3d6c5;
+  stroke: #976f60;
+  stroke-width: 1;
+}
+.mapsense-parchment.water_polygon {
+  fill: #b8bdc1;
+  stroke: #976f60;
+  stroke-width: .5;
+}
+.mapsense-parchment.water_line {
+  stroke: #b8bdc1;
+}
+.mapsense-parchment.park {
+  fill: #cbbca6;
+}
+.mapsense-parchment.building {
+  fill: #d4c9ba;
+}
+.mapsense-parchment.school {
+  fill: rgba(90, 46, 5, 0.12);
+  stroke: none;
+}
+.mapsense-parchment.other {
+  fill: #e3d6c5;
+  stroke: none;
+}
+.mapsense-parchment.urban {
+  fill: rgba(255, 255, 255, 0.3);
+  stroke: none;
+}
+.mapsense-parchment.ne_10m_roads {
+  stroke: #aea295;
+}
+.mapsense-parchment.motorway {
+  stroke: #aea295;
+}
+.mapsense-parchment.arterial_major {
+  stroke: #d5c5b7;
+}
+.mapsense-parchment.arterial_minor {
+  stroke: #cab7aa;
+}
+.mapsense-parchment.road_med {
+  stroke: #d8c8bb;
+}
+.mapsense-parchment.road_minor {
+  stroke: #d8c8bb;
+}
+.mapsense-parchment.rail_major {
+  stroke: #bda897;
+}
+.mapsense-parchment.rail_minor {
+  stroke: #bda897;
+}
+.mapsense-parchment.runway {
+  stroke: #ede5d5;
+}
+.mapsense-parchment.path {
+  stroke: #ede5d5;
+}
+.mapsense-parchment.country_border,
+.mapsense-parchment.disputed_border {
+  stroke: #976f60;
+}
+.mapsense-parchment.state_border {
+  stroke: #976f60;
+}
+.mapsense-sketch.labels {
+  font-size: 14;
+  fill: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-sketch.tile-background {
+  fill: #f0f0f0;
+}
+.mapsense-sketch.land {
+  fill: #ffffff;
+  stroke: #bdbcbc;
+  stroke-width: 1;
+}
+.mapsense-sketch.water_polygon {
+  fill: #f0f0f0;
+  stroke: #bdbcbc;
+  stroke-width: .5;
+}
+.mapsense-sketch.water_line {
+  stroke: #cccaca;
+}
+.mapsense-sketch.park {
+  fill: none;
+  stroke-width: .55;
+  stroke: #dad8d8;
+}
+.mapsense-sketch.building {
+  fill: none;
+  stroke: #d4d4d4;
+  stroke-width: .52;
+}
+.mapsense-sketch.school {
+  fill: none;
+  stroke: #dadada;
+}
+.mapsense-sketch.urban {
+  fill: none;
+  stroke: none;
+}
+.mapsense-sketch.ne_10m_roads {
+  stroke: #eee;
+}
+.mapsense-sketch.motorway {
+  stroke: #ddd;
+}
+.mapsense-sketch.arterial_major {
+  stroke: #eee;
+}
+.mapsense-sketch.arterial_minor {
+  stroke: #eee;
+}
+.mapsense-sketch.road_med {
+  stroke: #eee;
+}
+.mapsense-sketch.road_minor {
+  stroke: #f5f5f5;
+}
+.mapsense-sketch.rail_major {
+  stroke: #ddd;
+}
+.mapsense-sketch.rail_minor {
+  stroke: #ddd;
+}
+.mapsense-sketch.runway {
+  stroke: #ddd;
+}
+.mapsense-sketch.path {
+  stroke: #f5f5f5;
+}
+.mapsense-sketch.country_border,
+.mapsense-sketch.disputed_border {
+  stroke: #ccc;
+}
+.mapsense-sketch.state_border {
+  stroke: #ccc;
+}
+.mapsense-tron.labels {
+  font-size: 14;
+  fill: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  stroke-width: .3;
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-tron.tile-background {
+  fill: #000000;
+}
+.mapsense-tron.land {
+  fill: #172c3a;
+  stroke: none;
+}
+.mapsense-tron.water_polygon {
+  stroke: none;
+  fill: black;
+}
+.mapsense-tron.country_border,
+.mapsense-tron.disputed_border {
+  stroke: #666;
+}
+.mapsense-tron.state_border {
+  stroke: #666;
+}
+.mapsense-tron.water_line {
+  stroke: #111119;
+}
+.mapsense-tron.park {
+  fill: #060a10;
+}
+.mapsense-tron.building {
+  fill: #07212a;
+  stroke: none;
+}
+.mapsense-tron.school {
+  fill: #162532;
+  stroke: none;
+}
+.mapsense-tron.other {
+  fill: #11242d;
+  stroke: none;
+}
+.mapsense-tron.urban {
+  fill: none;
+  stroke: none;
+}
+.mapsense-tron.ne_10m_roads {
+  stroke: #36606f;
+}
+.mapsense-tron.motorway {
+  stroke: #36606f;
+}
+.mapsense-tron.arterial_major {
+  stroke: #295563;
+}
+.mapsense-tron.arterial_minor {
+  stroke: #295563;
+}
+.mapsense-tron.road_med {
+  stroke: #2b3e49;
+}
+.mapsense-tron.road_minor {
+  stroke: #1b333a;
+}
+.mapsense-tron.rail_major {
+  stroke: #1b333a;
+}
+.mapsense-tron.rail_minor {
+  stroke: #1b333a;
+}
+.mapsense-tron.runway {
+  stroke: #1e414c;
+}
+.mapsense-tron.path {
+  stroke: #1b333a;
+}
+.mapsense-vintage.labels {
+  font-size: 16;
+  fill: #4c83b2;
+  font-weight: 400;
+  text-transform: uppercase;
+  stroke-width: .3;
+  stroke: grey;
+  font-stretch: expanded;
+  letter-spacing: 1.5;
+  font-family: "Josefin Sans";
+}
+.mapsense-vintage.tile-background {
+  fill: #87c8ca;
+}
+.mapsense-vintage.land {
+  fill: #fffaf2;
+}
+.mapsense-vintage.water_polygon {
+  fill: #87c8ca;
+}
+.mapsense-vintage.country_border,
+.mapsense-vintage.disputed_border {
+  stroke: #aaa;
+}
+.mapsense-vintage.state_border {
+  stroke: #aaa;
+}
+.mapsense-vintage.water_line {
+  stroke: #b5e2e4;
+}
+.mapsense-vintage.park {
+  fill: #c6f3bd;
+  stroke: none;
+}
+.mapsense-vintage.building {
+  fill: #f9ece2;
+  stroke: none;
+}
+.mapsense-vintage.school {
+  fill: #f0eced;
+  stroke: none;
+}
+.mapsense-vintage.urban {
+  fill: rgba(243, 210, 191, 0.19);
+  stroke: none;
+}
+.mapsense-vintage.ne_10m_roads {
+  stroke: #ffb67e;
+}
+.mapsense-vintage.motorway {
+  stroke: #f6bd86;
+}
+.mapsense-vintage.arterial_major {
+  stroke: #c2d7df;
+}
+.mapsense-vintage.arterial_minor {
+  stroke: #cfdddb;
+}
+.mapsense-vintage.road_med {
+  stroke: #dae9ea;
+}
+.mapsense-vintage.road_minor {
+  stroke: #ededed;
+}
+.mapsense-vintage.rail_major {
+  stroke: #c7c4c4;
+}
+.mapsense-vintage.rail_minor {
+  stroke: #c7c4c4;
+}
+.mapsense-vintage.runway {
+  stroke: #e1dede;
+}
+.mapsense-vintage.path {
+  stroke: #e1dede;
+}
+svg.mapsense-map {
+  width: 100%;
+  height: 100%;
+}

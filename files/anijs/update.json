@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "anijs",
+  "repo": "anijs/anijs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

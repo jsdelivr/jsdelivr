@@ -1,7 +1,7 @@
 {
   "packageManager": "github",
   "name": "bootstrap.tagsinput",
-  "repo": "TimSchlechter/bootstrap-tagsinput",
+  "repo": "bootstrap-tagsinput/bootstrap-tagsinput",
   "files": {
     "basePath": "dist/",
     "include": ["bootstrap-tagsinput.min.js", "bootstrap-tagsinput.min.js.map", "bootstrap-tagsinput.less", "bootstrap-tagsinput.js", "bootstrap-tagsinput.css", "bootstrap-tagsinput-angular.min.js", "bootstrap-tagsinput-angular.js"]

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.formvalidation",
+  "repo": "formvalidation/formvalidation",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*.min.css", "**/*.min.js", "js/language/*.js"]
+  }
+}

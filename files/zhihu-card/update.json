@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "zhihu-card",
+  "repo": "laike9m/zhihu-card",
+  "files": {
+    "basePath": "jsdelivr/"
+  }
+}

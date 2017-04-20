@@ -1,0 +1,38 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-icon="thumb" width="128" height="128" class="iconic iconic-thumb" viewBox="0 0 128 128">
+  <g><title>Thumb</title></g>
+  <g data-width="126" data-height="128" class="iconic-lg iconic-container" display="inline" transform="translate(1)">
+    <g class="iconic-thumbs-up">
+      <path d="M0 52l10 76h22v-76h-32zm26 72c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" class="iconic-thumbs-up-cuff iconic-property-accent iconic-property-fill"/>
+      <path d="M117 54h-27c-5 0-9-4.5-9-9s5-15 5-31v-5c0-5-4-9-9-9h-6c-1.7 0-3 1.3-3 3v11c0 12.1-11.6 27.2-19.3 34.7-3.3 3.4-7.7 5.3-12.7 5.3v68s8 4 20 4h43c3.7 0 6.9-2.3 8.3-5.5 0 0 15-42.1 18.1-54.5.4-1.4.6-2.5.6-3 0-5.1-4-9-9-9z" class="iconic-thumbs-up-hand iconic-property-fill"/>
+    </g>
+    <g class="iconic-thumbs-down" display="none">
+      <path d="M10 0l-10 76h32v-76h-22zm16 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" class="iconic-thumbs-down-cuff iconic-property-accent iconic-property-fill"/>
+      <path d="M125.4 62c-3.1-12.4-18.1-54.5-18.1-54.5-1.4-3.2-4.6-5.5-8.3-5.5h-43l-20 4v68c5 0 9.4 1.9 12.7 5.3 7.7 7.5 19.3 22.6 19.3 34.7v11c0 1.7 1.3 3 3 3h6c5 0 9-4 9-9v-5c0-16-5-26.5-5-31s4-9 9-9h27c5 0 9-3.9 9-9 0-.5-.2-1.6-.6-3z" class="iconic-thumbs-down-hand iconic-property-fill"/>
+    </g>
+  </g>
+  <g data-width="32" data-height="32" class="iconic-md iconic-container" display="none" transform="scale(4)">
+    <g class="iconic-thumbs-up">
+      <path d="M0 13l2 19h5v-19h-7zm5 18c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" class="iconic-thumbs-up-cuff iconic-property-accent iconic-property-fill"/>
+      <path d="M29.7 13h-7.2c-1.2 0-2.2-1.1-2.2-2.3s1.7-3.7 1.7-6.7v-1.5c0-1.4-1.1-2.5-2.5-2.5h-1.8c-.4 0-.7.3-.7.8v2.8c0 3-2.9 6.3-4.8 8.2-.9.7-2 1.2-3.2 1.2v17s2 1 5 1h11.2c.9 0 1.7-.6 2.1-1.4 0 0 3.8-10.5 4.5-13.6.1-.4.1-.6.1-.8.1-1.2-.9-2.2-2.2-2.2z" class="iconic-thumbs-up-hand iconic-property-fill"/>
+    </g>
+    <g class="iconic-thumbs-down" display="none">
+      <path d="M2 0l-2 19h7v-19h-5zm3 3c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" class="iconic-thumbs-down-cuff iconic-property-accent iconic-property-fill"/>
+      <path d="M31.9 16c-.8-3.1-4.5-13.6-4.5-13.6-.4-.8-1.2-1.4-2.1-1.4h-11.3l-5 1v17c1.2 0 2.3.5 3.2 1.3 1.9 1.9 4.8 5.1 4.8 8.2v2.8c0 .4.3.8.8.8h1.8c1.4 0 2.5-1.1 2.5-2.5v-1.5c0-3-1.7-5.6-1.7-6.7s1.4-2.4 2.6-2.4h6.8c1.2 0 2.2-1 2.2-2.2 0-.2 0-.4-.1-.8z" class="iconic-thumbs-down-hand iconic-property-fill"/>
+    </g>
+  </g>
+  <g data-width="14" data-height="14" class="iconic-sm iconic-container" display="none" transform="scale(8) translate(1 1)">
+    <g class="iconic-thumbs-up">
+      <path class="iconic-thumbs-up-cuff iconic-property-accent iconic-property-fill" d="M0 6h3v8h-3z"/>
+      <path d="M13 6h-3c-.6 0-1-.5-1-1s.8-3.2 1-3.7c.1-.5-.2-1.1-.7-1.3-.5-.1-1 .2-1.3.7-.3.5-2.2 4.3-2.6 4.7s-.8.6-1.4.6v8h7c.4 0 .8-.3.9-.6 0 0 2.1-5.8 2.1-6.4s-.4-1-1-1z" class="iconic-thumbs-up-hand iconic-property-fill"/>
+    </g>
+    <g class="iconic-thumbs-down" display="none">
+      <path class="iconic-thumbs-down-cuff iconic-property-accent iconic-property-fill" d="M0 0h3v8h-3z"/>
+      <path d="M11.9.6c-.1-.3-.5-.6-.9-.6h-7v8c.6 0 1 .2 1.4.6.4.4 2.3 4.2 2.6 4.7.3.5.8.8 1.3.7.5-.2.8-.7.7-1.3-.2-.5-1-3.2-1-3.7s.4-1 1-1h3c.6 0 1-.4 1-1l-2.1-6.4z" class="iconic-thumbs-down-hand iconic-property-fill"/>
+    </g>
+  </g>
+<script class="iconic-api" type="application/ecmascript">
+//<![CDATA[
+var iconicApis=window._Iconic?window._Iconic.smartIconApis:{};iconicApis["thumb"]=iconicApis["thumb"]||function(t){var e=function(e){t.setAttribute("data-state",e);var i,r,n=t.querySelectorAll(".iconic-thumbs-up"),a=t.querySelectorAll(".iconic-thumbs-down");i=r="none","down"===e?r="inline":i="inline";for(var c=0;c<n.length;c++)n[c].setAttribute("display",i),a[c].setAttribute("display",r)},i=function(){var i=t.getAttribute("data-state");i&&e(i)};return{update:i,setState:e}};
+//]]>
+</script>
+</svg>

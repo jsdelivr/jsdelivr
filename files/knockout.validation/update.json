@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Knockout-Validation",
+  "repo": "Knockout-Contrib/Knockout-Validation",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.js", "*.js.map"]
+  }
+}

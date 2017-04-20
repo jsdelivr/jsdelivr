@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "docsify",
+  "repo": "QingWei-Li/docsify",
+  "files": {
+    "include": ["./lib/**/*", "./themes/**.css"]
+  }
+}

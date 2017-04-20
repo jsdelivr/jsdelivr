@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "clappr-markers-plugin",
+  "repo": "tjenkinson/clappr-markers-plugin",
+  "files": {
+    "basePath": "dist/"
+  }
+}

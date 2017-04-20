@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "es6-promise",
+  "repo": "stefanpenner/es6-promise",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "es6-promise.js", "es6-promise.min.js", 
+      "es6-promise.auto.js", "es6-promise.auto.min.js"
+    ]
+  }
+}

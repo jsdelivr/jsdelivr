@@ -1,0 +1,76 @@
+{
+    "lang": "he", 
+    "messages": {
+        "loading": "טוען...", 
+        "contract_timeline": "צמצם את ציר הזמן", 
+        "return_to_title": "חזור לכותרת", 
+        "wikipedia": "מויקיפדיה, האינציקלופדיה החופשית", 
+        "loading_content": "התוכן בטעינה...", 
+        "expand_timeline": "הרחב את ציר הזמן", 
+        "loading_timeline": "טוען את ציר הזמן... "
+    }, 
+    "api": {
+        "wikipedia": "he"
+    }, 
+    "right_to_left": true, 
+    "date": {
+        "month_abbr": [
+            "ינואר", 
+            "פברואר", 
+            "מרץ", 
+            "אפריל", 
+            "מאי", 
+            "יוני", 
+            "יולי", 
+            "אוגוסט", 
+            "ספטמבר", 
+            "אוקטובר", 
+            "נובמבר", 
+            "דצמבר"
+        ], 
+        "day_abbr": [
+            "יום א'", 
+            "יום ב'", 
+            "יום ג'", 
+            "יום ד'", 
+            "יום ה'", 
+            "יום ו'", 
+            "שבת"
+        ], 
+        "day": [
+            "ראשון", 
+            "שני", 
+            "שלישי", 
+            "רביעי", 
+            "חמישי", 
+            "שישי", 
+            "שבת"
+        ], 
+        "month": [
+            "ינואר", 
+            "פברואר", 
+            "מרץ", 
+            "אפריל", 
+            "מאי", 
+            "יוני", 
+            "יולי", 
+            "אוגוסט", 
+            "ספטמבר", 
+            "אוקטובר", 
+            "נובמבר", 
+            "דצמבר"
+        ]
+    }, 
+    "dateformats": {
+        "full_long": "d' mmm,' yyyy 'at' h:MM TT", 
+        "full_short": "d mmm", 
+        "full": "d mmmm,' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'mmmm d',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "wave.io",
+  "repo": "rannn505/wave.io",
+  "files": {
+    "basePath": "dist/",
+    "include": ["wave.io.min.js"]
+  }
+}

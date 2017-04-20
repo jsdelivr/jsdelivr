@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.timeliny",
+  "repo": "maoosi/jquery.timeliny",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*"]
+  }
+}

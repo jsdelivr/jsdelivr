@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "sharepointplus",
+  "repo": "aymkdn/sharepointplus",
+  "files": {
+    "basePath": "jsdelivr/"
+  }
+}

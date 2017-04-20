@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jsmediatags",
+  "repo": "aadsm/jsmediatags",
+  "files": {
+    "include": ["dist/jsmediatags.js", "dist/jsmediatags.min.js"]
+  }
+}

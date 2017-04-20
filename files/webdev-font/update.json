@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "webdev-font",
+  "repo": "nickpolet/webdev-font",
+  "files": {
+    "include": ["./css/webdev-font.min.css", "./fonts/webdev-font.eot", "./fonts/webdev-font.ttf", "./fonts/webdev-font.woff"]
+  }
+}

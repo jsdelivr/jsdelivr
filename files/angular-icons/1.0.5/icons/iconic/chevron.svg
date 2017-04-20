@@ -1,0 +1,28 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-icon="chevron" width="128" height="128" class="iconic iconic-chevron" viewBox="0 0 128 128">
+  <g><title>Chevron</title></g>
+  <defs>
+    <clipPath id="iconic-size-lg-chevron-clip-0">
+      <path d="M0 0h88v128h-88z"/>
+    </clipPath>
+    <clipPath id="iconic-size-md-chevron-clip-0">
+      <path d="M0 0h26v32h-26z"/>
+    </clipPath>
+    <clipPath id="iconic-size-sm-chevron-clip-0">
+      <path d="M0 0h14v16h-14z"/>
+    </clipPath>
+  </defs>
+  <g data-width="128" data-height="128" class="iconic-lg iconic-container" display="inline" transform="translate(12)">
+    <path clip-path="url(#iconic-size-lg-chevron-clip-0)" stroke="#000" stroke-width="16" stroke-linecap="square" stroke-miterlimit="10" class="iconic-property-stroke" d="M-8-20l84 84-84 84" fill="none"/>
+  </g>
+  <g data-width="32" data-height="32" class="iconic-md iconic-container" display="none" transform="scale(4) translate(1)">
+    <path clip-path="url(#iconic-size-md-chevron-clip-0)" stroke="#000" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" class="iconic-property-stroke" d="M-1-6l22 22-22 22" fill="none"/>
+  </g>
+  <g data-width="16" data-height="16" class="iconic-sm iconic-container" display="none" transform="scale(8)">
+    <path clip-path="url(#iconic-size-sm-chevron-clip-0)" stroke="#000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" class="iconic-property-stroke" d="M1.7-1.3l9.3 9.3-13.1 13.1" fill="none"/>
+  </g>
+<script class="iconic-api" type="application/ecmascript">
+//<![CDATA[
+var iconicApis=window._Iconic?window._Iconic.smartIconApis:{};iconicApis["chevron"]=iconicApis["chevron"]||function(t){function e(e){t.setAttribute("data-direction",e);var n=0;switch(e){case"top":n=270;break;case"left":n=180;break;case"bottom":n=90;break;default:n=0}r.setAttribute("transform","rotate("+n+" 64 64) translate(12) "),a.setAttribute("transform","scale(4) rotate("+n+" 16 16) translate(1)"),i.setAttribute("transform","scale(8) rotate("+n+" 8 8)")}var r=t.querySelector(".iconic-lg"),a=t.querySelector(".iconic-md"),i=t.querySelector(".iconic-sm"),n=function(){var r=t.getAttribute("data-direction")||"";e(r)};return{update:n,setDirection:e}};
+//]]>
+</script>
+</svg>

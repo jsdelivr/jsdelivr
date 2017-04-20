@@ -1,0 +1,15 @@
+{
+  "packageManager": "npm",
+  "name": "edgemesh",
+  "repo": "edgemesh/edgemesh",
+  "files": {
+    "basePath": "dist",
+    "include": [
+      "edgemesh.client.min.js",
+      "edgemesh.hub.min.js",
+      "edgemesh.worker.min.js",
+      "edgemesh.sw.min.js",
+      "edgemesh.track.min.js"
+    ]
+  }
+}

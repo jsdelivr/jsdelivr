@@ -4,6 +4,6 @@
   "repo": "proactjs/proactjs",
   "files": {
     "basePath": "dist/js",
-    "exclude": ["proact.js"]
+    "include": ["proact.min.js"]
   }
 }

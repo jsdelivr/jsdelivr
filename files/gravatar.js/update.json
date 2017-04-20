@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "gravatar.js",
+  "repo": "CosmicWebServices/gravatar.js",
+  "files": {
+    "include": ["md5.min.js", "gravatar.min.js"]
+  }
+}

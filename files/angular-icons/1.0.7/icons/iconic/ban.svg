@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-ban" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Ban</title>
+  </g>
+  <g class="iconic-ban-lg iconic-container iconic-lg" data-width="128" data-height="128" display="inline">
+    <path stroke="#000" stroke-width="8" class="iconic-ban-strike iconic-property-accent iconic-property-stroke" d="M107.841 20.159l-87.674 87.674" fill="none" />
+    <circle stroke="#000" stroke-width="8" cx="64" cy="64" r="60" class="iconic-ban-circle iconic-property-stroke" fill="none" />
+  </g>
+  <g class="iconic-ban-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
+    <path stroke="#000" stroke-width="3" class="iconic-ban-strike iconic-property-accent iconic-property-stroke" d="M26.59 5.41l-21.197 21.197" fill="none" />
+    <circle stroke="#000" stroke-width="3" cx="16" cy="16" r="14.5" class="iconic-ban-circle iconic-property-stroke" fill="none" />
+  </g>
+  <g class="iconic-ban-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
+    <path stroke="#000" stroke-width="2" stroke-linejoin="round" class="iconic-ban-strike iconic-property-accent iconic-property-stroke" d="M13 3l-10 10" fill="none" />
+    <circle stroke="#000" stroke-width="2" stroke-linejoin="round" cx="8" cy="8" r="7" class="iconic-ban-circle iconic-property-stroke" fill="none" />
+  </g>
+</svg>

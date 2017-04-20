@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "qoopido.js",
+	"repo": "dlueth/qoopido.js",
+	"files": {
+		"basePath": "dist/latest/min"
+	}
+}

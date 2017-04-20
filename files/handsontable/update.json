@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "handsontable",
+  "repo": "handsontable/handsontable",
+  "files": {
+    "include": ["dist/*.min.*", "./plugins/**/*"]
+  }
+}

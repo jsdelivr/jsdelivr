@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "clappr-level-selector-plugin",
+  "repo": "clappr/clappr-level-selector-plugin",
+  "files": {
+    "basePath": "dist/",
+    "include": ["level-selector.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-data-localforage",
+  "repo": "js-data/js-data-localforage",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js-data-localforage.min.js"]
+  }
+}

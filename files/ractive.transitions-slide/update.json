@@ -3,6 +3,7 @@
   "name": "ractive-transitions-slide",
   "repo": "ractivejs/ractive-transitions-slide",
   "files": {
-    "include": ["ractive-transitions-slide.min.js"]
+		"basePath": "dist/",
+		"include": ["*.min.*"]
   }
 }

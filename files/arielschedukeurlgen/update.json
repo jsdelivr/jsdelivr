@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "ArielScheduleUrlgen",
+  "repo": "komikoni/ArielScheduleUrlgen",
+  "files": {
+    "basePath": "/dist/",
+    "include": [
+      "bundle.js"
+    ]
+  }
+}

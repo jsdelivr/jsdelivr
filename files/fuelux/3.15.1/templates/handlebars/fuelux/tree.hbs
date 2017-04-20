@@ -1,0 +1,29 @@
+<ul class="tree {{#if folderSelect}}tree-folder-select{{/if}}" id="{{#if id}}{{id}}{{else}}myTree{{/if}}" role="tree">
+	<li class="tree-branch hidden" data-template="treebranch" role="treeitem" aria-expanded="false">
+		<div class="tree-branch-header">
+			{{#if folderSelect}}<button type="button" class="glyphicon icon-caret glyphicon-play"><span class="sr-only">Open</span></button>{{/if}}
+			<button type="button" class="tree-branch-name">
+				{{#unless folderSelect}}<span class="glyphicon icon-caret glyphicon-play"></span>{{/unless}}
+				<span class="glyphicon icon-folder glyphicon-folder-close"></span>
+				<span class="tree-label"></span>
+			</button>
+		</div>
+		<ul class="tree-branch-children" role="group"></ul>
+		<!-- this loader shows on nested folders and when overflow is triggered -->
+		{{#if loaderHTML }}{{loaderHTML}}{{else}}<div class="tree-loader hidden" role="alert">Loading...</div>{{/if}}
+	</li>
+	<li class="tree-item hidden" data-template="treeitem" role="treeitem">
+		<button type="button" class="tree-item-name">
+			<span class="glyphicon icon-item fueluxicon-bullet"></span>
+			<span class="tree-label"></span>
+		</button>
+	</li>
+	<li class="tree-overflow hidden" data-template="treeoverflow" role="treeitem">
+		<button type="button" class="tree-overflow-name">
+			<span class="glyphicon"></span>
+			<span class="tree-label"></span>
+		</button>
+	</li>
+	<!-- Loader shown at root level and when tree is loading -->
+	{{#if initialLoaderHTML}}{{initialLoaderHTML}}{{else}}{{#if loaderHTML }}{{loaderHTML}}{{else}}<li class="tree-loader hidden" role="alert">Loading...</li>{{/if}}{{/if}}
+</ul>

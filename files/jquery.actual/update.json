@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.actual",
+  "repo": "dreamerslab/jquery.actual",
+  "files": {
+    "include": ["jquery.actual.min.js"]
+  }
+}

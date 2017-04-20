@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.strap",
+  "repo": "mgcrea/angular-strap",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js", "angular-strap.min.js.map", "./modules/*.min.js", "./modules/*.js.map"]
+  }
+}

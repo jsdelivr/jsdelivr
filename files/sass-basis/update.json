@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "sass-basis",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*"],
+    "exclude": ["aigis", "aigis/**"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "elixirjs",
+  "repo": "elixirads/elixirjs",
+  "files": {
+      "basePath": "dist/",
+      "include": ["elixir.min.js"]
+  }
+}

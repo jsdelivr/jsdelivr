@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "email-addresses",
+  "repo": "jackbowman/email-addresses",
+  "files": {
+    "include": ["lib/email-addresses.js", "lib/email-addresses.min.js"]
+  }
+}

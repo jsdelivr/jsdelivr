@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "es5-shim",
+  "repo": "es-shims/es5-shim",
+  "files": {
+    "include": ["es5-sham.js", "es5-sham.map", "es5-sham.min.js", "es5-shim.js", "es5-shim.map", "es5-shim.min.js"]
+  }
+}

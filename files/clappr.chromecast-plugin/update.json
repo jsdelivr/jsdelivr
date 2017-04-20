@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "clappr-chromecast-plugin",
+  "repo": "clappr/clappr-chromecast-plugin",
+  "files": {
+    "basePath": "dist/"
+  }
+}

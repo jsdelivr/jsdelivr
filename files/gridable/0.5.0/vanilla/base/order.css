@@ -1,0 +1,9 @@
+.ga-grid, .ga-grid.order\:normal {
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.ga-grid.order\:reverse {
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }

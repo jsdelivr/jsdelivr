@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "@hola.org%2fhap.js",
+  "repo": "hola/hap.js",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "etp",
+  "repo": "wsmckenz/etp",
+  "files": {
+    "basePath": "lib/browser",
+    "include": ["etp.min.js"]
+  }
+}

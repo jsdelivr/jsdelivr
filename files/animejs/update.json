@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "animejs",
+  "repo": "juliangarnier/anime",
+  "files": {
+    "include": ["anime.js", "anime.min.js"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.ui-router.extras",
+  "repo": "christopherthielen/ui-router-extras",
+  "files": {
+    "basePath": "release/",
+    "include": ["*.min.*", "./modular/*.min.*"]
+  }
+}

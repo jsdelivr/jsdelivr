@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "matchheight",
+  "repo": "liabru/jquery-match-height",
+  "files": {
+    "basePath": "dist"
+  }
+}

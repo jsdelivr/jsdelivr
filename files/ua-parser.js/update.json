@@ -3,7 +3,6 @@
   "name": "ua-parser.js",
   "repo": "faisalman/ua-parser-js",
   "files": {
-	"basePath": "src/",
-	"include": ["ua-parser.js", "ua-parser.min.js"]
+	"include": ["src/ua-parser.js", "dist/ua-parser.min.js"]
   }
 }

@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.locker",
+  "repo": "tymondesigns/angular-locker",
+  "files": {
+	"basePath": "dist/",
+	"include": ["angular-locker.min.js", "angular-locker.min.js.map"]
+ }
+}

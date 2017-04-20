@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vivus",
+  "repo": "maxwellito/vivus",
+  "files": {
+    "basePath": "dist/",
+	"include": ["vivus.min.js"]
+  }
+}

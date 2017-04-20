@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "require-text",
-  "repo": "requirejs/text",
-  "files": {
-    "basePath": "/",
-    "include": ["text.js"]
-  }
-}

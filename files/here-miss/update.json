@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "here-miss",
+	"repo": "eustasy/here-miss",
+	"files": {
+		"include": ["here-miss.min.js"]
+	}
+}

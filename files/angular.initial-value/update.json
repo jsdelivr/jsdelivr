@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.initial-value",
+  "repo": "glaucocustodio/angular-initial-value",
+  "files": {
+    "basePath": "dist/",
+    "include": ["angular-initial-value.min.js"]
+  }
+}

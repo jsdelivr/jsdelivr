@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.router",
+  "repo": "vuejs/vue-router",
+  "files": {
+  "basePath" : "dist/",
+    "include": ["vue-router.min.js"]
+  }
+}

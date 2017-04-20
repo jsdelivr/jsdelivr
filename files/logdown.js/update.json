@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "logdown",
+  "repo": "caiogondim/logdown.js",
+  "files": {
+    "include": ["dist/logdown.js"]
+  }
+}

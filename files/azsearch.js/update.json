@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "azsearch.js",
+  "repo": "evboyle/azsearch.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["AzSearch.bundle.js", "AzSearch.bundle.js.map", "AzSearch.css"]
+  }
+}

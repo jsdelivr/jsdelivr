@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "open-location-code",
+  "repo": "google/open-location-code",
+  "files": {
+    "basePath": "js/src",
+    "include": ["openlocationcode.js", "openlocationcode.min.js"]
+  }
+}

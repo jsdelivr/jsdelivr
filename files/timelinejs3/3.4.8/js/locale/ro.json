@@ -1,0 +1,75 @@
+{
+    "lang": "ro", 
+    "date": {
+        "month_abbr": [
+            "Ian.", 
+            "Feb.", 
+            "Mar.", 
+            "Apr.", 
+            "Mai", 
+            "Iun.", 
+            "Iul.", 
+            "Aug.", 
+            "Sep.", 
+            "Oct.", 
+            "Noi.", 
+            "Dec."
+        ], 
+        "day_abbr": [
+            "Dum.", 
+            "Luni", 
+            "Mar.", 
+            "Mie.", 
+            "Joi", 
+            "Vin.", 
+            "Sâm."
+        ], 
+        "day": [
+            "Duminică", 
+            "Luni", 
+            "Marți", 
+            "Miercuri", 
+            "Joi", 
+            "Vineri", 
+            "Sâmbătă"
+        ], 
+        "month": [
+            "Ianuarie", 
+            "Februarie", 
+            "Martie", 
+            "Aprilie", 
+            "Mai", 
+            "Iunie", 
+            "Iulie", 
+            "August", 
+            "Septembrie", 
+            "Octombrie", 
+            "Noiembrie", 
+            "Decembrie"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "ro"
+    }, 
+    "messages": {
+        "loading": "Se încarcă", 
+        "contract_timeline": "Restrânge cronologia", 
+        "return_to_title": "Înapoi la titlu", 
+        "wikipedia": "De pe Wikipedia, enciclopedia gratuită", 
+        "loading_content": "Se încarcă conținutul", 
+        "expand_timeline": "Extinde cronologia", 
+        "loading_timeline": "Se încarcă cronologia... "
+    }, 
+    "dateformats": {
+        "full_long": "d mmm',' yyyy 'at' h:MM TT", 
+        "full_short": "d mmm", 
+        "full": "d mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "h:MM TT'<br/><small>'d mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "h:MM TT", 
+        "time_short": "h:MM:ss TT", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>d mmm',' yyyy'</small>'"
+    }
+}

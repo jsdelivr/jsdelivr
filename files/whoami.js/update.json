@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "whoami.js",
+  "repo": "andersonba/whoami.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.js"]
+  }
+}

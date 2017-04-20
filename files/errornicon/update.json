@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "errornicon",
+  "repo": "Henry263/showError_n_IconJs",  
+  "files": {
+    "include": ["errornicon.css", "errornicon.min.js"]
+  }
+}

@@ -3,6 +3,6 @@
   "name": "shepherd",
   "repo": "HubSpot/shepherd",
   "files": {
-    "include": ["shepherd.min.js"]
+    "include": ["dist/js/shepherd.min.js"]
   }
 }

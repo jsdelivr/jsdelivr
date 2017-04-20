@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "anypicker",
+  "repo": "CuriousSolutions/AnyPicker",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*", 
+                "anypicker-font.css",
+                "./fonts/anypicker-font.ttf", 
+                "./fonts/anypicker-font.woff", 
+                "./fonts/anypicker-font.svg", 
+                "./fonts/anypicker-font.eot",
+                "./i18n/anypicker-i18n.js"
+              ]
+  }
+}

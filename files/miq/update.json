@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "miq",
+  "repo": "edwinm/miq",
+  "files": {
+    "include": ["miq-min.js"]
+  }
+}

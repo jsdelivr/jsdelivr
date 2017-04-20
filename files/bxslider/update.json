@@ -1,0 +1,15 @@
+{
+  "packageManager": "github",
+  "name": "bxslider",
+  "repo": "stevenwanderski/bxslider-4",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "jquery.bxslider.min.js",
+      "jquery.bxslider.js",
+      "jquery.bxslider.css",
+      "./images/*",
+      "./vendor/*"
+    ]
+  }
+}

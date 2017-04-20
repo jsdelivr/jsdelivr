@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "rtc",
+  "repo": "rtc-io/rtc",
+  "files": {
+    "basePath": "dist/",
+    "include": [ "rtc.min.js", "rtc.min.js.map" ]
+  }
+}

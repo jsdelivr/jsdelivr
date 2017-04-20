@@ -1,0 +1,16 @@
+{
+  "packageManager": "github",
+  "name": "voucherify.js",
+  "repo": "rspective/voucherify.js",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "voucherify.js",
+      "voucherify.min.js", 
+      "voucherify.min.js.map",
+      "voucherify.css",
+      "voucherify.min.css",
+      "voucherify.min.css.map"
+    ]
+  }
+}

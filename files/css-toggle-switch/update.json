@@ -1,0 +1,15 @@
+{
+  "packageManager": "github",
+  "name": "css-toggle-switch",
+  "repo": "ghinda/css-toggle-switch",
+  "files": {
+    "include": [
+      "dist/toggle-switch.css",
+      "dist/toggle-switch.css.map",
+      "dist/toggle-switch-px.css",
+      "dist/toggle-switch-px.css.map",
+      "dist/toggle-switch-rem.css",
+      "dist/toggle-switch-rem.css.map"
+    ]
+  }
+}

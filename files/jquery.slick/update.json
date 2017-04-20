@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "slick",
+  "repo": "kenwheeler/slick",
+  "files": {
+    "basePath": "slick/",
+    "include": ["slick.min.js", "slick.css", "slick-theme.css", "ajax-loader.gif", "./fonts/**/*"]
+  }
+}

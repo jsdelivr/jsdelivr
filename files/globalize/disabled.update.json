@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "globalize",
+  "repo": "jquery/globalize",
+  "files": {
+	"basePath": "dist/",
+    "include": ["globalize.js", "globalize.min.js", "globalize/date.min.js", "globalize/message.min.js", "globalize/number.min.js"]
+  }
+}

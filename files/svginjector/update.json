@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "SVGInjector",
+  "repo": "iconic/SVGInjector",
+  "files": {
+    "basePath": "dist"
+  }
+}

@@ -1,0 +1,33 @@
+
+/******************************************** 
+    Created on : Jan 12, 2017, 2:23:45 PM
+    Author     : harshilkumar
+*********************************************/
+
+.icon_pos{
+    position: relative;
+    top: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: top;
+    display: inline-block;
+}
+.icon_pos_top{
+    vertical-align: top;
+}
+.icon_specs{
+    color: #b91717;
+    position: relative;
+}
+.top_btm_pos{
+    margin: 5px;
+}
+i.info_icon span {
+  display: none;
+}
+i.info_icon:hover {
+  text-decoration: none;
+}
+
+/*========================*/
+

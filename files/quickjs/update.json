@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "QuickJS",
+  "repo": "mk2018/QuickJS",
+  "files": {
+    "basePath": "build/",
+    "include": ["quick.min.js", "quick.min.css", "quick.js", "quick.css"]
+  }
+}

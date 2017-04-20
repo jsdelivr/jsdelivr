@@ -4,6 +4,6 @@
   "repo": "matthieua/WOW",
   "files": {
     "basePath": "dist/",
-    "include": "*.min.js"
+	"include": ["wow.min.js"]
   }
 }

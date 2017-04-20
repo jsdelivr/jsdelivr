@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "unpoly",
+  "repo": "unpoly/unpoly",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*.min.*"]
+  }
+}

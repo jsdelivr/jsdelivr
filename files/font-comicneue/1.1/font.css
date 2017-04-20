@@ -45,114 +45,114 @@ body {
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Light.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Light.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Light.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Light.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Light-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Light-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Light-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Light-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 100;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Regular.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Regular.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Regular-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Regular-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Bold.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Bold.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Bold.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Comic Neue';
-  src: url('../fonts/ComicNeue-Bold-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Bold-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 700;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Light.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Light.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Light.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Light.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Light-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Light-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Light-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Light-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 100;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Regular.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Regular.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Regular-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Regular-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Regular-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Regular-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Regular-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
   font-style: oblique;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Bold.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Bold.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Bold.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Comic Neue Angular';
-  src: url('../fonts/ComicNeue-Angular-Bold-Oblique.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ComicNeue-Angular-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ComicNeue-Angular-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ComicNeue-Angular-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('ComicNeue-Angular-Bold-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('ComicNeue-Angular-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ComicNeue-Angular-Bold-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('ComicNeue-Angular-Bold-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 700;
   font-style: oblique;
 }

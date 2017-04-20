@@ -3,6 +3,7 @@
   "name": "semantic-ui",
   "repo": "Semantic-Org/Semantic-UI",
   "files": {
-    "basePath": "build/packaged/"
+    "basePath": "dist/",
+	"include": ["./components/**/*.min.*", "./themes/**/*", "semantic.min.css", "semantic.min.js"]
   }
 }

@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "inferno",
+  "repo": "infernojs/inferno",
+  "files": {
+    "basePath": "packages/inferno/dist/",
+    "include": ["*.js"],
+    "exclude": ["*.node.js"]
+  }
+}

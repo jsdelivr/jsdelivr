@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "check-browsers",
+  "repo": "perfectacle/check-browsers",
+  "files": {
+    "include": ["check-browsers.js", "check-browsers.min.js"]
+  }
+} 

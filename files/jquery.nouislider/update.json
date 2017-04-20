@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "nouislider",
+  "repo": "leongersen/noUiSlider",
+  "files": {
+    "basePath": "distribute/",
+    "include": ["*.min.js", "*.min.css"]
+  }
+}

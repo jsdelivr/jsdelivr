@@ -1,0 +1,45 @@
+{
+  "GtButton":
+  {
+    "1":"<button class=\"gt-button btn btn-primary\">{{text}}</button>",
+    "2":"<div class=\"btn-group\"><button type=\"button\" class=\"gt_button btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{text}} <span class=\"caret\"></span></button><ul class=\"gt-buttonList dropdown-menu\"></ul></div>",
+    "3":"<li><a href=\"#\" class=\"gt-button\">{{text}}</a></li>",
+    "navBar":"<li><a href=\"#\" class=\"gt-button\">{{text}}</a></li>",
+    "tabBar":"<li>{{text}}</li>"
+  },
+  "GtWindow":
+  {
+    "1":"<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><h4 class=\"modal-title\">{{title}}</h4></div><div class=\"modal-body\">{{body}}</div><div class=\"modal-footer\"><div class=\"my_other_buttons\"></div>[[closeButton]]</div></div></div></div>"
+  },
+  "GtNavBar":
+  {
+    "1":"<div class=\"gt-navbar\"><ul class=\"gt-navbar-left\"></ul><ul class=\"gt-navbar-right\"></ul></div>"
+  },
+  "GtTextEdit":
+  {
+    "singleline":"<input type=\"text\" class=\"\" value=\"{{text}}\" placeholder=\"{{placeholder}}\" />",
+    "password":"<input type=\"password\" class=\"\" value=\"{{text}}\" />",
+    "multiline":"<textarea placeholder=\"{{placeholder}}\" class=\"form-control\">{{text}}</textarea>"
+  },
+  "GtForm":
+  {
+    "1":"<form class=\"form-horizontal gt-form-container\"><fieldset><legend>{{title}}</legend></fieldset></form>",
+    "label":"<div class=\"gt-form-element gt-label-input\"></div>",
+    "element":"<div class=\"gt-form-element gt-label-input\"></div>"
+  },
+  "GtText":
+  {
+    "0":"<span>{{text}}</span>",
+    "navBar":"<span>{{text}}</span>"
+  },
+  "GtTabBar":
+  {
+    "1":"<div class=\"gt-tabbar\"><ul class=\"gt-tabbar-container\"></ul></div>"
+  },
+  "GtWidget":
+  {
+    "block":"<div class=\"gt-block gt-contents\"></div>"
+  }
+}
+
+

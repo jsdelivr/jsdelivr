@@ -1,0 +1,9 @@
+{
+    "packageManager": "github",
+    "name": "bootstrap.jasny",
+    "repo": "jasny/bootstrap",
+    "files": {
+        "basePath": "dist",
+        "include": ["./js/jasny-bootstrap.min.js", "./css/jasny-bootstrap.min.css"]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "lang": "vi",
+    "date": {
+        "month": [
+            "Tháng Một", 
+            "Tháng Hai", 
+            "Tháng ba", 
+            "Tháng Tư", 
+            "Tháng Năm", 
+            "Tháng Sáu", 
+            "Tháng Bảy", 
+            "Tháng Tám", 
+            "Tháng Chín", 
+            "Tháng Mười", 
+            "Tháng Mười Một", 
+            "Tháng Mười Hai"
+        ],
+       "month_abbr": [
+            "Tháng 01", 
+            "Tháng 02", 
+            "Tháng 03", 
+            "Tháng 04", 
+            "Tháng 05", 
+            "Tháng 06", 
+            "Tháng 07", 
+            "Tháng 08", 
+            "Tháng 09",
+            "Tháng 10", 
+            "Tháng 11", 
+            "Tháng 12"
+        ],
+        "day": [
+            "Chủ Nhật",
+            "Thứ Hai", 
+            "Thứ Ba", 
+            "Thứ Tư", 
+            "Thứ Năm", 
+            "Thứ Sáu", 
+            "Thứ Bảy"
+        ],
+        "day_abbr": [
+            "Chủ Nhật",
+            "Thứ 02", 
+            "Thứ 03", 
+            "Thứ 04", 
+            "Thứ 05", 
+            "Thứ 06", 
+            "Thứ 07"
+        ]
+    },
+    "api": {
+        "wikipedia": "vi"
+    },
+    "messages": {
+        "loading_timeline": "Tải dòng thời gian... ",
+        "return_to_title": "Quay lại từ đầu",
+        "expand_timeline": "Mở rộng",
+        "contract_timeline": "Thu nhỏ",
+        "wikipedia": "Từ Wikipedia, bách khoa toàn thư mở",
+        "loading_content": "Tải nội dung",
+        "loading": "Đang tải"
+    },
+    "dateformats": {
+        "year": "yyyy",
+        "month_short": "mmm",
+        "month": "mmmm yyyy",
+        "full_short": "mmm d",
+        "full": "'Ngày' d mmm 'Năm' yyyy",
+        "time_no_seconds_short": "H:MM ",
+        "time_no_seconds_small_date": "H:MM '<br/><small>Ngày' d mmm 'Năm' yyyy</small>'",
+        "full_long": "'Ngày 'd mmm 'Năm' yyyy 'lúc' H:MM",
+        "full_long_small_date": "H:MM '<br/><small>Ngày' d mmm 'Năm' yyyy'</small>'"
+    }
+}

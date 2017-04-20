@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "iview",
+  "repo": "iview/iview",
+  "files": {
+    "include": ["iview.js", "iview.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "spf",
+  "repo": "youtube/spfjs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

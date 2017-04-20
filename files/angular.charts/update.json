@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.charts",
+  "repo": "chinmaymk/angular-charts",
+  "files": {
+    "basePath": "dist/",
+	"include": ["angular-charts.min.js"]
+  }
+}

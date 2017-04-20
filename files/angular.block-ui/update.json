@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.block-ui",
+  "repo": "McNull/angular-block-ui",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["LICENSE", "README.md"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lovely-icons",
+  "repo": "douglasdeodato/lovely-icons",
+  "files": {
+    "include": ["./css/lovely-icons.min.css", "./lovely-icons/lovely-icons.min.css", "./lovely-icons/*"]
+  }
+}

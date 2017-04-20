@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "classList.js",
+  "repo": "eligrey/classList.js",
+  "files": {
+    "include": ["classList.min.js"]
+  }
+}

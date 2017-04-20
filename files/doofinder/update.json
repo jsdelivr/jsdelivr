@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "doofinder",
+  "repo": "doofinder/js-doofinder",
+  "files": {
+    "include": ["dist/doofinder.min.js","dist/doofinder.css"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular-bricklayer",
+  "repo": "JohnnyTheTank/angular-bricklayer",
+  "files": {
+    "include": ["dist/*.min.js"]
+  }
+}

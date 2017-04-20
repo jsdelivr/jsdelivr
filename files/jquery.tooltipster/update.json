@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.tooltipster",
+  "repo": "iamceege/tooltipster",
+  "files": {
+    "basePath": "dist/",
+    "include": ["**/*.min.js", "**/*.min.css"]
+  }
+}

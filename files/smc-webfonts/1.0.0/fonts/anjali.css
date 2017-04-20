@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'AnjaliOldLipi';
+	src: url('AnjaliOldLipi/AnjaliOldLipi.eot');
+	src: url('AnjaliOldLipi/AnjaliOldLipi.eot?#iefix') format('embedded-opentype'),
+		url('AnjaliOldLipi/AnjaliOldLipi.woff2') format('woff2'),
+		url('AnjaliOldLipi/AnjaliOldLipi.woff') format('woff'),
+		url('AnjaliOldLipi/AnjaliOldLipi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

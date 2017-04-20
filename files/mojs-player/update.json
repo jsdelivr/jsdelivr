@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mojs-player",
+  "repo": "legomushroom/mojs-player",
+  "files": {
+    "include": [ "build/mojs-player.min.js", "build/mojs-player.js" ]
+  }
+}

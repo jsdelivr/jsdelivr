@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lg-video",
+  "repo": "sachinchoolur/lg-video",
+  "files": {
+    "basePath": "dist/"
+  }
+}

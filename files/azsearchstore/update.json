@@ -1,0 +1,10 @@
+
+{
+  "packageManager": "npm",
+  "name": "azsearchstore",
+  "repo": "evboyle/azsearchstore",
+  "files": {
+    "basePath": "dist/",
+    "include": ["AzSearchStore.bundle.js", "AzSearchStore.bundle.js.map"]
+  }
+}

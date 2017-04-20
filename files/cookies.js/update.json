@@ -3,6 +3,7 @@
   "name": "cookies.js",
   "repo": "ScottHamper/Cookies",
   "files": {
-    "include": ["dist/cookies.min.js", "src/cookies.js"]
+    "basePath": "dist/",
+	"include": ["cookies.min.js"]
   }
 }

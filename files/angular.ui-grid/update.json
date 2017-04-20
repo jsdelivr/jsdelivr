@@ -3,7 +3,7 @@
     "name": "ui-grid", 
     "repo": "angular-ui/ui-grid.info/",
     "files": { 
-        "basePath": "tree/gh-pages/release/",
+        "basePath": "release/",
         "include": [
             "ui-grid-unstable.min.js", 
             "ui-grid-unstable.min.css",  
@@ -13,10 +13,6 @@
             "ui-grid.woff",
             "ui-grid.svg",
             "ui-grid.ttf" 
-        ], 
-        "exclude": [
-            "ui-grid.css",
-            "ui-grid.js" 
         ]
     }
 }

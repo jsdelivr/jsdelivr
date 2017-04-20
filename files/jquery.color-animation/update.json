@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.color-animation",
+  "repo": "edwinm/Color-animation-jQuery-plugin",
+  "files": {
+    "include": ["jquery.animate-colors-min.js"]
+  }
+}

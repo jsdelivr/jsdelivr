@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flipclock",
+  "repo": "objectivehtml/FlipClock",
+  "files": {
+    "include": ["compiled/flipclock.min.js", "compiled/flipclock.css"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "interact.js",
+  "repo": "taye/interact.js",
+  "files": {
+    "include": [
+      "dist/interact.js",
+      "dist/interact.min.js",
+      "dist/interact.min.js.map"
+    ]
+  }
+}

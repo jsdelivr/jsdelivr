@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "tez",
+  "repo": "dalisoft/tez",
+  "files": {
+    "include": ["Tez.js", "Tez.min.js"]
+  }
+}

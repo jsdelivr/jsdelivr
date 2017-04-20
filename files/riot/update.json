@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "riot",
+  "repo": "riot/riot",
+  "files": {
+    "include": ["riot.js", "riot.min.js", "riot+compiler.js", "riot+compiler.min.js"]
+  }
+}

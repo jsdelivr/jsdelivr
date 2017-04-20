@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.flow",
+  "repo": "flowjs/ng-flow",
+  "files": {
+	"basePath": "dist/",
+	"include": ["ng-flow-standalone.js", "ng-flow-standalone.min.js", "ng-flow.js", "ng-flow.min.js"]
+ }
+}

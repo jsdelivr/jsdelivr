@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "JsBarcode",
+  "repo": "lindell/JsBarcode",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*", "./barcodes/*.min.*"]
+  }
+}

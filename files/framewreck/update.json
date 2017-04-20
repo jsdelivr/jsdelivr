@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "framewreck",
+  "repo": "misantronic/framewreck",
+  "files": {
+    "basePath": "dist/",
+    "include": ["framewreck.min.js", "framewreck.all.js", "./modules/**/*"]
+  }
+}

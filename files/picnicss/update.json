@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "picnicss",
+	"repo": "picnicss/picnic",
+	"files": {
+		"include": ["picnic.min.css"]
+	}
+}

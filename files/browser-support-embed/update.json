@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "browser-support-embed",
+  "repo": "thlb/browser-support-embed",
+  "files": {
+    "basePath": "jsdelivr/"
+  }
+}

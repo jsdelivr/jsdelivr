@@ -1,0 +1,9 @@
+{
+"packageManager": "github",
+"name": "Hover.css",
+"repo": "IanLunn/Hover",
+"files": {
+  "basePath": "css/",
+  "include": ["hover-min.css"]
+  }
+}

@@ -4,6 +4,6 @@
   "repo": "ExactTarget/fuelux",
   "files": {
     "basePath": "dist/",
-    "exclude": ["fuelux.zip"]
+    "exclude": ["fuelux.zip", "js/npm.js"]
   }
 }

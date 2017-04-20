@@ -1,8 +1,8 @@
 {
-  "packageManager": "github",
-  "name": "jQuery.downBoy",
-  "repo": "eustasy/jquery.equalize",
-  "files": {
-    "include": ["jquery.downboy.auto.min.js", "jquery.downboy.auto.js", "jquery.downboy.min.js", "jquery.downboy.js"]
-  }
+	"packageManager": "github",
+	"name": "jQuery.downBoy",
+	"repo": "eustasy/jquery.downboy",
+	"files": {
+		"include": ["jquery.downboy.auto.min.js", "jquery.downboy.auto.js", "jquery.downboy.min.js", "jquery.downboy.js"]
+	}
 }

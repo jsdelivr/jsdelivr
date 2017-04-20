@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flexr",
+  "repo": "dmbdesignpdx/flexr",
+  "files": {
+    "include": ["flexr.css"]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "packageManager": "npm",
+  "name": "pixi.js",
+  "repo": "pixijs/pixi.js",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "pixi.js",
+      "pixi.min.js",
+      "pixi.js.map",
+      "pixi.min.js.map"
+    ]
+  }
+}

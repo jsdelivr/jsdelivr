@@ -1,0 +1,84 @@
+/*
+ * jCider (http://pratinav.tk/jCider)
+ * (c) 2015 Pratinav Bagla (http://pratinav.tk)
+ * Released under the MIT License (https://github.com/Pratinav/jCider/blob/master/LICENSE.txt)
+ **/
+
+@charset "UTF-8";
+
+/*Default Font icons*/
+@import url(https://fontastic.s3.amazonaws.com/CoBsvmhLG8dQosPCdCFvBM/icons.css);
+
+/*Positioning and styling for navigation controls.*/
+/*Change at your will.*/
+
+/*Parent container for navigation arrows*/
+.jcider-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+}
+/*Both right and left nav arrows*/
+.jcider-nav span {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  transition: all 300ms;
+  line-height: 1;
+}
+
+.jcider-nav span.disabled {
+  pointer-events: none;
+  color: rgba(255,255,255,0.2);
+}
+
+ /*Left nav arrow*/
+.jcider-nav .jcider-nav-left {
+  left: 5px;
+}
+/*Right nav arrow*/
+.jcider-nav .jcider-nav-right {
+  right: 5px;
+}
+
+/*Pagination container can be styled by '.jcider-pagination'*/
+.jcider-pagination {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Styling for pagination points*/
+.jcider-pagination-point {
+  position: relative;
+  background: none;
+  border-radius: 50%;
+  margin: 8px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.5);
+  transition: all 300ms;
+}
+ /*Styling for active pagination point*/
+.jcider-pagination-point.active {
+  background: white;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}

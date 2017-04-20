@@ -1,0 +1,9 @@
+{
+  "packageManager": "bower",
+  "name": "paste-image",
+  "repo": "redgeoff/paste-image",
+  "files": {
+    "basePath": "dist/",
+    "include": ["paste-image.js", "paste-image.min.js"]
+  }
+}

@@ -1,0 +1,193 @@
+@font-face {
+	font-family: 'calenstyle-iconfont';
+	src:url('fonts/calenstyle-iconfont.eot');
+	src:url('fonts/calenstyle-iconfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/calenstyle-iconfont.ttf') format('truetype'),
+		url('fonts/calenstyle-iconfont.woff') format('woff'),
+		url('fonts/calenstyle-iconfont.svg#calenstyle-iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="cs-icon-"], [class*=" cs-icon-"] {
+	font-family: 'calenstyle-iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.cs-icon-Climbing:before {
+	content: "\e601";
+}
+.cs-icon-Hiking:before {
+	content: "\e602";
+}
+.cs-icon-Swimming:before {
+	content: "\e603";
+}
+.cs-icon-Gym:before {
+	content: "\e604";
+}
+.cs-icon-Cycling:before {
+	content: "\e605";
+}
+.cs-icon-Running:before {
+	content: "\e606";
+}
+.cs-icon-Movie:before {
+	content: "\e633";
+}
+.cs-icon-Calendar:before {
+	content: "\e61a";
+}
+.cs-icon-Theatre:before {
+	content: "\e600";
+}
+.cs-icon-Anniversary:before {
+	content: "\e607";
+}
+.cs-icon-Meeting:before {
+	content: "\e608";
+}
+.cs-icon-Medical:before {
+	content: "\e609";
+}
+.cs-icon-Drink:before {
+	content: "\e60a";
+}
+.cs-icon-Food:before {
+	content: "\e60b";
+}
+.cs-icon-Lunch:before {
+	content: "\e60c";
+}
+.cs-icon-Dinner:before {
+	content: "\e60d";
+}
+.cs-icon-Work:before {
+	content: "\e610";
+}
+.cs-icon-Travel:before {
+	content: "\e611";
+}
+.cs-icon-Competition:before {
+	content: "\e60e";
+}
+.cs-icon-Gift:before {
+	content: "\e60f";
+}
+.cs-icon-iPod:before {
+	content: "\e612";
+}
+.cs-icon-Shopping:before {
+	content: "\e613";
+}
+.cs-icon-Guitar:before {
+	content: "\e614";
+}
+.cs-icon-Violin:before {
+	content: "\e615";
+}
+.cs-icon-Camera:before {
+	content: "\e616";
+}
+.cs-icon-Singing:before {
+	content: "\e617";
+}
+.cs-icon-Default:before {
+	content: "\e618";
+}
+.cs-icon-Heart:before {
+	content: "\e619";
+}
+.cs-icon-Music:before {
+	content: "\e61b";
+}
+.cs-icon-Podium:before {
+	content: "\e61d";
+}
+.cs-icon-Basketball:before {
+	content: "\e61e";
+}
+.cs-icon-Tennis:before {
+	content: "\e61f";
+}
+.cs-icon-Football:before {
+	content: "\e620";
+}
+.cs-icon-AmericanFootball:before {
+	content: "\e621";
+}
+.cs-icon-Archery:before {
+	content: "\e622";
+}
+.cs-icon-Golf:before {
+	content: "\e623";
+}
+.cs-icon-TennisRacquet:before {
+	content: "\e624";
+}
+.cs-icon-Pingpong:before {
+	content: "\e625";
+}
+.cs-icon-Birthday:before {
+	content: "\e626";
+}
+.cs-icon-Bowling:before {
+	content: "\e06d";
+}
+.cs-icon-Coffee:before {
+	content: "\e015";
+}
+.cs-icon-Task:before {
+	content: "\e629";
+}
+.cs-icon-done-all:before {
+	content: "\e62a";
+}
+.cs-icon-Painting:before {
+	content: "\e62e";
+}
+.cs-icon-Study:before {
+	content: "\e62f";
+}
+.cs-icon-Call:before {
+	content: "\e630";
+}
+.cs-icon-PrevArrow:before {
+	content: "\e62d";
+}
+.cs-icon-NextArrow:before {
+	content: "\e631";
+}
+.cs-icon-Prev:before {
+	content: "\e62b";
+}
+.cs-icon-Next:before {
+	content: "\e62c";
+}
+.cs-icon-Important:before {
+	content: "\e61c";
+}
+.cs-icon-Info:before {
+	content: "\e627";
+}
+.cs-icon-Expand:before {
+	content: "\e628";
+}
+.cs-icon-Contract:before {
+	content: "\e632";
+}
+.cs-icon-Mark:before {
+	content: "\e635";
+}
+.cs-icon-Event:before {
+	content: "\f0a2";
+}

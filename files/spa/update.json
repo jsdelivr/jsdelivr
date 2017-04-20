@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "spa",
+  "repo": "zhaoda/spa",
+  "files": {
+    "basePath": "dist/"
+  }
+}

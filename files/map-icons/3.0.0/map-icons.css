@@ -1,0 +1,732 @@
+@font-face {
+	font-family: 'map-icons';
+	src:url('../fonts/map-icons.eot');
+	src:url('../fonts/map-icons.eot#iefix') format('embedded-opentype'),
+		url('../fonts/map-icons.ttf') format('truetype'),
+		url('../fonts/map-icons.woff') format('woff'),
+		url('../fonts/map-icons.svg#map-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.map-icon-label .map-icon {
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 48px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.map-icon {
+	font-family: 'map-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.map-icon-abseiling:before {
+	content: "\e800";
+}
+
+.map-icon-accounting:before {
+	content: "\e801";
+}
+
+.map-icon-airport:before {
+	content: "\e802";
+}
+
+.map-icon-amusement-park:before {
+	content: "\e803";
+}
+
+.map-icon-aquarium:before {
+	content: "\e804";
+}
+
+.map-icon-archery:before {
+	content: "\e805";
+}
+
+.map-icon-art-gallery:before {
+	content: "\e806";
+}
+
+.map-icon-assistive-listening-system:before {
+	content: "\e807";
+}
+
+.map-icon-atm:before {
+	content: "\e808";
+}
+
+.map-icon-audio-description:before {
+	content: "\e809";
+}
+
+.map-icon-bakery:before {
+	content: "\e80a";
+}
+
+.map-icon-bank:before {
+	content: "\e80b";
+}
+
+.map-icon-bar:before {
+	content: "\e80c";
+}
+
+.map-icon-baseball:before {
+	content: "\e80d";
+}
+
+.map-icon-beauty-salon:before {
+	content: "\e80e";
+}
+
+.map-icon-bicycle-store:before {
+	content: "\e80f";
+}
+
+.map-icon-bicycling:before {
+	content: "\e810";
+}
+
+.map-icon-boat-ramp:before {
+	content: "\e811";
+}
+
+.map-icon-boat-tour:before {
+	content: "\e812";
+}
+
+.map-icon-boating:before {
+	content: "\e813";
+}
+
+.map-icon-book-store:before {
+	content: "\e814";
+}
+
+.map-icon-bowling-alley:before {
+	content: "\e815";
+}
+
+.map-icon-braille:before {
+	content: "\e816";
+}
+
+.map-icon-bus-station:before {
+	content: "\e817";
+}
+
+.map-icon-cafe:before {
+	content: "\e818";
+}
+
+.map-icon-campground:before {
+	content: "\e819";
+}
+
+.map-icon-canoe:before {
+	content: "\e81a";
+}
+
+.map-icon-car-dealer:before {
+	content: "\e81b";
+}
+
+.map-icon-car-rental:before {
+	content: "\e81c";
+}
+
+.map-icon-car-repair:before {
+	content: "\e81d";
+}
+
+.map-icon-car-wash:before {
+	content: "\e81e";
+}
+
+.map-icon-casino:before {
+	content: "\e81f";
+}
+
+.map-icon-cemetery:before {
+	content: "\e820";
+}
+
+.map-icon-chairlift:before {
+	content: "\e821";
+}
+
+.map-icon-church:before {
+	content: "\e822";
+}
+
+.map-icon-circle:before {
+	content: "\e823";
+}
+
+.map-icon-city-hall:before {
+	content: "\e824";
+}
+
+.map-icon-climbing:before {
+	content: "\e825";
+}
+
+.map-icon-closed-captioning:before {
+	content: "\e826";
+}
+
+.map-icon-clothing-store:before {
+	content: "\e827";
+}
+
+.map-icon-compass:before {
+	content: "\e828";
+}
+
+.map-icon-convenience-store:before {
+	content: "\e829";
+}
+
+.map-icon-courthouse:before {
+	content: "\e82a";
+}
+
+.map-icon-cross-country-skiing:before {
+	content: "\e82b";
+}
+
+.map-icon-crosshairs:before {
+	content: "\e82c";
+}
+
+.map-icon-dentist:before {
+	content: "\e82d";
+}
+
+.map-icon-department-store:before {
+	content: "\e82e";
+}
+
+.map-icon-diving:before {
+	content: "\e82f";
+}
+
+.map-icon-doctor:before {
+	content: "\e830";
+}
+
+.map-icon-electrician:before {
+	content: "\e831";
+}
+
+.map-icon-electronics-store:before {
+	content: "\e832";
+}
+
+.map-icon-embassy:before {
+	content: "\e833";
+}
+
+.map-icon-expand:before {
+	content: "\e834";
+}
+
+.map-icon-female:before {
+	content: "\e835";
+}
+
+.map-icon-finance:before {
+	content: "\e836";
+}
+
+.map-icon-fire-station:before {
+	content: "\e837";
+}
+
+.map-icon-fish-cleaning:before {
+	content: "\e838";
+}
+
+.map-icon-fishing-pier:before {
+	content: "\e839";
+}
+
+.map-icon-fishing:before {
+	content: "\e83a";
+}
+
+.map-icon-florist:before {
+	content: "\e83b";
+}
+
+.map-icon-food:before {
+	content: "\e83c";
+}
+
+.map-icon-fullscreen:before {
+	content: "\e83d";
+}
+
+.map-icon-funeral-home:before {
+	content: "\e83e";
+}
+
+.map-icon-furniture-store:before {
+	content: "\e83f";
+}
+
+.map-icon-gas-station:before {
+	content: "\e840";
+}
+
+.map-icon-general-contractor:before {
+	content: "\e841";
+}
+
+.map-icon-golf:before {
+	content: "\e842";
+}
+
+.map-icon-grocery-or-supermarket:before {
+	content: "\e843";
+}
+
+.map-icon-gym:before {
+	content: "\e844";
+}
+
+.map-icon-hair-care:before {
+	content: "\e845";
+}
+
+.map-icon-hang-gliding:before {
+	content: "\e846";
+}
+
+.map-icon-hardware-store:before {
+	content: "\e847";
+}
+
+.map-icon-health:before {
+	content: "\e848";
+}
+
+.map-icon-hindu-temple:before {
+	content: "\e849";
+}
+
+.map-icon-horse-riding:before {
+	content: "\e84a";
+}
+
+.map-icon-hospital:before {
+	content: "\e84b";
+}
+
+.map-icon-ice-fishing:before {
+	content: "\e84c";
+}
+
+.map-icon-ice-skating:before {
+	content: "\e84d";
+}
+
+.map-icon-inline-skating:before {
+	content: "\e84e";
+}
+
+.map-icon-insurance-agency:before {
+	content: "\e84f";
+}
+
+.map-icon-jet-skiing:before {
+	content: "\e850";
+}
+
+.map-icon-jewelry-store:before {
+	content: "\e851";
+}
+
+.map-icon-kayaking:before {
+	content: "\e852";
+}
+
+.map-icon-laundry:before {
+	content: "\e853";
+}
+
+.map-icon-lawyer:before {
+	content: "\e854";
+}
+
+.map-icon-library:before {
+	content: "\e855";
+}
+
+.map-icon-liquor-store:before {
+	content: "\e856";
+}
+
+.map-icon-local-government:before {
+	content: "\e857";
+}
+
+.map-icon-location-arrow:before {
+	content: "\e858";
+}
+
+.map-icon-locksmith:before {
+	content: "\e859";
+}
+
+.map-icon-lodging:before {
+	content: "\e85a";
+}
+
+.map-icon-low-vision-access:before {
+	content: "\e85b";
+}
+
+.map-icon-male:before {
+	content: "\e85c";
+}
+
+.map-icon-map-pin:before {
+	content: "\e85d";
+}
+
+.map-icon-marina:before {
+	content: "\e85e";
+}
+
+.map-icon-mosque:before {
+	content: "\e85f";
+}
+
+.map-icon-motobike-trail:before {
+	content: "\e860";
+}
+
+.map-icon-movie-rental:before {
+	content: "\e861";
+}
+
+.map-icon-movie-theater:before {
+	content: "\e862";
+}
+
+.map-icon-moving-company:before {
+	content: "\e863";
+}
+
+.map-icon-museum:before {
+	content: "\e864";
+}
+
+.map-icon-natural-feature:before {
+	content: "\e865";
+}
+
+.map-icon-night-club:before {
+	content: "\e866";
+}
+
+.map-icon-open-captioning:before {
+	content: "\e867";
+}
+
+.map-icon-painter:before {
+	content: "\e868";
+}
+
+.map-icon-park:before {
+	content: "\e869";
+}
+
+.map-icon-parking:before {
+	content: "\e86a";
+}
+
+.map-icon-pet-store:before {
+	content: "\e86b";
+}
+
+.map-icon-pharmacy:before {
+	content: "\e86c";
+}
+
+.map-icon-physiotherapist:before {
+	content: "\e86d";
+}
+
+.map-icon-place-of-worship:before {
+	content: "\e86e";
+}
+
+.map-icon-playground:before {
+	content: "\e86f";
+}
+
+.map-icon-plumber:before {
+	content: "\e870";
+}
+
+.map-icon-point-of-interest:before {
+	content: "\e871";
+}
+
+.map-icon-police:before {
+	content: "\e872";
+}
+
+.map-icon-political:before {
+	content: "\e873";
+}
+
+.map-icon-post-box:before {
+	content: "\e874";
+}
+
+.map-icon-post-office:before {
+	content: "\e875";
+}
+
+.map-icon-postal-code-prefix:before {
+	content: "\e876";
+}
+
+.map-icon-postal-code:before {
+	content: "\e877";
+}
+
+.map-icon-rafting:before {
+	content: "\e878";
+}
+
+.map-icon-real-estate-agency:before {
+	content: "\e879";
+}
+
+.map-icon-restaurant:before {
+	content: "\e87a";
+}
+
+.map-icon-roofing-contractor:before {
+	content: "\e87b";
+}
+
+.map-icon-route-pin:before {
+	content: "\e87c";
+}
+
+.map-icon-route:before {
+	content: "\e87d";
+}
+
+.map-icon-rv-park:before {
+	content: "\e87e";
+}
+
+.map-icon-sailing:before {
+	content: "\e87f";
+}
+
+.map-icon-school:before {
+	content: "\e880";
+}
+
+.map-icon-scuba-diving:before {
+	content: "\e881";
+}
+
+.map-icon-search:before {
+	content: "\e882";
+}
+
+.map-icon-shield:before {
+	content: "\e883";
+}
+
+.map-icon-shopping-mall:before {
+	content: "\e884";
+}
+
+.map-icon-sign-language:before {
+	content: "\e885";
+}
+
+.map-icon-skateboarding:before {
+	content: "\e886";
+}
+
+.map-icon-ski-jumping:before {
+	content: "\e887";
+}
+
+.map-icon-skiing:before {
+	content: "\e888";
+}
+
+.map-icon-sledding:before {
+	content: "\e889";
+}
+
+.map-icon-snow-shoeing:before {
+	content: "\e88a";
+}
+
+.map-icon-snow:before {
+	content: "\e88b";
+}
+
+.map-icon-snowboarding:before {
+	content: "\e88c";
+}
+
+.map-icon-snowmobile:before {
+	content: "\e88d";
+}
+
+.map-icon-spa:before {
+	content: "\e88e";
+}
+
+.map-icon-square-pin:before {
+	content: "\e88f";
+}
+
+.map-icon-square-rounded:before {
+	content: "\e890";
+}
+
+.map-icon-square:before {
+	content: "\e891";
+}
+
+.map-icon-stadium:before {
+	content: "\e892";
+}
+
+.map-icon-storage:before {
+	content: "\e893";
+}
+
+.map-icon-store:before {
+	content: "\e894";
+}
+
+.map-icon-subway-station:before {
+	content: "\e895";
+}
+
+.map-icon-surfing:before {
+	content: "\e896";
+}
+
+.map-icon-swimming:before {
+	content: "\e897";
+}
+
+.map-icon-synagogue:before {
+	content: "\e898";
+}
+
+.map-icon-taxi-stand:before {
+	content: "\e899";
+}
+
+.map-icon-tennis:before {
+	content: "\e89a";
+}
+
+.map-icon-toilet:before {
+	content: "\e89b";
+}
+
+.map-icon-trail-walking:before {
+	content: "\e89c";
+}
+
+.map-icon-train-station:before {
+	content: "\e89d";
+}
+
+.map-icon-transit-station:before {
+	content: "\e89e";
+}
+
+.map-icon-travel-agency:before {
+	content: "\e89f";
+}
+
+.map-icon-unisex:before {
+	content: "\e8a0";
+}
+
+.map-icon-university:before {
+	content: "\e8a1";
+}
+
+.map-icon-veterinary-care:before {
+	content: "\e8a2";
+}
+
+.map-icon-viewing:before {
+	content: "\e8a3";
+}
+
+.map-icon-volume-control-telephone:before {
+	content: "\e8a4";
+}
+
+.map-icon-walking:before {
+	content: "\e8a5";
+}
+
+.map-icon-waterskiing:before {
+	content: "\e8a6";
+}
+
+.map-icon-whale-watching:before {
+	content: "\e8a7";
+}
+
+.map-icon-wheelchair:before {
+	content: "\e8a8";
+}
+
+.map-icon-wind-surfing:before {
+	content: "\e8a9";
+}
+
+.map-icon-zoo:before {
+	content: "\e8aa";
+}
+
+.map-icon-zoom-in-alt:before {
+	content: "\e8ab";
+}
+
+.map-icon-zoom-in:before {
+	content: "\e8ac";
+}
+
+.map-icon-zoom-out-alt:before {
+	content: "\e8ad";
+}
+
+.map-icon-zoom-out:before {
+	content: "\e8ae";
+}

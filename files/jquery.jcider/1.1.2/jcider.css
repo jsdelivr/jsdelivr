@@ -1,0 +1,57 @@
+//Icons for navigation-arrows
+@import url(https://fontastic.s3.amazonaws.com/CoBsvmhLG8dQosPCdCFvBM/icons.css);
+// Positioning and styling for navigation controls.
+// Change at your will.
+
+// Parent container for navigation arrows
+slider-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 30px;
+}
+// Both right and left nav arrows
+.slider-nav span {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  font-weight: 30px;
+}
+.slider-nav span:hover {
+  color: white;
+}
+// Left nav arrow
+.slider-nav .nav-left {
+  left: 5px;
+}
+// Right nav arrow
+.slider-nav .nav-right {
+  right: 5px;
+}
+
+
+// Positioning and styling for navigation controls.
+// Change at your will.
+
+// Pagination container can be styled by '.pagination'
+
+// Styling for Pagination points
+.pagination .point {
+  background: none;
+  border-radius: 50%;
+  margin: 10px 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+// Styling for Active pagination point
+.pagination .point.active {
+  background: black;
+}

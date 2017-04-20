@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "webtorrent",
+  "repo": "feross/webtorrent",
+  "files": {
+    "include": ["webtorrent.min.js"]
+  }
+}

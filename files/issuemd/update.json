@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "issuemd",
+  "repo": "issuemd/issuemd",
+  "files": {
+    "include": ["issuemd.min.js", "issuemd-parser.min.js"]
+  }
+}

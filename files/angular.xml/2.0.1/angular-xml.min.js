@@ -1,0 +1,2 @@
+if(!X2JS)throw Error("You're required to include the X2JS library to use the xml module.");
+(function(d,e){function f(b,d){return{response:function(a){var c;if(c=a)c=(c=a.headers("content-type"))?4<=c.search(/\Wxml/i):!1;return c?(a.data=d.xml_str2json(a.data),a):b.when(a)}}}function g(b){b.factory("xmlHttpInterceptor",["$q","x2js",f])}function h(){this.config={};this.$get=["X2JS",function(b){return new b(this.config)}]}d&&d.module("xml",[]).config(["$provide",g]).provider("x2js",h).value("X2JS",e)})(angular,X2JS); 

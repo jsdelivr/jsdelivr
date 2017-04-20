@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap3-dialog",
+  "repo": "nakupanda/bootstrap3-dialog",
+  "files": {
+    "basePath": "dist/",
+    "include": ["js/*.js", "css/*.css", "less/*.less"],
+    "exclude": []
+  }
+}

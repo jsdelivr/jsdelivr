@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Likely",
+  "repo": "ilyabirman/Likely",
+  "files": {
+    "basePath": "release/",
+    "include": ["likely.js", "likely.css"]
+  }
+}

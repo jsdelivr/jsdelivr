@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.esri.related",
+  "repo": "jgravois/esri-leaflet-related",
+  "files": {
+    "basePath": "dist/",
+    "include": ["esri-leaflet-related.js", "esri-leaflet-related.js.map"],
+    "exclude": ["README.md"]
+  }
+}
