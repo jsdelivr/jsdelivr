@@ -1,0 +1,7 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-modallery",
+  "files": {
+    "basePath": ["/src"]
+  }
+}
