@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "lds-glyphs",
+  "repo": "idefy/lds-glyphs",
+  "files": {
+    "basePath": "dist/glyphs/",
+    "include": ["lds-glyphs.css", "lds-glyphs.eot", "lds-glyphs.svg", "lds-glyphs.svg", "lds-glyphs.ttf", "lds-glyphs.woff", "lds-glyphs.woff2"]
+  }
+}
