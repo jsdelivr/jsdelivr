@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "LDS glyphs";
+  src: url('lds-glyphs.eot');
+  src: url('lds-glyphs.eot?#iefix') format('eot'),
+    url('lds-glyphs.woff2') format('woff2'),
+    url('lds-glyphs.woff') format('woff'),
+    url('lds-glyphs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ldsg:before {
+  display: inline-block;
+  font-family: "LDS glyphs";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ldsg-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.ldsg-2x { font-size: 2em; }
+.ldsg-3x { font-size: 3em; }
+.ldsg-4x { font-size: 4em; }
+.ldsg-5x { font-size: 5em; }
+.ldsg-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.ldsg-ETTE:before { content: "\EA01" }
+.ldsg-aaronic-priesthood:before { content: "\EA02" }
+.ldsg-act-well-thy-part:before { content: "\EA03" }
+.ldsg-and-it-came-to-pass:before { content: "\EA04" }
+.ldsg-baptism:before { content: "\EA05" }
+.ldsg-bee-charm:before { content: "\EA06" }
+.ldsg-beehive:before { content: "\EA07" }
+.ldsg-blessing:before { content: "\EA08" }
+.ldsg-buytv:before { content: "\EA09" }
+.ldsg-christus:before { content: "\EA0A" }
+.ldsg-clb:before { content: "\EA0B" }
+.ldsg-ctr:before { content: "\EA0C" }
+.ldsg-duty-to-god:before { content: "\EA0D" }
+.ldsg-family-history:before { content: "\EA0E" }
+.ldsg-family-search:before { content: "\EA0F" }
+.ldsg-family-tree:before { content: "\EA10" }
+.ldsg-fan-chart:before { content: "\EA11" }
+.ldsg-flower:before { content: "\EA12" }
+.ldsg-gold-plates:before { content: "\EA13" }
+.ldsg-handshake:before { content: "\EA14" }
+.ldsg-hlj:before { content: "\EA15" }
+.ldsg-hold-rod:before { content: "\EA16" }
+.ldsg-hymns:before { content: "\EA17" }
+.ldsg-indexing:before { content: "\EA18" }
+.ldsg-just-server:before { content: "\EA19" }
+.ldsg-meeting-house:before { content: "\EA1A" }
+.ldsg-melchizedek-priesthood:before { content: "\EA1B" }
+.ldsg-missionaries:before { content: "\EA1C" }
+.ldsg-missionary:before { content: "\EA1D" }
+.ldsg-mormon-channel:before { content: "\EA1E" }
+.ldsg-moroni-statue:before { content: "\EA1F" }
+.ldsg-music-note:before { content: "\EA20" }
+.ldsg-olive-fruit:before { content: "\EA21" }
+.ldsg-relief-society-full:before { content: "\EA22" }
+.ldsg-relief-society-simple:before { content: "\EA23" }
+.ldsg-relief-society:before { content: "\EA24" }
+.ldsg-scout:before { content: "\EA25" }
+.ldsg-scripture-mastery:before { content: "\EA26" }
+.ldsg-scriptures:before { content: "\EA27" }
+.ldsg-sister-missionary:before { content: "\EA28" }
+.ldsg-sisters-missionaries:before { content: "\EA29" }
+.ldsg-slc-temple:before { content: "\EA2A" }
+.ldsg-stake-center:before { content: "\EA2B" }
+.ldsg-temple:before { content: "\EA2C" }
+.ldsg-tithing:before { content: "\EA2D" }
+.ldsg-young-women-torch:before { content: "\EA2E" }
+.ldsg-youth:before { content: "\EA2F" }
+.ldsg-yw-personal-program:before { content: "\EA30" }
