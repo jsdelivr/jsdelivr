@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "ion.sound",
+  "repo": "ionden/ion.sound",
+  "files": {
+    "basePath": "js/",
+    "include": ["ion.sound.js", "ion.sound.min.js"]
+  }
+}
