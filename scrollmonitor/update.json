@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "scrollMonitor",
+  "repo": "stutrek/scrollMonitor",
+  "files": {
+    "include": ["scrollMonitor.js", "scrollMonitor.js.map", "angular-moment.min.js.map"]
+  }
+}
