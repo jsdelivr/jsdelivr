@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-bookmark" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Bookmark</title>
+  </g>
+  <g class="iconic-bookmark-lg iconic-container iconic-lg" data-width="44" data-height="128" display="inline" transform="translate(42)">
+    <path class="iconic-property-fill" d="M0 0v128l22-14.247 22 14.247v-128z" />
+  </g>
+  <g class="iconic-bookmark-md iconic-container iconic-md" data-width="14" data-height="32" display="none" transform="scale(4) translate(9)">
+    <path d="M0 .5v31c0 .276.182.37.407.209l6.186-4.419c.225-.161.589-.161.814 0l6.186 4.419c.225.161.407.067.407-.209v-31c0-.276-.224-.5-.5-.5h-13c-.276 0-.5.224-.5.5z" class="iconic-property-fill" />
+  </g>
+  <g class="iconic-bookmark-sm iconic-container iconic-sm" data-width="8" data-height="16" display="none" transform="scale(8) translate(4)">
+    <path d="M0 .25v15.5c0 .138.079.171.177.073l3.646-3.646c.098-.098.256-.098.354 0l3.646 3.646c.098.098.177.065.177-.073v-15.5c0-.138-.112-.25-.25-.25h-7.5c-.138 0-.25.112-.25.25z" class="iconic-property-fill" />
+  </g>
+</svg>
