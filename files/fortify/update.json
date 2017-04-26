@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "fortify-js",
+	"repo": "adammy/fortify-js",
+	"files": {
+		"basePath": "dist/",
+		"include": ["fortify.min.js", "fortify.min.css"]
+	}
+}
