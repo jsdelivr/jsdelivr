@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap-modallery",
+  "repo": "lhcgoncalves/bootstrap-modallery",
+  "files": {
+    "basePath": "/src"
+  }
+}
+
