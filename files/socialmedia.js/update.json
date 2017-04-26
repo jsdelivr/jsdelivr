@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "js-sharing-buttons",
+  "repo": "bovidiu/js-sharing-buttons",
+  "files": {
+    "basePath": "dist/",
+    "include": ["SocialMedia.min.js"]
+  }
+}

@@ -1,0 +1,79 @@
+<div class="richarea-app">
+  <div class="richarea-editor">
+    <ul class="sortable">
+      <li :class="{active: currentIdx==index }" :data-index="index" @click="select" @dblclick="edit" v-for="(item,index) in items">
+        <div class="tools">
+          <span class="move btn btn-success btn-xs glyphicon glyphicon-resize-vertical"></span>
+          <span @click="add(index)" class="add btn btn-default btn-xs glyphicon glyphicon-plus"></span>
+          <span @click="edit" class="settings btn btn-default btn-xs glyphicon glyphicon-cog"></span>
+          <span @click="duplicate" class="duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate"></span>
+          <span @click="remove" class="delete btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="item">
+          <layout :is="'c'+item.layout_id" :item="item" :config="config"></layout>
+        </div>
+      </li>
+      <li class="disabled add text-center">
+        <button @click.prevent="add(null)" class="btn btn-primary btn-xl">+</button>
+      </li>
+    </ul>
+    <div class="modal fade layout-settings" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" @click.prevent="close">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <h4 class="modal-title">Edit Component</h4>
+          </div>
+          <div class="modal-body">
+            <template v-if="currentLayout">
+              <template v-if="Object.keys(currentLayout.fields).length>0">
+                <div v-for="(field,fieldName) in currentLayout.fields">
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-xs-2 control-label">{{fieldName | titlecase}}</label>
+                      <div class="col-xs-10">
+                        <component :is="field.editor" :item="currentItem" :field-name="fieldName" :config="config" :key="'elem'+currentIdx"></component>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+              <template v-else>
+                There are no fields to edit for this layout.
+              </template>
+            </template>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default"  @click.prevent="close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal modal-fullscreen fade layouts-modal" role="dialog">
+      <div class="modal-dialog layout-selector" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <h4 class="modal-title">Add Component</h4>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div :class="{'btn-success': selectedCategory == k, 'btn-primary': selectedCategory != k }" @click="selectCat(k)" class="btn btn-xs" style="margin: 2px;" v-for="k in layoutCategories">
+                {{k | titleize }}
+              </div>
+            </div>
+            <img class="layout" data-dismiss="modal" :data-layout-id="layout.id" :src="`${layout.thumbnailUrl}`" v-for="(layout,index) in layouts" v-if="inActiveCategories(layout)" v-on:click="insert(layout.id)"/>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

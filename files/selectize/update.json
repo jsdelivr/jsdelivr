@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "selectize.js",
+  "repo": "selectize/selectize.js",
+  "files": {
+    "basePath": "dist/",
+    "exclude": ["less/**/*"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "openwebicons",
+  "repo": "pfefferle/openwebicons",
+  "files": {
+    "include": ["./css/openwebicons.min.css", "./css/openwebicons.css", "./font/openwebicons.eot", "./font/openwebicons.svg", "./font/openwebicons.ttf", "./font/openwebicons.woff", "./font/openwebicons.woff2"]
+  }
+}

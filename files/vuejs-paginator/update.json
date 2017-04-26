@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "vuejs-paginator",
+  "repo": "hootlex/vuejs-paginator",
+  "files": {
+    "include": ["dist/vuejs-paginator.js", "dist/vuejs-paginator.min.js", "vuejs-paginator.min.js.map"]
+  }
+}

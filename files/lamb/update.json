@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "lamb",
+  "repo": "ascartabelli/lamb",
+  "files": {
+    "basePath": "dist/",
+    "include": ["lamb.js", "lamb.min.js", "lamb.min.js.map"]
+  }
+}

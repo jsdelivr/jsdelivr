@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "typeahead.js",
+	"repo": "corejavascript/typeahead.js",
+	"files": {
+		"basePath": "dist",
+		"include": ["*.js"]
+	}
+}

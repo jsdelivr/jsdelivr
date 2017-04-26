@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "p5.collide2D",
+  "repo": "bmoren/p5.collide2D",
+  "files": {
+    "basePath": "/",
+    "include": ["p5.collide2d.js"]
+  }
+}

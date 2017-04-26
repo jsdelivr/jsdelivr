@@ -1,0 +1,8 @@
+
+{
+  "packageManager": "npm",
+  "name": "vanilla-datatables",
+  "files": {
+    "include": ["vanilla-dataTables.min.js", "vanilla-dataTables.min.css"]
+  }
+}

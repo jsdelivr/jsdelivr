@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "barba.js",
+  "repo": "luruke/barba.js",
+  "files": {
+    "include": ["dist/barba.js", "dist/barba.js.map", "dist/barba.min.js"]
+  }
+ }

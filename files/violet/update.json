@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "violet",
+  "repo": "kkestell/violet",
+  "files": {
+    "include": ["build/violet/violet.css", "build/violet/violet.min.css", "build/violet/violet.css.map"]
+  }
+}

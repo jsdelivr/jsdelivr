@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-share-boxed" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Share Boxed</title>
+  </g>
+  <g class="iconic-share-boxed-lg iconic-container iconic-lg" data-width="128" data-height="112" display="inline" transform="translate(0 8)">
+    <path stroke="#000" stroke-width="8" stroke-linecap="square" d="M108 56v49c0 1.657-1.343 3-3 3h-98c-1.657 0-3-1.343-3-3v-98c0-1.657 1.343-3 3-3h37" class="iconic-share-boxed-box iconic-property-accent iconic-property-stroke" fill="none" />
+    <path d="M128 26l-32-20v8h-2c-54 0-78 24.872-78 72 8.25-31.75 26-48 66-48 7.731 0 11.862 0 14 0v8l32-20z" class="iconic-share-boxed-arrow iconic-property-fill" />
+  </g>
+  <g class="iconic-share-boxed-md iconic-container iconic-md" data-width="32" data-height="29" display="none" transform="scale(4) translate(0 1)">
+    <path stroke="#000" stroke-width="3" stroke-linecap="square" d="M27.5 17.5v9c0 .552-.448 1-1 1h-24c-.552 0-1-.448-1-1v-24c0-.552.448-1 1-1h8" class="iconic-share-boxed-box iconic-property-accent iconic-property-stroke" fill="none" />
+    <path d="M32 7.333l-8-6.333v3c-13 0-18 6.218-18 18 2.063-7.938 8-12 16-12 .9 0 1.536 0 2 0v3l8-5.667z" class="iconic-share-boxed-arrow iconic-property-fill" />
+  </g>
+  <g class="iconic-share-boxed-sm iconic-container iconic-sm" data-width="16" data-height="14" display="none" transform="scale(8) translate(0 1)">
+    <path stroke="#000" stroke-width="2" stroke-linecap="square" d="M13 11v1.5c0 .276-.224.5-.5.5h-11c-.276 0-.5-.224-.5-.5v-11c0-.276.224-.5.5-.5h3.5" class="iconic-share-boxed-box iconic-property-accent iconic-property-stroke" fill="none" />
+    <path d="M16 4l-4-4v2c-4.418 0-8 3.582-8 8 0-2.209 3-4 5-4 1.201 0 2.304 0 3 0v2l4-4z" class="iconic-share-boxed-arrow iconic-property-fill" />
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "Bbox",
+  "repo": "bishu1993/Bbox",
+  "files": {
+    "include": ["Bbox.min.js"]
+  }
+}

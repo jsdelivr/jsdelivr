@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "require-vuejs",
+  "repo": "edgardleal/require-vuejs",
+  "files": {
+    "include": ["dist/require-vuejs.min.js", "dist/require-vuejs.js"]
+  }
+}

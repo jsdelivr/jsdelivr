@@ -1,0 +1,7 @@
+{
+	"packageManager": "npm",
+	"name": "muicss",
+	"files": {
+		"basePath": "dist/"
+	}
+}

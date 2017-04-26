@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "jquery.serializeJSON",
+  "repo": "marioizquierdo/jquery.serializeJSON",
+  "files": {
+    "include": ["jquery.serializejson.min.js"]
+  }
+}

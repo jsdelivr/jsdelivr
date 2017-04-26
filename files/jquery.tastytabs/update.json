@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "tastytabs",
+  "repo": "maT7ew/TastyTabs",
+  "files": {
+    "basePath": "/",
+    "include": ["TastyTabs.min.js", "TastyTabs.min.map"]
+  }
+}

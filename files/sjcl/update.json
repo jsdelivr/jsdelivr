@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "sjcl",
+  "repo": "bitwiseshiftleft/sjcl",
+  "files": {
+    "include": ["sjcl.js"]
+  }
+}

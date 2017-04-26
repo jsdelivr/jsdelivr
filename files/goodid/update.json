@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "goodid",
+  "repo": "idandtrust/goodid",
+  "files": {
+    "include": ["connect.min.js"]
+  }
+}

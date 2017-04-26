@@ -3,6 +3,6 @@
 	"name": "jquery.tagsinput",
 	"repo": "xoxco/jQuery-Tags-Input",
 	"files": {
-		"include": ["jquery.tagsinput.css", "jquery.tagsinput.min.js"]
+		"basePath": "dist/"
 	}
 }

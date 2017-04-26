@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "es6-tween",
+  "repo": "tweenjs/es6-tween",
+  "files": {
+    "include": ["dist/Tween.js", "dist/Tween.min.js"]
+  }
+}

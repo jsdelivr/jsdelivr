@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "baguetteBox.js",
+  "repo": "feimosi/baguetteBox.js",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "baguetteBox.js", "baguetteBox.min.js", 
+      "baguetteBox.css", "baguetteBox.min.css"
+    ]
+  }
+}

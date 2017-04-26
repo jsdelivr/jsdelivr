@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.fullscreen",
+  "repo": "Leaflet/Leaflet.fullscreen",
+  "files": {
+    "basePath": "dist/"
+  }
+}

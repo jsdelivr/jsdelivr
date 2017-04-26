@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "sceditor",
+	"repo": "samclarke/SCEditor-bower",
+	"files": {
+		"basePath": "minified/"
+	}
+}

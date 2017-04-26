@@ -4,6 +4,10 @@
   "name": "jquery.trip.js",
   "files": {
     "basePath": "dist/",
-    "include": ["trip.min.js", "trip.min.css"]
+    "include": [
+      "trip.min.js",
+      "trip.min.css",
+      "trip.nodep.min.css"
+    ]
   }
 }

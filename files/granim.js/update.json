@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "granim.js",
+  "repo": "sarcadass/granim.js",
+  "files": {
+    "basePath": "dist/",
+    "include": ["granim.js", "granim.min.js"]
+  }
+}

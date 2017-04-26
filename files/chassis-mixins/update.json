@@ -1,0 +1,10 @@
+
+{
+  "packageManager": "npm",
+  "name": "chassis-mixins",
+  "repo": "ngnjs/cdn",
+  "files": {
+    "basePath": "chassis-mixins/",
+    "include": ["*.min.js"]
+  }
+}

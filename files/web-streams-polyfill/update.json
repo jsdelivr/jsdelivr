@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "web-streams-polyfill",
+  "repo": "creatorrr/web-streams-polyfill",
+  "files": {
+    "basePath": "dist/",
+    "include": ["polyfill.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "leaflet.groupedlayercontrol",
+  "repo": "ismyrnow/Leaflet.groupedlayercontrol",
+  "files": {
+    "basePath": "dist/"
+  }
+}

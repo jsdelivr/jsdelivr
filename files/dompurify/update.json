@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "dompurify",
+  "repo": "cure53/dompurify",
+  "files": {
+    "basePath": "dist/",
+    "include": ["purify.min.js"]
+  }
+}

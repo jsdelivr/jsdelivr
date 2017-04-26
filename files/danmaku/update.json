@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "danmaku",
+  "repo": "weizhenye/Danmaku",
+  "files": {
+	  "basePath": "dist/",
+    "include": ["*.js"]
+  }
+}

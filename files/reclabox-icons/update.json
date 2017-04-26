@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "reclabox-icons",
+  "repo": "white-ice/reclabox-icons",
+  "files": {
+    "basePath": "fonts/",
+    "include": ["reclabox-icon.css", "fontello.eot", "fontello.svg", "fontello.ttf", "fontello.woff", "fontello.woff2"]
+  }
+}

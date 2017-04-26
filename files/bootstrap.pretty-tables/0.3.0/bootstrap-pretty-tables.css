@@ -1,0 +1,278 @@
+/* Flat UI Colors variables */
+.yoochart-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: separate;
+  border: 1px solid transparent;
+}
+.yoochart-table > thead > tr > th,
+.yoochart-table > tbody > tr > th,
+.yoochart-table > tfoot > tr > th,
+.yoochart-table > thead > tr > td,
+.yoochart-table > tbody > tr > td,
+.yoochart-table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border: 1px solid transparent;
+}
+.yoochart-table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
+}
+.yoochart-table > caption + thead > tr:first-child > th,
+.yoochart-table > colgroup + thead > tr:first-child > th,
+.yoochart-table > thead:first-child > tr:first-child > th,
+.yoochart-table > caption + thead > tr:first-child > td,
+.yoochart-table > colgroup + thead > tr:first-child > td,
+.yoochart-table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.yoochart-table-expanded > thead > tr > th,
+.yoochart-table-expanded > tbody > tr > th,
+.yoochart-table-expanded > tfoot > tr > th,
+.yoochart-table-expanded > thead > tr > td,
+.yoochart-table-expanded > tbody > tr > td,
+.yoochart-table-expanded > tfoot > tr > td {
+  padding: 12px;
+}
+/* ** ** ** ** ** */
+table.yoochart-table-amethyst > thead > tr > th,
+table.yoochart-table-amethyst > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #9b59b6;
+  border: 1px solid #9b59b6;
+  text-align: center;
+}
+table.yoochart-table-amethyst.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #f0e7f4;
+}
+table.yoochart-table-amethyst.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #f0e7f4;
+}
+table.yoochart-table-amethyst.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #f0e7f4;
+}
+table.yoochart-table-amethyst.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #e6d5ed;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #e6d5ed;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-amethyst.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #e6d5ed;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-amethyst.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #f0e7f4;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-amethyst.yoochart-table-bordered {
+  border: 1px solid #f0e7f4;
+}
+table.yoochart-table-peter-river > thead > tr > th,
+table.yoochart-table-peter-river > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  text-align: center;
+}
+table.yoochart-table-peter-river.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #c5e2f5;
+}
+table.yoochart-table-peter-river.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #c5e2f5;
+}
+table.yoochart-table-peter-river.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #c5e2f5;
+}
+table.yoochart-table-peter-river.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #8bc4ea;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #8bc4ea;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-peter-river.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #8bc4ea;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-peter-river.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #c5e2f5;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-peter-river.yoochart-table-bordered {
+  border: 1px solid #c5e2f5;
+}
+table.yoochart-table-wet-asphalt > thead > tr > th,
+table.yoochart-table-wet-asphalt > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #34495e;
+  border: 1px solid #34495e;
+  text-align: center;
+}
+table.yoochart-table-wet-asphalt.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #839eba;
+}
+table.yoochart-table-wet-asphalt.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #839eba;
+}
+table.yoochart-table-wet-asphalt.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #839eba;
+}
+table.yoochart-table-wet-asphalt.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #587ca0;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #587ca0;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-wet-asphalt.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #587ca0;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-wet-asphalt.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #839eba;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-wet-asphalt.yoochart-table-bordered {
+  border: 1px solid #839eba;
+}
+table.yoochart-table-alizarin > thead > tr > th,
+table.yoochart-table-alizarin > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+  text-align: center;
+}
+table.yoochart-table-alizarin.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #fad8d4;
+}
+table.yoochart-table-alizarin.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #fad8d4;
+}
+table.yoochart-table-alizarin.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #fad8d4;
+}
+table.yoochart-table-alizarin.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #f29f97;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #f29f97;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-alizarin.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #f29f97;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-alizarin.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #fad8d4;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-alizarin.yoochart-table-bordered {
+  border: 1px solid #fad8d4;
+}
+table.yoochart-table-sun-flower > thead > tr > th,
+table.yoochart-table-sun-flower > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #f1c40f;
+  border: 1px solid #f1c40f;
+  text-align: center;
+}
+table.yoochart-table-sun-flower.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #faecb0;
+}
+table.yoochart-table-sun-flower.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #faecb0;
+}
+table.yoochart-table-sun-flower.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #faecb0;
+}
+table.yoochart-table-sun-flower.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #f7dc6f;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #f7dc6f;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-sun-flower.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #f7dc6f;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-sun-flower.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #faecb0;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-sun-flower.yoochart-table-bordered {
+  border: 1px solid #faecb0;
+}
+table.yoochart-table-emerald > thead > tr > th,
+table.yoochart-table-emerald > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #2ecc71;
+  border: 1px solid #2ecc71;
+  text-align: center;
+}
+table.yoochart-table-emerald.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #b6efce;
+}
+table.yoochart-table-emerald.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #b6efce;
+}
+table.yoochart-table-emerald.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #b6efce;
+}
+table.yoochart-table-emerald.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #7ee2a8;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #7ee2a8;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-emerald.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #7ee2a8;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-emerald.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #b6efce;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-emerald.yoochart-table-bordered {
+  border: 1px solid #b6efce;
+}
+table.yoochart-table-carrot > thead > tr > th,
+table.yoochart-table-carrot > thead > tr > td {
+  color: white;
+  /* rajout, même méthode que .table-striped/.table-hover pour colorer le fond */
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  text-align: center;
+}
+table.yoochart-table-carrot.yoochart-table-column-border-on > tbody > tr > td:nth-child(n + 2) {
+  border-left: 1px solid #f7d8bb;
+}
+table.yoochart-table-carrot.yoochart-table-line-border-on > tbody > tr:nth-child(n + 2) > td {
+  border-top: 1px solid #f7d8bb;
+}
+table.yoochart-table-carrot.yoochart-table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #f7d8bb;
+}
+table.yoochart-table-carrot.yoochart-table-hover > tbody > tr:hover > td {
+  background-color: #f0b37e;
+  /* pour écraser bs 3 .table-hover */
+  border-top: 1px solid #f0b37e;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-carrot.yoochart-table-hover > tbody > tr:hover > td:nth-child(n + 2) {
+  border-left: 1px solid #f0b37e;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-carrot.yoochart-table-hover > tbody > tr:hover + tr > td {
+  border-top: 1px solid #f7d8bb;
+  /* la ligne fonci alors il faut que les bordures aussi */
+}
+table.yoochart-table-carrot.yoochart-table-bordered {
+  border: 1px solid #f7d8bb;
+}

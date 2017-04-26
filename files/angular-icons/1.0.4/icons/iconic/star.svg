@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="iconic iconic-star" width="128" height="128" viewBox="0 0 128 128">
+  <g class="iconic-metadata">
+    <title>Star</title>
+  </g>
+  <g class="iconic-star-lg iconic-container iconic-lg" data-width="128" data-height="122" display="inline" transform="translate(0 3)">
+    <path class="iconic-property-fill" d="M88.537 74.838l39.463-28.838h-48.918l-15.082-46-15.082 46h-48.918l39.463 28.838-15.463 47.162 40-29.231 40 29.231z" />
+  </g>
+  <g class="iconic-star-md iconic-container iconic-md" data-width="32" data-height="31" display="none" transform="scale(4)">
+    <path class="iconic-property-fill" d="M22.185 19.173l9.815-7.173h-12.129l-3.871-12-3.871 12h-12.129l9.815 7.173-3.815 11.827 10-7.308 10 7.308z" />
+  </g>
+  <g class="iconic-star-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
+    <path class="iconic-property-fill" d="M11 10l5-4h-6l-2-6-2 6h-6l5 4-2 6 5-4 5.004 4z" />
+  </g>
+</svg>

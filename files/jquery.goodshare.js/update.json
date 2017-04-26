@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "goodshare.js",
+  "repo": "koddr/goodshare.js",
+  "files": {
+    "include": ["goodshare.min.js"]
+  }
+}

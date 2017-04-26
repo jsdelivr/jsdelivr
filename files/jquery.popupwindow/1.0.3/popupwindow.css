@@ -1,0 +1,116 @@
+/***************************************************************************************************
+PopupWindow - The ultimate popup/dialog/modal jQuery plugin
+    Author          : Gaspare Sganga
+    Version         : 1.0.3
+    License         : MIT
+    Documentation   : http://gasparesganga.com/labs/jquery-popup-window/
+***************************************************************************************************/
+/*
+    You can customize your PopupWindow style directly in this file 
+    or override some classes/styles using an external CSS file loaded after this.
+*/
+
+/* Overlay */
+.popupwindow_overlay {
+    background-color    : rgba(255,255,255,0.6);
+}
+
+/* Window */
+.popupwindow {
+    color               : #303030;
+    background-color    : #fcfcfc;
+    border              : 1px solid #c8c8c8;
+    box-shadow          : 0px 2px 4px #a0a0a0;
+}
+.popupwindow_minimized {
+    width               : 200px;
+    box-shadow          : none;
+}
+
+/* TitleBar */
+.popupwindow_titlebar {
+    background-color    : #e9e9e9;
+    padding             : 4px;
+}
+.popupwindow_titlebar_draggable {
+    cursor              : move;
+}
+    /* TitleBar Text */
+    .popupwindow_titlebar_text {
+        color           : #404040;
+        font-family     : inherit;
+        font-size       : inherit;
+        font-weight     : bold;
+        text-align      : left;
+        padding-left    : 2px;
+    }
+    /* TitleBar Buttons */
+    .popupwindow_titlebar_button {
+        cursor              : pointer;
+        width               : 22px;
+        height              : 20px;
+        padding             : 4px;
+        margin-left         : 2px;
+        background-color    : #f0f0f0;
+        stroke              : #505050;
+        border              : 1px solid #c8c8c8;
+        border-radius       : 2px;
+    }
+        .popupwindow_titlebar_button:hover {
+            background-color    : #fafafa;
+            stroke              : #303030;
+        }
+        .popupwindow_titlebar_button:active {
+            background-color    : #e0e0e0;
+        }
+        /* The following classes can be used to customize single buttons */
+        .popupwindow_titlebar_button_close {}
+            .popupwindow_titlebar_button_close:hover {}
+            .popupwindow_titlebar_button_close:active {}
+        
+        .popupwindow_titlebar_button_maximize {}
+            .popupwindow_titlebar_button_maximize:hover {}
+            .popupwindow_titlebar_button_maximize:active {}
+        
+        .popupwindow_titlebar_button_collapse {}
+            .popupwindow_titlebar_button_collapse:hover {}
+            .popupwindow_titlebar_button_collapse:active {}
+        
+        .popupwindow_titlebar_button_minimize {}
+            .popupwindow_titlebar_button_minimize:hover {}
+            .popupwindow_titlebar_button_minimize:active {}
+
+/* Content */
+.popupwindow_content {
+    border-top      : 1px solid #c8c8c8;
+    padding-top     : 10px;
+    padding-right   : 10px;
+    padding-left    : 10px;
+    padding-bottom  : 10px; /* In order to preserve padding-bottom when the content is taller than the PopupWindow and thus scrolled on the Y-axis, set the same value as "height" in the following :after pseudo-class */
+}
+.popupwindow_content:after {
+    content         : "";
+    display         : block;
+    height          : 10px; /* Set this value equal to .popupwindow_content's "padding-bottom" to preserve it when the content overflows Y-axis and the scrollbar is shown */
+}
+
+/* StatusBar */
+.popupwindow_statusbar {
+    background-color    : #f0f0f0;
+    border-top          : 1px solid #c8c8c8;
+    
+}
+    /* StatusBar Content */
+    .popupwindow_statusbar_content {
+        color               : #303030;
+        font-family         : inherit;
+        font-size           : inherit;
+        font-weight         : normal;
+        padding-left        : 4px;
+    }
+    /* StatusBar Handle */
+    .popupwindow_statusbar_handle {
+        width               : 10px;
+        height              : 10px;
+        stroke              : #a0a0a0;
+    }

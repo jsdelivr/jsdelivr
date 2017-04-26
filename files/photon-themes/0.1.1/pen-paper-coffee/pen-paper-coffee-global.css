@@ -1,0 +1,781 @@
+:global(.psh) {
+  background-color: #f8f6f1;
+  color: #2b3f6a;
+}
+
+:global(.psh figure) {
+  margin: 0;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+:global(.psh code::-moz-selection), :global(.psh samp::-moz-selection) {
+  background-color: #e4dcc8;
+}
+
+:global(.psh code::selection), :global(.psh samp::selection) {
+  background-color: #e4dcc8;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #929bae;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #f8f6f1;
+  text-align: right;
+  height: 18px;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #dfddd9;
+  color: #595957;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #dfddd9;
+  font-weight: 700;
+  font-size: 14px;
+  color: #595957;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #dfddd9;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #595957;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #929bae;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #c5c8cf;
+  font-size: 13px;
+  color: #595957;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #ebf2e9;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #e6f1f0;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #f0ebf2;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #f8eee5;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #f7e9e7;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #f6f1e5;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #ebf2e9;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #f7e9e7;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #c5c8cf;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #2a120a;
+}
+
+:global(.psh .comment) {
+  color: #9ca3b0;
+  font-style: italic;
+}
+
+:global(.psh .entity.name.type) {
+  color: #379566;
+}
+
+:global(.psh .entity.other.inherited-class) {
+  color: #8f932b;
+}
+
+:global(.psh .keyword) {
+  color: #8f932b;
+}
+
+:global(.psh .keyword.control) {
+  color: #2b3f6a;
+  font-weight: 700;
+}
+
+:global(.psh .keyword.operator) {
+  font-weight: 700;
+  color: #1c4b33;
+}
+
+:global(.psh .keyword.other.special-method) {
+  color: #5e78e1;
+}
+
+:global(.psh .keyword.other.attribute-name) {
+  color: #2b3f6a;
+  font-weight: 700;
+}
+
+:global(.psh .keyword.other.unit) {
+  color: #8f932b;
+}
+
+:global(.psh .storage) {
+  color: #5e78e1;
+}
+
+:global(.psh .storage.fixme), :global(.psh .storage.hack), :global(.psh .storage.idea), :global(.psh .storage.todo) {
+  color: #8100c6;
+  background-color: rgba(227, 169, 45, .1);
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, .7);
+  border-width: 0 0 1px;
+  border-style: none none dotted;
+}
+
+:global(.psh .constant) {
+  color: #c16161;
+}
+
+:global(.psh .constant.character.escape) {
+  color: #8f932b;
+}
+
+:global(.psh .constant.numeric) {
+  color: #c16161;
+}
+
+:global(.psh .constant.other.color) {
+  color: #8f932b;
+}
+
+:global(.psh .constant.other.symbol) {
+  color: #8f932b;
+}
+
+:global(.psh .variable) {
+  color: #5e78e1;
+}
+
+:global(.psh .variable.interpolation) {
+  color: #3354d9;
+}
+
+:global(.psh .invalid.illegal) {
+  background-color: #c16161;
+  color: #f8f6f1;
+}
+
+:global(.psh .string.interpolated) {
+  background-color: rgba(255, 204, 0, .03);
+}
+
+:global(.psh .string.quoted) {
+  background-color: rgba(255, 204, 0, .03);
+  color: rgba(106, 68, 28, .77);
+}
+
+:global(.psh .string.regexp) {
+  color: #379566;
+}
+
+:global(.psh .string.regexp .source.ruby.embedded) {
+  color: #d08e25;
+}
+
+:global(.psh .string.other.link) {
+  color: #c16161;
+}
+
+:global(.psh .punctuation.definition.comment) {
+  color: #808999;
+}
+
+:global(.psh .punctuation.definition.tag) {
+  color: #ac4343;
+}
+
+:global(.psh .punctuation.definition.arguments.begin), :global(.psh .punctuation.definition.arguments.end), :global(.psh .punctuation.definition.parameters.begin), :global(.psh .punctuation.definition.parameters.end) {
+  color: #6e7daa;
+}
+
+:global(.psh .punctuation.definition.heading), :global(.psh .punctuation.definition.identity) {
+  color: #5e78e1;
+}
+
+:global(.psh .punctuation.definition.bold) {
+  color: bold-color;
+  font-weight: 700;
+}
+
+:global(.psh .punctuation.section.embedded) {
+  color: #ac4343;
+}
+
+:global(.psh .support.class) {
+  color: #379566;
+}
+
+:global(.psh .support.function) {
+  color: #d08e25;
+}
+
+:global(.psh .entity.name.function) {
+  color: #d08e25;
+}
+
+:global(.psh .entity.name.class), :global(.psh .entity.name.type.class) {
+  color: #2b3f6a;
+}
+
+:global(.psh .entity.name.section) {
+  color: #c16161;
+}
+
+:global(.psh .entity.name.tag) {
+  color: #5e78e1;
+}
+
+:global(.psh .entity.name.label) {
+  color: #5e78e1;
+}
+
+:global(.psh .entity.other.attribute-name) {
+  color: #d08e25;
+}
+
+:global(.psh .entity.other.attribute-name.id) {
+  color: #5e78e1;
+}
+
+:global(.psh .meta.class) {
+  color: #2b3f6a;
+}
+
+:global(.psh .meta.method) {
+  color: #255f93;
+}
+
+:global(.psh .meta.link) {
+  color: #d08e25;
+}
+
+:global(.psh .meta.require) {
+  color: #5e78e1;
+}
+
+:global(.psh .meta.selector) {
+  color: #d08e25;
+}
+
+:global(.psh .meta.separator) {
+  color: #2b3f6a;
+}
+
+:global(.psh .none) {
+  color: red;
+}
+
+:global(.psh .highlights .highlight-selected .region) {
+  border-radius: 4px;
+  box-sizing: content-box;
+  padding: 0 1px 0 0;
+  margin: -1px 0 0 -1px;
+  background-color: transparent;
+  border-width: 1.5px;
+  border-style: dashed;
+}
+
+:global(.psh .highlights .highlight-selected.light-theme .region) {
+  border-color: rgba(238, 11, 143, .8);
+}
+
+:global(.psh .highlights .highlight-selected.light-theme.background .region) {
+  background-color: rgba(236, 13, 132, .35);
+}
+
+:global(.psh .gfm.changed), :global(.psh .markup.changed), :global(.psh .md.changed), :global(.psh .pfm.changed) {
+  color: #8100c6;
+}
+
+:global(.psh .gfm.deleted), :global(.psh .markup.deleted), :global(.psh .md.deleted), :global(.psh .pfm.deleted) {
+  color: #c16161;
+}
+
+:global(.psh .gfm.italic), :global(.psh .markup.italic), :global(.psh .md.italic), :global(.psh .pfm.italic) {
+  color: #0e72aa;
+  font-style: italic;
+}
+
+:global(.psh .gfm.italic .punctuation), :global(.psh .markup.italic .punctuation), :global(.psh .md.italic .punctuation), :global(.psh .pfm.italic .punctuation) {
+  opacity: .6;
+}
+
+:global(.psh .gfm.bold), :global(.psh .gfm.heading), :global(.psh .gfm.strong.emphasis), :global(.psh .markup.bold), :global(.psh .markup.heading), :global(.psh .markup.strong.emphasis), :global(.psh .md.bold), :global(.psh .md.heading), :global(.psh .md.strong.emphasis), :global(.psh .pfm.bold), :global(.psh .pfm.heading), :global(.psh .pfm.strong.emphasis) {
+  color: #0a537b;
+  font-weight: 700;
+}
+
+:global(.psh .gfm.bold .punctuation), :global(.psh .gfm.heading .punctuation), :global(.psh .gfm.strong.emphasis .punctuation), :global(.psh .markup.bold .punctuation), :global(.psh .markup.heading .punctuation), :global(.psh .markup.strong.emphasis .punctuation), :global(.psh .md.bold .punctuation), :global(.psh .md.heading .punctuation), :global(.psh .md.strong.emphasis .punctuation), :global(.psh .pfm.bold .punctuation), :global(.psh .pfm.heading .punctuation), :global(.psh .pfm.strong.emphasis .punctuation) {
+  opacity: .5;
+}
+
+:global(.psh .gfm.quote), :global(.psh .markup.quote), :global(.psh .md.quote), :global(.psh .pfm.quote) {
+  color: rgba(126, 81, 33, .77);
+  font-style: italic;
+}
+
+:global(.psh .gfm.quote .italic), :global(.psh .markup.quote .italic), :global(.psh .md.quote .italic), :global(.psh .pfm.quote .italic) {
+  color: rgba(158, 56, 1, .77);
+}
+
+:global(.psh .gfm.quote .bold), :global(.psh .gfm.quote .strong), :global(.psh .markup.quote .bold), :global(.psh .markup.quote .strong), :global(.psh .md.quote .bold), :global(.psh .md.quote .strong), :global(.psh .pfm.quote .bold), :global(.psh .pfm.quote .strong) {
+  color: rgba(126, 81, 33, .77);
+  font-weight: 700;
+}
+
+:global(.psh .gfm.heading .punctuation.definition.heading),
+:global(.psh .markup.heading .punctuation.definition.heading),
+:global(.psh .md.heading .punctuation.definition.heading),
+:global(.psh .pfm.heading .punctuation.definition.heading) {
+  color: #5e78e1;
+}
+
+:global(.psh .gfm.inserted), :global(.psh .markup.inserted), :global(.psh .md.inserted), :global(.psh .pfm.inserted) {
+  color: #8f932b;
+}
+
+:global(.psh .gfm.embedded.source.js), :global(.psh .gfm.raw), :global(.psh .markup.embedded.source.js), :global(.psh .markup.raw), :global(.psh .md.embedded.source.js), :global(.psh .md.raw), :global(.psh .pfm.embedded.source.js), :global(.psh .pfm.raw) {
+  background-color: rgba(245, 250, 252, .65);
+  font-style: italic;
+}
+
+:global(.psh .gfm.embedded.source.js.inline), :global(.psh .gfm.raw.inline), :global(.psh .markup.embedded.source.js.inline), :global(.psh .markup.raw.inline), :global(.psh .md.embedded.source.js.inline), :global(.psh .md.raw.inline), :global(.psh .pfm.embedded.source.js.inline), :global(.psh .pfm.raw.inline) {
+  color: #8f932b;
+}
+
+:global(.psh .gfm.strike), :global(.psh .markup.strike), :global(.psh .md.strike), :global(.psh .pfm.strike) {
+  text-decoration: line-through;
+}
+
+:global(.psh .gfm.underline), :global(.psh .markup.underline), :global(.psh .md.underline), :global(.psh .pfm.underline) {
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, .7);
+  border-width: 0 0 1px;
+  border-style: none none solid;
+}
+
+:global(.psh .gfm.heading), :global(.psh .markup.heading), :global(.psh .md.heading), :global(.psh .pfm.heading) {
+  color: #2a120a;
+  font-weight: 400;
+}
+
+:global(.psh .gfm.heading.heading-1), :global(.psh .markup.heading.heading-1), :global(.psh .md.heading.heading-1), :global(.psh .pfm.heading.heading-1) {
+  font-weight: 900;
+  opacity: 1;
+}
+
+:global(.psh .gfm.heading.heading-2), :global(.psh .markup.heading.heading-2), :global(.psh .md.heading.heading-2), :global(.psh .pfm.heading.heading-2) {
+  font-weight: 800;
+  opacity: .9;
+}
+
+:global(.psh .gfm.heading.heading-3), :global(.psh .markup.heading.heading-3), :global(.psh .md.heading.heading-3), :global(.psh .pfm.heading.heading-3) {
+  font-weight: 700;
+  opacity: .85;
+}
+
+:global(.psh .gfm.heading.heading-4), :global(.psh .gfm.heading.heading-5), :global(.psh .gfm.heading.heading-6), :global(.psh .markup.heading.heading-4), :global(.psh .markup.heading.heading-5), :global(.psh .markup.heading.heading-6), :global(.psh .md.heading.heading-4), :global(.psh .md.heading.heading-5), :global(.psh .md.heading.heading-6), :global(.psh .pfm.heading.heading-4), :global(.psh .pfm.heading.heading-5), :global(.psh .pfm.heading.heading-6) {
+  opacity: .8;
+}
+
+:global(.psh .gfm.heading.marker), :global(.psh .markup.heading.marker), :global(.psh .md.heading.marker), :global(.psh .pfm.heading.marker) {
+  color: rgba(42, 18, 10, .55);
+}
+
+:global(.psh .gfm.support), :global(.psh .markup.support), :global(.psh .md.support), :global(.psh .pfm.support) {
+  color: #6e7daa;
+}
+
+:global(.psh .gfm.markup.heading), :global(.psh .markup.markup.heading), :global(.psh .md.markup.heading), :global(.psh .pfm.markup.heading) {
+  font-weight: 400;
+}
+
+:global(.psh .gfm.variable), :global(.psh .markup.variable), :global(.psh .md.variable), :global(.psh .pfm.variable) {
+  color: #5e78e1;
+}
+
+:global(.psh .gfm.entity), :global(.psh .markup.entity), :global(.psh .md.entity), :global(.psh .pfm.entity) {
+  color: #255f93;
+}
+
+:global(.psh .gfm.punctuation.definition.begin), :global(.psh .gfm.punctuation.definition.end), :global(.psh .markup.punctuation.definition.begin), :global(.psh .markup.punctuation.definition.end), :global(.psh .md.punctuation.definition.begin), :global(.psh .md.punctuation.definition.end), :global(.psh .pfm.punctuation.definition.begin), :global(.psh .pfm.punctuation.definition.end) {
+  color: #6e7daa;
+}
+
+:global(.psh .gfm.reference.variable), :global(.psh .gfm.username), :global(.psh .markup.reference.variable), :global(.psh .markup.username), :global(.psh .md.reference.variable), :global(.psh .md.username), :global(.psh .pfm.reference.variable), :global(.psh .pfm.username) {
+  color: #aa5c08;
+}
+
+:global(.psh .gfm.mention), :global(.psh .gfm.reference.variable > .punctuation), :global(.psh .markup.mention), :global(.psh .markup.reference.variable > .punctuation), :global(.psh .md.mention), :global(.psh .md.reference.variable > .punctuation), :global(.psh .pfm.mention), :global(.psh .pfm.reference.variable > .punctuation) {
+  color: rgba(169, 86, 31, .43);
+}
+
+:global(.psh .gfm.list.variable), :global(.psh .markup.list.variable), :global(.psh .md.list.variable), :global(.psh .pfm.list.variable) {
+  color: #d48767;
+  font-weight: 700;
+}
+
+:global(.psh .gfm.list > .punctuation), :global(.psh .markup.list > .punctuation), :global(.psh .md.list > .punctuation), :global(.psh .pfm.list > .punctuation) {
+  font-weight: 700;
+  opacity: 1;
+  color: #d48767;
+}
+
+:global(.psh .gfm.list > .punctuation .checkbox), :global(.psh .markup.list > .punctuation .checkbox), :global(.psh .md.list > .punctuation .checkbox), :global(.psh .pfm.list > .punctuation .checkbox) {
+  color: #d48767;
+  background: hsla(18, 56%, 62%, .05);
+}
+
+:global(.psh .gfm.list.task.completed), :global(.psh .markup.list.task.completed), :global(.psh .md.list.task.completed), :global(.psh .pfm.list.task.completed) {
+  color: #2b3f6a;
+  opacity: .333;
+}
+
+:global(.psh .gfm.list.task.completed .code), :global(.psh .markup.list.task.completed .code), :global(.psh .md.list.task.completed .code), :global(.psh .pfm.list.task.completed .code) {
+  background: transparent;
+  color: #2b3f6a;
+}
+
+:global(.psh .gfm.list.task.completed .review), :global(.psh .gfm.list.task.completed .todo), :global(.psh .markup.list.task.completed .review), :global(.psh .markup.list.task.completed .todo), :global(.psh .md.list.task.completed .review), :global(.psh .md.list.task.completed .todo), :global(.psh .pfm.list.task.completed .review), :global(.psh .pfm.list.task.completed .todo) {
+  color: inherit;
+}
+
+:global(.psh .gfm.list.task.completed .fixme), :global(.psh .markup.list.task.completed .fixme), :global(.psh .md.list.task.completed .fixme), :global(.psh .pfm.list.task.completed .fixme) {
+  background: transparent;
+  outline: none;
+  color: inherit;
+}
+
+:global(.psh .gfm.list.empty .punctuation), :global(.psh .markup.list.empty .punctuation), :global(.psh .md.list.empty .punctuation), :global(.psh .pfm.list.empty .punctuation) {
+  color: #d48767;
+}
+
+:global(.psh .gfm.critic.addition), :global(.psh .markup.critic.addition), :global(.psh .md.critic.addition), :global(.psh .pfm.critic.addition) {
+  color: #8f932b;
+}
+
+:global(.psh .gfm.critic.addition.marker), :global(.psh .markup.critic.addition.marker), :global(.psh .md.critic.addition.marker), :global(.psh .pfm.critic.addition.marker) {
+  color: rgba(143, 147, 43, .5) !important;
+}
+
+:global(.psh .gfm.critic.deletion), :global(.psh .markup.critic.deletion), :global(.psh .md.critic.deletion), :global(.psh .pfm.critic.deletion) {
+  color: #c16161;
+}
+
+:global(.psh .gfm.critic .deletion.marker), :global(.psh .markup.critic .deletion.marker), :global(.psh .md.critic .deletion.marker), :global(.psh .pfm.critic .deletion.marker) {
+  color: rgba(193, 97, 97, .5) !important;
+}
+
+:global(.psh .gfm.critic.substitution), :global(.psh .markup.critic.substitution), :global(.psh .md.critic.substitution), :global(.psh .pfm.critic.substitution) {
+  color: #d08e25;
+}
+
+:global(.psh .gfm.critic.substitution.marker), :global(.psh .markup.critic.substitution.marker), :global(.psh .md.critic.substitution.marker), :global(.psh .pfm.critic.substitution.marker) {
+  color: rgba(208, 142, 37, .5) !important;
+}
+
+:global(.psh .gfm.critic.substitution.operator), :global(.psh .markup.critic.substitution.operator), :global(.psh .md.critic.substitution.operator), :global(.psh .pfm.critic.substitution.operator) {
+  color: #a5701d !important;
+}
+
+:global(.psh .gfm.critic.comment), :global(.psh .markup.critic.comment), :global(.psh .md.critic.comment), :global(.psh .pfm.critic.comment) {
+  color: #9ca3b0;
+}
+
+:global(.psh .gfm.critic.comment.marker), :global(.psh .markup.critic.comment.marker), :global(.psh .md.critic.comment.marker), :global(.psh .pfm.critic.comment.marker) {
+  color: rgba(156, 163, 176, .5) !important;
+}
+
+:global(.psh .gfm.critic.highlight), :global(.psh .markup.critic.highlight), :global(.psh .md.critic.highlight), :global(.psh .pfm.critic.highlight) {
+  color: #5e78e1;
+}
+
+:global(.psh .gfm.critic.highlight.marker), :global(.psh .markup.critic.highlight.marker), :global(.psh .md.critic.highlight.marker), :global(.psh .pfm.critic.highlight.marker) {
+  color: rgba(94, 120, 225, .5) !important;
+}
+
+:global(.psh .gfm.math), :global(.psh .markup.math), :global(.psh .md.math), :global(.psh .pfm.math) {
+  background: rgba(143, 147, 43, .09999999999999998);
+  color: #8f932b;
+}
+
+:global(.psh .gfm.math .support), :global(.psh .markup.math .support), :global(.psh .md.math .support), :global(.psh .pfm.math .support) {
+  color: #696c1f;
+}
+
+:global(.psh .gfm.math .punctuation.arguments), :global(.psh .markup.math .punctuation.arguments), :global(.psh .md.math .punctuation.arguments), :global(.psh .pfm.math .punctuation.arguments) {
+  color: #c87373;
+}
+
+:global(.psh .gfm.math .tex.constant), :global(.psh .markup.math .tex.constant), :global(.psh .md.math .tex.constant), :global(.psh .pfm.math .tex.constant) {
+  color: #d08e25;
+}
+
+:global(.psh .gfm.math .tex.constant.numeric), :global(.psh .markup.math .tex.constant.numeric), :global(.psh .md.math .tex.constant.numeric), :global(.psh .pfm.math .tex.constant.numeric) {
+  color: #8f932b;
+}
+
+:global(.psh .gfm.definition.block), :global(.psh .markup.definition.block), :global(.psh .md.definition.block), :global(.psh .pfm.definition.block) {
+  background: rgba(94, 120, 225, .09999999999999998);
+}
+
+:global(.psh .gfm.auto), :global(.psh .gfm.footnote), :global(.psh .gfm.link), :global(.psh .markup.auto), :global(.psh .markup.footnote), :global(.psh .markup.link), :global(.psh .md.auto), :global(.psh .md.footnote), :global(.psh .md.link), :global(.psh .pfm.auto), :global(.psh .pfm.footnote), :global(.psh .pfm.link) {
+  color: #255f93;
+}
+
+:global(.psh .gfm.auto.destination .uri), :global(.psh .gfm.footnote.destination .uri), :global(.psh .gfm.link.destination .uri), :global(.psh .markup.auto.destination .uri), :global(.psh .markup.footnote.destination .uri), :global(.psh .markup.link.destination .uri), :global(.psh .md.auto.destination .uri), :global(.psh .md.footnote.destination .uri), :global(.psh .md.link.destination .uri), :global(.psh .pfm.auto.destination .uri), :global(.psh .pfm.footnote.destination .uri), :global(.psh .pfm.link.destination .uri) {
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, .7);
+  border-width: 0 0 1px;
+  border-style: none none solid;
+}
+
+:global(.psh .text.bibtex .entry-key) {
+  color: #aa5c08;
+  font-weight: 700;
+}
+
+:global(.psh .text.bibtex .begin), :global(.psh .text.bibtex .end) {
+  color: #2b3f6a;
+}
+
+:global(.psh .text.bibtex .punctuation.definition.keyword) {
+  opacity: .7;
+}
+
+:global(.psh .source .js.brace.curly), :global(.psh .source .js.brace.round) {
+  color: #5e6fa0;
+}
+
+:global(.psh .source .js.punctuation.terminator.statement) {
+  color: #255f93;
+}
+
+:global(.psh .source .js.delimiter.method.period) {
+  color: #6e7daa;
+}
+
+:global(.psh .source .js.delimiter.object.comma) {
+  color: #5e6fa0;
+}
+
+:global(.psh .source .js.variable.language.js) {
+  color: #379566;
+}
+
+:global(.psh .css .punctuation.separator.key-value) {
+  color: #255f93;
+}
+
+:global(.psh .body.vala) {
+  color: #2b3f6a;
+}
+
+:global(.psh .source.json .meta.structure.dictionary.json > .string.quoted.json) {
+  background-color: rgba(182, 137, 215, 0);
+  color: #6e7daa;
+}
+
+:global(.psh .source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string) {
+  background-color: rgba(182, 137, 215, 0);
+  opacity: .75;
+}
+
+:global(.psh .source.json .meta.structure.array.json > .value.json > .string.quoted.json),
+:global(.psh .source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation),
+:global(.psh .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json),
+:global(.psh .source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation) {
+  background-color: rgba(255, 204, 0, 0);
+  color: rgba(126, 81, 33, .77);
+}
+
+:global(.psh .source.json .meta.structure.array.json > .constant.language.json),
+:global(.psh .source.json .meta.structure.dictionary.json > .constant.language.json) {
+  color: #c16161;
+  background-color: rgba(182, 137, 215, 0);
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "monkberry",
+  "repo": "monkberry/monkberry",
+  "files": {
+    "include": ["monkberry.js"]
+  }
+}

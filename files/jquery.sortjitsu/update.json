@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery.sortjitsu",
+  "repo": "Fullscreen/sortjitsu",
+  "files": {
+    "basePath": "dist/",
+    "include": ["jquery.sortjitsu.js", "jquery.sortjitsu.min.js"]
+  }
+}

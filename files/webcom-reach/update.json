@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "webcom-reach",
+  "repo": "webcom-components/reach",
+  "files": {
+    "basePath": "dist/",
+    "include": ["reach.js"]
+  }
+}

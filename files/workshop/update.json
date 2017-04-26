@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "workshop",
+  "repo": "jsmrcaga/workshop-public",
+  "files": {
+    "include": ["workshop.min.js", "workshop.js"]
+  }
+}

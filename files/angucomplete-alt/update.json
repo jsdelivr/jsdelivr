@@ -1,0 +1,9 @@
+{
+  "packageManager": "npm",
+  "name": "angucomplete-alt",
+  "files": {
+    "basePath": "dist/"
+  }
+}
+
+

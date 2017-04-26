@@ -4,6 +4,9 @@
   "repo": "idleberg/m8tro-bootstrap",
   "files": {
     "basePath": "dist/css/",
-    "include": ["m8tro.min.css"]
+    "include": [
+      "m8tro.min.css",
+      "m8tro-extras.min.css"
+    ]
   }
 }

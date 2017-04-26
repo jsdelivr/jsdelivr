@@ -1,0 +1,33 @@
+button.round {
+   boarder-radius: 15px;
+   padding: 10px;
+   background-color: gray;
+   font-color: black;
+}
+
+button.sharp-corners {
+   padding: 10px;
+   background-color: gray;
+   font-color: black;
+}
+
+button.red {
+   background-color: red;
+}
+
+button.blue {
+   background-color: blue;
+}
+
+button.light-blue {
+   background-color: lightCyan;
+}
+
+button.white {
+   background-color: white;
+   font-color: black;
+}
+
+button.white-text {
+   font-color: white;
+}

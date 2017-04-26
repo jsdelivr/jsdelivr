@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "clappr-thumbnails-plugin",
+  "repo": "tjenkinson/clappr-thumbnails-plugin",
+  "files": {
+    "basePath": "dist/"
+  }
+}

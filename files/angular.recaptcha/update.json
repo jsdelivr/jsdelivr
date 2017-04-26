@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.recaptcha",
+  "repo": "VividCortex/angular-recaptcha",
+  "files": {
+    "basePath": "release/",
+    "include": ["angular-recaptcha.min.js", "angular-recaptcha.js"]
+  }
+}

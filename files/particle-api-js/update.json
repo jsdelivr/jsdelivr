@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "particle-api-js",
+  "repo": "spark/particle-api-js",
+  "files": {
+    "basePath": "dist",
+    "include": ["particle.min.js", "particle.min.js.map"]
+  }
+}

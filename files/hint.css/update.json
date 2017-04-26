@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "hint.css",
+  "repo": "chinchang/hint.css",
+  "files": {
+    "include": ["hint.css", "hint.min.css"]
+  }
+}

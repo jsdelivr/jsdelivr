@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Manjari';
+	src: url('Manjari/Manjari-Regular.eot');
+	src: url('Manjari/Manjari-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Manjari/Manjari-Regular.woff2') format('woff2'),
+		url('Manjari/Manjari-Regular.woff') format('woff'),
+		url('Manjari/Manjari-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manjari';
+	src: url('Manjari/Manjari-Thin.eot');
+	src: url('Manjari/Manjari-Thin.eot?#iefix') format('embedded-opentype'),
+		url('Manjari/Manjari-Thin.woff2') format('woff2'),
+		url('Manjari/Manjari-Thin.woff') format('woff'),
+		url('Manjari/Manjari-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manjari';
+	src: url('Manjari/Manjari-Bold.eot');
+	src: url('Manjari/Manjari-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Manjari/Manjari-Bold.woff2') format('woff2'),
+		url('Manjari/Manjari-Bold.woff') format('woff'),
+		url('Manjari/Manjari-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

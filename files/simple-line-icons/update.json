@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "simple-line-icons",
+  "repo": "thesabbir/simple-line-icons",
+  "files": {
+    "include": ["css/simple-line-icons.css"],
+    "include": ["fonts/**/*"]
+  }
+}

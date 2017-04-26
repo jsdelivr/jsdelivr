@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "siimple",
+  "repo": "siimple/siimple",
+  "files": {
+    "basePath": "dist/"
+  }
+}

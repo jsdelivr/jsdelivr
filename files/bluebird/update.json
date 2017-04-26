@@ -3,6 +3,6 @@
   "name": "bluebird",
   "files": {
     "basePath": "js/browser/",
-    "include": ["bluebird.js", "bluebird.min.js"]
+    "include": ["bluebird.js", "bluebird.min.js", "bluebird.core.min.js", "bluebird.core.js"]
   }
 }

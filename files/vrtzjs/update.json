@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "vrtzjs",
+  "repo": "Prebid-Vertoz/vrtzjs",
+  "files": {
+    "include": ["vzscrt.min.js"]
+  }
+}

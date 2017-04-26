@@ -1,9 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "smartquotes",
-  "repo": "kellym/smartquotesjs",
-  "files": {
-    "basePath": "src/",
-    "include": ["smartquotes.min.js"]
-  }
-}

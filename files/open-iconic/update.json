@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "open-iconic",
+  "repo": "iconic/open-iconic",
+  "files": {
+    "include": [ "**/*.eot", "**/*.otf", "**/*.svg", "**/*.ttf", "**/*.woff", "**/*.css", "**/*.less", "**/*.styl", "**/*.scss", "**/*.png", "**/*.webp" ]
+  }
+}

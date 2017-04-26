@@ -1,0 +1,586 @@
+.psh {
+  margin: 0;
+  background-color: #eceae8;
+  color: #b1a394;
+}
+
+.psh pre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.psh code, .psh samp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+.psh code::-moz-selection, .psh samp::-moz-selection {
+  background-color: #d9d5ce;
+}
+
+.psh code::selection, .psh samp::selection {
+  background-color: #d9d5ce;
+}
+
+.psh .psh-line-numbers {
+  counter-reset: line;
+}
+
+.psh .psh-line-numbers .psh-line {
+  counter-increment: line;
+}
+
+.psh .psh-line-numbers .psh-line::before {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #cfc7be;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before {
+  width: 2em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before {
+  width: 2.6em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before {
+  width: 3.2em;
+}
+
+.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before {
+  width: 3.8em;
+}
+
+.psh .psh-label {
+  background-color: #eceae8;
+  text-align: right;
+  height: 18px;
+}
+
+.psh .psh-label-value {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #d4d3d1;
+  color: #555454;
+}
+
+.psh .psh-caption {
+  padding: 12px;
+  background-color: #d4d3d1;
+  font-weight: 700;
+  font-size: 14px;
+  color: #555454;
+}
+
+.psh .psh-filename {
+  padding: 3px 12px;
+  background-color: #d4d3d1;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #555454;
+}
+
+.psh .psh-request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+.psh .psh-request .psh-request-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #cfc7be;
+  font-size: 15px;
+  color: #fff;
+}
+
+.psh .psh-request .psh-request-method-get {
+  background-color: #42bd79;
+}
+
+.psh .psh-request .psh-request-method-post {
+  background-color: #00abd6;
+}
+
+.psh .psh-request .psh-request-method-put {
+  background-color: #845eed;
+}
+
+.psh .psh-request .psh-request-method-patch {
+  background-color: #f0813d;
+}
+
+.psh .psh-request .psh-request-method-delete {
+  background-color: #df435d;
+}
+
+.psh .psh-request .psh-request-resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #ddd8d3;
+  font-size: 13px;
+  color: #555454;
+}
+
+.psh .psh-request .psh-request-method-get + .psh-request-resource {
+  background-color: #e1e8e1;
+}
+
+.psh .psh-request .psh-request-method-post + .psh-request-resource {
+  background-color: #dce7e8;
+}
+
+.psh .psh-request .psh-request-method-put + .psh-request-resource {
+  background-color: #e6e1ea;
+}
+
+.psh .psh-request .psh-request-method-patch + .psh-request-resource {
+  background-color: #eee4dd;
+}
+
+.psh .psh-request .psh-request-method-delete + .psh-request-resource {
+  background-color: #ecdfdf;
+}
+
+.psh .psh-add, .psh .psh-highlight, .psh .psh-remove {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+.psh .psh-highlight {
+  border-left: 3px solid #dba643;
+  background-color: #ece6dd;
+}
+
+.psh .psh-add {
+  border-left: 3px solid #42bd79;
+  background-color: #e1e8e1;
+}
+
+.psh .psh-remove {
+  border-left: 3px solid #df435d;
+  background-color: #ecdfdf;
+}
+
+.psh .psh-invisibles-lf, .psh .psh-invisibles-space, .psh .psh-invisibles-tab {
+  position: relative;
+}
+
+.psh .psh-invisibles-lf::before, .psh .psh-invisibles-space::before, .psh .psh-invisibles-tab::before {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ddd8d3;
+}
+
+.psh .psh-invisibles-tab::before {
+  content: "⇥";
+}
+
+.psh .psh-invisibles-space::before {
+  content: "·";
+}
+
+.psh .psh-invisibles-lf::before {
+  content: "↩";
+}
+
+.psh .psh-commands::before {
+  content: ">";
+  padding-right: .8em;
+  color: #96c0d8;
+}
+
+.psh .comment {
+  color: #d4c8be;
+  background: none;
+}
+
+.psh .keyword {
+  color: #9fb96e;
+}
+
+.psh .keyword.control {
+  color: #9fb96e;
+}
+
+.psh .keyword.operator {
+  color: #9fb96e;
+}
+
+.psh .keyword.other.special-method {
+  color: #9fb96e;
+}
+
+.psh .keyword.other.unit {
+  color: #9fb96e;
+}
+
+.psh .storage {
+  color: #dcb553;
+}
+
+.psh .storage.modifier {
+  color: #dcb553;
+}
+
+.psh .constant {
+  color: #a074c4;
+}
+
+.psh .constant.character.escape {
+  color: #a074c4;
+}
+
+.psh .constant.numeric {
+  color: #a074c4;
+}
+
+.psh .constant.other.color {
+  color: #a074c4;
+}
+
+.psh .constant.other.symbol {
+  color: #a074c4;
+}
+
+.psh .variable {
+  color: #9fb96e;
+}
+
+.psh .variable.interpolation {
+  color: #9fb96e;
+}
+
+.psh .variable.parameter.function {
+  color: #4186ae;
+}
+
+.psh .invalid.deprecated, .psh .invalid.illegal {
+  background: none;
+  color: #a074c4;
+}
+
+.psh .string {
+  color: #96c0d8;
+}
+
+.psh .string .constant {
+  color: #96c0d8;
+}
+
+.psh .string.regexp {
+  color: #96c0d8;
+}
+
+.psh .string.regexp .constant.character.escape, .psh .string.regexp .source.ruby.embedded, .psh .string.regexp .string.regexp.arbitrary-repitition {
+  color: #96c0d8;
+}
+
+.psh .string.regexp.group {
+  color: #96c0d8;
+  background-color: #96c0d8;
+}
+
+.psh .string.regexp.character-class {
+  color: #96c0d8;
+}
+
+.psh .string.regexp .source.ruby.embedded {
+  color: #96c0d8;
+}
+
+.psh .string .variable {
+  color: #9fb96e;
+}
+
+.psh .string.other.link {
+  color: #96c0d8;
+}
+
+.psh .source .string .meta.embedded.line, .psh .source .string .source {
+  color: #96c0d8;
+}
+
+.psh .source .string .punctuation.section.embedded {
+  color: #96c0d8;
+}
+
+.psh .source .string .punctuation.section.embedded .source {
+  color: #96c0d8;
+}
+
+.psh .punctuation.terminator {
+  color: #d1c9c0;
+}
+
+.psh .punctuation.separator {
+  color: #d1c9c0;
+}
+
+.psh .punctuation.definition {
+  color: #d1c9c0;
+}
+
+.psh .punctuation.definition.comment {
+  color: #d4c8be;
+}
+
+.psh .punctuation.definition.array, .psh .punctuation.definition.parameters, .psh .punctuation.definition.string, .psh .punctuation.definition.variable {
+  color: #96c0d8;
+}
+
+.psh .punctuation.definition.heading, .psh .punctuation.definition.identity {
+  color: #b1a394;
+}
+
+.psh .punctuation.definition.bold {
+  color: #b1a394;
+  font-style: bold;
+}
+
+.psh .punctuation.definition.italic {
+  color: #b1a394;
+  font-style: italic;
+}
+
+.psh .punctuation.section.embedded {
+  color: #b1a394;
+}
+
+.psh .support {
+  color: #a074c4;
+}
+
+.psh .support.class {
+  color: #a074c4;
+}
+
+.psh .support.function {
+  color: #a074c4;
+}
+
+.psh .support.function.any-method {
+  color: #a074c4;
+}
+
+.psh .support.constant {
+  color: #a074c4;
+}
+
+.psh .support.type.property-name.css {
+  color: #a074c4;
+}
+
+.psh .meta.tag.inline, .psh .meta.tag.inline .entity, .psh .source .entity.name.tag, .psh .source .entity.other.attribute-name {
+  color: #96c0d8;
+}
+
+.psh .tag, .psh .tag .entity {
+  color: #96c0d8;
+}
+
+.psh .html .string {
+  color: #b1a394 !important;
+}
+
+.psh .html .punctuation.definition.tag {
+  color: #dcb553;
+}
+
+.psh .html .entity.name.tag {
+  text-decoration: done;
+}
+
+.psh .html .entity.name.tag.structure {
+  color: #dcb553;
+}
+
+.psh .html .entity.name.tag.block {
+  color: #dcb553;
+}
+
+.psh .html .entity.other.attribute-name {
+  color: #9fb96e;
+}
+
+.psh .entity {
+  color: #96c0d8;
+}
+
+.psh .entity.name.type {
+  color: #96c0d8;
+  text-decoration: none;
+}
+
+.psh .entity.other.inherited-class {
+  color: #96c0d8;
+}
+
+.psh .entity.name.function {
+  color: #96c0d8;
+}
+
+.psh .entity.name.class, .psh .entity.name.type.class {
+  color: #96c0d8;
+}
+
+.psh .entity.name.section {
+  color: #96c0d8;
+}
+
+.psh .entity.name.tag {
+  color: #dcb553;
+  text-decoration: done;
+}
+
+.psh .entity.other.attribute-name {
+  color: #9fb96e;
+}
+
+.psh .entity.other.attribute-name.id {
+  color: #a074c4;
+}
+
+.psh .meta .class {
+  color: #a074c4;
+}
+
+.psh .meta.link {
+  color: #b1a394;
+}
+
+.psh .meta.require {
+  color: #b1a394;
+}
+
+.psh .meta.brace.curly {
+  color: #d1c9c0;
+}
+
+.psh .meta.brace.round {
+  color: #b1a394;
+}
+
+.psh .meta.comma {
+  color: #d1c9c0;
+}
+
+.psh .meta.selector {
+  color: #d1c9c0;
+}
+
+.psh .meta.separator {
+  background-color: #d1c9c0;
+  color: #d1c9c0;
+}
+
+.psh .none {
+  color: #b1a394;
+}
+
+.psh .markup.bold {
+  color: #b1a394;
+  font-style: bold;
+}
+
+.psh .markup.changed {
+  color: #b1a394;
+}
+
+.psh .markup.deleted {
+  color: #b1a394;
+}
+
+.psh .markup.italic {
+  color: #b1a394;
+  font-style: italic;
+}
+
+.psh .markup.heading .punctuation.definition.heading {
+  color: #b1a394;
+}
+
+.psh .markup.inserted {
+  color: #b1a394;
+}
+
+.psh .markup.list {
+  color: #b1a394;
+}
+
+.psh .markup.quote {
+  color: #b1a394;
+}
+
+.psh .markup.raw.inline {
+  color: #b1a394;
+}
+
+.psh .source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+
+.psh .source.gfm .markup.heading {
+  color: #b1a394;
+}

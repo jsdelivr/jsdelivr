@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "zepto",
+  "repo": "madrobby/zepto",
+  "files": {
+    "include": [ "dist/*.js", "src/*.js" ]
+  }
+}

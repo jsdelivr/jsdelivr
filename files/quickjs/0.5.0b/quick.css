@@ -1,0 +1,18 @@
+qk-page{
+	position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+qk-const{
+	position: absolute;
+	z-index: 10;
+}
+body{
+	overflow: hidden;
+}

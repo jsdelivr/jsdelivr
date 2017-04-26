@@ -1,0 +1,8 @@
+{
+   "packageManager": "github",
+   "name": "audero-sticky",
+   "repo": "AurelioDeRosa/audero-sticky",
+   "files": {
+      "basePath": "dist/"
+   }
+}

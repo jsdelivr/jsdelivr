@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "Alorel/console-log-html",
+  "repo": "Alorel/console-log-html",
+  "files": {
+    "basePath": "/",
+    "include": ["console-log-html.js", "console-log-html.min.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "perfect-scrollbar",
+  "repo": "noraesae/perfect-scrollbar",
+  "files": {
+    "basePath": "dist/"
+  }
+}

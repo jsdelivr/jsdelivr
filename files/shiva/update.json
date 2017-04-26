@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "shiva",
+  "repo": "gabrielmccallin/shiva",
+  "files": {
+    "basePath": "dist/"
+  }
+}

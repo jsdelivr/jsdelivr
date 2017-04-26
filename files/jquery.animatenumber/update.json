@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.animatenumber",
+  "repo": "aishek/jquery-animateNumber",
+  "files": {
+    "include": ["jquery.animateNumber.js", "jquery.animateNumber.min.js"]
+  }
+}

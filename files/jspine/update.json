@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jspine",
+  "repo": "wdub/jspine",
+  "files": {
+    "basePath": "src",
+    "include": ["*.js"]
+  }
+}

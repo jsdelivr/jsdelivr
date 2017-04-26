@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "PocketMine-CSS",
+  "repo": "BoxOfDevs/PocketMine-CSS",
+  "files": {
+    "include": ["PocketMine.min.css", "PocketMine.css"]
+  }
+}

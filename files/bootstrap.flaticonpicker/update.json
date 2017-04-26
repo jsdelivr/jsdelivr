@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bootstrap.flaticonpicker",
+  "repo": "xavierfaucon/bootstrap-flaticonpicker",
+  "files": {
+    "include": ["bootstrap-flaticonpicker.min.js"]
+  }
+}

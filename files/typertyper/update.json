@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "TyperTyper",
+  "repo": "maximilienGilet/TyperTyper",
+  "files": {
+    "include": ["typertyper.js"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "unify",
+  "repo": "mike-feldmeier/unify",
+  "files": {
+    "include": ["unify.min.js"]
+  }
+}

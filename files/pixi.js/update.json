@@ -1,9 +1,14 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "pixi.js",
-  "repo": "GoodBoyDigital/pixi.js",
+  "repo": "pixijs/pixi.js",
   "files": {
-    "basePath": "bin/",
-	"include": ["pixi.js"]
+    "basePath": "dist/",
+    "include": [
+      "pixi.js",
+      "pixi.min.js",
+      "pixi.js.map",
+      "pixi.min.js.map"
+    ]
   }
 }

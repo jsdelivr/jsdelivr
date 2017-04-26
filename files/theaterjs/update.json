@@ -2,7 +2,7 @@
   "packageManager": "bower",
   "name": "theaterjs",
   "files": {
-    "basePath": "build/",
-    "include": ["theater.min.js"]
+    "basePath": "dist/",
+    "include": ["theater.min.js", "theater.min.js.map"]
   }
 }

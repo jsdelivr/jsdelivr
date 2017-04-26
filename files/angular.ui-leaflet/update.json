@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "angular.ui-leaflet",
+  "repo": "angular-ui/ui-leaflet",
+  "files": {
+    "basePath": "dist/"
+  }
+}

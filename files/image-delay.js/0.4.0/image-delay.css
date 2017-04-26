@@ -1,0 +1,17 @@
+html:not([data-delay-start]) [data-image-delay],
+html:not([data-delay-end]) [data-delay-index],
+html:not([data-delay-batch]) [data-delay-index] [data-image-delay],
+html:not([data-delay-batch]) [data-delay-index] [data-image-delay-wait],
+html[data-delay-batch] [data-image-delay]:not([data-delay-start]),
+html[data-delay-batch] [data-image-delay-wait]:not([data-delay-start]),
+html[data-delay-batch] [data-image-index]:not([data-delay-start]) {
+    background-image: none!important;
+}
+
+[data-image-delay-wait] {
+    opacity:0!important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"!important;
+    filter: alpha(opacity=0)!important;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+}

@@ -1,0 +1,8 @@
+{
+  "packageManager": "npm",
+  "name": "chance",
+  "repo": "victorquinn/chancejs",
+  "files": {
+    "basePath": "dist/"
+  }
+}

@@ -4,5 +4,8 @@
   "repo": "sutara79/jquery.simple-scroll-follow",
   "files": {
     "basePath": "dist/"
+    "include": [
+      "jquery.simple-scroll-follow.min.js"
+    ]
   }
 }

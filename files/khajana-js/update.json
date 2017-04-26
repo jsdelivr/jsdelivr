@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "khajana-js",
+  "repo": "bogas04/khajana-js",
+  "files": {
+    "include": ["index.js"]
+  }
+}

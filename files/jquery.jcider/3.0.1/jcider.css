@@ -1,0 +1,59 @@
+/*Icons for navigation-arrows*/
+@import url(https://fontastic.s3.amazonaws.com/CoBsvmhLG8dQosPCdCFvBM/icons.css);
+
+/*Positioning and styling for navigation controls.*/
+/*Change at your will.*/
+
+/*Parent container for navigation arrows*/
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+}
+/*Both right and left nav arrows*/
+.slider-nav span {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+}
+
+ /*Left nav arrow*/
+.slider-nav .nav-left {
+  left: 5px;
+}
+/*Right nav arrow*/
+.slider-nav .nav-right {
+  right: 5px;
+}
+
+/*Pagination container can be styled by '.jcider-pagination'*/
+.jcider-pagination {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Styling for pagination points*/
+.jcider-pagination .point {
+  background: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+ /*Styling for active pagination point*/
+.jcider-pagination .point.active {
+  background: black;
+}

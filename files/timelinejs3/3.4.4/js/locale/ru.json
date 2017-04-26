@@ -1,0 +1,75 @@
+{
+    "lang": "ru", 
+    "date": {
+        "month_abbr": [
+            "янв.", 
+            "фев.", 
+            "март", 
+            "апр.", 
+            "май", 
+            "июнь", 
+            "июль", 
+            "авг.", 
+            "сент.", 
+            "окт.", 
+            "нояб.", 
+            "дек."
+        ], 
+        "day_abbr": [
+            "вск.", 
+            "пн.", 
+            "вт.", 
+            "ср.", 
+            "чт.", 
+            "пт.", 
+            "сб."
+        ], 
+        "day": [
+            "воскресенье", 
+            "понедельник", 
+            "вторник", 
+            "среда", 
+            "четверг", 
+            "пятница", 
+            "суббота"
+        ], 
+        "month": [
+            "января", 
+            "февраля", 
+            "марта", 
+            "апреля", 
+            "мая", 
+            "июня", 
+            "июля", 
+            "августа", 
+            "сентября", 
+            "октября", 
+            "ноября", 
+            "декабря"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "ru"
+    }, 
+    "messages": {
+        "loading": "Загрузка", 
+        "contract_timeline": "Уменьшить", 
+        "return_to_title": "Вернуться к заголовку", 
+        "wikipedia": "Из Wikipedia", 
+        "loading_content": "Загрузка контента", 
+        "expand_timeline": "Увеличить", 
+        "loading_timeline": "Загрузка... "
+    }, 
+    "dateformats": {
+        "full_long": "d mmm',' yyyy 'в' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm',' yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "H:MM'<br/><small>'d mmmm',' yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "H:MM", 
+        "time_short": "H:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>d mmm',' yyyy'</small>'"
+    }
+}

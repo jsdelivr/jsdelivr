@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "synthes",
+	"repo": "dolphin4ik/synthes",
+	"files": {
+		"include": ["synthes.js"]
+	}
+}

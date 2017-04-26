@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "dummy.js",
+  "repo": "shreyasminocha/dummy.js",
+  "files": {
+    "basePath": "dist",
+    "include": ["dummy.min.js", "dummy.dev.js", "dummy.min.js.map", "dummy.dev.js.map"]
+  }
+}

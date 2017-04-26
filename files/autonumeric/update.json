@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "autoNumeric",
+  "repo": "autoNumeric/autoNumeric",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "autoNumeric.js",
+      "autoNumeric.min.js"
+    ]
+  }
+}

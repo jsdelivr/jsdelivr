@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jsfiddle-metal-component",
+  "repo": "fernandosouza/jsfiddle-metal-component",
+  "files": {
+    "include": ["build/globals/jsFiddleMetalComponent-min.js"]
+  }
+}

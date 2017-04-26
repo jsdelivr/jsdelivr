@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-loading",
+  "repo": "CarlosBonetti/jquery-loading",
+  "files": {
+    "basePath": "dist/",
+    "include": ["*.min.*"]
+  }
+}

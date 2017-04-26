@@ -1,0 +1,9 @@
+
+{
+  "packageManager": "bower",
+  "name": "isMobile",
+  "repo": "kaimallea/isMobile",
+  "files": {
+    "include": ["isMobile.js", "isMobile.min.js"]
+  }
+}

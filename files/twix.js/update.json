@@ -3,7 +3,7 @@
   "name": "twix.js",
   "repo": "icambron/twix.js",
   "files": {
-    "basePath": "bin/",
+    "basePath": "dist/",
 	"include" : ["*.min.js"]
   }
 }

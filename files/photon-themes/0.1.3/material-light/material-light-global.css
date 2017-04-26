@@ -1,0 +1,650 @@
+:global(.psh) {
+  background-color: #fafafa;
+  color: #607d8b;
+  margin: 1em 0;
+}
+
+:global(.psh figure) {
+  margin: 0;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+  background-color: #fafafa;
+  color: #607d8b;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #adbcc3;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #fafafa;
+  height: 18px;
+  text-align: right;
+  line-height: 18px;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #e1e1e1;
+  color: #5a5a5a;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #e1e1e1;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  word-break: break-all;
+  color: #5a5a5a;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #e1e1e1;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24px;
+  word-break: break-all;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  font-family: monospace;
+  font-weight: 500;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #adbcc3;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #d4dbde;
+  font-size: 13px;
+  word-break: break-all;
+  color: #5a5a5a;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #edf6f1;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #e8f4f8;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #f2eff9;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #faf1ec;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #f8edef;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #f8f4ed;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #edf6f1;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #f8edef;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #d4dbde;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #6ec1b9;
+}
+
+:global(.psh .comment), :global(.psh .punctuation.definition.comment) {
+  font-style: italic;
+  color: #ccd7da;
+}
+
+:global(.psh .string .constant.other.placeholder), :global(.psh .variable) {
+  color: #80cbc4;
+}
+
+:global(.psh .constant.other.color) {
+  color: #fff;
+}
+
+:global(.psh .invalid), :global(.psh .invalid.broken), :global(.psh .invalid.illegal) {
+  color: #fff;
+  background-color: #e53935;
+}
+
+:global(.psh .invalid.unimplemented) {
+  color: #fff;
+  background-color: #91b859;
+}
+
+:global(.psh .invalid.deprecated) {
+  color: #fff;
+  background-color: #7c4dff;
+}
+
+:global(.psh .keyword), :global(.psh .storage.modifier), :global(.psh .storage.type) {
+  color: #7c4dff;
+}
+
+:global(.psh .keyword.control), :global(.psh .storage.type) {
+  font-style: italic;
+}
+
+:global(.psh .constant.other.color), :global(.psh .keyword.operator), :global(.psh .keyword.other.substitution), :global(.psh .keyword.other.template), :global(.psh .meta.tag), :global(.psh .punctuation), :global(.psh .punctuation.definition.tag), :global(.psh .punctuation.definition.tag.begin.html), :global(.psh .punctuation.definition.tag.end.html), :global(.psh .punctuation.definition.tag.html), :global(.psh .punctuation.section.embedded), :global(.psh .punctuation.separator.inheritance.php) {
+  color: #39adb5;
+}
+
+:global(.psh .entity.name.function), :global(.psh .keyword.other.special-method), :global(.psh .meta.block-level), :global(.psh .meta.function-call), :global(.psh .support.function), :global(.psh .variable.function) {
+  color: #6182b8;
+}
+
+:global(.psh .string.other.link), :global(.psh .support.other.variable) {
+  color: #ff5370;
+}
+
+:global(.psh .constant.character), :global(.psh .constant.language), :global(.psh .constant.numeric), :global(.psh .keyword.other.unit), :global(.psh .support.constant), :global(.psh .variable.parameter) {
+  color: #f76d47;
+}
+
+:global(.psh .source.css .support.type), :global(.psh .source.less .support.type), :global(.psh .source.sass .support.type), :global(.psh .source.scss .support.type), :global(.psh .source.stylus .support.type) {
+  color: #8796b0;
+}
+
+:global(.psh .entity.name.module.js), :global(.psh .variable.import.parameter.js), :global(.psh .variable.other.class.js) {
+  color: #e53935;
+}
+
+:global(.psh .variable.language) {
+  font-style: italic;
+  color: #e53935;
+}
+
+:global(.psh .entity.name.method.js) {
+  color: #6182b8;
+}
+
+:global(.psh .meta.class-method.js .entity.name.function.js), :global(.psh .variable.function.constructor) {
+  color: #6182b8;
+}
+
+:global(.psh .entity.other.attribute-name) {
+  color: #7c4dff;
+}
+
+:global(.psh .text.html.basic .entity.other.attribute-name),
+:global(.psh .text.html.basic .entity.other.attribute-name.html) {
+  font-style: italic;
+  color: #ffb62c;
+}
+
+:global(.psh .entity.other.attribute-name.class) {
+  color: #ffb62c;
+}
+
+:global(.psh .source.sass .keyword.control) {
+  color: #6182b8;
+}
+
+:global(.psh .markup.inserted) {
+  color: #91b859;
+}
+
+:global(.psh .markup.deleted) {
+  color: #e53935;
+}
+
+:global(.psh .markup.changed) {
+  color: #7c4dff;
+}
+
+:global(.psh .string.regexp) {
+  color: #39adb5;
+}
+
+:global(.psh .constant.character.escape) {
+  color: #39adb5;
+}
+
+:global(.psh * .link *), :global(.psh * .uri *), :global(.psh * .url *) {
+  text-decoration: underline;
+}
+
+:global(.psh .constant.numeric.line-number.find-in-files:not(.match)) {
+  color: #c17e70;
+}
+
+:global(.psh .entity.name.filename.find-in-files) {
+  color: #91b859;
+}
+
+:global(.psh .tag.decorator.js .entity.name.tag.js),
+:global(.psh .tag.decorator.js .punctuation.definition.tag.js) {
+  font-style: italic;
+  color: #6182b8;
+}
+
+:global(.psh .source.js .constant.other.object.key.js .string.unquoted.label.js) {
+  font-style: italic;
+  color: #e53935;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #91b859;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #7c4dff;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #ff5370;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #6182b8;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #c17e70;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #e53935;
+}
+
+:global(.psh .source.json .meta .meta .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #f76d47;
+}
+
+:global(.psh .source.json .meta .meta.structure.dictionary.json .punctuation.definition.string:not(.meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta .meta.structure.dictionary.json .string.quoted.double.json:not(.meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #ffb62c;
+}
+
+:global(.psh .source.json .meta.structure.dictionary.json .punctuation.definition.string:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string)),
+:global(.psh .source.json .meta.structure.dictionary.json .string.quoted.double.json:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json)) {
+  color: #7c4dff;
+}
+
+:global(.psh .punctuation.definition.list_item.markdown), :global(.psh .text.html.markdown) {
+  color: #80cbc4;
+}
+
+:global(.psh .text.html.markdown .markup.raw.inline) {
+  color: #7c4dff;
+}
+
+:global(.psh .text.html.markdown .punctuation.definition.raw.markdown) {
+  color: #e7eaec;
+}
+
+:global(.psh .markdown.heading), :global(.psh .markup.heading), :global(.psh .markup.heading .entity.name), :global(.psh .markup.heading.markdown .punctuation.definition.heading.markdown) {
+  color: #91b859;
+}
+
+:global(.psh .markup.italic) {
+  font-style: italic;
+  color: #ff5370;
+}
+
+:global(.psh .markup.bold), :global(.psh .markup.bold .string) {
+  font-weight: 700;
+  color: #ff5370;
+}
+
+:global(.psh .markup.bold .markup.italic), :global(.psh .markup.bold .markup.italic .string), :global(.psh .markup.italic .markup.bold), :global(.psh .markup.italic .markup.bold .string), :global(.psh .markup.quote .markup.bold), :global(.psh .markup.quote .markup.bold .string) {
+  font-weight: 700;
+  font-style: italic;
+}
+
+:global(.psh .markup.underline) {
+  text-decoration: underline;
+  color: #f76d47;
+}
+
+:global(.psh .markup.quote .punctuation.definition.blockquote.markdown) {
+  color: #e7eaec;
+  background-color: #e7eaec;
+}
+
+:global(.psh .markup.quote) {
+  font-style: italic;
+}
+
+:global(.psh .string.other.link.title.markdown) {
+  color: #6182b8;
+}
+
+:global(.psh .string.other.link.description.title.markdown) {
+  color: #7c4dff;
+}
+
+:global(.psh .constant.other.reference.link.markdown) {
+  color: #ffb62c;
+}
+
+:global(.psh .markup.raw.block) {
+  color: #7c4dff;
+}
+
+:global(.psh .markup.raw.block.fenced.markdown) {
+  background-color: rgba(144, 164, 174, .13);
+}
+
+:global(.psh .punctuation.definition.fenced.markdown) {
+  background-color: rgba(144, 164, 174, .13);
+}
+
+:global(.psh .markup.raw.block.fenced.markdown), :global(.psh .punctuation.section.class.end), :global(.psh .variable.language.fenced.markdown) {
+  color: #80cbc4;
+}
+
+:global(.psh .variable.language.fenced.markdown) {
+  color: #e7eaec;
+}
+
+:global(.psh .text.html.markdown .punctuation.definition) {
+  color: #ccd7da;
+}
+
+:global(.psh .text.html.markdown .meta.disable-markdown .punctuation.definition) {
+  color: #39adb5;
+}
+
+:global(.psh .meta.separator) {
+  font-weight: 700;
+  color: #e7eaec;
+  background-color: rgba(144, 164, 174, .13);
+}
+
+:global(.psh .markup.table) {
+  color: #80cbc4;
+}
+
+:global(.psh .acejump.label.blue) {
+  color: #fff;
+  background-color: #6182b8;
+}
+
+:global(.psh .acejump.label.green) {
+  color: #fff;
+  background-color: #91b859;
+}
+
+:global(.psh .acejump.label.orange) {
+  color: #fff;
+  background-color: #f76d47;
+}
+
+:global(.psh .acejump.label.purple) {
+  color: #fff;
+  background-color: #7c4dff;
+}
+
+:global(.psh [data-grammar*="gfm"] .markup.underline.link) {
+  color: #ff869a;
+}
+
+:global(.psh [data-grammar*="gfm"] .markup.underline.link span.punctuation) {
+  color: #ff5370;
+}
+
+:global(.psh [data-grammar*="gfm"] .markup.strike) {
+  position: relative;
+  color: rgba(96, 125, 139, .5);
+}
+
+:global(.psh [data-grammar*="gfm"] .markup.strike::after) {
+  content: "";
+  position: absolute;
+  top: 54%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(96, 125, 139, .2);
+}
+
+:global(.psh [data-grammar*="gfm"] .table .border) {
+  color: rgba(96, 125, 139, .5);
+}
+
+:global(.psh [data-grammar*="gfm"] .markup.heading) {
+  color: #82b1ff;
+}
+
+:global(.psh [data-grammar*="gfm"] .punctuation.definition.begin),
+:global(.psh [data-grammar*="gfm"] .punctuation.definition.end) {
+  color: #82b1ff;
+}
+
+:global(.psh [data-grammar*="gfm"] .punctuation.definition.begin + span:not(.function.parameter)) {
+  color: #9cc1ff;
+}
+
+:global(.psh .variable.instance), :global(.psh .variable.instance > *) {
+  color: #e53935;
+}
+
+:global(.psh .meta.delimiter.period) {
+  color: #945eb8;
+}
+
+:global(.psh .meta.brace) {
+  color: #8796b0;
+}
+
+:global(.psh .meta.tag.doctype) {
+  color: #945eb8;
+}
+
+:global(.psh .meta .string.quoted) {
+  color: #91b859;
+}
+
+:global(.psh .meta.array.json .string.quoted) {
+  color: #80cbc4;
+}
+
+:global(.psh .meta.array.json .string.quoted > *) {
+  color: currentColor;
+}
+
+:global(.psh .meta .punctuation.separator.key-value + .string.quoted) {
+  color: #80cbc4;
+}
+
+:global(.psh .meta .punctuation.separator.key-value + .string.quoted *) {
+  color: currentColor;
+}
+
+:global(.psh .meta.structure.dictionary .string.quoted) {
+  color: #91b859;
+}
+
+:global(.psh .meta.structure.dictionary .string.quoted .punctuation.string) {
+  color: currentColor;
+}
+
+:global(.psh .support.constant) {
+  color: #8796b0;
+}
+
+:global(.psh .keyword.operator.assignment), :global(.psh .keyword.operator.comparison), :global(.psh .keyword.operator.logical) {
+  color: #3fb3a8;
+}
+
+:global(.psh .punctuation.section.embedded .source.php), :global(.psh .variable.interpolation .source.php) {
+  color: currentColor;
+}

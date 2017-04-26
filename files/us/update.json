@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "US",
+    "repo": "arch-master/US",
+    "files": {
+        "include": ["us.min.css", "us.css"]
+    }
+}

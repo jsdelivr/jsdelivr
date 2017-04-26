@@ -1,0 +1,12 @@
+{
+  "packageManager": "github",
+  "name": "bootswatch",
+  "repo": "thomaspark/bootswatch",
+  "files": {
+    "exclude": [
+      "2/**", "api/**", "assets/**", "bower_components/**", "custom/**", "default/**", "global/**", "help/**", "tests/**",
+      "**/*.less", "**/*.scss", "**/*.html", "**/*.yml", "**/*.md", "**/*.txt", "**/*.ico", "**/*.png", "**/*.jpg",
+      ".gitignore", "CNAME", "Gemfile", "Gruntfile.js", "LICENSE", "bower.json", "composer.json", "package.json"
+    ]
+  }
+}

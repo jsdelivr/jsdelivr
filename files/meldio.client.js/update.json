@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "meldio.client.js",
+  "repo": "meldio/meldio-client-js",
+  "files": {
+    "include": ["meldio.js", "meldio.min.js"]
+  }
+}

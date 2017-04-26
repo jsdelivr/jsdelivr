@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "homeworks",
+  "repo": "IGAWorksDev/homeworks",
+  "files": {
+    "basePath": "dist/"
+  }
+}

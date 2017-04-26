@@ -1,0 +1,476 @@
+:global(.psh) {
+  margin: 0;
+  background-color: #242933;
+  color: #b3b8c3;
+}
+
+:global(.psh pre) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin: 0;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:global(.psh code), :global(.psh samp) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px;
+}
+
+:global(.psh code::-moz-selection), :global(.psh samp::-moz-selection) {
+  background-color: #394151;
+}
+
+:global(.psh code::selection), :global(.psh samp::selection) {
+  background-color: #394151;
+}
+
+:global(.psh .psh-line-numbers) {
+  counter-reset: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line) {
+  counter-increment: line;
+}
+
+:global(.psh .psh-line-numbers .psh-line::before) {
+  content: counter(line);
+  display: inline-block;
+  padding-right: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  color: #6c717b;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-s .psh-line::before) {
+  width: 2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-m .psh-line::before) {
+  width: 2.6em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-l .psh-line::before) {
+  width: 3.2em;
+}
+
+:global(.psh .psh-line-numbers.psh-line-numbers-xl .psh-line::before) {
+  width: 3.8em;
+}
+
+:global(.psh .psh-label) {
+  background-color: #242933;
+  text-align: right;
+  height: 18px;
+}
+
+:global(.psh .psh-label-value) {
+  position: relative;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 6px;
+  line-height: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 11px;
+  font-family: serif;
+  font-family: initial;
+  background-color: #3a3e47;
+  color: #b0b2b6;
+}
+
+:global(.psh .psh-caption) {
+  padding: 12px;
+  background-color: #3a3e47;
+  font-weight: 700;
+  font-size: 14px;
+  color: #b0b2b6;
+}
+
+:global(.psh .psh-filename) {
+  padding: 3px 12px;
+  background-color: #3a3e47;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #b0b2b6;
+}
+
+:global(.psh .psh-request) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+:global(.psh .psh-request .psh-request-method) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #6c717b;
+  font-size: 15px;
+  color: #fff;
+}
+
+:global(.psh .psh-request .psh-request-method-get) {
+  background-color: #42bd79;
+}
+
+:global(.psh .psh-request .psh-request-method-post) {
+  background-color: #00abd6;
+}
+
+:global(.psh .psh-request .psh-request-method-put) {
+  background-color: #845eed;
+}
+
+:global(.psh .psh-request .psh-request-method-patch) {
+  background-color: #f0813d;
+}
+
+:global(.psh .psh-request .psh-request-method-delete) {
+  background-color: #df435d;
+}
+
+:global(.psh .psh-request .psh-request-resource) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #484d57;
+  font-size: 13px;
+  color: #b0b2b6;
+}
+
+:global(.psh .psh-request .psh-request-method-get + .psh-request-resource) {
+  background-color: #3c464c;
+}
+
+:global(.psh .psh-request .psh-request-method-post + .psh-request-resource) {
+  background-color: #394550;
+}
+
+:global(.psh .psh-request .psh-request-method-put + .psh-request-resource) {
+  background-color: #3f4251;
+}
+
+:global(.psh .psh-request .psh-request-method-patch + .psh-request-resource) {
+  background-color: #444349;
+}
+
+:global(.psh .psh-request .psh-request-method-delete + .psh-request-resource) {
+  background-color: #43414a;
+}
+
+:global(.psh .psh-add), :global(.psh .psh-highlight), :global(.psh .psh-remove) {
+  margin: 0 -18px;
+  padding-left: 15px;
+}
+
+:global(.psh .psh-highlight) {
+  border-left: 3px solid #dba643;
+  background-color: #434549;
+}
+
+:global(.psh .psh-add) {
+  border-left: 3px solid #42bd79;
+  background-color: #3c464c;
+}
+
+:global(.psh .psh-remove) {
+  border-left: 3px solid #df435d;
+  background-color: #43414a;
+}
+
+:global(.psh .psh-invisibles-lf), :global(.psh .psh-invisibles-space), :global(.psh .psh-invisibles-tab) {
+  position: relative;
+}
+
+:global(.psh .psh-invisibles-lf::before), :global(.psh .psh-invisibles-space::before), :global(.psh .psh-invisibles-tab::before) {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #484d57;
+}
+
+:global(.psh .psh-invisibles-tab::before) {
+  content: "⇥";
+}
+
+:global(.psh .psh-invisibles-space::before) {
+  content: "·";
+}
+
+:global(.psh .psh-invisibles-lf::before) {
+  content: "↩";
+}
+
+:global(.psh .psh-commands::before) {
+  content: ">";
+  padding-right: .8em;
+  color: #94b679;
+}
+
+:global(.psh .comment) {
+  color: #525f6b;
+}
+
+:global(.psh .entity.name.type) {
+  text-decoration: underline;
+  color: #f0c674;
+}
+
+:global(.psh .entity.other.inherited-class) {
+  color: #94b679;
+}
+
+:global(.psh .keyword) {
+  color: #b54e5a;
+}
+
+:global(.psh .keyword.control) {
+  color: #b54e5a;
+}
+
+:global(.psh .keyword.operator) {
+  color: #b3b8c3;
+}
+
+:global(.psh .keyword.other.special-method) {
+  color: #81a2be;
+}
+
+:global(.psh .keyword.other.unit) {
+  color: #c6735b;
+}
+
+:global(.psh .storage) {
+  color: #b54e5a;
+}
+
+:global(.psh .constant) {
+  color: #c6735b;
+}
+
+:global(.psh .constant.character.escape) {
+  color: #73d1d5;
+}
+
+:global(.psh .constant.numeric) {
+  color: #c6735b;
+}
+
+:global(.psh .constant.other.color) {
+  color: #73d1d5;
+}
+
+:global(.psh .constant.other.symbol) {
+  color: #94b679;
+}
+
+:global(.psh .variable) {
+  color: #c67357;
+}
+
+:global(.psh .variable.interpolation) {
+  color: #af583b;
+}
+
+:global(.psh .variable.parameter.function) {
+  color: #b3b8c3;
+}
+
+:global(.psh .invalid.illegal) {
+  color: #242933;
+  background-color: #c67357;
+}
+
+:global(.psh .string) {
+  color: #94b679;
+}
+
+:global(.psh .string.regexp) {
+  color: #73d1d5;
+}
+
+:global(.psh .string.regexp .source.ruby.embedded) {
+  color: #c6735b;
+}
+
+:global(.psh .string.other.link) {
+  color: #c67357;
+}
+
+:global(.psh .punctuation.definition.comment) {
+  color: #525f6b;
+}
+
+:global(.psh .punctuation.definition.array), :global(.psh .punctuation.definition.parameters), :global(.psh .punctuation.definition.string), :global(.psh .punctuation.definition.variable) {
+  color: #b3b8c3;
+}
+
+:global(.psh .punctuation.definition.heading), :global(.psh .punctuation.definition.identity) {
+  color: #81a2be;
+}
+
+:global(.psh .punctuation.definition.bold) {
+  color: #f0c674;
+  font-style: bold;
+}
+
+:global(.psh .punctuation.definition.italic) {
+  color: #b54e5a;
+  font-style: italic;
+}
+
+:global(.psh .punctuation.section.embedded) {
+  color: #af583b;
+}
+
+:global(.psh .support.class) {
+  color: #f0c674;
+}
+
+:global(.psh .support.function) {
+  color: #73d1d5;
+}
+
+:global(.psh .support.function.any-method) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.function) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.class), :global(.psh .entity.name.type.class) {
+  color: #f0c674;
+}
+
+:global(.psh .entity.name.section) {
+  color: #81a2be;
+}
+
+:global(.psh .entity.name.tag) {
+  text-decoration: underline;
+  color: #c67357;
+}
+
+:global(.psh .entity.other.attribute-name) {
+  color: #c6735b;
+}
+
+:global(.psh .entity.other.attribute-name.id) {
+  color: #81a2be;
+}
+
+:global(.psh .meta.class) {
+  color: #f0c674;
+}
+
+:global(.psh .meta.link) {
+  color: #c6735b;
+}
+
+:global(.psh .meta.require) {
+  color: #81a2be;
+}
+
+:global(.psh .meta.selector) {
+  color: #b54e5a;
+}
+
+:global(.psh .meta.separator) {
+  color: #b3b8c3;
+  background-color: #272e36;
+}
+
+:global(.psh .none) {
+  color: #b3b8c3;
+}
+
+:global(.psh .markup.bold) {
+  color: #c6735b;
+  font-style: bold;
+}
+
+:global(.psh .markup.changed) {
+  color: #b54e5a;
+}
+
+:global(.psh .markup.deleted) {
+  color: #c67357;
+}
+
+:global(.psh .markup.italic) {
+  color: #b54e5a;
+  font-style: italic;
+}
+
+:global(.psh .markup.heading .punctuation.definition.heading) {
+  color: #81a2be;
+}
+
+:global(.psh .markup.inserted) {
+  color: #94b679;
+}
+
+:global(.psh .markup.list) {
+  color: #c67357;
+}
+
+:global(.psh .markup.quote) {
+  color: #c6735b;
+}
+
+:global(.psh .markup.raw.inline) {
+  color: #94b679;
+}
+
+:global(.psh .source.gfm .markup) {
+  -webkit-font-smoothing: auto;
+}
+
+:global(.psh .source.gfm .markup.heading) {
+  color: #94b679;
+}

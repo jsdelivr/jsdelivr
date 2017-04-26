@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "semantic-ui-calendar",
+  "repo": "mdehoog/Semantic-UI-Calendar",
+  "files": {
+    "include": ["dist/*.js", "dist/*.css"]
+  }
+}

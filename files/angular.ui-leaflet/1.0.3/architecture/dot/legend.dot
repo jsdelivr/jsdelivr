@@ -1,0 +1,18 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "legend.module"[label="Modules", color=1]
+    node[shape="ellipse"]
+    "legend.provider"   [label="Providers", color=2]
+    "legend.controllers"[label="Controllers", color=4]
+    "legend.services"   [label="Services", color=5]
+    "legend.factories"  [label="Factories", color=6]
+    "legend.injected"  [label="Injected Services", color=9]
+    node[shape="cds"]
+    "legend.filters"    [label="Filters", color=7]
+    "legend.directives" [label="Directives", color=3]
+
+
+}

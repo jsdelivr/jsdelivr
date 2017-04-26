@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "sprintf.js",
+  "repo": "alexei/sprintf.js",
+  "files": {
+    "basePath": "dist/",
+    "include": [ "sprintf.min.js", "angular-sprintf.min.js" ]
+  }
+}

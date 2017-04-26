@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "TimeZoneDB",
-  "repo": "seikan/TimeZoneDB-JS",
-  "files": {
-    "basePath": "dist/"
-  }
-}

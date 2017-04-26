@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "rakam",
+  "repo": "buremba/rakam-javascript",
+  "files": {
+    "include": ["rakam.min.js", "rakam.js", "rakam-snippet.min.js", "rakam-segment-snippet.min.js"]
+  }
+}

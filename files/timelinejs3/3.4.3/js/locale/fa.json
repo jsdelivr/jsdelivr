@@ -1,0 +1,74 @@
+{
+    "lang": "fa", 
+    "messages": {
+        "loading": "بارگذاری", 
+        "contract_timeline": "کوچکنمایی", 
+        "return_to_title": "ابتدای زمانبندی", 
+        "wikipedia": "از ویکی پدیا، دانشنامه آزاد", 
+        "loading_content": "بارگذاری", 
+        "expand_timeline": "بزرگنمایی", 
+        "loading_timeline": "بارگذاری، شکیبا باشید..."
+    }, 
+    "api": {
+        "wikipedia": "fa"
+    }, 
+    "right_to_left": true, 
+    "date": {
+        "month_abbr": [
+            "فروردین", 
+            "اردیبهشت", 
+            "خرداد", 
+            "تیر", 
+            "مرداد", 
+            "شهریور", 
+            "مهر", 
+            "آبان", 
+            "آذر", 
+            "دی", 
+            "بهمن", 
+            "اسفند"
+        ], 
+        "day_abbr": [
+            "یکشنبه", 
+            "دوشنبه", 
+            "سه شنبه", 
+            "چهارشنبه", 
+            "پنجشنبه", 
+            "جمعه", 
+            "شنبه"
+        ], 
+        "day": [
+            "یکشنبه", 
+            "دوشنبه", 
+            "سه شنبه", 
+            "چهارشنبه", 
+            "پنجشنبه", 
+            "جمعه", 
+            "شنبه"
+        ], 
+        "month": [
+            "فروردین", 
+            "اردیبهشت", 
+            "خرداد", 
+            "تیر", 
+            "مرداد", 
+            "شهریور", 
+            "مهر", 
+            "آبان", 
+            "آذر", 
+            "دی", 
+            "بهمن", 
+            "اسفند"
+        ]
+    }, 
+    "dateformats": {
+        "full_long": "mmm d',' yyyy 'at' h:MM TT", 
+        "full_short": "mmm d", 
+        "time_no_seconds_short": "h:MM TT", 
+        "month_short": "mmm", 
+        "month": "mmmm yyyy", 
+        "full": "mmmm d',' yyyy", 
+        "year": "yyyy", 
+        "full_long_small_date": "h:MM TT'<br/><small>mmm d',' yyyy'</small>'"
+    }
+}

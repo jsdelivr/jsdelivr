@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "angular.local-storage",
+  "repo": "grevory/angular-local-storage",
+  "files": {
+    "basePath": "dist",
+    "include": ["angular-local-storage.js", "angular-local-storage.min.js", "angular-local-storage.min.js.map"]
+  }
+}

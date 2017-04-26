@@ -1,0 +1,37 @@
+span.round {
+   boarder-radius: 20px;
+   padding: 15px 15px;
+   background-color: gray;
+   font-color: black;
+}
+
+span.sharp-corners {
+   padding: 15px 15px;
+   background-color: gray;
+   font-color: black;
+}
+
+span.red {
+   background-color: red;
+}
+
+span.blue {
+   background-color: blue;
+}
+
+span.light-blue {
+   background-color: lightCyan;
+}
+
+span.green {
+   background-color: green;
+}
+
+span.white {
+   background-color: white;
+   font-color: black;
+}
+
+span.white-text {
+   font-color: white;
+}

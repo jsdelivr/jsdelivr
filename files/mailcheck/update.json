@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "mailcheck",
+  "repo": "mailcheck/mailcheck",
+  "files": {
+    "include": ["src/mailcheck.js", "src/mailcheck.min.js"]
+  }
+}

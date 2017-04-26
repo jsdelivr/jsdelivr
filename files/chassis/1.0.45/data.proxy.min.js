@@ -1,0 +1,5 @@
+/**
+  * v1.0.45 generated on: Mon May 30 2016 15:59:00 GMT-0500 (CDT)
+  * Copyright (c) 2014-2016, Ecor Ventures LLC. All Rights Reserved. See LICENSE (BSD).
+  */
+"use strict";if(window.NGN=window.NGN||{},window.NGN.DATA=window.NGN.DATA||{},!NGN.HTTP)throw new Error("NGN.DATA.Proxy requires NGN.HTTP.");window.NGN.DATA.Proxy=function(e){if(e=e||{},!e.store)throw new Error("NGN.DATA.Proxy requires a NGN.DATA.Store.");e.store.proxy=this,Object.defineProperties(this,{store:NGN.define(!0,!1,!1,e.store),url:NGN.define(!0,!0,!1,e.url||"http://localhost"),username:NGN.define(!0,!0,!1,e.username||null),password:NGN.define(!0,!0,!1,e.password||null),token:NGN.define(!0,!0,!1,e.token||null),actions:NGN._get(function(){return{create:e.store._created,update:e.store.records.filter(function(r){return e.store._created.indexOf(r)<0&&e.store._deleted.indexOf(r)<0?!1:r.modified}).map(function(e){return e}),"delete":e.store._deleted}}),save:NGN.define(!0,!1,!0,function(){}),fetch:NGN.define(!0,!1,!0,function(){})})},NGN.DATA.util.inherit(NGN.DATA.util.EventEmitter,NGN.DATA.Proxy);

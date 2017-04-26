@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "jquery.bez",
+  "repo": "rdallasgray/bez",
+  "files": {
+    "include": ["jquery.bez.min.js"]
+  }
+}

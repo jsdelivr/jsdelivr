@@ -1,0 +1,6 @@
+{
+   "packageManager": "github",
+   "name":           "clabe-validator",
+   "repo":           "center-key/clabe-validator",
+   "files":          { "include": ["clabe.js", "clabe.min.js"] }
+}

@@ -1,0 +1,13 @@
+{
+  "packageManager": "github",
+  "name": "nvd3",
+  "repo": "novus/nvd3",
+  "files": {
+    "basePath": "build/",
+    "exclude": [
+      "nv.d3.css",
+      "nv.d3.js",
+      "nv.d3.js.map"
+    ]
+  }
+}

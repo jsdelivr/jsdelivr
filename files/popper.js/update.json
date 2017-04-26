@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "popper.js",
+  "repo": "FezVrasta/popper.js",
+  "files": {
+    "include": ["build/popper.js", "build/popper.min.js", "build/popper.min.js.map"]
+  }
+}

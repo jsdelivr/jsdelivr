@@ -1,0 +1,8 @@
+{
+  "packageManager": "bower",
+  "name": "angular-bootstrap",
+  "repo": "angular-ui/bootstrap-bower",
+  "files": {
+    "include": ["ui-bootstrap.min.js", "ui-bootstrap-tpls.min.js"]
+  }
+}

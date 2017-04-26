@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "ractive-transitions-fly",
+  "repo": "ractivejs/ractive-transitions-fly",
+  "files": {
+    "include": ["ractive-transitions-fly.min.js"]
+  }
+}

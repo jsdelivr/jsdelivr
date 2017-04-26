@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "emailservice",
+  "repo": "mboosh/emailservice",
+  "files": {
+    "basePath": "src/main/webapp",
+    "include": ["*.js", "*.css"]
+  }
+}

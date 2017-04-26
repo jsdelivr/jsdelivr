@@ -1,0 +1,162 @@
+/* Thin */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 250;
+  src: local('NotoSansKR-Thin'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Thin-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Thin-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 250;
+  src: local('NotoSansKR-Thin'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Thin-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Thin-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* Light */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('NotoSansKR-Light'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Light-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Light-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('NotoSansKR-Light'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Light-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Light-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* DemiLight */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 350;
+  src: local('NotoSansKR-DemiLight'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-DemiLight-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-DemiLight-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 350;
+  src: local('NotoSansKR-DemiLight'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-DemiLight-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-DemiLight-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Regular'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Regular-Hangul.woff2') format('woff2'), 
+	   url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Regular-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Regular'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Regular-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Regular-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('NotoSansKR-Medium'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Medium-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Medium-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('NotoSansKR-Medium'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Medium-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Medium-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NotoSansKR-Bold'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Bold-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Bold-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NotoSansKR-Bold'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Bold-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Bold-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
+
+/* Black */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 900;
+  src: local('NotoSansKR-Black'),
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Black-Hangul.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Black-Hangul.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 900;
+  src: local('NotoSansKR-Black'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Black-Hanja.woff2') format('woff2'), 
+       url('//cdn.jsdelivr.net/korean-webfonts/latest/corps/google/NotoSansKR/NotoSansKR-Black-Hanja.woff') format('woff');
+  font-stretch: normal;
+  unicode-range: U+4E00-9F95,U+F900-FA0B;
+}
