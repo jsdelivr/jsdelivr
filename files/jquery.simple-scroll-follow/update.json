@@ -3,7 +3,7 @@
   "name": "jquery.simple-scroll-follow",
   "repo": "sutara79/jquery.simple-scroll-follow",
   "files": {
-    "basePath": "dist/"
+    "basePath": "dist/",
     "include": [
       "jquery.simple-scroll-follow.min.js"
     ]
