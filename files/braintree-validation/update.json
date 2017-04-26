@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "braintree-validation",
+  "repo": "nb1987/braintree-validation",
+  "files": {
+    "include": ["dist/*.js", "src/*.js"]
+  }
+}
