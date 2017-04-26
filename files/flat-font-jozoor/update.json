@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flat-font-jozoor",
+  "repo": "AAAA3HA/flat-font-jozoor",
+  "files": {
+    "include": ["font.css"]
+  }
+}
