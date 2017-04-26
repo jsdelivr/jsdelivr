@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "flat-embed",
+  "repo": "FlatIO/embed-client",
+  "files": {
+    "basePath": "dist/"
+  }
+}
