@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "fusioncharts-js",
+	"repo": "subhransusekharswar/fusioncharts-js",
+	"files": {
+		"basePath": "js/",
+		"include": ["fusioncharts.js"]
+	}
+}
