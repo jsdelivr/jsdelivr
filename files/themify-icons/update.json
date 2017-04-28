@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "themify-icons",
+  "repo": "lykmapipo/themify-icons",
+  "files": {
+    "include": ["./css/themify-icons.css", "./fonts/*", "./SVG/*"]
+  }
+}
