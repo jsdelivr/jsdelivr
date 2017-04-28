@@ -4,6 +4,6 @@
   "repo": "trakerr-com/trakerr-javascript",
   "files": {
     "basePath": "dist/",
-    "include": ["*.min.js"]
+    "include": ["*.min.js", "./**/*.min.js.map","./css/**/*.min.css"]
   }
 }
