@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bulma",
+  "repo": "jgthms/bulma",
+  "files": {
+    "include": ["./css/bulma.css"]
+  }
+}
