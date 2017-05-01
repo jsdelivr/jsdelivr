@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "jquery.random-fade-in",
+  "repo": "sutara79/jquery.random-fade-in",
+  "files": {
+    "basePath": "dist/",
+    "include": [
+      "jquery.random-fade-in.min.js"
+    ]
+  }
+}
