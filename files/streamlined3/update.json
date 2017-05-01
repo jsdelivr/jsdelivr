@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "stream",
+  "repo": "StreamlineD3/SD3-Demo",
+  "files": {
+    "include": ["line.js"]
+  }
+}
