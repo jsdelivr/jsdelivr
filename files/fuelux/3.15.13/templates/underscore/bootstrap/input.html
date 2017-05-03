@@ -1,0 +1,8 @@
+<!-- Text input http://getbootstrap.com/css/#forms -->
+<div class="form-group<% if(horizontal && inputsize.length > 0) {%> form-group-<%= inputsize %><% } %>">
+  <label for="<%= id %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <% if(horizontal) {%><div class="col-sm-10"><% } %>
+    <input type="<%= inputtype %>" class="<% if(!horizontal && inputsize.length > 0) {%>input-<%= inputsize %> <% } %>form-control" id="<%= id %>" placeholder="<%= placeholder %>"<% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  <% if(horizontal) {%></div><% } %>
+</div>

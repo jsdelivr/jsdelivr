@@ -1,0 +1,8 @@
+<!-- File Button http://getbootstrap.com/css/#forms -->
+<div class="form-group">
+  <label for="<%= id %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <% if(horizontal) {%><div class="col-sm-10"><% } %>
+  <input type="file" id="<%= id %>" name="<%= id %>" <% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+  <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  <% if(horizontal) {%></div><% } %>
+</div>
