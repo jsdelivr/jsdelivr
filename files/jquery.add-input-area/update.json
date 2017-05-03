@@ -3,6 +3,7 @@
   "name": "jquery.add-input-area",
   "repo": "sutara79/jquery.add-input-area",
   "files": {
+    "basePath": "dist/",
     "include": [
       "jquery.add-input-area.min.js"
     ]
