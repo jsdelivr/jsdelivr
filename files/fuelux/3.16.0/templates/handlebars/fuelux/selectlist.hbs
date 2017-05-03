@@ -1,0 +1,19 @@
+<div class="form-group{{#if validation}} has-{{validation}}{{/if}}{{#if required}} required{{/if}}">
+	<label class="control-label{{#if horizontal}} col-sm-2{{/if}}" for="{{#if id}}{{id}}{{else}}mySelectlist{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+	<div class="controls text-{{#if buttonalign}}{{buttonalign}}{{else}}left{{/if}}{{#if horizontal}} col-sm-10{{/if}}">
+		<div class="btn-group selectlist"{{#unless doNotInit}} data-initialize="selectlist"{{/unless}} data-resize="auto" id="{{#if id}}{{id}}{{else}}mySelectlist{{/if}}">
+			<button class="btn {{#if buttonstyle}}{{buttonstyle}}{{else}}btn-default{{/if}} dropdown-toggle{{#if inputsize}} {{inputsize}}{{/if}}" data-toggle="dropdown" type="button"{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>
+				<span class="selected-label">&nbsp;</span>
+				<span class="caret"></span>
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{{#each options}}
+				<li data-value="{{value}}" {{#each data}}data-{{name}}="{{value}}" {{/each}}><a href="#">{{text}}</a></li>
+				{{/each}}
+			</ul>
+			<input class="hidden hidden-field" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}mySelectlist{{/if}}{{/if}}" readonly="readonly" aria-hidden="true" type="text"/>
+		</div>
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="form-group{{#if horizontal}}{{#if inputsize}} form-group-{{inputsize}}{{/if}}{{/if}}{{#if validation}} has-{{validation}}{{#if feedback}} has-feedback{{/if}}{{/if}}{{#if required}} required{{/if}}">
+	<label for="{{#if id}}{{id}}{{else}}myCombobox{{/if}}Input" class="control-label{{#if horizontal}} col-sm-2{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+
+	{{#if horizontal}}<div class="col-sm-10">{{/if}}
+	<div class="input-group dropdown combobox{{#if prependCombobox}} input-append{{else}} input-prepend{{/if}}{{#if inputsize}} input-group-{{inputsize}}{{/if}}{{#if cols}} col-sm-{{cols}}{{/if}}" {{#unless doNotInit}}data-initialize="combobox"{{/unless}} id="{{#if id}}{{id}}{{else}}myCombobox{{/if}}">
+		{{#unless prependCombobox}}<input type="{{#if type}}{{type}}{{else}}text{{/if}}" class="{{#unless horizontal}}{{#if inputsize}}input-{{inputsize}} {{/if}}{{/unless}}form-control" id="{{#if id}}{{id}}{{else}}myCombobox{{/if}}Input" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myCombobox{{/if}}{{/if}}"{{#if placeholder}} placeholder="{{placeholder}}"{{/if}}{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}{{#if validation}}{{#if feedback}}aria-describedby="{{#if id}}{{id}}{{else}}myCombobox{{/if}}Status"{{/if}}{{/if}}>{{/unless}}
+		<div class="input-group-btn">
+			<button type="button" class="btn {{#if buttonstyle}}{{buttonstyle}}{{else}}btn-default{{/if}} dropdown-toggle{{#if inputsize}} btn-{{inputsize}}{{/if}}" data-toggle="dropdown"><span class="caret"></span></button>
+			<ul class="dropdown-menu{{#unless prependCombobox}} dropdown-menu-right{{/unless}}" role="menu">
+				{{#each options}}
+				<li data-value="{{value}}"{{#each data}} data-{{name}}="{{value}}"{{/each}}><a href="#">{{text}}</a></li>
+				{{/each}}
+			</ul>
+		</div>
+		{{#if prependCombobox}}<input type="{{#if type}}{{type}}{{else}}text{{/if}}" class="{{#unless horizontal}}{{#if inputsize}}input-{{inputsize}} {{/if}}{{/unless}}form-control" id="{{#if id}}{{id}}{{else}}myCombobox{{/if}}" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myCombobox{{/if}}{{/if}}"{{#if placeholder}} placeholder="{{placeholder}}"{{/if}}{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}{{#if validation}}{{#if feedback}}aria-describedby="{{#if id}}{{id}}{{else}}myCombobox{{/if}}Status"{{/if}}{{/if}}>{{/if}}
+	</div>
+	{{#if feedback}}<span class="glyphicon glyphicon-{{feedback}} form-control-feedback" aria-hidden="true"></span><span id="{{#if id}}{{id}}{{else}}myCombobox{{/if}}Status" class="sr-only">({{#if validation}}{{validation}}{{/if}})</span>{{/if}}
+	{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	{{#if horizontal}}</div>{{/if}}
+</div>

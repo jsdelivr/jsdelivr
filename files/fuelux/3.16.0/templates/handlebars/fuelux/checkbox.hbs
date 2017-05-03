@@ -1,0 +1,15 @@
+<div class="form-group{{#if validation}} has-{{validation}}{{/if}}{{#if required}} required{{/if}}">
+	<label for="{{#if id}}{{id}}{{else}}myCustomCheckboxWrapper{{/if}}" class="control-label{{#if horizontal}} col-sm-2{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+
+	<div class="{{#if inline}}checkbox{{/if}}{{#if horizontal}} col-sm-10{{/if}}"{{#if required}} required{{/if}}>
+		{{#each checkboxes}}
+		{{#unless ../inline}}<div class="checkbox{{#if ../highlight}} highlight{{/if}}">{{/unless}}
+			<label class="checkbox-custom{{#if ../inline}} checkbox-inline{{/if}}{{#if ../highlight}} highlight{{/if}}"{{#unless ../doNotInit}} data-initialize="checkbox"{{/unless}} id="{{#if id}}{{id}}{{else}}{{#if ../id}}{{../id}}{{else}}myCustomCheckbox{{/if}}{{@index}}{{/if}}">
+				<input class="sr-only" type="checkbox" {{#if data-toggle}}data-toggle="{{data-toggle}}" {{/if}}{{#if checked}}checked="checked" {{/if}}{{#if disabled}}disabled="disabled" {{/if}}{{#if value}}value="{{value}}" {{/if}}name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}{{#if ../id}}{{../id}}{{else}}myCustomCheckbox{{/if}}{{/if}}{{@index}}{{/if}}">
+				<span class="checkbox-label">{{#if label}}{{label}}{{else}}Checkbox {{@index}} Label{{/if}}</span>
+			</label>
+		{{#unless ../inline}}</div>{{/unless}}
+		{{/each}}
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	</div>
+</div>

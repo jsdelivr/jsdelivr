@@ -1,0 +1,13 @@
+<!-- Fuel UX Radios http://getfuelux.com/javascript.html#radio -->
+<div class="form-group<% if(validation) {%> has-<%= validation %><% } %><% if(required) {%> required<% } %>">
+  <label for="<%= name %>" class="control-label<% if(horizontal) { %> col-sm-2<% } %>"><%= label %></label>
+  <div class="<% if(horizontal) {%> col-sm-10<% } %><% if(required) {%> required<% } %>">
+    <% _.each(radios, function(radio, i){ %><div class="radio">
+      <label class="radio-custom<% if(isDisabled) {%> disabled<% } %>" data-initialize="radio" id="<%= name+'-'+i %>">
+        <input class="sr-only" name="<%= name %>" type="radio" value="<%= radio %>"<% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>>
+        <span class="radio-label"><%= radio %></span>
+      </label>
+    </div><% }); %>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  </div>
+</div>

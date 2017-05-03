@@ -1,0 +1,15 @@
+<div class="form-group{{#if validation}} has-{{validation}}{{/if}}{{#if required}} required{{/if}}">
+	<label for="{{#if id}}{{id}}{{else}}myCustomRadioWrapper{{/if}}" class="control-label{{#if horizontal}} col-sm-2{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+
+	<div class="{{#if inline}}radio{{/if}}{{#if horizontal}} col-sm-10{{/if}}"{{#if required}} required{{/if}}>
+		{{#each radios}}
+		{{#unless ../inline}}<div class="radio{{#if ../highlight}} highlight{{/if}}">{{/unless}}
+			<label class="radio-custom{{#if ../inline}} radio-inline{{/if}}{{#if ../highlight}} highlight{{/if}}"{{#unless ../doNotInit}} data-initialize="radio"{{/unless}} id="{{#if id}}{{id}}{{else}}{{#if ../id}}{{../id}}{{else}}myCustomRadio{{/if}}{{@index}}{{/if}}">
+				<input class="sr-only" type="radio" {{#if data-toggle}}data-toggle="{{data-toggle}}" {{/if}}{{#if checked}}checked="checked" {{/if}}{{#if disabled}}disabled="disabled" {{/if}}{{#if value}}value="{{value}}" {{/if}}name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}{{#if ../id}}{{../id}}{{else}}myCustomRadio{{/if}}{{/if}}{{/if}}">
+				<span class="radio-label">{{#if label}}{{label}}{{else}}Radio {{@index}} Label{{/if}}</span>
+			</label>
+		{{#unless ../inline}}</div>{{/unless}}
+		{{/each}}
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	</div>
+</div>
