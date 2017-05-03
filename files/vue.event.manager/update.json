@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "vue.event.manager",
+  "repo": "pagekit/vue-event-manager",
+  "files": {
+	"basePath": "dist/",
+    "include": ["*.js"]
+  }
+}
