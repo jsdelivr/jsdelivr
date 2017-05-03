@@ -1,0 +1,76 @@
+{
+    "lang": "it", 
+    "date": {
+        "month_abbr": [
+            "Gen", 
+            "Feb", 
+            "Mar", 
+            "Apr", 
+            "Mag", 
+            "Giu", 
+            "Lug", 
+            "Ago", 
+            "Set", 
+            "Ott", 
+            "Nov", 
+            "Dic"
+        ], 
+        "day_abbr": [
+            "Dom.", 
+            "Lun.", 
+            "Mar.", 
+            "Mer.", 
+            "Gio.", 
+            "Ven.", 
+            "Sab."
+        ], 
+        "day": [
+            "Domenica", 
+            "Lunedí", 
+            "Martedí", 
+            "Mercoledí", 
+            "Giovedí", 
+            "Venerdí", 
+            "Sabato"
+        ], 
+        "month": [
+            "Gennaio", 
+            "Febbraio", 
+            "Marzo", 
+            "Aprile", 
+            "Maggio", 
+            "Giugno", 
+            "Luglio", 
+            "Agosto", 
+            "Settembre", 
+            "Ottobre", 
+            "Novembre", 
+            "Dicembre"
+        ]
+    }, 
+    "api": {
+        "wikipedia": "it"
+    }, 
+    "messages": {
+        "loading": "Caricamento", 
+        "contract_timeline": "Contrai la Timeline", 
+        "return_to_title": "Ritorna all'inizio", 
+        "wikipedia": "Wikipedia, L’enciclopedia libera", 
+        "loading_content": "Caricamento contenuti", 
+        "expand_timeline": "Espandi la Timeline", 
+        "loading_timeline": "Caricamento Timeline... ",
+        "swipe_to_navigate": "Scorri per Navigare<br><span class='tl-button'>OK</span>"
+    }, 
+    "dateformats": {
+        "full_long": "dddd',' d mmm yyyy 'alle' HH:MM", 
+        "full_short": "d mmm", 
+        "full": "d mmmm yyyy", 
+        "month_short": "mmm", 
+        "time_no_seconds_small_date": "HH:MM'<br/><small>'d mmmm yyyy'</small>'", 
+        "month": "mmmm yyyy", 
+        "time_no_seconds_short": "HH:MM", 
+        "time_short": "HH:MM:ss", 
+        "year": "yyyy", 
+        "full_long_small_date": "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
+    }
+}
