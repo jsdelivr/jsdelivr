@@ -1,0 +1,8 @@
+<!-- Textarea http://getbootstrap.com/css/#textarea -->
+<div class="form-group<% if(validation) {%> has-<%= validation %><% } %><% if(required) {%> required<% } %>">
+  <label class="control-label<% if(horizontal) { %> col-sm-2<% } %>" for="<%= id %>"><%= label %></label>
+  <% if(horizontal) {%><div class="col-sm-10"><% } %>
+    <textarea class="form-control" id="<%= id %>" name="<%= id %>" rows="<%= rows %>"<% if(required) {%> required <% } %><% if(readonly) {%> readonly <% } %><% if(isDisabled) {%> disabled <% } %>><%= textarea %></textarea>
+    <% if (helptext.length > 0) { %><p class="help-block"><%= helptext %></p><% } %>
+  <% if(horizontal) {%></div><% } %>
+</div>

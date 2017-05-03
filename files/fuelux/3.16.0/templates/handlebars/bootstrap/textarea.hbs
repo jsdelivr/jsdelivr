@@ -1,0 +1,7 @@
+<div class="form-group{{#if validation}} has-{{validation}}{{/if}}{{#if required}} required{{/if}}">
+	<label class="control-label{{#if horizontal}} col-sm-2{{/if}}" for="{{#if id}}{{id}}{{else}}myTextarea{{/if}}">{{#if label}}{{label}}{{/if}}</label>
+	{{#if horizontal}}<div class="col-sm-10">{{/if}}
+		<textarea class="form-control" id="{{#if id}}{{id}}{{else}}myTextarea{{/if}}" name="{{#if name}}{{name}}{{else}}{{#if id}}{{id}}{{else}}myTextarea{{/if}}{{/if}}" rows="{{#if rows}}{{rows}}{{/if}}"{{#if required}} required{{/if}}{{#if readonly}} readonly{{/if}}{{#if disabled}} disabled{{/if}}>{{#if text}}{{text}}{{/if}}</textarea>
+		{{#if helptext}}<p class="help-block">{{helptext}}</p>{{/if}}
+	{{#if horizontal}}</div>{{/if}}
+</div>
