@@ -1,7 +1,6 @@
 {
-  "packageManager": "github",
+  "packageManager": "npm",
   "name": "react-albus",
-  "repo": "americanexpress/react-albus",
   "files": {
     "basePath": "lib/"
   }
