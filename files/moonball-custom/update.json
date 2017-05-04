@@ -1,0 +1,9 @@
+{
+	"packageManager": "github",
+	"name": "moonball-custom",
+	"repo": "deetail/moonball-custom",
+	"files": {
+		"basePath": "css/",
+		"include": ["moonball-custom.css", "moonball-custom.min.css"]
+	}
+}
