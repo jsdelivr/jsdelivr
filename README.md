@@ -7,19 +7,9 @@ and anyone to link to our hosted files in their websites.
 We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
 
-All kinds of files are allowed, including JavaScript libraries, jQuery plugins, CSS frameworks, fonts and more.
-
-You can use this repo to make your own changes and improve the contents of jsDelivr's CDN.
-Feel free to open issues and pull requests if you think something should be changed.
-
-All changes made to this repo are synced to the CDN.
-It can take a few minutes for the changes to appear on the website.
-
 [jsDelivr – The advanced open source public CDN][11]
 
 [How jsDelivr works (outdated)][4]
-
-[Compare public CDNs][5]
 
 [jsDelivr community chat][12]
 
@@ -38,9 +28,7 @@ Downtime, timeouts or slow responses are simply unacceptable. The idea is not to
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [KeyCDN][14].
-
-On top of CDN providers, jsDelivr also utilizes custom servers in locations where CDNs don't have points of presence to further optimize the speed of file downloads for users near those locations.
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/) to offer best possible performance.
 
 If a CDN or custom server goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
@@ -54,36 +42,18 @@ All providers (CDNs and custom servers) are tested millions times per day by rea
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under a DDoS attack, and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all affected users.
 
-SPDY
+HTTP2
 -----------------
 
-All of our POPs support [SPDY](https://developers.google.com/speed/spdy/) loading, allowing performant transfers when possible.
-
-# [How to submit or update projects](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md)
-Refer to [CONTRIBUTING.md](https://github.com/jsdelivr/jsdelivr/blob/master/CONTRIBUTING.md) for instructions on how to add a new project to jsDelivr.
+All of our POPs support HTTP2, allowing performant transfers when possible.
 
 
-Auto-Updating
--------------
+China
+----------------
 
-jsDelivr can automatically keep a project up-to-date as new versions are released.
-Configuration is fast and easy: All you need to enable this feature for a project
-is to create an `update.json` file in its root directory along with the `info.ini`.
+jsDelivr has partnered up with multiple Chinese companies to provide fast and reliable file delivery in China mainland and the whole Asian continent. We have servers inside China that improve the delivery speeds and latency significantly. We also have a valid ICP license issued by the Chinese government that protects us from bans and slow downloads.
 
-##### Example ([*/files/humane.js/update.json*](https://github.com/jsdelivr/jsdelivr/blob/master/files/humane.js/update.json)):
-
-```json
-{
-  "packageManager": "github",
-  "name": "humane.js",
-  "repo": "wavded/humane-js",
-  "files": {
-    "include": ["humane.min.js", "humane.js", "./themes/**/*"]
-  }
-}
-```
-
-[Full documentation is available here.][13]
+jsDelivr works perfectly inside China!
 
 
 # Usage
@@ -165,29 +135,10 @@ Now if all files in the combination have a `.css` extension then the server will
 The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
 
 
-API
----
-
-jsDelivr has [a fully featured API](https://github.com/jsdelivr/api) that also supports Google Hosted Libraries and cdnjs
-
-
-Plugins
----
-
-### npm jsdelivr
-
-An npm module that can be used in your node.js applications:
-
-* https://github.com/jsdelivr/npm-jsdelivr
-
-More coming soon...
-
-
 Custom CDN Hosting
 ---
 
-If your project does not qualify to be hosted in GitHub or you need direct access to your files, it's not a problem!
-We can work together and setup a custom configuration for your project. This way, you can have full control over your files, without the restrictions of GitHub, and the ability to utilize the full power of jsDelivr.
+We can work together and setup a custom configuration for your project. This way, you can have full control over your files and the ability to utilize the full power of jsDelivr.
 
 This kind of custom hosting can be suitable for:
 
@@ -196,10 +147,12 @@ This kind of custom hosting can be suitable for:
 * Projects that can't follow jsDelivr file structure.
 * Some other use that will blow all of our minds.
 
-Simply send an email to [jimaek](https://github.com/jimaek) with a request or for more information.
+Simply send an email to contact@jsdelivr.com with a request for more information.
 
-jsDelivr is here to help and not to limit. Even if what you need is not listed above, feel free to contact us.
+Current OSS projects using custom configs:
 
+* [webjars](http://www.webjars.org/)
+* webpack [webpackbin](https://www.webpackbin.com/) and [codesandbox](https://codesandbox.io/)
 
 Contribute Performance Data
 ---
@@ -250,4 +203,4 @@ Alternatively you can also include it in a /g/ combined URL. Simply add `jsdeliv
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
   [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
-  [14]: https://www.keycdn.com/
+  [14]: https://www.fastly.com/
