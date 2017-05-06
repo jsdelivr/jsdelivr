@@ -1,5 +1,8 @@
 {
   "packageManager": "github",
   "name": "sparkly",
-  "repo": "Asaf-S/sparkly"
+  "repo": "Asaf-S/sparkly",
+  "files": {
+    "include": ["**/*"]
+  }
 }
