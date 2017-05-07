@@ -212,6 +212,27 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
   4. `main`
 
 
+wordpress
+---------
+
+Our wordpress endpoint has the following format:
+
+```
+/wp/project/tags/version/file
+```
+
+Load exact version:
+
+```
+/wp/wp-slimstat/tags/4.6.5/wp-slimstat.js
+```
+
+Load latest version:  (Dev environment only)
+
+```
+/wp/wp-slimstat/trunk/wp-slimstat.js
+```
+
 Custom CDN Hosting
 ---
 
