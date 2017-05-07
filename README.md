@@ -76,8 +76,140 @@ jsDelivr works perfectly inside China!
 
 # Usage
 
+npm
+---
 
+Our npm endpoint has the following format:
 
+```
+/npm/package@version/file
+```
+
+Load exact version:
+
+```
+/npm/jquery@3.1.0/dist/jquery.min.js
+```
+
+Use a version range instead of an exact version:
+
+```
+/npm/jquery@3/dist/jquery.min.js
+/npm/jquery@3.1/dist/jquery.min.js
+```
+
+Load by tag: (Not recommended for production usage)
+
+```
+/npm/jquery@beta/dist/jquery.min.js
+```
+
+Omit the version completely or use "latest" to load the latest one: (Dev environment only)
+
+```
+/npm/jquery@latest/dist/jquery.min.js
+/npm/jquery/dist/jquery.min.js
+```
+
+Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+
+```
+/npm/github-markdown-css@2.4.1/github-markdown.min.css
+```
+
+Omit the file path to get the [default file](#configuring-a-default-file-in-packagejson). This file is always minified:
+
+```
+/npm/jquery@3.1.0
+/npm/jquery@3
+/npm/jquery
+```
+
+Get a directory listing:
+
+```
+/npm/jquery@3.1.0/
+/npm/jquery@3.1.0/dist/
+```
+
+GitHub
+------
+
+Our Github endpoint has the following format:
+
+```
+/gh/user/repo@version/file
+```
+
+Load exact version:
+
+```
+/gh/jquery/jquery@3.1.0/dist/jquery.min.js
+```
+
+Use a version range instead of an exact version (only works with valid semver versions):
+
+```
+/gh/jquery/jquery@3/dist/jquery.min.js
+/gh/jquery/jquery@3.1/dist/jquery.min.js
+```
+
+Omit the version completely or use "latest" to load the latest one (only works with valid semver versions): (Dev environment only)
+
+```
+/gh/jquery/jquery@latest/dist/jquery.min.js
+/gh/jquery/jquery/dist/jquery.min.js
+```
+
+Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+
+```
+/gh/sindresorhus/github-markdown-css@v2.4.1/github-markdown.min.css
+```
+
+Get a directory listing:
+
+```
+/gh/jquery/jquery@3.1.0/
+/gh/jquery/jquery@3.1.0/dist/
+```
+
+Combine multiple files
+----------------------
+
+Our combine endpoint has the following format:
+
+```
+/combine/url1,url2,url3
+```
+
+All features that work for individual files (version ranges, minification, main modules) work here as well. All combined files come with source maps and can be easily used during development.
+
+Examples:
+
+```
+/combine/gh/jquery/jquery@3.1/dist/jquery.min.js,gh/twbs/bootstrap@3.3/dist/js/bootstrap.min.js
+/combine/npm/bootstrap@3.3/dist/css/bootstrap.min.css,npm/bootstrap@3.3/dist/css/bootstrap-theme.min.css
+```
+
+Publishing packages
+-------------------
+
+All packages hosted on npm and tagged releases on GitHub are automatically available on jsDelivr. If you are a package author, here are a few tips to make using your package as easy as possible:
+
+ - Use semver for versioning (this is enforced by npm but not by GitHub)
+ - If a file listed as `main` in `package.json` isn't meant to be used in a browser, set a [`browser`, `cdn`, or `jsdelivr` field](#configuring-a-default-file-in-packagejson)
+ - If you distribute minified JS/CSS files, also include source maps for those files
+ - If you don't want to provide minified files, it's fine - we'll handle that for you
+ 
+ ### Configuring a default file in package.json
+ 
+ For packages hosted on npm, we support serving "default" files with shorter URLs. The default file can be configured by setting one of the following fields in `package.json`, with `jsdelivr` having the highest priority:
+ 
+  1. `jsdelivr`
+  2. `cdn`
+  3. `browser`
+  4. `main`
 
 
 Custom CDN Hosting
