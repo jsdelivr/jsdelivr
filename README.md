@@ -1,10 +1,9 @@
 [jsDelivr][1] - Open Source CDN
 ========
 
-Similar to Google Hosted Libraries, jsDelivr is an open source [CDN][6] that allows developers to host their own projects
-and anyone to link to our hosted files in their websites.
+jsDelivr is a free CDN for open source files. We are tightly integrated with Github and npm allowing us to automatically provide a reliable CDN service to almost every open source project out there.
 
-We offer a stable CDN that can be used in production even on popular websites with huge amounts of traffic.
+We offer a stable CDN that can be used in production on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
 
 [jsDelivr – The advanced open source public CDN][11]
@@ -28,9 +27,9 @@ Downtime, timeouts or slow responses are simply unacceptable. The idea is not to
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/) to offer best possible performance.
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
 
-If a CDN or custom server goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
+If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
 
 Smart Load Balancing
@@ -41,6 +40,25 @@ jsDelivr uses [Cedexis][10] with real user performance data (also known as RUM) 
 All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time.
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under a DDoS attack, and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all affected users.
+
+Our [load-balancing code is open source](https://github.com/jsdelivr/dns-openmix) as well.
+
+
+Failover
+--------
+
+We have multiple layers of failover to protect our users from any downtime.
+
+We use 2 DNS providers at the same time. NS1 and Route53. For jsDelivr to go down both of these companies would have to go down at the same time.
+
+Both of our DNS providers monitor our load-balanced endpoint and if they detect problems they will automatically switch all traffic to a single CDN provider.
+
+Our load-balancer monitors the uptime of all CDN providers using both RUM and synthetic data. If any of those detect downtime or performance degradation that CDN provider will be removed immediatly without any impact to our users.
+
+Our origin consits of multiple servers in different data-centers. If a server goes down the CDNs will automatically switch to using the remaining healthy servers.
+
+In total we have one of the most resilient systems out there, ready to be used in production by even the biggest companies.
+
 
 HTTP2
 -----------------
@@ -59,80 +77,7 @@ jsDelivr works perfectly inside China!
 # Usage
 
 
-URL Structure
--------------
 
-Typical usage:  
-`//cdn.jsdelivr.net/{projectName}/{version}/{file}`  
-Example: `//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js`
-
-When you want all the files in that version folder as a single compressed archive:  
-`//cdn.jsdelivr.net/{projectName}/{version}/{projectName}.zip`
-
-Downloads the three projects' `mainfile` from their latest versions as a single collated file:  
-`//cdn.jsdelivr.net/g/{projectName},{projectName},{projectName}`
-
-You may specify a specific version or version-branch per file:  
-`//cdn.jsdelivr.net/g/{projectName}@{version},{projectName}@{versionAlias},{projectName}`
-
-You may also select more than one file from a project (typically for plug-ins that ship with the project):  
-`//cdn.jsdelivr.net/g/{projectName}@{version}({filepath1}+{filepath2}),{projectName}@{versionAlias},{projectName}`
-
-
-Version aliasing
--------------
-
-For latest version use:
-
-`//cdn.jsdelivr.net/{projectName}/latest/{file}`
-
-You can also load latest versions per branch:
-
-`//cdn.jsdelivr.net/{projectName}/3.8/{file}` Latest in 3.8 branch
-
-`//cdn.jsdelivr.net/{projectName}/3/{file}` Latest in 3 branch
-
-To automatically load the main file of a project use:
-
-`//cdn.jsdelivr.net/{projectName}/{version}/mainfile`
-
-Depending on the project, jsDelivr will automatically load the main file as configured in `info.ini` with correct MIME HTTP headers. If no `mainfile` parameter was specified, the request will result in 404 error.
-
-
-Load multiple files with single HTTP request
---------------------------------------------
-
-Load multiple projects using the lastest version of the main file:
-
-`//cdn.jsdelivr.net/g/abaaso,ace,alloyui`
-
-Load version 3.8.15 of the main file for abaaso and the latest version of the main file for the other projects:
-
-`//cdn.jsdelivr.net/g/abaaso@3.8.15,ace,alloyui`
-
-Load the latest version of the main file for all files and for abaaso loads version branch 3.8 (e.g. version 3.8.16):
-
-`//cdn.jsdelivr.net/g/abaaso@3.8,ace,alloyui`
-
-
-To combine multiple files enter the relative paths to all files you want to load inside brackets () separated by a plus + symbol. Brackets can be encoded as %28 and %29 without issues.
-
-Load multiple files from multiple projects:
-
-`//cdn.jsdelivr.net/g/jquery@2.1.0,angularjs@1.2.14(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
-
-As always it supports version aliasing and latest versions:
-
-`//cdn.jsdelivr.net/g/jquery,angularjs@1.2(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
-
-`//cdn.jsdelivr.net/g/jquery,angularjs(angular.min.js+angular-resource.min.js+angular-animate.min.js+angular-cookies.min.js+angular-route.min.js+angular-sanitize.min.js)`
-
-Now if all files in the combination have a `.css` extension then the server will automatically respond with `Content-Type: text/css` header. In all other cases the server responds with `Content-Type: application/javascript` header.
-
-`//cdn.jsdelivr.net/g/angularui@0.4.0(angular-ui.min.css),animatecss@3.2.0`
-
-
-The first 3-4 requests will be slower, as they are not yet cached. Afterwards, these dynamic files get cached and become static files (same as all others).
 
 
 Custom CDN Hosting
@@ -174,18 +119,8 @@ These benchmarks are completely transparent to the user and do not impact on bro
 Our JS code is executed with a 2 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
 ```html
-<script>
-(function(a,b,c,d,e){function f(){var a=b.createElement("script");a.async=!0;
-a.src="//radar.cedexis.com/1/11475/radar.js";b.body.appendChild(a)}/\bMSIE 6/i
-.test(a.navigator.userAgent)||(a[c]?a[c](e,f,!1):a[d]&&a[d]("on"+e,f))})
-(window,document,"addEventListener","attachEvent","load");
-</script> 
+<script async src="//radar.cedexis.com/1/11475/radar.js"></script>
 ```
-
-Alternatively you can also include it in a /g/ combined URL. Simply add `jsdelivr-rum` at the end to include our javascript. For example:
-
-`http://cdn.jsdelivr.net/g/jquery@2.1,jsdelivr-rum`
-
 
 [Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
 
