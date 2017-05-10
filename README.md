@@ -1,6 +1,8 @@
 [jsDelivr][1] - Open Source CDN
 ========
 
+### Note: Our backend changed. [Learn how to use the new jsDelivr](#usage)
+
 jsDelivr is a free CDN for open source files. We are tightly integrated with Github and npm allowing us to automatically provide a reliable CDN service to almost every open source project out there.
 
 We offer a stable CDN that can be used in production on popular websites with huge amounts of traffic.
