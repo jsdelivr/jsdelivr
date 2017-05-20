@@ -17,12 +17,16 @@ There are no bandwidth limits or premium features and its completely free to use
 # Why jsDelivr?
 
 
-Performance and Uptime Oriented
+Ready for production
 --------------------
 
-Our public CDN is built with performance and reliability in mind. Everything is optimized and being constantly improved to offer all users maximum speed and uptime. Performance is monitored at all times, and we are always looking into new technologies and providers that may further improve our CDN.
+Our public CDN is built to be used in production by even the largest websites. Everything is optimized and being constantly improved to offer all users maximum speed and uptime. Performance is monitored at all times, and we are always looking into new technologies and providers that may further improve our CDN. Downtime, timeouts or slow responses are simply unacceptable. 
 
-Downtime, timeouts or slow responses are simply unacceptable. The idea is not to simply offer a public CDN, but to offer the best possible experience and a rock-solid product.
+We do everything possible to ensure our CDN will NEVER break any websites regardless of use-case. If a file is available via our CDN we assume its used in production and make sure that file will continue to work no matter what.
+
+This includes dynamic endpoints such as `/npm/`, `/gh/` and `/combine/`. When a file is first accessed it gets permanently stored in a reliable file system. This means that even if a npm package gets deleted, or an existing file gets removed by a developer, jsDelivr will  continue to serve the stored copy for ever, without breaking any websites or causing any issues.
+
+The idea is not to simply offer a public CDN, but to offer the best possible experience and a rock-solid product.
 
 
 
@@ -65,7 +69,7 @@ In total we have one of the most resilient systems out there, ready to be used i
 HTTP2
 -----------------
 
-All of our POPs support HTTP2, allowing performant transfers when possible.
+All of our POPs support HTTP2 offering better performance to all users.
 
 
 China
@@ -77,6 +81,12 @@ jsDelivr works perfectly inside China!
 
 
 # Usage
+
+jsDelivr can instantly serve any file from any npm package in the public registry.
+
+New versions pushed to npm are instantly available via our CDN as well. No maintenance is required.
+
+If a package, version or file gets removed from npm then jsDelivr will continue to serve that file from our permanent storage without breaking any websites using it. 
 
 npm
 ---
