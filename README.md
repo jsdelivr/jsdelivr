@@ -54,7 +54,7 @@ Failover
 
 We have multiple layers of failover to protect our users from any downtime.
 
-We use 2 DNS providers at the same time. NS1 and Route53. For jsDelivr to go down both of these companies would have to go down at the same time.
+We use 2 DNS providers at the same time. For jsDelivr to go down both of these companies would have to go down at the same time.
 
 Both of our DNS providers monitor our load-balanced endpoint and if they detect problems they will automatically switch all traffic to a single CDN provider.
 
