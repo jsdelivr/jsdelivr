@@ -244,6 +244,13 @@ Load latest version:  (Dev environment only)
 /wp/wp-slimstat/trunk/wp-slimstat.js
 ```
 
+Purge cache
+---
+
+jsDelivr has an easy to use API to purge files from the cache and force the files to update. This is useful when you release a new version and want to force the update of all version aliased users.
+
+To avoid abuse, access to purge is given after an email request (for now).
+
 Custom CDN Hosting
 ---
 
