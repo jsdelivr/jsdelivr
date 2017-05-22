@@ -1,0 +1,8 @@
+{
+  "packageManager": "git",
+  "name": "Shapecss",
+  "repo": "MicroDreamIT/shapecss-framework",
+  "files": {
+    "basePath": "dist/"
+  }
+}
