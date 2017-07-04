@@ -1,0 +1,10 @@
+{
+  "packageManager": "github",
+  "name": "clappr-nerd-stats",
+  "repo": "lucasrodcosta/clappr-nerd-stats",
+  "files": {
+    "basePath": "dist/",
+    "include": ["clappr-nerd-stats.min.js"]
+  }
+}
+
