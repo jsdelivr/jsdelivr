@@ -223,10 +223,10 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
   4. `main`
 
 
-wordpress
+WordPress
 ---------
 
-Our wordpress endpoint has the following format:
+Our WordPress endpoint works for plugins hosted in the [WordPress.org plugin directory](https://WordPress.org/plugins), and mirrors [the WordPress.org plugins SVN repo](https://plugins.svn.wordpress.org/) has the following format:
 
 ```
 /wp/project/tags/version/file
