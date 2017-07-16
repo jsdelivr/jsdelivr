@@ -292,8 +292,23 @@ Our JS code is executed with a 2 second delay and tests all of our providers unl
 ```html
 <script async src="//radar.cedexis.com/1/11475/radar.js"></script>
 ```
-
 [Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
+
+Privacy Policy
+---
+
+#### cdn.jsdelivr.net
+
+jsDelivr might use information about downloaded files to build download stats per project and per file.
+
+jsDelivr does not store any user data and does not track any users in any way.
+
+Here are the relevant policies of our CDN providers:
+* [Cloudflare](https://www.cloudflare.com/security-policy/)
+* [MaxCDN](https://www.maxcdn.com/legal/)
+* [Fastly](https://www.fastly.com/privacy/)
+* Only in China [Quantil](https://www.quantil.com/privacy-and-security-policy/)
+
 
 
   [1]: http://www.jsdelivr.com
