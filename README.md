@@ -221,7 +221,11 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
   2. `cdn`
   3. `browser`
   4. `main`
-
+  
+Restrictions
+-------------------
+ - Packages larger than 50 MB are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
+ - HTML files are served with `Content-Type: text/plain` for security reasons.
 
 WordPress
 ---------
