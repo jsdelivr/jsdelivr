@@ -314,6 +314,7 @@ Here are the relevant policies of our CDN providers:
 * Only in China [Quantil](https://www.quantil.com/privacy-and-security-policy/)
 
 
+## [The bus factor](https://github.com/jsdelivr/jsdelivr/wiki/What-to-do-if-I-die-aka-The-bus-factor)
 
   [1]: http://www.jsdelivr.com
   [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
