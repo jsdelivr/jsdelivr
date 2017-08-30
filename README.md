@@ -90,7 +90,7 @@ If a package, version or file gets removed from npm then jsDelivr will continue 
 npm
 ---
 
-Our npm endpoint has the following format:
+Load any project hosted on npm:
 
 ```
 /npm/package@version/file
@@ -146,7 +146,7 @@ Get a directory listing:
 GitHub
 ------
 
-Our Github endpoint has the following format:
+Load any GitHub release:
 
 ```
 /gh/user/repo@version/file
