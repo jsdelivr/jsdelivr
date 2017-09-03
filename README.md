@@ -209,7 +209,7 @@ Publishing packages
 All packages hosted on npm and tagged releases on GitHub are automatically available on jsDelivr. If you are a package author, here are a few tips to make using your package as easy as possible:
 
  - Use semver for versioning (this is enforced by npm but not by GitHub)
- - If a file listed as `main` in `package.json` isn't meant to be used in a browser, set a [`browser`, `cdn`, or `jsdelivr` field](#configuring-a-default-file-in-packagejson)
+ - If a file listed as `main` in `package.json` isn't meant to be used in a browser, set a [`browser` or `jsdelivr` field](#configuring-a-default-file-in-packagejson)
  - If you distribute minified JS/CSS files, also include source maps for those files
  - If you don't want to provide minified files, it's fine - we'll handle that for you
  
@@ -218,9 +218,8 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
  For packages hosted on npm, we support serving "default" files with shorter URLs. The default file can be configured by setting one of the following fields in `package.json`, with `jsdelivr` having the highest priority:
  
   1. `jsdelivr`
-  2. `cdn`
-  3. `browser`
-  4. `main`
+  2. `browser`
+  3. `main`
   
 Restrictions
 -------------------
