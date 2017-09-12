@@ -8,11 +8,8 @@ jsDelivr is a free CDN for open source files. We are tightly integrated with Git
 We offer a stable CDN that can be used in production on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
 
-[jsDelivr – The advanced open source public CDN][11]
+### [How does it work - A simple infographic](https://www.jsdelivr.com/network/infographic)
 
-[How jsDelivr works (outdated)][4]
-
-[jsDelivr community chat][12]
 
 # Why jsDelivr?
 
