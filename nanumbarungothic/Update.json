@@ -1,0 +1,7 @@
+{  
+"packageManager": "github",
+"name": "Nanum-barun-gothic",
+"repo": "gbrotherr/nanum-barun-gothic ",
+"files": {   
+"include": ["nanumbarungothic.css"]
+}
