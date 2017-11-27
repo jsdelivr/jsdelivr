@@ -263,7 +263,7 @@ This kind of custom hosting can be suitable for:
 * Projects that can't follow jsDelivr file structure.
 * Some other use that will blow all of our minds.
 
-Simply send an email to contact@jsdelivr.com with a request for more information.
+Simply send an email to dak@prospectone.io with a request for more information.
 
 Current OSS projects using custom configs:
 
