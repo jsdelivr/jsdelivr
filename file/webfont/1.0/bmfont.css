@@ -1,0 +1,30 @@
+@charset "euc-kr";
+
+/*
+배달의 민족 폰트 - 도현, 한나, 주아
+font-weight = regular only
+*/
+
+@font-face {
+  font-family: 'BM Dohyeon';
+  src: url(bm/BMDOHYEON.eot);
+  src: url(bm/BMDOHYEON.eot?#iefix) format('embedded-opentype'),
+       url(bm/BMDOHYEON.woff) format('woff'),
+       url(bm/BMDOHYEON.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BM Hanna';
+  src: url(bm/BMHANNA.eot);
+  src: url(bm/BMHANNA.eot?#iefix) format('embedded-opentype'),
+       url(bm/BMHANNA.woff) format('woff'),
+       url(bm/BMHANNA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BM Jua';
+  src: url(bm/BMJUA.eot);
+  src: url(bm/BMJUA.eot?#iefix) format('embedded-opentype'),
+       url(bm/BMJUA.woff) format('woff'),
+       url(bm/BMJUA.ttf) format('truetype');
+}

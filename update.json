@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "bm-nanum-font",
+  "repo": "jys1207/webfont"
+  "files": {
+    "include": ["bmfont.css", "nanumbarungothic.css"]
+  }
+}

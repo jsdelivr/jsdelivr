@@ -1,0 +1,42 @@
+@charset "euc-kr";
+
+/*
+shortcut Name
+NanumBarunGothic - nbg
+NanumBarunGothicBold - nbgb
+NanumBareunGothicLight - nbgl
+*/
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url(nanum/NanumBarunGothic.eot);
+  src: url(nanum/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(nanum/NanumBarunGothic.woff) format('woff'),
+       url(nanum/NanumBarunGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumBarunGothicBold';
+  src: url(nanum/NanumBarunGothicBold.eot);
+  src: url(nanum/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(nanum/NanumBarunGothicBold.woff) format('woff'),
+       url(nanum/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+
+@font-face {
+ font-family: 'nbg';
+ src: url(nanum/NanumBarunGothic.eot);
+ src: url(nanum/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+      url(nanum/NanumBarunGothic.woff) format('woff'),
+      url(nanum/NanumBarunGothic.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'nbgb';
+ src: url(nanum/NanumBarunGothicBold.eot);
+ src: url(nanum/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+      url(nanum/NanumBarunGothicBold.woff) format('woff'),
+      url(nanum/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+
+
