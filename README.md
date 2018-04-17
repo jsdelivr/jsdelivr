@@ -287,12 +287,12 @@ These benchmarks are completely transparent to the user and do not impact on bro
 * Browser’s User-Agent
 * First three octets of the user’s IP address
 
-Our JS code is executed with a 2 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
+Our JS code is executed with a 3 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
 ```html
-<script async src="//radar.cedexis.com/1/11475/radar.js"></script>
+<script async src="https://rum.perfops.net/rum3.min.js"></script>
 ```
-[Privacy Policy for Data Contribution](http://www.cedexis.com/legal/privacy.html)
+
 
 Privacy Policy
 ---
