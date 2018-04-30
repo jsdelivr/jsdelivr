@@ -206,7 +206,8 @@ by installing the Google Analytics opt-out browser add-on. The add-on prevents t
 JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
 
 For more information on the privacy practices of Google, please visit the Google Privacy & Terms
-web page: https://www.google.com/intl/en/policies/privacy/
+web page:<br>
+https://www.google.com/intl/en/policies/privacy/
 
 ## Links To Other Sites
 
