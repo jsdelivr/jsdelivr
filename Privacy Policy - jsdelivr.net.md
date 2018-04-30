@@ -173,22 +173,26 @@ This information is used for analytics and security purposes. Neither we nor our
 #### Cloudflare
 
 For more information on the privacy practices of Cloudflare,
-please visit the following web page: https://www.cloudflare.com/security-policy/
+please visit the following web page:<br>
+https://www.cloudflare.com/security-policy/
 
 #### Stackpath
 
 For more information on the privacy practices of Stackpath,
-please visit the following web page: https://www.stackpath.com/privacy-statement/
+please visit the following web page:<br>
+https://www.stackpath.com/privacy-statement/
 
 #### Fastly
 
 For more information on the privacy practices of Fastly,
-please visit the following web page: https://www.fastly.com/privacy
+please visit the following web page:<br>
+https://www.fastly.com/privacy
 
 #### Quantil (China residents only)
 
 We only use Quantil to serve users located in China. For more information on the privacy practices of Quantil,
-please visit the following web page: https://www.quantil.com/privacy-and-security-policy/
+please visit the following web page:<br>
+https://www.quantil.com/privacy-and-security-policy/
 
 ## Links To Other Sites
 
