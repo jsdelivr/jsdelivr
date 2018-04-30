@@ -59,7 +59,7 @@ cdn.jsdelivr.net does not require or collect any personal data.
 
 ### Usage Data
 
-We may also collect information how the Service is accessed and used ("Usage Data").
+We may collect information how the Service is accessed and used ("Usage Data").
 This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address),
 browser type, browser version, the pages of our Service that you visit, the time and date of your visit,
 the time spent on those pages, unique device identifiers and other diagnostic data.
