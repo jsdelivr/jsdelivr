@@ -143,7 +143,7 @@ Get a directory listing:
 GitHub
 ------
 
-Load any GitHub release:
+Load any GitHub release or commit:
 
 ```
 /gh/user/repo@version/file
@@ -153,6 +153,7 @@ Load exact version:
 
 ```
 /gh/jquery/jquery@3.1.0/dist/jquery.min.js
+/gh/jquery/jquery@32b00373b3f42e5cdcb709df53f3b08b7184a944/dist/jquery.min.js
 ```
 
 Use a version range instead of an exact version (only works with valid semver versions):
