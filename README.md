@@ -225,6 +225,8 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
   2. `browser`
   3. `main`
   
+We will first attempt to locate a minified version of the file provided here (by removing the extension, and looking for the same file `.min.js`). If we can't find one we will minify ourselves.
+  
 Restrictions
 -------------------
  - Packages larger than 50 MB are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
