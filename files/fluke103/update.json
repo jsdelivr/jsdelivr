@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "fluke103",
-  "repo": "fluke103/fluke103",
-  "files": {
-    "include": ["fluke103.js", "fluke103.min.js"]
-  }
-}
