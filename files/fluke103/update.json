@@ -1,0 +1,8 @@
+{
+	"packageManager": "github",
+	"name": "common",
+	"repo": "fluke103/common.js",
+	"files": {
+		"include": ["common.js"]
+	}
+}
