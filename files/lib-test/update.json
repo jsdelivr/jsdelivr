@@ -1,0 +1,10 @@
+// 패키지 매니저에는 npm이라고 입력해도 되는 것 같다.
+// files에는 호스팅 될 파일을 입력하면 된다.
+{
+  "packageManager": "github",
+  "name": "lib-name",
+  "repo": "user_id/lib-name",
+  "files": {
+    "include": ["lib-name.js", "lib-name.min.js"]
+  }
+}
