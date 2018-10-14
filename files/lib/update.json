@@ -1,0 +1,8 @@
+{
+  "packageManager": "github",
+  "name": "lib",
+  "repo": "gsyan/lib-name",
+  "files": {
+    "include": ["rm0.txt"]
+  }
+}
