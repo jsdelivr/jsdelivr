@@ -2,9 +2,9 @@
 // files에는 호스팅 될 파일을 입력하면 된다.
 {
   "packageManager": "github",
-  "name": "lib-name",
-  "repo": "user_id/lib-name",
+  "name": "lib-test",
+  "repo": "gsyan/lib-test",
   "files": {
-    "include": ["lib-name.js", "lib-name.min.js"]
+    "include": ["test1.txt", "test2.txt"]
   }
 }
