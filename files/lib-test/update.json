@@ -5,6 +5,6 @@
   "name": "lib-test",
   "repo": "gsyan/lib-test",
   "files": {
-    "include": ["test1.txt", "test2.txt"]
+    "include": ["rm0.txt", "rm1.txt"]
   }
 }
