@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'seoulNamsan';
+	font-weight: 300;
+	font-style: normal;
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungl.eot);
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungl.eot?#iefix) format('embedded-opentype'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungl.woff2) format('woff2'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungl.woff) format('woff'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungl.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'seoulNamsan';
+	font-weight: 400;
+	font-style: normal;
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungm.eot);
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungm.eot?#iefix) format('embedded-opentype'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungm.woff2) format('woff2'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungm.woff) format('woff'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungm.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'seoulNamsan';
+	font-weight: 600;
+	font-style: normal;
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungb.eot);
+	src:url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungb.eot?#iefix) format('embedded-opentype'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungb.woff2) format('woff2'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungb.woff) format('woff'),
+		url(https://github.com/pyo125/seoulNamsan--Web-fonts/blob/master/seoulnamsanjungb.ttf) format('truetype');
+}
