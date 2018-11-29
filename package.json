@@ -1,0 +1,36 @@
+{
+  "name": "am_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/am.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rostber/test.git"
+  },
+  "author": "rostber",
+  "license": "ISC",
+  "homepage": "https://github.com/rostber/test/blob/master/README.md",
+  "dependencies": {
+    "coffee-loader": "^0.9.0",
+    "node-sass": "^4.10.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack-cli": "^3.1.1",
+    "coffeescript": "^2.3.2",
+    "socket.io": "^2.1.1",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.25.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.4"
+  }
+}
