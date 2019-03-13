@@ -149,7 +149,7 @@ Get a directory listing:
 GitHub
 ------
 
-Load any GitHub release or commit:
+Load any GitHub release, commit, or branch:
 
 ```
 /gh/user/repo@version/file
