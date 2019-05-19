@@ -299,7 +299,7 @@ These benchmarks are completely transparent to the user and do not impact on bro
 Our JS code is executed with a 3 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
 
 ```html
-<script async src="https://cdn.jsdelivr.net/npm/perfops-rom/dist/rom.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/perfops-rom"></script>
 ```
 
 
