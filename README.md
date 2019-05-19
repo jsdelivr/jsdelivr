@@ -43,7 +43,7 @@ If a CDN goes down, websites that use jsDelivr won't have any issues because all
 Smart Load Balancing
 --------------------
 
-jsDelivr uses [Cedexis][10] with real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
+jsDelivr uses [PerfOps][10] with real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
 
 All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time.
 
@@ -330,7 +330,7 @@ Here are the relevant policies of our CDN providers:
   [7]: http://tracking.maxcdn.com/c/47243/36539/378
   [8]: http://www.cloudflare.com/
   [9]: https://github.com/jsdelivr/jsdelivr/fork
-  [10]: http://www.cedexis.com/
+  [10]: https://perfops.net/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
   [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
