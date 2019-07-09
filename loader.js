@@ -1,3 +1,7 @@
+/**
+* loader js 
+* softm.tistory.com
+*/
 var loader = function() {
     var loadSyncSrcIndex = 0;
     var loadItemCount = 0;
