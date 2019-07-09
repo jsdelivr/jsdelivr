@@ -10,6 +10,7 @@ var loader = function() {
     var loadAsync = false;
 
     function js(o) {
+        alert("test code");
         function remove(o) {
             var sId = (typeof(o.id) == 'string' ? o.id : o.src.split('/')[o.src.split('/').length - 1]);
             var hd = document.getElementsByTagName('head')[0];
