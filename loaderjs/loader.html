@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello loader</title>
+    <script type="text/javascript" src="https://rawgit.com/softm/loader/master/loader.js"></script>
+    <script type="text/javascript">
+    window.onload = function () {
+        loader.js(
+            [
+                "https://rawgit.com/softm/loader/master/foo.js",
+                "https://rawgit.com/softm/loader/master/bar.js",
+                "https://rawgit.com/softm/loader/master/loader.css"
+            ],
+            [
+              function(e) {
+                alert("load - " + e.src);
+                console.log("1st",e);
+              },
+              function(e) {
+                alert("load - " + e.src);
+                console.log("2nd",e);
+              },
+              function(e) {
+                alert("load - " + e.src);
+                console.log("3rd",e);
+              }
+            ],
+            false // default false
+        );
+    }
+    </script>
+</head>
+<body>
+<div class="hello">Hello loader</div>
+
+<pre>
+<span style="font-family: Consolas">
+<span style="color: #0000ff">&lt;!doctype </span><span style="color: #800080">html</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #0000ff">&lt;html&gt;</span>
+<span style="color: #0000ff">&lt;head&gt;</span>
+<span style="color: #000000">    </span><span style="color: #0000ff">&lt;meta </span><span style="color: #ff0000">charset</span><span style="color: #0000ff">=</span><span style="color: #ff00ff">&quot;UTF-8&quot;</span><span style="color: #0000ff">&gt;</span>
+<span style="color: #000000">    </span><span style="color: #0000ff">&lt;title&gt;</span><span style="color: #000000">Hello loader</span><span style="color: #0000ff">&lt;/title&gt;</span>
+<span style="color: #000000">    </span><span style="color: #0000ff">&lt;script </span><span style="color: #ff0000">type</span><span style="color: #0000ff">=</span><span style="color: #ff00ff">&quot;text/javascript&quot; </span><span style="color: #ff0000">src</span><span style="color: #0000ff">=</span><span style="color: #ff00ff">&quot;https://rawgit.com/softm/loader/master/loader.js&quot;</span><span style="color: #0000ff">&gt;&lt;/script&gt;</span>
+<span style="color: #000000">    </span><span style="color: #0000ff">&lt;script </span><span style="color: #ff0000">type</span><span style="color: #0000ff">=</span><span style="color: #ff00ff">&quot;text/javascript&quot;</span><span style="color: #0000ff">&gt;</span>
+    <span style="color: #ff0000">window</span><span style="color: #800000">.onload = </span><span style="color: #0000ff">function </span><span style="color: #800000">() {</span>
+        <span style="color: #800000">loader.js(</span>
+            <span style="color: #800000">[</span>
+                <span style="color: #ff00ff">&quot;https://rawgit.com/softm/loader/master/foo.js&quot;</span><span style="color: #800000">,</span>
+                <span style="color: #ff00ff">&quot;https://rawgit.com/softm/loader/master/bar.js&quot;</span><span style="color: #800000">,</span>
+                <span style="color: #ff00ff">&quot;https://rawgit.com/softm/loader/master/loader.css&quot;</span>
+            <span style="color: #800000">],</span>
+            <span style="color: #800000">[</span>
+              <span style="color: #0000ff">function</span><span style="color: #800000">(e) {</span>
+                <span style="color: #800000">alert(</span><span style="color: #ff00ff">&quot;load - &quot; </span><span style="color: #800000">+ e.src);</span>
+                <span style="color: #800000">console.log(</span><span style="color: #ff00ff">&quot;1st&quot;</span><span style="color: #800000">,e);</span>
+              <span style="color: #800000">},</span>
+              <span style="color: #0000ff">function</span><span style="color: #800000">(e) {</span>
+                <span style="color: #800000">alert(</span><span style="color: #ff00ff">&quot;load - &quot; </span><span style="color: #800000">+ e.src);</span>
+                <span style="color: #800000">console.log(</span><span style="color: #ff00ff">&quot;2nd&quot;</span><span style="color: #800000">,e);</span>
+              <span style="color: #800000">},</span>
+              <span style="color: #0000ff">function</span><span style="color: #800000">(e) {</span>
+                <span style="color: #800000">alert(</span><span style="color: #ff00ff">&quot;load - &quot; </span><span style="color: #800000">+ e.src);</span>
+                <span style="color: #800000">console.log(</span><span style="color: #ff00ff">&quot;3rd&quot;</span><span style="color: #800000">,e);</span>
+              <span style="color: #800000">}</span>
+            <span style="color: #800000">],</span>
+            <span style="color: #0000ff">false </span><span style="color: #008000">// default false</span>
+        <span style="color: #800000">);</span>
+    <span style="color: #800000">}</span>
+    <span style="color: #0000ff">&lt;/script&gt;</span>
+<span style="color: #0000ff">&lt;/head&gt;</span>
+<span style="color: #0000ff">&lt;body&gt;</span>
+<span style="color: #0000ff">&lt;div </span><span style="color: #ff0000">class</span><span style="color: #0000ff">=</span><span style="color: #ff00ff">&quot;hello&quot;</span><span style="color: #0000ff">&gt;</span><span style="color: #000000">Hello loader</span><span style="color: #0000ff">&lt;/div&gt;</span>
+<span style="color: #0000ff">&lt;/body&gt;</span>
+<span style="color: #0000ff">&lt;/html&gt;</span>
+</span>
+</pre>
+
+</body>
+</html>
