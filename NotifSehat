@@ -1,0 +1,38 @@
+{
+  "name": "NotifSehat",
+  "short_name": "NotifSehat",
+  "start_url": "https://www.notifsehat.com/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#C51162",
+  "description": "Notif Sehat adalah blog yang membahas tentang tips kesehatan, kecantikan, manfaat tumbuhan dan kefarmasian.",
+  "icons": [{
+    "src": "https://1.bp.blogspot.com/-x2ftfRwlGus/XU6UnvHiAFI/AAAAAAAAAE4/wOJ_VrA76uIK3KAYTS7e7LRX0k8VgvZ0wCLcBGAs/s48/notifsehat48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-fYMbVaQtp5E/XU6VxC7x6YI/AAAAAAAAAFI/5qES0tmx_hUARAo824RidEnfPM-SZR9BwCLcBGAs/s72/notifsehat72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-xvnTPmt-N0s/XU6WjY0PTVI/AAAAAAAAAFU/ugfkDNLPSBQckoW9XSBaShI5SlkS4dTEACLcBGAs/s96/notifsehat96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-b_23WMw1M_c/XUy_lDUfVHI/AAAAAAAAAEE/1vmou5Fv0VwVec3iZzo_Wh1Mp_wOXAuwwCLcBGAs/s144/notifsehat144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-6zZsVFagQLg/XU6XkfJj4cI/AAAAAAAAAFk/g-bLxfni8oM4Gu5r7BTXXUM9Ql4RVxLqgCLcBGAs/s168/notifsehat168.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-kmwMkvOZp4U/XUy-8hazTfI/AAAAAAAAADw/4gtcsOahuCw8cQMifJPMAxqRnmgYny5yQCLcBGAs/s192/notifsehat192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-ljPKLb9e_js/XU6YWwvFU1I/AAAAAAAAAFs/Qv0V65bYndcoiEYwfW1zhbwp1EnweSTTACLcBGAs/s512/notifsehat512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
