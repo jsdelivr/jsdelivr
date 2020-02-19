@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "jb-webfonts",
-  "repo": "buppagi/jb-webfonts",
-  "files": {
-    "include": ["BM-HANNA.eot", "BM-HANNA.svg", "BM-HANNA.ttf"]
-  }
-}
