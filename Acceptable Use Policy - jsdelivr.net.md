@@ -73,7 +73,7 @@ The following behavior is prohibited:
     of files, and these are not considered abuse. For example: icons packs, apps,
     or games with a large number of assets.
 
- 3. Trying to bypass our limits or restrictions in any way. We will be happy to
+ 3. Trying to bypass our limits or restrictions in any way. We will be happy
     to remove limits or provide custom solutions for legitimate projects.
 
 ## 5. Additional Restrictions in China
