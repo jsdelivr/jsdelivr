@@ -28,7 +28,6 @@ As long as you do not violate our rules:
  - we will provide a reasonable level of support via GitHub issues and email for
    urgent and private matters.
 
-
 ## 2. Hard Limits and Restrictions
 
 To maintain the performance and security of our Service, we have
