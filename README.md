@@ -279,29 +279,6 @@ Current OSS projects using custom configs:
 * [webjars](http://www.webjars.org/)
 * webpack [webpackbin](https://www.webpackbin.com/) and [codesandbox](https://codesandbox.io/)
 
-Contribute Performance Data
----
-
-**jsDelivr** uses real user performance data (also known as RUM) to make its routing decisions. This data is gathered from hundreds of websites and is used in our load balancing algorithm to make accurate decisions based on real time performance metrics.
-
-This is why we offer the ability to all users to help us out. This data is very important and we encourage all users to participate.
-
-All you have to do is include the following JavaScript code in your website before `</body>`.
-This code is then executed each time a user visits your website. It uses their browser to test the latency to our CDN providers and gather performance and availability metrics.
-
-These benchmarks are completely transparent to the user and do not impact on browsing in any way. We store the following information:
-
-* Performance metrics to each of our providers.
-* Availability metrics to each of our providers.
-* Browser’s User-Agent
-* First three octets of the user’s IP address
-
-Our JS code is executed with a 3 second delay and tests all of our providers unless interrupted. This testing does not impact on your website performance or user browsing experience.
-
-```html
-<script async src="https://cdn.jsdelivr.net/npm/perfops-rom"></script>
-```
-
 
 Privacy Policy
 ---
