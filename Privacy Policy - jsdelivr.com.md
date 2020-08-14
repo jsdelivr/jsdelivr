@@ -242,4 +242,4 @@ Changes to this Privacy Policy are effective when they are posted on this page.
 
 If you have any questions about this Privacy Policy, please contact us:
 
-By email: hello@prospectone.io
+By email: dak@prospectone.io

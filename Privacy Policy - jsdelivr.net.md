@@ -55,7 +55,7 @@ We collect several different types of information for various purposes to provid
 ### Personal Data
 
 While using our Service, we will not ask you to provide any personal data.
-cdn.jsdelivr.net does not require or collect any personal data. 
+cdn.jsdelivr.net does not require or collect any personal data.
 
 ### Usage Data
 
@@ -227,4 +227,4 @@ Changes to this Privacy Policy are effective when they are posted on this page.
 
 If you have any questions about this Privacy Policy, please contact us:
 
-By email: hello@prospectone.io
+By email: dak@prospectone.io
