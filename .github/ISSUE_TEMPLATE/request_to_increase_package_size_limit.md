@@ -1,7 +1,7 @@
 ---
 name: Request to increase package size limit
 about: Request a higher limit for your package
-title: ''
+title: Request to increase package size limit for {{name}}
 labels: ''
 assignees: ''
 
