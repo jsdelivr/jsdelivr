@@ -7,8 +7,16 @@ assignees: ''
 
 ---
 
+<!--
+Please fill all information in the template below.
+Issues that don't match the template structure will be closed.
+-->
+
 **Link to the npm package or GitHub repository**
-A link to GitHub is preferred even for npm packages.
+https://github.com/owner/repo or https://npmjs.com/package/name. A link to GitHub is always preferred.
+
+**Project license**
+E.g., MIT.
 
 **Your relation to the project**
 maintainer/user
