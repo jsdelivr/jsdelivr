@@ -35,7 +35,7 @@ On top of that we also do version-fallback. This means that if a file used in ve
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [MaxCDN][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [Stackpath][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
 
 If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
@@ -43,13 +43,11 @@ If a CDN goes down, websites that use jsDelivr won't have any issues because all
 Smart Load Balancing
 --------------------
 
-jsDelivr uses [PerfOps][10] with real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content.
+jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content. Part of the logic is hosted close to users for optimal performance thanks to [edge hosting by appfleet](https://appfleet.com/)
 
 All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time.
 
 This system also responds immediately to performance degradation and downtime of providers. If a CDN is under a DDoS attack, and their performance drops in some locations, in matter of seconds the algorithm will pick up the change and start serving a different provider to all affected users.
-
-Our [load-balancing code is open source](https://github.com/jsdelivr/dns-openmix) as well.
 
 
 Failover
@@ -291,7 +289,7 @@ jsDelivr does not store any user data and does not track any users in any way.
 
 Here are the relevant policies of our CDN providers:
 * [Cloudflare](https://www.cloudflare.com/security-policy/)
-* [MaxCDN](https://www.maxcdn.com/legal/)
+* [Stackpath](https://www.stackpath.com/legal/privacy-statement/)
 * [Fastly](https://www.fastly.com/privacy/)
 * Only in China [Quantil](https://www.quantil.com/privacy-and-security-policy/)
 
@@ -304,11 +302,9 @@ Here are the relevant policies of our CDN providers:
   [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
   [5]: http://www.cdnperf.com/
   [6]: http://en.wikipedia.org/wiki/Content_delivery_network
-  [7]: http://tracking.maxcdn.com/c/47243/36539/378
+  [7]: https://www.stackpath.com/
   [8]: http://www.cloudflare.com/
   [9]: https://github.com/jsdelivr/jsdelivr/fork
-  [10]: https://perfops.net/
   [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
   [12]: https://gitter.im/jsdelivr/jsdelivr
-  [13]: https://github.com/jsdelivr/libgrabber#add-updatejson-schema
   [14]: https://www.fastly.com/
