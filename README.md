@@ -227,7 +227,7 @@ We will first attempt to locate a minified version of the file provided here (by
   
 Restrictions
 -------------------
- - Packages larger than 50 MB are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
+ - Packages larger than 50 MB or single files larger than 20 MB (in case of GitHub) are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
  - HTML files are served with `Content-Type: text/plain` for security reasons.
 
 WordPress
