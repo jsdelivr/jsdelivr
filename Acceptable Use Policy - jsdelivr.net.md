@@ -1,6 +1,6 @@
 # Acceptable Use Policy
 
-*Effective date: August 15, 2020*
+*Effective date: February 17, 2021*
 
 Prospect One ("us", "we", or "our") operates the cdn.jsdelivr.net website (the "Service" or "jsDelivr").
 
@@ -85,7 +85,17 @@ improvements it provides, any content served via our Chinese network must confor
 to Chinese policies. Content potentially violating Chinese policies may be
 blocked in China without warning.
 
-## 6. Contact Us
+## 6. Limitation of Liability
+
+In no event will the Prospect One and/or jsDelivr entities be liable to you
+or any third party for any direct, indirect, incidental, special, consequential,
+or punitive damages arising out of or relating to your access to or use of,
+or your inability to access or use, the websites and online services or any materials
+or content on the websites and online services, whether based on warranty, contract, 
+tort (including negligence), statute, or any other legal theory, whether or not 
+the Prospect One and/or jsDelivr entities have been informed of the possibility of such damage.
+
+## 7. Contact Us
 
 If you have any questions about this Acceptable Use Policy, please contact us:
 
