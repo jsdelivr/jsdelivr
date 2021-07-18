@@ -1,2 +1,4 @@
 # These are supported funding model platforms
+github: jsdelivr
+open_collective: jsdelivr
 custom: ['https://www.jsdelivr.com/sponsors']
