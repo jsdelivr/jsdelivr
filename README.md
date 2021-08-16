@@ -7,12 +7,11 @@ Related projects:
 
 **We are looking for contributors.** Please check open issues in the above repos if you think you could help, or open a new one if you have an idea you'd like to discuss.
 
-### Note: Our backend changed. [Learn how to use the new jsDelivr](#usage)
-
 jsDelivr is a free CDN for open source files. We are tightly integrated with Github and npm allowing us to automatically provide a reliable CDN service to almost every open source project out there.
 
 We offer a stable CDN that can be used in production on popular websites with huge amounts of traffic.
 There are no bandwidth limits or premium features and its completely free to use by anybody.
+
 
 ### [How does it work - A simple infographic](https://www.jsdelivr.com/network/infographic)
 
@@ -35,7 +34,7 @@ On top of that we also do version-fallback. This means that if a file used in ve
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [Stackpath][7], [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
 
 If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
@@ -43,7 +42,7 @@ If a CDN goes down, websites that use jsDelivr won't have any issues because all
 Smart Load Balancing
 --------------------
 
-jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content. Part of the logic is hosted close to users for optimal performance thanks to [edge hosting by appfleet](https://appfleet.com/)
+jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load balancing algorithm to make accurate decisions for serving content. 
 
 All providers (CDNs and custom servers) are tested millions times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real time.
 
@@ -66,12 +65,6 @@ Our origin consits of multiple servers in different data-centers. If a server go
 In total we have one of the most resilient systems out there, ready to be used in production by even the biggest companies.
 
 
-HTTP2
------------------
-
-All of our POPs support HTTP2 offering better performance to all users.
-
-
 China
 ----------------
 
@@ -82,54 +75,78 @@ jsDelivr works perfectly inside China!
 
 # Usage
 
-jsDelivr can instantly serve any file from any npm package in the public registry.
+jsDelivr provides mirrors for npm, GitHub, WordPress plugins, and custom endpoints for several other projects with special requirements. If our regular endpoints don't work for your use case, [let us know](mailto:dak@prospectone.io) and we'll figure something out!
 
+If you are a package author, check our [tips for package authors](#Publishing-packages) to make using your package as easy as possible.
+
+#### Root endpoint is always `https://cdn.jsdelivr.net`
+
+npm
+---
+jsDelivr can instantly serve any file from any npm package in the public registry.
 New versions pushed to npm are instantly available via our CDN as well. No maintenance is required.
 
 If a package, version or file gets removed from npm then jsDelivr will continue to serve that file from our permanent storage without breaking any websites using it. 
 
-npm
----
+We use a permanent S3 storage to ensure all files remain available even if npm goes down, or a package is deleted by its author. Files are fetched directly from npm only the first time, or when S3 goes down.
 
-Load any project hosted on npm:
+
+##### Load any project hosted on npm:
 
 ```
 /npm/package@version/file
 ```
 
-Load exact version:
+##### Load exact version:
 
 ```
 /npm/jquery@3.1.0/dist/jquery.min.js
 ```
 
-Use a version range instead of an exact version:
+##### Use a version range instead of an exact version:
 
 ```
 /npm/jquery@3/dist/jquery.min.js
 /npm/jquery@3.1/dist/jquery.min.js
 ```
+---
+**NOTE**
 
-Load by tag: (Not recommended for production usage)
+If you use this feature and a file you requested is not available in the newest version of the package, the link will keep working thanks to our version-fallback feature. We'll continue to serve the file from older version of the package instead of failing with a 404 error.
+
+---
+
+
+##### Load by tag (Not recommended for production usage):
 
 ```
 /npm/jquery@beta/dist/jquery.min.js
 ```
 
-Omit the version completely or use "latest" to load the latest one: (Dev environment only)
+##### Omit the version completely or use "latest" to load the latest one (not recommended for production usage):
 
 ```
 /npm/jquery@latest/dist/jquery.min.js
 /npm/jquery/dist/jquery.min.js
 ```
+---
+**NOTE**
+Requesting the latest version (as opposed to "latest major" or "latest minor") is dangerous because major versions usually come with breaking changes. Only do this if you really know what you are doing.
 
-Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+---
+
+##### Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
 
 ```
 /npm/github-markdown-css@2.4.1/github-markdown.min.css
 ```
+---
+**NOTE**
+Minifying a large file can take several seconds. However, we store all generated files in our permanent storage, so this delay only applies to the first few requests.
 
-Omit the file path to get the [default file](#configuring-a-default-file-in-packagejson). This file is always minified:
+---
+
+##### Omit the file path to get the [default file](#configuring-a-default-file-in-packagejson). This file is always minified:
 
 ```
 /npm/jquery@3.1.0
@@ -137,7 +154,7 @@ Omit the file path to get the [default file](#configuring-a-default-file-in-pack
 /npm/jquery
 ```
 
-Get a directory listing:
+##### Get a directory listing:
 
 ```
 /npm/jquery@3.1.0/
@@ -146,41 +163,60 @@ Get a directory listing:
 
 GitHub
 ------
+We recommend using npm for projects that support it for better UX - npm packages are searchable on our website, and package pages show additional useful information, such as description and link to homepage.
 
-Load any GitHub release, commit, or branch:
+We use a permanent S3 storage to ensure all files remain available even if GitHub goes down, or a repository or a release is deleted by its author. Files are fetched directly from GitHub only the first time, or when S3 goes down.
+
+##### Load any GitHub release, commit, or branch:
 
 ```
 /gh/user/repo@version/file
 ```
 
-Load exact version:
+##### Load exact version:
 
 ```
 /gh/jquery/jquery@3.1.0/dist/jquery.min.js
 /gh/jquery/jquery@32b00373b3f42e5cdcb709df53f3b08b7184a944/dist/jquery.min.js
 ```
 
-Use a version range instead of an exact version (only works with valid semver versions):
+##### Use a version range instead of an exact version (only works with valid semver versions):
 
 ```
 /gh/jquery/jquery@3/dist/jquery.min.js
 /gh/jquery/jquery@3.1/dist/jquery.min.js
 ```
+---
+**NOTE**
+If you use this feature and a file you requested is not available in the newest release, the link will keep working thanks to our version-fallback feature. We'll continue to serve the file from older release instead of failing with a 404 error.
 
-Omit the version completely or use "latest" to load the latest one (only works with valid semver versions): (Dev environment only)
+---
+
+##### Omit the version completely or use "latest" to load the latest one (only works with valid semver versions): (Dev environment only)
 
 ```
 /gh/jquery/jquery@latest/dist/jquery.min.js
 /gh/jquery/jquery/dist/jquery.min.js
 ```
+---
+**NOTE**
+Requesting the latest version (as opposed to "latest major" or "latest minor") is dangerous because major versions usually come with breaking changes. Only do this if you really know what you are doing.
 
-Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+---
+
+
+##### Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
 
 ```
-/gh/sindresorhus/github-markdown-css@v2.4.1/github-markdown.min.css
+/gh/jquery/jquery@3.2.1/src/core.min.js
 ```
+---
+**NOTE**
+Minifying a large file can take several seconds. However, we store all generated files in our permanent storage, so this delay only applies to the first few requests.
 
-Get a directory listing:
+---
+
+##### Get a directory listing:
 
 ```
 /gh/jquery/jquery@3.1.0/
@@ -190,7 +226,7 @@ Get a directory listing:
 Combine multiple files
 ----------------------
 
-Our combine endpoint has the following format:
+Our combine endpoint allows you to load several files from npm and GitHub endpoints in one request:
 
 ```
 /combine/url1,url2,url3
@@ -204,6 +240,11 @@ Examples:
 /combine/gh/jquery/jquery@3.1/dist/jquery.min.js,gh/twbs/bootstrap@3.3/dist/js/bootstrap.min.js
 /combine/npm/bootstrap@3.3/dist/css/bootstrap.min.css,npm/bootstrap@3.3/dist/css/bootstrap-theme.min.css
 ```
+---
+**NOTE**
+Combining large/many files can take several seconds. However, we store all generated files in our permanent storage, so this delay only applies to the first few requests.
+
+---
 
 Publishing packages
 -------------------
@@ -224,6 +265,12 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
   3. `main`
   
 We will first attempt to locate a minified version of the file provided here (by removing the extension, and looking for the same file `.min.js`). If we can't find one we will minify ourselves.
+
+Be advised that you must include file extension in the values, for example:
+```
+"main": "./index" // this will NOT work
+"main": "./index.js" // this is the correct way
+```
   
 Restrictions
 -------------------
@@ -233,22 +280,40 @@ Restrictions
 WordPress
 ---------
 
-Our WordPress endpoint works for plugins hosted in the [WordPress.org plugin directory](https://WordPress.org/plugins), and mirrors [the WordPress.org plugins SVN repo](https://plugins.svn.wordpress.org/) has the following format:
+Our WordPress endpoint works for plugins and themes hosted in the [WordPress.org plugin directory](https://WordPress.org/plugins) and [Wordpress.org theme directory](https://wordpress.org/themes/), and mirrors [the WordPress.org plugins SVN repo](https://plugins.svn.wordpress.org/).
 
+##### Load any plugin from the WordPress.org plugins SVN repo:
 ```
 /wp/project/tags/version/file
 ```
 
-Load exact version:
+##### Load exact version:
 
 ```
 /wp/wp-slimstat/tags/4.6.5/wp-slimstat.js
 ```
 
-Load latest version:  (Dev environment only)
+##### Load latest version (not recommended for production usage):
 
 ```
 /wp/wp-slimstat/trunk/wp-slimstat.js
+```
+
+#####  Load any theme from the WordPress.org themes SVN repo:
+```
+https://cdn.jsdelivr.net/wp/themes/project/version/file
+```
+
+##### Load an exact version of a file:
+
+```
+https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.js
+```
+
+##### Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+
+```
+https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.min.js
 ```
 
 Purge cache
@@ -276,6 +341,8 @@ Current OSS projects using custom configs:
 
 * [webjars](http://www.webjars.org/)
 * webpack [webpackbin](https://www.webpackbin.com/) and [codesandbox](https://codesandbox.io/)
+* [emojione.com](https://www.emojione.com/)
+* [hex.pm](https://hex.pm/)
 
 
 Privacy Policy
@@ -289,7 +356,6 @@ jsDelivr does not store any user data and does not track any users in any way.
 
 Here are the relevant policies of our CDN providers:
 * [Cloudflare](https://www.cloudflare.com/security-policy/)
-* [Stackpath](https://www.stackpath.com/legal/privacy-statement/)
 * [Fastly](https://www.fastly.com/privacy/)
 * Only in China [Quantil](https://www.quantil.com/privacy-and-security-policy/)
 
