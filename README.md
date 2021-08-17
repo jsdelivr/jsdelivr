@@ -82,7 +82,8 @@ If you are a package author, check our [tips for package authors](#Publishing-pa
 #### Root endpoint is always `https://cdn.jsdelivr.net`
 
 npm
----
+------
+
 jsDelivr can instantly serve any file from any npm package in the public registry.
 New versions pushed to npm are instantly available via our CDN as well. No maintenance is required.
 
@@ -316,10 +317,28 @@ https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.js
 https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.min.js
 ```
 
+Caching
+---
+Our caching logic and headers are optimized for production use and applies to all non-custom endpoints.
+
+* **Static Versions and commit hashes** - Effectively forever. The caching headers are set for 1 year but we also permanently cache the files in our S3 storage. So all future requests that bypass the CDN will hit our S3 storage with no option or way to update the contents of that file.
+* **Version aliasing** - 7 days. This also includes `latest` versions. They are cached on our CDN for 7 days with the option to purge the cache using our API to speed up the release of your project to your users.
+* **Branches** - 12 hours. 
+
+In certain cases purgeable files can get updated faster due to low-cache hit ratio or forced CDN purge from our side for maintenance reasons.
+
+We use permanent S3 caching even with dynamic URLs such as version aliasing, meaning once we download your tagged files there is no way for you to update them. If there is a critical issue in your latest release the best course of action is to tag a new semver valid release with the fix and purge the CDN URLs using our purge API.
+
+
 Purge cache
 ---
 
 jsDelivr has an easy to use API to purge files from the cache and force the files to update. This is useful when you release a new version and want to force the update of all version aliased users.
+
+Please note:
+* It will not work for static files as explained above. 
+* Valid semver releases must be used for purge to work
+* Rate-limiting applies to all users
 
 To avoid abuse, access to purge is given after an email request (for now - dak@prospectone.io).
 
