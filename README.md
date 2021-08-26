@@ -1,9 +1,30 @@
-[jsDelivr][1] - Open Source CDN
-========
+<h1 align="center">jsDelivr - Open Source CDN</h1>
 
-Related projects:
- - [jsDelivr API](https://github.com/jsdelivr/data.jsdelivr.com)
- - [jsDelivr website](https://github.com/jsdelivr/www.jsdelivr.com)
+<p align="center">
+  <img src="https://www.jsdelivr.com/img/icon_256x256.png" alt="jsdelivr-logo" width="128px" height="128px"/>
+  <br>
+  <i>A global super-fast and production focused CDN, tightly integrated with NPM and GitHub
+    <br> with support for on-the-fly optimizations, ES modules, detailed download stats and more</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.jsdelivr.com"><strong>www.jsdelivr.com</strong></a>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://github.com/jsdelivr/data.jsdelivr.com">Website Repo</a>
+  ·
+  <a href="https://github.com/jsdelivr/data.jsdelivr.com">Official API</a>
+  ·
+  <a href="https://www.jsdelivr.com/blog/">Blog</a>
+   ·
+  <a href="https://twitter.com/jsdelivr">@jsDelivr</a>
+  <br>
+  <br>
+</p>
+<hr>
 
 **We are looking for contributors.** Please check open issues in the above repos if you think you could help, or open a new one if you have an idea you'd like to discuss.
 
@@ -73,7 +94,7 @@ jsDelivr has partnered up with multiple Chinese companies to provide fast and re
 jsDelivr works perfectly inside China!
 
 
-# Usage
+# Usage Documentation
 
 jsDelivr provides mirrors for npm, GitHub, WordPress plugins, and custom endpoints for several other projects with special requirements. If our regular endpoints don't work for your use case, [let us know](mailto:dak@prospectone.io) and we'll figure something out!
 
