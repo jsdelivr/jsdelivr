@@ -1,6 +1,6 @@
 # Privacy Policy - cdn.jsdelivr.net
 
-*Effective date: April 30, 2018*
+*Effective date: September 14, 2021*
 
 Prospect One ("us", "we", or "our") operates the cdn.jsdelivr.net website (the "Service").
 
@@ -176,17 +176,17 @@ For more information on the privacy practices of Cloudflare,
 please visit the following web page:<br>
 https://www.cloudflare.com/security-policy/
 
-#### Stackpath
-
-For more information on the privacy practices of Stackpath,
-please visit the following web page:<br>
-https://www.stackpath.com/privacy-statement/
-
 #### Fastly
 
 For more information on the privacy practices of Fastly,
 please visit the following web page:<br>
 https://www.fastly.com/privacy
+
+#### Bunny
+
+For more information on the privacy practices of Bunny CDN,
+please visit the following web page:<br>
+https://bunny.net/privacy
 
 #### Quantil (China residents only)
 
