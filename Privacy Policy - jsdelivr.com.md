@@ -1,6 +1,6 @@
 # Privacy Policy - *.jsdelivr.com
 
-*Effective date: April 30, 2018*
+*Effective date: September 14, 2021*
 
 Prospect One ("us", "we", or "our") operates the jsdelivr.com website and its subdomains (the "Service").
 
@@ -208,6 +208,24 @@ JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google
 For more information on the privacy practices of Google, please visit the Google Privacy & Terms
 web page:<br>
 https://www.google.com/intl/en/policies/privacy/
+
+### Content Delivery
+
+We use third-party Service Providers to serve all of our traffic under the domain cdn.jsdelivr.net.
+This means all of these providers have access to your IP address and other information sent by your web browser.
+This information is used for analytics and security purposes.
+
+#### Cloudflare
+
+For more information on the privacy practices of Cloudflare,
+please visit the following web page:<br>
+https://www.cloudflare.com/security-policy/
+
+#### Bunny
+
+For more information on the privacy practices of Bunny CDN,
+please visit the following web page:<br>
+https://bunny.net/privacy
 
 ## Links To Other Sites
 
