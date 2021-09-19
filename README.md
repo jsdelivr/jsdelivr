@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/jsdelivr/data.jsdelivr.com">Website Repo</a>
+  <a href="https://github.com/jsdelivr/www.jsdelivr.com">Website Repo</a>
   ·
   <a href="https://github.com/jsdelivr/data.jsdelivr.com">Official API</a>
   ·
