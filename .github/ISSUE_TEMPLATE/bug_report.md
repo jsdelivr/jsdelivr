@@ -22,7 +22,7 @@ If applicable, add screenshots to help explain your problem.
 **Please complete the following information:**
  - Device OS: [e.g. iOS]
  - Browser: [e.g. chrome, safari]
- - Broser version: [e.g. 22]
+ - Browser version: [e.g. 22]
  - VPN provider if you use one:
  - Your location (country):
 
