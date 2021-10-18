@@ -227,7 +227,7 @@ Requesting the latest version (as opposed to "latest major" or "latest minor") i
 ---
 
 
-##### Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
+##### Add ".min" to any JS/CSS/SVG file to get a minified version - if one doesn't exist, we'll generate it for you. All generated files come with source maps and can be easily used during development:
 
 ```
 /gh/jquery/jquery@3.2.1/src/core.min.js
