@@ -1,8 +1,8 @@
 # Privacy Policy - cdn.jsdelivr.net
 
-*Effective date: September 14, 2021*
+*Effective date: February 16, 2022*
 
-Prospect One ("us", "we", or "our") operates the cdn.jsdelivr.net website (the "Service").
+Prospect One ("us", "we", or "our"), a company established in Poland, operates the cdn.jsdelivr.net website (the "Service").
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data
 when you use our Service and the choices you have associated with that data.
@@ -61,8 +61,9 @@ cdn.jsdelivr.net does not require or collect any personal data.
 
 We may collect information how the Service is accessed and used ("Usage Data").
 This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address),
-browser type, browser version, the pages of our Service that you visit, the time and date of your visit,
-the time spent on those pages, unique device identifiers and other diagnostic data.
+browser type, browser version, referrer data (limited to domain), the URLs of our Service that you visit (limited to the cdn.jsdelivr.net domain), 
+the time and date of your visit, unique device identifiers and other diagnostic data.
+We never associate any gathered data with specific users or try to track their usage at any point and in any way.
 
 ### Location Data
 
@@ -76,9 +77,8 @@ We do not use cookies or similar tracking technologies to track your activity on
 Prospect One uses the collected data for various purposes:
 
  - To provide and maintain our Service
- - To notify you about changes to our Service
+ - To build public download statistics per project, per file and per version that you can find on our website and via our API
  - To allow you to participate in interactive features of our Service when you choose to do so
- - To provide customer support
  - To gather analysis or valuable information so that we can improve our Service
  - To monitor the usage of our Service
  - To detect, prevent and address technical issues
@@ -90,10 +90,13 @@ set out in this Privacy Policy. We will retain and use your Personal Data to the
 to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws),
 resolve disputes, and enforce our legal agreements and policies.
 
-Prospect One will also retain Usage Data for internal analysis purposes.
-Usage Data is generally retained for a shorter period of time, except when this data is
+Prospect One will also retain non-aggragated Usage Data for internal analysis purposes.
+Non-aggragated Usage Data is generally retained for a shorter period of time, except when this data is
 used to strengthen the security or to improve the functionality of our Service,
 or we are legally obligated to retain this data for longer time periods.
+
+Aggregated Usage Data does not contain any information assosiated with any single request or user and is stored indefinitely.
+This data is publicly accessible via our API https://github.com/jsdelivr/data.jsdelivr.com#get-package-usage-stats
 
 ## Transfer Of Data
 
@@ -136,8 +139,6 @@ to protect your Personal Data, we cannot guarantee its absolute security.
 
 We do not support Do Not Track ("DNT"). Do Not Track is a preference you can set in your web browser
 to inform websites that you do not want to be tracked.
-
-You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.
 
 ## Your Rights
 
@@ -182,17 +183,19 @@ For more information on the privacy practices of Fastly,
 please visit the following web page:<br>
 https://www.fastly.com/privacy
 
-#### Bunny
+#### G-Core (Limited to requests coming from the Russian Federation)
+
+For more information on the privacy practices of G-Core,
+please visit the following web page:<br>
+https://gcorelabs.com/legal/
+
+#### Bunny (Limited to legacy bootstrapcdn.com CDN endpoints)
 
 For more information on the privacy practices of Bunny CDN,
 please visit the following web page:<br>
 https://bunny.net/privacy
 
-#### Quantil (China residents only)
 
-We only use Quantil to serve users located in China. For more information on the privacy practices of Quantil,
-please visit the following web page:<br>
-https://www.quantil.com/privacy-and-security-policy/
 
 ## Links To Other Sites
 
