@@ -1,6 +1,6 @@
 # Privacy Policy - cdn.jsdelivr.net
 
-*Effective date: February 16, 2022*
+*Effective date: February 17, 2022*
 
 Prospect One ("us", "we", or "our"), a company established in Poland, operates the cdn.jsdelivr.net service (the "Service").
 
@@ -91,7 +91,7 @@ to comply with our legal obligations (for example, if we are required to retain 
 resolve disputes, and enforce our legal agreements and policies.
 
 Prospect One will also retain non-aggragated Usage Data for internal analysis purposes.
-Non-aggragated Usage Data is retained for a shorter period of time, until it's analysed and deleted, except when this data is
+Non-aggragated Usage Data is retained for a shorter period of time, until it is analysed and deleted, except when this data is
 used to strengthen the security or to improve the functionality of our Service,
 or we are legally obligated to retain this data for longer time periods.
 
@@ -194,8 +194,6 @@ https://gcorelabs.com/legal/
 For more information on the privacy practices of Bunny CDN,
 please visit the following web page:<br>
 https://bunny.net/privacy
-
-
 
 ## Links To Other Sites
 
