@@ -55,7 +55,7 @@ On top of that we also do version-fallback. This means that if a file used in ve
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [CloudFlare][8], and [Fastly][14]. In mainland China we use [Quantil](https://www.quantil.com/).
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [CloudFlare][8], and [Fastly][14].
 
 If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
@@ -84,14 +84,6 @@ Our load-balancer monitors the uptime of all CDN providers using both RUM and sy
 Our origin consits of multiple servers in different data-centers. If a server goes down the CDNs will automatically switch to using the remaining healthy servers.
 
 In total we have one of the most resilient systems out there, ready to be used in production by even the biggest companies.
-
-
-China
-----------------
-
-jsDelivr has partnered up with multiple Chinese companies to provide fast and reliable file delivery in China mainland and the whole Asian continent. We have servers inside China that improve the delivery speeds and latency significantly. We also have a valid ICP license issued by the Chinese government that protects us from bans and slow downloads.
-
-jsDelivr works perfectly inside China!
 
 
 # Usage Documentation
@@ -397,7 +389,6 @@ jsDelivr does not store any user data and does not track any users in any way.
 Here are the relevant policies of our CDN providers:
 * [Cloudflare](https://www.cloudflare.com/security-policy/)
 * [Fastly](https://www.fastly.com/privacy/)
-* Only in China [Quantil](https://www.quantil.com/privacy-and-security-policy/)
 
 
 ## [The bus factor](https://github.com/jsdelivr/jsdelivr/wiki/What-to-do-if-I-die-aka-The-bus-factor)
