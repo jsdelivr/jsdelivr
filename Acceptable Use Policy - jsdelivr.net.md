@@ -1,6 +1,6 @@
 # Acceptable Use Policy
 
-*Effective date: February 17, 2021*
+*Effective date: April 21, 2022*
 
 Prospect One ("us", "we", or "our") operates the cdn.jsdelivr.net website (the "Service" or "jsDelivr").
 
@@ -52,6 +52,14 @@ exceed them:
        does not exceed 10 000. If you have considerably more files, a custom
        proxy endpoint for your project may be a better fit.
      - The soft limit for the number of files per repository is 100 000.
+
+These recommendations are not automatically enforced by our Service, but may
+indicate whether a project falls within the Permitted or the Prohibited use
+when it is not immediately clear. We recommend that each project:
+ - has a meaningful name,
+ - has public documentation and an appropriate license that allows use by other people,
+ - in case of npm packages, links to a public source code repository,
+ - does not contain intentionally obfuscated code.
 
 ## 4. Prohibited Use
 
