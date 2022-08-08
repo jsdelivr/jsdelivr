@@ -19,8 +19,10 @@
   <a href="https://github.com/jsdelivr/data.jsdelivr.com">Official API</a>
   ·
   <a href="https://www.jsdelivr.com/blog/">Blog</a>
-   ·
+  ·
   <a href="https://twitter.com/jsdelivr">@jsDelivr</a>
+  ·
+  <a href="https://www.jsdelivr.com/discord">Discord</a>
   <br>
   <br>
 </p>
