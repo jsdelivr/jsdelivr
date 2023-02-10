@@ -183,6 +183,12 @@ For more information on the privacy practices of Fastly,
 please visit the following web page:<br>
 https://www.fastly.com/privacy
 
+#### Gcore
+
+For more information on the privacy practices of Gcore,
+please visit the following web page:<br>
+https://gcore.com/legal
+
 #### Bunny (Limited to legacy bootstrapcdn.com CDN endpoints)
 
 For more information on the privacy practices of Bunny CDN,
