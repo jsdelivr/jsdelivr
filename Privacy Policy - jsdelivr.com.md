@@ -190,42 +190,6 @@ to provide the Service on our behalf, to perform Service-related services or to 
 These third parties have access to your Personal Data only to perform these tasks on our behalf
 and are obligated not to disclose or use it for any other purpose.
 
-### Analytics
-
-We may use third-party Service Providers to monitor and analyze the use of our Service.
-
-#### Google Analytics
-
-Google Analytics is a web analytics service offered by Google that tracks and reports website traffic.
-Google uses the data collected to track and monitor the use of our Service.
-This data is shared with other Google services. Google may use the collected data to contextualize
-and personalize the ads of its own advertising network.
-
-You can opt-out of having made your activity on the Service available to Google Analytics
-by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics
-JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
-
-For more information on the privacy practices of Google, please visit the Google Privacy & Terms
-web page:<br>
-https://www.google.com/intl/en/policies/privacy/
-
-### Content Delivery
-
-We use third-party Service Providers to serve all of our traffic under the domain cdn.jsdelivr.net.
-This means all of these providers have access to your IP address and other information sent by your web browser.
-This information is used for analytics and security purposes.
-
-#### Cloudflare
-
-For more information on the privacy practices of Cloudflare,
-please visit the following web page:<br>
-https://www.cloudflare.com/security-policy/
-
-#### Bunny
-
-For more information on the privacy practices of Bunny CDN,
-please visit the following web page:<br>
-https://bunny.net/privacy
 
 ## Links To Other Sites
 
