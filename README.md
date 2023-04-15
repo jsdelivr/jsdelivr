@@ -85,6 +85,10 @@ Our origin consits of multiple servers in different data-centers. If a server go
 
 In total we have one of the most resilient systems out there, ready to be used in production by even the biggest companies.
 
+China
+----------------
+
+jsDelivr has multiple locations close Chinese urban centers to ensure low latency and high performance for all Chinese users.
 
 # Usage Documentation
 
