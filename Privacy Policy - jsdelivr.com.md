@@ -1,6 +1,6 @@
 # Privacy Policy - *.jsdelivr.com
 
-*Effective date: September 14, 2021*
+*Effective date: April 16, 2023*
 
 Prospect One ("us", "we", or "our") operates the jsdelivr.com website and its subdomains (the "Service").
 
@@ -190,6 +190,29 @@ to provide the Service on our behalf, to perform Service-related services or to 
 These third parties have access to your Personal Data only to perform these tasks on our behalf
 and are obligated not to disclose or use it for any other purpose.
 
+### Content Delivery
+
+We use third-party Service Providers to serve all of our traffic under the domain www.jsdelivr.com.
+This means all of these providers have access to your IP address and other information sent by your web browser.
+This information is used for analytics and security purposes.
+
+#### Cloudflare
+
+For more information on the privacy practices of Cloudflare,
+please visit the following web page:<br>
+https://www.cloudflare.com/security-policy/
+
+#### Fastly
+
+For more information on the privacy practices of Fastly,
+please visit the following web page:<br>
+https://www.fastly.com/privacy
+
+#### Gcore
+
+For more information on the privacy practices of Gcore,
+please visit the following web page:<br>
+https://gcore.com/legal
 
 ## Links To Other Sites
 
