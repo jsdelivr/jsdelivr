@@ -1,6 +1,6 @@
 # Privacy Policy - cdn.jsdelivr.net
 
-*Effective date: February 17, 2022*
+*Effective date: April 16, 2023*
 
 Prospect One ("us", "we", or "our"), a company established in Poland, operates the cdn.jsdelivr.net service (the "Service").
 
@@ -182,6 +182,12 @@ https://www.cloudflare.com/security-policy/
 For more information on the privacy practices of Fastly,
 please visit the following web page:<br>
 https://www.fastly.com/privacy
+
+#### Gcore
+
+For more information on the privacy practices of Gcore,
+please visit the following web page:<br>
+https://gcore.com/legal
 
 #### Bunny (Limited to legacy bootstrapcdn.com CDN endpoints)
 
