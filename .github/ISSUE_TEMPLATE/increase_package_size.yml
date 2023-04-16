@@ -1,6 +1,5 @@
 name: Request to increase package size limit
 description: Request a higher limit for your package.
-labels:
 title: "[PACKAGE] - increase package size limit for {{PROJCET NAME}}"
 body:
   - type: markdown
