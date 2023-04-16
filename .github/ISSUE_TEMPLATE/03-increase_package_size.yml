@@ -2,18 +2,9 @@ name: Request to increase package size limit
 description: Request a higher limit for your package.
 title: "Increase package size limit for {{PROJECT NAME}}"
 body:
-  - type: dropdown
-    attributes:
-      label: Type
-      options:
-        - NPM Package
-        - GitHub Repository
-    validations:
-      required: true
-
   - type: textarea
     attributes:
-      label: Links
+      label: Project
       description: Links to the NPM Package or Github Repository. A link to GitHub is always preferred.
       placeholder: |
         https://github.com/jsdelivr/jsdelivr
