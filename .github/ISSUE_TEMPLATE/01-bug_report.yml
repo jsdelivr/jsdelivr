@@ -4,7 +4,7 @@ body:
   - type: textarea
     attributes:
       label: Description
-      description: A clear and concise description of what the bug is.
+      description: A clear and concise description of what the bug is, including steps to reproduce and screenshots, if applicable.
     validations:
       required: true
 
@@ -27,16 +27,6 @@ body:
         ```
 
         ```
-    validations:
-      required: true
-
-  - type: textarea
-    attributes:
-      label: Steps to reproduce (add screenshots if applicable)
-      placeholder: |
-        1. [First step] (Screenshot 1)
-        2. [Second step] (Screenshot 2)
-        3. [And so on...] (Screenshot X)
     validations:
       required: true
 
