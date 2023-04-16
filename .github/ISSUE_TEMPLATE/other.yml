@@ -45,7 +45,7 @@ body:
     validations:
       required: true
 
-    - type: textarea
+  - type: textarea
     attributes:
       label: Additional content
       description: Anything you want to add.
