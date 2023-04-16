@@ -1,51 +1,29 @@
 name: Request to increase package size limit
 description: Request a higher limit for your package.
-title: "[PACKAGE] - increase package size limit for {{PROJCET NAME}}"
+title: "Increase package size limit for {{PROJECT NAME}}"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        A clear and concise description of your feature request.
-
   - type: dropdown
     attributes:
       label: Type
       options:
         - NPM Package
-        - Github Repository
-        - Both
+        - GitHub Repository
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Links
-      description: Links to the NPM Package or Github Repository.
+      description: Links to the NPM Package or Github Repository. A link to GitHub is always preferred.
       placeholder: |
         https://github.com/jsdelivr/jsdelivr
-        https://npmjs.com/jsdelivr/jsdelivr
+        https://npmjs.com/jsdelivr
     validations:
       required: true
 
-  - type: dropdown
+  - type: input
     attributes:
       label: Project License
-      options:
-        - Apache License 2.0
-        - GNU General Public License v3.0
-        - MIT License
-        - BSD 2-Clause "Simplified" License
-        - BSD 3-Clause "New" or "Revised" License
-        - Boost Software License 1.0
-        - Creative Commons Zero v1.0 Universal
-        - Eclipse Public License 2.0
-        - GNU Affero General Public License v3.0
-        - GNU General Public License v2.0
-        - GNU Lesser General Public License v2.1
-        - Mozilla Public License 2.0
-        - The Unlicense
-        - No License
-        - Other License (Specify in Additional context)
     validations:
       required: true
 
@@ -55,7 +33,6 @@ body:
       options:
         - Maintainer
         - User
-        - Other (Specify in Additional context)
     validations:
       required: true
 

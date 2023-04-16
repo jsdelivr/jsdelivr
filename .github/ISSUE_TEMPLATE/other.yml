@@ -1,52 +1,16 @@
 name: Other
 description: Anything that doesn't fit into the categories above
-title: "[Other] - "
+title: ""
 body:
   - type: markdown
     attributes:
       value: |
         Is your issue related to a specific project?
-        Please include all relevant links to cdn.jsdelivr.net/npm/ or cdn.jsdelivr.net/gh and your relation to the project.
-
-  - type: dropdown
-    attributes:
-      label: Type
-      options:
-        - NPM Package
-        - Github Repository
-        - Both
-    validations:
-      required: true
-
-  - type: dropdown
-    attributes:
-      label: Relationship
-      options:
-        - Maintainer
-        - User
-        - Other (Specify in Additional context)
-    validations:
-      required: true
+        Please include all relevant links to cdn.jsdelivr.net, npm, GitHub, and your relation to the project.
 
   - type: textarea
     attributes:
-      label: Links
-      description: Links to the NPM Package or Github Repository.
-      placeholder: |
-        https://github.com/jsdelivr/jsdelivr
-        https://npmjs.com/jsdelivr/jsdelivr
-    validations:
-      required: true
-      
-  - type: textarea
-    attributes:
-      label: Other
+      label: Description
       description: Describe your problem.
     validations:
       required: true
-
-  - type: textarea
-    attributes:
-      label: Additional content
-      description: Anything you want to add.
-    validations:

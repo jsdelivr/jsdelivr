@@ -1,26 +1,21 @@
 name: Bug report
 description: Create a report to help us improve.
-title: "[BUG] - "
+title: ""
 body:
-  - type: markdown
-    attributes:
-      value: |
-        A clear and concise description of what the bug is.
-
   - type: textarea
     attributes:
       label: Description
-      description: A detailed description of the bug.
+      description: A clear and concise description of what the bug is.
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Affected JSDelivr link
+      label: Affected jsDelivr links
       description: One or more direct links that are affected by this issue.
       placeholder: |
-       cdn.jsdeivr.net/example/example1.js
-       cdn.jsdeivr.net/example/example2.json
+       https://cdn.jsdelivr.net/example/example.js
+       https://cdn.jsdelivr.net/example/example2.js
        ...
     validations:
       required: true
@@ -46,8 +41,8 @@ body:
     attributes:
       label: Information
       description: The following information is needed for us to define the problem.
-      placeholder: |
-        - Device OS: [e.g. IOS, Windows, MacOS]
+      value: |
+        - Device OS: [e.g. iOS, Windows, MacOS]
         - Browser & Version: [e.g. Chrome 103, safari 8, Firefox 108]
         - VPN provider (if you use one)
         - Your location (country/region)
@@ -62,7 +57,7 @@ body:
       options:
         - label: I performed a [cursory search of the issue tracker](https://github.com/jsdelivr/jsdelivr/issues?q=is%3Aissue) to avoid opening a duplicate issue.
           required: true
-        - label: I checked the [documentation](https://github.com/jsdelivr/jsdelivr/wiki) to understand that the issue I am reporting is not normal behavior.
+        - label: I checked the [documentation](https://github.com/jsdelivr/jsdelivr) to understand that the issue I am reporting is not normal behavior.
           required: true
         - label: I understand that not filling out this template correctly will lead to the issue being closed.
           required: true
