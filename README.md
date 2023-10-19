@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://github.com/jsdelivr/www.jsdelivr.com">Website Repo</a>
   ·
-  <a href="https://github.com/jsdelivr/data.jsdelivr.com">Official API</a>
+  <a href="https://github.com/jsdelivr/data.jsdelivr.com">Public API</a>
   ·
   <a href="https://www.jsdelivr.com/blog/">Blog</a>
   ·
@@ -289,6 +289,7 @@ All packages hosted on npm and tagged releases on GitHub are automatically avail
 We will first attempt to locate a minified version of the file provided here (by removing the extension and looking for the same file `.min.js`). If we can't find one, we will minify ourselves.
 
 Be advised that you must include the file extension in the values, for example:
+
 ```
 "main": "./index" // this will NOT work
 "main": "./index.js" // this is the correct way
