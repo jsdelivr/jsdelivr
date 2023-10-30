@@ -45,7 +45,7 @@ There are no bandwidth limits or premium features, and it's completely free to u
 Ready for production
 --------------------
 
-Our public CDN is built to be used in production by even the largest websites. Everything is optimized and constantly improved to offer all users maximum speed and uptime. Performance is monitored at all times, and we are always looking into new technologies and providers that may further improve our CDN. Downtime, timeouts, or slow responses are simply unacceptable. 
+Our public CDN is built to be used in production by even the largest websites. Everything is optimized and constantly improved to offer all users maximum speed and uptime. Performance is monitored at all times, and we are always looking into new technologies and providers that may further improve our CDN. Downtime, timeouts, or slow responses are simply unacceptable.
 
 We do everything possible to ensure our CDN will NEVER break any websites, regardless of the use case. If a file is available via our CDN, we assume it's used in production and ensure it will continue to work no matter what.
 
@@ -65,7 +65,7 @@ If a CDN goes down, websites that use jsDelivr won't have any issues because all
 Smart Load Balancing
 --------------------
 
-jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load-balancing algorithm to make accurate decisions for serving content. 
+jsDelivr uses real user performance data (also known as RUM) to make its routing decisions. These metrics are gathered from hundreds of websites and are used in our load-balancing algorithm to make accurate decisions for serving content.
 
 All providers (CDNs and custom servers) are tested millions of times per day by real users from all over the world. Based on this information, jsDelivr knows what provider is the fastest for each user. Each user gets a unique response based on his or her location, ISP, and the providers' uptime in real-time.
 
@@ -106,7 +106,7 @@ npm
 jsDelivr can instantly serve any file from any npm package in the public registry.
 New versions pushed to npm are instantly available via our CDN as well. No maintenance is required.
 
-If a package, version, or file gets removed from npm, then jsDelivr will continue to serve that file from our permanent storage without breaking any websites using it. 
+If a package, version, or file gets removed from npm, then jsDelivr will continue to serve that file from our permanent storage without breaking any websites using it.
 
 We use a permanent S3 storage to ensure all files remain available even if npm goes down or a package is deleted by its author. Files are fetched directly from npm only the first time or when S3 goes down.
 
@@ -273,19 +273,19 @@ Publishing packages
 
 All packages hosted on npm and tagged releases on GitHub are automatically available on jsDelivr. If you are a package author, here are a few tips to make using your package as easy as possible:
 
- - Use semver for versioning (this is enforced by npm but not by GitHub)
- - If a file listed as `main` in `package.json` isn't meant to be used in a browser, set a [`browser` or `jsdelivr` field](#configuring-a-default-file-in-packagejson)
- - If you distribute minified JS/CSS files, also include source maps for those files
- - If you don't want to provide minified files, it's fine - we'll handle that for you
- 
- ### Configuring a default file in package.json
- 
- For packages hosted on npm, we support serving "default" files with shorter URLs. The default file can be configured by setting one of the following fields in `package.json`, with `jsdelivr` having the highest priority:
- 
-  1. `jsdelivr`
-  2. `browser`
-  3. `main`
-  
+- Use semver for versioning (this is enforced by npm but not by GitHub)
+- If a file listed as `main` in `package.json` isn't meant to be used in a browser, set a [`browser` or `jsdelivr` field](#configuring-a-default-file-in-packagejson)
+- If you distribute minified JS/CSS files, also include source maps for those files
+- If you don't want to provide minified files, it's fine - we'll handle that for you
+
+### Configuring a default file in package.json
+
+For packages hosted on npm, we support serving "default" files with shorter URLs. The default file can be configured by setting one of the following fields in `package.json`, with `jsdelivr` having the highest priority:
+
+1. `jsdelivr`
+2. `browser`
+3. `main`
+
 We will first attempt to locate a minified version of the file provided here (by removing the extension and looking for the same file `.min.js`). If we can't find one, we will minify ourselves.
 
 Be advised that you must include the file extension in the values, for example:
@@ -295,12 +295,12 @@ Be advised that you must include the file extension in the values, for example:
 "main": "./index.js" // this is the correct way
 ```
 
-For projects having both a JS and a CSS file, use of the above fields for JS, and a `style` field for the CSS file ([example](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/package.json)).
-  
+For projects having both a JS and a CSS file, use one the above fields for JS and a `style` field for the CSS file ([example](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/package.json)).
+
 Restrictions
 -------------------
- - Packages larger than 150 MB or single files larger than 20 MB (in the case of GitHub) are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
- - HTML files are served with `Content-Type: text/plain` for security reasons.
+- Packages larger than 150 MB or single files larger than 20 MB (in the case of GitHub) are not supported by default. We recommend removing files that are not needed from your package when possible. If you need to set a higher limit for your package, open an issue in this repo.
+- HTML files are served with `Content-Type: text/plain` for security reasons.
 
 WordPress
 ---------
@@ -347,7 +347,7 @@ Our caching logic and headers are optimized for production use and apply to all 
 
 * **Static Versions and commit hashes** - Effectively forever. The caching headers are set for 1 year but we also permanently cache the files in our S3 storage. So all future requests that bypass the CDN will hit our S3 storage with no option or way to update the contents of that file.
 * **Version aliasing** - 7 days. This also includes `latest` versions. They are cached on our CDN for 7 days with the option to purge the cache using our API to speed up the release of your project to your users.
-* **Branches** - 12 hours. 
+* **Branches** - 12 hours.
 
 In certain cases, purgeable files can get updated faster due to low-cache hit ratio or forced CDN purge from our side for maintenance reasons.
 
@@ -360,7 +360,7 @@ Purge cache
 jsDelivr has an easy-to-use API to purge files from the cache and force the files to update. This is useful when you release a new version and want to force the update of all version-aliased users.
 
 Please note:
-* It will not work for static files as explained above. 
+* It will not work for static files as explained above.
 * Valid semver releases must be used for purge to work
 * Rate-limiting applies to all users
 
@@ -404,15 +404,15 @@ Here are the relevant policies of our CDN providers:
 
 ## [The bus factor](https://github.com/jsdelivr/jsdelivr/wiki/What-to-do-if-I-die-aka-The-bus-factor)
 
-  [1]: http://www.jsdelivr.com
-  [2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
-  [3]: http://refresh-sf.com/yui/
-  [4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
-  [5]: http://www.cdnperf.com/
-  [6]: http://en.wikipedia.org/wiki/Content_delivery_network
-  [7]: https://www.stackpath.com/
-  [8]: http://www.cloudflare.com/
-  [9]: https://github.com/jsdelivr/jsdelivr/fork
-  [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
-  [12]: https://gitter.im/jsdelivr/jsdelivr
-  [14]: https://www.fastly.com/
+[1]: http://www.jsdelivr.com
+[2]: https://github.com/jimaek/jsdelivr/blob/master/files/abaaso/info.ini
+[3]: http://refresh-sf.com/yui/
+[4]: http://blog.maxcdn.com/load-balancing-multiple-cdns-jsdelivr-works/
+[5]: http://www.cdnperf.com/
+[6]: http://en.wikipedia.org/wiki/Content_delivery_network
+[7]: https://www.stackpath.com/
+[8]: http://www.cloudflare.com/
+[9]: https://github.com/jsdelivr/jsdelivr/fork
+[11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
+[12]: https://gitter.im/jsdelivr/jsdelivr
+[14]: https://www.fastly.com/
