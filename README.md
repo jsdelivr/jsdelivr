@@ -294,6 +294,8 @@ Be advised that you must include the file extension in the values, for example:
 "main": "./index" // this will NOT work
 "main": "./index.js" // this is the correct way
 ```
+
+For projects having both a JS and a CSS file, use of the above fields for JS, and a `style` field for the CSS file ([example](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/package.json)).
   
 Restrictions
 -------------------
