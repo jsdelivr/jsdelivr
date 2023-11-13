@@ -40,9 +40,9 @@ When requesting a resource that does not meet these limits, you will get an erro
 
 ## 5. Soft Limits and Recommendations (jsDelivr CDN)
 
-These limits are not automatically enforced by Volentio JSD, but you agree not to exceed them.
+These limits are not automatically enforced by us, but you agree not to exceed them.
 
-1. For projects using Volentio JSD’s GitHub proxy:
+1. For projects using our GitHub proxy:
    - We recommend that the number of actively accessed files per repository does not exceed 10 000. If you have considerably more files, a custom proxy endpoint for your project may be a better fit.
    - The soft limit for the number of files per repository is 100 000.
 
@@ -63,7 +63,7 @@ The following behavior is prohibited in connection to your use or access of jsDe
    - is unlawful or prohibited by these Terms.
 
 2. Abusing the Service and its resources or using jsDelivr CDN as a general-purpose file or media hosting service. This includes, for example, in the case of jsDelivr CDN:
-   - running an image hosting website and using as a storage for all uploaded images,
+   - running an image hosting website and using jsDelivr CDN as a storage for all uploaded images,
    - hosting videos, file backups, or other files in large quantities.
 
    We recognize that there are legitimate projects that consist of a large number of files, and these are not considered abuse. For example: icons packs, apps, or games with a large number of assets.

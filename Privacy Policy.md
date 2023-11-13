@@ -2,7 +2,7 @@
 
 *Effective date: November 15, 2023*
 
-Volentio JSD Limited ("us", "we", or "our"), a company registered in England and Wales, operates the cdn.jsdelivr.net service ("jsDelivr CDN")) and the *jsdelivr.com* website ("website") (collectively, the Services).
+Volentio JSD Limited ("us", "we", or "our"), a company registered in England and Wales, operates the cdn.jsdelivr.net service ("jsDelivr CDN")) and the *jsdelivr.com* website ("Website") (collectively, the Services).
 
 When we collect, use, and process personal data, we are subject to the provisions of the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. We are also subject to the EU General Data Protection Regulation (EU GDPR) in relation to personal data we collect, use, and process in the European Economic Area (EEA).
 
@@ -22,7 +22,7 @@ Our Service may contain links to other sites that are not operated by us. If you
 
 3. **we, us and our:** refers to Volentio JSD Limited and its directors;
 
-4. **you and your:** refers to the person who is accessing our website or jsDelivr CDN and whose data is processed.
+4. **you and your:** refers to the person who is accessing the Website or jsDelivr CDN and whose data is processed.
 
 ## 2. Information Collection
 
@@ -114,9 +114,7 @@ Our Service may contain links to other sites that are not operated by us. If you
 
 1. We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
 
-2. We will let you know via email and/or a prominent notice on our Service prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.
-
-3. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+2. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
 
 # 12. Contact Us
 
