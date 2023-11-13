@@ -63,7 +63,7 @@ Our Service may contain links to other sites that are not operated by us. If you
 
 3. We will also retain non-aggregated Usage Data for internal analysis purposes, for example, to detect abuse of our Services. Non-aggregated Usage Data is retained for a shorter period of time until it is analyzed and deleted, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.
 
-4. Aggregated Usage Data does not contain any information associated with any single request or user and is stored indefinitely. This data is publicly accessible via our API https://github.com/jsdelivr/data.jsdelivr.com#get-package-usage-stats
+4. Aggregated Usage Data does not contain any information associated with any single request or user and is stored indefinitely. This data is publicly accessible via [our API](https://github.com/jsdelivr/data.jsdelivr.com#get-package-usage-stats).
 
 ## 5. Transfer of Data
 
