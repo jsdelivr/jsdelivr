@@ -22,7 +22,7 @@ As long as you do not violate our rules:
 
 ## 2. Data Processing
 
-Where we are processing personal data as a service provider or on behalf of enterprise or business users of jsDelivr CDN, we will process, transmit, and store personal data present in our jsDelivr CDN in accordance with the [Data Processing Agreement](https://www.jsdelivr.com/terms/data-processing-agreement).
+Where we are processing personal data as a service provider or on behalf of enterprise or business users of jsDelivr CDN, we will process, transmit, and store personal data present in our jsDelivr CDN in accordance with the [Data Processing Agreement](https://www.jsdelivr.com/documents/data-processing-agreement.pdf).
 
 ## 3. Proprietary Rights
 

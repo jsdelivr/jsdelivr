@@ -8,7 +8,7 @@ When we collect, use and process personal data we are subject to the provisions 
 
 This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Services and the choices you have associated with that data.
 
-This Privacy Policy does not apply to personal data we process as a service provider or data processor on behalf of enterprise or business users of the Services. Our data processing activities as service provider or data processor is governed by our [Data Protection Agreement](https://www.jsdelivr.com/terms/data-protection-agreement). If you are an end-user of one of those organizations, such as an employee or student, you should read that organization's privacy statement and direct any privacy inquiries to that organisation.
+This Privacy Policy does not apply to personal data we process as a service provider or data processor on behalf of enterprise or business users of the Services. Our data processing activities as service provider or data processor is governed by our [Data Protection Agreement](https://www.jsdelivr.com/documents/data-protection-agreement.pdf). If you are an end-user of one of those organizations, such as an employee or student, you should read that organization's privacy statement and direct any privacy inquiries to that organisation.
 
 By using our Services, you agree to the collection and use of information in accordance with this policy.
 
