@@ -105,4 +105,4 @@ The laws of England and Wales apply to these Terms, and any disputes will be sub
 
 If you have any questions about these Terms, please contact us:
 
-By email: dmitriy.akulov@volentio.com
+By email: legal@jsdelivr.com
