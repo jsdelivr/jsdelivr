@@ -120,4 +120,4 @@ Our Service may contain links to other sites that are not operated by us. If you
 
 1. If you have any questions about this Privacy Policy, please contact us:
 
-    By email: dmitriy.akulov@volentio.com
+    By email: legal@jsdelivr.com
