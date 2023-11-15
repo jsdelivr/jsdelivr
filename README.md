@@ -200,7 +200,7 @@ We use a permanent S3 storage to ensure all files remain available even if GitHu
 /gh/jquery/jquery@32b00373b3f42e5cdcb709df53f3b08b7184a944/dist/jquery.min.js
 ```
 
-##### Use a version range instead of an exact version (only works with valid semver versions):
+##### Use a version range instead of an exact version (only works with valid [semver versions][15]):
 
 ```
 /gh/jquery/jquery@3/dist/jquery.min.js
@@ -212,7 +212,7 @@ If you use this feature and a file you requested is not available in the newest 
 
 ---
 
-##### Omit the version completely or use "latest" to load the latest one (only works with valid semver versions): (not recommended for production usage)
+##### Omit the version completely or use "latest" to load the latest one (only works with valid [semver versions][15]): (not recommended for production usage)
 
 *Falls back to the `master` branch if there are no tagged releases.*
 
@@ -416,3 +416,4 @@ Here are the relevant policies of our CDN providers:
 [11]: https://hacks.mozilla.org/2014/03/jsdelivr-the-advanced-open-source-public-cdn/
 [12]: https://gitter.im/jsdelivr/jsdelivr
 [14]: https://www.fastly.com/
+[15]: https://semver.org/
