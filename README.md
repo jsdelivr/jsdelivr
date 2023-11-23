@@ -94,7 +94,7 @@ jsDelivr has multiple locations close to Chinese urban centers to ensure low lat
 
 # Usage Documentation
 
-jsDelivr provides mirrors for npm, GitHub, WordPress plugins, and custom endpoints for several other projects with special requirements. If our regular endpoints don't work for your use case, [let us know](mailto:dak@prospectone.io) and we'll figure something out!
+jsDelivr provides mirrors for npm, GitHub, WordPress plugins, and custom endpoints for several other projects with special requirements. If our regular endpoints don't work for your use case, [let us know](mailto:d@jsdelivr.com) and we'll figure something out!
 
 If you are a package author, check our [tips for package authors](#Publishing-packages) to make using your package as easy as possible.
 
@@ -364,7 +364,7 @@ Please note:
 * Valid semver releases must be used for purge to work
 * Rate-limiting applies to all users
 
-To avoid abuse, access to purge is given after an email request (for now - dak@prospectone.io).
+To avoid abuse, access to purge is given after an email request (for now - d@jsdelivr.com).
 
 Custom CDN Hosting
 ---
@@ -378,7 +378,7 @@ This kind of custom hosting can be suitable for:
 * Projects that can't follow jsDelivr file structure.
 * Some other use that will blow all of our minds.
 
-Simply send an email to dak@prospectone.io with a request for more information.
+Simply send an email to d@jsdelivr.com with a request for more information.
 
 Current OSS projects using custom configs:
 
