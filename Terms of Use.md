@@ -1,6 +1,6 @@
 # Terms of Use
 
-*Effective date: November 15, 2023*
+*Effective date: November 23, 2023*
 
 We are Volentio JSD Limited ("us", "we", or "our") (trading as jsDelivr), a company registered in England and Wales under company registration number 14984373. Our registered office is at Suite 2a1, Northside House, Mount Pleasant, Barnet, England, EN4 9EB.
 
