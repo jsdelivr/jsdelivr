@@ -1,6 +1,6 @@
 # Privacy Policy
 
-*Effective date: November 15, 2023*
+*Effective date: November 23, 2023*
 
 Volentio JSD Limited ("us", "we", or "our"), a company registered in England and Wales, operates the cdn.jsdelivr.net service ("jsDelivr CDN")) and the *jsdelivr.com* website ("Website") (collectively, the Services).
 
