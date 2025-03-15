@@ -208,7 +208,7 @@ We use a permanent S3 storage to ensure all files remain available even if GitHu
 ```
 ---
 **NOTE**
-If you use this feature and a file you requested is not available in the newest release, the link will keep working thanks to our version-fallback feature. We'll continue to serve the file from older release instead of failing with a 404 error.
+If you use the version range and a file you requested is not available in the newest release, the link will keep working thanks to our version-fallback feature. We'll continue to serve the file from older release instead of failing with a 404 error.
 
 ---
 
