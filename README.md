@@ -57,7 +57,7 @@ On top of that, we also do version fallback. This means that if a file used in v
 Multi-CDN
 ---------
 
-Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [CloudFlare][8], and [Fastly][14].
+Unlike the competition, jsDelivr uses multiple CDN providers, resulting in the best possible uptime and performance. We currently use [Cloudflare][8], and [Fastly][14].
 
 If a CDN goes down, websites that use jsDelivr won't have any issues because all traffic will be instantly redirected to remaining operational providers.
 
