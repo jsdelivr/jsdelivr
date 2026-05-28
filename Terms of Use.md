@@ -1,6 +1,6 @@
 # Terms of Use
 
-*Effective date: November 23, 2023*
+*Effective date: May 30, 2026*
 
 We are Volentio JSD Limited ("us", "we", or "our") (trading as jsDelivr), a company registered in England and Wales under company registration number 14984373. Our registered office is at Suite 2a1, Northside House, Mount Pleasant, Barnet, England, EN4 9EB.
 
@@ -68,7 +68,9 @@ The following behavior is prohibited in connection to your use or access of jsDe
 
    We recognize that there are legitimate projects that consist of a large number of files, and these are not considered abuse. For example: icons packs, apps, or games with a large number of assets.
 
-3. Trying to bypass our limits or restrictions in any way. We will be happy to remove limits or provide custom solutions for legitimate projects.
+3. Scraping large amounts of otherwise infrequently accessed content. jsDelivr CDN is designed to cache and serve a subset of available files repeatedly. Requesting unique files across hundreds of packages or repositories for more than a few minutes may be considered abuse.
+
+4. Trying to bypass our limits or restrictions in any way. We will be happy to remove limits or provide custom solutions for legitimate projects.
 
 ## 7. Indemnity
 
