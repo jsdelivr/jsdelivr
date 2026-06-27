@@ -214,7 +214,7 @@ If you use the version range and a file you requested is not available in the ne
 
 ##### Omit the version completely or use "latest" to load the latest one (only works with valid [semver versions][15]): (not recommended for production usage)
 
-*Falls back to the `master` branch if there are no tagged releases.*
+*Falls back to the repository's default branch if there are no tagged releases.*
 
 ```
 /gh/jquery/jquery@latest/dist/jquery.min.js
