@@ -1,6 +1,6 @@
 # Terms of Use
 
-*Effective date: May 30, 2026*
+*Effective date: October 4, 2026*
 
 We are Volentio JSD Limited ("us", "we", or "our") (trading as jsDelivr), a company registered in England and Wales under company registration number 14984373. Our registered office is at Suite 2a1, Northside House, Mount Pleasant, Barnet, England, EN4 9EB.
 
@@ -13,7 +13,9 @@ If you do not agree to these Terms, you must not use our Services.
 
 ## 1. Permitted Use and Third-Party Websites
 
-jsDelivr CDN works as a Content Delivery Network for content already stored on npm, GitHub, and other third-party services. These platforms are not operated by us, and each of them has its own terms of use. Any content accessed via jsDelivr CDN must conform to the terms of the service from which it was retrieved. For example, when you use jsDelivr CDN to access GitHub, the content must conform to all GitHub's policies. Additionally, any content accessed via the jsDelivr CDN must conform to our own policies as described in this document.
+jsDelivr CDN delivers content obtained from npm, GitHub, and other third-party services. These platforms are not operated by us, and each of them has its own terms of use. Any content accessed via jsDelivr CDN must conform to the terms of the service from which it was retrieved. For example, when you use jsDelivr CDN to access GitHub, the content must conform to all GitHub's policies. Additionally, any content accessed via the jsDelivr CDN must conform to our own policies as described in this document.
+
+Previously served immutable files may be retained in permanent storage even after upstream deletion. We do not accept removal requests simply because a package or version was unpublished, deleted upstream, or is no longer needed.
 
 As long as you do not violate our rules:
 - using jsDelivr CDN is free for both personal and commercial use,
