@@ -4,7 +4,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Is your issue related to a specific project?
+        **Package removal:** We do not accept removal requests simply because a package or version was unpublished, deleted upstream, or is no longer needed. jsDelivr uses permanent storage to keep existing URLs working. Purging does not delete stored files.
+
+        Report serious security or legal concerns privately to [legal@jsdelivr.com](mailto:legal@jsdelivr.com), with affected URLs and supporting evidence. Please do not open public issues for these reports.
+
+        **Is your issue related to a specific project?**
         Please include all relevant links to cdn.jsdelivr.net, npm, GitHub, and your relation to the project.
 
   - type: textarea

@@ -353,7 +353,6 @@ In certain cases, purgeable files can get updated faster due to low-cache hit ra
 
 We use permanent S3 caching even with dynamic URLs, such as version aliasing, meaning once we download your tagged files, there is no way for you to update them. If there is a critical issue in your latest release the best course of action is to tag a new semver valid release with the fix and purge the CDN URLs using our purge API.
 
-
 Purge cache
 ---
 
@@ -365,6 +364,15 @@ Please note:
 * Rate-limiting applies to all users
 
 To avoid abuse, access to purge is given after an email request (for now - d@jsdelivr.com).
+
+Purging clears CDN caches only. It does not affect exact-version links and does not delete files from our permanent storage.
+
+Content removal
+---
+
+We do not accept removal requests simply because a package or version was unpublished, deleted upstream, or is no longer needed. We may restrict content for serious security or legal reasons supported by clear evidence.
+
+Report serious security or legal concerns privately to [legal@jsdelivr.com](mailto:legal@jsdelivr.com), with affected URLs and supporting evidence. Please do not open public issues for these reports.
 
 Custom CDN Hosting
 ---
