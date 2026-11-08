@@ -284,7 +284,12 @@ For packages hosted on npm, we support serving "default" files with shorter URLs
 
 1. `jsdelivr`
 2. `browser`
-3. `main`
+3. `exports`
+4. `main`
+
+A `browser` object takes priority over `exports` when it maps the package's `main` file. Unrelated browser mappings do not override a usable root export.
+
+For `exports`, we resolve the package root (`"."`) with the `browser` and `production` conditions enabled. Conditions such as `import`, `require`, and `node` are not enabled.
 
 We will first attempt to locate a minified version of the file provided here (by removing the extension and looking for the same file `.min.js`). If we can't find one, we will minify ourselves.
 
